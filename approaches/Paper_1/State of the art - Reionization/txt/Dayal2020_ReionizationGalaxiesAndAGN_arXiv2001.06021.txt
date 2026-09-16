@@ -1,0 +1,1743 @@
+Mon. Not. R. Astron. Soc. 000, 000–000 (0000)
+
+Printed 22 April 2020
+
+(MN LATEX style file v2.2)
+
+arXiv:2001.06021v2 [astro-ph.GA] 21 Apr 2020
+
+Reionization with galaxies and active galactic nuclei
+Pratika Dayal1? , Marta Volonteri2 , Tirthankar Roy Choudhury3 ,
+Raffaella Schneider4,5,6 , Maxime Trebitsch2,7,8 , Nickolay Y. Gnedin9,10,11 ,
+Hakim
+Atek2 , Michaela Hirschmann12 , Amy Reines13
+1
+Kapteyn Astronomical Institute, University of Groningen, P.O. Box 800, 9700 AV Groningen, The Netherlands
+
+2 Institut d’Astrophysique de Paris, Sorbonne Universite, CNRS, UMR 7095, 98 bis bd Arago, 75014 Paris, France
+3 National Centre for Radio Astrophysics, Tata Institute of Fundamental Research, Pune 411007, India
+4 Dipartimento di Fisica, “Sapienza” Università di Roma, Piazzale Aldo Moro 5, 00185 Roma, Italy
+5 INAF/Osservatorio Astronomico di Roma, Via di Frascati 33, 00040 Monte Porzio Catone, Italy
+6 INFN, Sezione Roma1, Dipartimento di Fisica, “Sapienza” Università di Roma, Piazzale Aldo Moro 5, 00185, Roma, Italy
+7 Max-Planck-Institut für Astronomie, Königstuhl 17, 69117 Heidelberg, Germany
+8 Zentrum für Astronomie der Universität Heidelberg, Institut für Theoretische Astrophysik, Albert-Ueberle-Str. 2, 69120 Heidelberg, Germany
+9 Particle Astrophysics Center, Fermi National Accelerator Laboratory, Batavia, IL 60510, USA
+10 Kavli Institute for Cosmological Physics, The University of Chicago, Chicago, IL 60637, USA
+11 Department of Astronomy & Astrophysics, The University of Chicago, Chicago, IL 60637, USA
+12 DARK, Niels Bohr Institute, University of Copenhagen, Lyngbyvej 2, DK-2100 Copenhagen, Denmark
+13 eXtreme Gravity Institute, Department of Physics, Montana State University, Bozeman, MT 59717, USA
+
+ABSTRACT
+
+In this work we investigate the properties of the sources that reionized the intergalactic medium (IGM) in the high-redshift Universe. Using a semi-analytical model
+aimed at reproducing galaxies and black holes in the first ∼ 1.5 Gyr of the Universe, we
+revisit the relative role of star formation and black hole accretion in producing ionizing
+photons that can escape into the IGM. Both star formation and black hole accretion
+are regulated by supernova feedback, resulting in black hole accretion being stunted
+in low-mass halos. We explore a wide range of combinations for the escape fraction
+of ionizing photons (redshift-dependent, constant and scaling with stellar mass) from
+bh
+sf
+) to find: (i) the ionizing budget is domi) and AGN (fesc
+both star formation (hfesc
+inated by stellar radiation from low stellar mass (M∗ < 109 M ) galaxies at z > 6
+>
+with the AGN contribution (driven by Mbh > 106 M black holes in M∗ ∼
+109 M
+galaxies) dominating at lower redshifts; (ii) AGN only contribute 10 − 25% to the
+cumulative ionizing emissivity by z = 4 for the models that match the observed reionsf
+bh
+ization constraints; (iii) if the stellar mass dependence of hfesc
+i is shallower than fesc
+,
+at z < 7 a transition stellar mass exists above which AGN dominate the escaping ionizing photon production rate; (iv) the transition stellar mass decreases with decreasing
+redshift. While AGN dominate the escaping emissivity above the knee of the stellar
+mass function at z ∼ 6.8, they take-over at stellar masses that are a tenth of the knee
+mass by z = 4.
+Key words: galaxies: evolution – galaxies: high-redshift – galaxies: intergalactic
+medium – galaxies: quasars – cosmology: reionization
+
+1
+
+?
+
+p.dayal@rug.nl
+
+c 0000 RAS
+
+INTRODUCTION
+
+The epoch of (hydrogen) reionization (EoR) begins when
+the first stars start producing neutral hydrogen (H I ) ionizing photons and carving out ionized regions in the intergalactic medium (IGM). In the simplest picture, the EoR
+
+2
+
+Dayal et. al.
+
+starts with the formation of the first metal-free (population
+<
+III; PopIII) stars at z ∼
+30, with the key sources gradually
+shifting to larger metal-enriched halos, powered by population II (PopII) stars and accreting black holes. However,
+this picture is complicated by the fact that the progress and
+sources of reionization depend on a number of (poorly constrained) parameters including the minimum halo mass of
+star-forming galaxies, the star formation/black hole accretion rates, the escape fraction (fesc ) of H I ionizing photons
+from the galactic environment, the impact of the reionization ultra-violet background (UVB) on the gas content of
+low-mass halos and the clumping factor of the IGM (see e.g.
+Dayal & Ferrara 2018).
+Observationally, a number of works have used a variety
+of data-sets and trends - e.g. the UV luminosity density, the
+faint-end slope of the Lyman Break Galaxy (LBG) luminosity function, fesc increasing with bluer UV slopes and the
+abundance and luminosity distribution of galaxies - to conclude that star formation in low-mass galaxies with an absolute magnitude MUV ' −10 to −15 alone can reionize the
+IGM (Finkelstein et al. 2012; Bouwens et al. 2012; Duncan &
+Conselice 2015; Robertson et al. 2015), although Naidu et al.
+(2019) assume fesc ∝ the star formation rate surface den>
+108 M ) galaxsity and infer that high stellar mass (M∗ ∼
+ies dominate the reionization budget (see also Sharma et al.
+2016). The bulk of the observational results are in agreement
+with theoretical results that converge on stars in low-mass
+>
+<
+halos (Mh ∼
+109.5 M and MUV ∼
+− 17) providing the bulk
+>
+7 (e.g. Choudhury & Ferrara
+of H I ionizing photons at z ∼
+2007; Salvaterra et al. 2011; Yajima et al. 2011; Wise et al.
+2014; Paardekooper et al. 2015; Liu et al. 2016; Dayal et al.
+2017a). A key caveat in the results, however, is that the
+redshift-dependent reionization contribution from star formation in galaxies of different masses crucially depends on
+the strength of UVB feedback, the trend of fesc with mass
+and redshift and the evolution of the clumping factor (for
+details see Sec. 7, Dayal & Ferrara 2018).
+In addition, the contribution of Active Galactic Nuclei
+(AGN) to reionization and its dependence on redshift and
+on the host galaxy stellar mass still remain key open questions. A number of works show AGN can only have a minor reionization contribution (Yoshiura et al. 2017; Onoue
+et al. 2017; Hassan et al. 2018). Contrary to these studies,
+a number of results show that radiation from AGN/quasars
+might contribute significantly to reionization (Volonteri &
+Gnedin 2009; Madau & Haardt 2015; Mitra et al. 2015, 2018;
+Grazian et al. 2018; Finkelstein et al. 2019), especially at
+>
+z∼
+8 if ionizations by secondary electrons are accounted for,
+with stars taking over as the dominant reionization sources
+<
+at z ∼
+6 (Volonteri & Gnedin 2009). The question of the
+contribution of AGN to reionization has witnessed a resurgence after recent claims of extremely high number densities
+of faint AGN measured by Giallongo et al. (2015, 2019) at
+>
+z∼
+4. While other direct searches for high-redshift AGN
+have found lower number densities (Weigel et al. 2015; McGreer et al. 2018), the integrated H I ionizing emissivities
+can be significantly affected by the inhomogeneous selection
+and analysis of the data and by the adopted (double) power
+law fits to the AGN luminosity function at different redshifts
+
+(Kulkarni et al. 2019). Yet, if the high comoving emissivity
+claimed by Giallongo et al. (2015) persists up to z ' 10,
+then AGN alone could drive reionization with little/no contribution from starlight (Madau & Haardt 2015). A similar
+scenario, where more than 50% of the ionizing photons are
+emitted by rare and bright sources, such as quasars, has been
+proposed by Chardin et al. (2015, 2017) as a possible explanation of the large fluctuations in the Lyα effective optical
+depth on scales of 50 h−1 cMpc measured at the end stages of
+reionization (4 < z < 6) by Becker et al. (2015). These AGNdominated or AGN-assisted models, however, are found to
+reionize helium (He II ) too early (Puchwein et al. 2019) and
+result in an IGM temperature evolution that is inconsistent
+with the observational constraints (Becker et al. 2011).
+In this work, we use a semi-analytic model (Delphi) that
+has been shown to reproduce all key observables for galax>
+ies and AGN at z ∼
+5 to revisit the AGN contribution to
+reionization, specially as a function of the host galaxy stellar mass. The key strengths of this model lie in that: (i) it is
+seeded with two types of black hole seeds (stellar and direct
+collapse); (ii) the black hole accretion rate is primarily regulated by the host halo mass; (iii) it uses a minimal set of
+free parameters for star formation and black holes and their
+associated feedback.
+The
+cosmological
+parameters
+used
+in
+this
+work
+correspond
+to
+Ωm , ΩΛ , Ωb , h, ns , σ8
+=
+0.3089, 0.6911, 0.049, 0.67, 0.96, 0.81 (Planck Collaboration et al. 2016). We quote all quantities in comoving units
+unless stated otherwise and express all magnitudes in the
+standard AB system (Oke & Gunn 1983).
+The paper is organized as follows. In Section 2, we detail
+our code for the galaxy-BH (co)-evolution, our calculation
+of fesc and the progress of reionization. The results of the
+fiducial and of alternative models are presented in Sections
+3 and 4. Finally, we discuss our results and present our main
+conclusions in Section 6.
+
+2
+
+THEORETICAL MODEL
+
+We start by introducing the galaxy formation model in Sec.
+2.1 before discussing the escape fraction of ionizing radiation from galaxies and AGN in the fiducial model in Sec.
+2.2. These are used to calculate the reionization history and
+electron scattering optical depth in Sec. 2.3. Our fiducial
+model parameters are described in Table 1.
+
+2.1
+
+Galaxy formation at high-z
+
+In this work, we use the semi-analytic code Delphi (Dark
+matter and the emergence of galaxies in the epoch of
+reionization) that aims at simulating the assembly of the
+dark matter, baryonic and black hole components of high>
+redshift (z ∼
+5) galaxies (Dayal et al. 2014, 2019). In brief,
+starting at z = 4 we build analytic merger trees up to z = 20,
+in time-steps of 20 Myrs, for 550 haloes equally separated
+in log space between 108 -1013.5 M . Each halo is assigned
+a number density according to the Sheth-Tormen halo mass
+function (HMF) which is propagated throughout its merger
+c 0000 RAS, MNRAS 000, 000–000
+
+Reionization with galaxies and AGN
+
+3
+
+Table 1. Free parameters, their symbols and values used for the fiducial model (ins1 in Dayal et al. 2019). As noted, using these
+> 5 (including their UV luminosity functions,
+parameter values our model reproduces all key observables for galaxies and AGN at z ∼
+stellar mass/black hole mass densities, star formation rate densities, the stellar/black hole mass function) as well as the key reionization
+observables (the integrated electron scattering optical depth and the redshift evolution of the ionizing photon emissivity). Simultaneously
+fitting the optical depth and the emissivity constraints, we obtain f0 = 0.02 (0.0185) and β = 2.8 (2.8) if we consider the ionizing photons
+provided by star formation (star formation and AGN).
+Parameter
+
+Symbol
+
+value
+
+Maximum star formation efficiency
+Fraction of SNII energy coupling to gas
+Radiative efficiency of black hole accretion
+Fraction of AGN energy coupling to gas
+Fraction of gas mass AGN can accrete
+Fraction of Eddington rate for BH accretion
+Fraction of Eddington rate for BH accretion
+LW BG threshold for DCBH formation
+Escape fraction of H I ionizing photons from star formation
+Escape fraction of H I ionizing photons from AGN
+Stellar population synthesis model
+Reionization (UVB) feedback
+
+f∗
+fw
+r
+w
+fbh
+ac
+fbh
+fEdd (Mh < Mcrit
+h )
+fEdd (Mh > Mcrit
+h )
+α
+sf i
+hfesc
+bh
+fesc
+-
+
+0.02
+0.1
+0.1
+0.003
+5.5 × 10−4
+7.5 × 10−5
+1
+30
+f0 [(1 + z)/7]β .
+Ueda et al. (2014)
+Starburst99
+No
+
+tree; the resulting HMFs have been confirmed to be in accord with the Sheth-Tormen HMF at all z ∼ 5 − 20.
+The very first progenitors of any galaxy are assigned
+an initial gas mass as per the cosmological baryon-to-dark
+matter ratio such that Mgi = (Ωb /Ωm )Mh , where Mh is
+the halo mass. The effective star formation efficiency, f∗eff ,
+for any halo is calculated as the minimum between the efficiency that produces enough type II supernova (SNII) energy to eject the rest of the gas, f∗ej , and an upper maximum
+threshold, f∗ , so that f∗eff = min[f∗ej , f∗ ] where a fraction fw
+of the SNII energy can couple to the gas. The gas mass left
+after including the effects of star formation and supernova
+feedback is then given by:
+
+
+f∗eff
+.
+(1)
+Mgf
+∗ (z) = [Mgi (z) − M∗ (z)] 1 −
+f∗ej
+Our model also includes two types of black hole seeds that
+can be assigned to the first progenitors of any halo. These
+include (i) massive direct-collapse black hole (DCBH) seeds
+with masses between Mbh = 103−4 M and, (ii) PopIII stellar black hole seeds of 150 M masses. As detailed in Dayal
+et al. (2017b), we calculate the strength of the LymanWerner (LW) background irradiating each such starting
+halo. Halos with a LW background strength JLW > Jcrit =
+αJ21 (where J21 = 10−21 ergs−1 Hz−1 cm−2 sr−1 and α is a
+free parameter) are assigned DCBH seeds while halos not
+meeting this criterion are assigned the lighter PopIII seeds.
+We note that, given that the number densities of DCBH
+seeds are ∼ −2 (−3.8) orders of magnitude below that of
+stellar seeds for α = 30 (300), the exact value of α (as well
+as the DCBH seed mass) have no sensible bearing on our
+results, since we only consider models that reproduce the
+AGN luminosity function. In this paper we do not aim at
+investigating which type of black hole seed can contribute
+most to reionization, but how a population of AGN reproducing available observational constraints can contribute to
+reionization.
+c 0000 RAS, MNRAS 000, 000–000
+
+Once seeded, the black holes (as the baryonic and dark
+matter components) grow in mass through mergers and accretion in successive time-steps. A fraction of the gas mass
+left after star formation and SNII ejection (see Eqn. 1) can
+be accreted onto the black hole. This accretion rate depends
+on both the host halo mass and redshift through a critical
+halo mass (Bower et al. 2017):
+11.25
+Mcrit
+M [Ωm (1 + z)3 + Ωλ ]0.125 ,
+h (z) = 10
+
+(2)
+
+such that the mass accreted by the black hole (of mass Mbh )
+at any given time-step is:
+h
+i
+ac
+gf
+Mac
+(3)
+bh (z) = min fEdd MEdd (z), (1 − r )fbh M∗ (z) ,
+where MEdd (z) = (1 − r )[4πGMbh (z)mp ][σT r c]−1 ∆t is the
+total mass that can be accreted in a time-step assuming
+Eddington luminosity. Here, G is the gravitational constant,
+mp is the proton mass, σT is the Thomson scattering optical
+depth, r is the BH radiative efficiency, c is the speed of light
+and ∆t = 20Myr is the merger tree time-step. Further, the
+value of fEdd is assigned based on the critical halo mass
+ac
+(Eqn. 2) as detailed in Table 1 and fbh
+represents a fixed
+fraction of the total gas mass present in the host galaxy that
+w
+can be accreted by the black hole. A fixed fraction fbh
+of the
+total energy emitted by the accreting black hole is allowed
+to couple to the gas content. The values used for each of
+these parameters in our fiducial model are detailed in Table
+1. Finally, reionization feedback is included by suppressing
+the gas content, and hence star formation and black hole
+<
+accretion, of halos with a virial velocity Vvir ∼
+40 km s−1 at
+all redshifts, as detailed in Sec. 2.3.
+In the interest of simplicity, every newly formed stellar population is assumed to follow a Salpeter initial mass
+function (IMF; Salpeter 1955) with masses in the range
+0.1 − 100M , with a metallicity Z = 0.05Z and an age
+of 2 Myr; a lower (higher) metallicity or a younger (older)
+stellar population across all galaxies would scale up (down)
+the UV luminosity function which could be accommodated
+
+4
+
+Dayal et. al.
+
+by varying the free-parameters for star formation (f∗eff
+and fw ). Under these assumptions, the Starburst99 (SB99)
+stellar population synthesis (SPS) model yields the timeevolution of the star-formation powered production rate of
+H I ionizing photons (ṅsf
+int ) and the UV luminosity (LUV ) to
+be:
+
+
+t
+sf
+46.6255
+ṅint (t) = 10
+− 3.92 log10
++ 0.7 [s−1 ], (4)
+2 Myr
+and
+
+t
++0.462 [erg s−1 Å−1 ].
+2 Myr
+(5)
+Inspired by the Shakura-Sunyaev solution (Shakura &
+Sunyaev 1973), AGN are assigned a spectral energy distribution (SED) that depends on the key black hole physical
+parameters, namely the black hole mass and Eddington ratio (Volonteri et al. 2017). We follow here a variant based on
+the physical models developed by Done et al. (2012). Specifically, we calculate the energy of the peak of the SED as
+described in Thomas et al. (2016), but adopt the default
+functional form of the spectrum used in Cloudy (Ferland
+et al. 2013).
+Once an AGN is assigned a luminosity and a SED,
+the UV luminosity is calculated as detailed in Dayal et al.
+(2019). Further, we integrate above 13.6 eV to obtain the H i
+ionizing luminosity and mean energy of ionizing photons (see
+Fig. A1 in the Appendix). For AGN, this provides an upper limit, as photons above 24.59 eV and 54.4 eV can ionize
+He i and He ii. We further include a correction for secondary
+ionizations from the hard AGN photons, by taking the upper limit to their contribution, i.e., assuming fully neutral
+hydrogen and that 39% of their energy goes into secondary
+ionizations (Shull & van Steenberg 1985; Madau & Fragos
+2017).
+LUV (t) = 1033.077 −1.33 log10
+
+2.2
+
+
+
+funabs =
+
+1−ψ
+,
+1+ψ
+
+(6)
+
+where ψ = ψz −0.24(Lx −43.75), ψz = 0.43[1+min(z, 2)]0.48
+and Lx is the log of the intrinsic 2–10 keV X-ray luminosity
+>
+in erg s−1 ; given our model is for z ∼
+5, this implies ψz =
+0.73. We do not extrapolate the evolution beyond z = 2,
+the range for which the dependence has been studied using
+data. As in Ricci et al. (2017), we assume that unobscured
+quasars have fesc = 1 and zero otherwise (see their section
+4.1 for a discussion and alternative models and Volonteri
+et al. 2017, for a discussion on the redshift evolution of the
+obscured fraction).
+Secondly, Merloni et al. (2014) find that X–ray and optical obscuration are not necessarily the same for AGN, although the trend of optically obscured AGN with luminosity
+is consistent with the scaling we adopt. Our second model
+bh
+for fesc
+considers the fraction of optically unobscured AGN
+as a function of luminosity from Merloni et al. (2014), where
+this fraction is found to be independent of redshift. It takes
+the functional form:
+
+
+1
+43.89 − log Lx
+bh
+fesc
+= 1 − 0.56 + arctan
+,
+(7)
+π
+0.46
+where log Lx is the logarithm of the intrinsic 2–10 keV X-ray
+luminosity in erg s−1 .
+Thirdly, we can maximize the contribution of AGN to
+bh
+reionization by assuming fesc
+= 1, although Micheva et al.
+bh
+(2017) find that even for unobscured AGN fesc
+is not necessarily unity.
+Finally, we explore a model wherein we use the same
+(redshift-dependent) escape fraction for the ionizing radiation from both star formation and AGN. The results from
+these last three cases are discussed in detail in Sec. 4.
+
+The escape fraction of H I ionizing photons
+
+In what follows, we discuss our calculations of fesc for both
+AGN and stellar radiation from galaxies. In addition to the
+fiducial model, we study five combinations of fesc from star
+formation and AGN in order to explore the available parameter space and its impact on our results as detailed in Sec.
+4.
+2.2.1
+
+(L2−10keV > 1046 erg s−1 ). The unobscured fraction can be
+written as:
+
+bh
+The escape fraction for AGN (fesc
+)
+
+For the ionizing radiation emitted from the AGN, we consider four different models. We start by taking an approach
+similar to Ricci et al. (2017) for the fiducial model. Essentially, we assume that the unobscured fraction, i.e., the
+fraction of AGN with column density < 1022 cm−2 is a
+bh
+proxy for the escape fraction, fesc
+. The argument is that
+by applying a column-density dependent correction to the
+X-ray LF, one recovers the UV luminosity function. As in
+Dayal et al. (2019), we adopt the luminosity-dependent formalism of Ueda et al. (2014), taking as unobscured fraction funabs ≡ flogNH<22 , which varies from ' 10% for faint
+AGN (L2−10keV < 1043 erg s−1 ) to ' 67% for bright AGN
+
+2.2.2
+
+sf
+The escape fraction for star formation (hfesc
+i)
+
+Both the value of the escape fraction of H I ionizing radiasf
+tion emitted from the stellar population (hfesc
+i) as well as
+its trend with the galaxy mass or even redshift remain extremely poorly understood (Sec. 7.1, Dayal & Ferrara 2018).
+sf
+We study four cases for hfesc
+i in this work: firstly, in our
+fiducial model, we use an escape fraction that scales down
+sf
+with decreasing redshift as hfesc
+i = f0 [(1 + z)/7]β where
+β > 1 and f0 is a constant at a given redshift. This is in accord with a number of studies (Robertson et al. 2015; Dayal
+et al. 2017a; Puchwein et al. 2019) that have shown that
+simultaneously reproducing the values of electron scattering
+optical depth (τes ) and the redshift evolution of the emissivity require such a decrease in the global value of the escape
+fraction of ionizing photons from star formation. The values
+of f0 and β required to simultaneously fit the above-noted
+data-sets (with and without AGN contribution) are shown
+in Table 1.
+Secondly, whilst maintaining the same functional form,
+we find the values of the two coefficients (f0 and β) required
+c 0000 RAS, MNRAS 000, 000–000
+
+Reionization with galaxies and AGN
+to fit the optical depth and emissivity constraints using the
+same escape fraction from AGN and star formation.
+Thirdly, following recent results (e.g. Borthakur et al.
+2014; Naidu et al. 2019), we use a model wherein the escape
+fraction for star formation scales positively with the stellar mass. In this case, for galaxies that have black holes,
+sf
+bh
+bh
+we assume fesc
+= fesc
+using the fiducial model for fesc
+;
+sf
+fesc = 0 for galaxies without a black hole. This accounts
+for the possibility that AGN feedback enhances the effect of
+SN feedback in carving “holes” in the interstellar medium,
+facilitating the escape of ionizing radiation. This is a very
+optimistic assumption, as dedicated simulations show that
+AGN struggle to shine and amplify the escape fraction in
+low-mass galaxies (Trebitsch et al. 2018).
+sf
+Fourthly, we explore a model with a constant hfesc
+i=
+0.035. Although a constant escape fraction for stellar radiation from all galaxies can reproduce the τes value, it overshoots the vale of the observed emissivity (see e.g. Fig. 3,
+Dayal et al. 2017a).
+sf
+Finally, we explore a model wherein hfesc
+i increases
+with decreasing stellar mass, as has been shown by a number of theoretical works (e.g. Yajima et al. 2011; Wise
+et al. 2014; Paardekooper et al. 2015). Essentially, we assf
+sume hfesc
+i scales with the ejected gas fraction such that
+sf
+sf
+hfesc i = f0 (f∗eff /f∗ej ). This naturally results in a high hfesc
+i
+sf
+value for low mass galaxies where f∗eff = f∗ej ; hfesc
+i drops
+with increasing mass where f∗eff ∼ f∗ < f∗ej . The results
+from these last four cases are discussed in detail in Sec. 4.
+sf
+We clarify that while we assume the same hfesc
+i value
+for each galaxy, in principle, this should be thought of as
+an ensemble average that depends on, and evolves with, the
+underlying galaxy properties, such as mass or star formation
+or a combination of both.
+
+2.3
+
+Modelling reionization
+
+The reionization history, expressed through the evolution of
+the volume filling fraction (QII ) for ionized hydrogen (H II ),
+can be written as (Shapiro & Giroux 1987; Madau et al.
+1999):
+dQII
+dnion 1
+QII dt
+=
+−
+,
+dz
+dz nH
+trec dz
+
+1
+.
+χ nH (1 + z)3 αB C
+
+(9)
+
+Here αB is the hydrogen case-B recombination coefficient,
+χ = 1.08 accounts for the excess free electrons arising from
+singly ionized helium and C is the IGM clumping factor. We
+use a value of C that evolves with redshift as
+C=
+
+< n2HII >
+= 1 + 43 z −1.71 .
+< nHII >2
+
+c 0000 RAS, MNRAS 000, 000–000
+
+using the results of Pawlik et al. (2009) and Haardt & Madau
+(2012) who show that the UVB generated by reionization
+can act as an effective pressure term, reducing the clumping
+factor.
+While reionization is driven by the hydrogen ionizing
+photons produced by stars in early galaxies, the UVB built
+up during reionization suppresses the baryonic content of
+galaxies by photo-heating/evaporating gas at their outskirts
+(Klypin et al. 1999; Moore et al. 1999; Somerville 2002), suppressing further star formation and slowing down the reionization process. In order to account for the effect of UVB
+feedback on ṅion , we assume total photo-evaporation of gas
+from halos with a virial velocity below Vvir = 40 km s−1
+embedded in ionized regions at any z. In this “maximal external feedback” scenario, halos below Vvir in ionized regions
+neither form stars nor contribute any gas in mergers.
+The globally averaged ṅion can then be expressed as:
+bh
+ṅion (z) = ṅsf
+esc (z) + ṅesc (z)
+
+(11)
+
+where
+ṅsf
+esc (z)
+ṅbh
+esc (z)
+
+=
+
+sf
+sf
+hfesc
+i[QII (z)ṅsf
+int,II (z) + QI (z)ṅint,I (z)],
+
+(12)
+
+=
+
+bh
+bh
+fesc
+[QII (z)ṅbh
+int,II (z) + QI (z)ṅint,I (z)],
+
+(13)
+
+sf
+bh
+where QI (z) = 1 − QII (z). Further, ṅsf
+int,II (ṅint,II ) and ṅint,I
+bh
+(ṅint,I ) account for the intrinsic hydrogen ionizing photon
+
+production rate density from star formation (black hole
+accretion) in case of full UV-suppression of the gas mass
+bh
+and no UV suppression, respectively. The term ṅsf
+esc (ṅesc )
+weights these two contributions over the volume filling fraction of ionized and neutral regions - i.e. while ṅint,I represents the contribution from all sources, stars and black
+holes in halos with Vvir < 40 kms−1 do not contribute to
+ṅint,II . At the beginning of the reionization process, the volume filled by ionized hydrogen is very small (QII << 1) and
+most galaxies are not affected by UVB-feedback, so that
+bh
+sf
+bh
+ṅion (z) ≈ ṅsf
+int,I (z)hfesc i + ṅint,I (z)fesc . As QII increases and
+reaches a value ' 1, all galaxies in halos with circular velocity less than Vvir = 40 km s−1 are feedback-suppressed, so
+sf
+bh
+bh
+that ṅion (z) ≈ ṅsf
+int,II (z)hfesc i + ṅint,II (z)fesc .
+
+(8)
+
+where the first term on the right hand side is the source
+term while the second term accounts for the decrease in QII
+due to recombinations. Here, dnion /dz = ṅion represents
+the hydrogen ionizing photon rate density contributing to
+reionization. Further, nH is the comoving hydrogen number
+density and trec is the recombination timescale that can be
+expressed as (e.g. Madau et al. 1999):
+trec =
+
+5
+
+(10)
+
+3
+
+RESULTS
+
+Given that ṅion (z) is an output of the model, trec is calcubh
+lated as a function of z and fesc
+is obtained from the AGN
+sf
+obscuration fraction, hfesc
+i is the only free parameter in our
+reionization calculations. As explained above, in the fiducial
+sf
+model, hfesc
+i is composed of two free parameters (f0 and
+β) that are fit by jointly reproducing the observed values of
+τes and the emissivity as discussed in Sec. 3.1 that follows.
+sf
+We use this hfesc
+i value to study the AGN contribution to
+reionization in Sec. 3.2. In order to test the robustness of
+our results to assumptions, we also explore alternative models for the escape fraction from AGN and star formation and
+the impact of different stellar population synthesis models
+in Sec. 4.
+
+6
+
+Dayal et. al.
+
+Figure 1. Redshift evolution of the H I ionizing photon emissivity (left panel) and the CMB electron scattering optical depth (τes ) as
+a function of redshift (right panel) for the fiducial model. In the left panel, the open squares show observational results (and associated
+error bars) calculated following the approach of Kuhlen & Faucher-Giguere (2012). In the right panel, the dot-dashed horizontal line
+shows the central value for τes inferred by the latest Planck results (Planck Collaboration et al. 2018) with the gray striped region
+showing the 1 − σ errors. Over-plotted are the escaping emissivities (left panel) and the optical depths (right panel) contributed by: star
+sf i and
+formation only (SF; dot-long-dashed line), AGN+star formation (solid line), and AGN only (short-long-dashed line) using the hfesc
+bh values for the fiducial model reported in Table 1; note that hf sf i is lower in the AGN+SF case (f = 0.0185) as compared to the
+fesc
+0
+esc
+< 109 M
+SF only case (f0 = 0.02). We deconstruct the contribution from star formation in galaxies into those with stellar masses M∗ ∼
+> 109 M (long-dashed line) and show the contribution of black holes of masses > 106 M using the dotted
+(short-dashed line) and M∗ ∼
+∼
+line, as marked.
+
+3.1
+
+The electron scattering optical depth and the
+ionizing photon emissivity
+
+We start by discussing the redshift evolution of the ionizing
+photon emissivity (Eqn. 11) from the fiducial model shown
+in the left panel of Fig. 1. For star formation, the “escaping”
+sf
+emissivity includes the effect of hfesc
+i that decreases with
+redshift as ∝ [(1 + z)/7]2.8 . As a result, whilst increasing
+from z ∼ 19 to z ∼ 8 the emissivity from stellar sources in
+galaxies thereafter shows a drop at lower redshifts. Low-mass
+<
+(M∗ ∼
+109 M ) galaxies dominate the stellar emissivity at
+all redshifts and the total (star formation+AGN) emissivity down to z ∼ 5; although sub-dominant, the importance
+>
+of stars in massive (M∗ ∼
+109 M ) galaxies increases with
+decreasing redshift and they contribute as much as 40%
+(∼ 15%) to the stellar (total) emissivity at z ∼ 4.
+On the other hand, driven by the growth of black holes
+bh
+and the constancy of fesc
+with redshift, the AGN emissivity
+shows a steep (six-fold) increase in the 370 Myrs between
+z ∼ 6 and 4. A turning point is reached at z ∼ 5 where AGN
+and star formation contribute equally to the total emissivity,
+>
+with the AGN contribution (dominated by Mbh ∼
+106 M
+9
+>
+black holes in M∗ ∼ 10 M galaxies) overtaking that from
+star formation at lower-z. Indeed, the AGN emissivity is
+almost twice of that provided by stars by z ∼ 4 leading to
+an increase in the total value.
+To summarise, while the trend of the total emissivity
+is driven by star formation in low-mass galaxies down to
+z = 5, AGN take over as the dominant contributors at lower
+redshifts. This result is in agreement with synthesis models
+
+for the UVB (Faucher-Giguère et al. 2008; Haardt & Madau
+2012) as shown in the same figure.
+The above trends can also be used to interpret the
+latest results on the integrated electron scattering optical
+depth (τes = 0.054 ± 0.007; Planck Collaboration et al.
+2018), shown in the right panel of Fig. 1. We start by noting
+sf
+that fitting to this data requires hfesc
+i = 0.02[(1 + z)/7]2.8
+if stars in galaxies are considered to be the only reionization sources; as shown in Table 3 considering the contribution of both stars and AGN leads to a marginal desf
+crease in the co-efficient of hfesc
+i to 0.0185 whilst leaving the
+redshift-relation unchanged. Stellar radiation in low-mass
+<
+(M∗ ∼
+109 M ) galaxies dominate the contribution to τes
+for most of reionization history. AGN only start making a
+<
+noticeable contribution at z ∼
+5, where they can generate
+an optical depth of τes ∼ 0.22, comparable to stars, which
+generate a total value of τes ∼ 0.24. Stellar radiation from
+>
+high-mass (M∗ ∼
+109 M ) galaxies has a sub-dominant contribution to τes at all redshifts.
+3.2
+
+AGN contribution to reionization as a
+function of stellar mass
+
+To understand the AGN contribution to reionization in the
+fiducial model, we start by looking at the (intrinsic) production rate of H I ionizing photons as a function of M∗ for
+z ∼ 4 − 9 (panel a; Fig. 2). As expected, ṅsf
+int scales with
+M∗ since higher mass galaxies typically have larger associated star formation rates. Further, given their larger gas
+and black hole masses, ṅbh
+int too scales with M∗ . As seen,
+stars dominate the intrinsic H I ionizing radiation producc 0000 RAS, MNRAS 000, 000–000
+
+Reionization with galaxies and AGN
+
+7
+
+Figure 2. As a function of stellar mass, the panels (top to bottom) show the results for star formation (solid lines) and AGN (light
+shaded regions) for the fiducial model for: (a): the intrinsic H I ionizing photon rate; (b): the escape fraction of H I ionizing photons;
+(c): the escaping H I ionizing photon rate; (d): the ratio between the escaping H I ionizing photon rate for AGN and star formation with
+the horizontal line showing a ratio of unity; and (e): the transition stellar mass at which AGN start dominating the escaping ionizing
+photon production rate. In this panel, the solid circles and empty triangles show the knee value of the stellar mass function (and the
+associated error bars) observationally inferred by Grazian et al. (2015) and Song et al. (2016), respectively. Finally, the different colours
+in panels (a)-(c) are for the redshifts marked in panel (a) while the different lines in panel (d) are for the redshifts marked in that panel.
+
+>
+tion rate for all stellar masses at z ∼
+7. However, moving
+to lower redshifts, black holes can contribute as much as
+stars in galaxies with M∗ ∼ 1010.2−10.9 M at z ∼ 6. This
+mass range decreases to M∗ ∼ 109.6−10 M at z ∼ 4 where
+
+c 0000 RAS, MNRAS 000, 000–000
+
+intermediate-mass galaxies host black holes that can accrete
+at the Eddington rate.
+The second factor that needs to be considered is the
+escape fraction of ionizing photons which is shown in panel
+
+8
+
+Dayal et. al.
+
+Figure 3. The ionizing photon per baryon value as a function of stellar mass for the fiducial model for star formation and AGN at z ∼ 6
+and 9, as marked. The dot-dashed and solid lines show the intrinsic and escaping H I ionizing photon rates, respectively.
+
+sf
+(b) of the same figure. As noted above, hfesc
+i is independent
+of galaxy properties and decreases with decreasing z, going
+from a value of about 5.4% at z ∼ 9 to 0.77% at z ∼ 4.
+bh
+However, fesc
+scales with M∗ , and this is the result of
+the dependence of the unabsorbed AGN fraction with luminosity: at higher AGN luminosity a higher fraction of
+bh
+AGN are unabsorbed. Quantitatively, while fesc
+∼ 10%
+<
+for M∗ ∼
+109.7 M , it can have a value as high as 30% for
+>
+1010.9 M at z ∼ 6 − 9.
+M∗ ∼
+We can now combine the intrinsic production rate of
+H I ionizing photons and the escape fraction to look at the
+rate of “escaping” ionizing radiation for star formation and
+AGN in panel (c) of Fig. 2. As expected, ṅsf
+esc ∝ M∗ and
+bh
+ṅsf
+esc > ṅesc at z > 7. However at z < 7 the situation is
+quite different: the most massive black holes and therefore
+the most luminous AGN are hosted in massive galaxies. Additionally, the presence of a critical halo mass below which
+black hole growth is suppressed (see Sec. 2.1) translates into
+a critical stellar mass (Fig. 6; Dayal et al. 2019), below
+bh
+which only low-luminosity AGN exist and fesc
+is very low.
+The fact that both the intrinsic photon production from
+bh
+AGN and fesc
+are very low in low-mass galaxies suppresses
+the AGN contribution from such galaxies to the escaping
+bh
+photon budget. However, the fact that ṅsf
+int ' ṅint for highbh
+mass galaxies coupled with an increasing fesc value results in
+black holes dominating the escaping ionizing radiation rate
+for galaxies with mass above a “transition stellar mass” of
+>
+M∗ ∼
+109.6 (109.2 ) M at z ∼ 6 (4).
+The suppression of black hole growth in low-mass galaxies, advocated from either trying to reconcile seemingly contradictory observational results (Volonteri & Stark 2011) or
+from the results of cosmological hydrodynamical simulations
+(Dubois et al. 2015; Bower et al. 2017), modifies the picture
+
+compared to early papers that assumed unimpeded growth
+of massive black holes in small galaxies/halos (Volonteri &
+Gnedin 2009). As noted above, the suppression of black hole
+contribution from small galaxies/halos, which dominate the
+mass function at the highest redshifts, is further strengthbh
+ened by the assumption that fesc
+increases with AGN luminosity.
+The contribution of AGN to reionization was studied
+using a semi-analytical model also by Qin et al. (2017). Qualitatively, our results agree with theirs, in the sense that only
+relatively high-mass black holes are important thus limiting
+the contribution of AGN to low redshift, and that the AGN
+contribution to reionization is sub-dominant, of order 1015% at z < 6. The specific assumptions of the models differ,
+though: Qin et al. (2017) assume a luminosity-independent
+obscured fraction, and they do not include a spectral energy
+distribution that depends on intrinsic black hole properties
+(mass, accretion rate). In general, models that reproduce the
+generally accepted UV luminosity functions of galaxies and
+AGN will all converge to a similar fractional contribution
+of AGN to reionization. The main reason for the agreement
+between our results and those of Qin et al. (2017) is that
+in both models black hole growth is retarded with respect
+to galaxies, although in different ways. In our model suppression of black hole growth leads to a black hole mass
+function with a step-like appearance, in their case it is the
+overall normalization of the mass function that decreases
+with increasing redshift. In principle, this can be tested observationally through measurements of the relation between
+black hole and stellar masses in high redshift galaxies.
+As expected from the above discussion, star formation
+in galaxies dominate ṅesc for all stellar masses at z > 7 although the AGN contribution increases with M∗ as shown
+c 0000 RAS, MNRAS 000, 000–000
+
+Reionization with galaxies and AGN
+in panel (d) of Fig. 2. At z < 7, however, AGN can start
+dominating ṅesc by as much as one order of magnitude for
+M∗ ∼ 1011 M galaxies at z ∼ 6 where black holes can accrete at the Eddington rate. This peak mass shifts to lower
+M∗ values with decreasing redshift - at z ∼ 4 AGN in galaxies with masses as low as M∗ ∼ 109.6 M , which can accrete
+at the Eddington limit, dominate ṅesc by a factor of 10.
+The redshift evolution of the “transition mass”, at
+which AGN start dominating ṅesc , is shown in panel (e)
+of the same figure which shows two key trends: firstly, as
+expected, the transition mass only exists at z < 7 with stellar radiation dominating ṅesc at higher-z. Secondly, as black
+holes in galaxies of increasingly lower stellar mass can accrete at the Eddington limit with decreasing redshift (Piana
+et al., in prep.), the transition mass too decreases with z
+from ∼ 1010.7 M at z ∼ 6.8 to ∼ 109.3 M by z ∼ 4. In the
+same panel, we also show a comparison of this transition
+mass to the observationally-inferred knee of the stellar mass
+function (Mknee
+) which ranges between 1010.5 − 1011 M at
+∗
+z ∼ 4 − 7. While the transition mass is comparable to the
+knee stellar mass at z ∼ 6.8, it shows a very rapid decline
+with decreasing redshift. Indeed, by z ∼ 4, AGN start dominating ṅesc from galaxies that are (at least) an order of
+magnitude less massive compared to the knee mass and in
+fact the ratio between the escaping H I ionizing photon rate
+for AGN and star formation peaks at intermediate galaxy
+masses. Finally, we note that such a transition mass only
+sf
+exists in the case that the stellar mass dependence of hfesc
+i
+bh
+is shallower than fesc (see Section 4).
+We summarise the impact of the the above-noted trends
+on the production/escape rates of H I ionizing photons per
+baryon over a Hubble time in Fig. 3. Here the contribution
+in each galaxy mass range is weighted by its cosmic abundance, via the mass of the host halo - therefore this figure
+represents the effective contribution of that mass range to
+the global photon budget. We note that, at any z, while ṅsf
+esc
+bh
+is just a scaled version of ṅsf
+int , ṅesc instead evolves based on
+the luminosity/mass evolution. The key trends emerging are:
+firstly, at any z, whilst the contribution of stars (weighted
+by the number density) is the highest at intermediate stellar
+mass galaxies (107−9 M ) at z ∼ 6, the contribution is essentially mass independent between a stellar mass of 105−8 M
+at z ∼ 9. Although massive galaxies, M∗ ∼ 109 − 1010 M ,
+have higher production rates of ionizing radiation from both
+bh
+stars and black holes in addition to higher fesc
+values, they
+are rarer than their low-mass counterparts, which therefore
+dominate the total emissivity as also shown in the left panel
+of Fig. 1. Secondly, AGN only have a contribution at the high
+<
+stellar mass end (M∗ ∼ 109−10 M ) at z ∼
+9. Thirdly, as expected from the above discussions, given both the higher
+values of the intrinsic H I ionizing photon production rate
+and fesc , AGN dominate the emissivity at the high-mass
+>
+end (M∗ ∼
+109 M ) at z ∼ 6.
+Since AGNs are efficient producers of HeII ionizing photons, useful constraints can be obtained on their contribution from the corresponding observations, e.g., He II Lyα optical depth at z ∼ 3 (Worseck et al. 2016) and the heating
+of the IGM at z . 5 (Becker et al. 2011). A detailed modelling of the He II reionization history is beyond the scope
+c 0000 RAS, MNRAS 000, 000–000
+
+9
+
+of this work. However, we have computed the He III volume
+filling fraction, QHeIII , and found that QHeIII ∼ 0.4 (0.2) at
+z = 4 (5), assuming that the escape fraction of He II ionizing
+photons is the same as that of the H I ionizing photons.
+While this implies a He II reionization earlier than the model
+of Haardt & Madau (2012), it is still within the 2−σ bounds
+as allowed by the observations (see, e.g., Mitra et al. 2018).
+
+4
+
+ALTERNATIVE MODELS
+
+Our key result is that the AGN contribution of ionizing
+photons is subdominant at all galaxy masses at z > 7. At
+z ∼ 6 − 7 their contribution increases with stellar mass, and
+at lower redshift it is AGN in intermediate-mass galaxies
+that produce most ionizing photons (Fig. 2). This results in
+a “transition” stellar mass at which AGN overtake the stellar contribution to the escaping ionizing radiation; for stars
+in galaxies to dominate all the way through in the mass
+function, either the escape fraction of stellar radiation from
+galaxies should increase with galaxy mass or that from AGN
+should decrease, especially at high masses. In our fiducial
+model, this transition stellar mass decreases with decreasing redshift. Further, star formation in galaxies with mass
+< 109 M is the main driver of hydrogen reionization. One
+could argue that this is a consequence of the steep increase
+sf
+of hfesc
+i at high redshifts, which artificially boosts the contribution of stars in low-mass galaxies and correspondingly
+reduces the contribution of AGN. In this section we examine the robustness of our results by exploring six different
+bh
+sf
+combinations of fesc
+and hfesc
+i in Sec. 4.1 and two different
+stellar population synthesis models in Sec. 4.2 in order to
+explore the physically plausible parameter space.
+
+4.1
+
+Alternative models for AGN and star
+formation escape fractions
+
+sf
+bh
+Given that the trends of hfesc
+i and fesc
+with galaxy properties are still uncertain, both theoretically and observationally, Fig. 4 shows the optical depth and emissivity predicted
+by the alternative models summarised in Table 2:
+bh
+(i) In the first model (Alt1, panels a1 and a2), fesc
+is
+obtained from the results of Merloni et al. (2014). We fit
+to the optical depth and emissivity observations to derive
+sf
+hfesc
+i = 0.017[(1 + z)/7]3.8 . This steep redshift-dependence
+for the escaping stellar radiation from galaxies (left-most
+column of Fig. 5) is required to off-set the increasing AGN
+bh
+<
+contribution at z ∼
+5 which is driven by the higher fesc
+values (compared to the fiducial model) as shown in the midsf
+dle column of Fig. 5. This enhances the ratio ṅbh
+esc /ṅesc by
+more than one order of magnitude compared to the fiducial
+model at z < 7 (right-most column of Fig. 5). As seen from
+the same panel, we find that the transition mass remains
+almost unchanged compared to the fiducial case.
+(ii) In the second model (Alt2, panels b1 and b2) we
+sf
+keep hfesc
+i equal to the fiducial value and maximise the esbh
+cape fraction from AGN by assuming fesc
+= 1. Driven by
+such maximal AGN contribution, this model severely over<
+predicts the emissivity at z ∼
+5; the optical depth, being
+
+10
+
+Dayal et. al.
+
+Figure 4. The redshift evolution of the electron scattering optical depth (left column) and the associated escaping ionizing emissivity
+(right column). In the left column, the dot-dashed horizontal line shows the central value for τes inferred by the latest Planck results
+(Planck Collaboration et al. 2018) with the gray striped region showing the 1 − σ errors. In the right column, open squares show the
+observational results (and associated error bars) calculated following the approach of Kuhlen & Faucher-Giguere (2012). In each panel,
+we show results for star formation+AGN (solid line), star formation (dot-dashed line) and AGN (short-long-dashed line) for the different
+alternative escape fraction models (Alt1-Alt6) discussed in Sec. 4.1 and summarised in Table 2. The model name and the fesc values
+used for star formation and AGN are noted in each panel of the right column.
+
+c 0000 RAS, MNRAS 000, 000–000
+
+Reionization with galaxies and AGN
+
+11
+
+sf i (left column), f bh (middle column) and the ratio between the escaping
+Figure 5. As a function of stellar mass, we show hfesc
+esc
+H I ionizing photon rate for AGN and stars (right column) for z ∼ 4.1 (top row) and z ∼ 6 (bottom row). We show results for the six
+different alternative escape fraction models (Alt1- Alt6) discussed in Sec. 4.1 and summarised in Table 2 and also plot the fiducial model
+for comparison. In the right-most column, the horizontal line shows a ratio of unity.
+
+sf i
+Table 2. For the alternative models studied in Sec. 4.1, we summarise the model name (column 1), the parameter values for hfesc
+bh (column 3), the impact on the ratio ṅbh /ṅsf compared to the fiducial model (column 4) and the impact on the
+(column 2) and fesc
+esc
+esc
+transition mass at which AGN start dominating the escaping H I ionizing photon production rate compared to the fiducial model (column
+5). We note that of models Alt1 - Alt6, only Alt1, Alt3 and Alt6 simultaneously fit τes (Planck Collaboration et al. 2018) and the redshift
+evolution of the H I ionizing photon emissivity. We use the fiducial values of the free parameters for galaxy formation as in Table 1.
+
+Model
+
+sf i
+hfesc
+
+bh
+fesc
+
+sf
+ṅbh
+esc /ṅesc
+
+Transition M∗
+
+Alt1
+Alt2
+Alt3
+Alt4
+Alt5
+Alt6
+
+0.017[(1 + z)/7]3.8
+
+Merloni et al. (2014)
+1
+0.017[(1 + z)/7]3.2
+fiducial
+Ueda et al. (2014)
+fiducial
+
+Increases at all M∗
+Increases at all M∗
+Decreases at all M∗
+Decreases at all M∗
+< 7.5
+Decreases at all M∗ for z ∼
+>
+9.2
+Increases for M∗ ∼ 10 M
+
+Almost unchanged
+Decreases by 0.2 (0.4 dex) at z ∼ 6 (4)
+Increases by 0.1 dex at z ∼ 6 − 4
+Decreases by 0.3 dex (unchanged) at z ∼ 6 (4)
+
+fiducial
+0.017[(1 + z)/7]3.2
+bh ∝ M γ
+fiducial fesc
+∗
+0.035
+0.1(f∗eff /f∗ej ) ∝ M∗−ζ
+
+dominated by star formation in galaxies for most of the
+reionization history, can still be fit within the 1 − σ error
+sf
+bars. As seen from the right-most panel of Fig. 5, ṅbh
+esc /ṅesc
+is higher by more than one order of magnitude compared
+to the fiducial model. Again, a transition stellar mass exists
+at z < 7 and is only slightly lower (by about 0.2-0.4 dex)
+compared to the fiducial model.
+(iii) In the third model (Alt3, panels c1 and c2) we consider the same redshift-dependent escape fraction for the
+ionizing radiation from both stellar radiation and AGN.
+Here, simultaneously fitting to the optical depth and emissf
+sivity values yields an escape fraction that evolves as hfesc
+i=
+c 0000 RAS, MNRAS 000, 000–000
+
+bh
+sf
+bh
+fesc
+= 0.017[(1 + z)/7]3.2 . The evolution of hfesc
+i and fesc
+can be seen from the left and middle columns of Fig. 5.
+This model naturally results in a lower AGN contribution
+to the escaping ionizing radiation at all masses and redshifts
+as compared to the fiducial model (right most panel of the
+same figure). Similar to the results of model Alt4 that follows, in this model the AGN ionizing radiation contribution
+is minimised and only slightly exceeds that from galaxies at
+M∗ ∼ 109.5−9.8 M by z ∼ 4, i.e. stellar radiation dominates
+the ionizing budget at effectively all masses and redshifts although the AGN contribution still increases with increasing
+stellar mass.
+
+12
+
+Dayal et. al.
+
+Figure 6. Left panel: As a function of redshift, we show the escaping H I ionizing photon emissivity. The different lines show the
+emissivity from star formation+AGN while the shaded regions (of the same lighter colour) show the contribution from AGN only. Right
+panel: The reionization history, expressed through the redshift evolution of the volume filling fraction of H II . The horizontal dashed
+line shows Log(QII ) = −0.301, i.e. when reionization is 50% complete. The different colours in both panels show results for the fiducial
+and alternative escape fraction models (discussed in Sec. 4.1) as marked in the right panel.
+
+(iv) In the fourth model (Alt4, panels d1 and d2) we
+sf
+bh
+bh
+assume hfesc
+i = fesc
+using the fiducial fesc
+value from Ueda
+et al. (2014) for galaxies that have a black hole; we use
+sf
+hfesc
+i = 0 for galaxies that do not host a black hole. This
+sf
+bh
+results in both hfesc
+i and fesc
+scaling positively with the stellar mass as shown in the left-most and middle panels of Fig.
+5. As in the previous model, this identical escape fraction
+for both stellar radiation and AGN results in stellar radiation dominating the ionizing budget at almost all masses
+and redshifts; the AGN ionizing radiation contribution only
+slightly exceeds that from galaxies at M∗ ∼ 1010 M by
+z ∼ 4. However, we note that this model over-predicts the
+emissivity from stellar sources at all redshifts and is unable
+to simultaneously reproduce both the values of τes the the
+emissivity.
+(v) In the fifth model (Alt5, panels e1 and e2) we assf
+sume a constant hfesc
+i = 3.5% and use the fiducial value for
+bh
+fesc . As seen from the bottom panels of Fig. 4, this model
+is unable to simultaneously reproduce both the values of τes
+sf
+and the emissivity. In this model, the value of hfesc
+i is de>
+<
+creased (increased) at z ∼ 7.5 ( ∼ 7.5) compared to the fiducial case as shown in the left panel of Fig. 5. Compared to
+sf
+the fiducial model, this results in a lower value of ṅbh
+esc /ṅesc
+by about 0.3 (0.8 dex) at z ∼ 6 (z ∼ 4.1) and the transition
+mass increases negligibly (by ∼ 0.1 dex) at z = 4 − 6.
+(vi) In the sixth model (Alt6, panels f1 and f2), while we
+bh
+sf
+use the fiducial value for fesc
+, we assume that hfesc
+i scales
+sf
+with the ejected gas fraction such that hfesc i = f0 (f∗eff /f∗ej ).
+sf
+This naturally results in hfesc
+i decreasing with an increasing halo (and stellar) mass. A value of f0 = 0.1 is required
+to simultaneously fit both the optical depth and emissivity constraints as shown in the same figure. In this model,
+the increasing suppression of the star formation rate in lowmass halos due to both supernova and reionization feedback
+
+naturally leads to a downturn in the stellar emissivity with
+decreasing redshift. As shown in Fig. 5, in this model the
+sf
+>
+108.4 M
+hfesc
+i values lie below the fiducial one for all M∗ ∼
+sf
+at z ∼ 6. However, by z ∼ 4, the hfesc i values for the lowest
+mass halos (∼ 108.6 M ) approach the values for the fiducial
+model. Compared to the fiducial model, this results in an insf
+creasing ṅbh
+esc /ṅesc with increasing stellar mass, specially for
+9.2
+>
+M∗ ∼ 10 M . This naturally leads a transition mass that
+is lower than that in the fiducial model by about 0.3 dex at
+z ∼ 6, whilst being almost identical at z ∼ 4.
+sf
+bh
+To summarise, the possible range of hfesc
+i and fesc
+combinations (ranging from redshift-dependent to constant to
+scaling both positively and negatively with stellar mass)
+have confirmed our key results: the AGN contribution of
+ionizing photons is subdominant at all galaxy masses at
+z > 7 and increases with stellar mass at z < 7. Additionally, we have confirmed the existence of a “transition” stellar
+mass (at which AGN overtake the stellar contribution to the
+escaping ionizing radiation) which decreases with decreasing redshift. Stars dominate all the way through the mass
+sf
+function only when the stellar mass dependence of hfesc
+i is
+bh
+steeper than fesc
+or if we assume the same fesc values for
+both star formation and AGN (i.e. the Alt3 and Alt4 models); in this case, naturally, the transition mass no longer
+exists.
+
+4.2
+
+Alternative stellar population synthesis
+models
+
+In addition to the fiducial SB99 model, we have considered two other population synthesis models: BPASS binaries (BPB; Eldridge et al. 2017) and Starburst99 including
+stripped binaries (SB99+sb; Götberg et al. 2019). The time
+c 0000 RAS, MNRAS 000, 000–000
+
+Reionization with galaxies and AGN
+Table 3. The parameter values for the z-evolution of the escape
+sf i = f [(1 + z)/7]β for different models constrained
+fraction, hfesc
+0
+to simultaneously fit τes (Planck Collaboration et al. 2018) that
+combines polarisation, lensing and temperature data, and the redshift evolution of the H I ionizing photon emissivity (see text).
+bh and the same values of the free
+We use the fiducial value for fesc
+parameters for galaxy formation as in Table 1.
+SPS Model
+
+Sources
+
+f0 × 100
+
+β
+
+SB99
+SB99
+BPB
+BPB
+SB99+sb
+SB99+sb
+
+SF
+SF+AGN
+SF
+SF+AGN
+SF
+SF+AGN
+
+2.0
+1.85
+0.46
+0.43
+1.7
+1.6
+
+2.8
+2.8
+2.8
+2.8
+2.8
+2.8
+
+evolution of the intrinsic ionizing and UV photons from star
+formation in the BPB model can be expressed as:
+47.25
+ṅsf
+− 2.28 log
+int (t) = 10
+
+LUV (t) = 1033.0 −1.2 log
+
+
+
+
+
+t
+2 Myr
+
+
+
++ 0.6 [s−1 ],
+
+(14)
+
+
+t
++0.5 [erg s−1 Å−1 ]. (15)
+2 Myr
+
+In the SB99+sb model, these quantities evolve as:
+
+
+t
+sf
+46.7
+ṅint (t) = 10
+− 2.3 log
+[s−1 ],
+2 Myr
+LUV (t) = 1033.01 − 1.3 log
+
+
+
+t
+2 Myr
+
+
+
+(16)
+
++ 0.49 [erg s−1 Å−1 ]
+
+(17)
+The rest-frame UV luminosity has almost the same normalisation and time-evolution in all three models (SB99, BPB,
+SB99+sb) resulting in the same UV LFs. However, as seen
+from Eqns. 5, 15 and 17, the slope of the time evolution
+of ṅint is much shallower in the BPB and SB99+sb models
+sf
+compared to the fiducial (SB99) model. We re-tune hfesc
+i
+for each of these models to match to the reionization data
+bh
+(τes and the emissivity) using the fiducial fesc
+values, the
+results of which are summarised in Table 3. As seen, while
+sf
+the slope of the redshift dependence of hfesc
+i remains unchanged (β = 2.8), the normalisation (f0 ) is the lowest for
+the BPB model as compared to SB99 by a factor 4.6; the
+SB99 and SB99+sb models on the other hand only differ
+sf
+by a factor 1.17. Finally, the lower hfesc
+i values compensate
+for a higher intrinsic production rate to result in the same
+ṅsf
+esc value as a function of M∗ . These different stellar populations, therefore, have no bearing on our result regarding
+the relative AGN/starlight contribution to the ionizing radiation for different galaxy stellar masses.
+
+5
+
+REIONIZATION HISTORY AND THE
+CUMULATIVE AGN CONTRIBUTION
+
+We start with a recap of the total (star formation+AGN)
+ionizing emissivity for all the different models considered in
+c 0000 RAS, MNRAS 000, 000–000
+
+13
+
+this work in (the left-panel of) Fig. 6. In all models, the ionizing emissivity from star formation dominates at z > 6 and is
+virtually indistinguishable for all the models (fiducial, Alt1,
+sf
+Alt2 and Alt3) that use a redshift dependent hfesc
+i value.
+The redshift evolution of the emissivity is the steepest for
+sf
+the Alt4 model where hfesc
+i ∝ M∗ . With its constant value
+sf
+of hfesc
+i = 0.035, model Alt5 shows the shallowest slope.
+sf
+Given its lower hfesc
+i values for all stellar masses at highredshifts, the Alt6 model naturally shows a lower ionizing
+emissivity compared to fiducial; the stellar emissivity from
+the Alt6 model converges to the fiducial one by z ∼ 9 as a
+sf
+result of the decreasing hfesc
+i values for the latter. As expected, the AGN contribution is the lowest for the model
+sf
+bh
+Alt3 where hfesc
+i = fesc
+= a decreasing function of redshift
+(as shown in the same panel). It then increases by a factor
+of 3 from the fiducial case to the Alt1 case and reaches its
+bh
+maximum for the Alt2 case where fesc
+= 1.
+We then discuss reionization history, expressed through
+the redshift evolution of the volume filling fraction of ionized
+hydrogen (QII ), as shown in (the right-panel of) Fig. 6. Insf
+terestingly, despite the range and trends used for hfesc
+i and
+bh
+fesc , reionization is 50% complete in all cases in the very narrow redshift range of z ∼ 6.6 − 7.6. Further, we find an end
+redshift of reionization value of zre ∼ 5−6.5 in all the models
+studied here except Alt 3. In this model, the decrease in the
+sf
+star formation emissivity (driven by the decrease of hfesc
+i)
+with decreasing redshift is not compensated by an increasing AGN contribution as in the other models; as a result,
+reionization does not finish even by z ∼ 4. Given that star
+formation in low-mass halos is the key driver of reionization, it is not surprising to see that reionization finishes first
+(zre ∼ 6.5) in the Alt4 model that has the largest value of
+sf
+hfesc
+i. Models Alt2 and Alt5 show a similar zre ∼ 5.8 driven
+by an increasing contribution from star formation and AGN,
+respectively. Finally, given their lower values of the total ion<
+7, reionization ends at zre ∼ 5 in the
+izing emissivity at z ∼
+fiducial, Alt1 and Alt6 models.
+Finally, we show the AGN contribution to the cumulative ionizing emissivity as a function of redshift in Fig. 7. As
+seen, AGN contribute at most 1% of the total escaping ionizing photon rate by z ∼ 4 in the Alt3 model. This increases
+to ∼ 10% of the total ionizing emissivity for the fiducial and
+Alt4-Alt6 cases. Compared to the fiducial case, the higher
+bh
+fesc
+in the Alt1 case results in an AGN contribution as high
+bh
+as 25% by z ∼ 4. Finally, the Alt2 case (fesc
+= 1) provides
+the upper limit to the AGN contribution. Here, AGN contribute as much as galaxies to the cumulative emissivity by
+z ∼ 4.4.
+In addition to the fiducial model, only Alt1, Alt3 and
+Alt6 are able to simultaneously reproduce the emissivity
+and optical depth constraints. However, as seen above, the
+Alt3 model does not have enough ionizing photons to finish
+the process of reionization. This leaves us with three physically plausible models - the fiducial one, Alt1 and Alt6. In
+these, the AGN contribution to the total emissivity is subdominant at all z; AGN contribute about 0.5 − 1% to the
+cumulative ionizing emissivity by z ∼ 6 that increases to
+10 − 25% by z = 4.
+
+14
+
+Dayal et. al.
+
+Figure 7. The cumulative fraction of ionizing photons contributed by AGN as a function of redshift; the horizontal short-dashed line
+shows the 50% contribution to the cumulative ionizing emissivity for the various models discussed in this work (see Sec. 4.1 for details),
+as marked.
+
+6
+
+CONCLUSIONS
+
+In this paper, we have studied the contribution of AGN to
+hydrogen reionization. Our model includes a delayed growth
+of black holes in galaxies via suppression of black hole accretion in low-mass galaxies, caused by supernova feedback.
+Furthermore, in our model each accreting black hole has a
+spectral energy distribution that depends on the black hole
+mass and accretion rate. Given that the escape fractions for
+both star formation and AGN remain poorly understood, we
+have explored a wide range of combinations for these (ranging from redshift-dependent to constant to scaling both positively and negatively with stellar mass). Using these models,
+we find the following key results:
+• The intrinsic production rate of ionizing photons for
+both star formation and AGN scales positively with stellar mass with star formation dominating at all masses and
+redshifts.
+• Irrespective of the escape fraction values used, the AGN
+contribution to the escaping ionizing photons is always subdominant at all galaxy masses at z > 7. In the case that the
+sf
+bh
+stellar mass dependence of hfesc
+i is shallower than fesc
+, at
+z < 7 a “transition” stellar mass exists above which AGN
+dominate the escaping ionizing photon production rate. This
+transition stellar mass decreases with redshift from being
+equal to the knee of the stellar mass function at z ∼ 6.8 to
+being an order of magnitude less than the knee by z = 4.
+• Overall, the ionizing budget is dominated by stellar radiation from low-mass (M∗ < 109 M ) galaxies down to
+>
+z∼
+6 in all models. In the fiducial model, at z = 6 AGN
+and stars in M∗ > 109 M contribute equally to the ionizing budget (∼ 15% of the total). However at z < 5.5, the
+AGN contribution (driven by Mbh > 106 M black holes in
+
+>
+109 M galaxies) overtakes that from star formation
+M∗ ∼
+in M∗ < 109 M galaxies. The contribution from star formation in high-mass (M∗ > 109 M ) galaxies is sub-dominant
+at all redshifts, reaching a maximum value of 20% of the
+<
+total ionizing budget at z ∼
+6.
+• Different stellar population synthesis models (SB99,
+BPB, SB99+sb) have no bearing on our result regarding
+the relative AGN/starlight contribution to the ionizing radiation for different galaxy stellar masses.
+• For all models that match the observed reionization
+constraints (electron scattering optical depth and the ionizing emissivity) and where reionization finishes by z ∼ 5,
+AGN can contribute as much as 50 − 83% of the emissivity
+at z = 5. However, AGN only contribute 0.5 − 1% to the
+cumulative ionizing emissivity by z ∼ 6 that increases to
+10 − 25% by z = 4.
+
+ACKNOWLEDGMENTS
+PD acknowledges support from the European Research
+Council’s starting grant ERC StG-717001 (“DELPHI”),
+from the NWO grant 016.VIDI.189.162 (“ODIN”) and the
+European Commission’s and University of Groningen’s COFUND Rosalind Franklin program. MV and MT acknowledge funding from the European Research Council under
+the European Community’s Seventh Framework Programme
+(FP7/2007-2013 Grant Agreement no. 614199, project
+“BLACK”). TRC acknowledges support from the Associateship Scheme of ICTP. MV and RS acknowledge support from
+the Amaldi Research Center funded by the MIUR program
+“Dipartimento di Eccellenza” (CUP:B81I18001170001). MT
+is supported by Deutsche Forschungsgemeinschaft (DFG,
+c 0000 RAS, MNRAS 000, 000–000
+
+Reionization with galaxies and AGN
+German Research Foundation) under Germany’s Excellence
+Strategy EXC-2181/1 - 390900948 (the Heidelberg STRUCTURES Cluster of Excellence). HA is supported by the Centre National d’Etudes Spatiales (CNES). MH acknowledges
+financial support from the Carlsberg Foundation via a Semper Ardens grant (CF15-0384). Finally, PD and MV thank
+La Sapienza for their hospitality, where the bulk of this work
+was carried out and thank D. Stark and P. Oesch for their
+insightful comments.
+
+REFERENCES
+Becker G. D., Bolton J. S., Haehnelt M. G., Sargent W.
+L. W., 2011, MNRAS, 410, 1096
+Becker G. D., Bolton J. S., Madau P., Pettini M., RyanWeber E. V., Venemans B. P., 2015, MNRAS, 447, 3402
+Borthakur S., Heckman T. M., Leitherer C., Overzier R. A.,
+2014, Science, 346, 216
+Bouwens R. J., Illingworth G. D., Oesch P. A., et. al., 2012,
+ApJ, 752, L5
+Bower R. G., Schaye J., Frenk C. S., Theuns T., Schaller
+M., Crain R. A., McAlpine S., 2017, MNRAS, 465, 32
+Chardin J., Haehnelt M. G., Aubert D., Puchwein E., 2015,
+MNRAS, 453, 2943
+Chardin J., Puchwein E., Haehnelt M. G., 2017, MNRAS,
+465, 3429
+Choudhury T. R., Ferrara A., 2007, MNRAS, 380, L6
+Dayal P., Choudhury T. R., Bromm V., Pacucci F., 2017a,
+ApJ, 836, 16
+Dayal P., Choudhury T. R., Pacucci F., Bromm V., 2017b,
+MNRAS, 472, 4414
+Dayal P., Ferrara A., 2018, Phys. Rep., 780, 1
+Dayal P., Ferrara A., Dunlop J. S., Pacucci F., 2014, MNRAS, 445, 2545
+Dayal P., Rossi E. M., Shiralilou B., Piana O., Choudhury
+T. R., Volonteri M., 2019, MNRAS, 486, 2336
+Done C., Davis S. W., Jin C., Blaes O., Ward M., 2012,
+MNRAS, 420, 1848
+Dubois Y., Volonteri M., Silk J., Devriendt J., Slyz A.,
+Teyssier R., 2015, MNRAS, 452, 1502
+Duncan K., Conselice C. J., 2015, MNRAS, 451, 2030
+Eldridge J. J., Stanway E. R., Xiao L., McClelland L. A. S.,
+Taylor G., Ng M., Greis S. M. L., Bray J. C., 2017, PASA,
+34, e058
+Faucher-Giguère C.-A., Lidz A., Hernquist L., Zaldarriaga
+M., 2008, ApJ, 688, 85
+Ferland G. J. et al., 2013, Rev. Mexicana Astron. Astrofis.,
+49, 137
+Finkelstein S. L. et al., 2019, ApJ, 879, 36
+Finkelstein S. L., Papovich C., Ryan R. E., et. al., 2012,
+ApJ, 758, 93
+Giallongo E., Grazian A., Fiore F., et. al., 2015, Astronomy
+and Astrophysics, 578, A83
+Giallongo E. et al., 2019, ApJ, 884, 19
+Götberg Y., de Mink S. E., Groh J. H., Leitherer C., Norman C., 2019, A&A, 629, A134
+Grazian A., Fontana A., Santini P., et. al., 2015, A&A, 575,
+A96
+c 0000 RAS, MNRAS 000, 000–000
+
+15
+
+Grazian A. et al., 2018, A&A, 613, A44
+Haardt F., Madau P., 2012, ApJ, 746, 125
+Hassan S., Davé R., Mitra S., Finlator K., Ciardi B., Santos
+M. G., 2018, MNRAS, 473, 227
+Klypin A., Kravtsov A. V., Valenzuela O., Prada F., 1999,
+ApJ, 522, 82
+Kuhlen M., Faucher-Giguere C.-A., 2012, MNRAS, 423,
+862
+Kulkarni G., Worseck G., Hennawi J. F., 2019, MNRAS,
+488, 1035
+Liu C., Mutch S. J., Angel P. W., Duffy A. R., Geil P. M.,
+Poole G. B., Mesinger A., Wyithe J. S. B., 2016, MNRAS,
+462, 235
+Madau P., Fragos T., 2017, ApJ, 840, 39
+Madau P., Haardt F., 2015, ApJ, 813, L8
+Madau P., Haardt F., Rees M. J., 1999, ApJ, 514, 648
+McGreer I. D., Fan X., Jiang L., Cai Z., 2018, AJ, 155, 131
+Merloni A. et al., 2014, MNRAS, 437, 3550
+Micheva G., Iwata I., Inoue A. K., 2017, MNRAS, 465, 302
+Mitra S., Choudhury T. R., Ferrara A., 2015, MNRAS, 454,
+L76
+Mitra S., Choudhury T. R., Ferrara A., 2018, MNRAS, 473,
+1416
+Moore B., Quinn T., Governato F., Stadel J., Lake G.,
+1999, MNRAS, 310, 1147
+Naidu R. P., Tacchella S., Mason C. A., Bose S., Oesch
+P. A., Conroy C., 2019, arXiv e-prints, arXiv:1907.13130
+Oke J. B., Gunn J. E., 1983, Astrophysical Journal, 266,
+713
+Onoue M. et al., 2017, ApJ, 847, L15
+Paardekooper J.-P., Khochfar S., Dalla Vecchia C., 2015,
+MNRAS, 451, 2544
+Pawlik A. H., Schaye J., van Scherpenzeel E., 2009, MNRAS, 394, 1812
+Planck Collaboration, Ade P. A. R., Aghanim N., Arnaud
+M., et al., 2016, A&A, 594, A13
+Planck Collaboration, Aghanim N., Akrami Y. e. a., 2018,
+arXiv e-prints, arXiv:1807.06209
+Puchwein E., Haardt F., Haehnelt M. G., Madau P., 2019,
+MNRAS, 485, 47
+Qin Y. et al., 2017, MNRAS, 472, 2009
+Ricci F., Marchesi S., Shankar F., La Franca F., Civano F.,
+2017, MNRAS, 465, 1915
+Robertson B. E., Ellis R. S., Furlanetto S. R., Dunlop J. S.,
+2015, ApJ, 802, L19
+Salpeter E. E., 1955, ApJ, 121, 161
+Salvaterra R., Ferrara A., Dayal P., 2011, MNRAS, 414,
+847
+Shakura N. I., Sunyaev R. A., 1973, A&A, 24, 337
+Shapiro P. R., Giroux M. L., 1987, ApJ, 321, L107
+Sharma M., Theuns T., Frenk C., Bower R., Crain R.,
+Schaller M., Schaye J., 2016, MNRAS, 458, L94
+Shull J. M., van Steenberg M. E., 1985, ApJ, 298, 268
+Somerville R. S., 2002, ApJ, 572, L23
+Song M., Finkelstein S. L., Ashby M. L. N., et. al., 2016,
+ApJ, 825, 5
+Thomas A. D., Groves B. A., Sutherland R. S., Dopita
+M. A., Kewley L. J., Jin C., 2016, ApJ, 833, 266
+
+16
+
+Dayal et. al.
+
+Trebitsch M., Volonteri M., Dubois Y., Madau P., 2018,
+MNRAS, 478, 5607
+Ueda Y., Akiyama M., Hasinger G., Miyaji T., Watson
+M. G., 2014, ApJ, 786, 104
+Volonteri M., Gnedin N. Y., 2009, ApJ, 703, 2113
+Volonteri M., Reines A. E., Atek H., Stark D. P., Trebitsch
+M., 2017, ApJ, 849, 155
+Volonteri M., Stark D. P., 2011, MNRAS, 417, 2085
+Weigel A. K., Schawinski K., Treister E., Urry C. M., Koss
+M., Trakhtenbrot B., 2015, MNRAS, 448, 3167
+Wise J. H., Demchenko V. G., Halicek M. T., Norman
+M. L., Turk M. J., Abel T., Smith B. D., 2014, MNRAS,
+442, 2560
+Worseck G., Prochaska J. X., Hennawi J. F., McQuinn M.,
+2016, ApJ, 825, 144
+Yajima H., Choi J.-H., Nagamine K., 2011, MNRAS, 412,
+411
+Yoshiura S., Hasegawa K., Ichiki K., Tashiro H.,
+Shimabukuro H., Takahashi K., 2017, MNRAS, 471, 3713
+
+APPENDIX A: IONIZING PROPERTIES AS A
+FUNCTION OF BLACK HOLE PROPERTIES
+
+Figure A1. As a function of black hole mass, the panels (top
+to bottom) show the fraction of luminosity emitted in photons
+above 13.6 eV and the mean energy of such photons, the fraction
+of luminosity emitted in photons above 54.4 eV and the mean
+energy of such photons. Solid: for a black hole at the Eddington
+luminosity; dashed: for a black hole at 10% of the Eddington
+luminosity; dot-dashed: for a black hole at 1% of the Eddington
+luminosity.
+
+c 0000 RAS, MNRAS 000, 000–000
+
+

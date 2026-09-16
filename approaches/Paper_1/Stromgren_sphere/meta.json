@@ -1,0 +1,671 @@
+[
+ {
+  "id": "2208.02260v2",
+  "title": "Modeling Cosmic Reionization",
+  "authors": [
+   "Nickolay Y. Gnedin",
+   "Piero Madau"
+  ],
+  "date": "2022-08-03",
+  "journal": "",
+  "doi": "",
+  "summary": "The transformation of cold neutral intergalactic hydrogen into a highly ionized warm plasma marks the end of the cosmic dark ages and the beginning of the age of galaxies. The details of this process reflect the nature of the early sources of radiation and heat, the statistical characteristics of the large-scale structure of the Universe, the thermodynamics and chemistry of cosmic baryons, and the histories of star formation and black hole accretion. A number of massive data sets from new ground- and space-based instruments and facilities over the next decade are poised to revolutionize our understanding of primeval galaxies, the reionization photon budget, the physics of the intergalactic medium (IGM), and the fine-grained properties of hydrogen gas in the \"cosmic web\". In this review we survey the physics and key aspects of reionization-era modeling and describe the diverse range of computational techniques and tools currently available in this field.",
+  "file": "references/Gnedin2022_arXiv2208.02260v2.pdf",
+  "key": "Gnedin2022",
+  "bibkey": "Gnedin2022"
+ },
+ {
+  "id": "2305.00998v1",
+  "title": "New quasar proximity zone size measurements at $z\\sim 6$ using the enlarged XQR-30 sample",
+  "authors": [
+   "Sindhu Satyavolu",
+   "Anna-Christina Eilers",
+   "Girish Kulkarni",
+   "Emma Ryan-Weber",
+   "Rebecca L. Davies",
+   "George D. Becker",
+   "Sarah E. I. Bosman",
+   "Bradley Greig",
+   "Chiara Mazzucchelli",
+   "Eduardo Ba\u00f1ados",
+   "Manuela Bischetti",
+   "Valentina D'Odorico",
+   "Xiaohui Fan",
+   "Emanuele Paolo Farina",
+   "Martin G. Haehnelt",
+   "Laura C. Keating",
+   "Samuel Lai",
+   "Fabian Walter"
+  ],
+  "date": "2023-05-01",
+  "journal": "",
+  "doi": "10.1093/mnras/stad1326",
+  "summary": "Proximity zones of high-redshift quasars are unique probes of their central supermassive black holes as well as the intergalactic medium in the last stages of reionization. We present 22 new measurements of proximity zones of quasars with redshifts between 5.8 and 6.6, using the enlarged XQR-30 sample of high-resolution, high-SNR quasar spectra. The quasars in our sample have UV magnitudes of $M_{1450}\\sim -27$ and black hole masses of $10^9$$\\unicode{x2013}$$10^{10}$ M$_\\odot$. Our inferred proximity zone sizes are 2$\\unicode{x2013}$7 physical Mpc, with a typical uncertainty of less than 0.5 physical Mpc, which, for the first time, also includes uncertainty in the quasar continuum. We find that the correlation between proximity zone sizes and the quasar redshift, luminosity, or black hole mass, indicates a large diversity of quasar lifetimes. Two of our proximity zone sizes are exceptionally small. The spectrum of one of these quasars, with $z=6.02$, displays, unusually for this redshift, damping wing absorption without any detectable metal lines, which could potentially originate from the IGM. The other quasar has a high-ionization absorber $\\sim$0.5 pMpc from the edge of the proximity zone. This work increases the number of proximity zone measurements available in the last stages of cosmic reionization to 87. This data will lead to better constraints on quasar lifetimes and obscuration fractions at high redshift, which in turn will help probe the seed mass and formation redshift of supermassive black holes.",
+  "file": "references/Satyavolu2023_arXiv2305.00998v1.pdf",
+  "key": "Satyavolu2023",
+  "bibkey": "Satyavolu2023"
+ },
+ {
+  "id": "2007.02940v1",
+  "title": "Non-equilibrium temperature evolution of ionization fronts during the Epoch of Reionization",
+  "authors": [
+   "Chenxiao Zeng",
+   "Christopher M. Hirata"
+  ],
+  "date": "2020-07-06",
+  "journal": "",
+  "doi": "10.3847/1538-4357/abca38",
+  "summary": "The epoch of reionization (EoR) marks the end of the Cosmic Dawn and the beginning of large-scale structure formation in the universe. The impulsive ionization fronts (I-fronts) heat and ionize the gas within the reionization bubbles in the intergalactic medium (IGM). The temperature during this process is a key yet uncertain ingredient in current models. Typically, reionization simulations assume that all baryonic species are in instantaneous thermal equilibrium with each other during the passage of an I-front. Here we present a new model of the temperature evolution for the ionization front by studying non-equilibrium effects. In particular, we include the energy transfer between major baryon species ($e^{-}$, \\HI, \\HII, \\HeI, and \\HeII) and investigate their impacts on the post-ionization front temperature $T_{\\mathrm{re}}$. For a better step-size control when solving the stiff equations, we implement an implicit method and construct an energy transfer rate matrix. We find that the assumption of equilibration is valid for a low-speed ionization front ($\\lessapprox\\ 10^9~\\mathrm{cm}/\\mathrm{s}$), but deviations from equilibrium occur for faster fronts. The post-front temperature $T_{\\mathrm{re}}$ is lower by up to 19.7\\% (at $3\\times 10^9$ cm/s) or 30.8\\% (at $10^{10}$ cm/s) relative to the equilibrium case.",
+  "file": "references/Zeng2020_arXiv2007.02940v1.pdf",
+  "key": "Zeng2020",
+  "bibkey": "Zeng2020"
+ },
+ {
+  "id": "0006376v2",
+  "title": "Quasar Str\u00f6mgren Spheres Before Cosmological Reionization",
+  "authors": [
+   "Renyue Cen",
+   "Zoltan Haiman"
+  ],
+  "date": "2000-06-27",
+  "journal": "",
+  "doi": "10.1086/312937",
+  "summary": "Ionizing sources embedded in the neutral intergalactic medium (IGM) before cosmological reionization generate discrete HII regions. We show that a sufficiently bright quasar (for example, one tenth as luminous as that recently discovered by Fan et al.) can ionize a large volume, allowing the transmission of a substantial fraction of the flux of its intrinsic Lyman alpha emission line on both sides of the Lyman alpha wavelength. The observed line profile is richly informative. We show that a sufficiently accurate, high spectral resolution ($R\\approx 10^4$) measurement of the line profile of a bright quasar is feasible using the Next Generation Space Telescope (NGST) as well as large ground-based telescopes. Such a measurement has two potentially important applications. First, the red side of the Lyman alpha emission line provides a way to measure the quasar lifetime. Second, the blue side provides a direct measure of the density fluctuations of the intergalactic medium at the quasar redshift. The estimate of the absorption of the red side is limited by the accuracy to which the intrinsic profile of the Lyman alpha emission line is known. The blue side, however, does not sensitively depend on the intrinsic profile, because the former is much narrower than the latter.",
+  "file": "references/Cen2000_arXiv_astro-ph_0006376v2.pdf",
+  "key": "Cen2000",
+  "full_id": "astro-ph/0006376v2",
+  "bibkey": "Cen2000"
+ },
+ {
+  "id": "0507684v2",
+  "title": "The H II Region of the First Star",
+  "authors": [
+   "Marcelo A. Alvarez",
+   "Volker Bromm",
+   "Paul R. Shapiro"
+  ],
+  "date": "2005-07-29",
+  "journal": "Astrophys.J.639:621-632,2006",
+  "doi": "10.1086/499578",
+  "summary": "Simulations predict that the first stars in an LCDM universe formed at redshifts z>20 in minihalos with masses of about 10^6 M_sun. We have studied their radiative feedback by simulating the propagation of ionization fronts (I-fronts) created by these first Population III stars (M_* = 15-500 M_sun) at z=20, within the density field of a cosmological simulation of primordial star formation, outward thru the host minihalo and into the surrounding gas. A three-dimensional ray-tracing calculation tracks the I-front once the H II region evolves a \"champagne flow'' inside the minihalo, after the early D-type I-front detaches from the shock and runs ahead, becoming R-type. We take account of the hydrodynamical back-reaction by an approximate model of the central wind. We find that the escape fraction of ionizing radiation from the host halo increases with stellar mass, with 0.7 < f_esc <0.9 for 80 < M_*/M_sun < 500. To quantify the ionizing efficiency of these stars as they begin cosmic reionization, we find that, for M_* > 80 M_sun, the ratio of gas mass ionized to stellar mass is ~60,000, roughly half the number of ionizing photons released per stellar baryon. Nearby minihalos are shown to trap the I-front, so their centers remain neutral. This is contrary to the recent suggestion that these stars would trigger formation of a second generation by fully ionizing neighboring minihalos, stimulating H_2 formation in their cores. Finally, we discuss how the evacuation of gas from the host halo reduces the growth and luminosity of \"miniquasars'' that may form from black hole remnants of the first stars.",
+  "file": "references/Alvarez2005_arXiv_astro-ph_0507684v2.pdf",
+  "key": "Alvarez2005",
+  "full_id": "astro-ph/0507684v2",
+  "bibkey": "Alvarez2006"
+ },
+ {
+  "id": "0705.3558v2",
+  "title": "A closer look at using quasar near-zones as a probe of neutral hydrogen in the intergalactic medium",
+  "authors": [
+   "James S. Bolton",
+   "Martin G. Haehnelt"
+  ],
+  "date": "2007-05-24",
+  "journal": "",
+  "doi": "10.1111/j.1745-3933.2007.00361.x",
+  "summary": "We examine a large set of synthetic quasar spectra to realistically assess the potential of using the relative sizes of highly ionized near-zones in the Lya and Lyb forest as a probe of the neutral hydrogen content of the intergalactic medium (IGM) at z>6. The scatter in the relative near-zone size distribution, induced by underlying fluctuations in the baryonic density field and the filtering of ionizing radiation, is considerable even for fixed assumptions about the IGM neutral fraction. As a consequence, the current observational data cannot distinguish between an IGM which is significantly neutral or highly ionized just above z=6. Under standard assumptions for quasar ages and ionizing luminosities, a future sample of several tens of high resolution Lya and Lyb near-zone spectra should be capable of distinguishing between a volume weighted neutral hydrogen fraction in the IGM which is greater or less than 10 per cent.",
+  "file": "references/Bolton2007_arXiv0705.3558v2.pdf",
+  "key": "Bolton2007",
+  "bibkey": "Bolton2007"
+ },
+ {
+  "id": "2504.20046v1",
+  "title": "On the Properties of Cosmological Ionization Fronts",
+  "authors": [
+   "Hanjue Zhu",
+   "Nickolay Y. Gnedin"
+  ],
+  "date": "2025-04-28",
+  "journal": "",
+  "doi": "",
+  "summary": "We investigate the properties of cosmological ionization fronts during the Epoch of Reionization using the CROC simulations. By analyzing reionization timing maps, we characterize ionization front velocities and curvatures and their dependence on the density structure of the intergalactic medium (IGM). The velocity distribution of ionization fronts in the simulations indicates that while the barrier-crossing analytical model captures the overall shape in high-velocity regions, it fails to reproduce the low-velocity tail, highlighting the non-Gaussian nature of the IGM's density field. Ionization front velocities are inversely correlated with local density, propagating faster in underdense regions and more slowly in overdense environments. Faster ionization fronts also lead to higher post-ionization temperatures, reaching a plateau at $\\sim 2 \\times 10^4$ K for velocities exceeding 3000 km/s. Examining curvature statistics further establishes a connection between ionization front structure and the normalized density contrast $\u03bd$, with trends in overdense regions aligning well with barrier-crossing model predictions, while deviations appear in underdense environments due to model limitations. These results provide a detailed characterization of ionization front dynamics and their interaction with the underlying density field, bridging small-scale reionization physics with large-scale observables such as the 21 cm signal and the IGM's thermal history.",
+  "file": "references/Zhu2025_arXiv2504.20046v1.pdf",
+  "key": "Zhu2025",
+  "bibkey": "Zhu2025"
+ },
+ {
+  "id": "1703.02539v2",
+  "title": "Implications of $z \\sim 6$ Quasar Proximity Zones for the Epoch of Reionization and Quasar Lifetimes",
+  "authors": [
+   "Anna-Christina Eilers",
+   "Frederick B. Davies",
+   "Joseph F. Hennawi",
+   "J. Xavier Prochaska",
+   "Zarija Luki\u0107",
+   "Chiara Mazzucchelli"
+  ],
+  "date": "2017-03-07",
+  "journal": "",
+  "doi": "",
+  "summary": "We study quasar proximity zones in the redshift range $5.77 \\leq z \\leq 6.54$ by homogeneously analyzing $34$ medium resolution spectra, encompassing both archival and newly obtained data, and exploiting recently updated systemic redshift and magnitude measurements. Whereas previous studies found strong evolution of proximity zone sizes with redshift, and argued that this provides evidence for a rapidly evolving intergalactic medium (IGM) neutral fraction during reionization, we measure a much shallower trend $\\propto(1+z)^{-1.44}$. We compare our measured proximity zone sizes to predictions from hydrodynamical simulations post-processed with one-dimensional radiative transfer, and find good agreement between observations and theory irrespective of the ionization state of the ambient IGM. This insensitivity to IGM ionization state has been previously noted, and results from the fact that the definition of proximity zone size as the first drop of the smoothed quasar spectrum below the $10\\%$ flux transmission level probes locations where the ionizing radiation from the quasar is an order of magnitude larger than the expected ultraviolet ionizing background that sets the neutral fraction of the IGM. Our analysis also uncovered three objects with exceptionally small proximity zones (two have $R_p < 1$proper Mpc), which constitute outliers from the observed distribution and are challenging to explain with our radiative transfer simulations. We consider various explanations for their origin, such as strong absorption line systems associated with the quasar or patchy reionization, but find that the most compelling scenario is that these quasars have been shining for $\\lesssim 10^5$yr.",
+  "file": "references/Eilers2017_arXiv1703.02539v2.pdf",
+  "key": "Eilers2017",
+  "bibkey": "Eilers2017"
+ },
+ {
+  "id": "1807.09282v2",
+  "title": "Heating of the Intergalactic Medium by Hydrogen Reionization",
+  "authors": [
+   "Anson D'Aloisio",
+   "Matthew McQuinn",
+   "Oliver Maupin",
+   "Frederick B. Davies",
+   "Hy Trac",
+   "Spencer Fuller",
+   "Phoebe R. Upton Sanderbeck"
+  ],
+  "date": "2018-07-24",
+  "journal": "",
+  "doi": "10.3847/1538-4357/ab0d83",
+  "summary": "During reionization, the intergalactic medium is heated impulsively by supersonic ionization fronts (I-fronts). The peak gas temperatures behind the I-fronts, $T_\\mathrm{reion}$, are a key uncertainty in models of the thermal history after reionization. Here we use high-resolution radiative transfer simulations to study the parameter space of $T_\\mathrm{reion}$. We show that $T_\\mathrm{reion}$ is only mildly sensitive to the spectrum of incident radiation over most of the parameter space, with temperatures set primarily by I-front speeds. We also explore what current models of reionization predict for $T_\\mathrm{reion}$ by measuring I-front speeds in cosmological radiative transfer simulations. We find that the post-I-front temperatures evolve toward hotter values as reionization progresses. Temperatures of $T_\\mathrm{reion} = 17,000-22,000$ K are typical during the first half of reionization, but $T_\\mathrm{reion} = 25,000 - 30,000$ K may be achieved near the end of this process if I-front speeds reach $\\sim10^4$ km/s as found in our simulations. Shorter reionization epochs lead to hotter $T_\\mathrm{reion}$. We discuss implications for $z>5$ Ly$\u03b1$ forest observations, which potentially include sight lines through hot, recently reionized patches of the Universe. Interpolation tables from our parameter space study are made publicly available, along with a simple fit for the dependence of $T_\\mathrm{reion}$ on the I-front speed.",
+  "file": "references/DAloisio2018_arXiv1807.09282v2.pdf",
+  "key": "DAloisio2018",
+  "bibkey": "DAloisio2018"
+ },
+ {
+  "id": "2310.03783v2",
+  "title": "The THESAN project: connecting ionized bubble sizes to their local environments during the Epoch of Reionization",
+  "authors": [
+   "Meredith Neyer",
+   "Aaron Smith",
+   "Rahul Kannan",
+   "Mark Vogelsberger",
+   "Enrico Garaldi",
+   "Daniela Gal\u00e1rraga-Espinosa",
+   "Josh Borrow",
+   "Lars Hernquist",
+   "R\u00fcdiger Pakmor",
+   "Volker Springel"
+  ],
+  "date": "2023-10-05",
+  "journal": "",
+  "doi": "10.1093/mnras/stae1325",
+  "summary": "An important characteristic of cosmic hydrogen reionization is the growth of ionized gas bubbles surrounding early luminous objects. Ionized bubble sizes are beginning to be probed using Lyman-$\u03b1$ emission from high-redshift galaxies, and will also be probed by upcoming 21-cm maps. We present results from a study of bubble sizes using the state-of-the-art THESAN radiation-hydrodynamics simulation suite, which self-consistently models radiation transport and realistic galaxy formation. We employ the mean-free path method, and track the evolution of the effective ionized bubble size at each point ($R_{\\rm eff}$) throughout the Epoch of Reionization. We show there is a slow growth period for regions ionized early, but a rapid \"flash ionization\" process for regions ionized later as they immediately enter a large, pre-existing bubble. We also find that bright sources are preferentially in larger bubbles, and find consistency with recent observational constraints at $z \\gtrsim 9$, but tension with idealized Lyman-$\u03b1$ damping-wing models at $z \\approx 7$. We find that high overdensity regions have larger characteristic bubble sizes, but the correlation decreases as reionization progresses, likely due to runaway formation of large percolated bubbles. Finally, we compare the redshift at which a region transitions from neutral to ionized ($z_{\\rm reion}$) with the time it takes to reach a given bubble size and conclude that $z_{\\rm reion}$ is a reasonable local probe of small-scale bubble size statistics ($R_\\text{eff} \\lesssim 1\\,\\rm{cMpc}$). However, for larger bubbles, the correspondence between $z_{\\rm reion}$ and size statistics weakens due to the time delay between the onset of reionization and the expansion of large bubbles, particularly at high redshifts.",
+  "file": "references/Neyer2023_arXiv2310.03783v2.pdf",
+  "key": "Neyer2023",
+  "bibkey": "Neyer2023"
+ },
+ {
+  "id": "0303476v2",
+  "title": "Probing the Ionization State of the Universe at z>6",
+  "authors": [
+   "Richard L. White",
+   "Robert H. Becker",
+   "Xiaohui Fan",
+   "Michael A. Strauss"
+  ],
+  "date": "2003-03-20",
+  "journal": "Astron.J. 126 (2003) 1",
+  "doi": "10.1086/375547",
+  "summary": "We present high signal-to-noise ratio Keck ESI spectra of the two quasars known to have Gunn-Peterson absorption troughs, SDSS J1030+0524 (z=6.28) and SDSS J1148+5251 (z=6.37). The Ly alpha and Ly beta troughs for SDSS J1030+0524 are very black and show no evidence for any emission over a redshift interval of ~0.2 starting at z=6. On the other hand, SDSS J1148+5251 shows a number of emission peaks in the Ly beta Gunn-Peterson trough along with a single weak peak in the Ly alpha trough. The Ly alpha emission has corresponding Ly beta emission, suggesting that it is indeed a region of lower optical depth in the intergalactic medium at z=6.08. The stronger Ly beta peaks in the spectrum of SDSS J1148+5251 could conceivably also be the result of \"leaks\" in the IGM, but we suggest that they are instead Ly alpha emission from an intervening galaxy at z=4.9. This hypothesis gains credence from a strong complex of C IV absorption at the same redshift and from the detection of continuum emission in the Ly alpha trough at the expected brightness. If this proposal is correct, the quasar light has probably been magnified through gravitational lensing by the intervening galaxy. The Stromgren sphere observed in the absorption spectrum of SDSS J1148+5251 is significantly smaller than expected based on its brightness, which is consistent with the hypothesis that the quasar is lensed. If our argument for lensing is correct, the optical depths derived from the troughs of SDSS J1148+5251 are only lower limits (albeit still quite strong, with tau(LyA)>16 inferred from the Ly beta trough.) The Ly beta absorption trough of SDSS J1030+0524 gives the single best measurement of the IGM transmission at z>6, with an inferred optical depth tau(LyA)>22.",
+  "file": "references/White2003_arXiv_astro-ph_0303476v2.pdf",
+  "key": "White2003",
+  "full_id": "astro-ph/0303476v2",
+  "bibkey": "White2003"
+ },
+ {
+  "id": "0507677v2",
+  "title": "Relativistic Ionization Fronts",
+  "authors": [
+   "Paul R. Shapiro",
+   "Ilian T. Iliev",
+   "Marcelo A. Alvarez",
+   "Evan Scannapieco"
+  ],
+  "date": "2005-07-28",
+  "journal": "Astrophys.J.648:922-935,2006",
+  "doi": "10.1086/506242",
+  "summary": "We derive the equations for the propagation of relativistic ionization fronts in both static and moving gases. We focus on the supersonic R-type phase that occurs right after a source turns on, and we compare the nonrelativistic and relativistic solutions for several important cases. Relativistic corrections can be significant up until the light-crossing time of the equilibrium Stromgren sphere. For a static medium, we obtain exact analytical solutions and apply them to the illustrative problems of an O star in a molecular cloud and a starburst in a high-redshift cosmological halo. Relativistic corrections can be important at early times when the H II regions are small, as well as at later times, if a density gradient causes the I-front to accelerate. For the cosmologically-expanding IGM, we derive an analytical solution in the case of a steady source and a constant clumping factor. Here relativistic corrections are significant for short-lived, highly-luminous sources like QSOs at the end of reionization, but negligible for weaker or higher-redshift sources. Finally, we numerically calculate the evolution of relativistic I-fronts in the presence of small-scale structure and infall, for a large galaxy undergoing a starburst and a luminous, high-redshift QSO. For such strong and short-lived sources, the relativistic corrections are quite significant, and small-scale structure can decrease the size of the H II region by up to an additional ~25%. (abridged)",
+  "file": "references/Shapiro2005_arXiv_astro-ph_0507677v2.pdf",
+  "key": "Shapiro2005",
+  "full_id": "astro-ph/0507677v2",
+  "bibkey": "Shapiro2006"
+ },
+ {
+  "id": "2508.01372v2",
+  "title": "A Nitrogen-rich AGN Powering a Large Ionizing Bubble at z=8.63",
+  "authors": [
+   "Takahiro Morishita",
+   "Massimo Stiavelli",
+   "Charlotte A. Mason",
+   "Roberta Tripodi",
+   "Marco Chiaberge",
+   "Stefan Schuldt",
+   "Chris J. Willott",
+   "Yechi Zhang"
+  ],
+  "date": "2025-08-02",
+  "journal": "",
+  "doi": "",
+  "summary": "We report the detection of Ly$\u03b1$ in CANUCS-LRD-z8.6, a recently discovered AGN at z = 8.63 by Tripodi et al. (2024), in new NIRSpec/MSA G140H/F070LP observations. We detect broad Ly$\u03b1$ emission (FWHM $= 1540 \\pm 260$ km/s) near the systemic velocity, which suggests a large ionizing bubble considering that the universe is almost fully neutral at the redshift. Through Ly$\u03b1$ line-shape modeling assuming a Stromgren sphere, we find a large bubble radius, $R_b = 1.5^{+0.3}_{-0.2}$ pMpc, and a moderately high Ly$\u03b1$ escape fraction, $f_{esc} = 11 \\pm 3$ %. The intrinsic line width is inferred to be broad ($2200 \\pm 280$ km/s), likely originating in the broad-line region. Existing data indicate that CANUCS-LRD-z8.6 is within a mild overdensity, $\u03b4= 1.8^{+3.0}_{-0.6}$, suggesting that other galaxies in its proximity might have contributed to the formation of the bubble. The high N IV]$\u03bb$1488 / C IV$\u03bb$1548 and N IV]$\u03bb$1488 / O III]$\u03bb$1661 line ratios measured in existing NIRSpec/PRISM data indicate nitrogen enrichment in this metal-poor, low-luminosity AGN. The spectroscopic features are overall similar to other nitrogen-rich galaxies discovered in the literature, such as GN-z11 and GHZ2/GLASSz12. This suggests that CANUCS-LRD-z8.6 may represent one of the evolutionary phases of those nitrogen-rich galaxies.",
+  "file": "references/Morishita2025_arXiv2508.01372v2.pdf",
+  "key": "Morishita2025",
+  "bibkey": "Morishita2025"
+ },
+ {
+  "id": "1507.05621v1",
+  "title": "StarBench: The D-type expansion of an HII region",
+  "authors": [
+   "T. G. Bisbas",
+   "T. J. Haworth",
+   "R. J. R. Williams",
+   "J. Mackey",
+   "P. Tremblin",
+   "A. C. Raga",
+   "S. J. Arthur",
+   "C. Baczynski",
+   "J. E. Dale",
+   "T. Frostholm",
+   "S. Geen",
+   "T. Haugboelle",
+   "D. Hubber",
+   "I. T. Iliev",
+   "R. Kuiper",
+   "J. Rosdahl",
+   "D. Sullivan",
+   "S. Walch",
+   "R. Wuensch"
+  ],
+  "date": "2015-07-20",
+  "journal": "",
+  "doi": "10.1093/mnras/stv1659",
+  "summary": "StarBench is a project focused on benchmarking and validating different star-formation and stellar feedback codes. In this first StarBench paper we perform a comparison study of the D-type expansion of an HII region. The aim of this work is to understand the differences observed between the twelve participating numerical codes against the various analytical expressions examining the D-type phase of HII region expansion. To do this, we propose two well-defined tests which are tackled by 1D and 3D grid- and SPH- based codes. The first test examines the `early phase' D-type scenario during which the mechanical pressure driving the expansion is significantly larger than the thermal pressure of the neutral medium. The second test examines the `late phase' D-type scenario during which the system relaxes to pressure equilibrium with the external medium. Although they are mutually in excellent agreement, all twelve participating codes follow a modified expansion law that deviates significantly from the classical Spitzer solution in both scenarios. We present a semi-empirical formula combining the two different solutions appropriate to both early and late phases that agrees with high-resolution simulations to $\\lesssim2\\%$. This formula provides a much better benchmark solution for code validation than the Spitzer solution. The present comparison has validated the participating codes and through this project we provide a dataset for calibrating the treatment of ionizing radiation hydrodynamics codes.",
+  "file": "references/Bisbas2015_arXiv1507.05621v1.pdf",
+  "key": "Bisbas2015",
+  "bibkey": "Bisbas2015"
+ },
+ {
+  "id": "2305.05764v1",
+  "title": "Case A or Case B? The effective recombination coefficient in gas clouds of arbitrary optical thickness",
+  "authors": [
+   "Olof Nebrin"
+  ],
+  "date": "2023-05-09",
+  "journal": "",
+  "doi": "10.3847/2515-5172/acd37a",
+  "summary": "In calculations of the ionization state, one is often forced to choose between the Case A recombination coefficient $\u03b1_{\\rm A}$ (sum over recombinations to all hydrogen states) or the Case B recombination coefficient $\u03b1_{\\rm B}$ (sum over all hydrogen states except the ground state). If the cloud is optically thick to ionizing photons, $\u03b1_{\\rm B}$ is usually adopted on the basis of the \"on-the-spot\" approximation, wherein recombinations to the ground state are ignored because they produce ionizing photons absorbed nearby. In the opposite case of an optically thin cloud, one would expect the Case A recombination coefficient to better describe the effective recombination rate in the cloud. In this paper, I derive an analytical expression for the effective recombination coefficient in a gas cloud of arbitrary optical thickness which transitions from $\u03b1_{\\rm A}$ to $\u03b1_{\\rm B}$ as the optical thickness increases. The results can be readily implemented in numerical simulations and semi-analytical calculations.",
+  "file": "references/Nebrin2023_arXiv2305.05764v1.pdf",
+  "key": "Nebrin2023",
+  "bibkey": "Nebrin2023"
+ },
+ {
+  "id": "2209.08558v1",
+  "title": "A Short Introduction to Reionization Physics",
+  "authors": [
+   "Tirthankar Roy Choudhury"
+  ],
+  "date": "2022-09-18",
+  "journal": "General Relativity and Gravitation, 54, 102 (2022)",
+  "doi": "10.1007/s10714-022-02987-4",
+  "summary": "The epoch of reionization probes the state of our universe when the very first stars formed and ionized the hydrogen atoms in the surrounding medium. Since the epoch has not yet been probed observationally, it is often called the \"final frontier\" of observational cosmology. This final frontier is attracting a lot of attention because of the availability of a large number of telescopes in a wide variety of wavebands. This review article summarizes some of the concepts required to understand the interesting physics of reionization and how to analyze the high-redshift universe using related observations.",
+  "file": "references/Choudhury2022_arXiv2209.08558v1.pdf",
+  "key": "Choudhury2022",
+  "bibkey": "Choudhury2022"
+ },
+ {
+  "id": "0406280v1",
+  "title": "The Structure and Evolution of Early Cosmological HII Regions",
+  "authors": [
+   "T. Kitayama",
+   "N. Yoshida",
+   "H. Susa",
+   "M. Umemura"
+  ],
+  "date": "2004-06-11",
+  "journal": "Astrophys.J. 613 (2004) 631-645",
+  "doi": "10.1086/423313",
+  "summary": "We study the formation and evolution of HII regions around the first stars formed at z=10-30. We use a one-dimensional Lagrangian hydrodynamics code which self-consistently incorporates radiative transfer and non-equilibrium primordial gas chemistry. The star-forming region is defined as a spherical gas cloud with a Population III star embedded at the center. We explore a large parameter space of host halo mass, gas density profile, and stellar luminosity. The formation of the HII region is characterized by initial slow expansion of a weak D-type ionization front near the center, followed by rapid propagation of an R-type front throughout the outer gas envelope. We find that the transition between the two front types is indeed a critical condition for the complete ionization of halos of cosmological interest. In small mass (< 10^6 M_sun) halos, the transition takes place within a few 10^5 yr, yielding high escape fractions (>80%) of both ionizing and photodissociating photons. In larger mass (> 10^7 M_sun) halos, the ionization front remains to be of D-type over the lifetime of the massive star, the HII region is confined well inside the virial radius, and the escape fractions are essentially zero. We derive an analytic formula that reproduces well the results of our simulations. We discuss immediate implications of the present results for the star formation history and early reionization of the Universe.",
+  "file": "references/Kitayama2004_arXiv_astro-ph_0406280v1.pdf",
+  "key": "Kitayama2004",
+  "full_id": "astro-ph/0406280v1",
+  "bibkey": "Kitayama2004"
+ },
+ {
+  "id": "2502.12004v1",
+  "title": "Reionization and its sources",
+  "authors": [
+   "Anirban Chakraborty",
+   "Tirthankar Roy Choudhury"
+  ],
+  "date": "2025-02-17",
+  "journal": "",
+  "doi": "",
+  "summary": "Reionization represents an important phase in the history of our Universe when ultraviolet radiation from the first luminous sources, primarily stars and accreting black holes, ionized the neutral hydrogen atoms in the intergalactic medium (IGM). This process follows the ``Dark Ages'', a period with no luminous sources, and is initiated by the formation of the first sources, marking the ``Cosmic Dawn''. Reionization proceeds through multiple stages: initially, ionized bubbles form around galaxies, then expand and overlap across the IGM, culminating in a fully ionized state, with neutral hydrogen remaining only in dense regions. Understanding reionization involves a diverse range of physical concepts, from large-scale structure formation and star formation to radiation propagation through the IGM. Observationally, reionization can be explored using the cosmic microwave background (CMB), Lyman-$\u03b1$ absorption, high-redshift galaxy surveys, and emerging 21~cm experiments, which together offer invaluable insights into this transformative epoch.",
+  "file": "references/Chakraborty2025_arXiv2502.12004v1.pdf",
+  "key": "Chakraborty2025",
+  "bibkey": "Chakraborty2025"
+ },
+ {
+  "id": "2306.00487v3",
+  "title": "JWST Measurements of Neutral Hydrogen Fractions and Ionized Bubble Sizes at $z=7-12$ Obtained with Ly$\u03b1$ Damping Wing Absorptions in 27 Bright Continuum Galaxies",
+  "authors": [
+   "Hiroya Umeda",
+   "Masami Ouchi",
+   "Kimihiko Nakajima",
+   "Yuichi Harikane",
+   "Yoshiaki Ono",
+   "Yi Xu",
+   "Yuki Isobe",
+   "Yechi Zhang"
+  ],
+  "date": "2023-06-01",
+  "journal": "",
+  "doi": "",
+  "summary": "We present volume-averaged neutral hydrogen fractions $x_{\\rm \\HI}$ and ionized bubble radii $R_{\\rm b}$ measured with Ly$\u03b1$ damping wing absorption of galaxies at the epoch of reionization. We combine JWST/NIRSpec spectra taken by CEERS, GO-1433, DDT-2750, and JADES programs, and obtain a sample containing 27 bright UV-continuum ($M_{\\rm UV}<-18.5~{\\rm mag}$) galaxies at $7<z<12$. We construct 4 composite spectra binned by redshift, and find the clear evolution of softening break towards high redshift at the rest-frame $1216$ \u00c5, suggesting the increase of Ly$\u03b1$ damping wing absorption. We estimate Ly$\u03b1$ damping wing absorption in the galaxy spectra with realistic templates including Ly$\u03b1$ emission and circum-galactic medium absorptions. Assuming the standard inside-out reionization picture having an ionized bubble with radius $R_b$ around a galaxy embedded in the intergalactic medium with $x_{\\rm \\HI}$, we obtain $x_{\\rm \\HI}$ ($R_{\\rm b}$) values generally increasing (decreasing) from $x_{\\rm \\HI}={0.53}^{+0.18}_{-0.47}$ to ${0.92}^{+0.08}_{-0.10}$ ($\\log R_{\\rm b}={1.67}^{+0.14}_{-0.16}$ to ${-0.69}^{+0.89}_{-0.24}$ comoving Mpc) at redshift $7.12^{+0.06}_{-0.08}$ to $9.91^{+1.49}_{-1.15}$. The redshift evolution of $x_{\\rm \\HI}$ indicates a moderately late reionization history consistent with the one previously suggested from the electron scattering of cosmic microwave background and the evolution of UV luminosity function with an escape fraction $f_{\\rm esc}\\sim 0.2$. Our ${R_{\\rm b}}$ measurements suggest that bubble sizes could be up to a few dex larger than the cosmic average values estimated by analytic calculations for a given $x_{\\rm \\HI}$, while our $R_{\\rm b}$ measurements are roughly comparable with the values for merged ionized bubbles around bright galaxies predicted by recent numerical simulations.",
+  "file": "references/Umeda2023_arXiv2306.00487v3.pdf",
+  "key": "Umeda2023",
+  "bibkey": "Umeda2023"
+ },
+ {
+  "id": "2608.25021v1",
+  "title": "The ionizing properties of JWST's compact broad-line emitters",
+  "authors": [
+   "Sara Mascia",
+   "Jorryt Matthee",
+   "Alberto Torralba",
+   "Jenny E. Greene",
+   "Anna-Christina Eilers",
+   "Edoardo Iani",
+   "Rohan P. Naidu"
+  ],
+  "date": "2026-08-25",
+  "journal": "",
+  "doi": "",
+  "summary": "The recent JWST discovery of a numerous population of broad-line emitters (BLEs) at $z>4$ has reopened the question of whether sources other than faint galaxies contributed significantly to cosmic reionization. To assess this contribution, we present a systematic census of compact, blue broad-line emitters at $4\\leq z\\leq7$ selected from the DJA, designed to isolate sources in which the UV continuum and the broad-line emission originate from the same compact physical region. Starting from a parent sample of 4145 galaxies with NIRSpec/PRISM spectroscopy and NIRCam imaging, we apply criteria on broad Ha emission (FWHM$>2000$km s-1, detected at S/N$\\geq5$, complete at $L_{Ha,broad}\\geq10^{42.7}$erg s-1), blue continuum slopes ($\u03b2_{UV}\\leq-1.5$, $\u03b2_{opt}<0.5$), and morphological compactness in both the rest-frame UV and optical, returning a final sample of 20 sources. This constitutes $\\sim20%$ of the PRISM-selected broad-line sample, which is dominated by Little Red Dots (LRDs). We find that the compact blue BLEs display hot ionizing continua, high-ionization UV lines (CIV, NIV], HeII), and elevated Lya emitter fractions ($X_{Lya}=50-67%$) relative to star-forming galaxies and LRDs. Beyond their similar lack of X-ray emission, their optical spectra closely resemble those of LRDs. This suggests that compact blue BLEs extend this population towards lower column density envelopes, but with similar engines, rather than representing a physically distinct population. Using Sirocco to model physical configurations that reproduce the observed spectra, we find a high ionizing photon production efficiency (log$\u03be_{ion}\\sim25.4$Hz erg-1) and a weighted average escape fraction $fesc\\sim0.2$ for the bluest sources, and $\\sim0.01$ for LRDs. This implies that broad-line sources do not dominate reionization globally, but given their luminosity, their contribution can dominate up to few Mpc scales.",
+  "file": "references/Mascia2026_arXiv2608.25021v1.pdf",
+  "key": "Mascia2026",
+  "bibkey": "Mascia2026"
+ },
+ {
+  "id": "2002.01811v3",
+  "title": "Detecting and Characterizing Young Quasars I: Systemic Redshifts and Proximity Zones Measurements",
+  "authors": [
+   "Anna-Christina Eilers",
+   "Joseph F. Hennawi",
+   "Roberto Decarli",
+   "Frederick B. Davies",
+   "Bram Venemans",
+   "Fabian Walter",
+   "Eduardo Ba\u00f1ados",
+   "Xiaohui Fan",
+   "Emanuele P. Farina",
+   "Chiara Mazzucchelli",
+   "Mladen Novak",
+   "Jan-Torge Schindler",
+   "Robert A. Simcoe",
+   "Feige Wang",
+   "Jinyi Yang"
+  ],
+  "date": "2020-02-05",
+  "journal": "",
+  "doi": "10.3847/1538-4357/aba52e",
+  "summary": "In a multi-wavelength survey of $13$ quasars at $5.8\\lesssim z\\lesssim6.5$, that were pre-selected to be potentially young, we find five objects with extremely small proximity zone sizes that may imply UV-luminous quasar lifetimes of $\\lesssim 100,000$ years. Proximity zones are regions of enhanced transmitted flux in the vicinity of the quasars that are sensitive to the quasars' lifetimes because the intergalactic gas has a finite response time to their radiation. We combine sub-mm observations from the Atacama Large Millimetre Array (ALMA) and the NOrthern Extended Millimeter Array (NOEMA), as well as deep optical and near-infrared spectra from medium-resolution spectrograph on the Very Large Telescope (VLT) and on the Keck telescopes, in order to identify and characterize these new young quasars, which provide valuable clues about the accretion behavior of supermassive black holes (SMBHs) in the early universe, and pose challenges on current black hole formation models to explain the rapid formation of billion solar mass black holes. We measure the quasars' systemic redshifts, black hole masses, Eddington ratios, emission line luminosities, and star formation rates of their host galaxies. Combined with previous results we estimate the fraction of young objects within the high-redshift quasar population at large to be $5\\%\\lesssim f_{\\rm young}\\lesssim 10\\%$. One of the young objects, PSO J158-14, shows a very bright dust continuum flux ($F_{\\rm cont}=3.46\\pm 0.02\\,\\rm mJy$), indicating a highly star-bursting host galaxy with a star formation rate of approximately $1420\\,M_{\\odot}\\,\\rm yr^{-1}$.",
+  "file": "references/Eilers2020_arXiv2002.01811v3.pdf",
+  "key": "Eilers2020",
+  "bibkey": "Eilers2020"
+ },
+ {
+  "id": "0403697v1",
+  "title": "The Growth of HII Regions During Reionization",
+  "authors": [
+   "Steven Furlanetto",
+   "Matias Zaldarriaga",
+   "Lars Hernquist"
+  ],
+  "date": "2004-03-31",
+  "journal": "Astrophys.J. 613 (2004) 1-15",
+  "doi": "10.1086/423025",
+  "summary": "Recently, there has been a great deal of interest in understanding the reionization of hydrogen in the intergalactic medium (IGM). One of the major outstanding questions is how this event proceeds on large scales. Motivated by numerical simulations, we develop a model for the growth of HII regions during the reionization era. We associate ionized regions with large-scale density fluctuations and use the excursion set formalism to model the resulting size distribution. We then consider ways in which to characterize the morphology of ionized regions. We show how to construct the power spectrum of fluctuations in the neutral hydrogen field. The power spectrum contains definite features from the HII regions that should be observable with the next generation of low-frequency radio telescopes through surveys of redshifted 21 cm emission from the reionization era. Finally, we also consider statistical descriptions beyond the power spectrum and show that our model of reionization qualitatively changes the distribution of neutral gas in the IGM.",
+  "file": "references/Furlanetto2004_arXiv_astro-ph_0403697v1.pdf",
+  "key": "Furlanetto2004",
+  "full_id": "astro-ph/0403697v1",
+  "bibkey": "Furlanetto2004"
+ },
+ {
+  "id": "0406188v2",
+  "title": "Evidence for a Cosmological Stromgren Surface and for Significant Neutral Hydrogen Surrounding the Quasar SDSS J1030+0524",
+  "authors": [
+   "Andrei Mesinger",
+   "Zoltan Haiman"
+  ],
+  "date": "2004-06-07",
+  "journal": "",
+  "doi": "10.1086/423935",
+  "summary": "A bright quasar residing in a dense and largely neutral intergalactic medium (IGM) at high redshifts (z > 6) will be surrounded by a large cosmological Stromgren sphere. The quasar's spectrum will then show a sharp increase in resonant Lyman line absorption at wavelengths approaching and shorter than that corresponding to the Stromgren sphere's boundary along the line of sight. We show here that simultaneously considering the measured absorption in two or more hydrogen Lyman lines can provide the dynamical range required to detect this feature. We model broad and robust features of the Lyman alpha and Lyman beta regions of the spectrum of the z=6.28 quasar SDSS J1030+0524, using a hydrodynamical simulation. From the steep wavelength-dependence of the inferred absorption opacity, we detect the boundary of the Stromgren sphere at a proper distance of 6.0 +/- 0.2 Mpc away from the source redshift. From the spectrum alone, we also find that beyond this distance, cosmic hydrogen turns nearly neutral, with a neutral fraction of x_HI > 0.2, and that the ionizing luminosity of this quasar is in the range (5.2 +/- 2.5) times 10^{56} photons/sec. The method presented here, when applied to future quasars, can probe the complex topology of overlapping ionized regions, and can be used to study the details of the reionization process.",
+  "file": "references/Mesinger2004_arXiv_astro-ph_0406188v2.pdf",
+  "key": "Mesinger2004",
+  "full_id": "astro-ph/0406188v2",
+  "bibkey": "Mesinger2004"
+ },
+ {
+  "id": "2505.09676v2",
+  "title": "Homogeneous measurements of proximity zone sizes for 59 quasars in the Epoch of Reionization",
+  "authors": [
+   "Silvia Onorato",
+   "Joseph F. Hennawi",
+   "Elia Pizzati",
+   "Bram P. Venemans",
+   "Anna-Christina Eilers"
+  ],
+  "date": "2025-05-14",
+  "journal": "",
+  "doi": "",
+  "summary": "The overionized regions surrounding high-redshift quasars, known as proximity zones, provide a window into the interaction between supermassive black holes (SMBHs) and the intergalactic medium (IGM) during the epoch of reionization (EoR). We present new homogeneous measurements of proximity zone sizes ($R_{\\mathrm{p}}$) for a sample of $59$ quasars spanning redshifts $5.77 \\leq z \\leq 7.54$ (median $z = 6.59$). For $15$ of these sources, we measure $R_{\\mathrm{p}}$ for the first time. The quasars in our catalog have absolute magnitudes at rest-frame $1450$ \u00c5 in the range $-29.13 \\leq M_{1450} \\leq -25.20$ (median $M_{1450} \\simeq -26.49$), providing one of the most extensive data sets for exploring $R_{\\mathrm{p}}$ at these epochs. The distribution of $R_{\\mathrm{p}}$ values shows a large scatter at fixed redshift and luminosity, likely reflecting variations in quasar lifetimes ($t_{\\mathrm{Q}}$), IGM density fluctuations, and IGM neutral fraction. We fit a bivariate power-law model to a large sample of $100$ objects to study the dependence of $R_{\\mathrm{p}}$ with both $M_{1450}$ and $z$: we find that the evolution of $R_{\\mathrm{p}}$ with luminosity is in agreement with the models ($R_{\\mathrm{p}} \\propto 10^{-0.4 M_{1450}/2.87}$), while the evolution of $R_{\\mathrm{p}}$ with $z$ is steeper than previous works ($R_{\\mathrm{p}} \\propto (1+z)^{-2.44}$). We identify $13$ quasars with small proximity zone size, defined using the residuals of our fit. In all cases, except for J2211$-$6320, we rule out the presence of associated dense absorbers that prematurely truncate $R_{\\mathrm{p}}$, and suggest a short $t_{\\mathrm{Q}}$ ($\\lesssim 10^4$ yr) as a possible explanation for their small proximity zone sizes.",
+  "file": "references/Onorato2025_arXiv2505.09676v2.pdf",
+  "key": "Onorato2025",
+  "bibkey": "Onorato2025"
+ },
+ {
+  "id": "9812306v2",
+  "title": "Reionization of the Inhomogeneous Universe",
+  "authors": [
+   "Jordi Miralda-Escude",
+   "Martin Haehnelt",
+   "Martin J. Rees"
+  ],
+  "date": "1998-12-16",
+  "journal": "Astrophys.J. 530 (2000) 1-16",
+  "doi": "10.1086/308330",
+  "summary": "A model of the density distribution in the intergalactic medium, motivated by that found in numerical simulations, is used to demonstrate the effect of a clumpy IGM and discrete sources on the reionization of the universe. In an inhomogeneous universe reionization occurs outside-in, starting in voids and gradually penetrating into overdense regions. Reionization should not be sudden but gradual, with a continuous rise of the photon mean free path over a fair fraction of the Hubble time as the emissivity increases. We show that a hydrogen Gunn-Peterson trough should be present at $z\\simeq 6$ unless the emissivity increases with redshift at $z>4$. However, the epoch of overlap of cosmological \\hii regions could have occurred at a higher redshift if sources of low luminosity reionized the IGM; the Gunn-Peterson trough at $z\\sim 6$ would then appear because even the most underdense voids have a large enough neutral fraction in ionization equilibrium to be optically thick to \\lya photons. Cosmological \\hii regions near the epoch of overlap can produce gaps of transmitted flux only if luminous quasars contributed to the reionization. Despite the clumpiness of the matter distribution, recombinations are not very important during the reionization of hydrogen because the high density gas is not ionized until a late time. We show that the \\heii reionization was most likely delayed relative to the hydrogen reionization, but should be completed by $z\\sim 3$, the redshift where observations are available. The reported large optical depth fluctuations of \\heii are probably not due to an incomplete \\heii reionization, but arise from a combination of density fluctuations and the variations in the intensity of the ionizing background due to luminous QSO's.",
+  "key": "MiraldaEscude1998",
+  "file": "references/MiraldaEscude1998_arXiv_astro-ph_9812306v2.pdf",
+  "bibkey": "MiraldaEscude2000"
+ },
+ {
+  "id": "1939ApJ....89..526S",
+  "title": "The Physical State of Interstellar Hydrogen",
+  "authors": [
+   "B. Str\u00f6mgren"
+  ],
+  "date": "1939",
+  "journal": "ApJ, 89, 526",
+  "doi": "",
+  "summary": "",
+  "key": "Stromgren1939",
+  "file": "references/Stromgren1939_ADS_1939ApJ....89..526S.pdf",
+  "ads": true,
+  "bibkey": "Stromgren1939"
+ },
+ {
+  "id": "1987ApJ...321L.107S",
+  "title": "Cosmological H II Regions and the Photoionization of the Intergalactic Medium",
+  "authors": [
+   "P. R. Shapiro",
+   "E. T. Giroux"
+  ],
+  "date": "1987",
+  "journal": "ApJ, 321, L107",
+  "doi": "10.1086/185015",
+  "summary": "",
+  "key": "ShapiroGiroux1987",
+  "file": "references/ShapiroGiroux1987_ADS_1987ApJ...321L.107S.pdf",
+  "ads": true,
+  "bibkey": "ShapiroGiroux1987"
+ },
+ {
+  "id": "1403.0007v3",
+  "title": "Cosmic Star-Formation History",
+  "authors": [
+   "Piero Madau",
+   "Mark Dickinson"
+  ],
+  "date": "2014-03-04",
+  "journal": "Ann.Rev.Astron.Astrophys. 52 (2014) 415-486",
+  "doi": "10.1146/annurev-astro-081811-125615",
+  "summary": "Review of the cosmic star-formation history from UV and IR data, providing the psi(z) fitting formula and the kappa_FUV/kappa_IR calibration constants converting UV/IR luminosity to instantaneous SFR for a Salpeter IMF.",
+  "file": "references/MadauDickinson2014_arXiv1403.0007v3.pdf",
+  "key": "MadauDickinson2014",
+  "bibkey": "MadauDickinson2014"
+ },
+ {
+  "id": "1502.02024v1",
+  "title": "Cosmic Reionization and Early Star-forming Galaxies: A Joint Analysis of New Constraints from Planck and the Hubble Space Telescope",
+  "authors": [
+   "Brant E. Robertson",
+   "Richard S. Ellis",
+   "Steven R. Furlanetto",
+   "James S. Dunlop"
+  ],
+  "date": "2015-02-06",
+  "journal": "ApJL 802, L19 (2015)",
+  "doi": "10.1088/2041-8205/802/2/L19",
+  "summary": "Joint analysis of Planck optical-depth and HST UV luminosity function constraints; adopts a fiducial escape fraction f_esc=0.2 and an ionizing emissivity n_dot_ion = f_esc*xi_ion*rho_SFR with log10(xi_ion)=53.14 LyC photons/s per Msun/yr, clumping factor C_HII=3, T=2e4 K.",
+  "file": "references/Robertson2015_arXiv1502.02024v1.pdf",
+  "key": "Robertson2015",
+  "bibkey": "Robertson2015"
+ },
+ {
+  "id": "1807.06209v4",
+  "title": "Planck 2018 results. VI. Cosmological parameters",
+  "authors": [
+   "Planck Collaboration"
+  ],
+  "date": "2018-07-17",
+  "journal": "A&A 641, A6 (2020)",
+  "doi": "10.1051/0004-6361/201833910",
+  "summary": "Final-mission Planck CMB constraints on LCDM parameters: Omega_m=0.315, Omega_b h^2=0.0224, H0=67.4 km/s/Mpc, optical depth tau=0.054+/-0.007, instantaneous-reionization redshift z_re=7.68+/-0.79 (TT,TE,EE+lowE), Y_P~0.245.",
+  "file": "references/Planck2018VI_arXiv1807.06209v4.pdf",
+  "key": "Planck2018VI",
+  "bibkey": "Planck2018VI"
+ },
+ {
+  "id": "2412.01358v1",
+  "title": "The ionizing photon production efficiency of star-forming galaxies at z~4-10",
+  "authors": [
+   "M. Llerena",
+   "L. Pentericci",
+   "L. Napolitano",
+   "S. Mascia",
+   "R. Amorin",
+   "A. Calabro",
+   "M. Castellano",
+   "N. J. Cleri",
+   "M. Giavalisco",
+   "N. A. Grogin",
+   "N. P. Hathi",
+   "M. Hirschmann",
+   "A. M. Koekemoer",
+   "T. Nanayakkara",
+   "F. Pacucci",
+   "L. Shen",
+   "S. M. Wilkins",
+   "I. Yoon",
+   "L. Y. A. Yung",
+   "R. Bhatawdekar",
+   "R. A. Lucas",
+   "X. Wang",
+   "P. Arrabal Haro",
+   "M. B. Bagley",
+   "S. L. Finkelstein",
+   "J. S. Kartaltepe",
+   "E. Merlin",
+   "C. Papovich",
+   "N. Pirzkal",
+   "P. Santini"
+  ],
+  "date": "2024-12-02",
+  "journal": "A&A 698, A302 (2025)",
+  "doi": "",
+  "summary": "JWST/NIRSpec sample of 761 star-forming galaxies at z=4-10 (CEERS/JADES/GLASS/GO-3073): log10(xi_ion/Hz erg^-1) = (0.06+/-0.012) z + (24.82+/-0.07), measured assuming f_esc=0 (i.e. production efficiency before escape, a lower limit on the true xi_ion if f_esc>0).",
+  "file": "references/Llerena2024_arXiv2412.01358v1.pdf",
+  "key": "Llerena2024",
+  "bibkey": "Llerena2024"
+ },
+ {
+  "id": "1408.2213v2",
+  "full_id": "1408.2213v2",
+  "title": "Emission and recombination coefficients for hydrogen with kappa-distributed electron energies",
+  "authors": [
+   "P. J. Storey",
+   "Taha Sochi"
+  ],
+  "date": "2014-08-10",
+  "journal": "",
+  "doi": "10.1093/mnras/stu2243",
+  "summary": "We provide a data set of emission and recombination coefficients of hydrogen using a kappa-distribution of electron energies rather than the more traditional Maxwell-Boltzmann (MB) distribution. The data are mainly relevant to thin and relatively cold plasma found in planetary nebulae and H II regions. The data set extends the previous data sets provided by Storey and Hummer which were computed using a MB distribution. The data set, which is placed in the public domain, is structured as a function of electron number density, temperature and kappa. Interactive fortran 77 and C++ data servers are also provided as an accessory to probe the data and obtain Lagrange-interpolated values for any choice of all three variables between the explicitly computed values.",
+  "key": "Storey2014",
+  "file": "references/Storey2014_arXiv1408.2213v2.pdf"
+ },
+ {
+  "id": "1602.02939v1",
+  "full_id": "1602.02939v1",
+  "title": "Parameterization of the level-resolved radiative recombination rate coefficients for the SPEX code",
+  "authors": [
+   "Junjie Mao",
+   "Jelle Kaastra"
+  ],
+  "date": "2016-02-09",
+  "journal": "A&A 587, A84 (2016)",
+  "doi": "10.1051/0004-6361/201527568",
+  "summary": "The level-resolved radiative recombination (RR) rate coefficients for H-like to Na-like ions from H (Z = 1) up to and including Zn (Z = 30) are studied here. For H-like ions, the quantum-mechanical exact photoionization cross sections for nonrelativistic hydrogenic systems are used to calculate the RR rate coefficients under the principle of detailed balance, while for He-like to Na-like ions, the archival data on ADAS are adopted. Parameterizations are made for the direct capture rates in a wide temperature range. The fitting accuracies are better than 5% for about 99% of the 30, 000 levels considered here. The 1% exceptions include levels from low- charged many-electron ions, and/or high-shell (n>=4) levels are less important in terms of interpreting X-ray emitting astrophysical plasmas. The RR data will be incorporated into the high-resolution spectral analysis package SPEX.",
+  "key": "Mao2016",
+  "file": "references/Mao2016_arXiv1602.02939v1.pdf"
+ },
+ {
+  "id": "9608040v1",
+  "full_id": "astro-ph/9608040v1",
+  "title": "Modelling Primordial Gas in Numerical Cosmology",
+  "authors": [
+   "T. Abel",
+   "P. Anninos",
+   "Y. Zhang",
+   "M. L. Norman"
+  ],
+  "date": "1996-08-09",
+  "journal": "NewAstron.2:181-207,1997",
+  "doi": "10.1016/S1384-1076(97)00010-9",
+  "summary": "We have reviewed the chemistry and cooling behaviour of low-density (n<10^4 cm^-3) primordial gas and devised a cooling model wich involves 19 collisional and 9 radiative processes and is applicable for temperatures in the range (1 K < T < 10^8 K). We derived new fits of rate coefficients for the photo-attachment of neutral hydrogen, the formation of molecular hydrogen via H-, charge exchange between H2 and H+, electron detachment of H- by neutral hydrogen, dissociative recombination of H2 with slow electrons, photodissociation of H2+, and photodissociation of H2. Further it was found that the molecular hydrogen produced through the gas-phase processes, H2+ + H -> H2 + H+, and H- + H -> H2 + e-, is likely to be converted into its para configuration on a faster time scale than the formation time scale. We have tested the model extensively and shown it to agree well with former studies. We further studied the chemical kinetics in great detail and devised a minimal model which is substantially simpler than the full reaction network but predicts correct abundances. This minimal model shows convincingly that 12 collisional processes are sufficient to model the H, He, H+, H-, He+, He++, and H2 abundances in low density primordial gas for applications with no radiation fields.",
+  "key": "Abel1996",
+  "file": "references/Abel1996_arXiv_astro-ph_9608040v1.pdf"
+ },
+ {
+  "id": "9612232v1",
+  "full_id": "astro-ph/9612232v1",
+  "title": "Equation of State of the Photoionized Intergalactic Medium",
+  "authors": [
+   "Lam Hui",
+   "Nickolay Y. Gnedin"
+  ],
+  "date": "1996-12-26",
+  "journal": "Mon.Not.Roy.Astron.Soc. 292 (1997) 27",
+  "doi": "10.1093/mnras/292.1.27",
+  "summary": "We develop an efficient method to study the effects of reionization history on the temperature-density relation of the intergalactic medium in the low density limit (overdensity less than 5). It is applied to the study of photo-reionization models in which the amplitude, spectrum and onset epoch of the ionizing flux, as well as the cosmology, are systematically varied. We find that the mean temperature-density relation at z=2-4 is well approximated by a power-law equation of state for uniform reionization models. We derive analytical expressions for its evolution and exhibit its asymptotic behavior: it is found that for sufficiently early reionization, imprints of reionization history prior to z=10 on the temperature-density relation are washed out. In this limit the temperature at cosmic mean density is proportional to (\u03a9_b h/\\sqrt\u03a9_0)^{1/1.7}. While the amplitude of the radiation flux at the ionizing frequency of HI is found to have a negligible effect on the temperature-density relation as long as the universe reionizes before z=5, the spectrum can change the overall temperature by about 20%, through variations in the abundances of helium species. However the slope of the mean equation of state is found to lie within a narrow range for all reionization models we study, where reionization takes place before z=5. We discuss the implications of these findings for the observational properties of the Lyman-alpha forest. In particular, uncertainties in the temperature of the intergalactic medium, due to the uncertain reionization history of our universe, introduces a 30% scaling in the amplitude of the column density distribution while the the slope of the distribution is only affected by about 5%. Finally, we discuss how a fluctuating ionizing field affects the above results. We argue that under",
+  "key": "Hui1996",
+  "file": "references/Hui1996_arXiv_astro-ph_9612232v1.pdf"
+ },
+ {
+  "id": "9509083v1",
+  "full_id": "astro-ph/9509083v1",
+  "title": "Atomic data for astrophysics. I. Radiative recombination rates for H-like, He-like, Li-like and Na-like ions over a broad range of temperature",
+  "authors": [
+   "D. A. Verner",
+   "G. J. Ferland"
+  ],
+  "date": "1995-09-16",
+  "journal": "",
+  "doi": "10.1086/192284",
+  "summary": "We present new calculations and analytic fits to the rates of radiative recombination towards H-like, He-like, Li-like and Na-like ions of all elements from H through Zn (Z=30). The fits are valid over a wide range of temperature, from 3 K to 10**9 K.",
+  "key": "Verner1995",
+  "file": "references/Verner1995_arXiv_astro-ph_9509083v1.pdf"
+ }
+]

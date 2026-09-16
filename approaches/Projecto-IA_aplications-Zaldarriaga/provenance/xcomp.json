@@ -1,0 +1,41 @@
+{
+  "_scenario": {
+    "scenario": "fiducial-z10",
+    "scenario_hash": "4609fe6ee468"
+  },
+  "derived": {
+    "E_DSA_beta_0p015_eV": 41714337.149842456,
+    "E_DSA_beta_0p01_eV": 27641801.650005728,
+    "E_DSA_beta_0p02_eV": 55787645.49828159,
+    "E_e_mean_eV": 5904.887908546743,
+    "E_gamma_mean_eV": 21.75981644130555,
+    "E_max_gamma_stellar_eV": 54.422772491976,
+    "E_max_gamma_tau1_eV": 1217.9569486753135,
+    "N_e_xcomp_band_mean": 122.92181626811215,
+    "N_gamma_xcomp_band_mean": 1.032509589729684,
+    "W_e_Emin_1e02": 43.065674972742364,
+    "W_e_Emin_1e03": 48.0377534909445,
+    "W_e_Emin_1e04": 60.92853222491017,
+    "W_e_Emin_1e05": 94.47006792970505,
+    "W_e_xcomp_fiducial_eV": 48.0377534909445,
+    "W_gamma_xcomp_fiducial_eV": 21.074687012836726,
+    "X_comp_DSA_beta_0p01": 4.059807388418043,
+    "X_comp_DSA_beta_0p015": 4.378543788773582,
+    "X_comp_DSA_beta_0p02": 4.765120472975037,
+    "X_comp_Emin_1e02": 1.858454785375238,
+    "X_comp_Emin_1e03": 2.0730197056107325,
+    "X_comp_Emin_1e04": 2.6293079662850385,
+    "X_comp_Emin_1e05": 4.076758344779385,
+    "X_comp_fiducial": 2.2794053103462177,
+    "X_comp_igm_cap": 2.0730197056107325,
+    "eff_e_percent": 28.307807113139486,
+    "eff_gamma_percent": 64.52496585794658,
+    "loss_frac_adiabatic": 0.0021749806966723977,
+    "loss_frac_bremsstrahlung": 1.8541116541123114e-06,
+    "loss_frac_compton": 0.010806629415231726,
+    "loss_frac_coulomb": 0.0007126439143765022,
+    "loss_frac_excitation": 0.26564719498135897,
+    "loss_frac_ionization": 0.720656695849574,
+    "loss_frac_synchrotron": 1.0311322033712056e-09
+  }
+}

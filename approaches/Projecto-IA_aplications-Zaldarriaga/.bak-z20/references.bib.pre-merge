@@ -1,0 +1,611 @@
+% =====================================================================
+%  references.bib
+%  Bibliography for "The electronic component of cosmic rays as an
+%  ionizing agent of the intergalactic medium during the epoch of
+%  reionization".
+%
+%  Every entry has been checked against arXiv / ADS.  The `url` field
+%  gives free online access to each item.
+% =====================================================================
+
+% ---------------------------------------------------------------------
+%  Cosmology and the reionization history
+% ---------------------------------------------------------------------
+@article{Planck2020,
+  author  = {{Planck Collaboration} and Aghanim, N. and Akrami, Y. and others},
+  title   = {{Planck} 2018 results. VI. Cosmological parameters},
+  journal = {A\&A},
+  volume  = {641},
+  pages   = {A6},
+  year    = {2020},
+  doi     = {10.1051/0004-6361/201833910},
+  eprint  = {1807.06209},
+  archivePrefix = {arXiv},
+  url     = {https://arxiv.org/abs/1807.06209}
+}
+
+@article{Robertson2022,
+  author  = {Robertson, Brant E.},
+  title   = {Galaxy Formation and Reionization: Key Unknowns and Expected
+             Breakthroughs by the {James Webb Space Telescope}},
+  journal = {ARA\&A},
+  volume  = {60},
+  pages   = {121--158},
+  year    = {2022},
+  doi     = {10.1146/annurev-astro-120221-044656},
+  eprint  = {2110.13160},
+  archivePrefix = {arXiv},
+  url     = {https://arxiv.org/abs/2110.13160}
+}
+
+@article{Bosman2022,
+  author  = {Bosman, Sarah E. I. and Davies, Frederick B. and Becker, George D.
+             and Keating, Laura C. and Davies, Rebecca L. and Zhu, Yongda and
+             Eilers, Anna-Christina and D'Odorico, Valentina and others},
+  title   = {Hydrogen reionisation ends by $z = 5.3$: {Lyman-$\alpha$} optical
+             depth measured by the {XQR-30} sample},
+  journal = {MNRAS},
+  volume  = {514},
+  number  = {1},
+  pages   = {55--76},
+  year    = {2022},
+  doi     = {10.1093/mnras/stac1046},
+  eprint  = {2108.03699},
+  archivePrefix = {arXiv},
+  url     = {https://arxiv.org/abs/2108.03699}
+}
+
+@article{Munoz2024,
+  author  = {Mu{\~n}oz, Julian B. and Mirocha, Jordan and Chisholm, John and
+             Furlanetto, Steven R. and Mason, Charlotte},
+  title   = {Reionization after {JWST}: a photon budget crisis?},
+  journal = {MNRAS},
+  year    = {2024},
+  eprint  = {2404.07250},
+  archivePrefix = {arXiv},
+  doi     = {10.1093/mnrasl/slae086},
+  url     = {https://arxiv.org/abs/2404.07250}
+}
+
+@article{Gaikwad2020,
+  author  = {Gaikwad, Prakash and Rauch, Michael and Haehnelt, Martin G. and
+             Puchwein, Ewald and Bolton, James S. and Keating, Laura C. and
+             Kulkarni, Girish and others},
+  title   = {Probing the thermal state of the intergalactic medium at $z > 5$
+             with the transmission spikes in high-resolution
+             {Ly$\alpha$} forest spectra},
+  journal = {MNRAS},
+  volume  = {494},
+  number  = {4},
+  pages   = {5091--5109},
+  year    = {2020},
+  doi     = {10.1093/mnras/staa907},
+  eprint  = {2001.10018},
+  archivePrefix = {arXiv},
+  url     = {https://arxiv.org/abs/2001.10018}
+}
+
+% ---------------------------------------------------------------------
+%  Cosmic dawn, 21-cm and the first stars
+% ---------------------------------------------------------------------
+@article{HERA2023,
+  author  = {{HERA Collaboration} and Abdurashidova, Zara and others},
+  title   = {Improved Constraints on the 21 cm {EoR} Power Spectrum and the
+             {X}-Ray Heating of the {IGM} with {HERA} {Phase I} Observations},
+  journal = {ApJ},
+  volume  = {945},
+  number  = {2},
+  pages   = {124},
+  year    = {2023},
+  doi     = {10.3847/1538-4357/acaf50},
+  eprint  = {2210.04912},
+  archivePrefix = {arXiv},
+  url     = {https://arxiv.org/abs/2210.04912}
+}
+
+@article{Klessen2023,
+  author  = {Klessen, Ralf S. and Glover, Simon C. O.},
+  title   = {The First Stars: Formation, Properties, and Impact},
+  journal = {ARA\&A},
+  volume  = {61},
+  pages   = {65--130},
+  year    = {2023},
+  doi     = {10.1146/annurev-astro-071221-053453},
+  eprint  = {2303.12500},
+  archivePrefix = {arXiv},
+  url     = {https://arxiv.org/abs/2303.12500}
+}
+
+@article{Kaur2022,
+  author  = {Kaur, Harman Deep and Qin, Yuxiang and Mesinger, Andrei and
+             Pallottini, Andrea and Fragos, Tassos and Basu-Zych, Antara},
+  title   = {The 21-cm signal from the {Cosmic Dawn}: metallicity dependence
+             of high mass {X}-ray binaries},
+  journal = {MNRAS},
+  volume  = {513},
+  number  = {4},
+  pages   = {5097--5108},
+  year    = {2022},
+  doi     = {10.1093/mnras/stac1226},
+  eprint  = {2203.10851},
+  archivePrefix = {arXiv},
+  url     = {https://arxiv.org/abs/2203.10851}
+}
+
+% ---------------------------------------------------------------------
+%  Cosmic rays: acceleration, transport, and the early IGM
+% ---------------------------------------------------------------------
+@article{Ruszkowski2023,
+  author  = {Ruszkowski, Mateusz and Pfrommer, Christoph},
+  title   = {Cosmic ray feedback in galaxies and galaxy clusters. A pedagogical
+             introduction and a topical review of the acceleration, transport,
+             observables, and dynamical impact of cosmic rays},
+  journal = {A\&A Rev.},
+  volume  = {31},
+  number  = {1},
+  pages   = {4},
+  year    = {2023},
+  doi     = {10.1007/s00159-023-00149-2},
+  eprint  = {2306.03141},
+  archivePrefix = {arXiv},
+  url     = {https://arxiv.org/abs/2306.03141}
+}
+
+@article{Park2015,
+  author  = {Park, Jaehong and Caprioli, Damiano and Spitkovsky, Anatoly},
+  title   = {Simultaneous Acceleration of Protons and Electrons at
+             Nonrelativistic Quasiparallel Collisionless Shocks},
+  journal = {Phys. Rev. Lett.},
+  volume  = {114},
+  number  = {8},
+  pages   = {085003},
+  year    = {2015},
+  doi     = {10.1103/PhysRevLett.114.085003},
+  eprint  = {1412.0672},
+  archivePrefix = {arXiv},
+  url     = {https://arxiv.org/abs/1412.0672}
+}
+
+@article{Nath1993,
+  author  = {Nath, Biman B. and Biermann, Peter L.},
+  title   = {Did Cosmic Rays Reionize the Intergalactic Medium?},
+  journal = {MNRAS},
+  volume  = {265},
+  number  = {1},
+  pages   = {241--249},
+  year    = {1993},
+  doi     = {10.1093/mnras/265.1.241},
+  eprint  = {astro-ph/9306001},
+  archivePrefix = {arXiv},
+  url     = {https://arxiv.org/abs/astro-ph/9306001}
+}
+
+@misc{Samui2005,
+  author  = {Samui, Saumyadip and Subramanian, Kandaswamy and Srianand, Raghunathan},
+  title   = {Can Cosmic Rays Heat the Intergalactic Medium?},
+  year    = {2005},
+  eprint  = {astro-ph/0505590},
+  archivePrefix = {arXiv},
+  note    = {arXiv preprint},
+  url     = {https://arxiv.org/abs/astro-ph/0505590}
+}
+
+@article{Sazonov2015,
+  author  = {Sazonov, Sergey and Sunyaev, Rashid},
+  title   = {Preheating of the {Universe} by cosmic rays from primordial
+             supernovae at the beginning of cosmic reionization},
+  journal = {MNRAS},
+  volume  = {454},
+  number  = {4},
+  pages   = {3464--3471},
+  year    = {2015},
+  doi     = {10.1093/mnras/stv2255},
+  url     = {https://ui.adsabs.harvard.edu/abs/2015MNRAS.454.3464S}
+}
+
+@article{Leite2017,
+  author  = {Leite, Natacha and Evoli, Carmelo and D'Angelo, Marta and
+             Ciardi, Benedetta and Sigl, G{\"u}nter and Ferrara, Andrea},
+  title   = {Do cosmic rays heat the early intergalactic medium?},
+  journal = {MNRAS},
+  volume  = {469},
+  number  = {1},
+  pages   = {416--424},
+  year    = {2017},
+  doi     = {10.1093/mnras/stx805},
+  eprint  = {1703.09337},
+  archivePrefix = {arXiv},
+  url     = {https://arxiv.org/abs/1703.09337}
+}
+
+@article{Jana2018,
+  author  = {Jana, Ranita and Nath, Biman B.},
+  title   = {Cosmic ray heating of intergalactic medium: patchy or uniform?},
+  journal = {MNRAS},
+  volume  = {479},
+  number  = {1},
+  pages   = {153--161},
+  year    = {2018},
+  doi     = {10.1093/mnras/sty1481},
+  eprint  = {1806.01295},
+  archivePrefix = {arXiv},
+  url     = {https://arxiv.org/abs/1806.01295}
+}
+
+@article{Bera2023,
+  author  = {Bera, Ankita and Samui, Saumyadip and Datta, Kanan K.},
+  title   = {Impact of cosmic rays on the global 21-cm signal during cosmic dawn},
+  journal = {MNRAS},
+  year    = {2023},
+  doi     = {10.1093/mnras/stac3814},
+  eprint  = {2202.12308},
+  archivePrefix = {arXiv},
+  url     = {https://arxiv.org/abs/2202.12308}
+}
+
+@article{GesseyJones2023,
+  author  = {Gessey-Jones, Thomas and Fialkov, Anastasia and
+             de Lera Acedo, Eloy and Handley, Will J. and Barkana, Rennan},
+  title   = {Signatures of cosmic ray heating in 21-cm observables},
+  journal = {MNRAS},
+  volume  = {526},
+  number  = {3},
+  pages   = {4262--4284},
+  year    = {2023},
+  doi     = {10.1093/mnras/stad2965},
+  eprint  = {2304.07201},
+  archivePrefix = {arXiv},
+  url     = {https://arxiv.org/abs/2304.07201}
+}
+
+@inproceedings{Owen2017,
+  author    = {Owen, Ellis R. and Wu, Kinwah and Surajbali, Pooja and
+               Jacobsen, Idunn B.},
+  title     = {Cosmic rays in early star-forming galaxies and their effects on
+               the interstellar medium},
+  booktitle = {Proceedings of the 35th International Cosmic Ray Conference
+               (ICRC2017)},
+  series    = {PoS},
+  pages     = {289},
+  year      = {2017},
+  eprint    = {1708.06808},
+  archivePrefix = {arXiv},
+  url       = {https://arxiv.org/abs/1708.06808}
+}
+
+% ---------------------------------------------------------------------
+%  Energy-loss physics of fast electrons
+% ---------------------------------------------------------------------
+@article{Blumenthal1970,
+  author  = {Blumenthal, George R. and Gould, Robert J.},
+  title   = {Bremsstrahlung, Synchrotron Radiation, and {Compton} Scattering of
+             High-Energy Electrons Traversing Dilute Gases},
+  journal = {Rev. Mod. Phys.},
+  volume  = {42},
+  number  = {2},
+  pages   = {237--270},
+  year    = {1970},
+  doi     = {10.1103/RevModPhys.42.237},
+  url     = {https://ui.adsabs.harvard.edu/abs/1970RvMP...42..237B}
+}
+
+@article{Gould1972,
+  author  = {Gould, Robert J.},
+  title   = {Energy loss of fast electrons and positrons in a plasma},
+  journal = {Physica},
+  volume  = {60},
+  number  = {1},
+  pages   = {145--154},
+  year    = {1972},
+  doi     = {10.1016/0031-8914(72)90227-3},
+  url     = {https://ui.adsabs.harvard.edu/abs/1972Phy....60..145G}
+}
+
+@article{Kim2000,
+  author  = {Kim, Yong-Ki and Santos, Jos{\'e} Paulo and Parente, Fernando},
+  title   = {Extension of the binary-encounter-dipole model to relativistic
+             incident electrons},
+  journal = {Phys. Rev. A},
+  volume  = {62},
+  number  = {5},
+  pages   = {052710},
+  year    = {2000},
+  doi     = {10.1103/PhysRevA.62.052710},
+  url     = {https://ui.adsabs.harvard.edu/abs/2000PhRvA..62e2710K}
+}
+
+@article{Stone2002,
+  author  = {Stone, Philip M. and Kim, Yong-Ki and Desclaux, Jean Paul},
+  title   = {Electron-Impact Cross Sections for Dipole- and Spin-Allowed
+             Excitations of Hydrogen, Helium, and Lithium},
+  journal = {Journal of Research of the National Institute of Standards and
+             Technology},
+  volume  = {107},
+  number  = {4},
+  pages   = {327--337},
+  year    = {2002},
+  doi     = {10.6028/jres.107.026},
+  url     = {https://ui.adsabs.harvard.edu/abs/2002JRNIST.107..327S}
+}
+
+@article{Karzas1961,
+  author  = {Karzas, W. J. and Latter, R.},
+  title   = {Electron Radiative Transitions in a {Coulomb} Field},
+  journal = {ApJS},
+  volume  = {6},
+  pages   = {167--212},
+  year    = {1961},
+  doi     = {10.1086/190063},
+  url     = {https://ui.adsabs.harvard.edu/abs/1961ApJS....6..167K}
+}
+
+% ---------------------------------------------------------------------
+%  Secondary ionization and energy deposition
+% ---------------------------------------------------------------------
+@article{Shull1985,
+  author  = {Shull, J. Michael and van Steenberg, Mark E.},
+  title   = {X-ray secondary heating and ionization in quasar emission-line
+             clouds},
+  journal = {ApJ},
+  volume  = {298},
+  pages   = {268--274},
+  year    = {1985},
+  doi     = {10.1086/163605},
+  url     = {https://ui.adsabs.harvard.edu/abs/1985ApJ...298..268S}
+}
+
+@article{Furlanetto2010,
+  author  = {Furlanetto, Steven R. and Stoever, Samuel Johnson},
+  title   = {Secondary ionization and heating by fast electrons},
+  journal = {MNRAS},
+  volume  = {404},
+  number  = {4},
+  pages   = {1869--1878},
+  year    = {2010},
+  doi     = {10.1111/j.1365-2966.2010.16401.x},
+  eprint  = {0910.4410},
+  archivePrefix = {arXiv},
+  url     = {https://arxiv.org/abs/0910.4410}
+}
+
+@article{Slatyer2009,
+  author  = {Slatyer, Tracy R. and Padmanabhan, Nikhil and
+             Finkbeiner, Douglas P.},
+  title   = {{CMB} constraints on {WIMP} annihilation: Energy absorption during
+             the recombination epoch},
+  journal = {Phys. Rev. D},
+  volume  = {80},
+  number  = {4},
+  pages   = {043526},
+  year    = {2009},
+  doi     = {10.1103/PhysRevD.80.043526},
+  eprint  = {0906.1197},
+  archivePrefix = {arXiv},
+  url     = {https://arxiv.org/abs/0906.1197}
+}
+
+@article{Slatyer2016,
+  author  = {Slatyer, Tracy R.},
+  title   = {Indirect dark matter signatures in the cosmic dark ages. II.
+             Ionization, heating, and photon production from arbitrary energy
+             injections},
+  journal = {Phys. Rev. D},
+  volume  = {93},
+  number  = {2},
+  pages   = {023521},
+  year    = {2016},
+  doi     = {10.1103/PhysRevD.93.023521},
+  eprint  = {1506.03812},
+  archivePrefix = {arXiv},
+  url     = {https://arxiv.org/abs/1506.03812}
+}
+
+@article{Kanzaki2008,
+  author  = {Kanzaki, Toru and Kawasaki, Masahiro},
+  title   = {Electron and photon energy deposition in the {Universe}},
+  journal = {Phys. Rev. D},
+  volume  = {78},
+  number  = {10},
+  pages   = {103004},
+  year    = {2008},
+  doi     = {10.1103/PhysRevD.78.103004},
+  eprint  = {0805.3969},
+  archivePrefix = {arXiv},
+  url     = {https://arxiv.org/abs/0805.3969}
+}
+
+% ---------------------------------------------------------------------
+%  Software
+% ---------------------------------------------------------------------
+@article{Astropy2022,
+  author  = {{Astropy Collaboration} and Price-Whelan, Adrian M. and others},
+  title   = {The {Astropy} Project: Sustaining and Growing a Community-oriented
+             Open-source Project and the Latest Major Release (v5.0) of the Core
+             Package},
+  journal = {ApJ},
+  volume  = {935},
+  number  = {2},
+  pages   = {167},
+  year    = {2022},
+  doi     = {10.3847/1538-4357/ac7c74},
+  eprint  = {2206.14220},
+  archivePrefix = {arXiv},
+  url     = {https://arxiv.org/abs/2206.14220}
+}
+
+@article{KimRudd1994,
+  author  = {Kim, Yong-Ki and Rudd, M. Eugene},
+  title   = {Binary-encounter-dipole model for electron-impact ionization},
+  journal = {Phys. Rev. A},
+  volume  = {50},
+  number  = {5},
+  pages   = {3954--3967},
+  year    = {1994},
+  doi     = {10.1103/PhysRevA.50.3954},
+  url     = {https://ui.adsabs.harvard.edu/abs/1994PhRvA..50.3954K}
+}
+
+@article{Mertens2025,
+  author  = {Mertens, F. G. and Mevius, M. and Koopmans, L. V. E. and
+             Offringa, A. R. and Zaroubi, S. and others},
+  title   = {Deeper multi-redshift upper limits on the Epoch of Reionization
+             21-cm signal power spectrum from {LOFAR} between $z=8.3$ and $z=10.1$},
+  journal = {A\&A},
+  volume  = {698},
+  pages   = {A186},
+  year    = {2025},
+  doi     = {10.1051/0004-6361/202554158},
+  eprint  = {2503.05576},
+  archivePrefix = {arXiv},
+  url     = {https://arxiv.org/abs/2503.05576}
+}
+
+
+
+@article{Ghara2025,
+  author  = {Ghara, R. and Zaroubi, S. and Ciardi, B. and Mellema, G. and
+             Giri, S. K. and Mertens, F. G. and Mevius, M. and
+             Koopmans, L. V. E. and Iliev, I. T. and others},
+  title   = {Constraints on the state of the intergalactic medium at
+             $z \sim 8-10$ using redshifted 21-cm observations with {LOFAR}},
+  journal = {A\&A},
+  volume  = {699},
+  pages   = {A109},
+  year    = {2025},
+  doi     = {10.1051/0004-6361/202554163},
+  eprint  = {2505.00373},
+  archivePrefix = {arXiv},
+  url     = {https://arxiv.org/abs/2505.00373}
+}
+
+@article{Bevins2022,
+  author  = {Bevins, H. T. J. and Fialkov, A. and de Lera Acedo, E. and
+             Handley, W. J. and Singh, S. and Subrahmanyan, R. and Barkana, R.},
+  title   = {Astrophysical constraints from the {SARAS} 3 non-detection of the
+             cosmic dawn sky-averaged 21-cm signal},
+  journal = {Nat. Astron.},
+  volume  = {6},
+  pages   = {1473--1483},
+  year    = {2022},
+  doi     = {10.1038/s41550-022-01825-6},
+  eprint  = {2212.00464},
+  archivePrefix = {arXiv},
+  url     = {https://arxiv.org/abs/2212.00464}
+}
+
+@article{Austin2025,
+  author  = {Austin, D. and Harvey, T. and Conselice, C. J. and Adams, N. J. and
+             Rusakov, V. and Li, Q. and others},
+  title   = {Resolving the ionizing photon budget crisis with {JWST}/{NIRCam}
+             {H}\,\textsc{ii} clumping constraints at $z \simeq 6$},
+  journal = {arXiv e-prints},
+  year    = {2025},
+  eprint  = {2512.10839},
+  archivePrefix = {arXiv},
+  doi     = {10.48550/arXiv.2512.10839},
+  url     = {https://arxiv.org/abs/2512.10839}
+}
+
+@article{Pawlik2009,
+  author  = {Pawlik, Andreas H. and Schaye, Joop and van Scherpenzeel, Eveline},
+  title   = {Keeping the Universe ionized: photoheating and the clumping factor
+             of the high-redshift intergalactic medium},
+  journal = {MNRAS},
+  volume  = {394},
+  number  = {4},
+  pages   = {1812--1824},
+  year    = {2009},
+  doi     = {10.1111/j.1365-2966.2009.14486.x},
+  eprint  = {0807.3963},
+  archivePrefix = {arXiv},
+  url     = {https://arxiv.org/abs/0807.3963}
+}
+% =====================================================================
+%  New entries required by the completed introduction.
+%  Append to references.bib (no key collides with the existing 35).
+% =====================================================================
+
+@article{Bromm2013,
+  author  = {Bromm, Volker},
+  title   = {Formation of the first stars},
+  journal = {Rep. Prog. Phys.},
+  volume  = {76},
+  number  = {11},
+  pages   = {112901},
+  year    = {2013},
+  doi     = {10.1088/0034-4885/76/11/112901},
+  eprint  = {1305.5178},
+  archivePrefix = {arXiv},
+  url     = {https://arxiv.org/abs/1305.5178}
+}
+
+@article{Aharonian2019,
+  author  = {Aharonian, Felix and Yang, Ruizhi and
+             de O{\~n}a Wilhelmi, Emma},
+  title   = {Massive stars as major factories of {Galactic} cosmic rays},
+  journal = {Nat. Astron.},
+  volume  = {3},
+  number  = {6},
+  pages   = {561--567},
+  year    = {2019},
+  doi     = {10.1038/s41550-019-0724-0},
+  eprint  = {1804.02331},
+  archivePrefix = {arXiv},
+  url     = {https://arxiv.org/abs/1804.02331}
+}
+
+@article{Bykov2017,
+  author  = {Bykov, A. M. and Amato, E. and Petrov, A. E. and
+             Krassilchtchikov, A. M. and Levenfish, K. P.},
+  title   = {Pulsar wind nebulae with bow shocks: non-thermal radiation
+             and cosmic ray leptons},
+  journal = {Space Sci. Rev.},
+  volume  = {207},
+  number  = {1--4},
+  pages   = {235--290},
+  year    = {2017},
+  doi     = {10.1007/s11214-017-0371-7},
+  eprint  = {1705.00950},
+  archivePrefix = {arXiv},
+  url     = {https://arxiv.org/abs/1705.00950}
+}
+
+@article{Mirabel2011,
+  author  = {Mirabel, I. F. and Dijkstra, M. and Laurent, P. and
+             Loeb, A. and Pritchard, J. R.},
+  title   = {Stellar black holes at the dawn of the {Universe}},
+  journal = {A\&A},
+  volume  = {528},
+  pages   = {A149},
+  year    = {2011},
+  doi     = {10.1051/0004-6361/201016357},
+  eprint  = {1102.1891},
+  archivePrefix = {arXiv},
+  url     = {https://arxiv.org/abs/1102.1891}
+}
+
+@article{Valdes2010,
+  author  = {Vald{\'e}s, Marcos and Evoli, Carmelo and Ferrara, Andrea},
+  title   = {Particle energy cascade in the intergalactic medium},
+  journal = {MNRAS},
+  volume  = {404},
+  number  = {3},
+  pages   = {1569--1582},
+  year    = {2010},
+  doi     = {10.1111/j.1365-2966.2010.16387.x},
+  eprint  = {0911.1125},
+  archivePrefix = {arXiv},
+  url     = {https://arxiv.org/abs/0911.1125}
+}
+
+@article{Zdziarski1989,
+  author  = {Zdziarski, Andrzej A. and Svensson, Roland},
+  title   = {Absorption of {X}-rays and gamma rays at cosmological
+             distances},
+  journal = {ApJ},
+  volume  = {344},
+  pages   = {551--566},
+  year    = {1989},
+  doi     = {10.1086/167826},
+  url     = {https://ui.adsabs.harvard.edu/abs/1989ApJ...344..551Z}
+}

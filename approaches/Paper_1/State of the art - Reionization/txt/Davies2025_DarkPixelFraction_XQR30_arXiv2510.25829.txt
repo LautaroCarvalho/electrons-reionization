@@ -1,0 +1,3299 @@
+MNRAS 000, 1–18 (2025)
+
+Preprint 31 October 2025
+
+Compiled using MNRAS LATEX style file v3.2
+
+Updated dark pixel fraction constraints on reionization’s end from the
+Lyman-series forests of XQR-30
+
+arXiv:2510.25829v1 [astro-ph.CO] 29 Oct 2025
+
+Frederick B. Davies,1★ Sarah E. I. Bosman,2,1 Valentina D’Odorico,3,4,5 Sofia Campo,3 Andrei Mesinger,4
+Yuxiang Qin,6 George D. Becker,7 Eduardo Bañados,1 Huanqing Chen,8 Stefano Cristiani,3,5,9 Xiaohui Fan,10
+Simona Gallerani,4 Martin G. Haehnelt,11 Laura C. Keating,12 Samuel Lai,13 Emma Ryan-Weber,14 Feige Wang,15
+Jinyi Yang,15 and Yongda Zhu10
+1 Max-Planck-Institut für Astronomie, Königstuhl 17, D-69117 Heidelberg, Germany
+2 Institute for Theoretical Physics, Heidelberg University, Philosophenweg 12, D–69120, Heidelberg, Germany
+3 INAF-Osservatorio Astronomico di Trieste, Via Tiepolo 11, I-34143 Trieste, Italy
+4 Scuola Normale Superiore, Piazza dei Cavalieri 7, I-56126 Pisa, Italy
+5 IFPU-Institute for Fundamental Physics of the Universe, via Beirut 2, I-34151 Trieste, Italy
+6 School of Physics, University of Melbourne, Parkville, VIC 3010, Australia
+7 Department of Physics & Astronomy, University of California, Riverside, CA 92521, USA 8 Augustana Campus, University of Alberta, Camrose, AB T4V2R3, Canada
+9 INFN – National Institute for Nuclear Physics, via Valerio 2, I-34127 Trieste, Italy
+10 Steward Observatory, University of Arizona, 933 North Cherry Avenue, Tucson, AZ 85721, USA
+11 Kavli Institute for Cosmology and Institute of Astronomy, Madingley Road, Cambridge CB3 0HA, UK
+12 Institute for Astronomy, University of Edinburgh, Blackford Hill, Edinburgh EH9 3HJ, UK
+13 Space & Astronomy, Commonwealth Scientific and Industrial Research Organisation (CSIRO), P. O. Box 1130, Bentley, WA 6102, Australia
+14 Centre for Astrophysics and Supercomputing, Swinburne University of Technology, Hawthorn, Victoria 3122, Australia
+15 Department of Astronomy, University of Michigan, 1085 S. University Ave., Ann Arbor, MI 48109, USA
+
+Accepted XXX. Received YYY; in original form ZZZ
+
+ABSTRACT
+
+The fraction of “dark pixels” in the Ly𝛼 and other Lyman-series forests at 𝑧 ∼ 5–6 provides a powerful constraint on the end of the
+reionization process. Any spectral region showing transmission must be highly ionized, while dark regions could be ionized or
+neutral, thus the dark pixel fraction provides a (nearly) model independent upper limit to the volume-filling fraction of the neutral
+intergalactic medium, modulo choices in binning scale and dark pixel definition. Here we provide updated measurements of the
+3.3 comoving Mpc dark pixel fraction at 𝑧 = 4.85–6.25 in the Ly𝛼, Ly𝛽, and Ly𝛾 forests of 34 deep 5.8 ≲ 𝑧 ≲ 6.6 quasar spectra
+from the (enlarged) XQR-30 sample. Using the negative pixel method to measure the dark pixel fraction, we derive fiducial 1𝜎
+upper limits on the volume-average neutral hydrogen fraction of ⟨𝑥 HI ⟩ ≤ {0.030 + 0.048, 0.095 + 0.037, 0.191 + 0.056, 0.199 +
+0.087} at 𝑧¯ = {5.481, 5.654, 5.831, 6.043} from the optimally sensitive combination of the Ly𝛽 and Ly𝛾 forests. We further
+demonstrate an alternative method that treats the forest flux as a mixture of dark and transparent regions, where the latter are
+modeled using a physically-motivated parametric form for the intrinsic opacity distribution. The resulting model-dependent
+upper limits on ⟨𝑥 HI ⟩ are similar to those derived from our fiducial model-independent analysis. We confirm that the bulk of
+reionization must be finished at 𝑧 > 6, while leaving room for an extended “soft landing” to the reionization history down to
+𝑧 ∼ 5.4 suggested by Ly𝛼 forest opacity fluctuations.
+Key words: intergalactic medium – quasars: absorption lines – dark ages, reionisation, first stars – large-scale structure of
+Universe
+
+1 INTRODUCTION
+The reionization of hydrogen in the intergalactic medium (IGM) was
+a pivotal moment in the history of the Universe, wherein the first stars
+and galaxies exerted their influence on cosmological scales, transforming the intergalactic gas into the ionized plasma that persists
+today. Observational probes of the reionization epoch are largely lim-
+
+★
+
+E-mail: davies@mpia.de (FBD)
+
+© 2025 The Authors
+
+ited to three general categories: scattering of the cosmic microwave
+background (CMB) off of free electrons, emission and absorption by
+the hyperfine 21 cm transition of neutral hydrogen, and scattering by
+Ly𝛼 and other resonant Lyman-series transitions of neutral hydrogen.
+The CMB provides an integral constraint on the reionization process via the electron-scattering optical depth 𝜏e (e.g. Zaldarriaga
+1997), representing the integral of ionized gas from the present-day
+to the surface of last scattering at 𝑧 ∼ 1100. The latest measurements
+by the Planck mission suggest a characteristic reionization epoch
+
+2
+
+F. B. Davies et al.
+
+of 𝑧 = 7.67 ± 0.73 (Planck Collaboration et al. 2020), with some
+additional systematic uncertainty depending on how the reionization history is allowed to vary1 . Further information on the duration
+of the process can be determined from the patchy kinetic SunyaevZel’dovich (kSZ) effect (e.g. Aghanim et al. 1996; Gruzinov & Hu
+1998; Knox et al. 1998), which primarily depends on the duration of
+the reionization process (e.g. Zahn et al. 2005; McQuinn et al. 2005;
+Mesinger et al. 2012; Battaglia et al. 2013), but so far the patchy kSZ
+signal is only detected by CMB experiments at a signal-to-noise ratio
+of ∼ 3 (Reichardt et al. 2021). The 21 cm signal is another promising
+probe of the reionization process; the large-scale fluctuations in the
+reionization topology are, in principle, detectable in emission or absorption directly from the neutral hydrogen in the IGM itself (Madau
+et al. 1997; Furlanetto et al. 2006). Due to substantial foregrounds
+and instrumental challenges, a detection of the signal remains elusive, but the upper limits achieved thus far (e.g. HERA Collaboration
+et al. 2023; Mertens et al. 2025; Ceccotti et al. 2025; Nunhokee
+et al. 2025) nevertheless provide valuable astrophysical constraints
+(e.g. HERA Collaboration et al. 2023; Bevins et al. 2024; Sims et al.
+2025; Ghara et al. 2025; Nunhokee et al. 2025).
+The Ly𝛼 forest in the spectra of high-redshift quasars provides a
+sensitive view of the neutral hydrogen content of the early Universe.
+Before reionization has completed, the neutral IGM will imprint
+completely saturated Ly𝛼 absorption known as the Gunn-Peterson
+trough (Gunn & Peterson 1965). Indeed, early observations of the
+first quasars discovered above redshift 6 showed dark troughs in both
+the Ly𝛼 and Ly𝛽 forests (Becker et al. 2001; White et al. 2003). While
+the absence of ubiquitous troughs at 𝑧 < 6 was initially interpreted to
+mean that reionization was complete (e.g. Fan et al. 2006, although
+see Mesinger 2010), it was eventually realized that the large observed
+scatter in Ly𝛼 forest opacity (Becker et al. 2015) was difficult to explain in the context of complete reionization (although see D’Aloisio
+et al. 2015; Davies & Furlanetto 2016; Chardin et al. 2017). In contrast, models of patchy, incomplete reionization at 𝑧 < 6 provided
+an easier and better-fitting explanation (Kulkarni et al. 2019; Nasir
+& D’Aloisio 2020; Keating et al. 2020; Choudhury et al. 2021; Qin
+et al. 2021). The most recent measurements of large-scale Ly𝛼 forest
+fluctuations suggest that these excess fluctuations persist all the way
+down to 𝑧 ∼ 5.3 (Bosman et al. 2022).
+However, in some respects Ly𝛼 absorption is too sensitive – H I
+fractions of ∼ 10−4 are sufficient for nearly complete saturation
+(Gunn & Peterson 1965). Fortunately, the large H I column densities
+of a truly neutral IGM are sufficient for their Lorentzian damping
+wings to imprint substantial absorption at large velocity separations (Miralda-Escudé 1998). Provided that the presence of nonIGM damped Ly𝛼 absorbers in the foreground can be ruled out
+(Simcoe et al. 2012; Bañados et al. 2019; Davies et al. 2025), this
+long-range damping wing absorption enables additional ⟨𝑥HI ⟩ constraining power from sensitive rest-frame Ly𝛼 spectroscopy of highredshift quasars (e.g. Mesinger & Haiman 2004; Greig et al. 2017,
+2024; Davies et al. 2018; Ďurovčíková et al. 2024; Kist et al. 2025),
+gamma-ray bursts (e.g. Totani et al. 2006; Chornock et al. 2013; Lidz
+et al. 2021; Fausey et al. 2025), and galaxies (e.g. Umeda et al. 2025;
+Mason et al. 2025), as well as the statistics of Ly𝛼 emission lines in
+high-redshift galaxies (e.g. Mesinger et al. 2015; Mason et al. 2018;
+Bolan et al. 2022; Nakane et al. 2024; Kageura et al. 2025). Hints of
+
+1
+
+Or which CMB data are used in the measurement. Recent work suggests a
+larger 𝜏𝑒 and thus earlier reionization could still be viable if low-𝑙 CMB data
+are excluded (Sailer et al. 2025; Jhaveri et al. 2025; although see Cain et al.
+2025b).
+MNRAS 000, 1–18 (2025)
+
+damping wing absorption from neutral islands deeper within the Ly𝛼
+forest (Malloy & Lidz 2015) have also begun to emerge (Spina et al.
+2024; Zhu et al. 2024; Becker et al. 2024) although its interpretation
+may be non-trivial (Gnedin & Zhu 2025).
+The Ly𝛼 absorption constraints mentioned above are inherently
+model-dependent, that is, they rely on calibration with mock data
+extracted from cosmological simulations to connect observations to
+physical properties of the IGM, i.e. the neutral fraction. However,
+given the broad uncertainties that remain in our knowledge of the
+reionization process, and the expensive nature of detailed reionization simulations, the derived ⟨𝑥 HI ⟩ constraints depend on the specific
+model employed and are difficult to compare to each other. The
+work of Mesinger (2010) emphasized that more reliable constraints
+could be derived from model-independent probes, and devised one
+such method using the Ly𝛼 and Ly𝛽 forests. They considered the
+fact that any spectral region of the Ly𝛼 or Ly𝛽 forest with detected
+transmission must be highly ionized, while any region without transmission could be neutral. Thus the fraction of path length with zero
+transmission provides an upper limit to ⟨𝑥 HI ⟩. The method was first
+tested empirically in McGreer et al. (2011), where to maximize sensitivity they adopted a spectral binning scale of 3.3 comoving Mpc,
+although this choice introduces a small degree of model dependence.
+The resulting constraints on ⟨𝑥HI ⟩ by McGreer et al. (2011) were
+relatively weak, but deeper spectroscopic measurements enabled a
+subsequent work by McGreer et al. (2015) to place tight upper limits
+of ⟨𝑥HI ⟩ ≤ 0.04 + 0.05 (0.06 + 0.05) (1𝜎) at 𝑧 = 5.6 (5.9). More
+recently, Jin et al. (2023) employed a similar technique on a sample
+of much higher redshift quasars to place the first ⟨𝑥 HI ⟩ upper limits
+at 𝑧 > 6.2: ⟨𝑥 HI ⟩ ≤ 0.79 + 0.04, ≤ 0.87 + 0.03, and ≤ 0.94 + 0.06 at
+𝑧 = 6.3, 6.5, and 6.7, respectively.
+In this work, we measure the dark pixel fraction using deep VLT/XShooter spectroscopy from the XQR-30 survey (D’Odorico et al.
+2023), plus additional deep spectroscopy of similar quality in public
+archives (E-XQR-30). We employ methods similar to McGreer et al.
+(2011, 2015) to derive upper limits on ⟨𝑥HI ⟩ using the Ly𝛼, Ly𝛽,
+and (for the first time) Ly𝛾 forests. Finally, we also investigate a
+more model-dependent parametric approach, treating the forest as a
+mixture of “transparent” and “dark” pixels, and find very consistent
+results to our fiducial model-independent analysis.
+We assume a flat ΛCDM cosmology consistent with Planck Collaboration et al. (2020), adopting the cosmological parameter values
+ℎ = 0.68, Ω𝑚 = 0.31, and ΩΛ = 0.69. Distance units are comoving
+unless specified otherwise.
+
+2 XQR-30 LYMAN-SERIES DATA SET
+We use data drawn from the XQR-30 large program (1103.A0817(A); D’Odorico et al. 2023) combined with literature data of
+comparable quality – the so-called “enlarged” or E-XQR-30 data set
+(D’Odorico et al. 2023). These data consist of deep VLT/X-Shooter
+(Vernet et al. 2011) spectroscopy of 30+12 quasars with redshifts
+5.8 ≲ 𝑧 ≲ 6.6, which have been reduced with a custom data reduction pipeline (see D’Odorico et al. 2023 for details). After careful
+spectral quality cuts (described below and in Appendix A), and removing the most prominent broad absorption-line (BAL) quasars, in
+our analysis we use 34 out of 42 of the quasars (Table 1). We show a
+summary of the number of sightlines and binned Lyman-series pixels
+(see below) in Figure 1.
+Despite the high signal-to-noise of the spectra, some artifacts remain, particularly in the vicinity of sky emission lines. We clean the
+spectra in two steps. First, we mask pixels which are overly nega-
+
+Dark pixel fraction from XQR-30
+Name
+
+𝑧q
+
+𝑧q ref.
+
+Median 𝜏eff,lim (1𝜎)
+
+PSO J231−20
+PSO J183+05
+DELS J1535+1943
+VDES J2211−3206
+
+6.5869
+6.4386
+6.4378
+6.342
+
+4
+4
+9
+9
+
+5.533
+5.594
+4.942
+5.194
+
+XQR-30; BAL
+XQR-30; Abs @ 𝑧 = 6.4041, 6.0642
+XQR-30
+XQR-30; BAL
+
+ATLAS J025−33
+SDSS J0100+2802
+SDSS J1030+0524
+PSO J217−07
+PSO J065−26
+
+6.3373
+6.3269
+6.309
+6.1993
+6.1871
+
+4
+4
+8
+8
+4
+
+6.173
+7.615
+5.546
+5.256
+6.042
+
+E-XQR-30
+E-XQR-30; Abs @ 𝑧 = 6.1434, 6.1114, 5.9450, 5.7974
+E-XQR-30
+XQR-30; BAL
+XQR-30; Abs @ 𝑧 = 6.1235, 5.8677
+
+PSO J060+24
+PSO J217−16
+ULAS J1319+0950
+PSO J239−07
+SDSS J0842+1218
+
+6.1793
+6.1466
+6.1347
+6.1102
+6.0754
+
+9
+9
+4
+5
+4
+
+5.414
+5.736
+5.889
+5.700
+5.776
+
+XQR-30; Abs @ 𝑧 = 5.6993
+XQR-30
+E-XQR-30; Abs @ 𝑧 = 6.0172
+XQR-30; Abs @ 𝑧 = 5.9918; BAL
+XQR-30
+
+PSO J158−14
+SDSS J1306+0356
+VDES J0408−5632
+ATLAS J029−36
+PSO J009−10
+
+6.0685
+6.0330
+6.0264
+6.021
+6.0040
+
+5
+4
+9
+8
+4
+
+5.569
+5.499
+5.786
+5.401
+4.803
+
+XQR-30; Abs @ 𝑧 = 5.8986
+E-XQR-30
+XQR-30
+XQR-30
+XQR-30; BAL
+
+SDSS J2310+1855
+PSO J007+04
+SDSS J0818+1722
+VDES J2250−5015
+ULAS J0148+0600
+
+6.0031
+6.0015
+5.9991
+5.9988
+5.9896
+
+2
+4
+9
+9
+9
+
+6.022
+5.413
+6.191
+5.050
+6.290
+
+XQR-30; Abs @ 𝑧 = 5.9388
+XQR-30; Abs @ 𝑧 = 5.9917
+E-XQR-30; Abs @ 𝑧 = 5.8767, 5.7912
+XQR-30; BAL
+E-XQR-30
+
+PSO J029−29
+PSO J108+08
+PSO J183−12
+PSO J242−12
+PSO J023−02
+
+5.984
+5.9647
+5.917
+5.8468
+5.8464
+
+8
+9
+8
+9
+9
+
+5.519
+5.859
+5.803
+5.259
+4.995
+
+XQR-30
+XQR-30; Abs @ 𝑧 = 5.5624
+XQR-30
+XQR-30
+XQR-30; Abs @ 𝑧 = 5.4869; BAL
+
+PSO J025−11
+PSO J065+01
+SDSS J0836+0054
+PSO J308−27
+SDSS J0927+2001
+
+5.8414
+5.8348
+5.804
+5.803
+5.7722
+
+9
+9
+8
+9
+1
+
+5.412
+5.188
+5.789
+5.463
+5.605
+
+XQR-30; Abs @ 𝑧 = 5.8385, 5.7763
+XQR-30
+E-XQR-30
+XQR-30; Abs @ 𝑧 = 5.6268, 5.4400
+E-XQR-30
+
+6.6330
+6.5872
+6.5405
+6.5223
+6.5188
+6.1722
+6.1228
+5.9756
+
+7
+4
+4
+9
+6
+5
+3
+9
+
+–
+–
+–
+–
+–
+–
+–
+–
+
+3
+
+Notes
+
+Excluded from analysis
+DELS J0923+0402
+PSO J323+12
+PSO J036+03
+VDES J0224−4711
+UHS J0439+1634
+PSO J359−06
+CFHQS J1509−1749
+PSO J089−15
+
+XQR-30; Extreme BAL
+XQR-30; Positive zero-level bias
+E-XQR-30; Negative zero-level bias
+XQR-30; Positive zero-level bias
+E-XQR-30; Contamination by lensing galaxy
+XQR-30; Positive zero-level bias
+E-XQR-30; Positive zero-level bias
+XQR-30; Extreme BAL
+
+Table 1. List of quasar spectra considered in this work. The columns from left to right show the quasar name, quasar systemic redshift 𝑧q , the corresponding
+reference to the systemic redshift, the median limiting effective optical depth 𝜏eff,lim (see text), and additional quasar-specific notes. The median 𝜏eff limits
+are computed over the whole spectral range considered in this work. Absorbers noted by “Abs” are O I absorbers from Sodini et al. (2024). Systemic redshift
+references: 1 – Carilli et al. (2007), 2 – Wang et al. (2013), 3 – Decarli et al. (2018), 4 – Venemans et al. (2020), 5 – Eilers et al. (2021), 6 – Yang et al. (2019), 7
+– Yang et al. (2021), 8 – Bosman et al. (2022), 9 – Neelemann et al., in prep.
+
+tive with S/N < −3, corresponding to ≃ 0.2% of pixels. Second,
+we mask pixels whose noise values are above the 97.5-percentile of
+the distribution within the relevant wavelength range. This latter step
+is performed to remove sky emission line features uniformly from
+each spectrum in lieu of individually tuned peak-finding approaches
+(e.g. Zhu et al. 2022), and we found that our results are insensitive
+to the exact percentile chosen. We note that for the brightest quasars
+in our sample, the pixel noise can include a non-negligible contribution from the object flux, potentially leading to masking of the
+
+brightest transmission spikes at 𝑧 ≲ 5.5 and biasing the dark fraction
+high, however in practice we find that only sky-dominated pixels
+are masked. Finally, we expand these masked regions by 2 spectral
+pixels (∼ 20 km/s) in either direction to clean up any residual noise
+correlations. We show an example of the outcome of this procedure
+in Figure 2, where the lightly-colored (unbinned) pixels are masked.
+We also inspect each spectrum for observational artifacts that
+may contaminate the zero-level, with potentially catastrophic consequences for measurements close to the noise level. Specifically, we
+MNRAS 000, 1–18 (2025)
+
+4
+
+F. B. Davies et al.
+
+Number of binned pixels
+
+Number of sightlines
+
+40
+Lyα
+Lyβ
+Lyγ
+Lyδ
+
+30
+
+20
+
+10
+
+0
+1000
+800
+600
+400
+200
+0
+
+4.8
+
+5.0
+
+5.2
+
+5.4
+
+5.6
+
+5.8
+
+6.0
+
+6.2
+
+Redshift
+Figure 1. Top: Number of quasar sightlines covering the Ly𝛼 (black), Ly𝛽
+(blue), and Ly𝛾 (red) forests within the eight Δ𝑧 = 0.2 redshift bins we
+consider in this work. Bottom: Corresponding number of binned pixels in
+each forest/redshift bin combination. The green dashed lines in both panels
+show the corresponding numbers for the Ly 𝛿 forest, discussed in Appendix C.
+
+investigate the positive-negative “parity” of each spectrum with two
+tests: the cumulative parity, and the binned parity. We first transform
+each spectrum into ±1 values, 𝐹± , corresponding to the sign of the
+Í
+flux in each pixel. In the cumulative parity test, we inspect 𝐹± (< 𝜆)
+as a function of observed wavelength 𝜆 within the X-Shooter/VIS portion of the quasar spectrum (𝜆 > 5500 Å). At wavelengths blueward
+of the Lyman limit (𝜆 rest < 911.76 Å) the spectrum should be roughly
+zero due to the short mean free path of ionizing photons at 𝑧 > 5.8
+(Becker et al. 2021; Zhu et al. 2023), thus we expect the cumulative
+parity to be roughly flat at blue wavelengths, followed by discrete
+jumps due to flux spikes encountered at redder wavelengths. An incorrect zero-level in the spectrum will appear as an overall positive or
+negative drift across the entire spectrum irrespective of the location
+of real features in the flux. We also inspect the binned parity across
+the spectrum in ∼ 300 km/s bins and look for statistically significant
+(> 2𝜎) local (negative) deviations in parity that may be indicative
+of poor sky subtraction. Inspection of these two metrics for every
+quasar resulted in the exclusion of six objects, five with excess positive parity (PSO J323+12, VDES J0224−4711, UHS J0439+16342 ,
+PSO J359−06, CFHQS J1509−1749) and one with excess negative
+parity (PSO J036+03). Examples of the parity tests for excluded and
+non-excluded quasars can be found in Appendix A.
+We aim to study the dark pixel fraction of the Ly𝛼 (𝜆 𝛼 =
+1215.67 Å), Ly𝛽 (𝜆 𝛽 = 1025.72 Å), and (for the first time) Ly𝛾
+(𝜆 𝛾 = 972.54 Å) forests of the E-XQR-30 quasars. Traditionally, the
+Ly𝛼 forest extends from Ly𝛼 at the redshift of the background quasar
+𝑧 q to the start of the Ly𝛽 forest. We exclude the region in the vicinity
+of the quasar, i.e. the proximity zone, by starting the Ly𝛼 forest at
+𝑧 q − Δ𝑧 prox , where we choose Δ𝑧prox = 0.2. This is a relatively large
+exclusion compared to the Δ𝑧prox = 0.1 of McGreer et al. (2011,
+2015), but for most quasars it is slightly smaller than the exclusion
+2
+
+The positive drift in this strongly-lensed quasar is due to blending with a
+foreground lensing galaxy (Fan et al. 2019).
+MNRAS 000, 1–18 (2025)
+
+by Jin et al. (2023), who started the Ly𝛼 forest at 𝜆 = 1176 Å×(1+𝑧q ).
+While the Ly𝛼 regions with by-eye elevated transmission are often
+much smaller than our exclusion, we conservatively opt for this larger
+exclusion zone as it encompasses the largest proximity zone in our
+sample (towards SDSS J0100+2802), and there may be second-order
+effects in the ionizing background to larger distances (Davies 2020).
+The short wavelength end of the Ly𝛼 forest of each quasar is then cut
+off at the onset of Ly𝛽 forest absorption (𝜆 = 𝜆 𝛽 × (1 + 𝑧q )), such
+that the majority of the quasars studied probe Ly𝛼 redshifts down to
+𝑧 Ly𝛼 ∼ 5. For the Ly𝛽 and Ly𝛾 forests, we apply the same proximity
+zone exclusion, but we treat the low redshift end differently, probing
+all the way down to 𝜆 rest = 915 Å3 . The addition of such heavily
+foreground-contaminated pixels may be counterintuitive – the individual Ly𝛽 and Ly𝛾 forests will have a much higher observed fraction
+of dark pixels in regions contaminated by foreground absorption. But
+note that when the Lyman-series forests are considered in combination, any pixels with transmitted flux not present in lower-order lines
+will rule out a truly dark pixel (corresponding to neutral IGM) at that
+location. We find that this hypothesis holds in practice, with greatly
+improved constraining power from the larger path length allowed by
+the extended wavelength coverage.
+Dense absorbers with large H I column density can also introduce
+large correlated regions with zero transmission, which may bias the
+dark fractions to higher values. We mask regions corresponding to
+potential high column density Damped Ly𝛼 (DLA) systems at the
+locations of the Sodini et al. (2024) O I metal absorbers4 with an
+exclusion width of Δ𝑣 = 1500 km/s in the Ly𝛼 forest. For the other
+Lyman-series forests, we conservatively scale this Δ𝑣 by ln 𝑓line 𝜆line ,
+where 𝑓line is the oscillator strength of the transition at rest-frame
+wavelength 𝜆 line , corresponding to the flat part of the curve of growth.
+The Lyman-series forests for each metal absorber were manually
+inspected, with some showing significant transmission within the
+nominal mask region. For these absorbers, we reduced the size of the
+mask for the corresponding transition and all higher order transitions
+to the implied maximum width. In the end, roughly ≈ 2.4% of spectral
+pixels are masked, with a similar few percent decrease in our final
+dark fractions.
+Similar to Bosman et al. (2022), we mask regions corresponding
+to strong BAL absorption as determined by Bischetti et al. (2022).
+Specifically, we mask the Si IV, N V, O VI, and Lyman-series lines at
+velocities with > 20% absorption in the C IV line. While these regions
+may still show transmission in the Lyman-series forests as long as the
+BAL troughs are not fully saturated, their effective signal-to-noise
+will be much lower and difficult to quantify, so we conservatively
+mask them from the analysis. We find that this masking has only
+a minor effect on our final results, reducing the final dark fraction
+measurements by ∼ 1 − 2%. Two quasars in the E-XQR-30 data set,
+DELS J0923+0402 and PSO J089−15, exhibit such strong and broad
+BAL absorption that their spectra are almost fully contaminated, thus
+we exclude them from our analysis.
+To estimate the sensitivity of our spectra to IGM transmission, we
+compute the limiting effective optical depth 𝜏eff,lim from McGreer
+et al. (2015), corresponding to − ln 𝜎bin /𝐹cont , where 𝜎bin is the
+flux uncertainty after binning to a scale of 3.3 Mpc (see Section 3.1
+3 We expect wavelengths at 𝜆
+rest < 912 Å to experience additional Lyman
+limit absorption, and leave a buffer in case the quasar redshifts are not precise
+enough (e.g. those derived from the Mg II emission line). Our results are
+insensitive to the exact limit chosen.
+4 Sodini et al. (2024) searched the E-XQR-30 spectra for O I absorbers by
+eye. No additional O I absorbers were found in the complete automated metal
+absorber catalogue from Davies et al. (2023).
+
+Dark pixel fraction from XQR-30
+
+Transmitted flux + offset
+
+PSOJ007+04
+Noise
+Binned pixels
+
+Lyα
+
+1.00
+
+5
+
+Masked spectral pixels
+Undetected binned pixels
+Negative binned pixels
+
+0.75
+0.50
+
+Lyβ
+
+0.25
+0.00
+−0.25
+
+Lyγ
+
+−0.50
+−0.75
+
+5.600
+
+5.625
+
+5.650
+
+5.675
+
+5.700
+
+5.725
+
+5.750
+
+5.775
+
+Forest redshift
+Figure 2. Example of a masked and binned quasar spectrum from our data set (PSO J007+04, 𝑧q = 6.0015). Brown and green points below the spectrum
+indicated undetected (S/N < 2) and negative binned pixels, respectively. The forests Ly𝛼/Ly𝛾 forest transmissions are shown offset by ±0.65 for clarity.
+
+1σ limiting optical depth
+4
+
+5
+
+6
+
+7
+
+8
+
+Lyα pixels
+
+3
+
+Ly𝛾 forests, and report the median value for quasar spectrum across
+the whole considered IGM wavelength range in Table 1.
+
+3 MODEL-INDEPENDENT IGM NEUTRAL FRACTION
+CONSTRAINTS
+
+Lyγ pixels
+
+Lyβ pixels
+
+We derive constraints on the IGM neutral fraction in a similar fashion
+to McGreer et al. (2011, 2015, see also Jin et al. 2023) by using
+the so-called “dark pixel fraction” technique, originally proposed by
+Mesinger (2010). The idea is simple: any segment of the Ly𝛼 (or
+other Lyman series) forest with detected transmission must be highly
+ionized (Gunn & Peterson 1965), while segments that are dark may
+be neutral. The fraction of the forest covered by dark segments (or one
+minus the fraction covered by transparent segments) then provides an
+upper limit to the IGM neutral fraction. In detail, two choices must
+be made – first, how are the segments defined, and second, how to
+identify which segments are dark.
+4.75
+
+5.00
+
+5.25
+
+5.50
+
+5.75
+
+6.00
+
+6.25
+
+Redshift
+Figure 3. Limiting effective optical depths 𝜏eff,lim = − ln 𝜎bin /𝐹cont along
+each quasar sightline for binned pixels in the Ly𝛼 (top), Ly𝛽 (middle), and
+Ly𝛾 (bottom) forests. The vertical stripe of low 𝜏eff,lim at 𝑧 ≃ 5.25 in the Ly𝛼
+forest is due to strong telluric absorption from the O2 A-band at ∼ 7600 Å.
+Note also the spectrum of SDSS J0100+2802 which has extraordinarily high
+signal-to-noise, resulting in the horizontal stripes of particularly high 𝜏eff,lim .
+
+below), and 𝐹cont is the unabsorbed quasar continuum. To estimate the
+quasar continuum, we adopt a simple broken power-law model with
+𝐹𝜆 ∝ 𝜆 −1.5 normalized to 𝜆 rest = 1290 Å, inflecting to 𝐹𝜆 ∝ 𝜆 −0.5 at
+𝜆 rest < 1000 Å. More accurate continuum predictions are available at
+Ly𝛼 forest wavelengths for most of the sample (Bosman et al. 2021,
+2022), but we opt for a more simplistic model that can be applied
+more uniformly and to shorter wavelengths covering the higher order
+Lyman series forests. The exact continuum level is not important for
+our fiducial model-independent analyses in Section 3, and as will be
+discussed below in Section 4, likely only has a small impact on our
+proof-of-concept model-dependent analysis. In Figure 3 we show the
+resulting 𝜏eff,lim as a function of wavelength in the Ly𝛼, Ly𝛽, and
+
+3.1 Binned pixel definition
+We follow McGreer et al. (2011, 2015) and bin the spectra into
+3.3 Mpc segments, corresponding to a velocity scale of Δ𝑣 ≃
+380 km/s in our assumed cosmology at 𝑧 = 5–6. This scale was
+originally motivated in McGreer et al. (2011) for various reasons.
+Observationally, this binning allows for higher sensitivity to IGM
+transmission features. From a more theoretical standpoint, Jeansscale patches of neutral IGM at the end of the reionization process
+should have a broad, saturated core in addition to damping wing
+absorption, such that arbitrarily small dark gaps are unlikely to correspond to neutral gas (e.g. Zhu et al. 2022). The damping wings
+associated with such patches likely extend even further than this
+scale (Zhu et al. 2024; Spina et al. 2024), increasing the potential
+number of dark pixels. This choice introduces a degree of model
+dependence to our results – if pockets of neutral IGM can produce
+smaller gaps, our binning would miss them. Conversely, if the neutral
+IGM only ever manifests as larger dark regions, a larger binning scale
+would exclude the smaller dark regions consistent with the ionized
+phase of the IGM. We explore the dependence of our results as a
+function of binning scale in Appendix B.
+We select the 3.3 Mpc segments in fixed redshift ranges by integrating the comoving line element 𝑑𝑙/𝑑𝑧 = 𝑐/𝐻 (𝑧) starting from
+𝑧 = 4.75, the lower redshift end of the lowest redshift Ly𝛼 forest
+MNRAS 000, 1–18 (2025)
+
+6
+
+F. B. Davies et al.
+Detected vs. undetected pixels
+5.0
+
+5.2
+
+5.4
+
+4.8
+
+5.0
+
+5.2
+
+5.4
+
+Forest combinations (all-undetected pixels)
+
+5.6
+
+5.8
+
+6.0
+
+6.2
+
+6.4
+
+5.6
+
+5.8
+
+6.0
+
+6.2
+
+6.4
+
+4.8
+
+5.0
+
+5.2
+
+5.4
+
+4.8
+
+5.0
+
+5.2
+
+5.4
+
+5.6
+
+5.8
+
+6.0
+
+6.2
+
+6.4
+
+5.6
+
+5.8
+
+6.0
+
+6.2
+
+6.4
+
+Lyα+Lyβ+Lyγ Lyβ+Lyγ
+
+Lyγ pixels
+
+Lyβ pixels
+
+Lyα+Lyβ
+
+Lyα pixels
+
+4.8
+
+Redshift
+
+Redshift
+
+Figure 4. Distribution of detected (S/N > 2, blue) and undetected (S/N < 2, red) binned pixels in the 35 E-XQR-30 quasar sightlines used in this work. White
+binned pixels within the low and high redshift boundaries of each quasar sightline have more than 50% of their spectral pixels masked. The regions with faded
+color at the high redshift end of each sightline show pixels within the quasar proximity zone exclusion. Left: Binned pixels in the Ly𝛼 (top), Ly𝛽 (middle), and
+Ly𝛾 forests. Right: Forest combinations Ly𝛼+Ly𝛽 (top), Ly𝛽+Ly𝛾 (middle), and Ly𝛼+Ly𝛽+Ly𝛾 (bottom), where blue pixels are detected in any or all forests
+while red pixels are undetected in all forests.
+
+Threshold method
+Dark pixel fraction
+
+1.0
+
+Lyα
+
+Lyβ
+
+Lyγ
+
+Lyα+Lyβ
+
+Lyβ+Lyγ
+
+Lyα+Lyβ+Lyγ
+
+0.5
+0.0
+1.0
+0.5
+0.0
+5.0
+
+5.5
+
+6.0
+
+5.0
+
+5.5
+
+6.0
+
+5.0
+
+5.5
+
+6.0
+
+Redshift
+Figure 5. Measurements of the dark pixel fraction in each Lyman-series forest and forest combination inferred from the threshold method applied to the
+E-XQR-30 data set. Uncertainties (thick: 1𝜎, thin: 2𝜎) are derived from bootstrap resampling of the quasar sightlines contributing to each bin, or from the
+confidence interval of the binomial fraction, whichever is larger. For the forest combinations (lower panels), we show the dark pixel fractions of the individual
+contributing forests in a light color with slight redshift offsets for clarity.
+
+bin centered at 𝑧 = 4.85. We then average together spectral pixels
+corresponding to Lyman-series forest redshifts within these 3.3 Mpc
+bins with no weighting. The flux error on each binned pixel is then
+propagated appropriately to compute 𝜎bin . We remove any binned
+pixel which has more than 50% of its spectral pixels masked to avoid
+mixing together too broad of a range of scales.
+
+To prune lower-quality binned pixels from the data set, we choose
+to keep pixels with limiting effective optical depth 𝜏eff,lim ≥ 4.0.
+While this is slightly less strict than the 𝜏eff,lim ≥ 4.5 criterion in
+McGreer et al. (2015) and Jin et al. (2023), we find that there is little
+qualitative difference in our results, unlike the more heterogeneous
+data sets in those works. Due to the uniformly high S/N of the
+E-XQR-30 data set, the vast majority of binned pixels satisfy this
+criterion. The only notable exception is the wavelength range of
+telluric O2 A-band absorption at observed wavelength 𝜆obs ∼ 7600 Å,
+visible as the vertical blue stripe at Ly𝛼 redshift of 𝑧Ly𝛼 ∼ 5.25 in
+Figure 3.
+MNRAS 000, 1–18 (2025)
+
+3.2 Dark fraction from the threshold method
+Two methods were proposed by Mesinger (2010) to measure the
+dark fraction of binned Lyman-series forest pixels: the “threshold”
+method, and the “negative pixel” method. The threshold method is
+the most straightforward and conservative method, whereby binned
+pixels with S/N below some threshold are considered dark. We follow
+McGreer et al. (2011) and identify dark pixels with a S/N < 2
+threshold. In the left panel of Figure 4, we show the full distribution of
+detected (S/N > 2, blue) and undetected (S/N < 2, red) pixels along
+our quasar sightlines, where the individual quasars have been sorted
+from highest redshift (top) to lowest redshift (bottom). Pixels within
+the excluded quasar proximity zones are shown in faded colors. In the
+right panel of Figure 4 we show corresponding distributions for the
+combined forests (Ly𝛼+Ly𝛽, Ly𝛽+Ly𝛾, Ly𝛼+Ly𝛽+Ly𝛾), requiring
+undetected pixels to be undetected in all considered transitions.
+For our threshold S/N < 2, we expect that a small fraction
+(≃ 2.3%) of truly dark regions will have measured flux values
+that scatter above the threshold assuming Gaussian noise statistics.
+Thus we slightly adjust the resulting fraction of undetected pixels,
+
+Dark pixel fraction from XQR-30
+
+7
+
+neg
+
+Line
+
+𝑧 range
+
+𝑧¯
+
+𝑁LOS
+
+𝑁pix
+
+𝑁un−det
+
+thresh + 1𝜎 (+2𝜎)
+𝑓dark
+
+𝑁neg
+
+𝑓dark + 1𝜎 (+2𝜎)
+
+Ly𝛼
+
+4.75–4.95
+4.95–5.15
+5.15–5.35
+5.35–5.55
+5.55–5.75
+5.75–5.95
+5.95–6.15
+6.15–6.35
+
+4.875
+5.056
+5.252
+5.448
+5.641
+5.831
+6.037
+6.225
+
+19
+27
+33
+34
+34
+26
+10
+3
+
+302
+788
+832
+966
+818
+447
+175
+46
+
+28
+73
+139
+289
+343
+289
+125
+35
+
+0.095 + 0.023(+0.052)
+0.095 + 0.018(+0.038)
+0.171 + 0.023(+0.048)
+0.306 + 0.031(+0.064)
+0.429 + 0.037(+0.079)
+0.661 + 0.045(+0.088)
+0.731 + 0.037(+0.074)
+0.778 + 0.089(+0.202)
+
+9
+25
+49
+115
+166
+127
+53
+15
+
+0.060 + 0.023(+0.053)
+0.063 + 0.017(+0.036)
+0.118 + 0.022(+0.048)
+0.238 + 0.026(+0.053)
+0.406 + 0.051(+0.103)
+0.568 + 0.071(+0.145)
+0.606 + 0.072(+0.146)
+0.652 + 0.144(+0.294)
+
+Ly𝛽
+
+4.95–5.15
+5.15–5.35
+5.35–5.55
+5.55–5.75
+5.75–5.95
+5.95–6.15
+6.15–6.35
+
+5.112
+5.271
+5.450
+5.642
+5.832
+6.038
+6.225
+
+7
+22
+30
+33
+26
+10
+3
+
+73
+413
+736
+760
+450
+179
+46
+
+26
+209
+351
+344
+209
+101
+29
+
+0.364 + 0.131(+0.275)
+0.518 + 0.057(+0.116)
+0.488 + 0.050(+0.095)
+0.463 + 0.048(+0.097)
+0.475 + 0.054(+0.104)
+0.577 + 0.078(+0.161)
+0.645 + 0.135(+0.250)
+
+10
+73
+128
+119
+85
+37
+14
+
+0.274 + 0.097(+0.201)
+0.354 + 0.064(+0.136)
+0.348 + 0.045(+0.089)
+0.313 + 0.051(+0.104)
+0.378 + 0.065(+0.130)
+0.413 + 0.064(+0.133)
+0.609 + 0.143(+0.293)
+
+Ly𝛾
+
+5.35–5.55
+5.55–5.75
+5.75–5.95
+5.95–6.15
+6.15–6.35
+
+5.480
+5.654
+5.832
+6.043
+6.225
+
+8
+24
+23
+10
+3
+
+137
+382
+295
+145
+45
+
+56
+222
+189
+113
+38
+
+0.418 + 0.115(+0.242)
+0.594 + 0.053(+0.106)
+0.655 + 0.041(+0.080)
+0.797 + 0.056(+0.110)
+0.864 + 0.055(+0.116)
+
+18
+80
+70
+49
+20
+
+0.263 + 0.073(+0.169)
+0.419 + 0.064(+0.127)
+0.475 + 0.080(+0.158)
+0.676 + 0.118(+0.249)
+0.889 + 0.149(+0.311)
+
+Ly𝛼+Ly𝛽
+
+4.95–5.15
+5.15–5.35
+5.35–5.55
+5.55–5.75
+5.75–5.95
+5.95–6.15
+6.15–6.35
+
+5.112
+5.272
+5.450
+5.643
+5.832
+6.038
+6.225
+
+7
+22
+30
+33
+26
+10
+3
+
+73
+361
+735
+754
+441
+173
+46
+
+7
+44
+144
+203
+161
+81
+26
+
+0.100 + 0.054(+0.129)
+0.127 + 0.022(+0.045)
+0.205 + 0.035(+0.076)
+0.282 + 0.033(+0.066)
+0.382 + 0.045(+0.090)
+0.490 + 0.074(+0.155)
+0.591 + 0.189(+0.324)
+
+1
+5
+23
+39
+35
+17
+7
+
+0.055 + 0.086(+0.247)
+0.055 + 0.031(+0.075)
+0.125 + 0.030(+0.062)
+0.207 + 0.048(+0.104)
+0.317 + 0.057(+0.119)
+0.393 + 0.100(+0.219)
+0.609 + 0.241(+0.533)
+
+Ly𝛽+Ly𝛾
+
+5.35–5.55
+5.55–5.75
+5.75–5.95
+5.95–6.15
+6.15–6.35
+
+5.481
+5.654
+5.831
+6.043
+6.225
+
+8
+24
+23
+10
+3
+
+132
+380
+293
+141
+45
+
+20
+88
+86
+60
+26
+
+0.158 + 0.076(+0.167)
+0.242 + 0.046(+0.097)
+0.307 + 0.039(+0.079)
+0.445 + 0.082(+0.179)
+0.604 + 0.153(+0.267)
+
+1
+9
+14
+7
+7
+
+0.030 + 0.048(+0.141)
+0.095 + 0.037(+0.085)
+0.191 + 0.056(+0.126)
+0.199 + 0.087(+0.202)
+0.622 + 0.246(+0.542)
+
+Ly𝛼+Ly𝛽+Ly𝛾
+
+5.35–5.55
+5.55–5.75
+5.75–5.95
+5.95–6.15
+6.15–6.35
+
+5.481
+5.655
+5.831
+6.043
+6.225
+
+8
+24
+23
+10
+3
+
+131
+377
+288
+135
+45
+
+16
+78
+79
+50
+24
+
+0.131 + 0.056(+0.117)
+0.221 + 0.047(+0.095)
+0.293 + 0.039(+0.081)
+0.396 + 0.093(+0.205)
+0.571 + 0.186(+0.321)
+
+0
+5
+11
+4
+3
+
+0.000 + 0.061(+0.237)
+0.106 + 0.058(+0.143)
+0.306 + 0.104(+0.237)
+0.237 + 0.147(+0.363)
+0.533 + 0.379(+0.920)
+
+Table 2. Dark pixel statistics from the Ly𝛼, Ly𝛽, and Ly𝛾 forests of the E-XQR-30 sample. The columns from left to right show the forest transition(s), 𝑧 range,
+the average 𝑧 of the pixels falling within the range 𝑧¯ , the number of quasar lines of sight (𝑁LOS ) and spectral pixels (𝑁pix ) covering this range, the number of
+thresh with +1𝜎 and +2𝜎 uncertainties, the number of negative
+undetected (S/N < 2) pixels 𝑁un−det , the resulting dark fraction from the threshold method 𝑓dark
+neg
+pixels 𝑁neg , and the resulting dark fraction from the negative pixel method 𝑓dark with +1𝜎 and +2𝜎 uncertainties. Uncertainty ranges for 𝑓dark can go above
+unity due to the re-scaling factors applied to convert the corresponding fractions of un-detected or negative pixels. The fiducial constraints for each method,
+corresponding to the lowest 2𝜎 upper limit, are shown in boldface.
+
+𝑁un−det /𝑁pix , by a factor of 1.023 to estimate the true dark fraction.
+Multiple Lyman-series forests are combined by requiring S/N < 2
+for all transitions in the same pixel, with the corresponding correction
+factors increased proportional to the number of considered forests. In
+Figure 5, we show the dark fraction evolution for every Lyman-series
+forest and combination considered here (see also Table 2).
+
+3.3 Dark fraction from the negative pixel method
+The second method used to measure the dark fraction is the “negative pixel” method, which is in principle more sensitive to truly dark
+pixels. The negative pixel method assumes that the distribution of
+truly dark pixels is symmetric about zero, such that twice the number of negative pixels can be used as an estimate of the number of
+truly dark pixels. While the dark fraction derived from this method is
+
+less contaminated by pixels with low levels of transmitted flux, and
+thus should in general be lower, it relies on extremely accurate sky
+subtraction to avoid strongly biasing the dark fraction. For combinations of forests, truly dark pixels are selected to be negative in all
+forests simultaneously, requiring additional factors of two for each
+considered forest (e.g. 1 Ly𝛼+Ly𝛽 negative pixel = 4 dark pixels).
+In the left panel of Figure 6 we show the distribution of positive
+(blue) and negative (red) pixels in our quasar spectra, similar to
+Figure 4. The fraction of negative pixels increases with redshift as
+the transmitted flux of the forest drops, and more of the spectrum
+shows no visible transmission. In the right panel of Figure 6 we show
+the combined forest distributions, again similar to Figure 4 but now
+requiring the pixels to be negative in all considered transitions. In
+Figure 7, we show the resulting binned dark pixel fractions for every
+forest combination, similar to Figure 5.
+MNRAS 000, 1–18 (2025)
+
+8
+
+F. B. Davies et al.
+Positive vs. negative pixels
+5.0
+
+5.2
+
+5.4
+
+4.8
+
+5.0
+
+5.2
+
+5.4
+
+Forest combinations (all-negative pixels)
+
+5.6
+
+5.8
+
+6.0
+
+6.2
+
+6.4
+
+5.6
+
+5.8
+
+6.0
+
+6.2
+
+6.4
+
+4.8
+
+5.0
+
+5.2
+
+5.4
+
+4.8
+
+5.0
+
+5.2
+
+5.4
+
+5.6
+
+5.8
+
+6.0
+
+6.2
+
+6.4
+
+5.6
+
+5.8
+
+6.0
+
+6.2
+
+6.4
+
+Lyγ pixels
+
+Lyα+Lyβ+Lyγ Lyβ+Lyγ
+
+Lyβ pixels
+
+Lyα+Lyβ
+
+Lyα pixels
+
+4.8
+
+Redshift
+
+Redshift
+
+Figure 6. Similar to Figure 4 but for the negative pixel method, with positive pixels in blue and negative pixels in red.
+
+Negative pixel method
+Dark pixel fraction
+
+1.0
+
+Lyα
+
+Lyβ
+
+Lyγ
+
+Lyα+Lyβ
+
+Lyβ+Lyγ
+
+Lyα+Lyβ+Lyγ
+
+0.5
+0.0
+1.0
+0.5
+0.0
+5.0
+
+5.5
+
+6.0
+
+5.0
+
+5.5
+
+6.0
+
+5.0
+
+5.5
+
+6.0
+
+Redshift
+Figure 7. Dark pixel fraction measurements for all forest combinations similar to Figure 5, but for the negative pixel method.
+
+Threshold method
+Literature 1σ limits
+McGreer et al. (2015)
+Jin et al. (2023)
+
+Neutral fraction
+
+0.8
+
+Negative pixel method
+1.0
+
+E-XQR-30 1+2σ limits
+Lyα
+Lyα+Lyβ
+Lyβ+Lyγ
+Lyα+Lyβ+Lyγ
+
+Literature 1σ limits
+McGreer et al. (2015)
+Jin et al. (2023)
+
+0.8
+
+Neutral fraction
+
+1.0
+
+0.6
+0.4
+0.2
+
+E-XQR-30 1+2σ limits
+Lyα
+Lyβ
+Lyα+Lyβ
+Lyβ+Lyγ
+
+0.6
+0.4
+0.2
+
+0.0
+
+0.0
+4.75
+
+5.00
+
+5.25
+
+5.50
+
+5.75
+
+6.00
+
+6.25
+
+6.50
+
+6.75
+
+Redshift
+
+4.75
+
+5.00
+
+5.25
+
+5.50
+
+5.75
+
+6.00
+
+6.25
+
+6.50
+
+6.75
+
+Redshift
+
+Figure 8. Upper limits (1𝜎, thick; 2𝜎, thin) on the IGM neutral fraction ⟨ 𝑥HI ⟩ from the dark pixel fractions estimated using the threshold method (left) and
+negative pixel method (right). In each redshift bin we show the fiducial forest/combination that has the lowest 2𝜎 upper limit (see text). We compare our
+constraints to the dark pixel fraction measurements (1𝜎 upper limits) from McGreer et al. (2015) (green points) and Jin et al. (2023) (orange points), which
+were estimated using the negative pixel method and threshold method, respectively.
+
+3.4 Upper limits on the IGM neutral fraction
+As described in Section 1, the dark pixel fractions from the threshold
+and negative pixel methods represent an upper limit to ⟨𝑥HI ⟩. It is thus
+important that we carefully quantify the uncertainty. Past works have
+evaluated the uncertainty using the jackknife method applied at the
+MNRAS 000, 1–18 (2025)
+
+quasar sightline level (McGreer et al. 2011, 2015; Jin et al. 2023).
+Due to our increased sample size, we instead opt for a bootstrap
+over quasar sightlines, and record both the 1𝜎 and 2𝜎 uncertainties
+from the percentiles of the bootstrap draws. We find that, in general,
+our bootstrap uncertainties are larger than those determined from
+jackknife, making our choice a conservative one.
+
+9
+
+Dark pixel fraction from XQR-30
+However, we note that at some level the measurement of the
+dark fraction represents a binomial process, i.e. we are constraining some fraction of “successes” from a discrete number of draws.
+What separates our problem from being strictly binomial is that
+there are strong correlations along individual lines of sight (e.g.
+Gunn-Peterson troughs, Becker et al. 2015; Zhu et al. 2021, 2022).
+Nevertheless, these correlations should only serve to increase the
+uncertainty in the dark fraction by reducing the effective number of
+independent draws. Thus an estimate of the uncertainty of the corresponding binomial process using the number of total draws 𝑛tot
+and the number of “successes” (dark pixels) 𝑛dark should represent
+a lower limit on the uncertainty of the dark fraction. In practice, we
+apply Wilson’s score interval (Wilson 1927) with 𝑧 𝛼 = 1 and 2 to
+recover the 1𝜎 and 2𝜎 upper bounds, respectively. In the negative
+pixel method, because what is actually measured is the fraction of
+negative pixels, we reduce the number of successes accordingly (i.e.
+to 𝑛neg ) and recover the dark fraction uncertainty by multiplying the
+negative fraction by its corresponding conversion factor. Because
+the binomial uncertainty is a lower limit to the uncertainty in the
+occurrence rate of dark pixels, when the uncertainty estimated by
+bootstrap is smaller than the corresponding binomial uncertainty, we
+replace it with the binomial uncertainty. This replacement almost
+never occurs in the threshold method, but almost always occurs for
+the negative pixel method forest combinations where the effective
+number of pixels is smaller by a factor of four or larger. For example,
+the binomial uncertainties of the negative pixel method dark fraction of the Ly𝛽+Ly𝛾 forest are larger by a factor of ∼ 1.5 than the
+bootstrap estimate.
+
+For each dark fraction measurement method we have upper limits
+to ⟨𝑥HI ⟩ for as many as six different Lyman-series forests and combinations thereof, see Table 2. We select the most constraining forest
+or combination for each method in each redshift bin by choosing the
+lowest 2𝜎 upper limit, which is more sensitive to the uncertain tail
+from small-number statistics than the 1𝜎 upper limit. In Figure 8, we
+show our fiducial ⟨𝑥HI ⟩ constraints from the threshold method (left)
+and the negative pixel method (right) compared to previous measurements by McGreer et al. (2015) and Jin et al. (2023). While the
+threshold method tends to benefit from combining as many forests as
+possible, the negative pixel method increasingly suffers from smallnumber statistics, particularly when all three forests are combined.
+In the threshold method, the most constraining measurements at the
+most interesting redshifts 𝑧 ∼ 5.5–6.0 come from the full combination of the Ly𝛼+Ly𝛽+Ly𝛾 forests, while in the negative pixel method,
+the Ly𝛽+Ly𝛾 forest combination is the most sensitive. The higher order Lyman series lines are generally more transparent at fixed neutral
+fraction (e.g. Oh & Furlanetto 2005), permitting weak transmission
+spikes that tilt the statistics of some Ly𝛼-dark ionized regions towards
+positive flux values. As expected, similar to McGreer et al. (2015),
+we find that the negative pixel method is the most constraining –
+we will consider its corresponding ⟨𝑥HI ⟩ constraints as the fiducial
+measurements of this work.
+
+4 MODEL-DEPENDENT IGM NEUTRAL FRACTION
+CONSTRAINTS
+The model-independent methods described in the previous section
+make the very conservative assumption that any dark regions of the
+spectrum could be neutral IGM, but a substantial fraction of the ionized IGM will be dark at current spectroscopic sensitivities. The key
+question is exactly what fraction of dark pixels are neutral and truly
+dark vs. ionized and lying below detection limits. One could perform
+a fully Bayesian analysis by forward-modeling quasar spectra using
+3D ionization and thermal histories computed from large-volume
+radiation-hydrodynamical simulations of the IGM and comparing
+them to the observations via a set of summary statistics. Due to the
+wide dynamic range required to accurately simulate the reionization
+process while simultaneously resolving the Ly𝛼 forest, this has so
+far only been done for large-scale-averaged Ly𝛼 forest opacity with
+approximate, semi-numerical approaches (Qin et al. 2021, 2025). In
+this section, we describe a parametric, model-dependent method to
+constrain the dark pixel fraction in the Lyman-series forests.
+It is well established that the cosmological density distribution
+is approximately lognormal on large scales (Coles & Jones 1991).
+The Ly𝛼 (and Lyman-series) optical depth is proportional to density to some power via the fluctuating Gunn-Peterson approximation
+(FGPA; Weinberg et al. 1997), thus it is reasonable to expect that the
+Ly𝛼 optical depth is also (at least roughly) lognormally distributed.
+To a good approximation this is indeed the case in the observed highresolution Ly𝛼 forest at all redshifts (Becker et al. 2007), as well as
+on larger binning scales in hydrodynamical simulations of the IGM
+at 𝑧 ∼ 6 (cf. the appendix of Davies et al. 2020, see also Maity et al.
+2025). More generally, Becker et al. (2007) argue that a lognormal
+optical depth distribution could arise due to random sampling of
+the multiplicative terms in the FGPA (i.e. the gas temperature and
+hydrogen ionization rate).
+We can then construct a simple model for the distribution of forest
+flux by considering the spectrum as a random mixture of “dark”
+pixels, whose transmitted flux is drawn from a Gaussian centered at
+zero, and “transparent” pixels, whose transmitted flux is drawn from
+the convolution of a lognormal optical depth distribution with the
+noise in each pixel. That is, we can write the probability distribution
+function (PDF) for the flux 𝐹𝑖 in a given pixel 𝑖 as
+𝑃(𝐹𝑖 |𝜎𝑖 , 𝑓dark ) = 𝑓dark 𝑃(𝐹𝑖 |𝜎𝑖 , dark) + (1 − 𝑓dark ) 𝑃(𝐹𝑖 |𝜎𝑖 ,∼ dark),
+(1)
+where 𝜎𝑖 is the noise in pixel 𝑖, 𝑓dark is the fraction of truly dark pixels,
+𝑃(𝐹𝑖 |𝜎𝑖 , dark) is the flux PDF of dark pixels, and 𝑃(𝐹𝑖 |𝜎𝑖 ,∼ dark) is
+the flux PDF of transparent (not-dark) pixels. The flux PDF of dark
+pixels is simply a normal distribution N centered on zero with width
+𝜎𝑖 ,
+𝑃(𝐹 |𝜎𝑖 , dark) = N (𝐹 |0, 𝜎𝑖 ),
+
+(2)
+
+while the transparent flux PDF is the convolution of the noise with
+the intrinsic flux PDF 𝑃(𝐹 | ∼ dark),
+𝑃(𝐹𝑖 |𝜎𝑖 , ∼ dark) = (𝑃(𝐹 | ∼ dark) ∗ N (𝐹 |0, 𝜎𝑖 ))(𝐹𝑖 ),
+
+Our fiducial ⟨𝑥HI ⟩ constraints from the negative pixel method are
+⟨𝑥HI ⟩ ≤ {0.030+ 0.048, 0.095+0.037, 0.191+0.056, 0.199+0.087}
+at 𝑧¯ = {5.481, 5.654, 5.831, 6.043} from the Ly𝛽+Ly𝛾 forest combination. In our highest redshift bin, which is only covered by three
+quasar sightlines, we measure ⟨𝑥HI ⟩ ≤ 0.609 + 0.147 at 𝑧¯ = 6.225 –
+however, with such poor sightline sampling, we consider this upper
+limit tentative.
+
+(3)
+
+where we assume that 𝑃(𝐹 | ∼ dark) follows a lognormal distribution
+in (effective) optical depth. This lognormal optical depth distribution
+maps to flux space as (e.g. Becker et al. 2007)
+𝑃(𝐹 | ∼ dark) =
+(ln (− ln 𝐹) − ⟨ln 𝜏⟩) 2
+√ exp −0.5
+𝜎ln2 𝜏
+(− ln 𝐹)𝐹𝜎ln 𝜏 2𝜋
+1
+
+!
+
+MNRAS 000, 1–18 (2025)
+
+10
+
+F. B. Davies et al.
+
++0.02
+σln τ = 0.41−0.02
+45
+0.
+5
+42
+0.
+5
+
+0.
+
+40
+0
+
+σln τ
+
+100
+
+0
+
+Lyα forest pixels, z = 5.55 − 5.75
+
+0.
+
+37
+
++0.02
+fdark = 0.32−0.02
+
+0.
+32
+0.
+0.
+
+28
+
+fdark
+
+36
+
+0.
+
+40
+
+10
+
+1
+
+32
+
+36
+0.
+
+40
+
+28
+
+0.
+
+σln τ
+
+hln τ i
+
+0.
+
+24
+
+45
+0
+0.
+
+0.
+
+42
+5
+0.
+
+0.
+
+40
+0
+0.
+
+32
+
+37
+5
+
+28
+
+1.
+
+FLyα
+
+0.
+
+24
+
+0.25
+
+1.
+
+0.20
+
+20
+
+0.15
+
+1.
+
+0.10
+
+1.
+
+0.05
+
+16
+
+0.00
+
+1.
+
+0.
+
+24
+
+Number of pixels per bin
+
++0.02
+hln τ i = 1.23−0.02
+
+fdark
+
+Figure 9. Lognormal mixture fit to the transmitted flux PDF of the Ly𝛼 forest at 𝑧 = 5.55–5.75. Left: The flux PDF data are shown in black, along with 50
+red curves corresponding to posterior draws of the fit parameters. The purple and yellow curves correspond to the “dark” and “transparent” components of the
+model draws, respectively. Right: Posterior PDF of the lognormal model parameters ⟨ln 𝜏 ⟩, 𝜎ln 𝜏 as well as the dark fraction 𝑓dark .
+
++0.02
+σln τ = 0.36−0.02
+0.
+39
+0.
+0.
+
+33
+
+0.
+
+36
+
+σln τ
+
+100
+
+42
+
+Lyβ forest pixels, z = 5.75 − 5.95
+
+32
+0.
+0.
+
+24
+
+fdark
+
+0.
+
+40
+
+10
+
++0.04
+fdark = 0.29−0.04
+
+16
+
+1
+
+40
+
+45
+
+50
+
+33
+
+36
+
+39
+
+42
+
+16
+
+24
+
+32
+
+40
+
+1.
+
+1.
+
+0.
+
+0.
+
+0.
+
+0.
+
+0.
+
+0.
+
+0.
+
+0.
+
+0.20
+
+1.
+
+0.15
+
+35
+
+0.10
+
+FLyβ
+
+1.
+
+0.05
+
+30
+
+0.00
+
+1.
+
+0.
+
+Number of pixels per bin
+
++0.03
+hln τ i = 1.39−0.03
+
+hln τ i
+
+σln τ
+
+fdark
+
+Figure 10. Lognormal mixture fit to the transmitted flux PDF of the Ly𝛽 forest at 𝑧 = 5.75–5.95, similar to Figure 9.
+
+(4)
+where ⟨ln 𝜏⟩ and 𝜎ln 𝜏 are the mean and width of the lognormally
+distributed optical depth. This mixture model can also be used to
+estimate the probability that any given pixel is drawn from the dark
+or transparent distributions,
+𝑃(dark|𝐹𝑖 ) =
+
+𝑓dark 𝑃(𝐹𝑖 |dark)
+.
+𝑓dark 𝑃(𝐹𝑖 |dark) + (1 − 𝑓dark )𝑃(𝐹𝑖 | ∼ dark)
+
+(5)
+
+This method can be considered similar to the threshold method, but
+with the addition of a model-based prediction for the number of
+pixels with S/N < 2 that are drawn from the same distribution as
+MNRAS 000, 1–18 (2025)
+
+the transparent pixels with S/N > 2. Thus we expect tighter upper
+limits as compared to the threshold method, which treats all pixels
+with S/N < 2 as dark.
+Note that we use the 𝜎𝑖 corresponding to each data pixel without
+accounting for correlations with the flux 𝐹𝑖 , i.e. we assume that
+the noise is generally sky background-limited. Highly-transmissive
+regions in the brightest quasar in our sample violate this assumption,
+but the crucial region of the PDF for discriminating between dark and
+transparent pixels is close to 𝐹 = 0, where the background-limited
+assumption should hold. One possible limitation is that the width of
+the dark PDF will be overestimated due to “excess” Poisson noise
+
+Dark pixel fraction from XQR-30
+
+11
+
+Lognormal mixture method
+Dark pixel fraction
+
+1.0
+
+Lyα
+
+Lyβ
+
+Lyγ
+
+0.5
+0.0
+1.0
+
+Lyα+Lyβ
+
+Lyβ+Lyγ
+
+Lyα+Lyβ+Lyγ
+
+0.5
+0.0
+5.0
+
+5.5
+
+6.0
+
+5.0
+
+5.5
+
+6.0
+
+5.0
+
+5.5
+
+6.0
+
+Redshift
+Figure 11. Upper limits on ⟨ 𝑥HI ⟩ from all forest combinations similar to Figure 5 but for the model-dependent lognormal mixture method.
+
+Lognormal mixture method
+1.0
+
+Neutral fraction
+
+present in the distribution of 𝜎𝑖 within flux spikes, however, we do
+not see evidence for overestimation of the width of the dark part of
+the flux PDF when comparing to the actual data.
+We have also neglected to include any consideration of the uncertainty in the quasar continuum. For the simple power-law model of
+the continuum we have adopted, the relative error in the continuum
+is likely to be ≃ 15% along with a similar degree of bias (Bosman
+et al. 2021). The effect of continuum error is multiplicative, similar to the physical processes underlying the lognormal optical depth
+distribution model, so it is likely that the bias and scatter of the true
+continuum relative to estimates will be absorbed into the ⟨ln 𝜏⟩ and
+𝜎ln 𝜏 parameters, respectively.
+In the following, we will also apply this model to the Ly𝛽 and
+Ly𝛾 forests, but note that this may violate the above justifications
+of lognormality, as the Lyman-series forests are more generally described by a sum of optical depths including all lower series lines. In
+practice, however, we find that the distribution of transparent fluxes
+is nevertheless well-described by our simple model.
+Before proceeding, we note an important caveat to this approach.
+While the Ly𝛼 forest of a uniformly-ionized IGM may be welldescribed by a lognormal optical depth distribution, there may be
+a complicated (i.e. non-lognormal) distribution of UV background
+intensities on large scales (Mesinger & Furlanetto 2009; Davies &
+Furlanetto 2016). If there is a tail to low UV background intensity,
+e.g. due to shadowing effects by neutral islands (Kulkarni et al. 2019;
+Nasir & D’Aloisio 2020; Choudhury et al. 2021), these regions will
+be degenerate with the truly dark pixels of the neutral IGM. Thus we
+consider the dark fraction obtained with this method to still represent
+an upper limit to ⟨𝑥HI ⟩.
+We now have a three-parameter model that can be fit to each redshift bin of the Ly𝛼, Ly𝛽, and Ly𝛾 forests. In Figure 9 and Figure 10
+we show examples of this fitting procedure applied to the Ly𝛼 forest
+at 𝑧 = 5.55–5.75 and the Ly𝛽 forest at 𝑧 = 5.75–5.95, respectively,
+along with corner plots showing parameter uncertainties derived via
+Markov-chain Monte Carlo (MCMC) sampling. The uncertainty on
+the dark fraction derived from the MCMC posterior is underestimated as our model does not account for line-of-sight correlations
+due to cosmic variance; more precisely, the expression given in equation (5) does not include information from neighboring pixels, while
+real neutral regions can be contiguous over scales larger than one
+3.3 Mpc pixel (e.g. Becker et al. 2015). To approximately account for
+this additional uncertainty, we bootstrap on quasar sightlines as in
+Section 3.4 and re-measure 𝑓dark by computing the average 𝑃(dark)
+inferred by applying equation (5) to each bootstrap sample, while
+simultaneously drawing model parameters from the MCMC samples
+
+Literature 1σ limits
+McGreer et al. (2015)
+
+E-XQR-30 1+2σ limits
+
+Lyα
+Lyα+Lyβ+Lyγ
+
+Jin et al. (2023)
+
+0.8
+0.6
+0.4
+0.2
+0.0
+4.75
+
+5.00
+
+5.25
+
+5.50
+
+5.75
+
+6.00
+
+6.25
+
+6.50
+
+6.75
+
+Redshift
+Figure 12. Similar to Figure 8 but now for the upper limits on ⟨ 𝑥HI ⟩ from the
+model-dependent lognormal mixture method.
+
+derived from the true data set. The resulting bootstrap uncertainties
+are typically a factor of a few larger than those derived directly from
+the posterior PDF (e.g. the right panels of Figure 9 and Figure 10).
+Deriving quantitative ⟨𝑥HI ⟩ constraints from forest combinations in
+this framework is exceedingly complicated – in principle, one would
+need to carefully model the expected flux correlations between each
+forest including dilution by foregrounds. We instead opt for a simple
+approach motivated by the threshold method. We measure 𝑓dark from
+the average of 𝑃(dark) similar to the above for a fiducial transition,
+but for each pixel 𝑖, if the 𝑃(dark|𝐹𝑖 ) is smaller than some threshold
+for any of the considered forests, we set 𝑃(dark) to that small value.
+Uncertainties are again computed via bootstrap as described above.
+We choose a probability threshold of 1%, but find that our results are
+insensitive to this exact choice.
+In Figure 11, we show the corresponding dark fractions for each
+forest and combination thereof. Comparison to Figure 5 and Figure 7
+suggests that the inferred dark fractions behave similarly with redshift. Choosing the best constraints via the 2𝜎 upper limits as before,
+in Figure 12 we show our most constraining model-dependent upper
+limits on ⟨𝑥 HI ⟩. From the optimal combination of the Ly𝛼+Ly𝛽+Ly𝛾
+forests, we find ⟨𝑥HI ⟩ ≤ {0.151+0.039, 0.222+0.044, 0.295+0.061}
+at 𝑧¯ = {5.654, 5.832, 6.041}. Compared to the model-independent
+approaches in the previous section, these limits fall below the threshold method, as expected, but they are still higher than the negative
+pixel method. This trend is likely due to the different assumptions
+each method makes regarding the pixel statistics – the threshold
+method assumes that dark pixels are undetected, the lognormal mixture method assumes that dark pixels are Gaussian-distributed about
+MNRAS 000, 1–18 (2025)
+
+12
+
+F. B. Davies et al.
+
+1.0
+
+Threshold method
+Lognormal mixture method
+Negative pixel method
+
+Neutral fraction
+
+0.8
+
+0.6
+
+0.4
+
+0.2
+
+0.0
+4.8
+
+5.0
+
+5.2
+
+5.4
+
+5.6
+
+5.8
+
+6.0
+
+6.2
+
+Redshift
+Figure 13. Comparison between our fiducial ⟨ 𝑥HI ⟩ upper limits from the
+threshold method (blue), the negative pixel method (black), and the lognormal
+mixture method (orange). The central redshifts have been offset slightly for
+clarity.
+
+zero, and the negative pixel method assumes that dark pixels are
+symmetrically distributed about zero.
+Finally, we note that this method should be considered a proof of
+concept – we will treat the model-independent measurements from
+the previous section as our fiducial ⟨𝑥HI ⟩ upper limits. In future work
+we will explore alternative model-dependent methods built from
+physical models of IGM transmission, rather than the toy parametric
+approach considered here.
+
+5 DISCUSSION & CONCLUSION
+We have used the exquisite X-Shooter spectra from E-XQR-30 to update the constraints on the dark pixel fraction of the IGM at 𝑧 ∼ 5–6.
+We carefully clean the spectra of high-variance pixels, and remove
+spectra which show signs of inaccurate sky subtraction or very strong
+BAL absorption. We push the constraints further down the Lyman
+series, and measure dark pixel fractions from the Ly𝛼, Ly𝛽, and
+Ly𝛾 forests. By extending the Ly𝛽 and Ly𝛾 forests to wavelengths
+shortward of their nominal end, we dramatically increase their corresponding path length. Similar to McGreer et al. (2011, 2015) and Jin
+et al. (2023), we place model-independent upper limits on ⟨𝑥 HI ⟩ at
+𝑧 ≤ 6 using the threshold and negative pixel methods but with greatly
+improved statistics. Our data are generally more sensitive both due
+to the high signal-to-noise ratio of the spectra and the introduction of
+the Ly𝛾 forest. We also explored constraining the dark fraction using
+a simple parametric model-dependent method that treats the Lymanseries forests as a mixture of dark and transparent regions, finding
+similar results to the model-independent methods. In Figure 13, we
+compare the limits estimated from all three methods, with fiducial
+constraints compiled in Table 3.
+Even with the extended coverage down to rest-frame 𝜆 = 915 Å, the
+path length available for higher order Lyman-series lines is extremely
+limited due to our broad proximity zone exclusion. In fact, only the
+next higher order line, Ly𝛿, has substantially non-zero path length,
+but the number of available pixels is smaller than Ly𝛾 by more than
+a factor of three (see Figure 1). We also investigated the potential
+for Ly𝛿 to improve the constraining power of the dark pixel fraction
+measurements; while the measured dark fractions are competitive,
+MNRAS 000, 1–18 (2025)
+
+the overall lack of pixels limits its statistical power (see Appendix C
+for details).
+Despite our substantially larger and more sensitive data set, our
+dark fraction at 𝑧 ∼ 5.8 ( 𝑓dark = 0.19) is nevertheless much higher
+than the one at 𝑧 ∼ 5.9 ( 𝑓dark = 0.06) reported by McGreer et al.
+(2015). In fact, if we consider the Ly𝛼+Ly𝛽 forest in the same redshift range 𝑧 = 5.77–5.97, we recover an even higher dark fraction of
+𝑓dark ≃ 0.36. There are a few possible sources for this discrepancy.
+One could be a limitation of the relatively small number of quasar
+sightlines in the McGreer et al. (2015) sample (6 vs. our 26), as there
+is considerable cosmic variance between different lines of sight of
+the Ly𝛼 forest (e.g. Bosman et al. 2022). It is also possible that the
+Δ𝑧 = 0.1 proximity zone exclusion in McGreer et al. (2015) was too
+permissive, artificially increasing the path length of transparent forest used in their analysis. We also note that the upper 1𝜎 uncertainty
+of 0.05 quoted by McGreer et al. (2015) is about 2/3 of the corresponding binomial uncertainty on the dark fraction for 1 Ly𝛼+Ly𝛽
+negative pixel out of 76 total pixels, 0.076.
+Another potential source of the discrepancy is systematic differences in data reduction, as the data set compiled for the E-XQR-30
+sample includes several of the same quasar spectra used by McGreer et al. (2015): SDSS J0836+0054, ULAS J0148+0600, SDSS
+J1306+0356, SDSS J0818+1722, CFHQS J1509−1749, ULAS
+J1319+0950, and SDSS J1030+0524. For example, McGreer et al.
+(2015) report that the giant Gunn-Peterson trough in the quasar
+ULAS J0148+0600 contains only one 3.3 Mpc pixel which is negative in both the Ly𝛼 and Ly𝛽 forests; in our reduction of the same
+data, we instead find four, three of which would fall in the 𝑧 ∼ 5.6
+bin of McGreer et al. (2015). The addition of these three coincidentnegative pixels from using our reduction of this one spectrum would
+have increased their dark fraction estimate in that bin from 0.04 to
+0.13, with substantial additional error from cosmic variance. The
+negative pixel method relies on extremely accurate sky subtraction
+– as the signal-to-noise of the data increases, any subtle systematic
+error that does not average down by combining multiple exposures
+will have more and more influence on the pixel statistics in dark
+regions. As discussed in Section 2, we have made the conservative
+choice to remove spectra which show signs of a bias in pixel sign (or
+“parity”, see Appendix A) rather than attempt to correct them post
+hoc (as in Jin et al. 2023, although they ultimately report constraints
+only from the threshold method).
+Our fiducial upper limits on the IGM neutral fraction ⟨𝑥HI ⟩ leave
+substantial room for incomplete reionization at 𝑧 ≤ 6, although our
+limit at 𝑧 ≃ 6 more restrictive than other recent works (Zhu et al.
+2022; Jin et al. 2023). Compared to the apparently more stringent
+upper limit from McGreer et al. (2015), our more robust neutral
+fraction limit of ⟨𝑥HI ⟩ ≤ 0.2–0.3 at 𝑧 ≃ 5.9 has an easier time
+reconciling the ionizing photon budget and the short mean free path
+of ionizing photons (Davies et al. 2021; Cain et al. 2021), and is
+more in line with recent works which tune reionization simulations
+to match the large-scale fluctuations of the Ly𝛼 forest (Kulkarni et al.
+2019; Keating et al. 2020; Cain et al. 2023, 2025a; Qin et al. 2025;
+Asthana et al. 2025). In Figure 14, we compare our fiducial ⟨𝑥HI ⟩
+upper limits to other constraints derived from Ly𝛼 transmission in
+the XQR-30 survey. All of the measurements tell a consistent story
+of a gradual, late ending to the reionization epoch at 5.3 ≲ 𝑧 ≲ 6.2;
+possibly the result of a “soft landing” due to recombinations in the
+IGM (Qin et al. 2025), but other alternatives exist such as a rapid
+fall in the ionizing photon production rate from radiative feedback on
+low-mass galaxies (Ocvirk et al. 2021) or an increase in the absorbing
+cross-section of galactic halos due to outflows (Cain et al. 2024).
+The model-independent constraints on ⟨𝑥 HI ⟩ presented in this work
+
+Dark pixel fraction from XQR-30
+𝑧¯
+
+⟨ 𝑥HI ⟩ thresh + 1𝜎 (+2𝜎)
+
+⟨ 𝑥HI ⟩ neg + 1𝜎 (+2𝜎)
+
+⟨ 𝑥HI ⟩ mixture + 1𝜎 (+2𝜎)
+
+4.875
+5.056
+5.272
+5.481
+5.654
+5.831
+6.043
+6.225
+
+0.095 + 0.023(0.052)
+0.095 + 0.018(0.038)
+0.127 + 0.022(0.045)
+0.131 + 0.056(0.117)
+0.221 + 0.047(0.095)
+0.293 + 0.039(0.081)
+0.396 + 0.093(0.205)
+0.604 + 0.153(0.267)
+
+0.060 + 0.023(0.053)
+0.063 + 0.017(0.036)
+0.055 + 0.031(0.075)
+0.030 + 0.048(0.141)
+0.095 + 0.037(0.085)
+0.191 + 0.056(0.126)
+0.199 + 0.087(0.202)
+0.609 + 0.143(0.293)
+
+0.044 + 0.017(0.036)
+0.035 + 0.001(0.023)
+0.072 + 0.014(0.030)
+0.076 + 0.031(0.075)
+0.151 + 0.039(0.076)
+0.222 + 0.044(0.081)
+0.295 + 0.061(0.118)
+0.469 + 0.139(0.245)
+
+13
+
+Table 3. Upper limits on the IGM neutral fraction ⟨ 𝑥HI ⟩ from this work using the threshold method, the negative pixel method, and the lognormal mixture
+method, from left to right. Each measurement is shown as the central value of the corresponding dark fraction along with its +1𝜎 (+2𝜎) uncertainty. We
+consider the results from the negative pixel method, highlighted in bold, as our fiducial values.
+
+dous constraining power beyond the ⟨𝑥 HI ⟩ upper limits reported here
+(see Qin et al. 2025), and await a robust model for IGM transmission
+on all observed scales during the epoch of reionization.
+
+Gaikwad et al. (2023)
+0.7
+
+Qin et al. (2025)
+Bosman et al. (2022)
+
+0.6
+
+Zhu et al. (2022)
+
+Neutral fraction
+
+Spina et al. (2024)
+0.5
+
+Zhu et al. (2024)
+
+ACKNOWLEDGEMENTS
+
+Greig et al. (2024)
+
+0.4
+
+This work (neg. pix.)
+
+0.3
+0.2
+0.1
+0.0
+5.0
+
+5.2
+
+5.4
+
+5.6
+
+5.8
+
+6.0
+
+6.2
+
+6.4
+
+6.6
+
+Redshift
+Figure 14. Summary of IGM neutral fraction constraints resulting from other
+analyses based on the XQR-30 survey compared to the fiducial negative pixel
+method results in this work (black points). Constraints from the Ly𝛼 forest
+mean flux (Bosman et al. 2022) are shown as the pink crosses, the Ly𝛽
+dark gap constraints from Zhu et al. (2022) are shown as blue points, the
+Ly𝛼 forest damping wing constraints from Spina et al. (2024) and Zhu et al.
+(2024) are shown as the orange and brown points, respectively, and the Ly𝛼
+opacity fluctuations constraints from Gaikwad et al. (2023) are shown as a
+blue swathe. The grey curve shows the maximum a posteriori model from
+Qin et al. (2025), fit to the Ly𝛼 opacity fluctuations. The green points show
+the (binned) constraints from the quasar damping wing analysis of Greig et al.
+(2024).
+
+are limited by the fraction of the Ly𝛼 and other Lyman-series forests
+with detectable transmission at high redshift, thus at some point the
+limits will saturate. At 𝑧 ≲ 6, the limits are unlikely to improve without a substantial increase in sample size at comparable (or better)
+depth. We do not see a significant trend of the dark fraction with
+increasing 𝜏eff,lim within our data set, and reducing the uncertainty
+of the dark fraction at 𝑧 ≃ 6 in the Ly𝛽+Ly𝛾 forest by a factor of
+two would require a ∼ 3–4 times larger sample of similar quality. At
+higher redshifts there is likely room for improvement even with existing data – careful re-reduction of the three otherwise-uncontaminated
+𝑧 ∼ 6.5 quasars with zero-level drifts would already more than double
+the path length in our highest redshift bin. In the more distant future,
+deep spectroscopy of fainter quasar samples (e.g. with ELT/ANDES,
+D’Odorico et al. 2024) may allow for smaller proximity zone exclusion, which would increase the spectral coverage of more sensitive
+higher order Lyman series lines. Ultimately, however, the existing
+Ly𝛼 and other Lyman-series forest data likely already hold tremen-
+
+We thank Morgan Fouesneau and the MPIA Data Science Department for helpful discussions that led to the lognormal mixture model
+approach. We also thank Xiangyu Jin for comments on a draft of
+this manuscript. Part of this work was supported by the German
+Deutsche Forschungsgemeinschaft, DFG project number Ts 17/2–1.
+VD acknowledges financial support from the Bando Ricerca Fondamentale INAF 2022 Large Grant "XQR-30". HC thanks the support by the Natural Sciences and Engineering Research Council
+of Canada (NSERC), funding reference #RGPIN-2025-04798 and
+#DGECR-2025-00136, and by the University of Alberta, Augustana
+Campus. MGH has been supported by STFC consolidated grants
+ST/N000927/1 and ST/S000623/1. FW acknowledges support from
+NSF award AST-2513040.
+This paper is based on the following ESO observing programmes:
+XSHOOTER 60.A-9024, 084.A-0360, 084.A-0390, 084.A-0550,
+085.A-0299, 086.A-0162, 086.A-0574, 087.A-0607, 088.A-0897,
+091.C-0934, 294.A-5031, 096.A-0095, 096.A-0418, 097.B-1070,
+098.B-0537, 0100.A-0625, 0101.B-0272, 0102.A-0154, 0102.A0478, 1103.A-0817.
+
+DATA AVAILABILITY
+Reduced spectroscopic data from E-XQR-30 is available at this
+Github repository. Any other data underlying this article will be
+shared on reasonable request to the corresponding author.
+
+REFERENCES
+Aghanim N., Desert F. X., Puget J. L., Gispert R., 1996, A&A, 311, 1
+Asthana S., Kulkarni G., Haehnelt M. G., Bolton J. S., Keating L. C., Simmonds C., 2025, MNRAS, 539, L18
+Bañados E., et al., 2019, ApJ, 885, 59
+Battaglia N., Natarajan A., Trac H., Cen R., Loeb A., 2013, ApJ, 776, 83
+Becker R. H., et al., 2001, AJ, 122, 2850
+Becker G. D., Rauch M., Sargent W. L. W., 2007, ApJ, 662, 72
+Becker G. D., Bolton J. S., Madau P., Pettini M., Ryan-Weber E. V., Venemans
+B. P., 2015, MNRAS, 447, 3402
+Becker G. D., D’Aloisio A., Christenson H. M., Zhu Y., Worseck G., Bolton
+J. S., 2021, MNRAS, 508, 1853
+Becker G. D., Bolton J. S., Zhu Y., Hashemi S., 2024, MNRAS, 533, 1525
+MNRAS 000, 1–18 (2025)
+
+14
+
+F. B. Davies et al.
+
+Bevins H. T. J., Heimersheim S., Abril-Cabezas I., Fialkov A., de Lera Acedo
+E., Handley W., Singh S., Barkana R., 2024, MNRAS, 527, 813
+Bischetti M., et al., 2022, Nature, 605, 244
+Bolan P., et al., 2022, MNRAS, 517, 3263
+Bosman S. E. I., Ďurovčíková D., Davies F. B., Eilers A.-C., 2021, MNRAS,
+503, 2077
+Bosman S. E. I., et al., 2022, MNRAS, 514, 55
+Cain C., D’Aloisio A., Gangolli N., Becker G. D., 2021, ApJ, 917, L37
+Cain C., D’Aloisio A., Gangolli N., McQuinn M., 2023, MNRAS, 522, 2047
+Cain C., D’Aloisio A., Lopez G., Gangolli N., Roth J. T., 2024, MNRAS, 531,
+1951
+Cain C., Lopez G., D’Aloisio A., Muñoz J. B., Jansen R. A., Windhorst R. A.,
+Gangolli N., 2025a, ApJ, 980, 83
+Cain C., Van Engelen A., Croker K. S., Kramer D., D’Aloisio A., Lopez G.,
+2025b, ApJ, 987, L29
+Carilli C. L., et al., 2007, ApJ, 666, L9
+Ceccotti E., et al., 2025, arXiv e-prints, p. arXiv:2504.18534
+Chardin J., Puchwein E., Haehnelt M. G., 2017, MNRAS, 465, 3429
+Chornock R., Berger E., Fox D. B., Lunnan R., Drout M. R., Fong W.-f.,
+Laskar T., Roth K. C., 2013, ApJ, 774, 26
+Choudhury T. R., Paranjape A., Bosman S. E. I., 2021, MNRAS, 501, 5782
+Coles P., Jones B., 1991, MNRAS, 248, 1
+D’Aloisio A., McQuinn M., Trac H., 2015, ApJ, 813, L38
+D’Odorico V., et al., 2023, MNRAS, 523, 1399
+D’Odorico V., et al., 2024, Experimental Astronomy, 58, 21
+Davies F. B., 2020, MNRAS, 494, 2937
+Davies F. B., Furlanetto S. R., 2016, MNRAS, 460, 1328
+Davies F. B., et al., 2018, ApJ, 864, 142
+Davies F. B., Hennawi J. F., Eilers A.-C., 2020, MNRAS, 493, 1330
+Davies F. B., Bosman S. E. I., Furlanetto S. R., Becker G. D., D’Aloisio A.,
+2021, ApJ, 918, L35
+Davies R. L., et al., 2023, MNRAS, 521, 314
+Davies F. B., Bañados E., Hennawi J. F., Bosman S. E. I., 2025, ApJ, 989,
+L27
+Decarli R., et al., 2018, ApJ, 854, 97
+Eilers A.-C., et al., 2021, ApJ, 914, 74
+Fan X., et al., 2006, AJ, 132, 117
+Fan X., et al., 2019, ApJ, 870, L11
+Fausey H. M., et al., 2025, MNRAS, 536, 2839
+Furlanetto S. R., Oh S. P., Briggs F. H., 2006, Phys. Rep., 433, 181
+Gaikwad P., et al., 2023, MNRAS, 525, 4093
+Ghara R., et al., 2025, arXiv e-prints, p. arXiv:2505.00373
+Gnedin N. Y., Zhu H., 2025, arXiv e-prints, p. arXiv:2504.11539
+Greig B., Mesinger A., Haiman Z., Simcoe R. A., 2017, MNRAS, 466, 4239
+Greig B., et al., 2024, MNRAS, 530, 3208
+Gruzinov A., Hu W., 1998, ApJ, 508, 435
+Gunn J. E., Peterson B. A., 1965, ApJ, 142, 1633
+HERA Collaboration et al., 2023, ApJ, 945, 124
+Jhaveri T., Karwal T., Hu W., 2025, arXiv e-prints, p. arXiv:2504.21813
+Jin X., et al., 2023, ApJ, 942, 59
+Kageura Y., et al., 2025, ApJS, 278, 33
+Keating L. C., Weinberger L. H., Kulkarni G., Haehnelt M. G., Chardin J.,
+Aubert D., 2020, MNRAS, 491, 1736
+Kist T., Hennawi J. F., Davies F. B., 2025, MNRAS, 538, 2704
+Knox L., Scoccimarro R., Dodelson S., 1998, Phys. Rev. Lett., 81, 2004
+Kulkarni G., Keating L. C., Haehnelt M. G., Bosman S. E. I., Puchwein E.,
+Chardin J., Aubert D., 2019, MNRAS, 485, L24
+Lidz A., Chang T.-C., Mas-Ribas L., Sun G., 2021, ApJ, 917, 58
+Madau P., Meiksin A., Rees M. J., 1997, ApJ, 475, 429
+Maity B., Davies F., Gaikwad P., 2025, arXiv e-prints, p. arXiv:2505.09369
+Malloy M., Lidz A., 2015, ApJ, 799, 179
+Mason C. A., Treu T., Dijkstra M., Mesinger A., Trenti M., Pentericci L., de
+Barros S., Vanzella E., 2018, ApJ, 856, 2
+Mason C. A., Chen Z., Stark D. P., Lu T.-Y., Topping M., Tang M., 2025,
+arXiv e-prints, p. arXiv:2501.11702
+McGreer I. D., Mesinger A., Fan X., 2011, MNRAS, 415, 3237
+McGreer I. D., Mesinger A., D’Odorico V., 2015, MNRAS, 447, 499
+MNRAS 000, 1–18 (2025)
+
+McQuinn M., Furlanetto S. R., Hernquist L., Zahn O., Zaldarriaga M., 2005,
+ApJ, 630, 643
+Mertens F. G., et al., 2025, arXiv e-prints, p. arXiv:2503.05576
+Mesinger A., 2010, MNRAS, 407, 1328
+Mesinger A., Furlanetto S., 2009, MNRAS, 400, 1461
+Mesinger A., Haiman Z., 2004, ApJ, 611, L69
+Mesinger A., McQuinn M., Spergel D. N., 2012, MNRAS, 422, 1403
+Mesinger A., Aykutalp A., Vanzella E., Pentericci L., Ferrara A., Dijkstra M.,
+2015, MNRAS, 446, 566
+Miralda-Escudé J., 1998, ApJ, 501, 15
+Nakane M., et al., 2024, ApJ, 967, 28
+Nasir F., D’Aloisio A., 2020, MNRAS, 494, 3080
+Nunhokee C. D., et al., 2025, arXiv e-prints, p. arXiv:2505.09097
+Ocvirk P., Lewis J. S. W., Gillet N., Chardin J., Aubert D., Deparis N., Thélie
+É., 2021, MNRAS, 507, 6108
+Oh S. P., Furlanetto S. R., 2005, ApJ, 620, L9
+Planck Collaboration et al., 2020, A&A, 641, A6
+Qin Y., Mesinger A., Bosman S. E. I., Viel M., 2021, MNRAS, 506, 2390
+Qin Y., et al., 2025, Publ. Astron. Soc. Australia, 42, e049
+Reichardt C. L., et al., 2021, ApJ, 908, 199
+Sailer N., Farren G. S., Ferraro S., White M., 2025, arXiv e-prints, p.
+arXiv:2504.16932
+Simcoe R. A., Sullivan P. W., Cooksey K. L., Kao M. M., Matejek M. S.,
+Burgasser A. J., 2012, Nature, 492, 79
+Sims P. H., et al., 2025, arXiv e-prints, p. arXiv:2504.09725
+Sodini A., et al., 2024, A&A, 687, A314
+Spina B., Bosman S. E. I., Davies F. B., Gaikwad P., Zhu Y., 2024, A&A,
+688, L26
+Totani T., Kawai N., Kosugi G., Aoki K., Yamada T., Iye M., Ohta K., Hattori
+T., 2006, PASJ, 58, 485
+Umeda H., Ouchi M., Kageura Y., Harikane Y., Nakane M., Thai T. T.,
+Nakajima K., 2025, arXiv e-prints, p. arXiv:2504.04683
+Venemans B. P., et al., 2020, ApJ, 904, 130
+Vernet J., et al., 2011, A&A, 536, A105
+Wang R., et al., 2013, ApJ, 773, 44
+Weinberg D. H., Hernsquit L., Katz N., Croft R., Miralda-Escudé J.,
+1997, in Petitjean P., Charlot S., eds, Structure and Evolution of
+the Intergalactic Medium from QSO Absorption Line System. p. 133
+(arXiv:astro-ph/9709303)
+White R. L., Becker R. H., Fan X., Strauss M. A., 2003, AJ, 126, 1
+Wilson E. B., 1927, Journal of the American Statistical Association, 22, 209
+Yang J., et al., 2019, ApJ, 880, 153
+Yang J., et al., 2021, ApJ, 923, 262
+Zahn O., Zaldarriaga M., Hernquist L., McQuinn M., 2005, ApJ, 630, 657
+Zaldarriaga M., 1997, Phys. Rev. D, 55, 1822
+Zhu Y., et al., 2021, ApJ, 923, 223
+Zhu Y., et al., 2022, ApJ, 932, 76
+Zhu Y., et al., 2023, ApJ, 955, 115
+Zhu Y., et al., 2024, MNRAS,
+Ďurovčíková D., et al., 2024, ApJ, 969, 162
+
+APPENDIX A: DATA INSPECTION VIA “PARITY” TESTS
+As described in Section 2, we examined the positive/negative parity
+of the E-XQR-30 spectra to identify those with insufficiently accurate
+sky subtraction or other artifacts which could bias the dark fraction
+measurements. In Figure A1, we show two examples of typical spectra which pass the parity tests. The top panels show the spectra close
+to the zero level after applying a 7-pixel median filter, the middle
+panels show the cumulative pixel parity, and the bottom panels show
+64-pixel binned parity. The vertical lines show wavelengths corresponding to the Lyman limit (911.76 Å), Ly𝛽 (1025.72 Å), and Ly𝛼
+(1215.67 Å) in the rest frame of the quasar. The cumulative parity is
+fairly flat at the shortest wavelengths blueward of the Lyman limit,
+
+Cumulative parity
+Binned parity (64 pix.)
+
+15
+
+PSO J183-12
+
+−1
+
+Flux [10−18 erg s−1 cm−2 Å ]
+
+Dark pixel fraction from XQR-30
+
+1
+0
+−1
+
+3000
+2000
+1000
+0
+1.0
+0.5
+0.0
+−0.5
+
+6000
+
+6500
+
+7000
+
+7500
+
+8000
+
+8500
+
+9000
+
+9500
+
+8500
+
+9000
+
+9500
+
+PSO J183+05
+
+Binned parity (64 pix.)
+
+−1
+
+Cumulative parity Flux [10−18 erg s−1 cm−2 Å ]
+
+Observed wavelength [Å]
+
+1.0
+0.5
+0.0
+−0.5
+1500
+1000
+500
+0
+1.0
+0.5
+0.0
+−0.5
+
+6000
+
+6500
+
+7000
+
+7500
+
+8000
+
+Observed wavelength [Å]
+Figure A1. Examples of typical E-XQR-30 quasar spectra (PSO J183−12 & PSO J183+05) which pass the parity tests described in the text. The top panels
+show the quasar spectrum zoomed in close to the zero-level (dotted orange line) after a 7-pixel median filter has been applied. The middle panels show the
+cumulative parity, with blue and red regions corresponding to positive and negative pixels, respectively. Regions with transmitted flux correspond to positive
+slope, while regions with zero flux should be roughly flat. The bottom panels show the parity averaged within 64-pixel bins, as well as dark and light shaded
+regions corresponding to the 1𝜎 and 2𝜎 scatter expected in the binned parity in regions with zero flux.
+
+MNRAS 000, 1–18 (2025)
+
+F. B. Davies et al.
+VDES J0224-4711
+
+Binned parity (64 pix.)
+
+−1
+
+Cumulative parity Flux [10−18 erg s−1 cm−2 Å ]
+
+16
+
+0.2
+0.1
+0.0
+−0.1
+3000
+2000
+1000
+0
+1.0
+0.5
+0.0
+−0.5
+
+6000
+
+6500
+
+7000
+
+7500
+
+8000
+
+8500
+
+9000
+
+9500
+
+8500
+
+9000
+
+9500
+
+PSO J036+03
+
+−1
+
+Flux [10−18 erg s−1 cm−2 Å ]
+
+Observed wavelength [Å]
+0.50
+0.25
+0.00
+
+Binned parity (64 pix.)
+
+Cumulative parity
+
+−0.25
+600
+400
+200
+0
+1.0
+0.5
+0.0
+−0.5
+
+6000
+
+6500
+
+7000
+
+7500
+
+8000
+
+Observed wavelength [Å]
+Figure A2. Similar to Figure A1 but now showing examples of quasar spectra which fail the parity tests (VDES J0224−4711 & PSO J036+03).
+
+while the binned parity (in regions of zero apparent flux) shows no
+systematic excursions to negative or positive values.
+In Figure A2, we show examples of spectra which fail the parity
+tests. In the top (VDES J0224−4711) and bottom (PSO J036+03)
+panels, the cumulative parity drifts upward and downward, respectively. The quasar spectrum in the top panel shows weak, but statistically significant, excess flux across the entire spectrum, leading
+to no negative binned pixels in all the Lyman-series forests. In the
+MNRAS 000, 1–18 (2025)
+
+bottom panel, clear excursions to negative parity are present in dark
+regions across the spectrum, leading to a large excess in negative
+binned pixels.
+
+17
+
+Dark pixel fraction from XQR-30
+0.7
+0.6
+
+Dark pixel fraction
+
+Dark pixel fraction
+
+0.4
+
+0.3
+
+0.2
+
+0.1
+
+0.5
+0.4
+0.3
+0.2
+0.1
+
+0.0
+
+0.0
+1
+
+2
+
+3
+
+4
+
+5
+
+6
+
+1
+
+2
+
+3
+
+Binning scale [Mpc]
+
+4
+
+5
+
+6
+
+Binning scale [Mpc]
+
+Figure A3. Optimal dark pixel fraction (lower upper 2𝜎 bound) at 𝑧 ≃ 5.83 (left) and 𝑧 ≃ 6.04 (right), where the color represents the optimal forest or forest
+combination (similar to Figure 8). The dark pixel fraction and binning scale used in this work are shown by the intersection of the black dashed lines.
+
+Negative pixel method
+Dark pixel fraction
+
+1.0
+
+Lyα
+
+Lyβ
+
+Lyγ
+
+0.5
+0.0
+1.0
+
+Lyα+Lyβ
+
+Lyβ+Lyγ
+
+Lyα+Lyβ+Lyγ
+
+0.5
+0.0
+5.0
+
+5.5
+
+6.0
+
+5.0
+
+5.5
+
+6.0
+
+5.0
+
+5.5
+
+6.0
+
+Redshift
+Figure A4. Similar to Figure 7, but shifting the Δ𝑧 = 0.2 bins in increments of 𝛿𝑧 = 0.01. The 1𝜎 and 2𝜎 constraints are shown by the dark and light shaded
+regions, respectively.
+
+APPENDIX B: BINNING TESTS
+
+APPENDIX C: HIGHER ORDER LYMAN-SERIES LINES
+
+In our main results, we opt for a binning scale of 3.3 Mpc with
+Δ𝑧 = 0.2 redshift bins starting at 𝑧 = 4.75. It is worth investigating
+the degree to which our results depend on these choices, which
+introduce a degree of model dependence.
+
+With the increased sensitivity of our constraints derived from the
+Ly𝛾 forest, one may wonder if pushing further down the Lyman
+series would be of any benefit. Only the next Lyman series transition,
+Ly𝛿 (𝜆 𝛿 = 949.74 Å), has any coverage redward of the Lyman limit
+after our fiducial proximity zone exclusion, but with only ∼ 1/3 of
+the path length of Ly𝛾 (see Figure 1) there are relatively few pixels
+with which to constrain the dark pixel fraction. Here we examine
+whether there is any additional constraining power to be obtained
+from the Ly𝛿 forest.
+In Figure C1, we show the dark pixel fractions obtained from
+the Ly𝛿, Ly𝛾+Ly𝛿, Ly𝛽+Ly𝛾+Ly𝛿, and Ly𝛼+Ly𝛽+Ly𝛾+Ly𝛿 forests5
+(see also Table C1). While the dark fractions from the Ly𝛿 forest combinations are among the smallest at 𝑧 ∼ 6, due to the small number
+of pixels they generally suffer from large statistical uncertainty, particularly when used with the negative pixel method. That said, in
+two cases, namely the 𝑧 ≃ 5.65 and (just barely) 𝑧 ≃ 5.85 bins in
+the threshold method, the combination of Ly𝛼+Ly𝛽+Ly𝛾+Ly𝛿 and
+Ly𝛽+Ly𝛾+Ly𝛿 provide tighter 2𝜎 upper limits, respectively, and thus
+could take the place of the fiducial upper limits at those redshifts in
+the left panel of Figure 8. We err on the side of caution and quote
+
+First, we examine the dependence on the binning scale. In Figure A3, we show how our fiducial ⟨𝑥HI ⟩ constraints in the 𝑧 ≃ 5.83
+(left) and 𝑧 ≃ 6.04 redshift bins (right), determined via the negative pixel method, varies with the binning scale. The dark fraction
+decreases more or less monotonically with increasing bin size, with
+some scatter due to the small number statistics involved in the negative pixel method. The resulting fiducial upper limits on the IGM
+neutral fraction would be 0.36 + 0.04 (0.44 + 0.10) for 1 Mpc bins
+and 0.12 + 0.06 (0.05 + 0.08) for 6 Mpc bins at 𝑧 ≃ 5.83 (𝑧 ≃ 6.04).
+Smaller binning scales likely include more small-scale opaque regions within fully ionized regions (e.g. Spina et al. 2024), while
+larger binning scales may mix transparent ionized regions with dark
+neutral regions.
+Next, we look at the impact of shifting the redshift bins. In Figure A4, we show the dark pixel fractions of every forest+combination
+in 𝛿𝑧 = 0.01 steps, effectively a moving average over a range of
+Δ𝑧 = 0.2. While there are some fluctuations from step to step, they
+are largely consistent within the bootstrap uncertainties, and our specific set of redshift bins is not an outlier within the distribution.
+
+5
+
+For simplicity, as in our fiducial results, we neglect constraints that skip an
+intermediate Lyman-series line.
+MNRAS 000, 1–18 (2025)
+
+18
+
+F. B. Davies et al.
+neg
+
+Line
+
+𝑧 range
+
+𝑧¯
+
+𝑁LOS
+
+𝑁pix
+
+𝑁un−det
+
+thresh + 1𝜎/+2𝜎
+𝑓dark
+
+𝑁neg
+
+𝑓dark + 1𝜎/+2𝜎
+
+Ly 𝛿
+
+5.55–5.75
+5.75–5.95
+5.95–6.15
+6.15–6.35
+
+5.639
+5.828
+6.056
+6.226
+
+15
+19
+7
+3
+
+67
+127
+52
+23
+
+34
+87
+38
+23
+
+0.519 + 0.100(+0.197)
+0.701 + 0.061(+0.124)
+0.747 + 0.096(+0.182)
+1.023 + 0.000(+0.000)
+
+14
+30
+15
+14
+
+0.418 + 0.108(+0.229)
+0.472 + 0.079(+0.165)
+0.577 + 0.133(+0.274)
+1.217 + 0.211(+0.383)
+
+Ly𝛾+Ly 𝛿
+
+5.55–5.75
+5.75–5.95
+5.95–6.15
+6.15–6.35
+
+5.639
+5.828
+6.056
+6.226
+
+15
+19
+7
+3
+
+65
+125
+50
+23
+
+19
+55
+30
+17
+
+0.306 + 0.082(+0.179)
+0.460 + 0.059(+0.118)
+0.628 + 0.120(+0.244)
+0.773 + 0.074(+0.273)
+
+5
+6
+4
+6
+
+0.308 + 0.159(+0.373)
+0.192 + 0.092(+0.217)
+0.320 + 0.191(+0.445)
+1.043 + 0.401(+0.832)
+
+Ly𝛽+Ly𝛾+Ly 𝛿
+
+5.55–5.75
+5.75–5.95
+5.95–6.15
+6.15–6.35
+
+5.639
+5.828
+6.056
+6.226
+
+15
+19
+7
+3
+
+64
+125
+49
+23
+
+10
+31
+20
+9
+
+0.167 + 0.080(+0.178)
+0.265 + 0.053(+0.109)
+0.437 + 0.175(+0.339)
+0.419 + 0.235(+0.651)
+
+1
+2
+1
+3
+
+0.125 + 0.196(+0.559)
+0.128 + 0.125(+0.334)
+0.163 + 0.254(+0.714)
+1.043 + 0.687(+1.564)
+
+Ly𝛼+Ly𝛽+Ly𝛾+Ly 𝛿
+
+5.55–5.75
+5.75–5.95
+5.95–6.15
+6.15–6.35
+
+5.639
+5.828
+6.056
+6.226
+
+15
+19
+7
+3
+
+64
+124
+46
+23
+
+9
+31
+16
+8
+
+0.154 + 0.073(+0.162)
+0.274 + 0.052(+0.109)
+0.381 + 0.167(+0.349)
+0.381 + 0.276(+0.714)
+
+0
+1
+1
+0
+
+0.000 + 0.246(+0.941)
+0.129 + 0.206(+0.599)
+0.348 + 0.540(+1.512)
+0.000 + 0.667(+2.370)
+
+Table C1. Dark pixel statistics from the Ly 𝛿 forest of the E-XQR-30 sample, similar to Table 2. Uncertainty ranges for 𝑓dark can go above unity due to the
+re-scaling factors applied to convert the corresponding fractions of un-detected or negative pixels.
+
+the Ly𝛼+Ly𝛽+Ly𝛾 constraints as our fiducial threshold method limits in these redshift bins, but show the corresponding constraints in
+Figure C2 and the bold entries in Table C1.
+Our exploration of Ly𝛿 suggests that the higher order Lyman-series
+can be more sensitive, but will require many more quasar spectra to
+be statistically sound. Fainter quasars, with correspondingly smaller
+proximity zones, also have the potential to open up significant additional path length. But while the proximity zone size should scale
+−1/2
+with 𝐿 qso
+, the required exposure time to reach comparable sensitiv−2 , making such
+ity (in the background-limited regime) scales as 𝐿 qso
+an experiment rather costly.
+This paper has been typeset from a TEX/LATEX file prepared by the author.
+
+MNRAS 000, 1–18 (2025)
+
+Dark pixel fraction from XQR-30
+
+19
+
+Neutral fraction
+
+Threshold method
+1.0
+
+Lyδ
+
+Lyγ+Lyδ
+
+Lyβ+Lyγ+Lyδ
+
+Lyα+Lyβ+Lyγ+Lyδ
+
+0.5
+
+0.0
+5.0
+
+5.5
+
+6.0
+
+5.0
+
+5.5
+
+6.0
+
+5.0
+
+5.5
+
+6.0
+
+5.0
+
+5.5
+
+6.0
+
+Redshift
+
+Neutral fraction
+
+Negative pixel method
+1.0
+
+Lyδ
+
+Lyγ+Lyδ
+
+Lyβ+Lyγ+Lyδ
+
+Lyα+Lyβ+Lyγ+Lyδ
+
+0.5
+
+0.0
+5.0
+
+5.5
+
+6.0
+
+5.0
+
+5.5
+
+6.0
+
+5.0
+
+5.5
+
+6.0
+
+5.0
+
+5.5
+
+6.0
+
+Redshift
+
+Figure C1. Similar to Figure 5 but for the Ly 𝛿 forest and its combinations.
+
+Threshold method (+Lyδ)
+1.0
+
+Literature 1σ limits
+McGreer et al. (2015)
+Jin et al. (2023)
+
+Neutral fraction
+
+0.8
+0.6
+
+E-XQR-30 1+2σ limits
+Lyα
+Lyα+Lyβ
+Lyβ+Lyγ
+Lyα+Lyβ+Lyγ
+Lyβ+Lyγ+Lyδ
+Lyα+Lyβ+Lyγ+Lyδ
+
+0.4
+0.2
+0.0
+4.75
+
+5.00
+
+5.25
+
+5.50
+
+5.75
+
+6.00
+
+6.25
+
+6.50
+
+6.75
+
+Redshift
+
+Figure C2. Similar to Figure 8 but now including the more sensitive upper limits at 𝑧 = 5.55–5.75 from the Ly𝛼+Ly𝛽+Ly𝛾+Ly 𝛿 forest and 𝑧 = 5.75–5.95
+from the Ly𝛽+Ly𝛾+Ly 𝛿 forest.
+
+MNRAS 000, 1–18 (2025)
+
+

@@ -1,0 +1,1780 @@
+Draft version June 14, 2024
+Typeset using LATEX twocolumn style in AASTeX631
+
+JWST Measurements of Neutral Hydrogen Fractions and Ionized Bubble Sizes at z = 7 − 12
+Obtained with Lyα Damping Wing Absorptions in 27 Bright Continuum Galaxies
+Hiroya Umeda
+
+,1, 2 Masami Ouchi ,3, 1, 4 Kimihiko Nakajima ,3 Yuichi Harikane
+Yi Xu ,1, 6 Yuki Isobe ,1, 2 and Yechi Zhang 1, 6
+
+,1, 5 Yoshiaki Ono
+
+,1
+
+arXiv:2306.00487v3 [astro-ph.GA] 13 Jun 2024
+
+1 Institute for Cosmic Ray Research, The University of Tokyo, 5-1-5 Kashiwanoha, Kashiwa, Chiba 277-8582, Japan
+2 Department of Physics, Graduate School of Science, The University of Tokyo, 7-3-1 Hongo, Bunkyo, Tokyo 113-0033, Japan
+3 National Astronomical Observatory of Japan, 2-21-1 Osawa, Mitaka, Tokyo 181-8588, Japan
+4 Kavli Institute for the Physics and Mathematics of the Universe (WPI), University of Tokyo, Kashiwa, Chiba 277-8583, Japan
+5 Department of Physics and Astronomy, University College London, Gower Street, London WC1E 6BT, UK
+6 Department of Astronomy, Graduate School of Science, The University of Tokyo, 7-3-1 Hongo, Bunkyo, Tokyo 113-0033, Japan
+
+ABSTRACT
+We present volume-averaged neutral hydrogen fractions xH i and ionized bubble radii Rb measured with Lyα damping wing absorption of galaxies at the epoch of reionization. We combine
+JWST/NIRSpec spectra taken by CEERS, GO-1433, DDT-2750, and JADES programs, and obtain
+a sample containing 27 bright UV-continuum (MUV < −18.5 mag) galaxies at 7 < z < 12. We
+construct 4 composite spectra binned by redshift, and find the clear evolution of softening break towards high redshift at the rest-frame 1216 Å, suggesting the increase of Lyα damping wing absorption.
+We estimate Lyα damping wing absorption in the galaxy spectra with realistic templates including
+Lyα emission and circum-galactic medium absorptions. Assuming the standard inside-out reionization picture having an ionized bubble with radius Rb around a galaxy embedded in the intergalactic
+medium with xH i , we obtain xH i (Rb ) values generally increasing (decreasing) from xH i = 0.53+0.18
+−0.47
++0.14
++0.89
++0.06
++1.49
+to 0.92+0.08
+−0.10 (log Rb = 1.67−0.16 to −0.69−0.24 comoving Mpc) at redshift 7.12−0.08 to 9.91−1.15 . The
+redshift evolution of xH i indicates a moderately late reionization history consistent with the one previously suggested from the electron scattering of cosmic microwave background and the evolution of UV
+luminosity function with an escape fraction fesc ∼ 0.2. Our Rb measurements suggest that bubble sizes
+could be up to a few dex larger than the cosmic average values estimated by analytic calculations for
+a given xH i , while our Rb measurements are roughly comparable with the values for merged ionized
+bubbles around bright galaxies predicted by recent numerical simulations.
+
+Keywords: Galaxy evolution (594), Galaxy formation (595), High-redshift galaxies (734), Reionization(1383)
+1. INTRODUCTION
+
+Cosmic reionization scenarios have been investigated
+by estimating the neutral hydrogen fraction xH i of the
+universe at different redshifts. Most powerful way to
+probe the neutral hydrogen at the epoch of reionization
+is to look at Lyα damping wing absorption. Numerous
+works have investigated xH i from Lyα damping wing
+absorption using the brightest sources such as quasars
+(QSOs) and gamma-ray burst (GRBs) at z ∼ 6−8 (e.g.,
+ume@icrr.u-tokyo.ac.jp
+
+Mortlock et al. 2011; Bañados et al. 2018; Schroeder
+et al. 2013; Davies et al. 2018; Greig et al. 2019; Wang
+et al. 2020; Totani et al. 2006, 2014). With the bright
+rest-frame UV-continuum, we can detect Lyα damping
+wing absorption by the intergalactic medium (IGM). xH i
+value at different redshift have been estimated by fitting the damping wing absorption profile for different
+xH i values. However, the number density of QSOs and
+GRBs are expected to be very small at the higher redshift, inhibiting us from accessing the ionization state of
+IGM at z ≳ 7 (e.g., Wang et al. 2019; Matsuoka et al.
+2023).
+
+2
+
+Umeda et al.
+
+To overcome the problem of lacking the bright objects
+at the high redshift, we investigate the fainter but much
+more numerous galaxies as alternative target to infer
+xH i from Lyα damping wing absorptions. To directly
+observe the Lyα damping wing absorption in the spectrum of galaxies at z > 7, we need to detect their restframe UV continuum. Spectroscopically detecting the
+rest-frame UV continuum at such a high redshift is very
+challenging because it requires deep spectroscopic data
+in near infrared (NIR). However, recent observations by
+the James Webb Space Telescope (JWST; Gardner et al.
+2023; Rigby et al. 2023; Rieke et al. 2023; Jakobsen et al.
+2022; Ferruit et al. 2022; Böker et al. 2023) have shown
+that it is capable of deep NIR spectroscopic observations. As presented in recent works, low-resolution (i.e.,
+R ∼ 100) NIRSpec/PRISM spectroscopic data is especially suited for detecting faint rest-frame UV continuum (e.g., Curtis-Lake et al. 2023; Nakajima et al. 2023;
+Harikane et al. 2023; Arrabal Haro et al. 2023a,b; Hsiao
+et al. 2023; Williams et al. 2023; Roberts-Borsani et al.
+2022).
+Curtis-Lake et al. (2023) are the first to demonstrate
+the power of the PRISM data to estimate Lyα damping wing absorption in the UV continua of high redshift
+galaxies. Curtis-Lake et al. (2023) have demonstrated
+the potential of the NIRSpec PRISM data to estimate
+the value of xH i . However, their constraint on xH i is
+not very strict because the redshift for the object is
+not constrained due to the lack of emission line detections. Recently, Hsiao et al. (2023) have incorporated
+Lyα damping wing absorption in the spectral fitting of
+spectroscopically confirmed z = 10.17 lensed galaxy and
+constrained xH i > 0.9 with a one sigma significance. In
+our work, we also take advantage of the multiple PRISM
+spectroscopy data with the redshift confirmation obtained by multiple surveys to systematically infer the
+xH i values at various redshift above z = 7 to capture
+the redshift evolution of the damping wing profile and
+corresponding xH i values.
+This paper is constructed as follows. In Section 2, we
+describe our galaxy sample and the reduction of corresponding spectroscopic data. We construct composite
+spectra binned by redshift and fit for the Lyα damping wing absorption seen in the composite spectra in
+Section 3. We discuss the implications of the xH i estimates on understanding cosmic reionization history and
+future prospect in Section 4. We summarize this paper in Section 5. In this paper, we use the Planck
+cosmological parameter sets of the TT + TE + EE+
+lowE + BAO + lensing result (Planck Collaboration
+et al. 2020a): h = 0.6766, Ωm = 0.3103, ΩΛ = 0.6897,
+
+Ωb h2 = 0.02234, and Yp = 0.248. All magnitudes are in
+the AB system (Oke & Gunn 1983).
+2. DATA AND SAMPLE
+
+We use spectroscopic datasets obtained in multiple observation programs; the Cosmic Evolution Early
+Release Science (CEERS; ERS-1345. PI. S. Finkelstein; Finkelstein et al. 2023), GO-1433 (PI. D. Coe;
+Hsiao et al. 2023), DDT-2750 (PI. P. Arrabal Halo;
+Arrabal Haro et al. 2023b), and the JWST Advanced
+Deep Extragalactic Survey (JADES; GTO-1210; PI. N.
+Lützgendorf; Bunker et al. 2023). We only used the
+PRISM data (R ∼ 100) that covers 0.6−5.3 µm. The total exposure time for the PRISM spectra from CEERS,
+GO-1433, DDT-2750, and JADES data are 0.86, 3.7,
+5.1, and 9.3-27.7 hours, respectively. As presented in
+Nakajima et al. (2023) and Harikane et al. (2023), all the
+PRISM data from CEERS, GO-1433, and DDT-2750 we
+use are reduced with the JWST pipeline version 1.8.5
+with the Calibration Reference Data System (CRDS)
+context file of jwst1028.pmap or jwst1027.pmap with
+some improvements on the flux calibration, noise estimate, and the composition. For the JADES data, we use
+the publicly available reduced data from JADES group
+1
+. Please see Bunker et al. (2023) for the detailed reduction processes of JADES data. We then select the
+galaxies with systemic redshifts above z > 7 confirmed
+with emission lines. For the z < 9 galaxies in CEERS,
+we adopt the spectroscopic redshift reported by Nakajima et al. (2023) in which the authors determine spectroscopic redshift via fitting [O iii]λλ4959,5007 and Hβ
+triplet simultaneously. For the galaxies at z > 9 obtained from observational program beside JADES, we
+adopt the spectroscopic redshift reported by Harikane
+et al. (2023). In Harikane et al. (2023), the authors
+derive the spectroscopic redshift for z > 11 object
+via [O ii]λ3727 (and [Ne iii]λ3869) for Maisie’s galaxy
+(CEERS2 588). For MACS0647 JD, Harikane et al.
+(2023) use Hγ to determine spectroscopic redshift. For
+JADES objects, we adopt redshift reported in the public catalog released by the JADES team. The determination of the spectroscopic redshift listed in the public
+JADES is described in Bunker et al. (2023). In Bunker
+et al. (2023), the authors use emission lines detected
+with a signal to noise ratio of S/N > 5 to determine
+the spectroscopic redshift. Although the uncertainty of
+the spectroscopic redshift is not given in the literature,
+Jones et al. (2023) report that the spectroscopic redshift determined from PRISM data has a median off1 https://archive.stsci.edu/hlsp/jades
+
+Measurements of xHI and Ionized Bubble Sizes at z = 7 − 12
+set of 0.00388 with a standard deviation of 0.00628. In
+Section 4.5, we discuss on the effect of the uncertainty
+in the redshift confirmation with low resolution PRIMS
+data to our analysis. Please see Nakajima et al. (2023),
+Harikane et al. (2023), and Bunker et al. (2023) for further details on the data reduction and spectroscopic redshift determination. We further narrow the sample by
+selecting galaxies with data available in wavelength corresponding to rest-frame 1200 − 1250 Å to investigate
+Lyα damping wing features. We obtain a total of 35
+galaxies as our galaxy sample candidates. Our sample candidates consist of 35 galaxies from z =7.045 to
+11.40, with the redshift distribution shown in Figure
+1. In Table 1, we summarize properties of the sample candidate galaxies. We apply additional sample
+selection by setting an absolute UV magnitude cut of
+MUV < −18.5 to omit faint (MUV > −18.5) galaxies
+distributed mainly at z < 8 in our sample candidates.
+We also discard three of the object which Nakajima
+et al. (2023) only report 5σ upper limit value for UV
+magnitude for Hubble Space Telescope (HST) observations given that these objects are not detected by HST
+and lack JWST/NIRCam data. After this magnitude
+cut selection, we have a final galaxy sample consisted
+by 27 galaxies from 7.045 < z < 11.40. Out of all 27
+galaxies, spectroscopic data of 18, 1, 3, and 5 galaxies are obtained in CEERS, GO-1433, DDT-2750, and
+JADES programs, respectively. We present the complete PRISM spectra of galaxies in our final sample in
+the left panels of Figure 2 in the order of the highest
+to lowest redshift galaxies. The black line and grey
+region in each panel represents the observed flux and
+the error of each galaxy spectra normalized by an arbitrary unit (a.u.), respectively. We also show the wavelengths of Lyα determined from the systemic redshifts
+by the red vertical dashed lines. Next to the spectra of
+each galaxy, we present the emission line detected in the
+PRISM spectra with the highest S/N for each galaxy in
+the right hand panels. The systemic redshift values and
+the name of the emission line shown for each galaxy are
+written in between the panels.
+The spectra of the galaxy in our final sample show
+various features around rest-frame Lyα wavelength. We
+show two contrasting example in Figure 3. The 2D and
+1D spectra of CEERS2 588 (00021842) with systemic
+redshift at 11.04 (7.980) is shown in the left (right)
+panel. The red dotted lines represent the systemic
+redshift determined by emission line. The spectra of
+CEERS2 588 shows redshifted, softened Lyα break relative to systemic redshift, while we see blueshifted flux
+with 4.2σ significance beyond the rest-frame 1216 Å for
+00021842. In Section 3.4, we physically interpret the di-
+
+3
+
+Figure 1. Redshift and UV-magnitude distribution of our
+galaxy sample. In the bottom panel, circles represent the
+redshift and UV-magnitude values for the galaxy observed
+by CEERS, GO-1433, DDT-2750, and JADES. The circle
+indicate the best-fit values while the upper circle with an upper arrow corresponds to one sigma upper lower-limit for the
+UV-magnitudes. The filled circle indicates the galaxy used
+in our analysis, while the open circle indicates the galaxies
+omitted from our sample after a selection based on the UVmagnitudes. The top (right) panel shows the number counts
+at each redshift (MUV ) bins for our galaxy sample. The fraction of bins represented by black represents the final sample
+after the absolution UV-magnitude selection.
+
+verse spectral features around the rest-frame 1216 Å via
+spectral fitting.
+3. METHODS
+
+3.1. Lyα Damping Wing
+To calculate the optical depth associated with Lyα
+damping wing absorption, we assume that galaxy resides
+at the center of the fully ionized bubble with radius Rb
+and the surrounding IGM with a constant xHI until the
+end of EoR, zn . We fix the redshift corresponding to the
+end of reionization at zn = 5 in our calculations. Note
+that changing zn by ±1 have a negligible effect on IGM
+Lyα damping wing absorption profile.
+To calculate the optical depth of Lyα damping wing
+at each observed wavelength λobs , τ (λobs ), we adopt the
+equation 2 of Totani et al. (2006) that is based on the
+formulation of Miralda-Escudé (1998):
+
+3/2
+xH i Λα λα τ0 (zs ) 1 + zobs
+τ (λobs ) =
+(1)
+4π 2 c
+1 + zs
+ 
+
+
+
+1 + zb
+1 + zn
+× I
+−I
+,
+1 + zobs
+1 + zobs
+where Λα , λα , c, and τ0 , are the decay constant for
+the Lyα resonance, the rest-frame Lyα wavelength, the
+
+4
+
+Umeda et al.
+
+Figure 2. Full spectra of galaxy samples. (Left): The x-(y-)axis corresponds to the observed wavelength (arbitrary normalized
+flux density). The black lines and grey regions represent the fluxes of spectra and their uncertainties, respectively. The red
+dashed line represents the observed Lyα wavelength for each object. (Right) The highest S/N emission lines detected from each
+spectra in our sample. The type of emission line shown and the name of the corresponding galaxy is shown between the right
+and left panels. The x-axis represents the difference between the rest-frame wavelength λrest. and the central wavelength λcen.
+of the optical emission line.
+
+Measurements of xHI and Ionized Bubble Sizes at z = 7 − 12
+
+5
+
+Figure 3. 2D (top) and 1D (bottom) spectra of CEERS2 588 (left) and 00021842 (right). The black line and grey region
+represent the observed flux and its uncertainty, respectively. The red dashed line represents the wavelength of Lyα at the
+systemic redshift determined by non-Lyα emission lines.
+
+speed of light, and the Gunn-Peterson optical depth, respectively. zb is defined as the redshift corresponding to
+the edge of the ionized bubble with radius Rb , whereas
+zobs is a value defined as λobs /λα − 1. I(x) is an integration defined as follows:
+x9/2
+9
+9
++ x7/2 + x5/2 + 3x3/2
+1−x 7
+5
+1/2
+9
+1
++
+x
++ 9x1/2 − ln
+.
+2 1 − x1/2
+
+I(x) =
+
+(2)
+
+We calculate τ0 using the following formula also given
+by Miralda-Escudé (1998):
+τ0 (zs ) =
+
+3λ3α Λα n0
+,
+8πH(zs )
+
+(3)
+
+where n0 and H(z) are the hydrogen number density
+and the Hubble parameter as the function of redshift.
+We calculate n0 using the critical density of the universe, baryon density parameter, and primordial helium
+abundance. We show how the absorption profile of the
+z = 8 changes with different xHI and Rb values in Figure
+4. As shown in Figure 4, increasing xHI value extends
+the absorption feature to a redder side of 1216 Å while
+increasing Rb value shifts the absorption profile to the
+bluer wavelength. Notably, fluxes on the bluer side of
+the 1216 Å can be transmitted if the bubble size is sufficiently large (i.e., Rb > 10 comoving Mpc; cMpc).
+3.2. Stacking Spectra
+We construct composite spectra by stacking individual spectra to maximize the signal to noise ratio. We
+divide the galaxy sample into four subsamples by binning according to the redshifts so that each subsample
+has at least six galaxies. We label the subsamples as
+#1, #2, #3, and #4 bins in the order of the lower to
+higher redshift. The redshift range for #1, #2, #3,
+and #4 bins are 7.045-7.179, 7.197-7.781, 7.834-8.683,
+and 8.763-11.40, respectively. We define representative
+
+Figure 4. Example of Lyα damping wing profile for z = 8.
+The top and bottom axes are the rest frame and observed
+wavelengths, respectively. The y-axis corresponds to the
+transmission fraction of the flux at each wavelength. The
+solid (dotted) black line corresponds to the absorption profile with xH i = 1.0 (0.1) and Rb = 0 cMpc. The red dotted
+line corresponds to the absorption profile with xH i = 1.0
+and Rb = 10 cMpc. The gray vertical line corresponds to
+the rest-frame Lyα wavelength.
+
+redshift values ⟨z⟩ of each redshift bin by the average
+redshift value among the galaxies in each subsample.
+For stacking individual spectra of each subsample, we
+have shifted the galaxy spectra into rest-frame wavelength based on the systemic redshift and resampled to
+a common wavelength pixels with a pixel size of 25 Å,
+a value considerably similar to that of the resolution of
+PRISM at <2 µm (R ∼ 30), using linear interpolation.
+We have taken error weighted mean flux values at wavelength pixel to calculate the stacked spectra. We estimate the uncertainty of the stacked spectra via 10000
+
+6
+
+Umeda et al.
+Table 2. Subsamples Properties
+
+Table 1. Sample Properties
+Name
+
+R.A.
+
+Decl.
+
+zspec
+
+MUV
+
+Ref.
+
+(deg)
+
+(deg)
+
+(1)
+
+(2)
+
+(3)
+
+(4)
+
+(5)
+
+(6)
+
+00020961
+CEERS 00542
+CEERS 00044
+CEERS 00534
+CEERS 00829
+CEERS 80374
+CEERS 00439
+CEERS 00498
+10013905
+CEERS 01038
+00008079
+10013682
+CEERS 01163
+CEERS 80432
+CEERS 80372
+CEERS 80239
+CEERS 80445
+CEERS 00689
+CEERS 00686
+CEERS 01023
+CEERS 01027
+00021842
+CEERS 00003
+CEERS 01149
+00008013
+EGS z910 44164
+
+53.13423
+214.831624
+215.001115
+214.859117
+214.861594
+214.898074
+214.825364
+214.813045
+53.11833
+215.039697
+53.15283
+53.16746
+214.990468
+214.812056
+214.927798
+214.896054
+214.843115
+214.999053
+215.150862
+215.188413
+214.882994
+53.15682
+215.005189
+215.089714
+53.16446
+215.218762
+
+-27.76891
+52.831505
+53.011269
+52.85364
+52.876159
+52.824895
+52.863065
+52.834249
+-27.76901
+52.9015971
+-27.80194
+-27.77201
+52.9719902
+52.746747
+52.850003
+52.869853
+52.747886
+52.9419767
+52.9895618
+53.0336473
+52.8404159
+-27.76716
+52.99658
+52.9661828
+-27.80218
+53.0698619
+
+7.045
+7.064
+7.104
+7.115
+7.167
+7.174
+7.179
+7.179
+7.197
+7.201
+7.260
+7.275
+7.455
+7.477
+7.483
+7.487
+7.509
+7.552
+7.752
+7.781
+7.834
+7.980
+8.005
+8.184
+8.473
+8.615
+
+-18.840
+-19.89
+-19.36
+-20.1
+-19.57
+-18.09
+-19.25
+-20.18
+-18.800
+-19.2
+-17.950
+-17.000
+> −20.78
+-20.05
+-19.27
+-17.92
+-19.66
+> −20.93
+> −20.42
+-21.06
+-20.73
+-18.590
+-18.64
+-20.83
+-17.540
+-21.63
+
+CEERS 90671
+CEERS 1019
+
+214.961276
+215.035391
+
+52.842364
+52.8906618
+
+8.637
+8.683
+
+-18.7
+-22.07
+
+CEERS 43833
+CEERS1 6059
+10058975
+00006438
+MACS0647-JD†
+CEERS2 588‡
+Maisie’s Galaxy‡
+(CR2-z12-1)
+
+214.938625
+215.011706
+53.11243
+53.16735
+101.982213
+214.906625
+214.943167
+
+52.911750
+52.988303
+-27.77461
+-27.80750
+70.2432667
+52.9115278
+52.9424417
+
+8.763
+8.873
+9.433
+9.689
+10.17
+11.04
+11.40
+
+-20.40
+-20.75
+-20.355
+-19.270
+-20.3
+-20.4
+-20.1
+
+l,m
+h
+h
+h
+h
+h
+h
+h
+l,m
+h
+l,m
+l,m
+h
+h
+h
+h
+h
+h
+h
+h
+h
+l,m
+h
+h
+l,m
+f,j
+h,d
+b,d
+h,j,k
+i,g,d
+c,h
+c,d,h
+l,m
+l,m
+d,e
+d
+a,d
+
+⟨z⟩
+
+ID
+
+N
+
+zlower
+
+zupper
+
+(1)
+
+(2)
+
+(3)
+
+(4)
+
+(5)
+
+#1
+#2
+#3
+#4
+
+7
+6
+7
+7
+
+7.12
+7.44
+8.28
+9.91
+
+7.045
+7.197
+7.834
+8.763
+
+7.179
+7.781
+8.683
+11.40
+
+(mag)
+
+Note— (1): Name. (2): Right ascension of the object’s coordinate. (3):
+Declination of the object’s coordinate. (4): Spectroscopic redshift. (5):
+Absolute UV magnitude. (6): References for spectroscopic redshifts and
+UV magnitude:a.) Arrabal Haro et al. (2023a), b.) Arrabal Haro et al.
+(2023b), c.) Fujimoto et al. (2023a), d.) Harikane et al. (2023), e.) Hsiao
+et al. (2023), f.)Larson et al. (2022), g.) Larson et al. (2023), h.) Nakajima
+et al. (2023), i.) Sanders et al. (2023), j.) Tang et al. (2023), k.) Zitrin
+et al. (2015), l.) Bunker et al. (2023), m.) Jones et al. (2023)
+All spectroscopic data are from CEERS program except for the spectroscopic data of the object name with † and ‡ are from GO-1433 and DDT2750 programs, respectively.
+
+iterations of bootstrap resampling. During each resampling, we fluctuate the observed flux at each pixel with
+Gaussian noise accordingly to the original error spectrum to consider the measurement error as well. We
+present the stacked spectra from all subsamples in Fig-
+
+Note— (1): ID for a subsample. (2):
+Size of a subsample. (3): Representative (i.e., the average) redshift of
+galaxies in a subsample. (4): Lowest redshift of galaxies in a subsample. (5): Highest redshift of galaxies in a subsample.
+
+ure 5. Fluxes of the composite spectra are normalized
+at the rest frame 1450 Å. As shown in Figure 5, we can
+clearly see the softening break feature at the rest-frame
+1216 Å towards the high redshift, suggesting increasing
+Lyα damping wing absorptions due to increasing xH i
+with redshifts.
+
+3.3. Spectral Fitting
+
+To further confirm the redshift evolution of Lyα damping wing absorption, we measure the IGM Lyα damping
+wing absorption. At the same time, we also consider
+the effect on the shape of Lyman break from the intrinsic galaxy’s property such as stellar mass. Because
+the interpretation of spectral fitting using stacked spectrum would be complicated as spectra of galaxies with
+different physical properties are mixed together, we fit
+individual galaxy’s spectrum individually and consider
+marginalized posterior distributions for damping wing
+parameters. For the fitting, we use the observed spectra in the wavelength range above the rest-frame 1000
+Å without masking Lyα emission. We included data
+at shorter wavelength value than the rest-frame Lyα
+(i.e., 1216 Å) to consider the effect of higher flux transmission due to large surrounding ionized bubble. We
+generate model spectrum in forward modeling manner
+to compare the observed spectrum to model spectrum.
+We first generate the model spectra incorporating stellar and nebular emission. We also add Lyα emission
+prior to applying the Lyα absorption. Then, we apply
+Lyα absorption to the intrinsic model spectrum. After
+applying Lyα absorptions, we smooth the model spectra
+
+Measurements of xHI and Ionized Bubble Sizes at z = 7 − 12
+
+7
+
+Figure 5. Stacked spectra of our galaxy sample binned into four redshift bins. The dark blue, pale blue, pink, and red solid
+lines (shades) represent the stacked spectra (uncertainties) for the redshift bins at ⟨z⟩ =7.12, 7.44, 8.28, and 9.91, respectively.
+The wavelength is shifted to the rest frame and the flux is normalized at 1450 Å at which the IGM absorption have negligible
+impact on the spectrum. The black vertical dotted line represent the position of the rest-frame 1216 Å. The horizontal solid
+line indicates the position of the flux value at zero.
+Table 3. Prior Distributions for Fitting Parameters
+log M⋆
+(M⊙ )
+
+log(SF Ri+1 /SF Ri )
+
+τ
+
+5500Å
+
+log U
+
+xH i
+
+(i = 1, 2, 3, 4, 5)
+
+log Rb
+
+log NH i
+
+∆v,DLA
+
+(cMpc)
+
+−2
+
+−1
+
+(cm
+
+)
+
+(km s
+
+)
+
+σv
+−1
+
+(km s
+
+log EWα,0
+)
+
+(Å)
+
+(1)
+
+(2)
+
+(3)
+
+(4)
+
+(5)
+
+(6)
+
+(7)
+
+(8)
+
+(9)
+
+(10)
+
+U(6,11)
+
+t(0,0.3,2)
+
+U(0,2)
+
+U(-6,2)
+
+U(0,1)
+
+U(-1,3)
+
+U(10,23)
+
+N(0,300)
+
+U(0,100)
+
+U(-3,3)
+
+Note— (1): Total stellar mass. (2): Star formation rate ratio for six star formation history bin. (3): Optical depth at
+5500 Å for dust attenuation law by Calzetti et al. (2000). (4): Ionization parameter. (5): Neutral hydrogen fraction. (6):
+Ionized bubble radius. (7): Neutral hydrogen column density for CGM. (8): Velocity offset for CGM relative to galaxy
+systemic redshift. (9): Velocity dispersion for CGM. (10): Intrinsic Lyα equivalent width.
+N(µ, σ) is a normal distribution with mean µ and variance σ 2 . U(a, b) is a uniform distribution between a and b. t(µ,
+σ, ν) is a student’s t distribution with mean µ, scale factor σ, and degree of freedom ν.
+
+with line spread function of PRISM provided by STScI
+to account for the instrumental broadening. 2
+We use a SED fitting code based on prospector
+(Johnson et al. 2021) to generate model galaxy spectra
+with various stellar population and nebular properties.
+We use the Binary Population and Spectral Synthesis
+(BPASS; Eldridge et al. 2017) model as an isochrone library. We allow different non-parametric star formation
+2 https://jwst-docs.stsci.edu/jwst-near-infrared-spectrograph/
+
+nirspec-instrumentation/nirspec-dispersers-and-filters
+
+history (SFH), stellar mass (M⋆ ), ionization parameter
+(log U ), and dust attenuation. We adopt the star formation history in the same manner as Harikane et al.
+(2023). We also allow different stellar mass in the range
+of 6 < M⋆ < 11, which fully covers the mass range of
+z > 7 galaxies estimated in Nakajima et al. (2023) and
+Harikane et al. (2023). For the dust attenuation, we apply the attenuation law by Calzetti et al. (2000) and use
+an optical depth at 5500 Å as a free parameter. We also
+include nebular emission continuum and lines, but we
+treat Lyα emission line separately as we describe later
+in this section. We fix stellar/nebular metallicity to 10%
+
+8
+
+Umeda et al.
+
+solar metallicity as suggested for JWST high-z galaxy by
+recent work of Nakajima et al. (2023). We set the same
+prior distributions for free stellar/nebular parameters as
+adopted in Nakajima et al. (2023).
+For Lyα absorption, we consider Lyα absorption by
+both IGM and circum-galactic medium (CGM). We define the intrinsic Lyα emission as the Lyα emission before encountering CGM/IGM absorption. For intrinsic
+Lyα emission, we let the equivalent width of the intrinsic Lyα emission line (log EWα,0 ) free in the range of
+−3 < log EWα,0 /Å < 3. In this way, we can consider
+both extreme and negligible (i.e., low escape fraction)
+contribution of Lyα emission to the shape of Lyman
+break. We discuss about the validity of Lyα emission
+line strengths in Section 4.2. We fix the velocity offset
+and dispersion of the Lyα emission line to +200 km/s
+and 250 km/s, respectively. We also discuss about how
+this assumption on the velocity offset affect the result in
+Section 4.5. For Lyα absorptions, we adopt the formulation given by equation 2 for the IGM absorption with
+xH i and log Rb as free parameter. For the H i absorption by CGM, we consider the Voigt profile with different
+neutral hydrogen column density (log NH i ), velocity dispersion (σv ), and velocity offset relative to the systemic
+redshift (∆v,DLA ). We summarize our fitting parameters
+and corresponding prior distributions in Table 3.
+We run Markov Chain Monte Carlo (MCMC) method
+to obtain the posterior probability distribution functions (PDFs) of free parameters. To take an account of
+variance in galaxy’s intrinsic spectral properties in estimating Lyα absorption parameters, we simultaneously
+fit for the stellar, nebular, and absorptions. We use a
+package created based on emcee (Foreman-Mackey et al.
+2013) called ptemcee (Vousden et al. 2021) for MCMC.
+ptemcee incorporates parallel tempering technique that
+realizes faster sampling convergence in case of multimodal posterior probability distribution functions. We
+run four temperature parallel tempering MCMC sampler of 80 walkers for each temperature with 5000 steps.
+We discard first 1000 steps of each walker to diminish
+the dependence of posterior PDFs to initial parameter
+distributions.
+We infer the best-fit parameters from the posterior
+PDFs. Because a median value does not well represent
+the skewed posterior distribution, we define the bestfit parameter by the mode (i.e., a peak of the posterior
+distribution) and uncertainty by 68th percentile highest
+posterior density interval (HPDI; i.e., a narrowest interval containing 68%) of the posterior PDFs. To obtain
+mode of 1D marginalized posterior PDF for each parameter, we smooth the distribution by Kernel Density
+Estimation smoothing using scipy package (Virtanen
+
+et al. 2020) and choose the mode within an HPDI of 1D
+posterior distribution. We also calculate the posterior
+probability distribution within each redshift bin (hereafter, binned posterior PDF) in the following manner:
+p(D|θ)p(θ)
+p(D)
+"N
+#
+Y p(Di |θ)p(θ)
+=
+p1−N (θ)
+p(D
+)
+i
+i
+"N
+#
+Y
+=
+p(θ|Di ) p1−N (θ).
+
+p(θ|D) =
+
+(4)
+
+i
+
+Here, p(·), θ, N , and Di (D ≡ {Di }i=1,...,N ) represent the probability density, free parameters, number of
+galaxy in each redshift bin, and i-th (all set of) galaxy
+spectral data in each bin, respectively. In equation 4,
+we assume
+N
+Y
+p(Di ),
+p(D) =
+i
+
+p(D|θ) =
+
+N
+Y
+
+(5)
+p(Di |θ).
+
+i
+
+We utilize the posterior PDF for individual galaxies (i.e.,
+p(θ|Di )) obtained with MCMC to calculate the binned
+posterior PDFs. We obtain the best-fit value for each
+redshift bin in the similar manner as for the individual
+galaxies.
+3.4. Fitting Results
+In Figure 6, we show the binned posterior PDF of
+the parameter of xH i and log Rb for each redshift bin.
+The solid (dashed) contour represents the 68-(90-)th
+percentile range for 2D marginalized PDFs. The top
+two panels in corner diagrams represent the marginalized probability density function of the xH i and log Rb .
+We summarize the best-fit parameters in Table 4. For
+the results of the #4 bin, we obtain very high xH i and
+small Rb values (i.e., xH i ∼ 1, Rb < 1 cMpc) as similar
+as the ones reported for a z = 10.17 galaxy in Hsiao et al.
+(2023). For the z ∼ 7 galaxies, our xH i is not well constrained as one can see from the marginalized PDF. The
+reason for tighter constraint on log Rb compared to that
+for xH i could be attributed to the strong dependence of
+log Rb value to the position of observed Lyman break
+relative to the systemic redshift. Moreover, the reasons
+for having sharp peaks for log Rb compared with that
+for xH i could be attributed to that Lyα damping wing
+shapes are more sensitive log Rb than for xH i as log Rb
+have uniform prior distributions based on logarithmic
+form, unlike the linearly uniform prior distributions for
+xH i . Logarithmically changing log Rb values have a little impact on the shape of model spectra, in another
+
+Measurements of xHI and Ionized Bubble Sizes at z = 7 − 12
+Table 4. Best-fit Estimate for xH i and
+log Rb
+ID
+
+⟨z⟩
+
+xH i
+
+log Rb
+[cMpc]
+
+(1)
+
+(2)
+
+(3)
+
+(4)
+
+#1
+
++0.06
+7.12−0.08
+
++0.18
+0.53−0.47
+
++0.14
+1.67−0.16
+
+#2
+
++0.34
+7.44−0.24
+
++0.27
+0.65−0.34
+
++0.34
+1.53−1.48
+
+#3
+
++0.41
+8.28−0.44
+
++0.09
+0.91−0.22
+
++0.47
+0.70−1.04
+
+#4
+
++1.49
+9.91−1.15
+
++0.08
+0.92−0.10
+
++0.89
+−0.69−0.24
+
+Note— (1): ID for each subsample. (2):
+Mean redshift and the lower/upper boundary of a subsample. (3): Mode value and
+upper/lower limit of HPDI of xH i for the
+stacked marginalized PDFs in each redshift
+bin. each redshift bin. (4): Mode value and
+upper/lower limit of HPDI of log Rb for the
+stacked marginalized PDFs in each redshift
+bin.
+
+word the likelihood values do not change dramatically,
+when the log Rb is considerably small. This is reflected
+on the low and flat posterior probability values at small
+log Rb range and sharp peaks around the best-fit values
+in Figure 6. We also confirm similar behaviors for posterior probability distribution for log Rb for individual
+galaxies. We note that narrowing down the range of flat
+priors for log Rb does not affect the best-fit value as it
+is defined by the mode, but the lower bound for uncertainty would increase if we adopt higher value for the
+lower bound of the flat prior.
+In Figure 7, we also present examples of our spectrum fitting for individual objects. From the top
+to bottom panels, we show the fitting results for
+CEERS 1019, CEERS2 588, and 00021842, respectively.
+For CEERS 1019, strong IGM absorption with xH i =
+0.91+0.09
+−0.45 and an ionized bubble size of log Rb /cMpc =
+0.82+0.61
+−0.45 explains moderately softened break feature
+around the rest-frame 1216 Å of the observed spectrum. For CEERS2 588, in addition to strong IGM absorption (i.e., xH i ∼ 1) and small ionized region (i.e.,
+log Rb /cMpc < 0), Lyα damping wing absorption by
+CGM with H i column density of log NH i /cm−2 > 22
+surrounding the galaxy explains strongly softened break
+feature around the rest-frame 1216 Å. In contrast, the
+sharp and blue-shifted break feature at the rest-frame
+1216 Å for 00021842 can be explained with Lyα emission together with high Lyα transmission environment
+realized with small IGM absorption (i.e., xH i ∼ 0) and
+a large ionized bubble (i.e., log Rb /cMpc > 1).
+
+9
+
+4. DISCUSSION
+
+4.1. Lyα Absorption by CGM
+In Figure 8, we summarize the best-fit estimation of
+neutral hydrogen column density of H i gas in CGM
+by redshift. In the same figure, we also present the
+measured neutral hydrogen column density of z ∼ 0
+metal-poor galaxies (Hernandez et al. 2020), z ∼ 0 green
+pea galaxies (McKinney et al. 2019), gamma ray bursts
+(Tanvir et al. 2019), and recent z > 8 bright galaxies
+(Heintz et al. 2023). Measured neutral hydrogen column
+density spans up to the range of damped Lyα absorbers
+(DLA; NH i > 2 × 1020 ). Moreover, neutral hydrogen
+column density reaches up to ≳ 1022 cm−2 for some objects, suggesting a existence of extreme reservoir of neutral hydrogen gas around some of the z > 7 galaxies as
+suggested by Heintz et al. (2023). We compare the neutral hydrogen column density measurement of overlapping three galaxy between our sample and Heintz et al.
+(2023)’s and find that our measurements are consistent
+within errorbars with Heintz et al. (2023)’s. This consistency further solidifies the validity of our analysis and
+the existence of high-z extreme DLA.
+4.2. Escape Fraction
+As the existence of extremely high neutral hydrogen
+column density CGM is suggested around some of the
+z > 7 bright galaxies, we consider how much Lyα emission can escape to the IGM (i.e., Lyα escape fraction
+fesc,Lyα ). We estimate fesc,Lyα by comparing the Lyα
+emission flux after the absorption by CGM and the intrinsic Lyα emission flux. For the intrinsic Lyα emission
+flux, we use cloudy prediction calculated by Byler et al.
+(2017) as Prospector adopts. We note that we do not
+apply IGM absorption to calculate fesc,Lyα . We also
+estimate E(B − V ) using sampled posterior PDFs of optical depth at 5500 Å by dust attenuation. In Figure
+9, we plot estimated E(B − V ) and fesc,Lyα and compare with local relation discussed in Atek et al. (2014).
+As shown in Figure 9, best-fit value for our fesc,Lyα are
+below unity, which means that Lyα emission strength
+applied in our analysis does not violate prediction from
+photoionization models. Moreover, our estimates for
+fesc,Lyα are roughly consistent with the local relation
+between E(B − V ) and fesc,Lyα , although some of our
+fesc,Lyα values are smaller than the local trend. Because
+emission line flux is smoothed in low-resolution PRISM
+spectra, fesc,Lyα cannot be well constrained for smaller
+values. Moreover, galaxy sample used to derive the relation in Atek et al. (2014) is partially selected based on
+the Lyα emission detection. In contrast, we construct
+our galaxy sample based on the brightness of continuum
+(i.e., UV magnitude), so it is natural to have our fesc,Lyα
+
+10
+
+Umeda et al.
+
+Figure 6. The posterior probability distribution function (PDF) of xH i and log Rb for each subsample. The results for #1 to
+#4 bin are shown in order of top left to right bottom. The darkness in the 2D-marginalized PDFs represent the probability
+density. The solid and dotted contours represent the 68 and 90-th percentiles, respectively. Top panel corresponds to the 1D
+marginalized PDF for each parameter. The presented PDFs are smoothed by gaussian kernel.
+
+Measurements of xHI and Ionized Bubble Sizes at z = 7 − 12
+
+11
+
+Figure 7. Fitted spectrum for the case of moderate, strong and weak Lyα damping wing absorption feature seen in CEERS 1019,
+CEERS2 588, and 000012842 from the top to bottom panels, respectively. The black line and shade represent the observed
+spectrum and its error. The red (blue) line and shade represent the model spectrum and its uncertainty after (before) Lyα
+absorptions applied and smoothed with PRISM resolution. The black dotted line represent the rest-frame 1216 Å at the systemic
+redshift. The inset panel shows zoom-in view of the spectrum around the rest-frame 1216 Å. The best-fit values and uncertainties
+for xH i , log Rb , and log NH i for each objects are also written inside each panel. The x-axes at the top and bottom of each panel
+represent the observed and rest-frame wavelength, respectively.
+
+12
+
+Umeda et al.
+
+Figure 8. Neutral hydrogen column density of Lyα absorption by H i gas at different redshifts. The red circles (bars) represent
+log NH i measurements (uncertainties). The blue upward triangles, gray squares, and yellow downward triangles, and black
+diamonds represent the log NH i measurements (uncertainties) of z ∼ 0 green pea galaxies (McKinney et al. 2019), z ∼ 0 metal
+poor galaxies (Hernandez et al. 2020), gamma ray bursts (Tanvir et al. 2019), and z > 9 Lyman break galaxies (Heintz et al.
+2023), respectively.
+
+to lie on or below the local trend of Atek et al. (2014). In
+any case, we have confirmed that our treatment of Lyα
+emission is physical and consistent with observational
+trend.
+4.3. Cosmic Reionization History
+In Figure 10, we plot our xH i constraints and the uncertainties in red circle and bars, respectively. We also
+show literature values of xH i at different redshift including the constraint suggested by the electron scattering from the cosmic microwave background observations (Planck Collaboration et al. 2020b) and Lyα
+damping wing measurements of QSO spectra (Schroeder
+et al. 2013; Davies et al. 2018; Greig et al. 2019; Wang
+
+et al. 2020), GRB spectra (Totani et al. 2006, 2014),
+and recently obtained JWST galaxy spectra in others
+works (Curtis-Lake et al. 2023; Hsiao et al. 2023). Optical depth measurements using QSOs Gunn Peterson
+troughs around z ∼ 5 − 6 place the constraints on the
+end of the epoch of reionization (Fan et al. 2006). We
+additionally show other xH i constraints from galaxy observations including the ones inferred from Lyα luminosity function (Ouchi et al. 2010; Konno et al. 2014;
+Inoue et al. 2018; Konno et al. 2018; Morales et al.
+2021; Goto et al. 2021), Lyα emitter (LAE) clustering analysis (Ouchi et al. 2018), Lyα+Lyβ dark fraction/gaps (Mesinger et al. 2015; Jin et al. 2023; Zhu et al.
+2022), and Lyα emission lines of Lyman-break galaxies
+
+Measurements of xHI and Ionized Bubble Sizes at z = 7 − 12
+
+Figure 9. Relation between E(B − V ) and Lyα escape
+fraction. The red circle and bars (arrows) represent best-fit
+and errors (upper limits) for our galaxy sample. The grey
+circle represent the measurement of z ∼ 0 galaxies presented
+in left panel of Figure 10 from Atek et al. (2014). The black
+dotted line and yellow shades represent the best-fit relation
+and its errors between E(B − V ) and fesc,Lyα for z ∼ 0
+galaxies as presented in Atek et al. (2014).
+
+(Mesinger et al. 2015; Hoag et al. 2019; Mason et al.
+2019; Jung et al. 2020; Whitler et al. 2020; Bruton et al.
+2023; Morishita et al. 2023). For the xH i estimate from
+Curtis-Lake et al. (2023), we adopt the values shown in
+Figure 3 of the corresponding paper.
+We overplot three distinct evolutionary models by
+Naidu et al. (2020), Finkelstein et al. (2019), and Ishigaki et al. (2018) (hereafter, Naidu model, Finkelstein
+model, Ishigaki model, respectively) in orange dashed,
+blue solid, and purple dotted lines, respectively. We
+adopt Model II described in Naidu et al. (2020) as Naidu
+model. Note that the difference between redshift evolution of xH i in Model I and II in Naidu et al. (2020) is
+insignificant compared to relatively large errorbars for
+current xH i measurements. These evolutionary models differ in the prescription for the escape fraction fesc
+and the faint end slope α of the UV luminosity functions. Naidu model assumes that fesc correlates with
+the star formation surface density ΣSFR with a shallow faint end slope (i.e, α > −2), resulting in a late and
+rapid cosmic reionization history driven by a small number of bright galaxies. Finkelstein model assumes that
+fesc anti-correlates with halo mass Mhalo and a steep
+
+13
+
+faint end slope (i.e, α < −2), resulting in an extended
+xH i evolution driven by many faint galaxies. Ishigaki
+model assumes the constant fesc value at ≃ 0.17 with a
+steep UV faint end slope (i.e, α < −2). Ishigaki model
+results in a moderately late cosmic reionization consistent with the one suggested by an electron scattering
+of the cosmic microwave background. We summarize
+the prescriptions for each model in Table 5. As shown
+in Figure 10, the best estimate of our xH i consistent
+with all three evolutionary models and the constraints
+inferred from the electron scattering of CMB.
+In Figure 10, we also overplot the xH i values at z ≈ 7
+estimated by Umeda (2023) from Lyα luminosity function and clustering properties of LAEs as pink circle
+and square, respectively. Umeda (2023) derive Lyα luminosity function and LAE spatial angular correlation
+function using the z = 6 − 7 photometric LAE catalogs constructed by Ono et al. (2021) from the Public
+Data Release 2 data of the Hyper Suprime-Cam Subaru Strategic Programs (Aihara et al. 2019). Umeda
+(2023) estimate xH i from Lyα luminosity function and
+angular correlation function of LAEs in a similar manner as Konno et al. (2018), Ouchi et al. (2018), and
+Goto et al. (2021). The z = 6 − 7 LAE catalog of Ono
+et al. (2021) is the largest in sample size with a total
+of 3561 galaxies, thus the xH i estimates from Umeda
+(2023) have advantages in terms of the reduced statistical uncertainty for estimated Lyα luminosity function
+and angular correlation functions. For the xH i estimate
+from Lyα luminosity function, Umeda (2023) first compared the luminosity density at z = 5.7 and z = 6.6 to
+derive IGM transmission of Lyα. Then, Umeda (2023)
+estimate xH i from the IGM transmission using the analytical relation between IGM transmission of Lyα, xH i ,
+and the ionized bubble size from Dijkstra (2014) and
+the semi-numerical relation between xH i and Rb from
+Furlanetto & Oh (2005). For the xH i estimate from LAE
+clustering analysis, Umeda (2023) compared the derived
+galaxy bias evolution from z = 5.7 to z = 6.6 to the
+semi-numerical prediction of galaxy bias at z = 6.6 with
+different xH i by Furlanetto et al. (2006). By comparing
+the xH i estimate at z > 7 with the one at z < 7 estimated by Umeda (2023), we can confirm smooth monotonic increase of xH i towards the higher redshift. Other
+xH i constraints at z > 7 from the literature are mostly
+consistent with our measurements within error. To summarize, our xH i measurements at z > 7 agree with various constraints, including the ones previously inferred
+from the luminosity function and clustering properties
+of LAEs at z < 7, the electron scattering of CMB, and
+the evolution of UV luminosity function assuming a constant fesc ∼ 0.2.
+
+14
+
+Umeda et al.
+
+Figure 10. Redshift evolution of xH i . The red circle and bars represent the xH i estimates and the uncertainties from our
+work. The pink circle (square) and bars show the xH i estimate and uncertainty from z = 6 − 7 Lyα luminosity function (LAE
+clustering analysis) with data obtained with Subaru/Hyper Suprime Cam (Umeda 2023). The orange dashed, blue solid, and
+purple dotted line and the shaded with corresponding colors are the model and its uncertainty for the redshift evolution of xH i
+predicted by Naidu et al. (2020), Finkelstein et al. (2019), and Ishigaki et al. (2018), respectively. The grey circles and white
+squares represent the xH i estimation from Lyα luminosity function (Ouchi et al. 2010; Konno et al. 2014; Inoue et al. 2018;
+Konno et al. 2018; Morales et al. 2021; Goto et al. 2021) and LAE clustering analysis (Ouchi et al. 2018), respectively. The
+white and grey triangles represent the xH i estimation by QSOs Gunn Peterson troughs (Fan et al. 2006) and Lyα+Lyβ dark
+fraction/gaps (Mesinger et al. 2015; Jin et al. 2023; Zhu et al. 2022), respectively. The grey and white diamonds represent the
+xH i estimation from Lyα damping wing absorption of QSOs (Schroeder et al. 2013; Davies et al. 2018; Greig et al. 2019; Wang
+et al. 2020) and GRBs (Totani et al. 2006, 2014). The black diamonds represent the xH i estimation from Lyα damping wing
+absorption profile of individual UV spectrum of galaxies (Curtis-Lake et al. 2023; Hsiao et al. 2023). The grey squares represent
+the xH i estimation from Lyα of Lyman-break galaxies (Mesinger et al. 2015; Hoag et al. 2019; Mason et al. 2019; Jung et al.
+2020; Whitler et al. 2020; Bruton et al. 2023; Morishita et al. 2023). The white pentagon represents the xH i estimation from
+the cosmic microwave background observations (Planck Collaboration et al. 2020b).
+
+Measurements of xHI and Ionized Bubble Sizes at z = 7 − 12
+Table 5. xH i Evolution Models
+Model
+
+Naidu
+
+Ishigaki
+
+Finkelstein
+
+fesc
+α
+
+0.4
+∝ ΣSFR
+> −2
+
+0.17
+< −2
+
+−1
+∝ Mhalo
+< −2
+
+Note— Naidu, Ishigaki, and Finkelstein models corresponds to xH i evolution model presented in Naidu et al. (2020), Ishigaki et al.
+(2018), and Finkelstein et al. (2019), respectively. We adopt Model II of the Naidu et al.
+(2020) as Naidu model.
+
+4.4. Bubble Size Evolution
+Beside xH i , the size of the ionized bubble is another
+tracer of cosmic reionization scenarios. Various studies suggest that in the case of inhomogeneous cosmic
+reionization driven by galaxies, the ionized region forms
+around the galaxies and their typical size correlates with
+xH i (e.g., Ciardi & Madau 2003; Furlanetto & Oh 2005;
+Mesinger & Furlanetto 2008a,b; Lu et al. 2023). The size
+of ionized bubble at the EoR has been inferred from the
+Lyα emission line profiles and equivalent widths (e.g.,
+Mason & Gronke 2020; Endsley & Stark 2022; Hayes &
+Scarlata 2023; Jung et al. 2023; Saxena et al. 2023). We
+instead use Lyα damping wing profiles to investigate Rb
+and its evolution with the redshift. We use the best-fit
+parameters presented in Section 3 to see the relation between Rb and xH i . Figure 11 shows the estimated Rb
+values for each redshift bin from our analysis in Section
+3 together with the relation between xH i and Rb predicted from analytical model by Furlanetto & Oh (2005)
+in black dotted lines. Together with our measurements,
+we show xH i and Rb constrained via damping wing absorption analysis in Hsiao et al. (2023). We confirm that
+our constraint for the redshift bin of ⟨z⟩ = 9.91 is consistent with xH i and Rb measurements for z = 10.17
+object by Hsiao et al. (2023). In contrast, the recent
+bubble size measurement by Fujimoto et al. (2023b) for
+z = 8.51 object suggests a bubble size of Rb = 71.9 ± 1.0
+cMpc. This bubble size value is about a dex larger than
+our constraint at the redshift bin of ⟨z⟩ = 8.28. As
+Fujimoto et al. (2023b) discusses in their paper, this
+large offset of bubble size measurement could be physically attributed to specifically strong ionizing radiation
+by two possible AGN candidates with only a separation
+of 380 kpc within the same ionized bubble. We also plot
+the xH i and Rb relation for the rapid and gradual cosmic reionization history predicted from a semi-numerical
+simulations by Lu et al. (2023) in solid and dashed lines,
+respectively. Lu et al. (2023)’s predictions take into account of the overlap of the ionized regions formed around
+
+15
+
+UV bright (MUV < −20) galaxies that are comparable
+to those for the majority of galaxies in our sample. Incorporation of the overlaps between ionized yields systematically larger Rb at each xH i compared with the
+ones predicted by Furlanetto & Oh (2005), which do
+not consider the overlaps. As shown in Figure 11, our
+Rb estimate at each xH i is up to few dex larger than the
+one predicted by theoretical relations of Furlanetto &
+Oh (2005), shown as the dotted line. However, our Rb
+estimates are consistent with in errorbars with the ones
+predicted by Lu et al. (2023) that consider the overlaps
+of ionized regions, confirming the importance of considering the overlaps to characterize the typical ionized
+bubble shapes during the EoR. Our inferred ionized bubble size is unexpected from the previous Lyα forest measurement. Lyα optical depth calculated based on our inferred z ∼ 7 − 7.5 ionized bubble radius is only found at
+z ≲ 3 by QSO Lyα forest measurements by Becker et al.
+(2013). However, the Lyα optical depth measurement
+of Becker et al. (2013) does not incorporate contributions from high Lyα transmission at the proximity zone
+of the background QSO. Because our galaxies could be
+located at the overdensed region with a number of ionizing sources, we must consider the proximity effect to
+have a fair comparison between our z > 7 Lyα transmission estimate and those at z < 7. When we compare
+our bubble size estimates to the previous measurement
+from QSO observations, our best-fit bubble radii estimates (i.e., ∼ 102 cMpc) at z < 8 are even larger than
+the size of proximity zone around the brightest z ∼ 6
+QSOs (i.e., ≲ 10 cMpc)(e.g., Eilers et al. 2018; Keating
+et al. 2023). Despite our bubble size estimates and the
+QSO proximity zone size does not have strong discrepancy because of the large errorbars for our measurement,
+one possibility to explain QSOs having smaller ionized
+region surrounding it than galaxy is that the QSO have
+shorter duty cycle than that of galaxies. Because gas
+needs to be irradiated by ionizing radiation long enough
+to form proximity zone, short QSO lifetime (< 105 yr)
+has been proposed to explain small proximity observed
+at z ∼ 6 QSOs (Davies et al. 2018). The steady supply
+of ionizing photons through continuous star formation in
+galaxies could possibly enlarge the ionized bubble size
+more efficiently than young or short lived QSOs discovered at z > 6. Precise Rb measurements in the future
+would be useful to distinguish different cosmic reionization scenarios (specifically on the formation process of
+ionized regions) that yield different xH i and Rb relations.
+
+4.5. Possible Systematics
+
+16
+
+Umeda et al.
+
+Figure 11. xH i and Rb estimates from different redshift bins. The red squares and bars represent our estimates and the errors,
+respectively, of (xH i , log Rb ) at the redshift bin #1, #2, #3, and #4. Black square and arrows corresponds to 1σ upper and lower
+limits of xH i and Rb , respectively, on MACS0647 JD (z = 10.17) by Hsiao et al. (2023). Faint grey circles and bars represent the
+best-fit value and its error for individual galaxies. Solid and dashed lines correspond to the theoretical prediction by Lu et al.
+(2023) on the characteristic ionized bubble radii at different xH i assuming rapid and gradual cosmic reionization considering
+overlapping ionized regions, respectively. The dotted line corresponds to the analytical relation between characteristic ionized
+bubble radii and xH i without considering overlapping ionized regions (Furlanetto & Oh 2005).
+
+Although we consider the ionized bubbles surrounding the galaxies and H i absorption by CGM when we
+fit the spectra for the Lyα damping wing absorptions,
+there are still some possible systematics that we could
+consider for more accurate estimation. For example, the
+results from semi-numerical simulations suggest that our
+method assuming homogeneous IGM could overestimate
+the xH i values by ∼ 30% at the middle stage of cosmic
+reionization (Mesinger & Furlanetto 2008a,b). Keating
+et al. (2023) also suggest the simple analytical formulation using Miralda-Escudé (1998) does miss out some
+of the physics related Lyα absorption that are seen in
+
+the simulation results (i.e., the contributions of residual H i gas inside the ionized bubble to the Lyα optical
+depth). On the otherhand, the results from different numerical simulation with various box size yield different
+predictions on the evolution of key cosmic reionization
+parameters (i.e., Keating et al. 2023; Lu et al. 2023), indicating better interpretation of the Lyα damping wing
+absorption measurements requires further improvements
+in both simulation and observations.
+Another source of systematics is a biased sampling of
+galaxies in physical properties such as UV-luminosity.
+Although we could use the simulation prediction suit-
+
+Measurements of xHI and Ionized Bubble Sizes at z = 7 − 12
+able for the observed galaxies (e.g., UV-bright galaxies
+residing at overdensed region; Lu et al. 2023) to infer
+cosmic reionization parameters, we ideally need to know
+the optical depths of as many unbiased sight lines as possible to precisely estimate the volume-averaged neutral
+fraction of the universe with a minimum dependency
+on the simulation models. Moreover, we must investigate the evolution and diversity of physical properties
+of the intrinsic UV spectrum of galaxies that are still
+not well studied above z > 7 (e.g., UV-slope, ionizing
+photon production efficiency, etc.) With increase in size
+of z > 7 galaxy sample, we could construct composite galaxy spectra from galaxy subsamples with more
+homogeneous physical properties (i.e., MUV ) as it has
+been done for z < 6 galaxies (e.g., Cullen et al. 2019,
+2020). Analyzing a composite spectrum from a uniform
+galaxy sample has a potential for the estimation of average Lyα IGM absorption with high S/N at the same
+time minimizing the impact of variations in intrinsic
+spectral shapes.. In addition to the uncertainty in UV
+spectrum of galaxies, uncertainty in Lyα lines are also
+crucial in interpretation of the damping wing features
+seen in low-resolution PRISM spectra. Although most
+of the z > 7 Lyα detected galaxies have the velocity offset similar to that for our model (i.e., 200 km/s; Nakane
+et al. 2023), there are some reports of z > 7 galaxies
+with large Lyα velocity offsets as large as ∼ 500 km/s
+(e.g., Tang et al. 2023). Such a large Lyα velocity offset could result in higher Lyα transmission, which then
+mimic the spectra of galaxy surrounded by large ionized bubble in low-resolution data (e.g., Keating et al.
+2023). We conduct same analysis as described in Section 3.1 but with Lyα velocity offset fixed at 500 km/s,
+and confirmed that xH i and log Rb estimates for velocity
+offset at 200 km/s and 500 km/s are consistent within
+errorbars for all redshift bins. The bubble size estimate
+for the two lower redshift bins (i.e., redshift bins with
+log Rb /cMpc ∼ 2 for fixed Lyα velocity offset at 200
+km/s) with the velocity offset at 500 km/s change only
+by ≲ 0.2 in log Rb values, while errorbars remain as large
+as those for 200 km/s. This reflects the fact that we do
+not marginalize the intrinsic Lyα equivalent width over
+any other physical values, thus the effect of change in
+velocity offset is compensated by a change in the intrinsic Lyα emission strength. This demonstration suggests
+the importance of sophisticated Lyα emission modeling
+based on both observation and simulation for precise
+damping wing parameter measurements.
+In terms of the systematics from data reduction, the
+damping wing analysis with low-resolution PRISM data
+introduces uncertainties in spectroscopic redshift and
+the degenerating components around Lyman break (e.g.,
+
+17
+
+Lyα emission, Lyα absorption by IGM/CGM). Additionally, as Jones et al. (2023) shown, NIRSpec/PRISM
+spectra have systematics in the wavelength resolution
+depending on the compactness of the object. This could
+also be a potential source of the systematics in the redshift determination and damping wing absorption measurement using PRISM spectra. The redshift uncertainty of ∆z ∼ ±0.01 as suggested by Jones et al. (2023)
+give a slight systematics of ∼ 0.1 for HPDI of xH i for the
+individual galaxy. This systematics is insignificant compared to the current large uncertainty of xH i (∼ 0.5).
+Lastly, we investigate how the instrumental broadening in PRISM spectrum affect Lyα damping wing profile fitting using real observation data. Here, we consider a spectroscopically confirmed galaxy at z ∼ 9
+called Gz9p3 (e.g., Boyett et al. 2023) as a test case.
+Gz9p3 is a suitable object to check how the instrumental broadening affect the parameter estimation for
+damping wing absorption, because its UV-continuum
+and Lyman break are detected in the high spectral resolution (R ∼ 2700) data (Boyett et al. 2023; Harikane
+et al. 2023). JWST/NIRSpec data of Gz9p3 is obtained
+in the observation of GLASS (ERS-1324; PI. T. Treu;
+Treu et al. 2022). Gz9p3’s spectral data is taken in
+high dispersion grating filter pairs of F100LP/G140H,
+F170LP/G235H, and F290LP/G395H, with exposure
+time of 4.9 hours for each configuration. In this paper, we use the high dispersion grating data reduced
+by Harikane et al. (2023). We adopt the spectroscopic
+redshift of z = 9.313 determined using [O ii]λ3727 and
+[Ne iii]λ3869 (Harikane et al. 2023). We use 1D spectrum data in the wavelength range of the 1.00-1.37, 1.701.95, 2.10-2.47, and 2.90-4.19 µm. To generate the mock
+PRISM spectrum of Gz9p3, we forward model by conducting 1000 steps of Monte Carlo simulation. For each
+step of Monte Carlo simulation, we fluctuate the original high dispersion 1D spectrum according to the error
+spectrum and then convolve to the resolution of PRISM
+accordingly using the PRISM line spread function provided by STScI. For both high dispersion grating and
+low dispersion prism data, we conduct the spectral fitting in the same manner as described in Section 3.3.
+We show observed and corresponding fitted model spectrum for high dispersion grating and PRISM data for in
+the top and bottom panel of Figure 12, respectively. In
+Figure 13, we show the posterior PDF of the parameter
+related to the Lyα damping wing absorption for Gz9p3.
+The results for high dispersion grating and PRISM data
+are shown in the black and red, respectively. As shown
+in Figure 13, 1D/2D marginalized PDF for high dispersion grating and PRISM data are consistent within 68%
+percentiles. Both high-dispersion grating and PRISM
+
+18
+
+Umeda et al.
+
+results suggests the existence of Lyα damping wing absorption feature suggested by Boyett et al. (2023). Note
+that even with high dispersion grating data, the precision of the parameter estimation does not increase. One
+possibility for the lack of improvement in the parameter
+estimation is that the signal to noise ratio of the high dispersion grating is still low. To summarize, we investigate
+how multiple systematics could affect our Lyα damping
+wing measurement. Obtaining more observational data
+and improvement on data reduction and simulating EoR
+galaxies are needed to further draw definitive conclusion
+on how cosmic reionization proceeds.
+
+Figure 13. The PDFs of Lyα emission and Lyα absorptions
+by H i gas in the CGM/IGM for Gz9p3. The red and black
+colored mark corresponds to the result for high dispersion
+grating and PRISM data, respectively. Two shaded regions
+with different darkness in the bottom left panel correspond
+to the 1, and 2σ regions of the sampled 2-D PDF from the
+darkest to the faintest, respectively. Top panel corresponds
+to the 1D marginalized PDF for each parameter.
+
+Figure 12. Fitted spectrum of Gz9p3 in the high dispersion grating and PRISM data on the top and bottom panels,
+respectively. We show binned spectrum by 10 pixels for the
+visualization purpose. The black line and shade represent
+the observed spectrum and its error. The red (blue) line and
+shade represent the model spectrum and its uncertainty after (before) Lyα absorptions applied and smoothed with instrumental broadening. The black dotted line represent the
+rest-frame 1216 Å at the systemic redshift. The inset panel
+shows zoom-in view of the spectrum around the rest-frame
+1216 Å. The x-axes at the top and bottom of panels represent the observed and rest-frame wavelength, respectively.
+
+5. CONCLUSION
+
+We present our constraints on the xH i and Rb at
+z = 7 − 12 via analysing Lyα damping wing absorption
+of 27 galaxies. We gathered JWST/NIRSpec’s PRISM
+data from multiple surveys to create the galaxy sample. Our sample consists of 27 galaxies and the systemic
+redshifts of all galaxies have been confirmed with the
+emission lines including including [O iii]5007, Hβ, and
+Hγ. We then construct 4 composite spectra binned by
+the redshifts and confirm the softening break feature
+
+near the rest-frame 1216 Å, suggesting the strengthening of Lyα damping wing absorptions toward the high
+redshifts. We then fit the galaxy spectra by the stellar
+model spectra with Lyα damping wing absorptions that
+changes with xH i and Rb .
+1. Stacked spectra at four redshift bins show the the
+transition from sharpened to softened break feature around rest-frame 1216 Å towards the high
+redshift, suggesting the increasing xH i . We confirm that the median estimates for xH i (Rb ) values
+for the stacked spectra at ⟨z⟩ =7.12, 7.44, 8.28,
+and 9.91 show increasing (decreasing) trend toward the higher redshift bins.
+2. The best-fit estimates for xH i at z > 7 by Lyα
+damping wing absorptions of galaxies’ UV continua is consistent with moderately late reionization history that is consistent with the xH i constraints previously suggested from CMB observations and the evolution of UV luminosity function
+with fesc ∼ 0.2. We note, however, that the errors
+of our xH i estimates are still large. We need to
+reduce statistical errors as well as possible system-
+
+Measurements of xHI and Ionized Bubble Sizes at z = 7 − 12
+atics to narrow down the range of possible cosmic
+reionization scenarios.
+3. We compare estimated xH i and Rb values with the
+theoretical predictions of the typical ionized bubble radii at different xH i . Our Rb estimates lie up
+to a few dex above the cosmic average values estimated from analytic calculations by Furlanetto
+& Oh (2005), while our Rb estimates are comparable with the values for overlapping ionized bubbles around bright galaxies predicted by numerical
+simulations of (Lu et al. 2023).
+ACKNOWLEDGEMENTS
+We thank Andrei Mesinger, Anne Hutter, Adi Zitrin,
+Akio Inoue, Hidenobu Yajima, Hayato Shimabukuro,
+Daichi Kashino, Satoshi Kikuta, Yoshinobu Fudamoto,
+Kazuyuki Omukai, Shintaro Yoshiura, Akinori Matsumoto, Minami Nakane, Steven Finkelstein, Dan Stark,
+Xiaohui Fan, George Becker, and Yongda Zhu for the
+valuable discussions on this work. We thank the editor
+of the journal and the anonymous referee for their detailed and thorough review of the paper that improved
+discussions of this work. This work is based on observations made with the NASA/ESA/CSA James Webb
+Space Telescope. The data were obtained from the
+
+19
+
+Mikulski Archive for Space Telescopes at the Space Telescope Science Institute, which is operated by the Association of Universities for Research in Astronomy, Inc.,
+under NASA contract NAS 5-03127 for JWST. These
+observations are associated with programs ERS-1345
+(CEERS), GO-1433, DDT-2750, GTO-1210 (JADES),
+and ERS-1324 (GLASS). The authors acknowledge the
+CEERS, GO-1433, DDT-2750, JADES, and GLASS
+teams led by Steven L. Finkelstein, Dan Coe, Pablo
+Arrabal Haro, Nora Lützgendorf, and Tomasso Treu, respectively, for developing their observing programs with
+a zero-exclusive-access period. We thank the JADES
+team for publicly releasing reduced spectra and catalog from the JADES survey. We thank Fergus Cullen
+and the team for publicly releasing the composite UV
+spectra from VANDELS survey. This publication is
+based upon work supported by the World Premier International Research Center Initiative (WPI Initiative),
+MEXT, Japan, and KAKENHI (20H00180, 21J20785,
+21K13953, 21H04467, 23KJ0646, 23KJ0589, 22K21349)
+through Japan Society for the Promotion of Science.
+This work was supported by JSPS Core-to-Core Program (grant number: JPJSCCA20210003). This work
+was supported by the joint research program of the Institute for Cosmic Ray Research (ICRR), University of
+Tokyo. This research was supported by FoPM, WINGS
+Program, the University of Tokyo.
+
+REFERENCES
+Aihara, H., AlSayyad, Y., Ando, M., et al. 2019, PASJ, 71,
+114, doi: 10.1093/pasj/psz103
+Arrabal Haro, P., Dickinson, M., Finkelstein, S. L., et al.
+2023a, arXiv e-prints, arXiv:2304.05378,
+doi: 10.48550/arXiv.2304.05378
+—. 2023b, arXiv e-prints, arXiv:2303.15431,
+doi: 10.48550/arXiv.2303.15431
+Atek, H., Kunth, D., Schaerer, D., et al. 2014, A&A, 561,
+A89, doi: 10.1051/0004-6361/201321519
+Bañados, E., Venemans, B. P., Mazzucchelli, C., et al. 2018,
+Nature, 553, 473, doi: 10.1038/nature25180
+Becker, G. D., Hewett, P. C., Worseck, G., & Prochaska,
+J. X. 2013, MNRAS, 430, 2067,
+doi: 10.1093/mnras/stt031
+Böker, T., Beck, T. L., Birkmann, S. M., et al. 2023, PASP,
+135, 038001, doi: 10.1088/1538-3873/acb846
+Boyett, K., Trenti, M., Leethochawalit, N., et al. 2023,
+arXiv e-prints, arXiv:2303.00306,
+doi: 10.48550/arXiv.2303.00306
+
+Bruton, S., Lin, Y.-H., Scarlata, C., & Hayes, M. J. 2023,
+arXiv e-prints, arXiv:2303.03419,
+doi: 10.48550/arXiv.2303.03419
+Bunker, A. J., Cameron, A. J., Curtis-Lake, E., et al. 2023,
+arXiv e-prints, arXiv:2306.02467,
+doi: 10.48550/arXiv.2306.02467
+Byler, N., Dalcanton, J. J., Conroy, C., & Johnson, B. D.
+2017, ApJ, 840, 44, doi: 10.3847/1538-4357/aa6c66
+Calzetti, D., Armus, L., Bohlin, R. C., et al. 2000, ApJ,
+533, 682, doi: 10.1086/308692
+Ciardi, B., & Madau, P. 2003, ApJ, 596, 1,
+doi: 10.1086/377634
+Cullen, F., McLure, R. J., Dunlop, J. S., et al. 2019,
+MNRAS, 487, 2038, doi: 10.1093/mnras/stz1402
+—. 2020, MNRAS, 495, 1501, doi: 10.1093/mnras/staa1260
+Curtis-Lake, E., Carniani, S., Cameron, A., et al. 2023,
+Nature Astronomy, doi: 10.1038/s41550-023-01918-w
+Davies, F. B., Hennawi, J. F., Bañados, E., et al. 2018,
+ApJ, 864, 142, doi: 10.3847/1538-4357/aad6dc
+Dijkstra, M. 2014, PASA, 31, e040,
+doi: 10.1017/pasa.2014.33
+
+20
+
+Umeda et al.
+
+Eilers, A.-C., Hennawi, J. F., & Davies, F. B. 2018, ApJ,
+867, 30, doi: 10.3847/1538-4357/aae081
+Eldridge, J. J., Stanway, E. R., Xiao, L., et al. 2017, PASA,
+34, e058, doi: 10.1017/pasa.2017.51
+Endsley, R., & Stark, D. P. 2022, MNRAS, 511, 6042,
+doi: 10.1093/mnras/stac524
+Fan, X., Strauss, M. A., Becker, R. H., et al. 2006, AJ, 132,
+117, doi: 10.1086/504836
+Ferruit, P., Jakobsen, P., Giardino, G., et al. 2022, A&A,
+661, A81, doi: 10.1051/0004-6361/202142673
+Finkelstein, S. L., D’Aloisio, A., Paardekooper, J.-P., et al.
+2019, ApJ, 879, 36, doi: 10.3847/1538-4357/ab1ea8
+Finkelstein, S. L., Bagley, M. B., Ferguson, H. C., et al.
+2023, ApJL, 946, L13, doi: 10.3847/2041-8213/acade4
+Foreman-Mackey, D., Hogg, D. W., Lang, D., & Goodman,
+J. 2013, PASP, 125, 306, doi: 10.1086/670067
+Fujimoto, S., Arrabal Haro, P., Dickinson, M., et al. 2023a,
+arXiv e-prints, arXiv:2301.09482,
+doi: 10.48550/arXiv.2301.09482
+Fujimoto, S., Wang, B., Weaver, J., et al. 2023b, arXiv
+e-prints, arXiv:2308.11609,
+doi: 10.48550/arXiv.2308.11609
+Furlanetto, S. R., & Oh, S. P. 2005, MNRAS, 363, 1031,
+doi: 10.1111/j.1365-2966.2005.09505.x
+Furlanetto, S. R., Zaldarriaga, M., & Hernquist, L. 2006,
+MNRAS, 365, 1012,
+doi: 10.1111/j.1365-2966.2005.09785.x
+Gardner, J. P., Mather, J. C., Abbott, R., et al. 2023,
+PASP, 135, 068001, doi: 10.1088/1538-3873/acd1b5
+Goto, H., Shimasaku, K., Yamanaka, S., et al. 2021, ApJ,
+923, 229, doi: 10.3847/1538-4357/ac308b
+Greig, B., Mesinger, A., & Bañados, E. 2019, MNRAS, 484,
+5094, doi: 10.1093/mnras/stz230
+Harikane, Y., Nakajima, K., Ouchi, M., et al. 2023, arXiv
+e-prints, arXiv:2304.06658,
+doi: 10.48550/arXiv.2304.06658
+Hayes, M. J., & Scarlata, C. 2023, arXiv e-prints,
+arXiv:2303.03160, doi: 10.48550/arXiv.2303.03160
+Heintz, K. E., Watson, D., Brammer, G., et al. 2023, arXiv
+e-prints, arXiv:2306.00647,
+doi: 10.48550/arXiv.2306.00647
+Hernandez, S., Aloisi, A., James, B. L., et al. 2020, ApJ,
+892, 19, doi: 10.3847/1538-4357/ab77c6
+Hoag, A., Bradač, M., Huang, K., et al. 2019, ApJ, 878, 12,
+doi: 10.3847/1538-4357/ab1de7
+Hsiao, T. Y.-Y., Abdurro’uf, Coe, D., et al. 2023, arXiv
+e-prints, arXiv:2305.03042,
+doi: 10.48550/arXiv.2305.03042
+Inoue, A. K., Hasegawa, K., Ishiyama, T., et al. 2018,
+PASJ, 70, 55, doi: 10.1093/pasj/psy048
+
+Ishigaki, M., Kawamata, R., Ouchi, M., et al. 2018, ApJ,
+854, 73, doi: 10.3847/1538-4357/aaa544
+Jakobsen, P., Ferruit, P., Alves de Oliveira, C., et al. 2022,
+A&A, 661, A80, doi: 10.1051/0004-6361/202142663
+Jin, X., Yang, J., Fan, X., et al. 2023, ApJ, 942, 59,
+doi: 10.3847/1538-4357/aca678
+Johnson, B. D., Leja, J., Conroy, C., & Speagle, J. S. 2021,
+ApJS, 254, 22, doi: 10.3847/1538-4365/abef67
+Jones, G. C., Bunker, A. J., Saxena, A., et al. 2023, arXiv
+e-prints, arXiv:2306.02471,
+doi: 10.48550/arXiv.2306.02471
+Jung, I., Finkelstein, S. L., Dickinson, M., et al. 2020, ApJ,
+904, 144, doi: 10.3847/1538-4357/abbd44
+Jung, I., Finkelstein, S. L., Arrabal Haro, P., et al. 2023,
+arXiv e-prints, arXiv:2304.05385,
+doi: 10.48550/arXiv.2304.05385
+Keating, L. C., Bolton, J. S., Cullen, F., et al. 2023, arXiv
+e-prints, arXiv:2308.05800,
+doi: 10.48550/arXiv.2308.05800
+Konno, A., Ouchi, M., Ono, Y., et al. 2014, ApJ, 797, 16,
+doi: 10.1088/0004-637X/797/1/16
+Konno, A., Ouchi, M., Shibuya, T., et al. 2018, PASJ, 70,
+S16, doi: 10.1093/pasj/psx131
+Larson, R. L., Finkelstein, S. L., Hutchison, T. A., et al.
+2022, ApJ, 930, 104, doi: 10.3847/1538-4357/ac5dbd
+Larson, R. L., Finkelstein, S. L., Kocevski, D. D., et al.
+2023, arXiv e-prints, arXiv:2303.08918,
+doi: 10.48550/arXiv.2303.08918
+Lu, T.-Y., Mason, C., Hutter, A., et al. 2023, arXiv e-prints,
+arXiv:2304.11192, doi: 10.48550/arXiv.2304.11192
+Mason, C. A., & Gronke, M. 2020, MNRAS, 499, 1395,
+doi: 10.1093/mnras/staa2910
+Mason, C. A., Fontana, A., Treu, T., et al. 2019, MNRAS,
+485, 3947, doi: 10.1093/mnras/stz632
+Matsuoka, Y., Onoue, M., Iwasawa, K., et al. 2023, arXiv
+e-prints, arXiv:2305.11225,
+doi: 10.48550/arXiv.2305.11225
+McKinney, J. H., Jaskot, A. E., Oey, M. S., et al. 2019,
+ApJ, 874, 52, doi: 10.3847/1538-4357/ab08eb
+Mesinger, A., Aykutalp, A., Vanzella, E., et al. 2015,
+MNRAS, 446, 566, doi: 10.1093/mnras/stu2089
+Mesinger, A., & Furlanetto, S. R. 2008a, MNRAS, 385,
+1348, doi: 10.1111/j.1365-2966.2007.12836.x
+—. 2008b, MNRAS, 386, 1990,
+doi: 10.1111/j.1365-2966.2008.13039.x
+Miralda-Escudé, J. 1998, ApJ, 501, 15, doi: 10.1086/305799
+Morales, A. M., Mason, C. A., Bruton, S., et al. 2021, ApJ,
+919, 120, doi: 10.3847/1538-4357/ac1104
+Morishita, T., Roberts-Borsani, G., Treu, T., et al. 2023,
+ApJL, 947, L24, doi: 10.3847/2041-8213/acb99e
+
+Measurements of xHI and Ionized Bubble Sizes at z = 7 − 12
+Mortlock, D. J., Warren, S. J., Venemans, B. P., et al. 2011,
+Nature, 474, 616, doi: 10.1038/nature10159
+Naidu, R. P., Tacchella, S., Mason, C. A., et al. 2020, ApJ,
+892, 109, doi: 10.3847/1538-4357/ab7cc9
+Nakajima, K., Ouchi, M., Isobe, Y., et al. 2023, arXiv
+e-prints, arXiv:2301.12825,
+doi: 10.48550/arXiv.2301.12825
+Nakane, M., Ouchi, M., Nakajima, K., et al. 2023, arXiv
+e-prints, arXiv:2312.06804,
+doi: 10.48550/arXiv.2312.06804
+Oke, J. B., & Gunn, J. E. 1983, ApJ, 266, 713,
+doi: 10.1086/160817
+Ono, Y., Itoh, R., Shibuya, T., et al. 2021, ApJ, 911, 78,
+doi: 10.3847/1538-4357/abea15
+Ouchi, M., Shimasaku, K., Furusawa, H., et al. 2010, ApJ,
+723, 869, doi: 10.1088/0004-637X/723/1/869
+Ouchi, M., Harikane, Y., Shibuya, T., et al. 2018, PASJ, 70,
+S13, doi: 10.1093/pasj/psx074
+Planck Collaboration, Aghanim, N., Akrami, Y., et al.
+2020a, A&A, 641, A6, doi: 10.1051/0004-6361/201833910
+—. 2020b, A&A, 641, A6,
+doi: 10.1051/0004-6361/201833910
+Rieke, M. J., Kelly, D. M., Misselt, K., et al. 2023, PASP,
+135, 028001, doi: 10.1088/1538-3873/acac53
+Rigby, J., Perrin, M., McElwain, M., et al. 2023, PASP,
+135, 048001, doi: 10.1088/1538-3873/acb293
+Roberts-Borsani, G., Treu, T., Chen, W., et al. 2022, arXiv
+e-prints, arXiv:2210.15639,
+doi: 10.48550/arXiv.2210.15639
+Sanders, R. L., Shapley, A. E., Topping, M. W., Reddy,
+N. A., & Brammer, G. B. 2023, arXiv e-prints,
+arXiv:2303.08149, doi: 10.48550/arXiv.2303.08149
+Saxena, A., Robertson, B. E., Bunker, A. J., et al. 2023,
+arXiv e-prints, arXiv:2302.12805,
+doi: 10.48550/arXiv.2302.12805
+
+21
+
+Schroeder, J., Mesinger, A., & Haiman, Z. 2013, MNRAS,
+428, 3058, doi: 10.1093/mnras/sts253
+Tang, M., Stark, D. P., Chen, Z., et al. 2023, MNRAS, 526,
+1657, doi: 10.1093/mnras/stad2763
+Tanvir, N. R., Fynbo, J. P. U., de Ugarte Postigo, A., et al.
+2019, MNRAS, 483, 5380, doi: 10.1093/mnras/sty3460
+Totani, T., Kawai, N., Kosugi, G., et al. 2006, PASJ, 58,
+485, doi: 10.1093/pasj/58.3.485
+Totani, T., Aoki, K., Hattori, T., et al. 2014, PASJ, 66, 63,
+doi: 10.1093/pasj/psu032
+Treu, T., Roberts-Borsani, G., Bradac, M., et al. 2022,
+ApJ, 935, 110, doi: 10.3847/1538-4357/ac8158
+Umeda, H. 2023, Master’s thesis, The Univ. of Tokyo,
+Tokyo, Japan
+Virtanen, P., Gommers, R., Oliphant, T. E., et al. 2020,
+Nature Methods, 17, 261, doi: 10.1038/s41592-019-0686-2
+Vousden, W., Farr, W. M., & Mandel, I. 2021, ptemcee: A
+parallel-tempered version of emcee, Astrophysics Source
+Code Library, record ascl:2101.006.
+http://ascl.net/2101.006
+Wang, F., Yang, J., Fan, X., et al. 2019, ApJ, 884, 30,
+doi: 10.3847/1538-4357/ab2be5
+Wang, F., Davies, F. B., Yang, J., et al. 2020, ApJ, 896, 23,
+doi: 10.3847/1538-4357/ab8c45
+Whitler, L. R., Mason, C. A., Ren, K., et al. 2020,
+MNRAS, 495, 3602, doi: 10.1093/mnras/staa1178
+Williams, H., Kelly, P. L., Chen, W., et al. 2023, Science,
+380, 416, doi: 10.1126/science.adf5307
+Zhu, Y., Becker, G. D., Bosman, S. E. I., et al. 2022, ApJ,
+932, 76, doi: 10.3847/1538-4357/ac6e60
+Zitrin, A., Labbé, I., Belli, S., et al. 2015, ApJL, 810, L12,
+doi: 10.1088/2041-8205/810/1/L12
+
+22
+
+Umeda et al.
+APPENDIX
+
+A. POSTERIOR PROBABILITY DISTRIBUTION FUNCTIONS INCLUDING NUISANCE PARAMETERS
+
+To briefly highlight the importance of considering the intrinsic galaxy’s property on precise inference of globally
+defined parameters (e.g., xH i , log Rb ), we show the posterior PDFs of global IGM parameters together with the
+parameters related to the intrinsic Lyα strength and the host galaxy’s H i absorption strength in Figure 14. We derive
+the posterior PDFs for log EWα,0 and log NH i in the same manner as for xH i and log Rb . We note, however, that
+log EWα,0 and log NH i are nuisance parameters and unique to the individual galaxies. Therefore, we only refer binned
+posterior PDFs for log EWα,0 and log NH i in terms of how the nuisance parameters could affect the inference of xH i
+and log Rb . As an example, the marginalized 2-D posterior PDF for log Rb and log EWα,0 for < z >= 7.44 shows clear
+correlation between the two parameters. This correlation can be explained by how strong Lyα emission could mimic
+the high transmission (i.e., large ionized bubble), which leads to the degeneracy between the two parameters (e.g.,
+Keating et al. 2023) and the large uncertainty.
+
+Measurements of xHI and Ionized Bubble Sizes at z = 7 − 12
+
+23
+
+Figure 14. The posterior probability distribution function (PDF) of Lyα emission and Lyα absorptions by H i gas in the
+CGM/IGM for each subsample. The results for #1 to #4 bin are shown in order of top left to right bottom. The darkness
+in the 2D-marginalized PDFs represent the probability density. The solid and dotted contours represent the 68 and 90-th
+percentiles, respectively. Top panel corresponds to the 1D marginalized PDF for each parameter. The presented PDFs are
+smoothed by gaussian kernel.
+
+

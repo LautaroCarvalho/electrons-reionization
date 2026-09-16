@@ -1,0 +1,1134 @@
+                                            PHYSICAL REVIEW A, VOLUME 62, 052710
+
+            Extension of the binary-encounter-dipole model to relativistic incident electrons
+                                                             Yong-Ki Kim
+                         National Institute of Standards and Technology, Gaithersburg, Maryland 20899-8423
+
+                                                           José Paulo Santos
+          Departamento de Fı́sica, Faculdade de Ciências e Tecnologia, Universidade Nova de Lisboa, Monte de Caparica,
+                                                    2825-114 Caparica, Portugal
+        and Centro de Fı́sica Atómica da Universidade de Lisboa, Avenida Professor Gama Pinto 2, 1649-003 Lisboa, Portugal
+
+                                                           Fernando Parente
+              Departamento Fı́sica da Universidade de Lisboa and Centro de Fı́sica Atómica da Universidade de Lisboa,
+                                    Avenida Professor Gama Pinto 2, 1649-003 Lisboa, Portugal
+                                       共Received 18 May 2000; published 13 October 2000兲
+                 Formulas for the total ionization cross section by electron impact based on the binary-encounter-dipole
+              共BED兲 model and its simpler version, the binary-encounter-Bethe 共BEB兲 model are extended to relativistic
+              incident electron energies. Total ionization cross sections for the hydrogen and helium atoms from the new
+              relativistic formulas are compared to experimental data. Relativistic effects double the total ionization cross
+              section of H and He at incident electron energy ⬇300 keV and dominate the cross section thereafter. A simple
+              modification of the original BED-BEB formulas is proposed for applications to ion targets and inner-shell
+              electrons of neutral atoms and molecules. The relativistic and nonrelativistic BEB cross sections are compared
+              to the K-shell ionization cross sections by electron impact for the carbon, argon, nickel, niobium, and silver
+              atoms. For carbon and argon, the relativistic effects are small, and both forms of the BEB cross sections agree
+              well with available experimental data. For the nickel and heavier atoms, the relativistic increase of cross
+              sections becomes noticeable from about 100 keV and higher in the incident electron energy. The empirical
+              formula by Casnati et al. 关J. Phys. B 15, 155 共1982兲兴 after correcting for relativistic effects as shown by
+              Quarles 关Phys. Rev. A 13, 1278 共1976兲兴 agrees well with the BEB cross sections for light atoms. However, the
+              peak values of the Casnati cross sections become higher than the relativistic BEB peak cross sections as the
+              atomic number increases. The BEB model is also applied to the total ionization cross section of the xenon
+              atom, and the theory agrees well with experiments at low incident electron energies, but disagrees with
+              experiment at relativistic incident energies.
+
+              PACS number共s兲: 34.80.Dp, 34.80.Gs, 34.80.Kw
+
+
+                     I. INTRODUCTION                                   lecular orbital. When d f /dW is unknown, Kim and Rudd
+                                                                       approximate it by a simple analytic function and obtain a
+   In an earlier work Kim and Rudd 关1兴 proposed the binary-            compact, analytic expression for the total ionization cross
+encounter-dipole 共BED兲 model for the singly differential 共en-          section. This simplified version is referred to as the binary-
+ergy distribution of secondary electrons兲 ionization cross             encounter-Bethe 共BEB兲 model 关1兴. The BED-BEB model
+section d ␴ /dW as a function of the secondary electron en-            was used to calculate total ionization cross sections of neu-
+ergy W and the incident electron energy T. The total ioniza-           tral atoms and molecules with great success 关6兴 for nonrela-
+tion cross section is obtained by integrating over W. In this          tivistic incident electron energies.
+paper the nonrelativistic BED and associated formulas for                  In Sec. II we summarize the nonrelativistic BED-BEB
+the singly differential and total ionization cross sections are        formulas and identify changes necessary to transform them
+extended to relativistic incident electrons. The relativistic          into relativistic forms. In Sec. III we discuss the application
+forms are required when T exceeds about 20 keV, e.g., in the           of the relativistic formulas. One class of problems to which
+inner-shell ionization of heavy atoms by fast electrons and            the present relativistic formulas are immediately applicable
+the stripping of fast ions used in heavy ion fusion.                   is K-shell ionization cross sections. The original BED-BEB
+   The BED model was developed by combining a modified                 model is designed to produce reliable cross sections for neu-
+form of the Mott cross section 关2,3兴 and the leading dipole            tral targets. To extend the model to inner-shell ionization, the
+part of the Bethe cross section 关4兴. The relativistic extension        BED-BEB model is modified slightly to account for the
+of the Mott cross section, which is known as the Mo” ller cross        strong nuclear field experienced by the incident electron
+section 关5兴, and that for the Bethe cross section are different,       when colliding with inner-shell electrons. Conclusions are
+and we must go back to the differential ionization cross sec-          presented in Sec. IV.
+tion and identify the origin of various terms to apply the                                        II. THEORY
+correct relativistic extensions.
+   The BED model requires the knowledge of differential                   The BED-BEB cross-section formulas for atomic and mo-
+dipole oscillator strength, d f /dW, for each atomic or mo-            lecular targets are identical. We shall refer to atoms for brev-
+
+1050-2947/2000/62共5兲/052710共14兲/$15.00                         62 052710-1                          ©2000 The American Physical Society
+KIM, SANTOS, AND PARENTE                                                                                        PHYSICAL REVIEW A 62 052710
+
+ity hereafter, with the understanding that the same formulas             speed before collision. In reality, the incident electron sees a
+can also be applied to molecular targets.                                neutral target until it actually plows into the target charge
+                                                                         cloud. The replacement of the denominator introduced by
+     A. Nonrelativistic formula for differential ionization              Burgess 关9兴 is a simple yet effective way to have a mildly
+                         cross sections                                  T-dependent correlation term between the incident and target
+                                                                         electrons.
+    The modified Mott cross section used in the BED model                   With these modifications, the nonrelativistic BED formula
+for the differential ionization cross section per atomic orbital         for the singly differential ionization cross section per atomic
+is 关1兴                                                                   or molecular orbital is given by 关1兴
+
+    冉 冊
+     d␴
+     dW Mott
+            ⫽
+              4 ␲ a 20 R 2 N
+                   T         冋  1
+                             共 W⫹B 兲 2
+                                       ⫺
+                                               1
+                                         共 W⫹B 兲共 T⫺W 兲                       冉 冊
+                                                                               d␴
+                                                                                     ⫽
+                                                                                            S
+                                                                               dW BED B 共 t⫹u⫹1 兲
+                                                                                                  共 N i /N 兲 ⫺2
+                                                                                                                再1
+                                                                                                                   ⫹
+                                                                                                                     1
+                                                                                                                                    冉                    冊
+                                 册
+                                                                                                       t⫹1      w⫹1 t⫺w
+
+
+                                                                                                                    冋                               册
+                        1
+                 ⫹                   ,                             共1兲                                                   1                 1
+                     共 T⫺W 兲 2                                                             ⫹ 关 2⫺ 共 N i /N 兲兴                       ⫹
+                                                                                                                      共 w⫹1 兲   2
+                                                                                                                                        共 t⫺w 兲 2
+
+
+                                                                                                                     冎
+where T is the incident electron energy, W is the kinetic
+energy of the ejected electron, B is the orbital binding en-                                       ln t  df
+                                                                                           ⫹                ,                                                    共3兲
+ergy, R is the Rydberg energy (⫽13.6 eV), N is the orbital                                     N 共 w⫹1 兲 dw
+electron occupation number, and a 0 (⫽0.529 Å) is the Bohr
+radius.
+   Since the Mott cross section does not include the dipole              where S⫽4 ␲ a 20 N(R/B) 2 , t⫽T/B, u⫽U/B, w⫽W/B, and
+interaction, i.e., the soft collision with small momentum
+transfers characteristic of bound electrons, the modified Mott
+cross section, Eq. 共1兲, is combined with the leading dipole
+                                                                                                N i⫽    冕   ⬁
+
+                                                                                                            0
+                                                                                                                共 d f /dw 兲 dw,                                  共4兲
+term of the Bethe cross section to obtain the BED formula.
+The original Mott cross section was derived using the Cou-               in terms of the differential dipole oscillator strength d f /dw,
+lomb functions for two free, colliding electrons, while the              which uses the binding energy as the energy interval.
+Bethe cross section, which is the asymptotic 共high T) form                  In Eq. 共3兲 the first two terms in the curly brackets on the
+of the plane-wave Born approximation, used plane waves for               RHS associated with the factor ⫾(2⫺N i /N) are from the
+the incident and scattered electrons. Hence, the two formulas            Mott cross section, Eq. 共1兲, while the last term with d f /dw is
+cannot simply be added.                                                  the leading dipole term from the Bethe cross section, Eq. 共2兲.
+   The differential Bethe cross section is often given in the            As is shown later, the changes necessary for relativistic T
+form 关7,8兴:                                                              must be introduced in the differential ionization cross sec-
+
+  冉 冊
+                                                                         tion.
+    d␴        4 ␲ a 20
+            ⫽          关 A 共 W/R 兲 ln共 T/R 兲 ⫹C 共 W/R 兲 ⫹••• 兴 ,
+    dW Bethe    T
+                                                                          B. Nonrelativistic formulas for total ionization cross sections
+                                                                   共2兲
+                                                                            To obtain the nonrelativistic BED cross section ␴ BED for
+where A(W/R) and C(W/R) are functions characteristic of                  total ionization, we integrate Eq. 共3兲 over the secondary elec-
+the target atom but independent of T.                                    tron energy, W⫽0 to W max ⫽(T⫺B)/2, and get the total
+   Many past attempts to combine the Mott cross section                  ionization cross section:
+with the Bethe cross section involved adjustable 共mostly em-
+pirical兲 parameters to scale the Bethe or Mott cross section.
+Instead, Kim and Rudd required the combined formulas to                       ␴ BED⫽
+                                                                                         S
+                                                                                       t⫹u⫹1   冋
+                                                                                             D 共 t 兲 ln t⫹ 2⫺
+                                                                                                              Ni
+                                                                                                              N     冉 冊冉              1
+                                                                                                                                    1⫺ ⫺
+                                                                                                                                         ln t
+                                                                                                                                      t t⫹1             冊册   ,
+satisfy asymptotic forms for both the ionization cross section                                                                                                   共5兲
+and the stopping cross section 关4,7兴, and succeeded in elimi-
+nating any adjustable parameters. In addition, in the BED                where
+model the first denominator T on the right-hand side 共RHS兲
+
+                                                                                                        冕
+of Eqs. 共1兲 and 共2兲 was replaced by T⫹U⫹B, where U                                                          (t⫺1)/2    1 d f 共w兲
+⫽ 具 p2 /2m 典 is the average orbital kinetic energy of the target                        D 共 t 兲 ⬅N ⫺1                            dw                              共6兲
+electron, p being the electron momentum and m the electron                                              0             w⫹1 dw
+rest mass. This replacement was introduced by Burgess 关9兴
+to emulate the correlation between incident and the target               and N i is defined by Eq. 共4兲.
+electrons. The nonrelativistic BED model for neutral targets                 Often it is difficult to find reliable d f /dw for individual
+significantly owes its success at low T to the use of this               atomic or molecular orbitals. In such cases, Kim and Rudd
+denominator, which is sometimes referred to as the ‘‘focus-              关1兴 approximate the differential dipole oscillator strength for
+ing term’’ or the ‘‘acceleration term.’’ This means that the             all orbitals by a simple function that simulates the shape of
+incident electron is attracted by the target nucleus and gains           the d f /dw for ionizing the hydrogen atom,
+
+                                                                   052710-2
+EXTENSION OF THE BINARY-ENCOUNTER-DIPOLE . . .                                                                 PHYSICAL REVIEW A 62 052710
+
+
+
+                    冉 冊 df
+                              ⫽
+                                  Ni
+                        dw BEQ 共 w⫹1 兲 2
+                                         .                  共7兲
+                                                                  converting relevant electron speed into energies using the
+                                                                  nonrelativistic relation. For instance, a kinetic energy K is
+                                                                  obtained by setting K⫽m v 2 /2, where v is the speed of an
+                                                                  electron. The relativistic formulas, on the other hand, are
+This simplification is referred to as the BEQ model. Since        written in terms of the ratio of the electron speed to the speed
+the dipole term in Eq. 共3兲 with Eq. 共7兲 becomes proportional      of light c,
+to 1/(w⫹1) 3 , we also symmetrize the dipole term following
+the symmetric form of the Mott cross section in the same                                                               1
+equation, i.e., (d f /dw)/(w⫹1) in Eq. 共3兲 is replaced by                  ␤ t ⫽ v t /c,       ␤ 2t ⫽1⫺                       ,   t ⬘ ⫽T/mc 2 ,       共12兲
+N i 关 1/(w⫹1) 3 ⫹1/(t⫺w) 3 兴 before the differential cross sec-                                                 共 1⫹t ⬘ 兲 2
+tion is integrated over w. Then the integrated cross section
+per orbital in the BEQ model becomes a simple analytic                                                                 1
+formula,                                                                  ␤ b ⫽ v b /c,       ␤ 2b ⫽1⫺                        ,   b ⬘ ⫽B/mc 2 , 共13兲
+                                                                                                               共 1⫹b ⬘ 兲 2
+
+␴ BEQ⫽
+           S
+         t⫹u⫹1   冋 冉 冊
+               Q ln t
+                 2
+                         1             1
+                      1⫺ 2 ⫹ 共 2⫺Q 兲 1⫺ ⫺
+                        t
+                                             冉
+                                          ln t
+                                       t t⫹1               冊册     and
+
+                                                            共8兲                                                        1
+                                                                          ␤ u ⫽ v u /c,       ␤ 2u ⫽1⫺                        ,   u ⬘ ⫽U/mc 2 , 共14兲
+in terms of a dipole constant Q defined in the derivation of                                                   共 1⫹u ⬘ 兲 2
+Eq. 共3兲,
+                                                                  where v t is the speed of an electron with kinetic energy T, v b
+                                   2BM 2                          is the speed of an electron with kinetic energy B, and v u is
+                                Q⫽       ,                  共9兲   the speed of an electron with kinetic energy U.
+                                    NR
+                                                                      The Mo” ller cross section per atomic orbital, after the same
+with a frequently used dipole constant M 2 defined by             modification used on the original Mott cross section to avoid
+                                                                  singularities for W⫽0 and multiplying the orbital electron
+
+             M 2⫽
+                    R
+                        冕   ⬁
+                           1 df
+                                 dw⬅ND 共 ⬁ 兲 .            共10兲
+                                                                  occupation number N, is given by 关10–12兴
+
+
+                                                                                                                       冋
+                    B     w⫹1 dw
+
+                                                                        冉 冊
+                        0
+                                                                        d␴           4 ␲ a 20 ␣ 2 N 共 R/B 兲    1          1
+    Note that the first logarithmic term on the RHS of Eq. 共8兲                     ⫽                                 ⫹
+represents the dipole term, the middle term (1⫺1/t) embod-
+                                                                        dw Mo” ller            ␤ 2t         共 w⫹1 兲 2 共 t⫺w 兲 2
+ies the direct and exchange contributions from the Mott cross
+section, and the last logarithmic term originates from the
+interference between the direct and exchange contributions.
+Equation 共8兲 requires only four constants from each atomic
+                                                                                          ⫹
+                                                                                                  b ⬘2
+                                                                                              共 1⫹t ⬘ 兲    2
+                                                                                                               ⫺
+                                                                                                                         1         1⫹2t ⬘
+                                                                                                                   共 w⫹1 兲共 t⫺w 兲 共 1⫹t ⬘ 兲 2
+                                                                                                                                              ,   册
+or molecular orbital, viz., the binding energy B, the kinetic                                                                                         共15兲
+energy U, the electron occupation number N, all from the
+ground-state wave function of the target, and the dipole con-     where ␣ is the fine-structure constant. The integration of the
+stant Q. The substitution of Eq. 共7兲 into Eq. 共10兲 leads to       differential Mo” ller cross section from w⫽0 to w max ⫽(t
+Q BEQ⫽N i /N, which is used to replace N i /N when Eq. 共3兲 is     ⫺1)/2 results in the integrated Mo” ller cross section,
+
+
+                                                                                                                   冋
+integrated.
+    When a reliable value of M 2 is known, although the de-                           4 ␲ a 20 ␣ 2 N 共 R/B 兲             1  ln t 1⫹2t ⬘
+tails of d f /dw are unknown, the M 2 value can be used to              ␴ Mo” ller⫽                                    1⫺ ⫺
+                                                                                                ␤ 2t                     t t⫹1 共 1⫹t ⬘ 兲 2
+determine Q via Eq. 共9兲. This substitution will make ␴ BEQ
+
+
+                                                                                                                   册
+converge to the correct asymptotic limit predicted by the
+Bethe theory.                                                                                 b ⬘2  t⫺1
+    When no data are available either for d f /dw or Q, Kim                           ⫹                 .                                             共16兲
+                                                                                          共 1⫹t ⬘ 兲 2  2
+and Rudd 关1兴 set Q⫽1, which they called the binary-
+encounter-Bethe 共BEB兲 model. Then, the BEB cross section          The relativistic form of the nonrelativistic Bethe cross sec-
+becomes very simple,                                              tion, Eq. 共2兲, is 关7,8,11–13兴
+
+      ␴ BEB⫽
+                 S   ln t
+               t⫹u⫹1 2      冋 冉 冊
+                             1    1
+                          1⫺ 2 ⫹1⫺ ⫺
+                            t
+                                     ln t
+                                  t t⫹1
+                                          .          册    共11兲               d␴
+                                                                         d 共 W/R 兲
+                                                                                   ⫽
+                                                                                     4 ␲ a 20 ␣ 2
+                                                                                        ␤ 2t
+                                                                                                           再
+                                                                                                  A 共 W/R 兲 ln
+                                                                                                                ␤ 2t
+                                                                                                               1⫺ ␤ 2t
+                                                                                                                            冋冉 冊 册
+                                                                                                                       ⫺ ␤ 2t
+
+
+      C. Relativistic BED, BEQ, and BEB cross sections
+   The original Mott and the Bethe cross sections have
+started with momentum transfers, and the expressions in
+                                                                                          ⫹C ⬘ 共 W/R 兲 ⫹••• ,              冎                          共17兲
+
+
+terms of energy, such as T and W, have been obtained by           where
+
+                                                            052710-3
+KIM, SANTOS, AND PARENTE                                                                                                                PHYSICAL REVIEW A 62 052710
+
+             C ⬘ 共 W/R 兲 ⫽C 共 W/R 兲 ⫺2A 共 W/R 兲 ln ␣ .                       共18兲         logarithm associated with the dipole interaction. After re-
+                                                                                          placing ␤ 2t in the first denominator on the RHS of Eqs. 共16兲
+                                                                                          and 共17兲 by the relativistic equivalent of the ‘‘Burgess’’ de-
+   The nonrelativistic Eq. 共3兲 is converted to a relativistic                             nominator, ␤ 2t ⫹ ␤ 2u ⫹ ␤ 2b , the relativistic BED 共RBED兲 for-
+form to match the relativistic Eqs. 共15兲 and 共17兲, while not-                             mula for the singly differential ionization cross section be-
+ing that Eqs. 共2兲 and 共3兲 use different energy units in the                               comes
+
+
+
+
+                                      冉 冊d␴
+                                                ⫽ 2
+                                                       4 ␲ a 20 ␣ 4 N
+                                         dW RBED 共 ␤ t ⫹ ␤ u ⫹ ␤ b 兲 2b ⬘
+                                                           2        2          t⫹1
+                                                                                  再
+                                                                          共 N i /N 兲 ⫺2  1
+                                                                                           ⫹
+                                                                                             1
+                                                                                                     冉
+                                                                                                   1⫹2t ⬘
+                                                                                        w⫹1 t⫺w 共 1⫹t ⬘ /2兲 2                  冊
+                                                        ⫹ 关 2⫺ 共 N i /N 兲兴   冋        1
+                                                                                 共 w⫹1 兲   2
+                                                                                             ⫹
+                                                                                                    1
+                                                                                                 共 t⫺w 兲   2
+                                                                                                             ⫹
+                                                                                                                      b ⬘2
+                                                                                                                 共 1⫹t ⬘ /2兲 2
+                                                                                                                                    册
+                                                        ⫹
+                                                                 1    df
+                                                            N 共 w⫹1 兲 dw
+                                                                         ln   冋冉 冊
+                                                                             ␤ 2t
+                                                                            1⫺ ␤ t2
+                                                                                    ⫺ ␤ 2t ⫺ln共 2b ⬘ 兲                    册冎   .                                                  共19兲
+
+   The total ionization cross section of an atomic orbital is obtained by integrating Eq. 共19兲 over w from 0 to (t⫺1)/2,
+
+
+ ␴ RBED⫽
+                 4 ␲ a 20 ␣ 4 N
+           共 ␤ 2t ⫹ ␤ 2u ⫹ ␤ 2b 兲 2b ⬘
+                                         再 冋冉 冊
+                                          D 共 t 兲 ln
+                                                         ␤ 2t
+                                                       1⫺ ␤ 2t
+                                                                                          册 冉 冊冋
+                                                                     ⫺ ␤ 2t ⫺ln共 2b ⬘ 兲 ⫹ 2⫺
+                                                                                                   Ni
+                                                                                                   N
+                                                                                                             1
+                                                                                                           1⫺ ⫺
+                                                                                                                ln t 1⫹2t ⬘
+                                                                                                                                ⫹
+                                                                                                                                     b ⬘2     t⫺1
+                                                                                                             t t⫹1 共 1⫹t ⬘ /2兲 2 共 1⫹t ⬘ /2兲 2 2
+                                                                                                                                                                                  册冎
+                                                                                                                                                                                  共20兲
+                                                                                                                                                                                       ,
+
+
+while D(t) is given by Eq. 共6兲.
+   The matching relativistic BEQ 共RBEQ兲 and relativistic BEB 共RBEB兲 formulas for total ionization of an atomic or molecular
+orbital are
+
+
+                                      ␴ RBEQ⫽
+                                                       4 ␲ a 20 ␣ 4 N
+                                                                            再冋冉 冊
+                                                                             Q
+                                                 共 ␤ 2t ⫹ ␤ 2u ⫹ ␤ 2b 兲 2b ⬘ 2
+                                                                               ln
+                                                                                   ␤ 2t
+                                                                                  1⫺ ␤ 2t
+                                                                                          ⫺ ␤ 2t ⫺ln共 2b ⬘ 兲               册冉 冊       1
+                                                                                                                                   1⫺ 2
+                                                                                                                                     t
+
+                                                             1
+                                                 ⫹ 共 2⫺Q 兲 1⫺ ⫺  冋
+                                                                ln t 1⫹2t ⬘
+                                                                                ⫹
+                                                                                     b ⬘2     t⫺1
+                                                             t t⫹1 共 1⫹t ⬘ /2兲 2 共 1⫹t ⬘ /2兲 2 2
+                                                                                                                                   册冎       ,                                     共21兲
+
+and
+
+
+      ␴ RBEB⫽
+                     4 ␲ a 20 ␣ 4 N
+                                           再冋冉 冊
+                                            1
+                共 ␤ 2t ⫹ ␤ 2u ⫹ ␤ 2b 兲 2b ⬘ 2
+                                              ln
+                                                  ␤ 2t
+                                                 1⫺ ␤ 2t
+                                                         ⫺ ␤ 2t ⫺ln共 2b ⬘ 兲               册冉 冊1    1
+                                                                                           1⫺ 2 ⫹1⫺ ⫺
+                                                                                             t     t
+                                                                                                       ln t 1⫹2t ⬘
+                                                                                                      t⫹1  共 1⫹t ⬘ /2兲 2
+                                                                                                                         ⫹
+                                                                                                                               b ⬘2
+                                                                                                                           共 1⫹t ⬘ /2兲
+                                                                                                                                        t⫺1
+                                                                                                                                       2 2
+                                                                                                                                            .                                 冎   共22兲
+
+
+
+
+    The relativistic Eqs. 共20兲–共22兲 reduce to their nonrelativ-
+istic counterparts, Eqs. 共5兲, 共8兲, and 共11兲 in the limit ␤ t Ⰶ1
+by noting that R⫽mc 2 ␣ 2 /2, m v 2t /2⬵T, m v 2u /2⬵U, and
+                                                                                                  ␴ RBethe⫽
+                                                                                                              4 ␲ a 20 ␣ 2
+                                                                                                                   ␤ 2t
+                                                                                                                               再 冋冉 冊 册 冎
+                                                                                                                                   M    2
+                                                                                                                                                ln
+                                                                                                                                                        ␤ 2t
+                                                                                                                                                      1⫺ ␤ 2t
+                                                                                                                                                                ⫺ ␤ 2t ⫹C R       共23兲
+
+m v 2b /2⬵B.
+                                                                                          in the relativistic form, and
+
+                          D. Asymptotic limits
+
+   The Bethe cross section for the total ionization in the
+                                                                                                            ␴ NRBethe⫽
+                                                                                                                               4 ␲ a 20
+                                                                                                                                   T/R          冋   M 2 ln
+                                                                                                                                                             T
+                                                                                                                                                             R
+                                                                                                                                                               ⫹C NR   册          共24兲
+
+high-T limit is often given by two constants M 2 and C,
+which are characteristic of the target but independent of T                               in the nonrelativistic form. The quantity C R is related to C NR
+关7兴,                                                                                      by Eq. 共18兲, i.e.,
+
+                                                                                 052710-4
+EXTENSION OF THE BINARY-ENCOUNTER-DIPOLE . . .                                                    PHYSICAL REVIEW A 62 052710
+
+                    C R ⫽C NR ⫺2M 2 ln ␣ .                 共25兲    cover incident electron energies from the threshold to hun-
+                                                                   dreds of keV because the BEB model requires minimal input
+    Since the BED-BEQ-BEB cross sections are given in ana-         data for the target.
+lytic forms, we can easily obtain analytic expressions for M 2        Note that the ‘‘Burgess’’ denominator, T⫹U⫹B, is the
+and C from these cross-section models. The expression for          only ad hoc term used without proper derivation in the BED
+M 2 is the same for relativistic and nonrelativistic formulas.     model. The substantial reduction of cross sections at low T
+The nonrelativistic expressions are                                achieved by the Burgess denominator for neutral targets is
+                                                                   unlikely to be correct in magnitude when the incident elec-
+                                NR                                 tron is subject to a long-range Coulomb interaction from an
+                        2
+                      M BED ⫽      D共 ⬁ 兲,                 共26兲
+                                B                                  ion target. Kim and Rudd 关1兴 already noted that they had to
+                                                                   reduce the denominator to apply the nonrelativistic BED
+           C NRBED⫽M BED
+                     2
+                         ln   冉冊 冉 冊
+                                 R
+                                 B
+                                   ⫹
+                                     NR
+                                     B
+                                        2⫺
+                                           Ni
+                                           N
+                                              ;            共27兲
+                                                                   model to He⫹ . Further application of the BEB model to sin-
+                                                                   gly charged molecular ions 关15兴 revealed that using T⫹(U
+                                                                   ⫹B)/2 instead of T⫹U⫹B resulted in excellent agreement
+                                 NRQ                               with known experimental data at nonrelativistic T.
+                          2
+                        M BEQ⫽       ,                     共28兲       Moreover, comparisons to distorted-wave Born cross sec-
+                                  2B
+                                                                   tions for highly charged ions 关16兴 indicate that a simple av-
+
+                                冉冊
+                                                                   erage of the nonrelativistic BED, BEQ, and BEB cross sec-
+                                 R   NR
+            C NRBEQ⫽M BEQ
+                      2
+                          ln       ⫹    共 2⫺Q 兲 ;          共29兲    tions with the t⫹u⫹1 denominator and t reproduces the
+                                 B   B                             distorted-wave Born results closely at low to intermediate t.
+                                                                   For extreme cases such as the hydrogenic ions of heavy at-
+                                  NR                               oms, we expect that t alone will be the appropriate denomi-
+                           2
+                         M BEB⫽      ,                     共30兲
+                                  2B                               nator as is the case for most ab initio theories that are ex-
+                                                                   pected to be valid for such targets.
+
+                C NRBEB⫽M BEB
+                          2
+                              ln    冉冊
+                                     R
+                                     B
+                                       ⫹
+                                         NR
+                                         B
+                                            ;              共31兲
+                                                                      Until we have more examples to compare, we tentatively
+                                                                   propose to use for single ionization of deep inner shells of
+                                                                   heavy atoms,
+
+
+                                                                                         冉            冊
+and the relativistic expressions for C can be derived using
+Eq. 共25兲.                                                                             S 1   1
+                                  2
+                                                                          ␴ BEDav⫽        ⫹
+   As was mentioned earlier, M BED     is a weighted integral of                      2 t t⫹u⫹1
+
+                                                                                         冋          冉 冊冉                      冊册
+the differential dipole oscillator strength, Eqs. 共6兲 and 共10兲,
+                                                                                                           Ni   t⫺1    ln t
+and can be determined if d f /dw for all orbitals are known,                          ⫻ D 共 t 兲 ln t⫹ 2⫺            ⫺              共32兲
+either from photoionization experiments or a reliable theory.                                              N     t    t⫹1
+For instance, the values of M 2 are known for H and H-like
+                                                                   instead of Eq. 共5兲,
+ions, He and some He-like ions, Ne, Ar, Kr, and Xe 关14兴.
+
+                                                                                             冉       冊冋 冉 冊
+The second constant, C NR , is much more difficult to deter-
+                                                                                         S 1   1              Qln t    1
+mine, and reliable values are known only for a short list of                 ␴ BEQav⫽        ⫹                      1⫺ 2
+targets. The M 2 from the BED and BEQ formulas are iden-                                 2 t t⫹u⫹1             2      t
+
+
+                                                                                                        冊册
+                                                2
+
+
+                                                                                                   冉
+tical to those from the Bethe theory, but M BEB      is not, be-
+cause of the approximation Q⫽1 we have made to obtain                                                1  ln t
+                                                                                         ⫹ 共 2⫺Q 兲 1⫺ ⫺                            共33兲
+␴ BEB . None of the C values from the present models are the                                         t t⫹1
+same as the Bethe theory value because of the approxima-
+tions we have made to combine the Bethe and Mott cross             instead of Eq. 共8兲, and
+
+
+                                                                                                  冊冋 冉 冊                           册
+sections. For very high TⰇmc 2 , the approximations we have
+made, while providing reliable cross sections at T⬍5 keV,
+may lead to less reliable cross sections than accurate
+asymptotic Bethe cross sections when they are known.
+                                                                     ␴ BEBav⫽    冉
+                                                                                S 1
+                                                                                    ⫹
+                                                                                      1
+                                                                                2 t t⫹u⫹1
+                                                                                                    ln t
+                                                                                                     2
+                                                                                                            1    1
+                                                                                                         1⫺ 2 ⫹1⫺ ⫺
+                                                                                                           t     t
+                                                                                                                     ln t
+                                                                                                                    t⫹1
+                                                                                                                         共34兲
+
+III. APPLICATION OF THE RELATIVISTIC FORMULAS                      instead of Eq. 共11兲. In fact, these averaged BED, BEQ, and
+                                                                   BEB formulas can also be used for any ions whose net
+    Cross-section formulas based solely on the Bethe theory        charge is 3⫹ or higher, including deep inner shells which
+are reliable for high T but are usually unreliable at low T        are subject to strong effective nuclear attraction. Similar to
+where the ionization cross sections peak. Since the nonrela-       Eqs. 共32兲–共34兲, the averaged relativistic BED, BEB, and
+tivistic BED-BEB formulas provide reliable ionization cross        BEQ formulas are
+sections at low T and the relativistic BED-BEB formulas
+reduce to the correct nonrelativistic BED-BEB formulas, the
+relativistic BED-BEB cross sections should provide reliable
+ionization cross sections for a wide range of T. For instance,
+                                                                        ␴ RBEDav⫽
+                                                                                    1
+                                                                                    2冉1⫹
+                                                                                                ␤ 2t
+                                                                                                          冊
+                                                                                         ␤ 2t ⫹ ␤ 2u ⫹ ␤ 2b
+                                                                                                            ⫻ 关 RHS of Eq. 共 20兲兴 ,
+
+Eq. 共22兲 is ideally suited for modeling ionizing events that                                                                     共35兲
+
+                                                             052710-5
+KIM, SANTOS, AND PARENTE                                                                            PHYSICAL REVIEW A 62 052710
+
+   TABLE I. K-shell binding energy B 关18兴 and kinetic energy U.
+
+       Element                 B(keV)               U(keV)
+
+       C                        0.2844               0.4372
+       Ar                        3.203                4.228
+       Ni                        8.331               10.521
+       Nb                       18.983               23.363
+       Ag                       25.516               31.268
+
+
+
+
+   ␴ RBEQav⫽
+                 1
+                 2冉1⫹
+                             ␤ 2t
+                                     冊
+                      ␤ 2t ⫹ ␤ 2u ⫹ ␤ 2b
+                                         ⫻ 关 RHS of Eq. 共 21兲兴 ,
+
+                                                              共36兲
+
+and
+
+
+                  冉                  冊
+                                                                        FIG. 1. K-shell ionization cross section of C. Solid circles, ex-
+            1   ␤ 2t ⫹ ␤ 2u ⫹ ␤ 2b                                   perimental data by Tawara et al. 关25兴; solid triangles, data by Hink
+   ␴ RBEBav⫽ 1⫹                    ⫻ 关 RHS of Eq. 共 22兲兴 .           and Paschke 关26兴; thin solid curve, present averaged BEB cross
+            2          ␤ 2t
+                                                                     section, Eq. 共34兲; thick solid curve, present averaged RBEB cross
+                                                        共37兲
+                                                                     section, Eq. 共37兲; dot-dashed curve, relativistic empirical formula
+As is shown later, relativistic effects raise the ionization         by Quarles 关20兴; open diamonds, nonrelativistic semiempirical for-
+                                                                     mula by Khare et al. 关23兴; long-dashed curve, nonrelativistic semi-
+cross section at high T⬎mc 2 , sometimes making the cross
+                                                                     empirical formula by Deutsch et al. 关22兴.
+section higher than the first peak at lower T. This is known as
+the relativistic rise of ionization cross sections. When T
+Ⰷmc 2 , other relativistic effects, such as the density effect,      ing energies from Dirac-Fock wave functions are reliable to
+which is an apparent increase in the target density because of       1% or better in general.
+the Lorentz contraction of the length in the direction of the            Before we present the comparison between theories and
+incident electron beam, must be taken into account.                  experiments, a few general comments are in order.
+                                                                         共a兲 Casnati et al. 关19兴 determined their empirical formula
+                                                                     by fitting to a wide range of experimental data available to
+      A. Application of the BEB model to K-shell ionization
+                                                                     them. Hence, when particular experimental data published
+    Inner-shell ionization cross sections by electron impact         before Casnati et al. agree well with the Casnati formula, the
+are of interest not only to the basic collision physics for          agreement may simply indicate that Casnati et al. gave a
+complex atoms and molecules, but also to various practical           high weight to the experimental data while fitting their for-
+applications in material science and electron microscopy. A          mula.
+comprehensive review of the theoretical and experimental                 共b兲 Casnati et al. 关19兴 presented a formula for relativistic
+situation as of mid-1980s has been presented by Powell 关17兴.         corrections in their paper but the formula—an equation given
+Theoretical difficulties in the past were between the thresh-        at the end of their Sec. 3—is wrong. The correct formula is
+old and the peak, which occurs usually four to five times the        given by Quarles 关20兴. Hence, we quote the Casnati formula
+threshold energy. Theories based on the Bethe or Born cross          with the correct relativistic correction as the ‘‘Quarles’’ cross
+section are not reliable there. Theories based on classical          section, while the nonrelativistic version is called the ‘‘Cas-
+mechanics are somewhat better but such theories usually re-          nati’’ cross section.
+quire adjustable parameters. The present BEB-RBEB models                 共c兲 The fitting formula developed by Casnati et al. †Eq.
+produce reliable cross sections between the threshold and the        共8兲 in 关19兴‡ contains the leading dipole interaction terms rep-
+peak without using any adjustable parameters.                        resented by ln t/t, while the relativistic correction presented
+    As an illustration, we apply the relativistic and nonrela-       by Quarles is based on the classical theory by Gryzinski 关21兴,
+tivistic averaged BEB formulas to the K-shell ionization of          which does not include any dipole interaction. In contrast,
+C, Ar, Ni, Nb, and Ag. As is shown below, relativistic effects       the present RBEB model contains the leading dipole interac-
+become increasingly more important as the K-shell binding            tion and uses the correct relativistic extension of the dipole
+energies of the elements increase. Hence relativistic theory         interaction.
+must be used for treating both atomic structure and collision            共d兲 The semiempirical formula by Deutsch et al. 关22兴 is a
+dynamics for medium to heavy atoms. The only input data              modified form of the classical theory by Gryzinski 关21兴. The
+needed for each element in the present BEB-RBEB model                modification involves introducing a new parameter and ad-
+are B and U, which are calculated from Dirac-Fock wave               justing all parameters to fit available experimental data.
+functions and listed in Table I, and the electron occupation         Their formula still lacks the dipole interaction which be-
+number N⫽2. For the binding energies of inner-shell elec-            comes dominant at high T, and hence tends to be too low at
+trons, experimental values 关18兴 may be used to match experi-         relativistic T.
+mental thresholds precisely, though theoretical K-shell bind-            In Figs. 1–5, we compare the present BEB 关Eq. 共34兲兴 and
+
+                                                               052710-6
+EXTENSION OF THE BINARY-ENCOUNTER-DIPOLE . . .                                                             PHYSICAL REVIEW A 62 052710
+
+
+
+
+    FIG. 2. K-shell ionization cross section of Ar. Solid circles,            FIG. 4. K-shell ionization cross section of Nb. Solid circles,
+experimental data by Tawara et al. 关25兴; upright triangles, data by        experimental data by Peng et al. 关35兴; for other legends, see Fig. 2
+Hippler et al. 关27兴; squares, data by Quarles and Semaan 关28兴; in-         caption.
+verted triangles, data by Platten et al. 关29兴; thin solid curve, present
+BEB cross section, Eq. 共34兲; thick solid curve, present RBEB cross         and to the relativistic plane-wave Born cross sections calcu-
+section, Eq. 共37兲; short-dashed curve, nonrelativistic empirical for-      lated by Scofield 关24兴. Of the several nonexperimental cross
+mula by Casnati et al. 关19兴; dot-dashed curve, the Casnati cross           sections presented in the figures, the present BEB-RBEB
+section with relativistic corrections by Quarles 关20兴; open dia-
+                                                                           cross sections and the Born cross sections by Scofield are the
+monds, nonrelativistic semiempirical formula by Khare et al. 关23兴;
+                                                                           only ab initio theories without any adjustable parameters.
+long-dashed curve, relativistic semiempirical formula by Deutsch
+                                                                              Except for the carbon atom in Fig. 1, the relativistic cross
+et al. 关22兴; open circles, relativistic plane-wave Born cross sections
+by Scofield 关24兴.
+                                                                           sections begin to show a different shape than the shape of the
+                                                                           nonrelativistic counterparts at T⬎100 keV. These figures
+                                                                           clearly demonstrate the necessity for relativistic corrections
+RBEB 关Eq. 共37兲兴 cross sections to available experimental
+                                                                           for atoms with medium and high atomic numbers.
+data, to the nonrelativistic empirical cross sections by Cas-
+                                                                              For the carbon atom, relativistic and nonrelativistic cross
+nati et al. 关19兴, to the relativistic version of the Casnati cross
+sections with the relativistic corrections provided by Quarles             sections are almost identical for T⬍1 keV. Both the present
+关20兴 based on Gryzinski’s classical theory 关21兴, to the non-               RBEB cross section and the relativistic Quarles cross section
+relativistic semiempirical cross sections by Khare et al. 关23兴,            marked as ‘‘Quarles 关20兴’’ are in good agreement with the
+to the semiempirical cross sections by Deutsch et al. 关22兴,                experimental data by Tawara et al. 关25兴, while the experi-
+                                                                           mental data by Hink and Paschke 关26兴 display an increasing
+
+
+
+
+    FIG. 3. K-shell ionization cross section of Ni. Circles, experi-
+mental data by Smick and Kirkpatrick 关34兴; upright triangles, data             FIG. 5. K-shell ionization cross section of Ag. Circles, experi-
+by Pockman et al. 关33兴; squares, experimental data by Jessenberger         mental data by Davis et al. 关36兴; upright triangles, data by el Nasr
+et al. 关30兴; inverted triangles, experimental data by Luo et al. 关31兴;     et al. 关40兴; squares, data by Shima et al. 关37兴; inverted triangles,
+open squares, experimental data by He et al. 关32兴; for other legends,      data by Kiss et al. 关38兴 cited in Long et al. 关39兴; for other legends,
+see Fig. 2 caption.                                                        see Fig. 2 caption.
+
+                                                                     052710-7
+KIM, SANTOS, AND PARENTE                                                                       PHYSICAL REVIEW A 62 052710
+
+trend toward lower T not seen in any other theory or experi-      section and the relativistic plane-wave Born cross section by
+ment.                                                             Scofield 关24兴 is widening at T⬎2 MeV, amplifying the
+   For the argon atom in Fig. 2, all theoretical and experi-      trend observed in Ar and Ni, again due to the fact that the
+mental data seem to agree with each other, while our RBEB-        RBEB model is likely to overestimate M 2 in Eq. 共23兲 for K
+BEB cross sections tend to agree slightly better with the         electrons. The silver atom is another example for which de-
+experimental data by Tawara et al. 关25兴, by Hippler et al.        finitive measurements near the peak would help to distin-
+关27兴, and by Quarles and Semaan 关28兴. The experimental            guish different theories.
+data by Platten et al. 关29兴, though with large uncertainties,
+follow the shape of the Casnati cross section at low T. We              B. Application of the relativistic BEQ cross section
+also see the beginning of a trend that the relativistic Quarles       Atomic hydrogen is a particularly simple case to apply
+and the nonrelativistic Casnati cross sections are higher than    Eq. 共8兲 because only one nontrivial number is needed: Q
+the RBEB-BEB cross sections in peak values. Although we           ⫽0.5668, which can be calculated exactly from the hydro-
+did not extend Fig. 2 to very high incident electron energies,    genic d f /dw. The rest of the input data for the hydrogen
+the relativistic plane-wave Born cross section by Scofield        atom are B⫽13.6057 eV, u⫽U/B⫽1 from the virial theo-
+关24兴 is in excellent agreement with the present RBEB cross
+                                                                  rem, and N⫽1. As was shown in an earlier work 关1兴, the
+section to T⫽10 MeV.                                              nonrelativistic BEQ cross section is in excellent agreement
+   For the nickel atom in Fig. 3, experiments and theories are    with the experimental values measured by Shah et al. 关41兴
+both divided into two groups. The experimental data by Jes-
+                                                                  from the threshold to T⫽1 keV. The relativistic BEQ cross
+senberger and Hink 关30兴 and the data by Luo et al. 关31兴 agree
+                                                                  section given by Eq. 共21兲 is practically indistinguishable
+with the peak values of the Quarles cross section and the
+                                                                  from the nonrelativistic BEQ cross section Eq. 共8兲 from the
+nonrelativistic Khare cross section, while the experimental
+                                                                  threshold to T⬇5 keV.
+data by He et al. 关32兴, the data by Pockman et al. 关33兴 and
+                                                                      Since the ionization cross section is very low at relativis-
+the single data point by Smick and Kirkpatrick 关34兴 are
+                                                                  tic T, the Fano plot is better suited for comparing different
+lower in peak values and agree with our RBEB-BEB cross
+                                                                  cross sections at relativistic T. The Fano plot is a graph using
+sections. The relativistic plane-wave Born cross section by
+                                                                  as the abscissa and ordinate
+Scofield 关24兴 rises rapidly near the peak overestimating the
+ionization cross section as expected. The present RBEB
+cross section begins to be higher than the plane-wave Born
+cross section beyond T⫽1 MeV. For H and He, the RBEB
+                                                                                      X⫽ln   冉 冊␤ 2t
+                                                                                              1⫺ ␤ 2t
+                                                                                                           ⫺ ␤ 2t ,            共38兲
+
+model produces M 2 —the leading coefficient of the Bethe
+cross section in Eq. 共23兲 as discussed in Sec. II D—higher
+than the known, reliable values 关1兴. Hence, we expect that                                          ␤ 2t
+the RBEB model would also overestimate M 2 for K shells of                               Y ⫽␴                  .               共39兲
+heavy atoms, resulting in a slightly higher cross section than                                  4 ␲ a 20 ␣ 2
+the asymptotic Born cross section. A definitive experiment
+centered around the peak is desirable to distinguish different
+predictions from different theories.                              As can be seen from Eq. 共23兲, such a plot will asymptotically
+   In Fig. 4 we compare recent experimental data by Peng          approach a straight line with a slope M 2 . Table II compares
+et al. 关35兴 for the niobium atom to the present RBEB cross        ␴ RBEB , ␴ BEB , and experimental data by Shah et al. 关41兴 for
+section, to the empirical formula by Casnati et al. 关19兴 with     the hydrogen atom at typical values of T and the correspond-
+the relativistic correction indicated by Quarles 关20兴, and the    ing X.
+semiempirical relativistic cross section by Deutsch et al.           The experimental data for H by Shah et al. 关41兴 are com-
+关22兴. Here, the experimental data are in excellent agreement      pared to the relativistic BEQ 关Eq. 共21兲兴 and nonrelativistic
+with the RBEB cross section, while the Casnati cross section      BEQ 关Eq. 共8兲兴 cross sections, and the asymptotic Bethe cross
+is appreciably higher, reinforcing the trend also seen in Ar      section 关42兴 in a Fano plot in Fig. 6. We did not use the
+and Ni 共Figs. 2 and 3兲.                                           averaged cross sections, Eqs. 共32兲–共37兲, because they are
+   Four sets of experimental data for the silver atom are         meant for deep inner shells of many-electron atoms. Both the
+compared to the present RBEB-BEB cross sections and other         relativistic BEQ and the asymptotic Bethe cross sections
+theories in Fig. 5. The experimental data by Davis et al. 关36兴    agree with the experimental data within the experimental er-
+agree well with the Quarles 共⫽ relativistic Casnati兲 cross        ror bounds. However, the asymptotic Bethe cross section ap-
+section. The data by Davis et al. on the K-shell ionization of    pears to agree better with the trend seen in the experimental
+Cu and Au 关36兴 are also much higher than our preliminary          data for T⬎2 keV than ␴ RBEQ . This is an example in which
+RBEB cross sections. The experimental data by Shima et al.        the asymptotic Bethe cross section for the hydrogen atom is
+关37兴 and by Kiss et al. 关38兴—as quoted in Long et al. 关39兴—       more accurate because exact wave functions are known. Al-
+lie in between the RBEB and the relativistic Quarles cross        though the actual cross-section values remain low at high T,
+sections. The data by el Nasr et al. 关40兴 disagree with all       the relativistic BEQ cross section is almost twice the nonrel-
+three relativistic cross sections presented in Fig. 5. Although   ativistic BEQ cross section at T⬇300 keV 共see Table II兲.
+all theoretical cross sections agree in the vicinity of T         Relativistic effects dominate at higher T, and the relativistic
+⫽1 MeV, the difference between the present RBEB cross             rise of the cross section occurs after T⬇1.5 MeV.
+
+                                                            052710-8
+EXTENSION OF THE BINARY-ENCOUNTER-DIPOLE . . .                                                         PHYSICAL REVIEW A 62 052710
+
+                  TABLE II. Comparison of T, X 关see Eq. 共38兲兴, ␴ RBEQ 关Eq. 共21兲兴, ␴ BEQ 关Eq. 共8兲兴, and experimental data by
+               Shah et al. 关41兴 for H.
+
+               T(keV)                      X               ␴ RBEQ (Å 2 )            ␴ BEQ (Å 2 )          Expt. (Å 2 )
+
+                       0.998            ⫺5.548               0.119                   0.119              0.113⫾0.0077
+                       1.998            ⫺4.857               0.0663                  0.0659             0.0631⫾0.0047
+                       2.998            ⫺4.454               0.0466                  0.0462             0.0437⫾0.0036
+                       3.998            ⫺4.169               0.0362                  0.0358                 0.0339
+                       5.0              ⫺3.948               0.0297                  0.0293                 0.0279
+                      10.0              ⫺3.269               0.0161                  0.0157                 0.0149
+                      50.0              ⫺1.754               0.00409                 0.00360
+                     100.0              ⫺1.145               0.00243                 0.00189
+                     300.0              ⫺0.1851              0.00130                 0.000681
+                     500.0               0.3251              0.00109                 0.000422
+                    1000.0               1.161               0.000963                0.000221
+                    1500.0               1.738               0.000944                0.000151
+                    2000.0               2.183               0.000946                0.000115
+                    5000.0               3.756               0.000999                0.000048
+                   10000.0               5.048               0.00106                 0.000025
+
+
+      C. Application of the relativistic BED cross section                    In Table III, ␴ RBED and ␴ BED are compared to the experi-
+   Recently, the nonrelativistic BED formula was applied to                mental data by Shah et al. 关44兴 for the helium atom at typical
+the helium atom in combination with the d f /dw calculated                 values of T and the corresponding X. In Fig. 7, the experi-
+from the relativistic random-phase approximation 共RRPA兲                    mental data for He by Shah et al. 关44兴 and the data by Rieke
+关43兴. The resulting ␴ BED was sufficiently accurate to be rec-             and Prepejchal 关45兴 are compared to the relativistic BED
+ommended as a normalization standard. In Ref. 关43兴, the                    关Eq. 共20兲兴 and nonrelativistic BED 关Eq. 共5兲兴 cross sections
+RRPA d f /dw was fitted into a four-term power series to                   and the asymptotic Bethe cross section 关42兴 in a Fano plot.
+facilitate integration to an arbitrary upper limit in Eq. 共6兲.             As in the case of H, we did not use the averaged cross sec-
+The fitted equation is                                                     tions, Eqs. 共32兲–共37兲, for He because these equations are for
+                                                                           deep inner shells of many-electron atoms. In contrast to the
+                d f /dw⫽ay 3 ⫹by 4 ⫹cy 5 ⫹dy 6 ,              共40兲         hydrogen atom, the RBED cross section represents the trend
+                                                                           seen in the experimental data at T⬎5 keV better than the
+where y⫽B/E⫽B/(W⫹B), and a⫽8.24012, b⫽                                     asymptotic Bethe cross section.
+⫺10.4769, c⫽3.964 96, and d⫽⫺0.044 597 6. To match                            Rieke and Prepejchal 关45兴 presented their data as a fitted
+the experimental threshold, B⫽24.587 eV is used in Eq.                     straight line using the variables for the Fano plot, Eqs. 共38兲
+共20兲 with N⫽2 and a theoretical value of U⫽39.51 eV for                    and 共39兲. They presented three pairs of constants for the
+the helium atom 关1兴.                                                       ionization of the helium atom. Their experiment on He, how-
+                                                                           ever, represents the total inelastic scattering cross section
+                                                                           that includes all discrete excitations because they used a
+                                                                           buffer gas whose ionization energy is below the excitation
+                                                                           energies of the metastable helium atom 关46兴. The excited He
+                                                                           atoms produce buffer-gas ions through the Penning ioniza-
+                                                                           tion. In Fig. 7 the error bars for the Rieke and Prepejchal
+                                                                           curve represent the spread of the cross sections reproduced
+                                                                           from the three sets of their constants, M 2 and C R . All of
+                                                                           their values are larger than the known asymptotic Bethe
+                                                                           cross-section values for ionization.
+                                                                              As it was in the case of the hydrogen atom, ␴ RBED 关Eq.
+                                                                           共20兲兴 is almost twice the value of ␴ BED 关Eq. 共5兲兴 at T
+                                                                           ⬇300 keV, and then the former dominates for higher T 共see
+                                                                           Table III兲. The relativistic rise of ␴ RBED again occurs after
+                                                                           T⬇1.5 MeV.
+   FIG. 6. Fano plot for H. The abscissa is given by Eq. 共38兲 and
+the ordinate by Eq. 共39兲. Solid curve, present relativistic RBEQ
+                                                                                           D. BEB cross section for xenon
+cross section Eq. 共21兲; short-dashed curve, present nonrelativistic
+BEQ cross section Eq. 共8兲; long-dashed curve, asymptotic Bethe                The BEB model requires minimal input data for the target
+cross section 关42兴; circles, experimental data by Shah et al. 关41兴.        atom and hence the model is most useful for atoms with
+
+                                                                052710-9
+KIM, SANTOS, AND PARENTE                                                                                   PHYSICAL REVIEW A 62 052710
+
+                   TABLE III. Comparison of T, X 关see Eq. 共38兲兴, ␴ RBED 关Eq. 共20兲兴, ␴ BED 关Eq. 共5兲兴, and experimental data
+                by Shah et al. 关44兴 for He.
+
+                T(keV)                      X               ␴ RBED (Å 2 )           ␴ BED (Å 2 )             Expt. (Å 2 )
+
+                        1.0             ⫺5.546                 0.137                 0.137                  0.128 ⫾0.0079
+                        2.01            ⫺4.851                 0.0803                0.0799                 0.0796⫾0.0049
+                        3.0             ⫺4.453                 0.0580                0.0576                 0.0551⫾0.0034
+                        4.0             ⫺4.168                 0.0458                0.0453                 0.0448⫾0.0028
+                        6.1             ⫺3.752                 0.0321                0.0316                 0.0308⫾0.0019
+                        8.0             ⫺3.487                 0.0256                0.0250                 0.0250⫾0.0015
+                       10.0             ⫺3.269                 0.0212                0.0206                 0.0195⫾0.0012
+                       50.0             ⫺1.754                 0.00561               0.00494
+                      100.0             ⫺1.145                 0.00337               0.00264
+                      300.0             ⫺0.1851                0.00183               0.000969
+                      500.0              0.3251                0.00155               0.000606
+                     1000.0              1.161                 0.00139               0.000320
+                     1500.0              1.738                 0.00138               0.000220
+                     2000.0              2.183                 0.00139               0.000168
+                     5000.0              3.756                 0.00149               0.000072
+                    10000.0              5.048                 0.00161               0.000038
+
+
+complex structure. Xenon is a good example because its total                while the ion current measured by Nishimura and Sakae is
+ionization cross section is known to a reasonable accuracy                  known as the gross ionization cross section defined by
+(⫾10% –15%)         at    T⭐5 keV         关47–49兴     and    T
+⫽0.1–2.7 MeV 关45兴. One complication common in heavy
+atoms such as xenon is the fact that multiple ionization is a                           ␴ gross ⫽   兺 n ␴ n⫹ ,   n⫽1,2,3, . . . .      共42兲
+significant fraction of the total ionization cross section. For
+instance, Wetzel et al. 关47兴 and Nagy et al. 关48兴 separately                    Most of the multiply charged ions result from the Auger
+measured cross sections for producing singly charged, dou-                  process triggered by the ionization of an inner shell, such as
+bly charged, and triply charged ions, while Nishimura and                   the 4s, 4p, 4d, and 5s orbitals. Holes created in very deep
+Sakae 关49兴 measured the total ion current. A simple sum of                  inner shells are more likely to be filled by fluorescence than
+the cross sections measured by Wetzel et al. or Nagy et al. is              by the Auger process. Besides, ionization cross sections for
+known as the counting ionization cross section defined by                   the K, L, and M shells are negligible compared to cross sec-
+                                                                            tions of the outer shells, and we need to consider multiple
+              ␴ count ⫽   兺 ␴ n⫹ ,    n⫽1,2,3, . . . ,           共41兲       ionization from the holes created only in the N shell and O
+                                                                            shell.
+                                                                                Since our theoretical model is simple and the accuracy of
+                                                                            the available experimental ionization cross sections is mod-
+                                                                            est, it is not necessary for us to know the details of the Auger
+                                                                            process, such as fluorescence yields and partial cross sections
+                                                                            for the numerous channels of Auger decay. It is sufficient for
+                                                                            us to consider only the energy balance from the list of orbital
+                                                                            binding energies in Table IV. For instance, the ionization of
+                                                                            a 5s electron will lead to a doubly charged ion when a 5p
+                                                                            electron fills the 5s hole, while the ionization of a 4d elec-
+                                                                            tron will lead to a triply charged ion by first filling the 4d
+                                                                            hole by a 5s electron and then the resulting 5s hole filled by
+                                                                            a 5 p electron. In reality it is also possible to get only a
+                                                                            doubly charged ion if a 5p electron fills the 4d hole. Simi-
+                                                                            larly, we assume that the ionization of a 4s or 4p electron
+                                                                            will result in a quadruply charged ion. It is easy to estimate
+    FIG. 7. Fano plot for He. Solid curve, present relativistic RBED        the cross sections for the production of these multiply
+cross section, Eq. 共20兲; short-dashed curve, present nonrelativistic        charged ions in the BEB model because the model gives
+BED cross section, Eq. 共5兲; long-dashed curve, asymptotic Bethe             cross sections for each orbital. Hence, to get the counting
+cross section 关42兴; dot-dashed curve, experimental data by Rieke            ionization cross section, we simply add each orbital cross
+and Prepejchal 关45兴, see text for the explanation of the error bounds;      section once. For the gross ionization cross section we
+circles, experimental data by Shah et al. 关44兴.                             double the 5s cross section, triple the 4d cross section, and
+
+                                                                  052710-10
+EXTENSION OF THE BINARY-ENCOUNTER-DIPOLE . . .                                                               PHYSICAL REVIEW A 62 052710
+
+   TABLE IV. Orbital binding energy B, kinetic energy U, electron occupation number N, and the Bethe constants M 2 关Eq. 共30兲兴, C NR 关Eq.
+共31兲兴, and C R 关Eq. 共25兲兴 for Xe. N, C NR , and C R are dimensionless. The lowest binding energy is experimental. For other binding energies,
+we used the orbital energies from the Dirac-Fock wave function.
+
+Orbital                   B (eV)                U (eV)               N                 M 2 (a 20 )             C NR                    CR
+
+1s 1/2                   35755.82              42281.58                  2            0.000391              ⫺0.00229               0.001564
+2s 1/2                    5509.33              9173.91                   2            0.002470              ⫺0.00989                0.01441
+2p 1/2                    5161.43              9135.67                   2            0.002636              ⫺0.01038                0.01556
+2p 3/2                    4835.57              8324.23                   4            0.005627              ⫺0.02180                0.03358
+3s 1/2                    1170.37              2722.32                   2             0.01163              ⫺0.02853                0.08586
+3p 1/2                    1024.78              2642.38                   2             0.01328              ⫺0.03083                0.09983
+3p 3/2                    961.25               2453.45                   4            0.02831               ⫺0.06391                0.2147
+3d 3/2                    708.13               2311.18                   4            0.03843               ⫺0.07502                0.3031
+3d 5/2                    694.90               2261.96                   6            0.05874               ⫺0.1136                 0.4645
+4s 1/2                    229.39                757.48                   2            0.05931               ⫺0.04893                0.5347
+4p 1/2                    175.58                690.54                   2            0.07749               ⫺0.04321                0.7193
+4p 3/2                    162.80                643.34                   4             0.1671               ⫺0.08057                 1.564
+4d 3/2                     73.78                497.77                   4             0.3688                0.1141                  3.744
+4d 5/2                     71.67                485.43                   6             0.5695                0.1928                  5.797
+5s 1/2                     27.49                122.58                   2             0.4950                0.6419                  5.513
+5p 1/2                     13.40                 88.90                   2              1.015                2.045                   12.03
+5p 3/2                    12.1298                79.42                   4              2.243                4.744                   26.82
+
+
+quadruple the 4s and 4p cross sections. The values of B and                  the principal quantum number n⫽5 as we did in earlier ap-
+U given in Table IV for xenon were calculated using a                        plications of the BEB model to heavy atoms and molecules
+single-configuration Dirac-Fock wave function.                               containing heavy atoms. This is another example of the fine
+   The BEB cross section for the gross ionization is com-                    tuning of the ‘‘Burgess’’ denominator to avoid excessive re-
+pared to available experiments at low T in Fig. 8, while the                 duction of cross sections due to large values of U for outer
+Fano plot for Xe is shown in Fig. 9 for relativistic T. The                  orbitals resulting from many radial nodes and high angular
+BEB cross section used in Fig. 8 is ␴ BEBav 关Eq. 共34兲兴, while                quantum numbers in the kinetic energy operator ł(l
+the cross section used in Fig. 9 is ␴ RBEBav 关Eq. 共37兲兴. The                 ⫹1)/2r 2 . Except for the outermost orbitals, such as the 5p 1/2
+relativistic and nonrelativistic BEB cross sections are indis-               and 5p 3/2 orbitals, the averaging of two denominators shown
+tinguishable at nonrelativistic T. For the 5 p 1/2 and 5p 3/2 or-            in Eq. 共34兲 leads to cross sections practically indistinguish-
+bitals, we did not use the ‘‘average’’ cross section in Eq.                  able from those obtained by using (u⫹1)/n in the denomi-
+共34兲. Instead we replaced u⫹1 in Eq. 共11兲 by (u⫹1)/n with
+
+
+
+
+                                                                                FIG. 9. Fano plot for Xe. Solid curve, present RBEB gross
+    FIG. 8. Total ionization cross section of Xe. Solid curve, present       ionization cross section Eq. 共37兲; long-dashed curve, present RBEB
+BEB gross ionization cross section, Eq. 共34兲; upright triangles, ex-         counting ionization cross section; short-dashed curve, experimental
+perimental gross ionization cross section by Wetzel et al. 关47兴; in-         counting ionization cross section by Rieke and Prepejchal 关45兴;
+verted triangles, experimental counting ionization cross section by          squares, experimental gross ionization cross section by Nagy et al.
+Wetzel et al. 关47兴; squares, experimental gross ionization cross sec-        关48兴; triangles, experimental counting ionization cross section by
+tion by Nagy et al. 关48兴; circles, experimental gross ionization cross       Nagy et al. 关48兴; circles, experimental gross ionization cross section
+section by Nishimura and Sakae 关49兴.                                         by Nishimura and Sakae 关49兴.
+
+                                                                  052710-11
+KIM, SANTOS, AND PARENTE                                                                        PHYSICAL REVIEW A 62 052710
+
+nator. An alternative method is to use the orbital kinetic en-    inner-shell ionization requires relativistic (T⬎20 keV) inci-
+ergies derived from an effective core potential, which            dent electron energies.
+generates nodeless valence orbitals. Effective core potentials       The present theory is in excellent agreement with avail-
+are widely used in quantum chemistry for molecules contain-       able experimental data on K-shell ionization by Tawara et al.
+ing heavy atoms 关50兴. We also used experimental ionization        关25兴 for carbon and argon, the experimental data by Pock-
+energy for the outermost orbital to match the threshold of        man et al. 关33兴 for nickel, and with the experimental data by
+experimental cross sections.                                      Peng et al. 关35兴 for niobium. The present theory is lower
+   In the case of He, double ionization is negligible and we      than available experimental data for silver. For nickel and
+did not have to distinguish counting and gross ionization         heavier elements, the relativistic version of the empirical Ca-
+cross sections. For Xe, however, the gross ionization cross       snati cross sections tends to be higher than the present theory
+section is visibly higher than the counting ionization cross      at the peak by 20% to 30%. Definitive experiments for the
+section as can be seen from Figs. 8 and 9. The peak near T        K-shell ionization of Ni and Ag near the cross-section peaks
+⫽110 eV is enhanced in the gross ionization cross section, a      are needed to settle conflicting theories and experiments.
+clear indication that the peak is related to the multiple ion-       The present theory is also in good agreement with the
+ization resulting from holes in the 4d 3/2 and 4d 5/2 orbitals.   relativistic plane-wave Born cross sections by Scofield 关24兴
+These holes may be created either by direct ionization or         for argon, nickel, and silver for T⬍2 MeV. However, for
+excitation to a higher bound levels, which decay by autoion-      higher T, the RBEB cross section is higher than the Born
+ization. The BEB model includes the direct ionization but         cross section, because the RBEB model most likely overes-
+not the autoionizing excitations. Within the context of the       timates M 2 关Eq. 共23兲兴 for K shells. This shortcoming of the
+BEB model, the autoionization cross sections must be calcu-       RBEB model can be corrected by actually calculating M 2
+lated separately and added on to the direct ionization cross      with a suitable relativistic continuum wave function. Since
+section.                                                          the ionization energy for K electrons is high and the bound
+   For heavy, neutral atoms, the BEB model underestimates         state is dominated by the nuclear Coulomb field, electron
+the value of M 2 while overestimating C NR and consequently       correlation is not expected to be critical. Any reasonable con-
+C R . The BEB values for Xe are M 2 ⫽5.157, C NR ⫽7.209,          tinuum wave-function model—e.g., a relativistic version of
+and C R ⫽57.96 for the counting ionization cross section, and     the Hartree-Fock continuum wave function with frozen core
+M 2 ⫽8.441, C NR ⫽7.947, and C R ⫽91.01 for the gross ion-        orbitals—is likely to produce M 2 values better than the
+ization cross section. Rieke and Prepejchal 关45兴 detected Xe      simple form, Eq. 共30兲, used in the RBEB model. When such
+ions in the Geiger-Müller 共GM兲 counting mode, and hence          continuum wave functions become available, the RBEQ and
+what their instrument recorded corresponds to the counting        RBED models can be used as well.
+ionization cross section. In spite of the low uncertainty esti-      Although the empirical equation by Casnati et al. 关19兴 has
+mate on their total M 2 value, 8.04⫾0.15, their value far         a logarithmic term to represent the dipole interaction, its
+exceeds the M 2 ⫽6.12 obtained by Berkowitz 关14兴 directly         relativistic correction derived by Quarles 关20兴 is based on the
+from photoionization data. The value by Rieke and Prepe-          classical theory by Gryzinski 关21兴, which does not have the
+jchal quoted above was obtained without any buffer gas in         proper dipole interaction term. Hence, it is uncertain whether
+the counter, which implies that there was no conversion of        this combination of nonrelativistic Casnati formula and the
+metastable Xe into an ion through the Penning ionization.         Quarles relativistic correction would necessarily lead to the
+Hence their value of M 2 ⫽8.04⫾0.15 and C R ⫽72.35⫾0.40           correct asymptotic behavior for the dipole interaction, which
+should be for ionization without any excitations unlike the       becomes dominant at relativistic T. The same comment ap-
+case of He. In fact, this tendency of the M 2 values deter-       plies to the relativistic extension of the semiempirical cross
+mined by Rieke and Prepejchal being higher than the M 2           section by Deutsch et al. 关22兴. The Deutsch cross section
+values obtained directly from photoionization is seen in          does not have the correct logarithmic term for the dipole
+many targets reported by Rieke and Prepejchal. We have no         interaction either in the relativistic or the nonrelativistic for-
+plausible explanation for this trend.                             mula. It is known that the lack of a proper dipole interaction
+                                                                  term in the classical theory leads to cross sections too low at
+                                                                  high T.
+                                                                     All forms of the present theory and the plane-wave Born
+                     IV. CONCLUSIONS
+                                                                  cross section by Scofield 关24兴 have the correct logarithmic
+    The nonrelativistic BED, BEQ, and BEB cross sections          terms for the dipole interaction. In Figs. 3–5, the RBEB
+for electron-impact ionization have been extended to relativ-     cross section becomes higher than the semiempirical cross
+istic incident electron energies. The original BED-BEQ-BEB        sections marked ‘‘Quarles 关20兴’’ and ‘‘Deutsch’’ at T
+formulas, which reproduce reliable ionization cross sections      ⬎2 MeV. Since these semiempirical cross sections both
+for neutral targets, have been modified slightly for applica-     have ‘‘improper’’ asymptotic behavior, the only meaningful
+tions to inner shells by using a simple average of cross sec-     comparison of asymptotic cross sections will be the compari-
+tions with two different denominators. These denominators         son between the present theory and the plane-wave Born
+play the role of T-dependent scaling of ionization cross sec-     cross section by Scofield 关24兴.
+tion to account for the electron correlation between the inci-       The Born approximation overestimates peak cross sec-
+dent and target electrons. The relativistic formulas can now      tions and this expectation is borne out by the trend seen in
+be used for the ionization of atoms and molecules whose           Fig. 3. The agreement near the peak in Fig. 5 between the
+
+                                                            052710-12
+EXTENSION OF THE BINARY-ENCOUNTER-DIPOLE . . .                                                   PHYSICAL REVIEW A 62 052710
+
+Born cross section by Scofield and the experimental data by         and BEQ cross sections are also likely to overestimate gross
+Davis et al. 关36兴 should be regarded not as an agreement but        ionization cross sections at TⰇmc 2 .
+as an indication that the data by Davis et al. are too high in         Unlike K shells, the BEB model underestimates M 2 of
+view of the expected behavior of Born cross sections near the       heavy neutral atoms and overestimates their C R and C NR .
+peak. The comparison of the present ␴ RBEB to the Born cross        The fact that the BEB model produces reliable ionization
+section by Scofield at T⫽10 MeV for medium to heavy                 cross sections at low T for many neutral atoms and mol-
+atoms indicates that the former is higher than the latter by        ecules indicates that other terms in the BEB-RBEB model
+10–15%.                                                             compensate at low T.
+    The ionization cross sections for the hydrogen and helium          The underlying reasons for the surprising success of the
+atoms are in excellent agreement with the present BEQ/BED           Burgess denominator for neutral targets and its modified
+cross sections at nonrelativistic T. However, the asymptotic        form for inner shells presented here are not clear at present.
+trend of the experimental data for the hydrogen atom follows        More application examples are needed to fully understand
+the asymptotic Bethe cross section 关42兴 better than the rela-       the fundamental nature of the Burgess denominator. Only
+tivistic BEQ cross section. On the other hand, the asymptotic       then the BED-BEQ-BEB models can be modified further to
+trend of the experimental data for the helium atom follows          make them truly versatile models that not only cover the
+the relativistic BED cross section.                                 entire range of T but also apply to neutral as well as ionized
+    The BEB cross section for Xe is in good agreement with          targets.
+available experiments except near the cross-section peak,              Since all the input data required in the relativistic BEB
+where autoionization resulting from the ‘‘excitations’’ of the      cross section can be obtained from the ground-state wave
+5s and 4d electrons to upper bound levels interact with the         function 共preferably Dirac-Fock type兲 of a target atom,
+background continuum for the direct ionization of the 5p            ␴ RBEB 关Eqs. 共22兲 or 共37兲兴 can be used for a wide range of
+electrons. The BEB model does not include these autoioniz-          neutral atoms and molecules as well as atomic and molecular
+ing channels, though the model can approximately account            ions. The relativistic formulas presented in this paper provide
+for the multiple ionization produced by the Auger decay of          a ‘‘seamless’’ coverage of ionization cross sections from the
+the 5s, 4d, 4p, and 4s holes created by direct ionization.          threshold to relativistic incident energies, making the formu-
+    When accurate data on differential dipole oscillator            las ideally suited for modeling of radiation effects, fusion
+strength are available, the BED and BEQ models will lead to         plasmas, stripping of ions in heavy ion fusion, inner-shell
+the correct value of the leading dipole term M 2 in the             ionization, and other applications where ionization cross sec-
+asymptotic Bethe cross section 关see Eq. 共23兲兴 for relativistic      tions for a wide range of incident energies are required.
+incident electron energies. However, the present theory is
+likely to overestimate the second term C R in the asymptotic                           ACKNOWLEDGMENTS
+Bethe cross section. Hence the BED and BEQ models may
+still overestimate counting ionization cross sections for ex-          This work was supported in part by the Office of Fusion
+treme relativistic incident electron energies, TⰇmc 2 . For         Energy Sciences, U.S. Department of Energy and by FCT
+gross ionization cross sections, available experimental data        共Portugal兲 under Project No. PRAXIS/C/FIS/10030/98.
+are insufficient to draw any definite conclusion about the          Y.K.K and J.P.S are also grateful for support from the Luso-
+reliability of the present theory at TⰇmc 2 , though the BED        American Development Foundation.
+
+
+
+
+ 关1兴 Y.-K. Kim and M.E. Rudd, Phys. Rev. A 50, 3954 共1994兲.         关10兴 Y.-K. Kim, Radiat. Res. 64, 205 共1975兲, Eqs. 共A1兲 and 共A2兲.
+ 关2兴 N.F. Mott, Proc. R. Soc. London, Ser. A 126, 259 共1930兲.       关11兴 H. Bethe, Z. Phys. 76, 293 共1932兲; in Handbuck der Physik,
+ 关3兴 L.D. Landau and E.M. Lifshitz, Quantum Mechanics: Nonrel-           edited by H. Geiger and K. Scheel 共Springer, Berlin, 1933兲,
+     ativistic Theory, 2nd ed. 共Pergamon, London, 1965兲, p. 575,         Vol. 24/1, p. 273.
+     Eq. 共145.17兲.                                                  关12兴 H.A. Bethe and J. Ashkin, in Experimental Nuclear Physics,
+ 关4兴 H. Bethe, Ann. Phys. 共Leipzig兲 5, 325 共1930兲.                       edited by E. Segrè 共Wiley, New York, 1953兲, Vol. 1, p. 166,
+ 关5兴 C. Mo” ller, Ann. Phys. 共Leipzig兲 14, 531 共1932兲.                   Eq. 共71兲.
+ 关6兴 Applications of the BED/BEB model to many atoms and mol-       关13兴 U. Fano, Phys. Rev. 95, 1198 共1954兲; 102, 385 共1956兲; Annu.
+     ecules and relevant references can be found at http://              Rev. Nucl. Sci. 13, 1 共1963兲.
+     physics.nist.gov/ionxsec.                                      关14兴 J. Berkowitz, Photoabsorption, Photoionization, and Photo-
+ 关7兴 M. Inokuti, Rev. Mod. Phys. 43, 297 共1971兲.                         electron Spectroscopy 共Academic Press, New York, 1979兲,
+ 关8兴 D.S. Soh, B.H. Cho, and Y.-K. Kim, Phys. Rev. A 26, 1357            Chap. V.
+     共1982兲.                                                        关15兴 Y.-K. Kim, K.K. Irikura, and M.A. Ali, J. Res. Natl. Inst.
+ 关9兴 A. Burgess, Proceedings of the 3rd International Conference         Stand. Technol. 105, 285 共2000兲.
+     on Electronic and Atomic Collisions, London, 1963, edited by   关16兴 S.M. Younger, J. Quant. Spectrosc. Radiat. Transfer 26, 329
+     M.R.C. McDowell 共North-Holland, Amsterdam, 1964兲, p. 237;           共1981兲.
+     Proceedings of the Symposium on Atomic Collision Processes     关17兴 C.J. Powell, in Electron Impact Ionization, edited by T.D.
+     in Plasmas, Culham, 1964 关AERE Report No. 4818兴, p. 63.             Märk and G.H. Dunn 共Springer-Verlag, Vienna, 1985兲, Chap.
+
+                                                              052710-13
+KIM, SANTOS, AND PARENTE                                                                             PHYSICAL REVIEW A 62 052710
+
+     6; C.J. Powell, in Microbeam Analysis—1990, edited by J.R.      关33兴 L.T. Pockman, D.L. Webster, P. Kirkpatrick, and K. Harworth,
+     Michael and P. Ingram 共San Francisco Press, San Francisco,           Phys. Rev. 71, 330 共1947兲.
+     1990兲, p. 13.                                                   关34兴 A.E. Smick and P. Kirkpatrick, Phys. Rev. 67, 153 共1945兲.
+关18兴 R.D. Deslattes, E.G. Kessler, Jr., P. Indelicato, and E. Lin-   关35兴 X. Peng, F. He, X. Long, Z. Luo, and Z. An, Phys. Rev. A 58,
+     droth, in International Tables for Crystallography, edited by        2034 共1998兲.
+     A.J.C. Wilson and E. Prince 共Kluwer Academic Publishers,        关36兴 D.V. Davis, V.D. Mistry, and C.A. Quarles, Phys. Lett. 38A,
+     Boston, 1999兲, Vol. C, Chap. 4.2.2, pp. 200–213, Table               169 共1972兲.
+     4.4.2.4.                                                        关37兴 K. Shima, T. Nakagawa, K. Umetani, and T. Mikumo, Phys.
+关19兴 E. Casnati, A. Tartari, and C. Baraldi, J. Phys. B 15, 155           Rev. A 24, 72 共1981兲.
+     共1982兲.                                                         关38兴 K. Kiss, Gy. Kálmán, J. Pálinkaás, and B. Schlenk, Acta Phys.
+关20兴 C.A. Quarles, Phys. Rev. A 13, 1278 共1976兲.                          Acad. Sci. Hung. 50, 97 共1981兲.
+关21兴 M. Gryzinski, Phys. Rev. 138, A305 共1965兲; 138, A322            关39兴 X. Long, M. Lin, F. Ro, and X. Peng, At. Data Nucl. Data
+     共1965兲; 138, A336 共1965兲.                                            Tables 45, 353 共1990兲.
+关22兴 H. Deutsch, K. Becker, and T.D. Märk, Int. J. Mass Spectrom.   关40兴 S.A.H.S. el Nasr, D. Berenyi, and G. Bibok, Z. Phys. 267, 169
+     177, 47 共1998兲.                                                      共1974兲.
+关23兴 S.P. Khare, V. Saksena, and J.M. Wadehra, Phys. Rev. A 48,      关41兴 M.B. Shah, D.S. Elliott, and H.B. Golbody, J. Phys. B 20,
+     1209 共1993兲.                                                         3501 共1987兲; and private communication.
+关24兴 J.H. Scofield, Phys. Rev. A 18, 963 共1978兲.                     关42兴 Y.-K. Kim and M. Inokuti, Phys. Rev. A 3, 665 共1971兲.
+关25兴 H. Tawara, K.G. Harrison, and F.J.D. Heer, Physica 共Amster-     关43兴 Y.-K. Kim, W.R. Johnson, and M.E. Rudd, Phys. Rev. A 61,
+     dam兲 63, 351 共1973兲.                                                 034702 共2000兲.
+关26兴 W. Hink and H. Paschke, Z. Phys. 244, 140 共1971兲.               关44兴 M.B. Shah, D.S. Elliott, P. McCallion, and H.B. Gilbody, J.
+关27兴 R. Hippler, K. Saeed, I. McGregor, and H. Kleinpoppen, Z.            Phys. B 21, 2751 共1988兲.
+     Phys. A 307, 83 共1982兲.                                         关45兴 F.F. Rieke and W. Prepejchal, Phys. Rev. A 6, 1507 共1972兲.
+关28兴 C. Quarles and M. Semaan, Phys. Rev. A 26, 3147 共1982兲.         关46兴 M. Inokuti, Y.-K. Kim, and R.L. Platzman, Phys. Rev. 164, 55
+关29兴 H. Platten, G. Schiwietz, and G. Nolte, Phys. Lett. 107A, 89         共1967兲.
+     共1985兲.                                                         关47兴 R.C. Wetzel, A. Baiocchi, T.R. Hays, and R.S. Freund, Phys.
+关30兴 J. Jessenberger and W. Hink, Z. Phys. A 275, 331 共1975兲.             Rev. A 35, 559 共1987兲.
+关31兴 Z. Luo, Z. An, F. He, T. Li, X. Long, and X. Peng, J. Phys. B   关48兴 P. Nagy, A. Skutlartz, and V. Schmidt, J. Phys. B 13, 1249
+     29, 4001 共1996兲.                                                     共1980兲.
+关32兴 F.Q. He, X.F. Peng, X.G. Long, Z.M. Luo, and Z. An, Nucl.       关49兴 H. Nishimura and T. Sakae 共private communication兲.
+     Instrum. Methods Phys. Res. B 129, 445 共1997兲.                  关50兴 W.M. Huo and Y.-K. Kim, Chem. Phys. Lett. 319, 576 共2000兲.
+
+
+
+
+                                                               052710-14
+

@@ -1,0 +1,873 @@
+"""
+igm_losses -- fisica de perdidas de energia de un electron en el medio intergalactico.
+
+Modulo compartido por los notebooks marimo ``perdidas_energia_z10.py`` y
+``z_vs_delta_z.py``. Contiene una unica definicion de:
+
+  * constantes fisicas (MKS) y parametros astrofisicos del medio,
+  * la cosmologia Planck18 tabulada: ``z_interp(t)``, ``H_interp(t)``, ``make_time_grid``,
+  * el kernel Klein-Nishina ``F_KN(b)`` sobre espectro de cuerpo negro,
+  * las tablas de perdida colisional (excitacion e ionizacion de H), cacheadas en disco,
+  * ``loss_rates(z, K_J, H_z, tog)``: los 7 mecanismos, vectorizado,
+  * los integradores de trayectorias y el evento de termalizacion,
+  * las curvas cinematicas de umbral y el mapa de mecanismo dominante,
+  * los ayudantes de graficacion comunes (estilo, leyendas, colores por mecanismo).
+
+Mecanismos (indice fijo en todo el codigo):
+
+    0 adiabatic   1 synchrotron   2 compton   3 coulomb
+    4 excitation  5 ionization    6 bremsstrahlung
+
+Referencias
+-----------
+Compton inverso / bremsstrahlung : Blumenthal & Gould (1970), Rev. Mod. Phys. 42, 237
+Coulomb                          : Gould (1972), Physica 60, 145
+Excitacion colisional            : Stone & Kim (2002), J. Phys. B 35, 1675
+Ionizacion colisional (RBEB)     : Kim et al. (2000), Phys. Rev. A 62, 052710
+"""
+
+# Poner en False antes de importar para silenciar los mensajes de arranque.
+VERBOSE = True
+
+# =====================================================================
+# 0.  Imports (uno solo para todo el notebook)
+# =====================================================================
+import math
+import shutil
+import warnings
+from functools import lru_cache
+from pathlib import Path
+
+import astropy.units as u
+import matplotlib.patches as mpatches
+import matplotlib.pyplot as plt
+import matplotlib.ticker as ticker
+import numpy as np
+from astropy.cosmology import Planck18, z_at_value
+from matplotlib.collections import LineCollection
+from matplotlib.colors import ListedColormap
+from scipy.integrate import (
+    IntegrationWarning,
+    cumulative_trapezoid,
+    quad,
+    solve_ivp,
+)
+from scipy.interpolate import interp1d
+from scipy.optimize import root_scalar
+from scipy.special import genlaguerre, roots_laguerre, spherical_jn
+
+warnings.filterwarnings("ignore", category=IntegrationWarning)
+warnings.filterwarnings("ignore", category=RuntimeWarning)
+
+
+# =====================================================================
+# 1.  Constantes físicas (MKS) -- ÚNICA definición del notebook
+# =====================================================================
+LIGHT_SPEED_MKS = 2.99792458e8
+PLANCK_CONSTANT_MKS = 6.62607015e-34
+ELECTRON_CHARGE_MKS = 1.602176634e-19
+BOLTZMANN_CONSTANT_MKS = 1.38064852e-23  # CODATA-2014 (original del notebook)
+YEAR_MKS = 3.15569251e7
+PARSEC_MKS = 3.085677581491367e16
+VACUUM_PERMEABILITY_NORM = 1.00000000055
+ELECTRON_MASS_MKS = 9.1093837139e-31
+PROTON_MASS_MKS = 1.67262192369e-27
+CMB_TEMPERATURE = 2.7255
+
+EV_MKS = ELECTRON_CHARGE_MKS
+MEGAPARSEC_MKS = 1e6 * PARSEC_MKS
+PLANCK_CONSTANT_REDUCED_MKS = PLANCK_CONSTANT_MKS / (2.0 * np.pi)
+VACUUM_PERMEABILITY = 4.0e-7 * np.pi * VACUUM_PERMEABILITY_NORM
+VACUUM_PERMITTIVITY = 1.0 / (VACUUM_PERMEABILITY * LIGHT_SPEED_MKS**2)
+ELECTRON_REST_ENERGY_MKS = ELECTRON_MASS_MKS * LIGHT_SPEED_MKS**2
+PROTON_REST_ENERGY_MKS = PROTON_MASS_MKS * LIGHT_SPEED_MKS**2
+ELECTRON_RADIUS_MKS = ELECTRON_CHARGE_MKS**2 / (
+    4.0 * np.pi * VACUUM_PERMITTIVITY * ELECTRON_REST_ENERGY_MKS
+)
+PLANCK_TIMES_LIGHT = PLANCK_CONSTANT_MKS * LIGHT_SPEED_MKS
+FINE_STRUCTURE_CONSTANT = ELECTRON_CHARGE_MKS**2 / (
+    2.0 * VACUUM_PERMITTIVITY * PLANCK_TIMES_LIGHT
+)
+RY_ENERGY_MKS = FINE_STRUCTURE_CONSTANT**2 * ELECTRON_REST_ENERGY_MKS / 2.0
+THOMSON_CROSS_SECTION_MKS = (8.0 * np.pi / 3.0) * ELECTRON_RADIUS_MKS**2
+BOHR_RADIUS_MKS = PLANCK_CONSTANT_REDUCED_MKS / (
+    ELECTRON_MASS_MKS * LIGHT_SPEED_MKS * FINE_STRUCTURE_CONSTANT
+)
+
+# Alias cortos usados en todo el notebook
+E0 = ELECTRON_REST_ENERGY_MKS
+C_LIGHT = LIGHT_SPEED_MKS
+K_B = BOLTZMANN_CONSTANT_MKS
+T_CMB_0 = CMB_TEMPERATURE
+U_CMB_0_J_M3 = 4.17e-14  # a T^4 con T = 2.7255 K
+
+PREFACTOR_BREMS = 4.0 * FINE_STRUCTURE_CONSTANT * ELECTRON_RADIUS_MKS**2
+
+
+# =====================================================================
+# 2.  Parámetros astrofísicos + INTERRUPTORES DE CORRECCIÓN
+# =====================================================================
+
+# --- Medio / campos ---
+B0 = 1e-9 * 1e-4          # 1 nG en Tesla (valor a z=0; B(z) = B0 (1+z)^2)
+ION_FRACTION = 1e-4       # x_e  = n_e / n_HI
+N_HI_NORM = 1.8e3         # n_HI(z) = N_HI_NORM ((1+z)/21)^3  [m^-3]
+Z_TARGET = 1.0            # Hidrógeno
+DELTA_GOULD = 0.5         # transferencia fraccional máxima (Gould 1972)
+
+THRESHOLD_EV_EXC = 10.204                 # Lyman-alpha
+THRESHOLD_EV_ION = RY_ENERGY_MKS / EV_MKS # 13.6057 eV
+
+# --- Ventana cosmológica por defecto ---
+Z_INIT = 10.0
+Z_FINAL = 5.5
+# La grilla de interpolacion cubre hasta z=35: z_vs_delta_z.py inyecta
+# electrones en z_i = 30 y el notebook original extrapolaba fuera de rango.
+Z_MAX_INTERP = 35.0
+
+# =====================================================================
+#  INTERRUPTORES  ("False" = reproduce EXACTAMENTE el notebook original)
+#  Ver la celda de diagnóstico al final para el detalle de cada uno.
+# =====================================================================
+FIX_KN_KERNEL = True        # [E1] peso q faltante en el kernel Klein-Nishina
+FIX_BREMS_EE = True         # [E2] doble conteo e-e en la Fig. 12
+INCLUDE_BREMS_IN_TOTAL = True   # [E3] bremsstrahlung dentro del modelo total
+THERMAL_FLOOR_FACTOR = 1.5  # [E4] K_term = f k T_CMB(z);  1.5 -> <K> térmico
+EXC_NMAX = 10               # [E5] niveles n=2..EXC_NMAX en excitación colisional
+#                                  (original: 10 en Figs 10/24/25, 3 en Figs 15-22)
+FIX_SECONDARY_SPECTRUM = True   # [E6] <eps> del electrón secundario a partir de la
+#                                 sección eficaz diferencial BEB (Kim & Rudd 1994)
+#                                 en vez del ajuste ad-hoc ~1/(1+(eps/8)^2.1).
+#                                 El ajuste subestima <eps> hasta un 29% y por lo
+#                                 tanto Lambda_ion hasta un 20% a 1e5 eV.
+# Poné cualquiera en su valor original (False / 1.0 / 3) para volver al notebook
+# de partida: marimo recalcula TODO el notebook automáticamente.
+
+# --- Mallas temporales unificadas ---
+N_T_STD = 1000     # figuras de evolución "estándar"
+N_T_DENSE = 10000  # figuras de espacio de fases / pérdidas acumuladas
+N_Z_INTERP = 10000 # nodos de la interpolación z(t), H(t)
+
+
+# =====================================================================
+# 3.  Estilo de figuras (calidad publicación)
+# =====================================================================
+HAS_LATEX = shutil.which("latex") is not None and shutil.which("dvipng") is not None
+
+HIGH_CONTRAST_COLORS = plt.cm.tab10.colors
+
+plt.rcParams.update(
+    {
+        "text.usetex": HAS_LATEX,
+        "font.family": "serif",
+        "font.serif": ["Computer Modern Roman", "DejaVu Serif"],
+        "mathtext.fontset": "cm",
+        "axes.labelsize": 14,
+        "font.size": 12,
+        "legend.fontsize": 11,
+        "xtick.labelsize": 12,
+        "ytick.labelsize": 12,
+        "xtick.direction": "in",
+        "ytick.direction": "in",
+        "xtick.top": True,
+        "ytick.right": True,
+        "xtick.minor.visible": True,
+        "ytick.minor.visible": True,
+        "lines.linewidth": 1.5,
+        "axes.grid": True,
+        "grid.alpha": 0.3,
+        "grid.linestyle": "-",
+        "figure.max_open_warning": 0,
+        "axes.prop_cycle": plt.cycler("color", HIGH_CONTRAST_COLORS),
+    }
+)
+
+if not HAS_LATEX:
+    print("AVISO: LaTeX no disponible -> se usa mathtext (las etiquetas siguen bien).")
+
+# Paleta e identificación de los 7 mecanismos (índices fijos en todo el notebook)
+MECH_KEYS = [
+    "adiabatic", "synchrotron", "compton",
+    "coulomb", "excitation", "ionization", "bremsstrahlung",
+]
+MECH_NAMES = [
+    "Exp. Adiabática", "Sincrotrón", "Compton",
+    "Coulomb (Plasma)", "Excitación Colisional", "Ionización Colisional",
+    "Bremsstrahlung",
+]
+MECH_COLORS = [
+    "#1f77b4", "#ff7f0e", "#2ca02c",
+    "#d62728", "#9467bd", "#8c564b", "#e377c2",
+]
+# Los mapas de dominancia usan 7 mecanismos si el bremsstrahlung está activo
+N_MECH_MAP = 7 if INCLUDE_BREMS_IN_TOTAL else 6
+MECH_CMAP = ListedColormap(MECH_COLORS[:N_MECH_MAP])
+MECH_NORM = plt.Normalize(-0.5, N_MECH_MAP - 0.5)
+
+ALL_ON = {k: True for k in MECH_KEYS}
+
+# Juegos de interruptores con nombre, usados como clave de caché de trayectorias.
+TOGGLE_SETS = {
+    "all":    {},                       # todos los mecanismos activos
+    "no_ad":  {"adiabatic": False},     # sin expansión adiabática
+    "no_ic":  {"compton": False},       # sin Compton inverso
+    "no_syn": {"synchrotron": False},   # sin sincrotrón
+}
+
+
+def toggles(**over):
+    """Diccionario de interruptores de mecanismos, todo ON salvo lo indicado."""
+    t = dict(ALL_ON)
+    t["bremsstrahlung"] = INCLUDE_BREMS_IN_TOTAL
+    t.update(over)
+    return t
+
+
+def energy_label(K_eV, sym=r"K_{\mathrm{e}}^{\mathrm{ini}}"):
+    """Etiqueta LaTeX 10^n eV, respetando exponentes semienteros."""
+    e = np.log10(K_eV)
+    txt = f"{e:.0f}" if abs(e - round(e)) < 1e-9 else f"{e:.1f}"
+    return rf"${sym} = 10^{{{txt}}}$ eV"
+
+
+def grid_minor(ax):
+    ax.grid(True, which="minor", ls="--", alpha=0.1)
+    return ax
+
+
+# =====================================================================
+# 4.  Cosmología:  z(t)  y  H(t)  -- se calcula UNA sola vez
+# =====================================================================
+Z_ARRAY_INTERP = np.insert(
+    np.logspace(-3, np.log10(Z_MAX_INTERP), N_Z_INTERP), 0, 0.0
+)
+T_ARRAY_INTERP = Planck18.age(Z_ARRAY_INTERP).to(u.s).value
+
+_t_sorted = T_ARRAY_INTERP[::-1]
+_z_sorted = Z_ARRAY_INTERP[::-1]
+
+z_interp = interp1d(_t_sorted, _z_sorted, kind="cubic", fill_value="extrapolate")
+H_interp = interp1d(
+    _t_sorted,
+    Planck18.H(_z_sorted).to(u.s**-1).value,
+    kind="cubic",
+    fill_value="extrapolate",
+)
+
+
+def age_s(z):
+    """Edad del universo en segundos (escalar o array)."""
+    return Planck18.age(z).to(u.s).value
+
+
+T_INIT = age_s(Z_INIT)
+T_FINAL = age_s(Z_FINAL)
+
+
+def make_time_grid(z_i=Z_INIT, z_f=Z_FINAL, n=N_T_STD, mode="cosmic"):
+    """
+    Devuelve (t_eval [s], t_years, z_eval).
+      mode='cosmic'  -> log-espaciado en tiempo cósmico absoluto
+      mode='elapsed' -> log-espaciado en tiempo transcurrido desde t_i (empieza a +1 yr)
+    """
+    t_i, t_f = age_s(z_i), age_s(z_f)
+    if mode == "cosmic":
+        t_years = np.logspace(np.log10(t_i / YEAR_MKS), np.log10(t_f / YEAR_MKS), n)
+        t_eval = t_years * YEAR_MKS
+    else:
+        elapsed = np.logspace(0, np.log10((t_f - t_i) / YEAR_MKS), n)
+        t_eval = t_i + elapsed * YEAR_MKS
+        t_years = t_eval / YEAR_MKS
+    return t_eval, t_years, z_interp(t_eval)
+
+
+# Mallas estándar reutilizadas por casi todas las figuras
+T_EVAL, COSMIC_T_YEARS, Z_EVAL = make_time_grid(mode="cosmic")
+T_EVAL_EL, COSMIC_T_YEARS_EL, Z_EVAL_EL = make_time_grid(mode="elapsed")
+T_EVAL_DENSE = np.logspace(np.log10(T_INIT), np.log10(T_FINAL), N_T_DENSE)
+Z_EVAL_DENSE = z_interp(T_EVAL_DENSE)
+
+if VERBOSE: print(f"t(z={Z_INIT}) = {T_INIT/YEAR_MKS/1e6:.1f} Myr    "
+      f"t(z={Z_FINAL}) = {T_FINAL/YEAR_MKS/1e6:.1f} Myr    "
+      f"Delta t = {(T_FINAL-T_INIT)/YEAR_MKS/1e6:.1f} Myr")
+
+
+# =====================================================================
+# 5.  Kernel Klein-Nishina  F_KN(b)  sobre espectro de cuerpo negro
+#     (una sola vez; cuadratura de Gauss-Legendre fija en vez de nquad)
+# =====================================================================
+#  Blumenthal & Gould (1970), ec. 2.48.  Con
+#      eps_1 = gamma m c^2 * G q /(1+G q),   G = 4 eps gamma / m c^2 = x*b
+#  la pérdida de energía pesa el kernel con  q/(1+Gq)^3.
+#  El notebook original omitía el factor q -> ver interruptor FIX_KN_KERNEL.
+
+_NQ, _NX = 400, 400
+_qx, _qw = np.polynomial.legendre.leggauss(_NQ)
+_Q_NODES = 0.5 * (_qx + 1.0)            # q in (0,1)
+_Q_W = 0.5 * _qw
+_xx, _xw = np.polynomial.legendre.leggauss(_NX)
+_X_NODES = 0.5 * (_xx + 1.0) * 60.0     # x = eps/kT in (0,60)
+_X_W = 0.5 * _xw * 60.0
+_PLANCK_W = _X_W * _X_NODES**3 / np.expm1(_X_NODES)   # peso de densidad de energía
+
+
+def f_kn_kernel_grid(b_values, with_q_weight):
+    """F_KN(b) vectorizado sobre la grilla (b, x, q)."""
+    b = np.asarray(b_values, dtype=float)[:, None, None]
+    x = _X_NODES[None, :, None]
+    q = _Q_NODES[None, None, :]
+    G = x * b
+    Gq = G * q
+    bracket = (
+        2.0 * q * np.log(q)
+        + (1.0 + 2.0 * q) * (1.0 - q)
+        + (Gq**2 * (1.0 - q)) / (2.0 * (1.0 + Gq))
+    )
+    kern = bracket / (1.0 + Gq) ** 3
+    if with_q_weight:
+        kern = kern * q
+    inner = np.einsum("bxq,q->bx", kern, _Q_W)
+    val = inner @ _PLANCK_W
+    norm = (np.pi**4 / 15.0) * (1.0 / 9.0 if with_q_weight else 1.0 / 3.0)
+    return val / norm
+
+
+B_KN_GRID = np.logspace(-6, 6, 400)
+F_KN_GRID = np.clip(f_kn_kernel_grid(B_KN_GRID, FIX_KN_KERNEL), 1e-300, None)
+
+# Interpolación log-log: F_KN varía ~12 órdenes de magnitud
+_fkn_spline = interp1d(
+    np.log(B_KN_GRID), np.log(F_KN_GRID), kind="cubic",
+    bounds_error=False, fill_value=(0.0, -np.inf),
+)
+
+
+def F_KN(b):
+    """Corrección Klein-Nishina a la tasa Thomson (1 en el límite Thomson)."""
+    b = np.asarray(b, dtype=float)
+    out = np.exp(_fkn_spline(np.log(np.clip(b, 1e-300, None))))
+    return np.where(b < B_KN_GRID[0], 1.0, out)
+
+
+if VERBOSE: print("F_KN:  " + "   ".join(
+    f"b={b:.0e}->{float(F_KN(b)):.3e}" for b in (1e-4, 1e-1, 1.0, 1e2)
+))
+
+
+# =====================================================================
+# 6.  Tablas de pérdida colisional  sigma(K) * <Delta E>   [m^2 eV]
+#     Excitación (Stone & Kim 2002)  e  Ionización RBEB (Kim et al. 2000)
+#     Se calculan una sola vez y se cachean en disco.
+# =====================================================================
+_CACHE = Path(__file__).resolve().parent / ".igm_losses_cache.npz"
+
+# ---------- 6a. Excitación colisional H(1s) -> H(np) ----------
+EXC_LEVEL_E = [10.204, 12.094, 12.755, 13.061, 13.228,
+               13.328, 13.393, 13.438, 13.470]
+EXC_LEVEL_N = [2, 3, 4, 5, 6, 7, 8, 9, 10]
+EXC_PARAMS = {  # n: [E_n, f0, a_bethe, b_bethe, c_bethe]
+    2:  [10.204, 0.4164, 0.555512, 0.271785, 0.000112],
+    3:  [12.094, 0.0791, 0.089083, 0.060202, -0.019775],
+    4:  [12.755, 0.0290, 0.030956, 0.022984, -0.009279],
+    5:  [13.061, 0.0139, 0.014534, 0.011243, -0.004880],
+    6:  [13.228, 0.00780, 0.008031, 0.006348, -0.002853],
+    7:  [13.328, 0.004816, 0.004919, 0.003939, -0.001806],
+    8:  [13.393, 0.003185, 0.003237, 0.002550, -0.001213],
+    9:  [13.438, 0.002217, 0.002246, 0.001824, -0.000854],
+    10: [13.470, 0.001606, 0.001623, 0.001323, -0.000623],
+}
+
+_LAG_X, _LAG_W = roots_laguerre(70)
+# genlaguerre() se construía DENTRO del integrando (miles de veces) -> una vez por n
+_LPOLY = {n: genlaguerre(n - 2, 3) for n in EXC_LEVEL_N}
+_GOS_NORM = {
+    n: np.sqrt((2.0 / n) ** 3 * math.factorial(n - 2) / (2 * n * math.factorial(n + 1)))
+    for n in EXC_LEVEL_N
+}
+
+
+def exact_gos_hydrogen_1s_np(n, Q):
+    """Generalized oscillator strength 1s -> np (cuadratura de Gauss-Laguerre)."""
+    Q = max(float(Q), 1e-12)
+    q = np.sqrt(Q)
+    alpha = 1.0 + 1.0 / n
+    r = _LAG_X / alpha
+    rho = 2.0 * r / n
+    poly = (2.0 * _GOS_NORM[n] * rho * _LPOLY[n](rho)
+            * spherical_jn(1, q * r) * r**2 * np.sqrt(3.0))
+    F_q = np.sum(_LAG_W * poly) / alpha
+    return (1.0 - 1.0 / n**2) / Q * F_q**2
+
+
+def calculate_sigma_hydrogen_universal(T, n, mode="auto"):
+    """Sección eficaz de excitación 1s->np en A^2.  T en eV."""
+    E, _f0, a_b, b_b, c_b = EXC_PARAMS[n]
+    a0 = BOHR_RADIUS_MKS * 1e10
+    R = RY_ENERGY_MKS / EV_MKS
+    mc2 = E0 / EV_MKS
+    if T <= E:
+        return 0.0
+    if mode == "auto":
+        mode = "low" if T < 3000 else ("asympt" if T < 1e5 else "rel")
+    if mode == "low":
+        q_min = (np.sqrt(T) - np.sqrt(T - E)) ** 2 / R
+        q_max = (np.sqrt(T) + np.sqrt(T - E)) ** 2 / R
+        f_pwb, _ = quad(
+            lambda Q: exact_gos_hydrogen_1s_np(n, Q) / (E / R) / Q,
+            q_min, q_max, limit=200,
+        )
+        return (4 * np.pi * a0**2 * R / T) * f_pwb * (T / (T + R + E))
+    if mode == "asympt":
+        return max(
+            ((4 * np.pi * a0**2 * R) / (T + R + E))
+            * (a_b * np.log(T / R) + b_b + c_b * R / T),
+            0.0,
+        )
+    gamma = 1.0 + T / mc2
+    beta2 = 1.0 - 1.0 / gamma**2
+    return max(
+        ((8 * np.pi * a0**2 / beta2) * (R / mc2))
+        * (a_b * (np.log(gamma**2 - 1.0) - beta2) + b_b - a_b * np.log(2 * R / mc2)),
+        0.0,
+    )
+
+
+# ---------- 6b. Ionización colisional (RBEB, Kim et al. 2000) ----------
+_DIPOLE_FIT = np.array([-0.0224728, 1.177455, -0.4626461, 0.08906479])
+_DIPOLE_FIRST_TERM = 2
+_OCCUPATION = 1
+_ION_SCREENING = 0.0
+_DIPOLE_INT_FIT = _DIPOLE_FIT / (np.arange(len(_DIPOLE_FIT)) + _DIPOLE_FIRST_TERM)
+_DIPOLE_INT_SUM = _DIPOLE_INT_FIT.sum()
+_DIPOLE_STRENGTH = 2.0 - np.sum(
+    _DIPOLE_FIT / (_DIPOLE_FIRST_TERM + np.arange(len(_DIPOLE_FIT)) - 1)
+) / _OCCUPATION
+_IONISATION_CONST = 2.0 * np.pi * ELECTRON_RADIUS_MKS**2
+
+
+def _dipole_integral(kb):
+    lim = 2.0 / (kb + 1.0)
+    integral = _DIPOLE_INT_FIT[-1]
+    for i in range(len(_DIPOLE_INT_FIT) - 2, -1, -1):
+        integral = integral * lim + _DIPOLE_INT_FIT[i]
+    integral *= lim**_DIPOLE_FIRST_TERM
+    return (_DIPOLE_INT_SUM - integral) / _OCCUPATION
+
+
+def coll_ionisation_cross_section(K_J):
+    """Sección eficaz de ionización RBEB en m^2.  K_J en Joules."""
+    if K_J <= RY_ENERGY_MKS:
+        return 0.0
+    k = K_J / E0
+    kb = K_J / RY_ENERGY_MKS
+    b = RY_ENERGY_MKS / E0
+    e = 1.0 + k
+    v2 = 1.0 - 1.0 / e**2
+    ov2 = 1.0 - 1.0 / (1.0 + b) ** 2   # orbital == binding para H(1s)
+    bv2 = ov2
+    t1 = (np.log(0.5 * kb * (e + 1.0)) - v2) * _dipole_integral(kb)
+    t2 = (0.5 * (kb - 1.0) * b**2 - np.log(kb) * (e + k) / (1.0 + kb))
+    t2 = (t2 / (1.0 + 0.5 * k) ** 2 + 1.0 - 1.0 / kb) * _DIPOLE_STRENGTH
+    factor = _IONISATION_CONST * _OCCUPATION / (b * (v2 + ov2 + bv2))
+    factor *= 1.0 + _ION_SCREENING * (ov2 + bv2) / v2
+    return factor * (t1 + t2)
+
+
+# --- sección eficaz diferencial BEB (Kim & Rudd 1994, ec. 9) -----------------
+# df/dw = sum_i a_i /(1+w)^(i+2)  con los MISMOS coeficientes _DIPOLE_FIT que ya
+# usa la sección eficaz total; N_i = sum a_i/(i+1) = 0.43431 (valor tabulado
+# para H).  Integrada sobre w reproduce coll_ionisation_cross_section al 0.01%
+# por debajo de 300 eV y al 2.6% a 10 keV.
+_BEB_NI = float(np.sum(_DIPOLE_FIT / (np.arange(len(_DIPOLE_FIT)) + 1.0)))
+_BEB_S = 4.0 * np.pi * BOHR_RADIUS_MKS**2      # N = 1, R/B = 1 para H(1s)
+_BEB_U = 1.0                                   # U = B para H(1s)
+
+
+def _beb_dfdw(w):
+    return sum(_DIPOLE_FIT[i] / (1.0 + w) ** (i + 2)
+               for i in range(len(_DIPOLE_FIT)))
+
+
+def beb_sdcs(w, t):
+    """dsigma/dw [m^2] para primario en t = K/B y secundario en w = eps/B."""
+    w = np.asarray(w, dtype=float)
+    return (_BEB_S / (t + _BEB_U + 1.0)) * (
+        (_BEB_NI - 2.0) / (t + 1.0) * (1.0 / (1.0 + w) + 1.0 / (t - w))
+        + (2.0 - _BEB_NI) * (1.0 / (1.0 + w) ** 2 + 1.0 / (t - w) ** 2)
+        + np.log(t) / (1.0 + w) * _beb_dfdw(w)
+    )
+
+
+def secondary_pdf(K_eV, n=300):
+    """(eps [eV], p(eps) [eV^-1]) del secundario, a partir del SDCS BEB."""
+    t = float(K_eV) / THRESHOLD_EV_ION
+    w_max = (t - 1.0) / 2.0
+    if w_max <= 0.0:
+        return None, None
+    w = np.geomspace(max(1e-6, 1e-6 * w_max), w_max, n)
+    d = np.maximum(beb_sdcs(w, t), 0.0)
+    norm = np.trapz(d, w)
+    if norm <= 0.0:
+        return None, None
+    return w * THRESHOLD_EV_ION, d / norm / THRESHOLD_EV_ION
+
+
+def _mean_secondary_energy_beb(K_eV):
+    """<eps> del secundario bajo el SDCS BEB."""
+    e, p = secondary_pdf(K_eV)
+    return 0.0 if e is None else float(np.trapz(p * e, e))
+
+
+def _mean_secondary_energy_fit(K_eV):
+    """<eps> del electrón secundario con pdf ~ 1/(1+(eps/8)^2.1), eps<=(K-B)/2."""
+    eps_max = (K_eV - THRESHOLD_EV_ION) / 2.0
+    if eps_max <= 0.0:
+        return 0.0
+    u_max = np.log(eps_max / 8.0)
+    n_int, _ = quad(lambda uu: 8.0 * np.exp(uu) / (1.0 + np.exp(2.1 * uu)),
+                    -np.inf, u_max, limit=200)
+    e_int, _ = quad(lambda uu: 64.0 * np.exp(2.0 * uu) / (1.0 + np.exp(2.1 * uu)),
+                    -np.inf, u_max, limit=200)
+    return e_int / n_int if n_int > 0 else 0.0
+
+
+def _mean_secondary_energy(K_eV):
+    """<eps> del secundario; BEB o el ajuste original segun FIX_SECONDARY_SPECTRUM."""
+    return (_mean_secondary_energy_beb(K_eV) if FIX_SECONDARY_SPECTRUM
+            else _mean_secondary_energy_fit(K_eV))
+
+
+# ---------- 6c. Tabulación única (grilla común, interpolación log-log) ----------
+K_LOSS_GRID_EV = np.logspace(np.log10(THRESHOLD_EV_EXC), 15.0, 700)
+
+
+def _build_loss_tables(nmax):
+    levels = [(n, EXC_PARAMS[n][0]) for n in EXC_LEVEL_N if n <= nmax]
+    exc = np.zeros_like(K_LOSS_GRID_EV)
+    ion = np.zeros_like(K_LOSS_GRID_EV)
+    for i, K_eV in enumerate(K_LOSS_GRID_EV):
+        exc[i] = sum(
+            calculate_sigma_hydrogen_universal(K_eV, n) * 1e-20 * En
+            for n, En in levels if K_eV > En
+        )
+        if K_eV > THRESHOLD_EV_ION:
+            ion[i] = coll_ionisation_cross_section(K_eV * EV_MKS) * (
+                THRESHOLD_EV_ION + _mean_secondary_energy(K_eV)
+            )
+    return exc, ion
+
+
+if _CACHE.exists():
+    _d = np.load(_CACHE)
+    if _d["nmax"] == EXC_NMAX and _d["grid"].shape == K_LOSS_GRID_EV.shape \
+       and np.allclose(_d["grid"], K_LOSS_GRID_EV) \
+       and bool(_d.get("secspec", np.array(False))) == FIX_SECONDARY_SPECTRUM:
+        LOSS_EXC_TABLE, LOSS_ION_TABLE = _d["exc"], _d["ion"]
+    else:
+        LOSS_EXC_TABLE, LOSS_ION_TABLE = _build_loss_tables(EXC_NMAX)
+        np.savez(_CACHE, grid=K_LOSS_GRID_EV, exc=LOSS_EXC_TABLE,
+                 ion=LOSS_ION_TABLE, nmax=EXC_NMAX,
+                 secspec=FIX_SECONDARY_SPECTRUM)
+else:
+    print("igm_losses: tabulando secciones eficaces colisionales (una sola vez)...")
+    LOSS_EXC_TABLE, LOSS_ION_TABLE = _build_loss_tables(EXC_NMAX)
+    np.savez(_CACHE, grid=K_LOSS_GRID_EV, exc=LOSS_EXC_TABLE,
+             ion=LOSS_ION_TABLE, nmax=EXC_NMAX,
+             secspec=FIX_SECONDARY_SPECTRUM)
+
+
+def _log_interp(table, threshold):
+    """Interpolador log-log, monótono y no negativo (evita el ringing del cubic)."""
+    lg = np.log(np.clip(table, 1e-300, None))
+    f = interp1d(np.log(K_LOSS_GRID_EV), lg, kind="linear",
+                 bounds_error=False, fill_value=(-np.inf, lg[-1]))
+
+    def g(K_eV):
+        K_eV = np.asarray(K_eV, dtype=float)
+        out = np.exp(f(np.log(np.clip(K_eV, 1e-300, None))))
+        return np.where(K_eV > threshold, out, 0.0)
+
+    return g
+
+
+loss_interp_exc = _log_interp(LOSS_EXC_TABLE, THRESHOLD_EV_EXC)
+loss_interp_ion = _log_interp(LOSS_ION_TABLE, THRESHOLD_EV_ION)
+
+if VERBOSE: print(f"Tablas colisionales listas (n=2..{EXC_NMAX}, {K_LOSS_GRID_EV.size} nodos).")
+
+
+# =====================================================================
+# 7.  MODELO UNIFICADO DE PÉRDIDAS  (única fuente de verdad)
+#     Devuelve tasas POSITIVAS |dK/dt| en J/s, totalmente vectorizadas.
+# =====================================================================
+def kinematics(K_J):
+    """(E, gamma, p^2c^2, v) a partir de la energía cinética en Joules."""
+    K = np.maximum(np.asarray(K_J, dtype=float), 0.0)
+    E = K + E0
+    p2c2 = K * K + 2.0 * K * E0          # evita la cancelación E^2 - E0^2
+    return E, E / E0, p2c2, C_LIGHT * np.sqrt(p2c2) / E
+
+
+def n_HI(z):
+    return N_HI_NORM * ((1.0 + np.asarray(z, dtype=float)) / 21.0) ** 3
+
+
+def loss_rates(z, K_J, H_z, tog=None):
+    """
+    Tasas de pérdida (positivas, J/s) para los 7 mecanismos.
+    z, K_J, H_z se difunden entre sí (broadcasting de numpy).
+    Devuelve un array apilado de shape (7, ...) en el orden de MECH_KEYS.
+    """
+    tog = ALL_ON if tog is None else tog
+    z = np.asarray(z, dtype=float)
+    E, gamma, p2c2, v = kinematics(K_J)
+    K = E - E0
+    K_eV = K / EV_MKS
+    nH = n_HI(z)
+    n_e = ION_FRACTION * nH
+    zero = np.zeros(np.broadcast(z, E).shape)
+
+    # 0) Expansión adiabática
+    L_ad = H_z * p2c2 / E if tog["adiabatic"] else zero
+
+    # 1) Sincrotrón  (4/3 sigma_T c U_B gamma^2 beta^2, promedio isótropo)
+    if tog["synchrotron"]:
+        U_B = (B0 * (1.0 + z) ** 2) ** 2 / (2.0 * VACUUM_PERMEABILITY)
+        L_sy = (4.0 / 3.0) * THOMSON_CROSS_SECTION_MKS * C_LIGHT * U_B / E0**2 * p2c2
+    else:
+        L_sy = zero
+
+    # 2) Compton inverso sobre el CMB con corrección Klein-Nishina
+    if tog["compton"]:
+        T_cmb = T_CMB_0 * (1.0 + z)
+        U_cmb = U_CMB_0_J_M3 * (1.0 + z) ** 4
+        b_kn = 4.0 * gamma * K_B * T_cmb / E0
+        L_ic = ((4.0 / 3.0) * THOMSON_CROSS_SECTION_MKS * C_LIGHT * U_cmb / E0**2
+                * p2c2 * F_KN(b_kn))
+    else:
+        L_ic = zero
+
+    # 3) Coulomb sobre el plasma ionizado (Gould 1972)
+    if tog["coulomb"]:
+        w_p = np.sqrt(n_e * ELECTRON_CHARGE_MKS**2
+                      / (VACUUM_PERMITTIVITY * ELECTRON_MASS_MKS))
+        x = (np.sqrt(K / E0) * v * C_LIGHT * ELECTRON_MASS_MKS
+             * np.sqrt(2.0 * DELTA_GOULD) / (PLANCK_CONSTANT_REDUCED_MKS * w_p))
+        x_safe = np.maximum(x, 1e-50)
+        fb = (np.log(x_safe)
+              + np.log(1.0 - DELTA_GOULD) * (0.5 + 1.0 / gamma - 0.5 / gamma**2)
+              + 0.5 * DELTA_GOULD / (1.0 - DELTA_GOULD)
+              + 0.25 * (1.0 - 1.0 / gamma) ** 2 * DELTA_GOULD**2)
+        force = (n_e * Z_TARGET**2 * ELECTRON_CHARGE_MKS**4 * fb
+                 / (4.0 * np.pi * VACUUM_PERMITTIVITY**2
+                    * ELECTRON_MASS_MKS * np.maximum(v, 1e-30) ** 2))
+        L_co = np.where(x > 1e-40, force * v, 0.0)
+    else:
+        L_co = zero
+
+    # 4) y 5) Excitación / ionización colisional del H neutro
+    L_ex = nH * v * loss_interp_exc(K_eV) * EV_MKS if tog["excitation"] else zero
+    L_io = nH * v * loss_interp_ion(K_eV) * EV_MKS if tog["ionization"] else zero
+
+    # 6) Bremsstrahlung (apantallamiento continuo entre los dos límites)
+    if tog["bremsstrahlung"]:
+        phi = np.maximum(
+            np.minimum(np.log(2.0 * gamma) - 1.0 / 3.0,
+                       np.log(183.0 / Z_TARGET ** (1.0 / 3.0)) + 1.0 / 18.0),
+            0.0,
+        )
+        L_br = PREFACTOR_BREMS * v * nH * Z_TARGET**2 * E * phi
+    else:
+        L_br = zero
+
+    return np.stack(np.broadcast_arrays(L_ad, L_sy, L_ic, L_co, L_ex, L_io, L_br))
+
+
+def total_loss(z, K_J, H_z, tog=None):
+    return loss_rates(z, K_J, H_z, tog).sum(axis=0)
+
+
+# =====================================================================
+# 8.  Integradores  (fábrica de EDOs + caché de trayectorias)
+# =====================================================================
+def make_rhs(tog=None, accumulate=False):
+    """
+    Devuelve f(t, y) para solve_ivp.
+      accumulate=False -> y = [K]                (1 estado)
+      accumulate=True  -> y = [K, L0..L6]        (8 estados: pérdidas acumuladas)
+    """
+    tog = ALL_ON if tog is None else tog
+
+    def rhs(t, y):
+        K = max(float(y[0]), 0.0)
+        if K <= 0.0:
+            return [0.0] * (8 if accumulate else 1)
+        L = loss_rates(float(z_interp(t)), K, float(H_interp(t)), tog)
+        L = np.asarray(L, dtype=float).ravel()
+        tot = float(L.sum())
+        return [-tot, *L.tolist()] if accumulate else [-tot]
+
+    return rhs
+
+
+def thermal_floor(z):
+    return THERMAL_FLOOR_FACTOR * K_B * T_CMB_0 * (1.0 + np.asarray(z, dtype=float))
+
+
+def make_event():
+    def ev(t, y):
+        return y[0] - float(thermal_floor(z_interp(t)))
+    ev.terminal = True
+    ev.direction = -1
+    return ev
+
+
+def integrate(K_ini_eV, t_eval, tog=None, accumulate=False,
+              rtol=1e-8, atol=1e-25, stop_at_thermal=True, t_span=None):
+    """Integra una trayectoria y devuelve el objeto de solve_ivp."""
+    y0 = [K_ini_eV * EV_MKS] + ([0.0] * 7 if accumulate else [])
+    span = t_span if t_span is not None else (t_eval[0], t_eval[-1])
+    return solve_ivp(
+        make_rhs(tog, accumulate), t_span=span, y0=y0,
+        events=make_evt_cached() if stop_at_thermal else None,
+        dense_output=True, method="Radau", rtol=rtol, atol=atol,
+    )
+
+
+_EVT = make_event()
+
+
+def make_evt_cached():
+    return _EVT
+
+
+def sample_with_floor(sol, t_eval, z_eval=None):
+    """
+    Muestrea K(t) en t_eval. Después del evento de termalización rellena con
+    el piso térmico k T_CMB(z) (dependiente de z, no un valor constante).
+    Devuelve (K_J, mascara_activa).
+    """
+    t_end = sol.t[-1]
+    active = t_eval <= t_end
+    K = np.empty_like(t_eval)
+    K[active] = sol.sol(t_eval[active])[0]
+    zz = z_interp(t_eval[~active]) if z_eval is None else z_eval[~active]
+    K[~active] = thermal_floor(zz)
+    return np.maximum(K, 0.0), active
+
+
+# --- caché de trayectorias: figs. 16-20 reusan las mismas integraciones ---
+_TRAJ_CACHE = {}
+
+
+def trajectory(K_ini_eV, tog_key="all", t_eval=None, rtol=1e-6):
+    """
+    Trayectoria (cacheada) de un electrón inyectado con K_ini_eV en t_eval[0].
+
+    tog_key es una clave de TOGGLE_SETS; la caché se indexa por (energía, juego de
+    interruptores, firma de la malla temporal), de modo que figuras distintas que
+    piden la misma trayectoria reutilizan una única integración.
+
+    Devuelve (t_active, z_active, K_active_eV) recortado en la termalización.
+    """
+    t_eval = T_EVAL_DENSE if t_eval is None else t_eval
+    key = (float(K_ini_eV), tog_key, len(t_eval), float(t_eval[0]), float(t_eval[-1]))
+    if key in _TRAJ_CACHE:
+        return _TRAJ_CACHE[key]
+    sol = integrate(K_ini_eV, t_eval, tog=toggles(**TOGGLE_SETS[tog_key]),
+                    rtol=rtol, atol=1e-25)
+    act = t_eval <= sol.t[-1]
+    t_a = t_eval[act]
+    out = (t_a, z_interp(t_a), sol.sol(t_a)[0] / EV_MKS)
+    _TRAJ_CACHE[key] = out
+    return out
+
+
+
+
+
+# =====================================================================
+# 9.  Curvas cinemáticas de umbral (fotoionización secundaria)
+#     Las raíces del integrando de Planck son constantes -> se calculan 1 vez.
+# =====================================================================
+def _planck_integrand(x):
+    return x if x < 1e-8 else (x * x) / np.expm1(x)
+
+
+TOTAL_PLANCK_AREA = 2.4041138
+X_MAX_PLANCK = root_scalar(
+    lambda x: quad(_planck_integrand, 0, x)[0] - TOTAL_PLANCK_AREA * 0.99,
+    bracket=[1e-5, 50.0],
+).root
+X_MIN_PLANCK = root_scalar(
+    lambda x: quad(_planck_integrand, 0, x)[0] - TOTAL_PLANCK_AREA * 0.01,
+    bracket=[1e-5, 10.0],
+).root
+
+
+def compute_threshold_curves(z_array, min_sim_eV=10.2, target_upscatter_eV=1e3):
+    """K_e(z) que dispersa un fotón del CMB hasta min_sim_eV / target_upscatter_eV."""
+    thermal = K_B * T_CMB_0 * (1.0 + np.asarray(z_array, dtype=float))
+
+    def _ke(target_eV, x_val):
+        tJ = target_eV * EV_MKS
+        r_rest = tJ / E0
+        r_phot = tJ / (x_val * thermal)
+        g = r_rest + np.sqrt(r_rest**2 + r_phot)
+        return E0 * ((g**2 + 1.0) / (2.0 * g) - 1.0) / EV_MKS
+
+    return _ke(min_sim_eV, X_MAX_PLANCK), _ke(target_upscatter_eV, X_MIN_PLANCK)
+
+
+KE_CUTOFF_ARRAY, KE_99_ARRAY = compute_threshold_curves(Z_ARRAY_INTERP)
+if VERBOSE:
+    print(f"Raices de Planck:  x_max={X_MAX_PLANCK:.4f}   x_min={X_MIN_PLANCK:.4f}")
+
+
+# =====================================================================
+# 10.  Malla 2D del espacio de fases (mecanismo dominante)
+#      H(z) se evalúa en 1D y se difunde (evitando Planck18.H sobre 600k puntos)
+# =====================================================================
+@lru_cache(maxsize=8)
+def phase_space_map(z_res, k_res, k_lo, k_hi, tog_key,
+                    z_lo=None, z_hi=None):
+    """Malla (z, K) con el índice del mecanismo dominante. Cacheada por argumentos."""
+    tog = toggles(**TOGGLE_SETS[tog_key])
+    z1d = np.linspace(Z_FINAL if z_lo is None else z_lo,
+                      Z_INIT if z_hi is None else z_hi, z_res)
+    k1d = np.logspace(k_lo, k_hi, k_res)
+    Zm, Km = np.meshgrid(z1d, k1d)
+    Hm = np.broadcast_to(Planck18.H(z1d).to(u.s**-1).value, Zm.shape)
+    stack = loss_rates(Zm, Km * EV_MKS, Hm, tog)
+    return Zm, Km, np.argmax(stack[:N_MECH_MAP], axis=0), stack
+
+
+
+
+
+# ------- utilidades de espacio de fases compartidas por las figs 16-20 -------
+PHASE_ENERGIES_EV = np.array([1e3, 1e4, 1e5, 1e6, 1e7, 1e9, 1e11, 1e13])
+
+
+def add_threshold_curves(ax, x=None, label=r"Fotoionizacion secundaria"):
+    xx = Z_ARRAY_INTERP if x is None else x
+    ax.plot(xx, KE_CUTOFF_ARRAY, color="black", ls="--", alpha=0.8, label=label)
+    ax.plot(xx, KE_99_ARRAY, color="black", ls="--", alpha=0.8)
+
+
+def colored_trajectory(ax, xvals, K_eV, dom_idx, lw=2.5):
+    pts = np.array([xvals, K_eV]).T.reshape(-1, 1, 2)
+    seg = np.concatenate([pts[:-1], pts[1:]], axis=1)
+    lc = LineCollection(seg, cmap=MECH_CMAP, norm=MECH_NORM)
+    lc.set_array(dom_idx[:-1])
+    lc.set_linewidth(lw)
+    ax.add_collection(lc)
+    return lc
+
+
+def mech_legend(ax, indices, alpha=0.8, **kw):
+    patches = [mpatches.Patch(color=MECH_COLORS[i], label=MECH_NAMES[i], alpha=alpha)
+               for i in indices]
+    handles, _ = ax.get_legend_handles_labels()
+    ax.legend(handles=patches + handles, frameon=True, edgecolor="black",
+              facecolor="white", **kw)

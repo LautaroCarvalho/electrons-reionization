@@ -1,0 +1,1867 @@
+The 21-cm forest as a simultaneous probe of dark matter
+and cosmic heating history
+Yue Shao1 , Yidong Xu2,3,⋆ , Yougang Wang2,3 , Wenxiu Yang2,4 , Ran Li2,4,5 , Xin Zhang1,6,7,⋆ , Xuelei
+
+arXiv:2307.04130v1 [astro-ph.CO] 9 Jul 2023
+
+Chen1,2,3,4,8,⋆
+
+1
+
+Key Laboratory of Cosmology and Astrophysics (Liaoning) & College of Sciences, Northeastern
+
+University, Shenyang 110819, China
+2
+
+National Astronomical Observatories, Chinese Academy of Sciences, Beijing 100101, China
+
+3
+
+Key Laboratory of Radio Astronomy and Technology, Chinese Academy of Sciences, A20 Datun
+
+Road, Chaoyang District, Beijing 100101, China
+4
+
+School of Astronomy and Space Science, University of Chinese Academy of Sciences, Being
+
+100049, China
+5
+
+Institute for Frontiers in Astronomy and Astrophysics, Beijing Normal University, Beijing
+
+102206, China
+6
+
+National Frontiers Science Center for Industrial Intelligence and Systems Optimization, North-
+
+eastern University, Shenyang 110819, China
+7
+
+Key Laboratory of Data Analytics and Optimization for Smart Industry (Ministry of Education),
+
+Northeastern University, Shenyang 110819, China
+8
+
+Center for High Energy Physics, Peking University, Beijing 100871, China
+
+The absorption features in spectra of high-redshift background radio sources, caused by
+hyperfine structure lines of hydrogen atoms in the intervening structures, are known collec-
+
+1
+
+tively as the 21-cm forest. They provide a unique probe of small-scale structures during the
+epoch of reionization, and can be used to constrain the properties of the dark matter (DM)
+thought to govern small-scale structure formation. However, the signals are easily suppressed
+by heating processes that are degenerate with a warm DM model. Here we propose a probe of
+both the DM particle mass and the heating history of the Universe, using the one-dimensional
+power spectrum of the 21-cm forest. The one-dimensional power spectrum measurement not
+only breaks the DM model degeneracy but also increases the sensitivity, making the probe
+actually feasible. Making 21-cm forest observations with the upcoming Square Kilometre Array has the potential to simultaneously determine both the DM particle mass and the heating
+level in the early Universe, shedding light on the nature of DM and the first galaxies.
+
+2
+
+The 21-cm line of neutral hydrogen (HI) traces various structures throughout cosmic history. Complementary to the 21-cm tomographic observation, the 21-cm absorption signal against
+high-redshift radio point sources probes intervening structures along individual lines of sight 1–7 .
+The structures located at different distances along the sightline resembles forest structure on the
+background source spectrum, which is called 21-cm forest in analogy to the Lyman α (Lyα) forest.
+The high frequency resolution of radio telescopes allows the 21-cm forest to be a promising probe
+to small-scale structures during the epoch of reionization (EoR) 3,6 .
+
+In warm dark matter (WDM) models, the small-scale power is suppressed by free-streaming
+effect compared with the standard cold dark matter (CDM) model 8–10 . Using Lyα forest as a tracer
+of small-scale structures, this effect has been used to constrain the WDM particle mass at low
+redshifts 11–13 . Similarly, the 21-cm forest can potentially be used deep into the EoR 14,15 , as the
+decreased number of low-mass halos leads to weaker 21-cm forest signals.
+
+Methods have been developed to improve the detection of 21-cm forest signal 16–18 . However, the 21-cm forest signal can also be suppressed by heating effects during the early galaxy
+formation 6,16 . While this means that it is a sensitive probe of the temperature of the intergalactic
+medium (IGM) 4,6 , it is degenerate with the WDM suppression effect 14 , making the interpretation
+of observations ambiguous. Nevertheless, the WDM reduces mainly the number density of 21-cm
+absorption lines 14 , whereas a higher IGM temperature suppresses both the absorption depth and
+line number density 6 . This difference makes it possible to distinguish these two effects statistically.
+
+In this Article, we simulate 21-cm forest signals during the EoR under the influence of dif3
+
+ferent dark matter (DM) particle masses and different heating histories of the IGM. We show that
+although the IGM heating and WDM both suppress the 21-cm signal, they behave differently. By
+measuring the one-dimensional (1D) power spectrum along lines of sight, it is possible to break the
+degeneracy, and constrain the DM particle mass and the IGM temperature (hence the early heating
+history) simultaneously.
+
+To simulate the 21-cm forest from the EoR, a high dynamic range is required to model the
+large-scale structures in density and ionization fields on ≳ 100 comoving-megaparsec scales, while
+resolving small-scale halos and their ambient gas on approximately kiloparsec scales. We use a
+hybrid approach to achieve this. The cosmological evolution of large-scale density and ionization
+fields is simulated with the semi-numerical simulation 21cmFAST 19 , with a comoving box size of
+1 Gpc with 5003 grids, where the initial density fluctuations are set by DM properties, while each of
+the (2 Mpc)3 grid is further divided into 5003 voxels, and populated with halos of various masses
+according to the local grid density and the conditional halo mass function 20,21 , which depends
+on the matter power spectrum regulated by the DM particle mass. The density in each voxel is
+determined by the Navarro-Frenk-White profile 22 or the infall model profile 23 according to its
+distance to the nearest halo (Methods).
+
+Results
+
+Recent astrophysical observations have put lower limits on the WDM particle mass (mWDM ) of
+a few kiloelectronvolts 11,24–27 . We simulate the 21-cm forest signals assuming mWDM = 10 keV,
+
+4
+
+6 keV, and 3 keV, respectively, to be compared with the signals from a CDM model. The 21-cm
+optical depth depends on the density, the neutral fraction of hydrogen gas, and the spin temperature TS . The density field and ionization field are simulated according to the DM properties as
+described above, with more details given in Methods. TS is assumed to be fully-coupled to the
+gas kinetic temperature TK by the early Lyα background 28,29 , and TK is determined by the heating
+history of the IGM, or the virial temperature of halos, depending on the gas location (Methods).
+The heating history of neutral IGM during the EoR is computed taking into account the adiabatic
+expansion of the universe, the Compton heating/cooling, and the X-ray heating. We model the
+X-ray emissivity as proportional to the formation rate of early non-linear structures 30 , normalized
+by an X-ray production efficiency parameter fX (Methods).
+
+Assuming an unheated IGM (fX = 0), the 21-cm optical depth (top panels) and the differential brightness temperature (negative, bottom panels) along a line of sight at z = 9 are shown
+in Fig. 1, for CDM (left column) and various WDM particle masses (right columns), respectively.
+In the lower panels, the flux density of the background source, scaled to 150 MHz assuming a
+power-law spectrum, is assumed to be S150 = 1 mJy, 10 mJy, and 100 mJy, from top to bottom
+respectively. The overall 21-cm absorption depth in WDM models is comparable to the signal
+level in the CDM model, both corresponding to the absorption depth by the unheated IGM. However, the small-scale fluctuations are notably reduced in WDM models, due to the more suppressed
+formation of low-mass halos. Note that the major contribution to the 21-cm forest signal is from
+the overdense gas in the halo surroundings which is not heated by virialization shocks 6 . These
+small-scale fluctuations are also suppressed, resulting in sparser absorption lines in the spectra.
+5
+
+Figure 2 shows the 21-cm optical depth (top panels) and brightness temperature (bottom
+panels) spectra at z ∼ 9 in the CDM model, assuming different X-ray efficiency parameters.
+As fX increases, the IGM is increasingly heated, increasing the spin temperature and notabley
+reducing the 21-cm forest signal. The dotted and dashed lines in the lower panels correspond
+to the thermal noise levels expected for phase-one and phase-two low-frequency arrays of the
+Square Kilometre Array (denoted by SKA1-LOW and SKA2-LOW), for which array sensitivities
+of Aeff /Tsys = 800 m2 K−1 31 and 4000 m2 K−1 32 (with Aeff being the total effective area and Tsys
+being the system temperature) are adopted, respectively. For both arrays, we assume a maximum
+baseline of 65 km, a channel width of 1 kHz, and an integration time of 100 hours (hr). For
+the case with negligible early X-rays, the 21-cm forest signal can be marginally detected by the
+SKA1-LOW for sources with S150 ∼ 1 mJy, while the same signal will be easily detected with
+SKA2-LOW.
+
+However, the heating will notably diminish the detectability of individual absorption lines,
+weakening the probing power of the 21-cm forest on either the DM properties, or the thermal history of the IGM. Even if fX = 0.1, i.e. the early star formation has only ∼ 10% X-ray productivity
+as that of nearby starburst galaxies, the IGM will be heated to about 56 K at z = 9, then direct measurement of the 21-cm forest would only be possible for extremely bright quasars with S150 ≳ 100
+mJy for SKA1-LOW, or S150 ≳ 10 mJy for SKA2-LOW, otherwise a much longer integration time
+would be required. If fX ≳ 1, the IGM would be heated to ≳ 650 K at z = 9, then direct detection of the forest signal will be challenging even for SKA2-LOW. The heating would be weaker at
+higher redshifts, but then it would be more difficult to find a suitable quasar as background source.
+6
+
+Moreover, only the fluctuating part of the absorption is measurable in 21-cm forest observation, while the overall absorption depth from the homogeneous IGM would be effectively subtracted when comparing with the intrinsic continuum 6,7 . If we simply count the absorption lines
+with a certain threshold of optical depth or equivalent width, the effects of a WDM model and a
+more heated IGM would be degenerate, both reducing the number of detectable absorbers 14 . A
+statistical variable with more distinguishing power is needed. As we shall show below, the 1D
+power spectrum of 21-cm forest along the line of sight 18 can serve this purpose.
+
+The left panel of Fig. 3 compares the 1D power spectra of 21-cm forest in the CDM model
+with different fX . The 21-cm optical depth is inversely proportional to the gas temperature, and
+proportional to the density. As fX increases, the IGM is increasingly heated, and the 1D power
+spectrum is notably suppressed on all scales. When the IGM is cold, the high contrast in temperature between gas in halos and gas in the IGM far from halos dominates the large-scale fluctuations
+in the optical depth, with typical scales corresponding to the clustering scales of halos of various
+masses. As fX increases from 0 to 1, the IGM far from halos with the lowest temperature is heated
+first, suppressing the temperature contrast on scales of halo clustering, which results in the flattening of 1D power spectrum on large scales. When fX = 1, the IGM temperature is about 650
+K at z = 9, comparable to the virial temperature (∼ 1000 K) of the smallest halos holding gas
+(with mass Mmin ∼ 106 M⊙ , Methods), then the large-scale fluctuations in the temperature are
+mostly smoothed, leaving only a flatter power spectrum originated from density fluctuations. The
+21-cm forest and its 1D power spectrum are further reduced when fX increases from 1 to 3. The
+1D power spectra all drop off on small scales corresponding to the clustering scale of the smallest
+7
+
+halos holding gas, and the cut-off at the small-scale end is set by the spectral resolution assumed.
+
+The right panel of Fig. 3 shows the results for different DM properties assuming an un-heated
+IGM (fX = 0). The lower mWDM results in a much lower level of small-scale density fluctuations,
+thus suppressing the small-scale 21-cm forest power spectrum. Note that with the same thermal
+history, the overall amplitude of the 1D power spectrum remains similar for different mWDM , while
+the slope will be steeper for a warmer DM model. This behavior is distinct from the heating effect,
+which suppresses the 1D power spectrum more dramatically on all scales.
+
+The dotted and dashed lines in Fig. 3 indicate the thermal noise in the power spectrum, P N ,
+expected for SKA1-LOW and SKA2-LOW respectively, utilizing 10 background sources. The
+error bars include both the thermal noise of SKA2-LOW and the sample variance (see Methods).
+As shown in Fig. 2, for a background source with S150 = 10 mJy, direct measurement of 21cm forest becomes difficult if fX ≳ 0.1, and almost impossible even for SKA2-LOW if fX ≳ 1.
+However, the 1D power spectrum of 21-cm forest can be measured precisely by SKA1-LOW over a
+broad range of wavenumber k if fX ∼ 0.1, and it is still detectable by SKA2-LOW with S150 ∼ 10
+mJy sources even if fX = 3 at z = 9. This is because the absorption appears as an increased
+variance and can be measured statistically from the power spectrum even if individual absorbers
+are too weak to be detected with notableness 16 . The 1D power spectrum measurement also allows
+extraction of the scale-dependent information encoded in the density and temperature fields, in
+contrast to the flatter thermal noise. So the observation of the 21-cm forest by 1D power spectrum
+is not only more feasible, but also has better discriminating power for the effects of IGM heating
+
+8
+
+and the WDM. Fig. 4 shows the 1D power spectra for different fX and mWDM assuming S150 = 1
+mJy, 10 mJy, and 100 mJy, respectively. Using 1D power spectrum, with 10 background sources
+of S150 ∼ 1 mJy and a moderate integration time of ∼ 100 hr, the 21-cm forest signal will be
+detectable by SKA2-LOW if fX ≲ 0.1, for all DM particle masses considered here. For brighter
+sources with S150 ≳ 10 mJy, the full shape of 1D power spectrum can be well characterized, and a
+broader range of possible fX values can be probed. Therefore the 21-cm forest 1D power spectrum
+will not only break the degeneracy between the effects of WDM and heating, but also be vital to
+make the probe feasible in practice.
+
+The Universe may also accommodate both a heated IGM and WDM particles, both regulating
+the amplitude and shape of the 1D power spectrum of 21-cm forest. We simulate the signals
+for various combinations of fX and mWDM values, and measure the amplitude P and the slope
+β = dlogP (k)/dlogk of the 1D power spectra at k = 40 Mpc−1 . The top panels of Fig. 5 show
+that the amplitude of the 1D power spectra roughly determines fX , or the IGM temperature, with
+a weak degeneracy between a higher fX and a smaller mWDM . On the other hand, the slope in the
+bottom panels shows a different degeneracy; a flatter power spectrum indicates a higher fX and/or
+a larger mWDM , while a steeper one implies a lower fX and/or a smaller mWDM . Therefore, the
+amplitude and slope of 21-cm forest 1D power spectrum can be diagnostic characters for the DM
+particle mass and the IGM temperature. When combined, one can effectively break the degeneracy
+and determine fX and mWDM simultaneously.
+
+With the 21-cm forest 1D power spectrum measured from 100 neutral patches of 10 comov-
+
+9
+
+ing megaparsec at z = 9, we use the Fisher matrix formalism to forecast constraints on mWDM and
+TK as expected for both SKA1-LOW and SKA2-LOW, including the thermal noise and sample
+variance. Fig. 6 shows that if the IGM was only weakly heated, then very tight constraints can
+be put on both mWDM and TK , with σmWDM = 1.3 keV and σTK = 3.7 K for the fiducial model
+of mWDM = 6 keV and TK = 60 K after a total observation time of δt = 100 hr on each source
+using SKA1-LOW, and σmWDM = 0.3 keV and σTK = 0.6 K using SKA2-LOW. σmWDM and σTK
+are marginalized absolute errors. If the IGM was heated up to 600 K at z = 9 (corresponding to
+fX = 1), then SKA2-LOW would be required, and we expect to have σmWDM = 0.6 keV and σTK
+= 88 K. The probe is more sensitive for lower values of mWDM . Note that these constrains can be
+obtained by measurements on segments of neutral patches along sightlines against 10 background
+sources with S150 = 10 mJy. The constraints would be better if more sources at different redshifts,
+or brighter sources, are available.
+
+Discussion
+
+The 21-cm signal from the EoR can potentially be used to constrain DM properties 14,33–35 , but the
+degeneracies with astrophysical effects can be an obstacle 14,33,34 . During the EoR, there are various feedback effects 36 . Here we consider primarily radiative feedbacks, including Lyα photons
+coupling TS to TK , ionizing photons determining the large-scale ionization field, and X-ray photons heating the IGM. The mechanical and chemical feedbacks affect the density profiles and the
+cooling mechanisms, but have minor influences on the 21-cm forest. The main focus of this work
+is the heating effect that is most important in reducing the 21-cm forest signal and is degenerate
+
+10
+
+with the WDM effect.
+
+Using a set of semi-numerical simulations covering a high dynamic range, we show that
+both the presence of WDM and an early X-ray heating can reduce the number of observable 21-cm
+absorbers. This degeneracy hinders the 21-cm forest from being an effective probe to either the
+DM properties or the thermal history of the universe. We have demonstrated that the 1D power
+spectrum of 21-cm forest is a good observable to break this degeneracy, and is even effective in high
+heating-rate cases in which the number of 21-cm forest lines is severely diminished. By quantifying
+the fluctuations, the 1D power spectrum of the 21-cm forest is also immune to subtraction of the
+overall absorption from the homogeneous IGM in practical observations. The DM particle mass
+and the IGM temperature at a specific redshift can be simultaneously constrained.
+
+Although in our simulation the gas density profile surrounding a halo is based on simple
+models, this does not have much impact on the number density and the clustering properties of
+absorption lines, which determines the main characteristics of the 1D power spectrum. We also
+note that the overall signal level is dependent on the local density δ0 in the large-scale environment.
+We investigate the effect of local density by computing the 21-cm forest signals on different grids,
+with various densities on the 2 Mpc scale. As shown in Extended Data Figs. 1 and 2, the local
+density affects the overall magnitude of signals, but the effect is much weaker than the heating,
+even in the extreme case of δ0 = 2 in a grid of ∼ 2 Mpc. Meanwhile, the local density has almost
+negligible effect on the shape of 1D power spectrum, making the effect distinguishable from the
+WDM effect.
+
+11
+
+While direct detection of individual 21-cm absorption lines will be challenging if the early
+IGM is heated, the 1D power spectrum measurement is more promising. The observation relies
+on the availability of high-redshift radio-bright sources prior to reionization. Quite a number of
+radio-loud quasars have been detected beyond redshift 5 37–39 , including nine at z > 6 40–42 . A few
+hundred radio quasars with > 8 mJy at z ∼ 6 are expected to be spectroscopically observed in
+the near future 43 . As there is no evidence for the evolution in the radio loudness fraction of high-z
+quasars 38,43 , one can expect about ∼ 2000 sources with > 6 mJy at 8 < z < 12 44 . The longduration gamma-ray bursts (GRBs) are also possible high-redshift sources. Several cases have
+been discovered beyond redshift 8 45,46 . For future missions like the High-z Gamma-ray bursts
+for Unraveling the Dark Ages Mission and the Transient High-Energy Sky and Early Universe
+Surveyor, the expected detection rate of luminous GRBs from Population III stars is 3 20 yr−1
+at z > 8 47 . Given the higher sensitivity of 1D power spectrum observation, radio afterglows of
+high-z GRBs could also be used. The fast radio bursts, though brighter, are however too brief to
+allow long integration required.
+
+Current combination of astrophysical probes of strong gravitational lensing, Lyα forest, and
+luminous satellites of our Galaxy indicates that mWDM may be larger than 6 keV 48 , but models
+with mWDM of a few keV are still not excluded. On the other hand, tomographic 21-cm power
+spectrum measurement, in combination with complementary probes, yield a constraint on the IGM
+temperature of 8.9 K < TK < 1.3 × 103 K at z ∼ 8 at 68% confidence 49 . With the upcoming
+SKA-LOW, the 21-cm forest observation, especially the 1D power spectrum, can improve the constraints on both the properties of DM and the thermal history of the early universe simultaneously,
+12
+
+providing an effective probe to the DM in an unexplored era in the structure formation history, and
+to the first galaxies interplaying with the early IGM.
+
+13
+
+Methods
+
+The 21-cm forest signal. Using high-redshift quasars or radio afterglows of GRBs as background
+radio sources 1,4 , the HI in halos and in the IGM absorbs 21-cm photons along the line of sight. The
+21-cm forest signal is the flux decrements due to 21-cm absorption with respect to the continuum
+of a background radio source, which in the Rayleigh-Jeans limit is characterized by the differential
+brightness temperature. In the optically-thin limit, which is usually the case for the 21-cm transition, the observed differential brightness of the 21-cm absorption signal, relative to the brightness
+temperature of the background radiation Tγ (ŝ, ν0 , z) at a specific direction ŝ and redshift z, is
+δTb (ŝ, ν) ≈
+
+TS (ŝ, z) − Tγ (ŝ, ν0 , z)
+τν0 (ŝ, z).
+1+z
+
+(1)
+
+Here ν0 = 1420.4 MHz is the rest-frame frequency of 21-cm photons, TS is the spin temperature
+of the absorbing HI gas, and τν0 is the 21-cm optical depth. In terms of the average gas properties
+within each voxel, the 21-cm optical depth can be written as 3,50,51
+3/2
+
+
+
+τν0 (ŝ, z) ≈ 0.0085 [1 + δ(ŝ, z)] (1 + z)
+
+xHI (ŝ, z)
+TS (ŝ, z)
+
+
+
+H(z)/(1 + z)
+dv∥ /dr∥
+
+
+
+Ωb h2
+0.022
+
+
+
+0.14
+Ωm h2
+
+
+,
+(2)
+
+where δ(ŝ, z), xHI (ŝ, z), and H(z) are the gas overdensity, the neutral fraction of hydrogen gas,
+and the Hubble parameter, respectively, and dv∥ /dr∥ is the gradient of the proper velocity projected
+to the line of sight. Ωb , Ωm and h are baryon density parameter, matter density parameter and
+dimensionless Hubble constant, respectively.
+
+The brightness temperature of the background radiation at the rest frame of the 21-cm absorption Tγ (ŝ, ν0 , z) is related to the observed brightness temperature at a redshifted frequency ν,
+14
+
+Tγ (ŝ, ν, z = 0), by Tγ (ŝ, ν0 , z) = (1 + z)Tγ (ŝ, ν, z = 0), and it has contributions from both the
+background point source and the cosmic microwave background (CMB), i.e. Tγ (ŝ, ν, z = 0) =
+Trad (ŝ, ν, z = 0) + TCMB (z = 0), where Trad (ŝ, ν, z = 0) represents the observed brightness
+temperature of the point source, and it usually dominates over the CMB temperature (TCMB ).
+
+For a given radio telescope resolving a solid angle of Ω, the observed brightness temperature
+of a source is related to the flux density Srad (ν) by
+Trad (ŝ, ν, z = 0) =
+
+c2 Srad (ν)
+,
+2kB ν 2 Ω
+
+(3)
+
+where c is the speed of light and kB is the Boltzmann constant. The flux density of the background source is modeled to have a power-law spectrum scaled to 150 MHz, i.e. Srad (ν) =
+S150 (ν/ν150 )η 18 , where ν150 = 150 MHz and a spectral index of η = −1.05 is assumed as appropriate for a powerful radio source like Cygnus A 1 . Note that the spectral index of high-redshift
+quasars has a large scatter, and their spectra may be flatter than Cygnus A at low frequencies 37,41 ,
+but the detailed spectral index makes only a negligible difference to our results. In this work, we
+take the flux densities of S150 = 1 mJy, 10 mJy, and 100 mJy for the background point sources as
+examples, and assume the maximum baseline of 65 km for both the SKA1-LOW and SKA2-LOW
+for calculating the angular resolution for a given redshift.
+
+Assuming that TS is fully coupled to TK by the early Lyα background, the 21-cm optical
+depth τν0 and the forest signal δTb are then dependent on the density δ, neutral fraction xHI , gas
+temperature TK , and the velocity gradient dv∥ /dr∥ , of each voxel along the line of sight. Here we
+account only for the Hubble expansion for the velocity field, but neglect the peculiar velocity, as
+15
+
+the peculiar velocity mainly shifts the contribution of the absorption from individual segments of
+gas. We note that the peculiar velocity may affect the individual line profiles 6 , but we expect that
+its effect on the overall amplitude of the signal and the 1D power spectrum is small. The density
+field, ionization field, and the gas temperature field are modeled as follows. Throughout this study,
+we adopted the set of cosmological parameters consistent with the Planck 2018 results 52 : Ωm =
+0.3153, Ωb h2 = 0.02236, ΩΛ = 0.6847, h = 0.6736, σ8 = 0.8111. ΩΛ and σ8 are dark-energy density
+parameter and matter fluctuation amplitude, respectively.
+
+The density field. The evolution of the large-scale density field is simulated with linear theory
+using the 21cmFAST 19 , for both the CDM and WDM models. The simulation box has a comoving
+size of (1Gpc)3 , and (500)3 grids. The influence of DM properties on the density field is mainly
+on small scales. In each of the 2 Mpc grids, the small-scale density distribution is simulated by
+randomly populating halos according to the conditional halo mass function and the local density
+of the grid from the 21cmFAST simulation, and assigning density profiles to the gas in the halos
+as well as in the IGM, as detailed below.
+
+Halo mass function. In the framework of the CDM model, the number density of halos per mass
+interval in the range (M, M +dM ), in a simulation grid with mass M0 and overdensity δ0 at redshift
+z, can be modeled by the conditional halo mass function 20,21 of the Press-Schechter form 53 , i.e.
+dn(M |δ0 , M0 ; z)
+=
+dM
+
+r
+
+
+
+1 ρ̄m0 (1 + δ0 ) dS δc (z) − δ0
+[δc (z) − δ0 ]2
+exp −
+,
+2π
+M
+dM (S − S0 )3/2
+2(S − S0 )
+
+(4)
+
+where ρ̄m0 is the average density of matter in the universe today, S = σ 2 (M ) is the variance of
+mass scale M , S0 = σ 2 (M0 ), and δc (z) = 1.686/D(z) is the critical overdensity for collapse
+16
+
+at redshift z extrapolated to the present time using the linear theory, in which D(z) is the linear
+growth factor.
+
+In the WDM model, the structure formation is suppressed below the free streaming scale λfs
+of DM particles, and the conditional halo mass function can be approximately written as 9
+dn(M |δ0 , M0 ; z)
+1
+=
+dM
+2
+
+
+
+ 
+
+log10 (M/Mfs )
+dn(M |δ0 , M0 ; z)
+1 + erf
+,
+σlog M
+dM
+PS
+
+(5)
+
+where σlog M = 0.5, and Mfs is the suppressing mass scale of halo formation corresponding to λfs ,
+i.e. Mfs = 4π(λfs /2)3 ρm0 /3. PS represents Press-Schechter form in CDM model. The comoving
+free streaming scale is approximately 9
+
+λfs ≈ 0.11
+
+ΩWDM h2
+0.15
+
+1/3 
+
+mWDM −4/3
+(Mpc),
+keV
+
+(6)
+
+where ΩWDM is the WDM density normalized by the critical density. The Press-Schechter mass
+function [dn(M |δ0 , M0 ; z)/dM ]PS in Eq. (5) takes the form of Eq. (4), but the variance of density
+fluctuations is evaluated with the matter power spectrum fitted for WDM 54 :
+n
+o2
+
+2β −5/β
+PWDM (k) = PCDM (k) 1 + (αk)
+,
+
+(7)
+
+where β = 1.12 and α is given by 55
+
+α = 0.049
+
+m
+
+WDM
+
+keV
+
+−1.11  Ω
+
+WDM
+
+0.25
+
+0.11 
+
+h
+0.7
+
+1.22
+
+h−1 (Mpc).
+
+(8)
+
+Supplementary Fig. 1 shows the halo mass function, evaluated at δ0 = 0 and S0 = 0, for
+both CDM and WDM models. The halo number is obviously suppressed below the free streaming
+
+17
+
+scale in the WDM models, with the lower mWDM resulting in larger suppressing scale. Especially, the WDM models notably reduce the total number of halos by suppressing the small ones,
+thus suppressing the small-scale fluctuations in the neutral hydrogen density, which have a major
+contribution to the 21-cm forest signals.
+
+The major contribution to the 21-cm forest signal comes from the gas in and around the large
+number of low-mass halos that are not producing ionizing photons and reside in neutral environments 6,14 . Therefore, we focus on neutral patches along a given line of sight, and select neutral
+grids from the large-scale ionization field simulated by 21cmFAST. Then we randomly populate
+each of these 2 Mpc grids with halos according to the conditional mass function determined by the
+DM models. We consider only the halos with the mass upper limit M4 corresponding to the virial
+temperature of Tvir = 104 K, so that the atomic cooling is not efficient enough to enable substantial
+star formation. The lower limit of halo mass Mmin is set by the filtering mass scale, so that the
+halos could retain most of its gas and the gas in the ambient IGM to contribute to the 21-cm absorption. The filtering mass is mainly determined by thermal history of the universe, and it is of order
+∼ 106 M⊙ for the redshifts of interest (7 ≲ z ≲ 11) for fX ≲ 1 in the CDM model 6 . It would be
+higher for higher fX , and the different density profiles in WDM models may also slightly modify
+its value. In the present work, we set the same Mmin = 106 M⊙ for all the models for simplicity,
+but we expect that the dependence of filtering mass on fX will make the probe more sensitive to
+the thermal history of the universe, while more challenging to discriminate WDM models for cases
+with high fX .
+
+18
+
+Gas profile. Each grid along the line of sight is further divided into (500)3 voxels, each with a size
+of (4 kpc)3 , then the gas density of each voxel is determined by its distance to the nearby halos.
+Inside the virial radius rvir , we assume that the dark matter follows the NFW density profile 22 , and
+the gas is in hydrostatic equilibrium with the dark matter 6 . Thus, the gas density distribution can
+be derived analytically 56 :
+ln ρg (r) = ln ρgc −
+
+
+µmp  2
+ve (0) − ve2 (r) ,
+2kB Tvir
+
+(9)
+
+where ρgc denotes the central gas density, µ is the mean molecular weight of the gas, mp is the
+proton mass, and ve (r) is the gas escape velocity at radius r, given by
+ve2 (r) = 2
+
+Z ∞
+r
+
+yx
+
+F (yx) + 1+yx
+GM (r′ ) ′
+dr = 2Vc2
+.
+′2
+r
+xF (y)
+
+(10)
+
+Here Vc2 ≡ GM/rvir is the circular velocity at the virial radius, G is gravitational constant, x ≡
+r/rvir , y is the halo concentration, and F (y) = ln(1 + y) − y/(1 + y). The central gas density is
+determined by normalizing the total baryonic mass fraction of the halo to the cosmic mean value,
+which gives
+(∆c /3) y 3 (Ωb /Ωm ) eA
+Ry
+ρ̄m (z),
+ρgc =
+(1 + t)A/t t2 dt
+0
+
+(11)
+
+where ρ̄m (z) is the mean matter density of the universe at redshift z, A ≡ 2y/F (y), e is the
+mathematical constant (base of natural log), and ∆c = 18π 2 + 82 (Ωzm − 1) − 39 (Ωzm − 1)2 is
+the mean density of a virialized halo with respect to the cosmic mean value 57 , in which Ωzm =
+Ωm (1 + z)3 / [Ωm (1 + z)3 + ΩΛ ].
+
+The gas density in the halo surroundings is enhanced because of the gravitational potential.
+Outside the virial radii of halos, we assume that the gas density profile follows the dark matter
+19
+
+distribution, and it can be computed by using the infall model which is based on the excursion
+set theory 23 . The gas density profiles in and around halos of different masses are plotted in Supplementary Fig. 2 for z = 9. It is seen that there is density discontinuity at the virial radius in
+our model. This is expected at the virialization shock near the virial radius 58,59 , though the exact
+location of the shock may vary from halo to halo 58 .
+
+The infall model was developed for the matter density and velocity distribution around density peaks 23 . Directly applying it to arbitrary environments may over-predict the gas density in
+under-dense regions. Therefore, we normalize the density field to ensure that the minimum density
+is 0, and the average density of the (500)3 voxels in each 2 Mpc grid equals the grid density from
+the large-scale 21cmFAST simulation. To test the reliability for the small-scale density field, we
+run a small-scale high-resolution hydrodynamical simulation with the GADGET (GAlaxies with
+Dark matter and Gas intEracT) 60 for high redshifts. The simulation has a box size of 4 h−1 Mpc
+and 2 × 8003 gas and DM particles 61 . We compare the probability density distribution of our analytical gas density field with the one from the simulated gas density in Supplementary Fig. 3, at
+the same resolution at z = 17. It shows that our gas density model closely recovers the probability
+distribution of the gas density fluctuations from the hydrodynamical simulations.
+
+The line-of-sight density distribution in the CDM model is illustrated in the left panel of
+Extended Data Fig. 1 for three grids with different local overdensities δ0 on the 2 Mpc scale at
+z = 9. The density distributions for different DM properties are shown in Supplementary Fig. 4.
+
+20
+
+The ionization field. The large-scale ionization field is simulated with the semi-numerical simulation 21cmFAST assuming ionizing sources with a minimum halo mass of M4 and an ionizing
+efficiency parameter of ζ = 11 19 . By suppressing the formation of small-scale halos, the WDM
+models may possibly speed up or delay the large-scale reionization process by modifying both the
+abundances of ionizing sources and sinks 62,63 . In the present work, we use the basic version of
+21cmFAST in which the effect of sinks is incorporated by a homogeneous recombination number, and the reionization is delayed in the WDM models as shown in Supplementary Fig. 5. It
+shows that the effect of WDM on the large-scale reionization history becomes obvious only if
+mWDM ≲ 3 keV, and this is consistent with the fact that atomic-cooling halos are effectively suppressed in WDM models with mWDM ≲ 3 keV as shown in Supplementary Fig. 1. Note that
+the 21-cm forest signals mainly come from neutral regions, and we pick up neutral patches in the
+large-scale simulation box to analyze the small-scale structures in the 21-cm forest signals. The
+large-scale reionization history only determines the probability of getting a neutral patch of the
+IGM with a certain length along a line of sight. In order to have consistent source properties when
+comparing the results for the same fX , we set the same ionizing efficiency parameter for all the
+models considered here, while the global reionization history would be slightly different among
+WDM and CDM models. On the other hand, a different reionization scenario may change the
+minimum source mass, for example, in a reionization model with stronger feedback effects would
+have a minimum halo mass for collapse higher than M4 , thus changing the reionization history.
+However, the large-scale ionization field and the overall reionization history have only a minor
+effect on the small-scale 21-cm forest signals we are interested in.
+
+21
+
+For each of the neutral grids in the simulation box, we assume that the gas is in collisional
+ionization equilibrium (CIE), so that the ionized fraction of each voxel is determined by its local
+density and temperature, i.e.
+ne nHI γ = αB ne np ,
+
+(12)
+
+where nHI , ne and np represent the number densities of neutral hydrogen, electron and proton,
+respectively, γ is the collisional ionization coefficient 64 , and αB is the case B recombination coefficient 65 which is appropriate for low-mass halos and the incompletely ionized IGM. Here both γ
+and αB are functions of temperature.
+
+The temperature field. The gas temperature TK of each voxel is determined by the thermal history
+of the early universe and the location of the voxel with respect to halos. While the photoionization
+heating by the UV background dominates the gas heating in ionized regions 66 , it is the X-rays that
+can penetrate deep into the neutral IGM and dominate the heating of the neutral gas contributing to
+21-cm signals. For the gas in the neutral IGM, its temperature is mainly determined by the cosmic
+expansion, the heating or cooling from the Compton scattering, and the X-ray heating. The global
+evolution of the IGM temperature can be written as 30
+dTK
+2 ϵcomp 2 ϵX,h
+= −2H(z)TK +
++
+,
+dt
+3 kB n
+3 kB n
+
+(13)
+
+where n is the total particle number density, ϵcomp is the Compton heating/cooling rate per unit
+physical volume 30 , and ϵX,h represents the part of the X-ray emissivity ϵX that contributes to heating, for which we adopt a fitted formula to simulations, i.e. ϵX,h = [1 − 0.8751(1 − xi 0.4052 )]ϵX 67 ,
+where xi is the ionized fraction. Assuming that the X-ray productivity is proportional to the star
+22
+
+formation rate, and hence to the matter collapse rate, the total X-ray emissivity ϵX can be written
+as 30 :
+ϵX
+2
+= 5 × 104 KfX
+3 kB n H(z)
+
+
+
+f⋆ dfcoll /dz 1 + z
+0.1 0.01
+10
+
+
+.
+
+(14)
+
+Here f⋆ is the star formation efficiency approximately evaluated at M4 68 , as appropriate for the
+most abundant star-forming halos, fcoll is the fraction of matter collapsed into atomic-cooling halos
+with M > M4 , and fX is the normalization parameter describing the uncertain nature of X-ray
+productivity in the early universe as compared to the local universe 16,30 . The global evolution of
+the IGM temperature TK is shown in Supplementary Fig. 6 for different values of fX . The curve
+with fX = 0 denotes the case with purely adiabatic cooling and Compton heating.
+
+Inside the virial radius, the gas kinetic temperature TK equals to the virial temperature Tvir
+of the halo. As for the gas in the overdense regions near halos, it will be adiabatically heated
+depending on the local density. In the absence of X-rays, the temperature profiles for halos with
+106 M⊙ , 107 M⊙ , and 108 M⊙ are illustrated in Supplementary Fig. 7 for z = 9. Similar to the density profiles, the gas temperature also shows discontinuity at the virialization shocks as expected,
+but the exact location of the virialization shocks has negligible effects on our main results. In the
+cases with X-ray heating, the gas temperature outside the halos is set by the maximum between the
+adiabatic temperature and the heated IGM temperature.
+
+23
+
+Thermal noise of direct measurement. In the direct measurement of individual absorption lines,
+the noise flux density averaged over two polarizations can be expressed as 69 :
+δS N ≈
+
+2kB Tsys
+√
+,
+Aeff 2δνδt
+
+(15)
+
+where Aeff is the effective collecting area of the telescope, Tsys is the system temperature, δν is the
+channel width, and δt is the integration time. The corresponding thermal noise temperature is:
+N
+
+δT = δS
+
+N
+
+
+
+λ2z
+2kB Ω
+
+
+≈
+
+λ2z Tsys
+√
+,
+Aeff Ω 2δνδt
+
+(16)
+
+where λz is the observed wavelength, and Ω = π(θ/2)2 is the solid angle of the telescope beam,
+in which θ = 1.22λz /D is the angular resolution with D being the longest baseline of the radio telescope/array. For the SKA1-LOW, we adopt Aeff /Tsys = 800 m2 K−1 31 , and Aeff /Tsys =
+4000 m2 K−1 is expected for SKA2-LOW 32 . For both arrays, we assume D = 65 km and δt = 100
+hr, and δν = 1 kHz is assumed in order to resolve individual 21-cm lines. Correspondingly, the
+synthetic spectra shown in Figs. 1 and 2 are smoothed with the same channel width. At redshift z =
+9, the angular resolution is about 8.17 arcsec, and the noise temperature is plotted with dotted and
+dashed lines in the lower panels in Figs. 1 and 2, for SKA1-LOW and SKA2-LOW respectively.
+
+1D power spectrum of 21-cm forest. It is seen from Fig. 2 that the direct measurement of individual absorption lines is vulnerably hampered by the early X-ray heating. In order to improve
+the sensitivity for detecting the 21-cm forest signal, and to reveal the clustering properties of the
+absorption lines so as to distinguish the effects between heating and WDM models, we follow the
+algorithm in Ref. 18 , and compute the 1D power spectrum of the brightness temperature on hypothetical spectra against high-redshift background sources. The brightness temperature δTb (ŝ, ν) as
+24
+
+a function of observed frequency ν can be equivalently expressed in terms of line-of-sight distance
+rz , δTb′ (ŝ, rz ), and the Fourier transform of δTb′ (ŝ, rz ) is
+e′
+
+
+
+Z
+
+δ T ŝ, k∥ =
+
+δTb′ (ŝ, rz ) e−ik∥ rz drz .
+
+(17)
+
+The 1D power spectrum along the line of sight is defined as:
+P ŝ, k∥
+
+
+
+= δ Te′ ŝ, k∥
+
+2
+
+
+
+1
+∆rz
+
+
+.
+
+(18)
+
+The term 1/∆rz is the normalization factor, in which ∆rz is the length of sightline under consideration. To reveal the small-scale structures we are interested in, we select neutral patches with
+∆rz = 10 comoving Mpc, and compute the 1D power spectra from segments of 10 comoving
+Mpc along the line of sight. For a reasonable number of O(10) high-z background sources, the
+expected value of the power spectrum is obtained by averaging over 100 neutral patches on lines of
+
+
+sight penetrating various environments, i.e. P k∥ ≡ P ŝ, k∥ . On each quasar spectrum, we
+will be able to select ∼ 10 segments of 10 comoving Mpc length in neutral patches; as the neutral
+patches are intermittently separated by ionized regions during the EoR, we may need a spectrum
+covering ∼ 200 comoving Mpc along the line of sight. A length of 200 comoving Mpc projects to
+a total bandwidth of about 14 MHz at redshift 9, corresponding to ∆z ∼ 0.8, which is reasonable
+in practice. For the rest of the paper, we abbreviate k∥ as k, as here we are always interested in the
+k-modes along the line of sight.
+
+Supplementary Fig. 8 shows the evolution of the 1D power spectrum with redshift. The solid
+lines in the left and middle panels show the power spectra in the CDM model and in the WDM
+model with mWDM = 3 keV respectively, in the absence of X-rays. As the redshift increases, the
+25
+
+halo abundance decreases, and the small-scale fluctuations in the forest signal decrease, resulting
+in steeper power spectra. The small-scale power is slightly more notably suppressed in the WDM
+model, as the halo formation is more delayed. However, the redshift evolution has only a weak
+effect on the 1D power spectrum in the absence of X-ray heating. The right panel of Supplementary
+Fig. 8 illustrates the evolution of the 1D power spectrum in the CDM model with fX = 3. In the
+case of strong X-ray heating, the 1D power spectrum of the 21-cm forest is dramatically suppressed
+with the decreasing redshift, and the dominant reason is the rapidly increasing IGM temperature. It
+implies that for the purpose of constraining DM properties, the 1D power spectrum measurement at
+higher redshift is preferred, as long as a radio-bright source at an even higher redshift is available.
+
+Measurement error on 1D power spectrum. The observational uncertainties in the 21-cm forest
+include the thermal noise, the sample variance, the contaminating spectral structures from foreground sources in the chromatic sidelobes, and the bandpass calibration error. The bandpass calibration error depends on specific calibration strategies, and mainly affects the broadband amplitude
+of the continuum, so we expect that it has a negligible effect on the small-scale features we are interested in. The contaminating spectral structures from foregrounds are not likely affecting the
+small structures we are aiming at, as the discriminating features locate at k ≳ 3 Mpc−1 , which are
+well within the “EoR window” 18 . Therefore, we consider only the thermal noise of an interferometer array, and the sample variance in the power spectrum measurement.
+√
+The sample variance on the 1D power spectrum is P S = σP (k)/ Ns × Nm , where σP (k)
+is the standard deviation of P (k) from Ns × Nm measurements of the 1D power spectrum at k, in
+
+26
+
+which Ns is the number of 1D power spectrum measurements on different neutral patches of ∆rz ,
+and Nm is the number of independent modes in each k-bin from each measurement. Using 10
+high-redshift background radio sources, it is reasonable to expect about 100 independent measurements of 1D power spectra from segments of spectra, each corresponding to a comoving length
+of 10 Mpc. We adopt Ns = 100, and σP (k) is obtained by simulating 21-cm forest signals from
+Ns neutral segments of 10 comoving Mpc length penetrating various environments covering grid
+densities from δ = −0.7 to δ = +1.5.
+
+As for the thermal noise error, we follow the approach taken by Ref. 18 , and assume that each
+spectrum is measured for two times separately, or the total integration time is divided into two
+halves, and the cross-power spectrum is practically measured in order to avoid noise bias. Then
+the observing time for each measurement of the spectrum is δt0.5 = 0.5 δt, and the thermal noise
+on the spectrum is increased by a factor of
+
+√
+
+2. Then the thermal noise uncertainty on the 1D
+
+power spectrum is given by 18
+P
+
+N
+
+1
+=√
+Ns
+
+2 
+
+ 2
+∆rz
+λz Tsys
+,
+Aeff Ω
+2∆νz δt0.5
+
+(19)
+
+where ∆νz is the total observing bandwidth corresponding to ∆rz . A distance of 10 comoving Mpc
+along the line of sight corresponds to a bandwidth of ∆νz = 0.56 MHz at z = 9. Assuming the
+same telescope parameters of SKA1-LOW and SKA2-LOW as those for the direct measurement,
+and the same observation time of δt = 100 hr (δt0.5 = 50 hr) on each source, the expected thermal
+noise on the 1D power spectrum of 21-cm forest is plotted in Figs. 3 and 4, as well as in Supplementary Fig. 8, with dotted lines for SKA1-LOW and dashed lines for SKA2-LOW, respectively.
+The total measurement errors including the thermal noises of SKA2-LOW and sample variance
+27
+
+are shown with the error bars in these figures. We have tested the extraction of 21-cm forest 1D
+power spectrum by simulating mock quasar spectra with thermal noises, and calculating the 1D
+power spectra from the noisy spectra. The results are shown in Supplementary Fig. 9, with upper panels from mock spectra with SKA1-LOW noises, and lower panels from mock spectra with
+SKA2-LOW noises, respectively. In each row, the left panel shows the results from mock spectra
+with both 21-cm absorption signals and thermal noises, and the right panel shows the results from
+mock spectra with only thermal noises. The measured noise power spectra agree well with the
+theoretical predictions. It is seen that the measurement of 1D power spectrum notably improves
+the observability of the 21-cm forest signals as compared to the direct measurement of individual
+absorption lines. With about 10 moderately bright quasars with S150 ≳ 10 mJy at redshift around
+9, the 1D power spectrum can be measured by SKA2-LOW even if the IGM was heated as sufficiently as in the model with fX = 3, and can reach a high signal-to-noise ratio if fX ≲ 1. Note
+that the measurement error can be further suppressed if more sources are available beyond reionization, and more power spectra can be averaged to suppress both the thermal noise and the sample
+variance.
+
+28
+
+Data Availability The main data that support the results in this work are provided with this paper, and
+are also available at https://doi.org/10.57760/sciencedb.08093. Further datasets are available from the corresponding authors upon reasonable request.
+
+Code Availability The code 21cmFAST used for large-scale simulation is publicly available at
+https://github.com/andreimesinger/21cmFAST, the codes for simulating small-scale structures and 21-cm
+forest signals are available from the corresponding authors upon reasonable request, and the GADGET code
+is available at https://wwwmpa.mpa-garching.mpg.de/gadget.
+
+Additional information
+
+Correspondence and requests for materials should be addressed to Yidong
+
+Xu (email: xuyd@nao.cas.cn), Xin Zhang (email: zhangxin@mail.neu.edu.cn) or Xuelei Chen (email:
+xuelei@cosmology.bao.ac.cn).
+
+Acknowledgements We thank the anonymous referees for very constructive comments and suggestions.
+We thank Yichao Li, Peng-Ju Wu, Jing-Zhao Qi, and Bin Yue for helpful discussions. This work was supported by National Key R&D Program of China (Grant No. 2022YFF0504300), the National Natural Science Foundation of China (Grant Nos. 11973047, 11975072, 11835009, 11988101, and 12022306), and the
+National SKA Program of China (Grant Nos. 2020SKA0110401, 2020SKA0110100, 2022SKA0110200,
+and 2022SKA0110203). Y.X. and X.C. also acknowledge support by the CAS grant (Grant No. ZDKYYQ20200008). Y.W. acknowledges support by the CAS Interdisciplinary Innovation Team (Grant No.
+JCTD-2019-05). R.L. acknowledges support by the CAS grant (Grant No. YSBR-062) and the grant from
+K.C.Wong Education Foundation.
+
+Author contributions Y.S. performed most of the computation and analysis, and wrote part of the manuscript.
+
+29
+
+Y.X. led the study, contributed to the simulations, and wrote the majority of the manuscript. Y.W. and W.Y.
+contributed to the computation of the 1D power spectrum. Y.X. and R.L. proposed the study. X.Z. and
+X.C. contributed to the collaboration organization, the Fisher forecasts, and the manuscript writing, and
+supervised the study. All authors discussed the results and commented on the manuscript.
+
+Competing Interests The authors declare no competing interests.
+
+30
+
+0.4
+
+CDM
+
+WDM (10 keV)
+
+WDM (6 keV)
+
+WDM (3 keV)
+
+0.3
+0.2
+0.1
+0.0141.76 142.04 142.32 141.76 142.04 142.32 141.76 142.04 142.32 141.76 142.04 142.32
+[MHz]
+[MHz]
+[MHz]
+[MHz]
+101
+Tb [K]
+
+102
+103
+104
+
+S150 = 1 mJy
+S150 = 10 mJy
+S150 = 100 mJy
+
+105141.76 142.04 142.32 141.76 142.04 142.32 141.76 142.04 142.32 141.76 142.04 142.32
+[MHz]
+[MHz]
+[MHz]
+[MHz]
+Figure 1 | Synthetic spectra for an unheated IGM. The synthetic spectra of optical
+depth (top) and brightness temperature (bottom) for a neutral patch of 10 comoving megaparsec along the line of sight, for an un-heated IGM (fX = 0) at z = 9. In each row, the
+four columns correspond to the CDM model, and the WDM models with mWDM = 10 keV,
+6 keV, and 3 keV, from left to right respectively. In the lower panels, the green, yellow,
+and red spectra correspond to the background source flux densities of S150 = 1 mJy, 10
+mJy, and 100 mJy, respectively. The spectra have been smoothed with a channel width
+of 1 kHz, and the dotted and dashed lines are the thermal noise levels δT N expected for
+SKA1-LOW and SKA2-LOW respectively, with an integration time of δt = 100 hr.
+
+31
+
+0.4
+0.3
+0.2
+0.1
+
+fX = 0
+
+fX = 1
+
+fX = 0.1
+
+fX = 3
+
+0.04
+
+0.004
+
+0.0008
+
+0.03
+
+0.003
+
+0.0006
+
+0.02
+
+0.002
+
+0.0004
+
+0.01
+
+0.001
+
+0.0002
+
+0.00
+141.76 142.04 142.32
+
+0.000
+141.76 142.04 142.32
+
+0.0000
+141.76 142.04 142.32
+
+Tb [K]
+
+0.0
+141.76 142.04 142.32 141.76 142.04 142.32 141.76 142.04 142.32 141.76 142.04 142.32
+[MHz]
+[MHz]
+[MHz]
+[MHz]
+0
+100
+101
+102
+103 S150 = 1 mJy
+104 S150 = 10 mJy
+105 S150 = 100 mJy
+141.76 142.04 142.32 141.76 142.04 142.32 141.76 142.04 142.32 141.76 142.04 142.32
+[MHz]
+[MHz]
+[MHz]
+[MHz]
+
+Figure 2 | Synthetic spectra for the CDM model. The synthetic spectra of optical depth
+(top) and brightness temperature (bottom) for a neutral patch of 10 comoving megaparsec
+along the line of sight, for the CDM model at z = 9. In each row, the four columns correspond to fX = 0, 0.1, 1, and 3, from left to right respectively. In the lower panels, the
+green, yellow, and red spectra correspond to S150 = 1 mJy, 10 mJy, and 100 mJy, respectively, and the dotted and dashed lines are the thermal noise levels δT N expected for
+SKA1-LOW and SKA2-LOW respectively, with δν = 1 kHz and δt = 100 hr. The zoom-in
+plots in the top panels show the 21-cm optical depth with different scales on the y axes.
+
+32
+
+fX = 0
+fX = 0.1
+fX = 1
+fX = 3
+
+SKA1-LOW
+SKA2-LOW
+
+105
+P(k) [K2 Mpc]
+
+104
+
+CDM
+WDM (10 keV)
+WDM (6 keV)
+WDM (3 keV)
+
+SKA1-LOW
+SKA2-LOW
+
+103
+102
+101
+100
+
+100
+
+101
+
+k [Mpc 1 ]
+
+102
+
+100
+
+101
+
+k [Mpc 1 ]
+
+102
+
+Figure 3 | The expected 1D power spectrum of the 21-cm forest with S150 = 10 mJy.
+The expected 1D power spectrum of 21-cm forest at z = 9 from a total of 100 measurements on segments of 10 comoving-megaparsec length in neutral patches along lines of
+sight against 10 background sources with S150 = 10 mJy. The left panel shows the 1D
+power spectra in the CDM model, and the blue, green, yellow and red curves correspond
+to fX = 0, 0.1, 1 and 3, respectively. The right panel shows the 1D power spectra for an
+un-heated IGM (fX = 0), and the blue, green, yellow and red curves correspond to the
+CDM model and the WDM models with mWDM = 10 keV, 6 keV, and 3 keV, respectively.
+The black dotted and dashed lines in each panel are the thermal noises P N expected for
+SKA1-LOW and SKA2-LOW respectively, with δt = 100 hr, and the error bars show the
+total measurement errors of SKA2-LOW.
+
+33
+
+P(k) [K2 Mpc]
+
+107
+
+fX = 0.1
+
+fX = 1
+
+fX = 3
+
+CDM
+
+WDM (10 keV)
+
+WDM (6 keV)
+
+WDM (3 keV)
+
+101
+
+101
+
+101
+
+SKA1-LOW
+SKA2-LOW
+
+104
+101
+
+10 2
+107
+P(k) [K2 Mpc]
+
+fX = 0
+
+S150 = 100 mJy
+S150 = 10 mJy
+
+104
+
+S150 = 1 mJy
+
+101
+
+10 2
+
+100
+
+101
+
+k [Mpc 1 ]
+
+102 100
+
+k [Mpc 1 ]
+
+102 100
+
+k [Mpc 1 ]
+
+102 100
+
+k [Mpc 1 ]
+
+102
+
+Figure 4 | The expected 1D power spectrum of 21-cm forest for different heating
+histories and different DM models. The expected 1D power spectrum of 21-cm forest
+at z = 9 for different heating histories (top) and different DM models (bottom), assuming
+a total of 100 measurements on segments of 10 comoving-megaparsec length in neutral
+patches along lines of sight against 10 background sources. The upper panels show
+the power spectra in the CDM model assuming fX = 0, 0.1, 1, and 3, from left to right
+respectively. The lower panels show the power spectra for the CDM model and the WDM
+models with mWDM = 10 keV, 6 keV, and 3 keV, from left to right respectively, assuming an
+un-heated IGM (fX = 0). In each row, the green, yellow and red curves correspond to the
+flux densities of the background point sources with S150 = 1 mJy, 10 mJy and 100 mJy,
+respectively. The black dotted and dashed lines are the thermal noises P N for SKA1LOW and SKA2-LOW respectively, with δt = 100 hr, and the error bars show the total
+
+34
+
+measurement errors of SKA2-LOW.
+
+35
+
+z=9
+
+z = 11
+
+= dlogP(k)/dlogk
+
+0.5
+1.0
+
+fX
+
+5
+3
+2
+1
+0.5
+0.3
+0.2
+0.1
+0
+
+C 10 9 8 7 6 5 4 3 C 10 9 8 7 6 5 4 3 C 10 9 8 7 6 5 4 3
+mDM [keV]
+mDM [keV]
+mDM [keV]
+
+103
+102
+101
+100
+10 1
+10 2
+
+P(k = 40 Mpc 1 ) [K2 Mpc]
+
+z=7
+
+fX
+
+5
+3
+2
+1
+0.5
+0.3
+0.2
+0.1
+0
+
+1.5
+2.0
+C 10 9 8 7 6 5 4 3 C 10 9 8 7 6 5 4 3 C 10 9 8 7 6 5 4 3
+mDM [keV]
+mDM [keV]
+mDM [keV]
+
+Figure 5 | The amplitude and slope of the 1D power spectrum of the 21-cm forest.
+The amplitude (top) and slope (bottom) of 1D power spectrum of 21-cm forest at k = 40
+Mpc−1 . The abscissa and ordinate represent different mDM and fX , respectively, and “C”
+stands for the CDM model. From left to right, the redshift of each panel is 7, 9 and 11.
+The flux density of the background source is assumed to be S150 = 10 mJy.
+
+36
+
+70
+
+SKA1-LOW
+SKA2-LOW
+
+65
+TK [K]
+
+700
+
+60
+
+600
+
+55
+
+500
+
+50
+
+SKA2-LOW
+
+800
+
+400
+4
+
+6
+
+mWDM [keV]
+
+8
+
+5
+
+6
+
+mWDM [keV]
+
+7
+
+Figure 6 | Constraints on TK and mWDM with the 1D power spectrum of the 21-cm
+forest with S150 = 10 mJy. Constraints (68.3% and 95.4% confidence level) on TK and
+mWDM with the 1D power spectrum of 21-cm forest at z = 9, assuming a total of 100
+measurements on segments of 10 comoving-megaparsec length in neutral patches along
+lines of sight against 10 background sources with S150 = 10 mJy. The gray and blue
+contours correspond to results for SKA1-LOW and SKA2-LOW, respectively, including the
+sample variance and the thermal noise with observation of 100 hr on each source. The
+fiducial model of the left panel is mWDM = 6 keV and TK = 60 K (corresponding to fX = 0.1),
+and the fiducial model of the right panel is mWDM = 6 keV and TK = 600 K (corresponding
+to fX = 1).
+
+1. Carilli, C. L., Gnedin, N. Y. & Owen, F. H I 21 Centimeter Absorption beyond the Epoch of
+Reionization. Astrophys. J. 577, 22–30 (2002). astro-ph/0205169.
+
+37
+
+2. Furlanetto, S. R. & Loeb, A. The 21 Centimeter Forest: Radio Absorption Spectra as Probes
+of Minihalos before Reionization. Astrophys. J. 579, 1–9 (2002). astro-ph/0206308.
+3. Furlanetto, S. R. The 21-cm forest. Mon. Not. R. Astron. Soc. 370, 1867–1875 (2006).
+astro-ph/0604223.
+4. Xu, Y., Chen, X., Fan, Z., Trac, H. & Cen, R. The 21 cm Forest as a Probe of the Reionization
+and The Temperature of the Intergalactic Medium. Astrophys. J. 704, 1396–1404 (2009).
+0904.4254.
+5. Xu, Y., Ferrara, A., Kitaura, F. S. & Chen, X. Searching for the earliest galaxies in the
+21 cm forest. Science China Physics, Mechanics, and Astronomy 53, 1124–1129 (2010).
+1002.4356.
+6. Xu, Y., Ferrara, A. & Chen, X. The earliest galaxies seen in 21 cm line absorption. Mon. Not.
+R. Astron. Soc. 410, 2025–2042 (2011). 1009.1149.
+7. Ciardi, B. et al. Prospects for detecting the 21 cm forest from the diffuse intergalactic medium
+with LOFAR. Mon. Not. R. Astron. Soc. 428, 1755–1765 (2013). 1209.2615.
+8. Avila-Reese, V., Colı́n, P., Valenzuela, O., D’Onghia, E. & Firmani, C. Formation and
+Structure of Halos in a Warm Dark Matter Cosmology. Astrophys. J. 559, 516–530 (2001).
+astro-ph/0010525.
+9. Smith, R. E. & Markovic, K. Testing the warm dark matter paradigm with large-scale structures. Phys. Rev. D 84, 063507 (2011). 1103.2134.
+
+38
+
+10. Schneider, A., Smith, R. E. & Reed, D. Halo mass function and the free streaming scale. Mon.
+Not. R. Astron. Soc. 433, 1573–1587 (2013). 1303.0839.
+11. Viel, M., Becker, G. D., Bolton, J. S. & Haehnelt, M. G. Warm dark matter as a solution to
+the small scale crisis: New constraints from high redshift Lyman-α forest data. Phys. Rev. D
+88, 043502 (2013). 1306.2314.
+12. Baur, J., Palanque-Delabrouille, N., Yèche, C., Magneville, C. & Viel, M. Lyman-alpha forests
+cool warm dark matter. J. Cosmol. Astropart. Phys. 2016, 012 (2016). 1512.01981.
+13. Iršič, V. et al. New constraints on the free-streaming of warm dark matter from intermediate
+and small scale Lyman-α forest data. Phys. Rev. D 96, 023522 (2017). 1702.01764.
+14. Shimabukuro, H., Ichiki, K., Inoue, S. & Yokoyama, S. Probing small-scale cosmological
+fluctuations with the 21 cm forest: Effects of neutrino mass, running spectral index, and warm
+dark matter. Phys. Rev. D 90, 083003 (2014). 1403.1605.
+15. Shimabukuro, H., Ichiki, K. & Kadota, K. Constraining the nature of ultra light dark matter
+particles with the 21 cm forest. Phys. Rev. D 101, 043516 (2020). 1910.06011.
+16. Mack, K. J. & Wyithe, J. S. B. Detecting the redshifted 21 cm forest during reionization. Mon.
+Not. R. Astron. Soc. 425, 2988–3001 (2012). 1101.5431.
+17. Ewall-Wice, A., Dillon, J. S., Mesinger, A. & Hewitt, J. Detecting the 21 cm forest in the 21
+cm power spectrum. Mon. Not. R. Astron. Soc. 441, 2476–2496 (2014). 1310.7936.
+
+39
+
+18. Thyagarajan, N. Statistical Detection of IGM Structures during Cosmic Reionization Using
+Absorption of the Redshifted 21 cm line by H I against Compact Background Radio Sources.
+Astrophys. J. 899, 16 (2020). 2006.10070.
+19. Mesinger, A., Furlanetto, S. & Cen, R. 21CMFAST: a fast, seminumerical simulation of the
+high-redshift 21-cm signal. Mon. Not. R. Astron. Soc. 411, 955–972 (2011). 1003.3878.
+20. Cooray, A. & Sheth, R. Halo models of large scale structure. Phys. Rep. 372, 1–129 (2002).
+astro-ph/0206508.
+21. Zentner, A. R. The Excursion Set Theory of Halo Mass Functions, Halo Clustering, and
+Halo Growth. International Journal of Modern Physics D 16, 763–815 (2007). astro-ph/
+0611454.
+22. Navarro, J. F., Frenk, C. S. & White, S. D. M. A Universal Density Profile from Hierarchical
+Clustering. Astrophys. J. 490, 493–508 (1997). astro-ph/9611107.
+23. Barkana, R. A model for infall around virialized haloes. Mon. Not. R. Astron. Soc. 347, 59–66
+(2004). astro-ph/0212458.
+24. Menci, N. et al. Observing the very low surface brightness dwarfs in a deep field in the
+VIRGO cluster: constraints on dark matter scenarios. Astron. Astrophys. 604, A59 (2017).
+1706.04360.
+25. Garzilli, A., Magalich, A., Ruchayskiy, O. & Boyarsky, A. How to constrain warm dark matter
+with the Lyman-α forest. Mon. Not. Roy. Astron. Soc. 502, 2356–2363 (2021). 1912.09397.
+
+40
+
+26. Palanque-Delabrouille, N. et al. Hints, neutrino bounds, and WDM constraints from SDSS
+DR14 Lyman-α and Planck full-survey data. J. Cosmol. Astropart. Phys. 2020, 038 (2020).
+1911.09073.
+27. Nadler, E. O. et al. Constraints on Dark Matter Properties from Observations of Milky Way
+Satellite Galaxies. Phys. Rev. Lett. 126, 091101 (2021). 2008.00022.
+28. Wouthuysen, S. A. On the excitation mechanism of the 21-cm (radio-frequency) interstellar
+hydrogen emission line. Astron. J. 57, 31–32 (1952).
+29. Field, G. B. The Spin Temperature of Intergalactic Neutral Hydrogen. Astrophys. J. 129, 536
+(1959).
+30. Furlanetto, S. R. The global 21-centimeter background from high redshifts. Mon. Not. R.
+Astron. Soc. 371, 867–878 (2006). astro-ph/0604040.
+31. de Lera Acedo, E., Pienaar, H. & Fagnoni, N. Antenna design for the SKA1-LOW and HERA
+super radio telescopes. arXiv e-prints arXiv:2003.10733 (2020). 2003.10733.
+32. https://www.skao.int/en/science-users/118/
+ska-telescope-specifications.
+33. Sitwell, M., Mesinger, A., Ma, Y.-Z. & Sigurdson, K. The imprint of warm dark matter on the
+cosmological 21-cm signal. Mon. Not. R. Astron. Soc. 438, 2664–2671 (2014). 1310.0029.
+34. Muñoz, J. B., Dvorkin, C. & Cyr-Racine, F.-Y. Probing the Small-Scale Matter Power Spectrum with Large-Scale 21-cm Data. Phys. Rev. D 101, 063526 (2020). 1911.11144.
+41
+
+35. Hibbard, J. J. et al. Constraining Warm Dark Matter and Population III Stars with the Global
+21 cm Signal. Astrophys. J. 929, 151 (2022). 2201.02638.
+36. Ciardi, B. & Ferrara, A. The First Cosmic Structures and Their Effects. Space Sci. Rev. 116,
+625–705 (2005). astro-ph/0409018.
+37. Shao, Y. et al. Observations by GMRT at 323 MHz of radio-loud quasars at z > 5. Astron.
+Astrophys. 641, A85 (2020). 2006.13762.
+38. Liu, Y. et al. Constraining the Quasar Radio-loud Fraction at z ∼ 6 with Deep Radio Observations. Astrophys. J. 908, 124 (2021). 2012.07301.
+39. Shao, Y. et al. The radio spectral turnover of radio-loud quasars at z > 5. Astron. Astrophys.
+659, A159 (2022). 2112.03133.
+40. Bañados, E. et al. The Discovery of a Highly Accreting, Radio-loud Quasar at z = 6.82.
+Astrophys. J. 909, 80 (2021). 2103.03295.
+41. Ighina, L. et al. Radio detection of VIK J2318−3113, the most distant radio-loud quasar (z =
+6.44). Astron. Astrophys. 647, L11 (2021). 2101.11371.
+42. Gloudemans, A. J. et al. Discovery of 24 radio-bright quasars at 4.9 ≤ z ≤ 6.6 using lowfrequency radio observations. Astron. Astrophys. 668, A27 (2022). 2210.01811.
+43. Gloudemans, A. J. et al. Low frequency radio properties of the z > 5 quasar population.
+Astron. Astrophys. 656, A137 (2021). 2110.06222.
+
+42
+
+44. Haiman, Z., Quataert, E. & Bower, G. C. Modeling the Counts of Faint Radio-Loud Quasars:
+Constraints on the Supermassive Black Hole Population and Predictions for High Redshift.
+Astrophys. J. 612, 698–705 (2004). astro-ph/0403104.
+45. Salvaterra, R. et al. GRB090423 at a redshift of z˜8.1. Nature 461, 1258–1260 (2009). 0906.
+1578.
+46. Cucchiara, A. et al. A Photometric Redshift of z ˜9.4 for GRB 090429B. Astrophys. J. 736, 7
+(2011). 1105.4915.
+47. Kinugawa, T., Harikane, Y. & Asano, K. Long Gamma-Ray Burst Rate at Very High Redshift.
+Astrophys. J. 878, 128 (2019). 1901.03516.
+48. Enzi, W. et al. Joint constraints on thermal relic dark matter from strong gravitational lensing,
+the Ly α forest, and Milky Way satellites. Mon. Not. R. Astron. Soc. 506, 5848–5862 (2021).
+2010.13802.
+49. Abdurashidova, Z. et al. HERA Phase I Limits on the Cosmic 21 cm Signal: Constraints on
+Astrophysics and Cosmology during the Epoch of Reionization. Astrophys. J. 924, 51 (2022).
+2108.07282.
+50. Field, G. B. An Attempt to Observe Neutral Hydrogen Between the Galaxies. Astrophys. J.
+129, 525 (1959).
+51. Madau, P., Meiksin, A. & Rees, M. J. 21 Centimeter Tomography of the Intergalactic Medium
+at High Redshift. Astrophys. J. 475, 429–444 (1997). astro-ph/9608010.
+
+43
+
+52. Planck Collaboration et al. Planck 2018 results. VI. Cosmological parameters. Astron. Astrophys. 641, A6 (2020). 1807.06209.
+53. Press, W. H. & Schechter, P. Formation of Galaxies and Clusters of Galaxies by Self-Similar
+Gravitational Condensation. Astrophys. J. 187, 425–438 (1974).
+54. Bode, P., Ostriker, J. P. & Turok, N. Halo Formation in Warm Dark Matter Models. Astrophys.
+J. 556, 93–107 (2001). astro-ph/0010389.
+55. Viel, M., Lesgourgues, J., Haehnelt, M. G., Matarrese, S. & Riotto, A. Constraining warm
+dark matter candidates including sterile neutrinos and light gravitinos with WMAP and the
+Lyman-α forest. Phys. Rev. D 71, 063534 (2005). astro-ph/0501562.
+56. Makino, N., Sasaki, S. & Suto, Y. X-Ray Gas Density Profile of Clusters of Galaxies from the
+Universal Dark Matter Halo. Astrophys. J. 497, 555–558 (1998). astro-ph/9710344.
+57. Bryan, G. L. & Norman, M. L. Statistical Properties of X-Ray Clusters: Analytic and Numerical Comparisons. Astrophys. J. 495, 80–99 (1998). astro-ph/9710107.
+58. Abel, T., Bryan, G. L. & Norman, M. L. The Formation of the First Star in the Universe.
+Science 295, 93–98 (2002). astro-ph/0112088.
+59. Keshet, U., Waxman, E., Loeb, A., Springel, V. & Hernquist, L. Gamma Rays from Intergalactic Shocks. Astrophys. J. 585, 128–150 (2003). astro-ph/0202318.
+60. Springel, V. The cosmological simulation code GADGET-2. Mon. Not. R. Astron. Soc. 364,
+1105–1134 (2005). astro-ph/0505010.
+44
+
+61. Xu, Y., Yue, B. & Chen, X. Maximum Absorption of the Global 21 cm Spectrum in the
+Standard Cosmological Model. Astrophys. J. 923, 98 (2021). 2102.12865.
+62. Yue, B. & Chen, X. Reionization in the Warm Dark Matter Model. Astrophys. J. 747, 127
+(2012). 1201.3686.
+63. Dayal, P., Choudhury, T. R., Bromm, V. & Pacucci, F. Reionization and Galaxy Formation in
+Warm Dark Matter Cosmologies. Astrophys. J. 836, 16 (2017). 1501.02823.
+64. Cen, R. A Hydrodynamic Approach to Cosmology: Methodology. Astrophys. J. Suppl. 78,
+341 (1992).
+65. Hui, L. & Gnedin, N. Y. Equation of state of the photoionized intergalactic medium. Mon.
+Not. R. Astron. Soc. 292, 27–42 (1997). astro-ph/9612232.
+66. Hui, L. & Haiman, Z. The Thermal Memory of Reionization History. Astrophys. J. 596, 9–18
+(2003). astro-ph/0302439.
+67. Valdés, M. & Ferrara, A. The energy cascade from warm dark matter decays. Mon. Not. R.
+Astron. Soc. 387, L8–L12 (2008). 0803.0370.
+68. Salvadori, S. & Ferrara, A. Ultra faint dwarfs: probing early cosmic star formation. Mon. Not.
+R. Astron. Soc. 395, L6–L10 (2009). 0812.3151.
+69. Thompson, A. R., Moran, J. M. & Swenson, J., George W. Interferometry and Synthesis in
+Radio Astronomy, 3rd Edition (2017).
+
+45
+
+101
+
+100
+
+=0
+0=1
+0=2
+0
+
+102
+Tb [K]
+
+102
+
+10 1
+
+100
+
+0
+
+103
+
+0
+
+0
+141.98
+
+=0
+=1
+0=2
+
+=0
+=1
+0=2
+0
+
+142.04
+[MHz]
+
+142.10
+
+10 2
+141.98
+
+0
+
+142.04
+[MHz]
+
+142.10
+
+141.98
+
+142.04
+[MHz]
+
+142.10
+
+Extended Data Figure 1 | The density (left panel), optical depth (middle panel) and
+brightness temperature (right panel) for a line of sight of 2 comoving Mpc in the
+CDM model at z = 9. The green, yellow and red lines correspond to local overdensities of
+δ0 = 0, 1 and 2, respectively. The flux density of the background source in the right panel
+is assumed to be S150 = 10 mJy.
+
+P(k) [K2 Mpc]
+
+104
+103
+
+=0
+0=1
+0=2
+101
+0
+
+k [Mpc 1 ]
+
+102
+
+Extended Data Figure 2 | 1-D power spectrum of a synthetic 21-cm forest spectrum
+in the CDM model, for a line of sight penetrating through an un-heated IGM (fX = 0)
+with different local overdensities at z = 9. The green, yellow and red curves correspond
+to δ0 = 0, 1 and 2, respectively. The flux density of the background source is assumed to
+be S150 = 10 mJy.
+
+46
+
+CDM
+WDM (10 keV)
+WDM (6 keV)
+WDM (3 keV)
+
+dn/dlnM [Mpc 3 ]
+
+105
+102
+
+10 1
+10 4
+7 4
+10 10
+
+106
+
+108
+
+M [M ]
+
+1010
+
+1012
+
+Supplementary Figure 1 | Halo mass function for different DM particle masses at
+z = 9. The red, yellow, blue and pink curves correspond to the CDM model and WDM
+models with mWDM = 10 keV, 6 keV, and 3 keV, respectively.
+
+47
+
+106
+
+M = 106 M
+M = 107 M
+M = 108 M
+
+104
+102
+100
+10 102 2
+
+100
+
+102
+
+r/rvir
+
+Supplementary Figure 2 | Neutral hydrogen overdensity profiles inside and outside
+the virial radius of a halo at z = 9. The green, yellow and red lines correspond to halo
+mass of 106 M⊙ , 107 M⊙ and 108 M⊙ , respectively.
+
+GADGET
+Mmin = 106 M
+
+dP/dlog(1+ )
+
+2.0
+1.5
+1.0
+0.5
+0.0 1
+10
+
+100
++1
+
+101
+
+Supplementary Figure 3 | Probability density distribution of the gas overdensity
+at z = 17. The black solid line is the probability density distribution from the GADGET
+simulation with a box size of 4 h−1 Mpc and 2 × 8003 gas and DM particles. The blue
+dashed line is the one derived from our hybrid approach with the same resolution as the
+GADGET simulation.
+
+48
+
+WDM (10 keV)
+
+CDM
+
+101
+
+WDM (6 keV)
+
+WDM (3 keV)
+
+100
+0
+141.76 142.04 142.32 141.76 142.04 142.32 141.76 142.04 142.32 141.76 142.04 142.32
+[MHz]
+[MHz]
+[MHz]
+[MHz]
+Supplementary Figure 4 | Density distribution of a patch of 10 comoving Mpc at z
+= 9 along the line of sight, for an un-heated IGM (fX = 0). The four panels, from left
+to right, correspond to the CDM model and the WDM models with mWDM = 10 keV, 6 keV
+and 3 keV, respectively.
+
+CDM
+WDM (10 keV)
+WDM (6 keV)
+WDM (3 keV)
+
+xHI
+
+1.0
+0.8
+0.6
+0.4
+0.2
+0.05
+
+7
+
+9
+
+z
+
+11
+
+13
+
+15
+
+Supplementary Figure 5 | Reionization history simulated by 21cmFAST. The black,
+red, yellow and green curves correspond to the average neutral fraction x̄HI as a function
+of redshift z in the CDM model and the WDM models with mWDM = 10 keV, 6 keV and 3
+keV, respectively.
+
+49
+
+fX = 0
+fX = 0.1
+fX = 1
+fX = 3
+
+TK [K]
+
+103
+101
+5
+
+10
+
+15
+z
+
+20
+
+25
+
+Supplementary Figure 6 | Evolution of the global gas temperature with redshift. The
+blue, green, yellow and red lines correspond to fX = 0, 0.1, 1 and 3, respectively.
+
+104
+TK [K]
+
+M = 106 M
+M = 107 M
+M = 108 M
+
+102
+10 2
+
+100
+
+r/rvir
+
+102
+
+Supplementary Figure 7 | Temperature profiles of gas inside and outside the virial
+radii of halos at z = 9 with an un-heated IGM (fX = 0). The green, yellow and red lines
+correspond to halo masses of 106 M⊙ , 107 M⊙ and 108 M⊙ , respectively.
+
+50
+
+WDM (3 keV), fX = 0
+
+CDM, fX = 0
+
+105
+P(k) [K2 Mpc]
+
+z=7
+z=9
+z = 11
+
+103
+
+CDM, fX = 3
+
+z=7
+z=9
+z = 11
+
+z=7
+z=9
+z = 11
+
+101
+100
+
+101
+
+k [Mpc 1 ]
+
+102
+
+100
+
+101
+
+k [Mpc 1 ]
+
+102
+
+100
+
+101
+
+k [Mpc 1 ]
+
+102
+
+Supplementary Figure 8 | Evolution of the 1-D power spectrum of 21-cm forest averaged over 100 measurements on segments of 10 comoving Mpc length in neutral
+patches along lines of sight against background sources with S150 = 10 mJy. The
+solid lines in the left and central panels show the power spectra in the CDM model and
+those in the WDM model with mWDM = 3 keV respectively, assuming an un-heated IGM
+(fX = 0). The solid lines in the right panel show the power spectra in the CDM model assuming an efficiently-heated IGM (fX = 3). In each panel, the blue, green and yellow lines
+correspond to z = 7, 9 and 11, respectively. The dotted and dashed lines with the corresponding colors are the expected thermal noises P N for SKA1-LOW and SKA2-LOW,
+respectively, and the error bars show the total measurement errors of SKA2-LOW.
+
+51
+
+105
+
+fX = 0
+fX = 0.1
+fX = 1
+fX = 3
+
+SKA1-LOW
+
+Theoretical SKA1-LOW
+Theoretical SKA2-LOW
+
+P N [K2 Mpc]
+
+P(k) [K2 Mpc]
+
+104
+103
+102
+101
+100
+
+101
+
+k [Mpc 1 ]
+
+105
+
+102
+
+100
+
+101
+
+k [Mpc 1 ]
+
+102
+
+fX = 0
+fX = 0.1
+fX = 1
+fX = 3
+
+SKA2-LOW
+
+Theoretical SKA1-LOW
+Theoretical SKA2-LOW
+
+P N [K2 Mpc]
+
+P(k) [K2 Mpc]
+
+104
+103
+102
+101
+100
+
+101
+
+k [Mpc 1 ]
+
+102
+
+100
+
+101
+
+k [Mpc 1 ]
+
+102
+
+Supplementary Figure 9 | 1-D cross-power spectrum computed from mock spectra
+simulated with thermal noises expected for SKA1-LOW (upper panels) and SKA2LOW (lower panels), respectively. The left plots show the results in which the mock
+spectra contain both 21-cm forest signal and thermal noise, and the right plots show the
+results from mock spectra with only thermal noise. Same as Fig. 3 the 1-D power spectra
+are averaged over 100 measurements on segments of 10 comoving Mpc length in neutral
+
+52
+
+patches along lines of sight against 10 background sources with S150 = 10 mJy. The blue,
+green, yellow and red curves correspond to fX = 0, 0.1, 1 and 3, respectively. The dotted
+and dashed lines are the theoretical thermal noises P N expected for the SKA1-LOW and
+SKA2-LOW, respectively.
+
+53
+
+

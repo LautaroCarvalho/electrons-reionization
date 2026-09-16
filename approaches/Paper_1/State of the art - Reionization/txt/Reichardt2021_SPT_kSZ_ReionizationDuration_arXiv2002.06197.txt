@@ -1,0 +1,1724 @@
+Draft version February 19, 2020
+Typeset using LATEX twocolumn style in AASTeX62
+
+arXiv:2002.06197v2 [astro-ph.CO] 18 Feb 2020
+
+An Improved Measurement of the Secondary Cosmic Microwave Background Anisotropies from the SPT-SZ +
+SPTpol Surveys
+C. L. Reichardt,1, 2 S. Patil,1 P. A. R. Ade,3 A. J. Anderson,4 J. E. Austermann,5, 6 J. S. Avva,7 E. Baxter,8, 9
+J. A. Beall,5 A. N. Bender,10, 11 B. A. Benson,4, 11, 12 F. Bianchini,1 L. E. Bleem,10, 11 J. E. Carlstrom,11, 13, 10, 12, 14
+C. L. Chang,11, 10, 12 P. Chaubal,1 H. C. Chiang,15, 16 T. L. Chou,13 R. Citron,17 C. Corbett Moran,18
+T. M. Crawford,11, 12 A. T. Crites,11, 12, 19 T. de Haan,7, 20 M. A. Dobbs,15, 21 W. Everett,22 J. Gallicchio,11, 23
+E. M. George,24, 7 A. Gilbert,15 N. Gupta,1 N. W. Halverson,22, 6 N. Harrington,7 J. W. Henning,10, 11
+G. C. Hilton,5 G. P. Holder,25, 26, 21 W. L. Holzapfel,7 J. D. Hrubes,17 N. Huang,7 J. Hubmayr,5 K. D. Irwin,27, 28
+L. Knox,29 A. T. Lee,7, 20 D. Li,5, 27 A. Lowitz,12 D. Luong-Van,17 J. J. McMahon,30 J. Mehl,11, 12
+S. S. Meyer,11, 13, 12, 14 M. Millea,29 L. M. Mocanu,11, 12 J. J. Mohr,31, 32 J. Montgomery,15 A. Nadolski,25, 26
+T. Natoli,12, 11, 33 J. P. Nibarger,5 G. Noble,15 V. Novosad,34 Y. Omori,28, 35 S. Padin,11, 12, 19 C. Pryke,36
+J. E. Ruhl,37 B. R. Saliwanchik,37, 38 J.T. Sayre,22, 6, 37 K. K. Schaffer,11, 14, 39 E. Shirokoff,11 C. Sievers,17
+G. Smecher,15, 40 H. G. Spieler,20 Z. Staniszewski,37 A. A. Stark,41 C. Tucker,3 K. Vanderlinde,33, 42 T. Veach,43
+J. D. Vieira,25, 26 G. Wang,10 N. Whitehorn,44 R. Williamson,17, 12 W. L. K. Wu,11 and V. Yefremenko10
+1 School of Physics, University of Melbourne, Parkville, VIC 3010, Australia
+2 ARC Centre of Excellence for All Sky Astrophysics in 3 Dimensions (ASTRO 3D)
+3 Cardiff University, Cardiff CF10 3XQ, United Kingdom
+4 Fermi National Accelerator Laboratory, MS209, P.O. Box 500, Batavia, IL 60510
+5 NIST Quantum Devices Group, 325 Broadway Mailcode 817.03, Boulder, CO, USA 80305
+6 Department of Physics, University of Colorado, Boulder, CO, USA 80309
+7 Department of Physics, University of California, Berkeley, CA, USA 94720
+8 Institute for Astronomy, University of Hawaii, 2680 Woodlawn Drive, Honolulu, HI 96822, USA
+9 Department of Physics and Astronomy, University of Pennsylvania, Philadelphia, PA 19104, USA
+10 High Energy Physics Division, Argonne National Laboratory, 9700 S. Cass Avenue, Argonne, IL, USA 60439
+11 Kavli Institute for Cosmological Physics, University of Chicago, 5640 South Ellis Avenue, Chicago, IL, USA 60637
+12 Department of Astronomy and Astrophysics, University of Chicago, 5640 South Ellis Avenue, Chicago, IL, USA 60637
+13 Department of Physics, University of Chicago, 5640 South Ellis Avenue, Chicago, IL, USA 60637
+14 Enrico Fermi Institute, University of Chicago, 5640 South Ellis Avenue, Chicago, IL, USA 60637
+15 Department of Physics, McGill University, 3600 Rue University, Montreal, Quebec H3A 2T8, Canada
+16 School of Mathematics, Statistics & Computer Science, University of KwaZulu-Natal, Durban, South Africa
+17 University of Chicago, 5640 South Ellis Avenue, Chicago, IL, USA 60637
+18 Jet Propulsion Laboratory, 4800 Oak Grove Drive, Pasadena, CA, USA 91109 USA
+19 California Institute of Technology, MS 249-17, 1216 E. California Blvd., Pasadena, CA, USA 91125
+20 Physics Division, Lawrence Berkeley National Laboratory, Berkeley, CA, USA 94720
+21 Canadian Institute for Advanced Research, CIFAR Program in Gravity and the Extreme Universe, Toronto, ON, M5G 1Z8, Canada
+22 Department of Astrophysical and Planetary Sciences, University of Colorado, Boulder, CO, USA 80309
+23 Harvey Mudd College, 301 Platt Blvd., Claremont, CA, USA 91711
+24 European Southern Observatory, Karl-Schwarzschild-Str. 2, 85748 Garching bei München, Germany
+25 Astronomy Department, University of Illinois at Urbana-Champaign, 1002 W. Green Street, Urbana, IL 61801, USA
+26 Department of Physics, University of Illinois Urbana-Champaign, 1110 W. Green Street, Urbana, IL 61801, USA
+27 SLAC National Accelerator Laboratory, 2575 Sand Hill Road, Menlo Park, CA 94025
+28 Dept. of Physics, Stanford University, 382 Via Pueblo Mall, Stanford, CA 94305
+29 Department of Physics, University of California, One Shields Avenue, Davis, CA, USA 95616
+30 Department of Physics, University of Michigan, 450 Church Street, Ann Arbor, MI, USA 48109
+31 Max-Planck-Institut f”ur extraterrestrische Physik,Giessenbachstr. 85748 Garching, Germany
+32 Excellence Cluster Universe, Boltzmannstr. 2, 85748 Garching, Germany
+33 Dunlap Institute for Astronomy & Astrophysics, University of Toronto, 50 St George St, Toronto, ON, M5S 3H4, Canada
+
+christian.reichardt@unimelb.edu.au
+
+2
+
+C. L. Reichardt, S. Patil, et al.
+34 Materials Sciences Division, Argonne National Laboratory, 9700 S. Cass Avenue, Argonne, IL, USA 60439
+35 Kavli Institute for Particle Astrophysics and Cosmology, Stanford University, 452 Lomita Mall, Stanford, CA 94305
+36 School of Physics and Astronomy, University of Minnesota, 116 Church Street S.E. Minneapolis, MN, USA 55455
+
+37 Physics Department, Center for Education and Research in Cosmology and Astrophysics, Case Western Reserve University, Cleveland,
+
+OH, USA 44106
+38 Department of Physics, Yale University, P.O. Box 208120, New Haven, CT 06520-8120
+39 Liberal Arts Department, School of the Art Institute of Chicago, 112 S Michigan Ave, Chicago, IL, USA 60603
+40 Three-Speed Logic, Inc., Victoria, B.C., V8S 3Z5, Canada
+41 Center for Astrophysics | Harvard & Smithsonian, 60 Garden Street, Cambridge, MA, USA 02138
+42 Department of Astronomy & Astrophysics, University of Toronto, 50 St George St, Toronto, ON, M5S 3H4, Canada
+43 Department of Astronomy, University of Maryland College Park, MD, USA 20742
+44 Department of Physics and Astronomy, University of California, Los Angeles, CA, USA 90095
+
+ABSTRACT
+We report new measurements of millimeter-wave power spectra in the angular multipole range
+2000 ≤ ` ≤ 11, 000 (angular scales 50 & θ & 10 ). By adding 95 and 150 GHz data from the low-noise
+500 deg2 SPTpol survey to the SPT-SZ three-frequency 2540 deg2 survey, we substantially reduce the
+uncertainties in these bands. These power spectra include contributions from the primary cosmic microwave background, cosmic infrared background, radio galaxies, and thermal and kinematic SunyaevtSZ
+Zel’dovich (SZ) effects. The data favor a thermal SZ (tSZ) power at 143 GHz of D3000
+= 3.42±0.54 µK2
+kSZ
+2
+and a kinematic SZ (kSZ) power of D3000 = 3.0 ± 1.0 µK . This is the first measurement of kSZ power
+at ≥ 3 σ. We study the implications of the measured kSZ power for the epoch of reionization, finding
+the duration of reionization to be ∆zre = 1.1+1.6
+−0.7 (∆zre < 4.1 at 95% confidence), when combined with
+our previously published tSZ bispectrum measurement.
+Keywords: cosmology – cosmology:cosmic microwave background – cosmology:diffuse radiation– cosmology: observations – large-scale structure of universe
+1. INTRODUCTION
+
+The cosmic microwave background (CMB) is best
+known for providing a snapshot of the early Universe.
+However, on small angular scales, secondary anisotropies
+in the CMB, created by interactions between CMB photons and large-scale structure, also provide clues about
+the late-time Universe. In particular, these secondary
+anisotropies encode information about the amplitude of
+structure growth and duration of the epoch of reionization.
+The most significant secondary anisotropies at angular
+scales of a few arcminutes are the kinematic and thermal Sunyaev-Zel’dovich (SZ) effects. Both SZ effects
+are due to CMB photons scattering off of free electrons
+along their path. The kinematic SZ (kSZ) effect is due
+to an induced doppler shift in the scattered photons,
+and thus the kSZ signal from a given volume element
+is proportional to (v/c)ne where v is the bulk velocity
+of the electrons, and ne is the number density of free
+electrons. The kSZ power spectrum is expected to have
+significant contributions from the epoch of reionization
+due to the large contrasts in ionization fraction as the
+Universe reionizes (Gruzinov & Hu 1998; Knox et al.
+1998), and at late times when there are larger relative
+
+velocities and density contrasts (e.g., Shaw et al. 2012;
+Battaglia et al. 2013a).
+In contrast, the thermal SZ (tSZ) effect is due to the
+energy transfer from hot electrons to the colder CMB
+photons, and has a signal amplitude of (kB Te /me c2 )ne ,
+where me is the mass of the electron and Te is the temperature of the electrons. While the kSZ effect does
+not change the CMB spectrum, the net energy transfer
+to the photons in the tSZ effect translates to a reduction in the number of CMB photons below 217 GHz as
+these photons are up-scattered towards higher frequencies. One can use the difference in how the tSZ and kSZ
+effects scale with frequency to simultaneously measure
+both terms. The tSZ anisotropy signal scales steeply
+with the normalization of the matter power spectrum,
+which can be parametrized by σ8 , the RMS of the z = 0
+linear mass distribution on 8h−1 Mpc scales, (e.g., Komatsu & Seljak 2002).
+The secondary CMB anisotropies are not the only
+sources of anisotropy in millimeter-wave maps on arcminute scales. Galaxies also emit at these wavelengths, both synchrotron-dominated active galactic nuclei (AGN, e.g., De Zotti et al. 2010) and thermal dust
+emission from dusty, star-forming galaxies (DSFGs, e.g.,
+Planck Collaboration et al. 2011; Mocanu et al. 2013,
+
+3
+Everett, et al., in prep.). While the brightest of these
+sources can be individually detected and masked, it is
+impossible to remove all of the fainter galaxies as there
+are many such DSFGs within each square arcminute
+(Lagache et al. 2005; Casey et al. 2014). The DSFG
+signal can be split between a term that does not spatially cluster (the “Poisson” component) plus a spatially
+clustered term (Viero et al. 2013) We can separate the
+AGN and DSFGs from the SZ effects using both angular
+and spectral information.
+1.1. Previous measurements
+Measurements of the millimeter sky at arcminute
+scales have been made by both the Atacama Cosmology Telescope (ACT; Das et al. 2011, 2014) and South
+Pole Telescope (SPT) SZ survey (Lueker et al. 2010;
+Shirokoff et al. 2011; Reichardt et al. 2012; George et al.
+2015). The ACT collaboration (Das et al. 2014; DunktSZ
+ley et al. 2013) measured D3000
+= 3.3 ± 1.4 µK2 and
+kSZ
+2
+D3000 < 8.6 µK (95% CL) at 150 GHz and ` = 3000.
+The final SPT-SZ bandpowers reported by George et al.
+(2015, hereafter G15) led to even tighter constraints on
++0.58
+tSZ
+the tSZ power at 143 GHz of D3000
+= 4.08−0.67
+µK2
+kSZ
+2
+and on the kSZ power of D3000 = 2.9 ± 1.3 µK . On
+larger scales, ` ≤ 2000, the Planck collaboration made
+a high-significance detection of the tSZ power spectrum
+(Planck Collaboration et al. 2014, 2016). The observed
+tSZ power is consistent across all three experiments.
+The data used to constrain the tSZ and kSZ power
+spectra can also teach us about the cosmic infrared background (CIB), radio galaxies and correlation between
+the CIB and galaxy clusters. G15 detected a non-zero
+correlation between the CIB and galaxy clusters, modelled as a constant, at a significance of more than 3 σ,
++0.057
+finding ξ = 0.113−0.054
+.
+1.2. This work
+This work adds data from the low-noise 500 deg2 SPTpol survey to the 2540 deg2 SPT-SZ survey maps used
+by G15. The SPTpol data substantially reduces the
+map noise at 95 and 150 GHz over the 500 deg2 that was
+observed by both surveys, however the 220 GHz maps
+are unchanged from G15 since SPTpol did not observe
+at 220 GHz. The lower noise levels at 95 GHz yield a
+three-fold reduction in the bandpower uncertainties at
+95×95 GHz; the improvement is more modest (∼30%)
+but still significant at 150×150 GHz.
+The outline of this work is as follows. We review the
+observations and power spectrum analysis in §2. Systematics checks done on the data are described in §3,
+before the bandpowers are presented in §4. We discuss
+the modelling of the bandpowers in §5, and the constraints on this model in §6. We explore the implications
+
+for the epoch of reionization in §7 before concluding in
+§8.
+2. DATA AND ANALYSIS
+
+We present power spectra from the combined SPT-SZ
+and SPTpol surveys at 95, 150, and 220 GHz. We use
+a pseudo-C ` cross-spectrum method (Hivon et al. 2002;
+Polenta et al. 2005; Tristram et al. 2005) to estimate the
+power spectra. The data is calibrated by comparing to
+the Planck 2015 CMB maps.
+2.1. Data
+This work uses data from the SPT-SZ and SPTpol
+cameras on the South Pole Telescope. Details on the
+telescope and cameras can be found in Ruhl et al. (2004),
+Padin et al. (2008), Shirokoff et al. (2009), Carlstrom
+et al. (2011), Henning et al. (2012), Sayre et al. (2012),
+and Austermann et al. (2012).
+As described by G15, the 2540 deg2 SPT-SZ survey
+was conducted from 2008 to 2011. The survey region
+was split into 19 contiguous sub-patches, referred to as
+fields, for observations. The specific field locations and
+extents can be found in Table 1 of Story et al. (2013),
+hereafter S13. The SPTpol 500 deg2 survey fully or partially overlaps six of these 19 fields. Bandpowers for the
+13 non-overlapping fields are identical to G15 (except
+for an updated calibration, see §2.2).
+We treat the overlapping region as a single field, and
+coadd the time-ordered data (TOD) from both SPTpol
+and SPT-SZ data into maps. Details of the time-ordered
+data (TOD), filtering, and map-making can be found in
+Shirokoff et al. (2011) for the SPT-SZ data and in Henning et al. (2018) for the SPTpol data. The SPTpol
+filtering options have been tuned to closely match the
+SPT-SZ maps used by G15. After combining data from
+the full 2540 deg2 , the approximate statistical weight
+from the new SPTpol data is 83% at 95 GHz, 44% at
+150 GHz, and 0% at 220 GHz.
+2.2. Beams and calibration
+The SPT-SZ beams are measured using a combination of bright point sources in each field, Venus, and
+Jupiter as described in Shirokoff et al. (2011). The SPTpol beams are measured using Venus alone as described
+by Henning et al. (2018). We take a weighted average,
+based on the statistical weight of each dataset in the
+map, of the beams from the two experiments to estimate the effective beam of the combined survey. Note
+that the final bandpowers should be robust to an error
+in this effective beam calculation since the transfer function simulations (§2.3.2) use the correct beams for each
+period of data. For both experiments, the main lobes
+
+4
+
+C. L. Reichardt, S. Patil, et al.
+
+of the beam are well-represented by 1.70 , 1.20 , and 1.00
+FWHM Gaussians at 95, 150, and 220 GHz respectively.
+We use the absolute calibration factors calculated by
+Hou et al. (2018) and Mocanu et al. (2019) for the SPTSZ data and the absolute calibration from Henning et al.
+(2018) for the SPTpol data. In both cases, the calibration is determined by comparing the SPT-SZ (or
+SPTpol) maps with Planck maps in the same region of
+sky. The uncertainties are correlated between frequency
+bands due to sample variance. The final uncertainties in
+power are [0.33%, 0.18%, 0.42%] at [95, 150, 220] GHz.
+The treatment of the beam and calibration uncertainties in the parameter estimation is described in §2.3.5.
+2.3. Power spectrum estimation
+Following G15, we use a pseudo-C` method to estimate the power spectrum (Hivon et al. 2002). PseudoC` methods start by calculating a (biased) power spectrum from the Fourier transform of the map (in flatsky), and then correct this biased spectrum for effects
+such as TOD filtering, beams, and finite sky coverage
+(Hivon et al. 2002). Following Polenta et al. (2005);
+Tristram et al. (2005), we use cross-spectra instead of
+auto-spectra to avoid noise bias in the result. We report
+the power spectrum in terms of D` , where
+D` =
+
+` (` + 1)
+C` .
+2π
+
+(1)
+
+More details on the power spectrum estimator can be
+found in previous SPT-SZ papers: e.g., Lueker et al.
+(2010), Reichardt et al. (2012, hereafter R12), and G15.
+We emphasize that for the 13 non-overlapping fields,
+this work simply reuses the G15 bandpowers for each
+field. We briefly describe the method in the following
+sections, focusing on the part that is new in this work –
+the power spectrum estimation for the combined SPTSZ + SPTpol maps.
+2.3.1. Cross spectra
+Before Fourier transforming the maps, we apply a
+window to each map that smoothly goes to zero at
+the map edges. The window also masks point sources
+above 6.4 mJy at 150 GHz from the source catalog in
+Everett et al., in prep. The mask for each point source
+has a 2 arcmin radius disc for sources detected with
+S150 GHz ∈ [6.4, 50] mJy, and a 5 arcmin radius disk for
+sources above 50 mJy. In both cases, a Gaussian taper with σtaper = 5 arcmin is applied outside the radius of the disk. For the combined SPTpol and SPT-SZ
+field which has anisotropic noise due to variations in the
+amount of integration time, this window also preferentially weights the lower noise regions.
+
+After Fourier transforming the windowed maps, we
+take the weighted average of the two-dimensional power
+spectrum within an `-bin b,
+
+
+`(` + 1) h νi ,A νj ,B∗ i
+νi ×νj ,AB
+b
+Db
+≡
+Re m̃` m̃`
+, (2)
+2π
+`∈b
+where m̃νi ,A is the Fourier transformed map. Here,
+A, B are the observation indices, while νi , νj are the observation frequencies (e.g., 150 GHz). We average all
+b AB that have A 6= B to get the binned
+cross-spectra D
+b
+b b . As in R12, we eliminate the noispower spectrum D
+ier modes along the scan direction by excluding modes
+b b , as a
+with `x < 1200. We refer to the binned power, D
+“bandpower.”
+2.3.2. Simulations
+The transfer function as well as sample variance for
+the combined SPTpol and SPT-SZ field is calculated
+from a suite of 200 signal-only simulations. We convolve
+the simulated skies by the measured beam for each frequency and observing year before sampling the realizations based on the pointing information. The simulated
+TOD are filtered and binned into maps in the same way
+as the real data.
+The simulated skies include Gaussian realizations of
+the best-fit lensed Planck 2013 ΛCDM primary CMB
+model, SZ models and extragalactic source contributions. Following G15, the kSZ power spectrum is based
+on the Sehgal et al. (2010) simulations with an amplitude of 2.0 µK2 at ` = 3000. The tSZ power spectrum
+is taken from the Shaw et al. (2010) simulations, normalized to have an amplitude of 4.4 µK2 at ` = 3000
+at 153 GHz. The extragalactic source term can be split
+into three components: spatially clustered and Poissondistributed DSFGs, and Poisson-distributed radio galaxies. Motivated by the predictions of the De Zotti et al.
+(2005) model for a 6.4 mJy flux cut at 150 GHz, the radio
+r
+power is set to D3000
+= 1.28 µK2 at 150 GHz. We assume a radio spectral index of αr = −0.531 and 1-sigma
+scatter on the spectral index of 0.1. The DSFG Poisson power is set to 7.54 µK2 at 154 GHz with a modified
+black-body spectrum2 with Tdust =12 K and β = 2. The
+clustered DSFG component is modeled by a D` ∝ `0.8
+c
+term normalized to D3000
+= 6.25 µK2 and the same
+spectral dependence as the Poisson DSFG. These simulations do not include non-Gaussianity in the tSZ, kSZ,
+and radio source signals and therefore slightly underestimate the sample variance. Millea et al. (2012) argue
+1 i.e. the radio source flux in Jy is proportional to ν αr , where
+ν is the frequency.
+2 i.e. the dusty galaxy flux in Jy is proportional to ν β B (T
+ν
+dust )
+
+5
+the non-Gaussian sample variance of the SZ and radio
+terms is negligible since the instrumental noise power is
+always larger than these terms.
+2.3.3. Covariance estimation and conditioning
+In order to compare the measured bandpowers to theory, we need to estimate a covariance matrix including both sample variance and instrumental noise variance. As in R12 and G15, the sample variance is estimated from signal-only simulations (§2.3.2), and the
+noise variance is empirically determined from the disν ×ν ,AB
+tribution of the cross-spectrum bandpowers Db i j
+between observations A and B, and frequencies νi and
+νj . A noisy estimate of the bandpower covariance matrix
+could degrade parameter constraints (see, e.g., Dodelson
+& Schneider 2013). Thus we follow G15 and “condition”
+the covariance matrix to minimize the noise on the covariance estimate and largely avoid this degradation.
+The covariance matrix depends on the signal power,
+and, if both bandpowers share a common map, noise
+power. As the errors on the off-diagonal elements
+include terms proportional to the (potentially much
+larger) diagonal elements, the uncertainty on the offdiagonal elements can be large compared to the true
+covariance. As a result, we estimate these values analytically from the diagonal elements using the equations
+in Appendix A of L10.
+2.3.4. Field weighting
+We follow G15 and weight each field and frequency
+cross spectrum based on the average of the inverse of
+the diagonal of the covariance matrix over the bins
+2500 < ` < 3500. These weights adjust for the differences in noise and sample variance between fields; beam
+and calibration errors are deliberately not included. As
+argued by G15, the angular range, 2500 < ` < 3500, is
+where the data have the most sensitivity to SZ signals.
+We calculate the combined bandpowers, Db , as:
+X
+Db =
+Dbi wi ,
+(3)
+i
+
+where Dbi is the bandpower of field i and wi the weight.
+The covariance matrix likewise can be expressed:
+X
+Cbb0 =
+wi Cibb0 wi .
+(4)
+i
+
+The sum of the weights is normalized to unity.
+2.3.5. Beam and calibration uncertainties
+To handle the calibration uncertainties, we include
+three calibration factors in the parameter fitting, one
+per frequency. We marginalize over these three factors,
+
+with a prior based on the measured calibration uncertainty for all parameter fits.
+We follow Aylor et al. (2017) for the treatment of
+beam uncertainties. The beam correlation matrix, ρbeam
+bb0
+is calculated as described by G15, using the fractional
+beam errors for each year and the relative weights of
+each year of data over the SPT-SZ and SPTpol surveys.
+At each step in the chain, we use the predicted theory
+bandpowers (Dbtheory ) to convert this beam correlation
+matrix into a beam covariance according to:
+theory theory
+Cbeam
+.
+= ρ beam
+Db0
+bb0
+bb0 Db
+
+(5)
+
+We add this beam covariance to the bandpower covariance matrix which contains the effects of sample variance, and instrumental noise. The likelihood for that
+specific theoretical model is then evaluated using this
+combined covariance matrix.
+3. NULL TESTS
+
+We test the data for unknown systematic errors by
+running two null tests. A null test consists of dividing
+the set of maps into two halves. The power spectrum
+of the difference between the maps of these two halves
+should be consistent with zero since all true astrophysical signals are canceled out. In practice, there can be
+slight amounts of residual power due to, for instance,
+small pointing differences. We calculate the expectation
+for the tiny amount of remaining power by applying the
+same differencing process to simulations. Detecting a
+significant deviation from this expectation would signal
+the presence of a systematic error. Note that we only
+run new null tests for the combined SPT-SZ and SPTpol field; we do not rerun null tests for the fields that
+have been reused from G15. We look at the following
+data splits for systematic effects:
+• Scan direction: We subtract left-going from rightgoing scans to test for potential systematics related to the telescope’s motion. This test is also
+sensitive to incorrect detector time constants.
+• Time: We split the data based on when it was
+observed. We subtract data from the first half of
+the observations of a field from data from the second half. Note that we split the data such that
+half 1 had the first half of the SPT-SZ observations plus the first half of the SPTpol observations, rather than all of the SPT-SZ observations
+plus some SPTpol observations. The null tests
+demonstrates the long-term temporal stability of
+the instruments. For instance, a slow drift in calibration would cause the test to fail.
+
+6
+
+C. L. Reichardt, S. Patil, et al.
+Table 1. Bandpowers
+95 GHz
+` range
+2001 - 2200
+2201 - 2500
+2501 - 2800
+2801 - 3100
+3101 - 3500
+3501 - 3900
+3901 - 4400
+4401 - 4900
+4901 - 5500
+5501 - 6200
+6201 - 7000
+7001 - 7800
+7801 - 8800
+8801 - 9800
+9801 - 11000
+
+`eff
+2077
+2332
+2636
+2940
+3293
+3696
+4148
+4651
+5203
+5855
+6607
+7408
+8310
+9311
+10413
+
+2001 - 2200
+2201 - 2500
+2501 - 2800
+2801 - 3100
+3101 - 3500
+3501 - 3900
+3901 - 4400
+4401 - 4900
+4901 - 5500
+5501 - 6200
+6201 - 7000
+7001 - 7800
+7801 - 8800
+8801 - 9800
+9801 - 11000
+
+2077
+2332
+2636
+2940
+3293
+3696
+4148
+4651
+5203
+5855
+6607
+7408
+8310
+9311
+10413
+
+2
+
+D̂ (µK )
+218.4
+128.2
+81.9
+52.84
+36.87
+31.35
+28.85
+30.25
+35.3
+43.4
+44.6
+46.7
+61.
+-
+
+150 GHz
+2
+
+σ (µK )
+3.8
+1.9
+1.1
+0.79
+0.58
+0.57
+0.65
+0.89
+1.1
+1.9
+3.2
+6.7
+12.
+-
+
+95 × 150 GHz
+213.3
+2.9
+123.5
+1.4
+76.72
+0.82
+47.73
+0.54
+32.01
+0.36
+24.38
+0.34
+22.47
+0.35
+22.46
+0.46
+25.00
+0.58
+28.88
+0.79
+34.9
+1.2
+39.2
+2.0
+45.8
+3.3
+74.8
+6.5
+83.
+14.
+
+2
+
+D̂ (µK )
+215.6
+125.9
+80.29
+51.88
+36.89
+31.19
+31.24
+33.62
+39.73
+46.34
+57.24
+69.5
+89.0
+98.7
+122.0
+
+220 GHz
+2
+
+σ (µK )
+2.3
+1.1
+0.67
+0.46
+0.31
+0.29
+0.29
+0.35
+0.42
+0.53
+0.72
+1.2
+1.8
+2.9
+4.5
+
+95 × 220 GHz
+207.2
+4.0
+121.6
+2.2
+77.7
+1.6
+50.0
+1.4
+34.2
+1.2
+26.6
+1.4
+28.3
+1.5
+32.0
+2.0
+35.1
+2.6
+47.1
+3.2
+55.8
+5.2
+60.4
+8.7
+75.
+13.
+87.
+29.
+203.
+62.
+
+D̂ (µK2 )
+286.2
+201.7
+170.4
+156.9
+155.4
+182.8
+202.0
+245.7
+290.2
+349.8
+435.
+524.
+665.
+729.
+962.
+
+σ (µK2 )
+6.5
+4.3
+4.1
+4.0
+3.7
+4.4
+4.8
+6.0
+7.0
+8.7
+11.
+15.
+21.
+34.
+49.
+
+150 × 220 GHz
+225.9
+2.9
+140.7
+1.6
+98.8
+1.2
+73.03
+1.00
+61.78
+0.80
+63.77
+0.87
+70.62
+0.89
+82.4
+1.1
+97.1
+1.3
+116.6
+1.6
+149.8
+2.1
+179.1
+3.1
+224.0
+4.3
+276.1
+7.2
+351.
+11.
+
+Note—Angular multipole range, weighted multipole value `eff , bandpower D̂, and bandpower uncertainty σ for the six auto
+and cross-spectra of the 95 GHz, 150 GHz, and 220 GHz maps with point sources detected at > 6.4 mJy at 150 GHz masked at
+all frequencies. The uncertainties in the table are calculated from the diagonal elements of the covariance matrix, which
+includes noise and sample variance, but not beam or calibration errors. Due to the larger beam size at 95 GHz, the 95x95 GHz
+bandpowers are limited to ` < 8800.
+
+We find one failure in the null tests. The first-second half
+null test at 150 GHz shows excess power at ` < 2500.
+While this excess is statistically significant (approximately 4 σ in two bins), it is also extremely small,
+< 0.1% of the non-nulled power at these scales. Given
+the small amount of power, relative to either the bandpowers or the sample variance in these bins, we choose
+to proceed with the analysis.
+
+4. BANDPOWERS
+
+We apply the analysis of §2.3 to the coadded SPTpol and SPT-SZ maps. Masking point sources above
+6.4 mJy at 150 GHz leads to a final effective area of
+464 deg2 for the combined SPTpol plus SPT-SZ field.
+We combine the resulting bandpowers with those from
+the other 13 fields in G15 according to §2.3.4. As in
+G15, we measure the power spectra across the range
+
+7
+
+1000
+
+95x95
+
+150x150
+
+220x220
+
+95x150
+
+95x220
+
+150x220
+
+100
+
+1000
+
+100
+
+2000 4000 6000 8000 10000
+
+4000 6000 8000 10000
+
+4000 6000 8000 10000
+
+Figure 1. The six auto- and cross-spectra measured with the 95, 150, and 220 GHz SPT data.
+
+of 2000 < ` < 11, 000. Following G15, we restrict the
+95×95 GHz bandpowers to ` < 8800 due to the larger
+beam size at 95 GHz. The new bandpowers are listed
+in Table 1 and plotted in Fig. 1. The bandpowers, covariance matrix, and window functions are available for
+download on the SPT3 and LAMBDA4 websites.
+The observed power is dominated by the primary
+CMB anisotropy on large angular scales (` < 3500).
+On smaller scales, extragalactic sources become important, DSFGs at 150 and 220 GHz, and radio galaxies at
+95 GHz. We also see evidence for power from the kinematic and thermal SZ effects. We plot the best-fit model
+components against the bandpowers at the 6 frequency
+combinations in Fig. 2.
+5. COSMOLOGICAL MODELING
+
+We fit the SPTpol + SPT-SZ bandpowers to a combination of the primary CMB anisotropy, thermal and
+kinematic SZ effects, radio galaxies, and DSFGs. The
+model is described in detail in the Appendix of G15; we
+only outline it here. The CMB is the most significant
+term on large angular scales in all bands. On smaller
+angular scales, the DSFGs contribute the most power at
+
+150 and 220 GHz, while radio galaxies are more significant at 95 GHz. The SZ effects and correlations between
+the thermal SZ signal and CIB are also included. Finally, although the Galactic cirrus power in these fields
+and frequency bands is expected to be small, we include
+Galactic cirrus in our modeling, with an external prior
+on the amplitude and shape
+We use the October 2019 version of CosmoMC5
+(Lewis & Bridle 2002) to calculate parameter constraints. We have added code to model the foregrounds
+and secondary anisotropies, which is based on the code
+used by G15. The source code and instructions to compile are available on the SPT website.3
+Unless otherwise noted, we fix the six ΛCDM parameters to the best-fit values. The best-fit values are taken
+from a combined likelihood with the Planck 2018 TT,
+TE, and EE data, and the bandpowers of this work. We
+find that allowing the ΛCDM parameters to vary does
+not noticeably affect the recovered posteriors for the
+foreground and secondary anisotropy parameters, and
+the Monte Carlo Markov chain steps are much faster
+with the ΛCDM parameters fixed.
+5 http://cosmologist.info/cosmomc
+
+3 http://pole.uchicago.edu/public/data/reichardt20/
+4 http://lambda.gsfc.nasa.gov/product/spt/spt prod table.cfm
+
+8
+
+C. L. Reichardt, S. Patil, et al.
+
+1000
+
+95x95
+
+150x150
+
+220x220
+
+95x150
+
+95x220
+
+150x220
+
+100
+
+10
+
+1
+1000
+
+100
+
+10
+
+1
+2000 4000 6000 8000 10000
+
+4000 6000 8000 10000
+
+4000 6000 8000 10000
+
+Total
+
+tSZ
+
+DSFG Poisson
+
+Radio Poisson
+
+CMB
+
+kSZ
+
+DSFG Clustering
+
+Gal. Cirrus
+
+Figure 2. The best-fit baseline model plotted against the SPT 95, 150, and 220 GHz auto- and cross-spectra. We also show
+the relative power in each component of the model.
+
+Two terms in the modelling describe the kSZ and tSZ
+power spectra. We model the tSZ power as a free amplitude (defined by the power at ` = 3000 and 143 GHz)
+that scales the Shaw et al. (2010) tSZ model template.
+We assume the non-relativistic tSZ frequency scaling. In
+§6.1.3, we also check if the results depend on the template chosen. Similarly, we describe the kSZ power by an
+amplitude parameter (defined by the power at ` = 3000)
+that scales a template constructed by setting the power
+of the CSF6 homogeneous kSZ template from Shaw et al.
+(2012) and patchy kSZ template from Zahn et al. (2012,
+hereafter Z12) to be equal at ` = 3000. Slightly differently than the tSZ case, we test the data’s sensitivity
+to the exact angular dependence of the kSZ power in
+§6.1.3 by simultaneously fitting separate amplitudes for
+the homogeneous and patchy kSZ terms.
+We include two parameters to describe the radio Poisson power: the amplitude of the radio Poisson power
+at 150 GHz and ` = 3000, and the spectral index αrg
+for the radio galaxies. Unlike in G15, we do not place
+6 Simulations that included cooling and star formation.
+
+a prior on the radio galaxy power as the 95 GHz data
+constrains it well.
+In the baseline model, we include five parameters to
+describe the DSFGs that make up the CIB. Three of
+these parameters are amplitudes, respectively of the
+Poisson, one-halo clustering, and two-halo clustering
+power at ` = 3000 and 150 GHz. As in G15, the oneand two-halo clustering templates are taken from the
+best-fit halo model in Viero et al. (2013). The other two
+parameters are the grey-body indices β for the Poisson
+and clustering power respectively. We assume that there
+is no difference in the frequency scaling between the oneand two-halo clustering terms.
+Finally, we include the expected anti-correlation
+between the CIB and tSZ power spectra. An anticorrelation is expected below the peak of the CMB
+black body because a dark matter over-density will be
+associated with an over-density of DSFGs (positive signal) and hot gas (negative tSZ signal). We take the
+angular dependence of the anti-correlation to be described by the form found by Z12, when looking at the
+Shang et al. (2012) CIB simulations. However, we allow the magnitude of this anti-correlation to float freely
+from -1 to 1, with the magnitude defined at ` = 3000.
+
+9
+Table 2. Delta χ2 for model components
+term
+
+dof
+
+∆χ2
+
+CMB (fixed) + Cirrus
+DSFG Poisson
+Radio Poisson
+DSFG Clustering
+tSZ
+kSZ + tSZ-CIB Correlation
+`-dependent tSZ-CIB
+
+2
+2
+3
+1
+2
+0
+
+(reference)
+-77175.
+-5135.
+-985.
+-269.
+-8.4
+-0.5
+
+Sloped tSZ-CIB corr.
+T ∈ [8, 50 K]
+Scatter in spectral indices
+Power-law for cluster DSFG
+Separate h- and p-kSZ
+
+1
+2
+2
+0
+1
+
+0.0
++0.4
++0.2
++2.1
++0.8
+
+Note— Improvement to the best-fit χ2 as additional terms
+are added to the model. Terms above the double line are
+included in the baseline model, with each row showing the
+improvement in likelihood relative to the row above it.
+Note that adding either kSZ or a tSZ-CIB correlation
+separately leads to a marginal improvement in χ2 (∆χ2 ∼
+1-2) but the improvement is more significant with both
+parameters included. For rows below the double line, the
+∆χ2 is shown relative to the baseline model rather than the
+row above it. None of these extensions significantly improve
+the fit quality. The row labeled “Sloped tSZ-CIB corr.”
+multiplies the Shang tSZ-CIB correlation template by term
+that varies linearly with ` around the pivot point of unity
+at ` = 3000. The row labeled “T ∈ [8, 50 K]” allows the
+temperature of the modified BB for the Poisson and
+clustered CIB terms to vary between 8 and 50 K. The row
+labeled “Scatter in spectral indices” adds two parameters,
+describing the population variance in spectral indices
+between CIB and radio galaxies respectively. The row
+labeled “Power-law for cluster DSFG” replaces the one- and
+two-halo CIB templates by a power-law described by an
+amplitude and an exponent. While this conserves the total
+number of model parameters, the power law form is a worse
+fit to the data. Finally, in “Separate h- and p-kSZ”, we
+check if the data can distinguish between the (small)
+expected change in angular dependence between the
+homogeneous and patchy kSZ terms. Surprisingly, allowing
+two amplitude parameters, one for each kSZ template,
+results in a worse fit. The uncertainty on all of the quoted
+∆χ2 s is approximately 0.4.
+
+Table 2 shows the improvement in the quality of the
+fits with the sequential introduction of free parameters
+to the original ΛCDM primary CMB model. There
+are clear improvements as each parameter is added, up
+through the kSZ and tSZ-CIB correlation. Changing
+from a tSZ-CIB correlation that is constant in ` to the
+Z12 form marginally improves the χ2 by 0.5, without
+introducing any new parameters. Thus we include this
+
+shape in our baseline model. The other model variations
+we consider do not significantly improve the quality of
+the fits. Using a power-law for the CIB clustered power,
+as was done by G15 instead of the simulation-based 1and 2-halo terms, is disfavored by the data, with an increase in χ2 of 2.1 for the same number of parameters.
+5.1. SPT effective frequencies
+While we refer to the three frequency bands as 95,
+150, and 220 GHz for convenience, the actual bandpasses
+are not simple delta functions. The bandpasses of both
+SPTpol and SPT-SZ were measured using a Fourier
+transform spectrometer (FTS). We estimate the calibration uncertainty on the FTS to be 0.3 GHz, which
+should be coherent between the three bands. Although
+the uncertainty has negligible effect on the constraints,
+we marginalize over the FTS calibration uncertainty in
+all parameter fits for completeness.
+With the measured bandpasses in hand, we can calculate an effective band center for each of the potential
+signals: the thermal SZ effect, the CIB, and synchrotron
+sources. As we report and calibrate the bandpowers in
+CMB temperature units, the band center is irrelevant for
+sources with a CMB-like spectrum. We average the measured band centers for each year using that year’s data
+relative weight to the final bandpowers. For an α = −0.5
+(radio-like) source spectrum, we find band centers of
+93.5, 149.5, and 215.8 GHz. For an α = 3.5 (dust-like)
+source spectrum, we find band centers of 96.9, 153.4,
+and 221.6 GHz. For a non-relativistic tSZ spectrum, we
+find band centers of 96.6, 152.3, and 220.1 GHz. The
+ratio of tSZ power in the 95 GHz band to that in the
+150 GHz band is 2.77; the 220 GHz band has nearly zero
+tSZ power as it is well-matched to the the null in the
+tSZ spectrum near 217 GHz. Note that we quote all
+tSZ power constraints at 143 GHz for consistency with
+Planck, and all other model terms at 150 GHz.
+6. RESULTS
+
+6.1. Baseline model
+We begin by presenting results for the baseline model
+discussed in Section 5. This model includes the bestfit ΛCDM model plus ten parameters to describe foregrounds. Foreground parameters include the amplitudes of the tSZ power, kSZ power, radio galaxy Poisson
+power, CIB Poisson power, and CIB 1- and 2-halo clustered power; two parameters to describe the frequency
+dependence of the CIB terms; the tSZ-CIB correlation;
+and the spectral index of radio galaxies. The amplitude
+of galactic cirrus is allowed to float within a strong prior.
+We fit the 88 SPT bandpowers to the model described
+above. There are 78 degrees of freedom (dof), since
+
+10
+
+C. L. Reichardt, S. Patil, et al.
+
+the ΛCDM parameters are set to their best-fit values,
+essentially fixed by the Planck data, leaving the ten
+foreground model parameters. Jointly fitting the foreground terms and the ΛCDM parameters with Planck
+data has little effect on derived foreground constraints.
+This baseline model fits the SPT data with a χ2 = 99.7,
+giving a PTE of 5.0% for our 78 degrees of freedom, and
+provides the simplest interpretation of the data.
+6.1.1. CIB constraints
+The CIB is detected at very high significance, and
+is especially important at 220 GHz. As highlighted in
+Table 2, adding the CIB terms to the model improve
+the fit quality by ∆χ2 ∼ 77, 000. With the flux cut
+of ∼6.4 mJy at 150 GHz in this work, the Poisson CIB
+power is larger than the radio galaxy power by a factor of seven at 150 GHz and a factor of 60 at 220 GHz.
+The radio galaxy power is larger than the CIB power at
+95 GHz.
+At 150 GHz and ` = 3000, we find that the Poisson
+p
+DSFG component has power D3000
+= 7.24 ± 0.63 µK2
+while the one- and two-halo DSFG clustering terms
+1−halo
+2−halo
+are D3000
+= 2.21 ± 0.88 µK2 and D3000
+=
+2
+1.82 ± 0.31 µK respectively. At 220 GHz, this scales
+p, 220 GHz
+1−halo, 220 GHz
+to D3000
+= 61.4 ± 9.0 µK2 , D3000
+=
+2−halo, 220 GHz
+32.4 ± 11.2 µK2 , and D3000
+= 27.5 ± 4.6 µK2 .
+The β in the modified black body functional form of
+ν β Bν (T ) rises from 1.48 ± 0.13 for the Poisson term to
+2.23 ± 0.18 for the clustered terms. Cast as effective
+spectral indices from 150 to 220 GHz, these values of
+β translate to spectral indices of 3.29 ± 0.13 for the
+Poisson power and 4.04 ± 0.18 for the clustered power.
+The constraints from the baseline model are close to
+both theoretical expectations and previous work (e.g.,
+Dunkley et al. 2011, G15). When considering a similar foreground model (except for the angular dependence of the tSZ-CIB correlation), G15 found Poisson
+power levels of 7.59 ± 0.69 µK2 and 63.4 ± 9.5 µK2 at
+150 and 220 GHz. Note that since G15 reported powers at the effective frequency bandcenters instead of 150
+and 220 GHz, to facilitate a comparison we have rescaled
+the reported numbers to 150 and 220 GHz using the median spectral index in this work. These two sets of constraints agree very closely (0.3 σ or 3-5%). It should
+be remembered that there is a large overlap between
+the underlying data, especially at 220 GHz where only
+the relative weighting of the data has changed. For the
+clustered terms, the G15 numbers are 1.6 ± 0.9 µK2 and
+1.7 ± 0.3 µK2 for the one- and two-halo terms. The
+agreement is still good: the one-halo term has increased
+by 0.7 σ while the two-halo term dropped by a smaller
+amount. The same trends continue at 220 GHz: the
+
+one-halo term increases by 0.5 σ while the two-halo term
+falls slightly. We note that the recovered CIB clustering
+power in G15 was slightly lower than previous measurements. Thus the shifts here move towards those earlier
+measurements. The inferred spectral indices of this work
+are also within 1 σ with the values in G15.
+6.1.2. Radio galaxy constraints
+Radio power is detected at high significance at 95 and
+150 GHz, with the addition of radio power to the model
+leading to a large improvement in the fit quality, namely
+∆χ2 = 5141 for two parameters. As in G15, the data
+prefer slightly less radio galaxy power than predicted by
+the De Zotti et al. (2005) model for a 6.4ṁJy flux cut
+at 150 GHz. The preferred radio power at ` = 3000 is
+r−150×150
+D3000
+= 1.01 ± 0.17 µK2 , about 25% lower than
+2
+the 1.28 µK predicted. The population spectral index
+for the radio power is constrained to be −0.76 ± 0.15.
+This is 1 σ lower than the median spectral index of -0.60
+for synchrotron-classified sources reported by Mocanu
+et al. (2013). This could be due to random chance, the
+150 GHz-only selection criteria for masking point sources
+in this work, or a tendency for the spectral index to
+flatten for the brightest 150 GHz radio sources, as argued
+by Mocanu et al. (2013).
+6.1.3. SZ power
+As shown in Figure 3, we detect both tSZ and kSZ
+tSZ
+power. We measure D3000
+= 3.42 ± 0.54 µK2 and
+kSZ
+2
+D3000 = 3.0 ± 1.0 µK for the tSZ and kSZ power respectively at ` = 3000 and 143 GHz.
+The tSZ (kSZ) power is detected at approximately 7
+(3) σ. While our fiducial results assume the Shaw tSZ
+template (Shaw et al. 2010) and CSF+patchy kSZ template (Z12, Shaw et al. 2012), the current data offer little
+information about the specific shape of the SZ spectra.
+The recovered SZ power levels for four different tSZ templates and three kSZ templates are reported in Table 3 no significant shifts are seen between the different templates considered. The tSZ power spectrum level is a
+probe of large-scale structure growth and the pressure
+profiles in galaxy clusters. The total kSZ power has
+contributions from the epoch of reionization and from
+the bulk flows of large-scale structure at later times;
+we discuss the implications of the kSZ measurement for
+reionization in §7.
+The joint analysis of the SPTpol and SPT-SZ surveys allows the first detection (at 3 σ) of kSZ power.
+The reported kSZ power in this work falls within the
+95% CL upper limits on kSZ power reported in previous works (e.g., Dunkley et al. (2013), G15). G15
+also report a central value when including a tSZ prior
+kSZ
+based on the bispectrum of D3000
+= 2.9±1.3 µK2 , which
+
+11
+
+7
+
+run a chain with ξ that is constant in `. This does very
+little to the inferred SZ power levels; the preferred values
+shift by 0.2 and 0.3 σ for the tSZ and kSZ respectively.
+For a constant ξ, the bandpowers in this work favor
+kSZ
+tSZ
+D3000
+= 3.5 ± 1.2 µK2 , and D3000
+= 3.30 ± 0.64 µK2 . This
+is somewhat less (1 σ) tSZ power than found by G15 in
+the equivalent case, and slightly more kSZ power (0.4 σ).
+The ξ constraint is ξ = 0.078±0.049. This is well within
+1 σ of past SPT constraints, ξ = 0.100+0.069
+−0.055 (G15). It is
+also within the assumed prior range [0, 0.2] of Dunkley
+et al. (2013).
+
+6
+
+DkSZ
+3000
+
+5
+4
+3
+2
+
+7. KSZ INTERPRETATION
+
+1
+0
+0
+
+1
+
+2
+
+3
+
+4
+
+5
+
+6
+
+DtSZ
+3000
+Figure 3. 2D posterior likelihood surface for the tSZ and
+kSZ power at 143 GHz at ` = 3000 in the baseline model
+including tSZ-CIB correlations. 1, 2, and 3 σ constraints are
+shown in shades of blue. The observed degeneracy is due to
+the correlation between the tSZ and CIB.
+
+agrees extremely well (although with 30% larger uncertainties) with the value in this work. If we add the same
+bispectrum-based tSZ prior to the current results, we
+kSZ
+find D3000
+= 2.8 ± 0.9 µK2 , which translates to a 3.1 σ
+detection of kSZ power.
+The joint analysis also significantly reduces the measurement uncertainties on the tSZ power. This tSZ
+measurement is consistent with (< 1 σ) earlier obsertSZ
+vations of the tSZ power scaled to 143 GHz: D3000
+=
++0.83
+2
+tSZ
+2
+4.38−1.04 µK (G15); D3000 = 4.20±1.37 µK (R12), and
+tSZ
+D3000
+= 3.9 ± 1.7 µK2 (Dunkley et al. 2013). With the
+same bispectrum-based prior, the preferred tSZ power
+tSZ
+in this work is D3000
+= 3.53 ± 0.48 µK2 .
+6.1.4. tSZ-CIB correlation
+We parameterize the tSZ-CIB correlation with a single parameter ξ that scales the Z12 template for the
+tSZ-CIB correlation as a function of `. An overdensity
+of dusty galaxies in galaxy clusters would result in a
+positive value of ξ. The tSZ-CIB correlation is partially
+degenerate with the tSZ and kSZ power, as illustrated in
+Figure 4. Increasing the correlation, ξ, slowly decreases
+the inferred tSZ power while quickly increasing the inferred kSZ power. We measure the tSZ-CIB correlation
+to be ξ = 0.076 ± 0.040 at ` = 3000. The data prefer
+positive tSZ-CIB correlation, ruling out ξ < 0 at the
+0.983 CL. For easier comparison to past works, we also
+
+The most significant improvement in the current study
+compared to previous works is to the kSZ constraint,
+with the transition from upper limits to a 3 σ detection
+of power. In this section, we look at what can be learned
+about the epoch of reionization from the kSZ measurement. We do this using the expression for the patchy
+kSZ power as a function of the timing and duration of
+reionization (among other cosmological parameters) presented by Calabrese et al. (2014).
+7.1. Patchy kSZ power
+To interpret the measured kSZ power in light of the
+epoch of reionization, we must divide up the observed
+kSZ power between the homogeneous and patchy kSZ
+signals. As the current data can not separate the homogeneous kSZ and patchy kSZ power, we consider the
+inferred patchy kSZ power under three scenarios for the
+homogeneous kSZ power. The estimate for the homogeneous kSZ power at ` = 3000 is taken from Eqn. 5 in
+Calabrese et al. (2014), who in turn base it on the homogeneous kSZ simulations run by Shaw et al. (2012).
+For the fiducial cosmology in this work, this estimate
+h−kSZ
+translates to D3000
+= 1.65 µK2 . We also include high
+and low estimates of the homogeneous kSZ power, by
+rescaling the best guess by factors of 1.25 or 0.75 respectively. For comparison, Shaw et al. (2012) find that
+a different treatment of Helium reionization can scale
+the homogeneous kSZ signal by ∼1.22 at ` = 3000.
+In all three cases, we take the shape of the homogeneous kSZ power from the CSF model in Shaw et al.
+(2012). The angular dependence will change slightly for
+different models, for instance, different Helium ionization scenarios change the relative power between ` =
+3000 and 10,000 by of order 3%. However, the current
+data are insensitive to such small shape variations.
+With these assumptions about the homogeneous kSZ
+power in place, we find 95% CL upper limits on the
+p−kSZ
+patchy kSZ power of D3000
+< 2.9 (3.4/2.5) µK2
+for the best estimate of the homogeneous kSZ power
+
+12
+
+C. L. Reichardt, S. Patil, et al.
+Table 3. SZ constraints
+tSZ Template
+
+kSZ Template
+
+tSZ
+D3000
+(µK2 )
+
+kSZ
+D3000
+(µK2 )
+
+ξ
+
+Shaw
+Shaw
+Shaw
+Battaglia
+Bhattacharya
+Sehgal
+
+CSF+patchy
+CSF
+Patchy
+CSF+patchy
+CSF+patchy
+CSF+patchy
+
+3.42 ± 0.54
+3.39 ± 0.58
+3.45 ± 0.56
+3.74 ± 0.54
+3.46 ± 0.54
+3.59 ± 0.54
+
+3.0 ± 1.0
+3.1 ± 1.3
+3.5 ± 1.2
+2.4 ± 1.0
+3.0 ± 1.0
+2.8 ± 1.0
+
+0.076 ± 0.040
+0.077 ± 0.047
+0.086 ± 0.050
+0.051 ± 0.033
+0.071 ± 0.036
+0.064 ± 0.039
+
+Shaw w. Bispectrum
+
+CSF+patchy
+
+3.53 ± 0.48
+
+2.8 ± 0.9
+
+0.069 ± 0.036
+
+Note— Measured tSZ power, kSZ power and tSZ-CIB correlation at ` = 3000 (and 143 GHz in the case of the tSZ) for
+different tSZ and kSZ models. The results are robust to the assumed templates. The first two columns indicate which of three
+templates has been used for the tSZ and kSZ terms. In the case of the kSZ, the three templates are the CSF homogeneous kSZ
+template (Shaw et al. 2012), the patchy kSZ template (Z12), or the sum of both. In the case of the tSZ, the three templates
+are taken from the Battaglia (Battaglia et al. 2013b), Shaw (Shaw et al. 2010), Bhattacharya (Bhattacharya et al. 2012), or
+Sehgal (Sehgal et al. 2010) simulations. The last row shows the results when a prior on the tSZ power based on the bispectrum
+measurement by Crawford et al. (2014) is added.
+
+7
+6
+
+kSZ
+
+tSZ
+
+5
+
+D3000
+
+4
+3
+2
+1
+0
+0.0
+
+0.1
+
+0.2
+
+0.3
+
+0.0
+
+0.1
+
+0.2
+
+0.3
+
+tSZ-CIB correlation
+Figure 4. The 2D posterior likelihood of the tSZ-CIB correlation and kSZ (Left panel ) or 143 GHz tSZ power (Right panel ).
+The filled contours show the 1, 2, and 3 σ constraints. The data strongly prefer a positive tSZ-CIB correlation, consistent with
+DSFGs being over-dense in galaxy clusters.
+
+(low/high homogeneous kSZ estimates). These limits
+on the patchy kSZ power are significantly better than
+the spectra-only limit of < 4.4 µK2 reported by G15,
+and similar to what was achieved by the addition of the
+bispectrum prior in G15. If we add the same bispectrum prior to these chains while using the best-estimate
+of the homogeneous kSZ, the patchy kSZ upper limit
+p−kSZ
+power reduces by another 10% to D3000
+< 2.5 µK2 .
+The 68% confidence interval for the patchy kSZ power
+p−kSZ
++1.0
+with the bispectrum prior is D3000
+= 1.1−0.7
+µK2 .
+
+7.2. Ionization history and the duration of reionization
+We can transform constraints on the inferred patchy
+kSZ power, under these assumptions for the homogeneous kSZ power, into constraints on the duration of
+EoR using the expression for patchy kSZ power in Eqn.
+6 of Calabrese et al. (2014):
+
+p−kSZ
+D3000
+= 2.03
+
+
+
+1 + zre
+11
+
+
+
+
+− 0.12
+
+∆zre
+1.05
+
+0.51
+
+µK2 ,
+(6)
+
+13
+
+8. CONCLUSIONS
+
+We have presented improved measurements of the 95,
+150 and 220 GHz auto- and cross-spectra, created by
+
+1.0
+
+0.8
+
+Posterior
+
+which is based on the models of Battaglia et al. (2013b).
+Here zre is the redshift when the ionization fraction is
+50%, and ∆zre is the duration of the epoch of reionization (EoR), defined as the period between 25% and 75%
+ionization fractions. We also have a choice of prior. For
+most of this work, results are quoted with a prior that is
+p−kSZ
+uniform in power or D3000
+. However in an upper limit
+p−kSZ
+regime given the relationship between ∆zre and D3000
+,
+p−kSZ
+a flat prior on D3000 preferentially favors ∆zre near
+zero. We thus choose to report ∆zre constraints under
+a flat prior on ∆zre instead. With these assumptions
+about the homogeneous kSZ power and this prior on
+∆zre in place, we find 95% CL upper limits on the duration of the EoR of ∆zre < 5.4 (6.9 / 4.3) for the best estimate of the homogeneous kSZ power (low/high homogeneous kSZ estimates). With the bispectrum-based prior
+on the tSZ power added, the limit becomes ∆zre < 4.1.
++1.6
+The 68% confidence interval is ∆zre = 1.1−0.7
+. These
+limits agree with the recent picture from a variety of
+observations arguing that reionization happened fairly
+quickly. Figure 5 shows the likelihoods for ∆zre of reionization.
+The limits quoted above on the duration of reionization are significantly better than the limits previously
+set by G15. G15 found an upper limit on the duration of reionization of ∆zre < 5.4, when including the
+bispectrum prior. One should be cautious, however,
+in directly comparing the numbers due to four model
+changes. First, G15 defined the duration from 20% 99% ionization fraction, instead of the 25% to 75% in
+this work. Second, G15 used a higher value for the optical depth from WMAP, which will drive the duration
+down by roughly a factor of 1.7 for a fixed level of patchy
+kSZ power. Third, G15 used a uniform prior on the
+kSZ power instead of a uniform prior on ∆zre . Finally,
+the fiducial homogeneous kSZ model in G15 predicted
+more power, approximately the high case in this work.
+Given the degeneracy between the patch and homogeneous kSZ spectra, more homogeneous kSZ power translates to less patchy kSZ power and a shorter duration.
+If we re-analyze the G15 bandpowers with the updated
+calibration, uniform prior in ∆zre , Planck optical depth,
+homogeous kSZ model and definition of duration in this
+work, we find the directly comparable 95% CL upper
+limit with the bispectrum prior on the duration to be
+∆zre < 8.5. The directly comparable limit with the bispectrum information in this work of ∆zre < 4.1 is nearly
+a factor of two lower.
+
+0.6
+
+0.4
+
+0.2
+0.0
+0
+
+2
+
+4
+
+6
+
+8
+
+10
+
+zre
+Figure 5. 1D likelihood curves for ∆z of reionization with
+the three assumptions about the homogeneous kSZ power
+used in this work. The solid blue line is for the expected
+amount of homogeneous kSZ power, while the dotted and
+dashed lines reflect the cases where the homogeneous kSZ
+power is scaled by ×0.75 or 1.25 respectively. With the best
+estimate of the homogeneous kSZ power, the 95% CL upper
+limit on the duration of reionization is ∆z < 5.4. Adding the
+tSZ bispectrum prior from Crawford et al. (2014) strengthens
+this limit to ∆zre < 4.1, as shown by the solid black line.
+
+combining data from the 2500 deg2 SPT-SZ survey with
+the low-noise 500 deg2 SPTpol survey. The combined
+data set substantially reduces the bandpower uncertainties over the last SPT release, especially in frequency
+combinations including 95 GHz data. These bandpowers
+represent the most sensitive measurements of arcminutescale anisotropy near the peak of the CMB blackbody
+spectrum.
+The signal at these frequencies and angular scales is
+composed of the primary CMB temperature anisotropy,
+DSFGs, radio galaxies, and the kinematic and thermal
+SZ effects. We fit the data to a 10-parameter model for
+the DSFGs, radio galaxies and SZ effects (while fixing
+the primary CMB power spectrum to the best-fit values). For the first time, we find a 3 σ detection of the
+kSZ
+kSZ power, with a level of D3000
+= 3.0 ± 1.0 µK2 . The
+observed kSZ power can be deconstructed as the sum
+of the homogeneous and patchy kSZ terms, which are
+highly degenerate at current levels of sensitivity. However, using estimates of the homogeneous kSZ power
+from simulations, we calculate the residual patchy kSZ
+power and thus limits on the duration of reionization.
+We find a 95% CL upper limit on the duration of
+
+14
+
+C. L. Reichardt, S. Patil, et al.
+
+reionization of ∆zre < 5.4. Adding the tSZ bispectrum prior from Crawford et al. (2014) strengthens this
+limit to ∆zre < 4.1. The 68% confidence interval is
+∆zre = 1.1+1.6
+−0.7 . This supports the recent picture emerging from a number of sources that reionization happened
+at late times and fairly quickly.
+The SPT is currently being used to conduct a fiveyear survey of 1500 deg2 with the SPT-3G camera. The
+final survey temperature noise levels are expected to be
+3, 2, and 9 µK − arcmin for 95, 150, and 220 GHz respectively (Bender et al. 2018), which will lead to substantially smaller uncertainties on the power spectrum
+in all six frequency combinations. Further in the future, the Simons Observatory and CMB-S4 will extend
+these measurements to larger sky areas, lower noise levels and more frequency bands (Ade et al. 2019; CMB-S4
+Collaboration et al. 2016). Future CMB measurements
+should tightly constrain the reionization history of the
+Universe.
+The South Pole Telescope program is supported by
+the National Science Foundation through grants PLR1248097 and OPP-1852617. Partial support is also
+provided by the NSF Physics Frontier Center grant
+PHY-0114422 to the Kavli Institute of Cosmological
+Physics at the University of Chicago, the Kavli Foundation, and the Gordon and Betty Moore Foundation through grant GBMF#947 to the University of
+Chicago. This work is also supported by the U.S. Department of Energy. SP acknowledges support from
+the Australian Research Council’s Discovery Projects
+scheme (DP150103208). CR acknowledges support from
+Australian Research Council Centre of Excellence for
+
+All Sky Astrophysics in 3 Dimensions (ASTRO 3D),
+through project number CE170100013. J.W.H. is supported by the National Science Foundation under Award
+No. AST-1402161. W.L.K.W is supported in part by
+the Kavli Institute for Cosmological Physics at the University of Chicago through grant NSF PHY-1125897
+and an endowment from the Kavli Foundation and its
+founder Fred Kavli. B.B. is supported by the Fermi
+Research Alliance LLC under contract no. De-AC0207CH11359 with the U.S. Department of Energy. The
+Cardiff authors acknowledge support from the UK Science and Technologies Facilities Council (STFC). The
+CU Boulder group acknowledges support from NSF
+AST-0956135. The McGill authors acknowledge funding from the Natural Sciences and Engineering Research
+Council of Canada, Canadian Institute for Advanced
+Research, and the Fonds de Recherche du Québec – Nature et technologies. The UCLA authors acknowledge
+support from NSF AST-1716965 and CSSI-1835865.
+AAS acknowledges support from NSF AST-1814719.
+Argonne National Lab, a U.S. Department of Energy
+Office of Science Laboratory, is operated by UChicago
+Argonne LLC under contract no. DE-AC02-06CH11357.
+We also acknowledge support from the Argonne Center
+for Nanoscale Materials. This research used resources
+of the National Energy Research Scientific Computing
+Center (NERSC), a U.S. Department of Energy Office of
+Science User Facility operated under Contract No. DEAC02-05CH11231. The data analysis pipeline also uses
+the scientific python stack (Hunter 2007; Jones et al.
+2001; van der Walt et al. 2011) and the HDF5 file format (The HDF Group 1997).
+
+REFERENCES
+Ade, P., Aguirre, J., Ahmed, Z., et al. 2019, JCAP, 2019,
+056, doi: 10.1088/1475-7516/2019/02/056
+Austermann, J. E., Aird, K. A., Beall, J. A., et al. 2012, in
+Society of Photo-Optical Instrumentation Engineers
+(SPIE) Conference Series, Vol. 8452,
+doi: 10.1117/12.927286
+Aylor, K., Hou, Z., Knox, L., et al. 2017, ApJ, 850, 101,
+doi: 10.3847/1538-4357/aa947b
+Battaglia, N., Natarajan, A., Trac, H., Cen, R., & Loeb, A.
+2013a, ApJ, 776, 83, doi: 10.1088/0004-637X/776/2/83
+Battaglia, N., Trac, H., Cen, R., & Loeb, A. 2013b, ApJ,
+776, 81, doi: 10.1088/0004-637X/776/2/81
+
+Bender, A. N., Ade, P. A. R., Ahmed, Z., et al. 2018, in
+Society of Photo-Optical Instrumentation Engineers
+(SPIE) Conference Series, Vol. 10708, Millimeter,
+Submillimeter, and Far-Infrared Detectors and
+Instrumentation for Astronomy IX, 1070803,
+doi: 10.1117/12.2312426
+Bhattacharya, S., Nagai, D., Shaw, L., Crawford, T., &
+Holder, G. P. 2012, ApJ, 760, 5,
+doi: 10.1088/0004-637X/760/1/5
+Calabrese, E., Hložek, R., Battaglia, N., et al. 2014, JCAP,
+8, 10, doi: 10.1088/1475-7516/2014/08/010
+Carlstrom, J. E., Ade, P. A. R., Aird, K. A., et al. 2011,
+PASP, 123, 568, doi: 10.1086/659879
+Casey, C. M., Narayanan, D., & Cooray, A. 2014, PhR,
+541, 45, doi: 10.1016/j.physrep.2014.02.009
+
+15
+CMB-S4 Collaboration, Abazajian, K. N., Adshead, P.,
+et al. 2016, ArXiv e-prints.
+https://arxiv.org/abs/1610.02743
+Crawford, T. M., Schaffer, K. K., Bhattacharya, S., et al.
+2014, ApJ, 784, 143, doi: 10.1088/0004-637X/784/2/143
+Das, S., Marriage, T. A., Ade, P. A. R., et al. 2011, ApJ,
+729, 62, doi: 10.1088/0004-637X/729/1/62
+Das, S., Louis, T., Nolta, M. R., et al. 2014, JCAP, 4, 14,
+doi: 10.1088/1475-7516/2014/04/014
+De Zotti, G., Massardi, M., Negrello, M., & Wall, J. 2010,
+A&A Rv, 18, 1, doi: 10.1007/s00159-009-0026-0
+De Zotti, G., Ricci, R., Mesa, D., et al. 2005, A&A, 431,
+893, doi: 10.1051/0004-6361:20042108
+Dodelson, S., & Schneider, M. D. 2013, PhRvD, 88, 063537,
+doi: 10.1103/PhysRevD.88.063537
+Dunkley, J., Hlozek, R., Sievers, J., et al. 2011, ApJ, 739,
+52, doi: 10.1088/0004-637X/739/1/52
+Dunkley, J., Calabrese, E., Sievers, J., et al. 2013, JCAP, 7,
+25, doi: 10.1088/1475-7516/2013/07/025
+George, E. M., Reichardt, C. L., Aird, K. A., et al. 2015,
+ApJ, 799, 177, doi: 10.1088/0004-637X/799/2/177
+Gruzinov, A., & Hu, W. 1998, ApJ, 508, 435,
+doi: 10.1086/306432
+Henning, J. W., Ade, P., Aird, K. A., et al. 2012, in Society
+of Photo-Optical Instrumentation Engineers (SPIE)
+Conference Series, Vol. 8452, doi: 10.1117/12.927172
+Henning, J. W., Sayre, J. T., Reichardt, C. L., et al. 2018,
+ApJ, 852, 97, doi: 10.3847/1538-4357/aa9ff4
+Hivon, E., Górski, K. M., Netterfield, C. B., et al. 2002,
+ApJ, 567, 2. https://arxiv.org/abs/astro-ph/0105302
+Hou, Z., Aylor, K., Benson, B. A., et al. 2018, ApJ, 853, 3,
+doi: 10.3847/1538-4357/aaa3ef
+Hunter, J. D. 2007, Computing In Science & Engineering,
+9, 90
+Jones, E., Oliphant, T., Peterson, P., et al. 2001, SciPy:
+Open source scientific tools for Python.
+http://www.scipy.org/
+Knox, L., Scoccimarro, R., & Dodelson, S. 1998, Physical
+Review Letters, 81, 2004,
+doi: 10.1103/PhysRevLett.81.2004
+Komatsu, E., & Seljak, U. 2002, MNRAS, 336, 1256
+Lagache, G., Puget, J.-L., & Dole, H. 2005, ARA&A, 43,
+727, doi: 10.1146/annurev.astro.43.072103.150606
+Lewis, A., & Bridle, S. 2002, PhRvD, 66, 103511
+Lueker, M., Reichardt, C. L., Schaffer, K. K., et al. 2010,
+ApJ, 719, 1045, doi: 10.1088/0004-637X/719/2/1045
+Millea, M., Doré, O., Dudley, J., et al. 2012, ApJ, 746, 4,
+doi: 10.1088/0004-637X/746/1/4
+Mocanu, L. M., Crawford, T. M., Vieira, J. D., et al. 2013,
+ApJ, 779, 61, doi: 10.1088/0004-637X/779/1/61
+
+Mocanu, L. M., Crawford, T. M., Aylor, K., et al. 2019,
+JCAP, 2019, 038, doi: 10.1088/1475-7516/2019/07/038
+Padin, S., Staniszewski, Z., Keisler, R., et al. 2008, Appl.
+Opt., 47, 4418
+Planck Collaboration, Ade, P. A. R., Aghanim, N., et al.
+2011, A&A, 536, A18, doi: 10.1051/0004-6361/201116461
+—. 2014, A&A, 571, A21,
+doi: 10.1051/0004-6361/201321522
+Planck Collaboration, Aghanim, N., Arnaud, M., et al.
+2016, A&A, 594, A22, doi: 10.1051/0004-6361/201525826
+Polenta, G., Marinucci, D., Balbi, A., et al. 2005, Journal of
+Cosmology and Astro-Particle Physics, 11, 1,
+doi: 10.1088/1475-7516/2005/11/001
+Reichardt, C. L., Shaw, L., Zahn, O., et al. 2012, ApJ, 755,
+70, doi: 10.1088/0004-637X/755/1/70
+Ruhl, J., Ade, P. A. R., Carlstrom, J. E., et al. 2004, in
+Proc. SPIE, Vol. 5498, Millimeter and Submillimeter
+Detectors for Astronomy II, ed. J. Zmuidzinas, W. S.
+Holland, & S. Withington (Bellingham: SPIE Optical
+Engineering Press), 11–29, doi: 10.1117/12.552473
+Sayre, J. T., Ade, P., Aird, K. A., et al. 2012, in Society of
+Photo-Optical Instrumentation Engineers (SPIE)
+Conference Series, Vol. 8452, doi: 10.1117/12.927035
+Sehgal, N., Bode, P., Das, S., et al. 2010, ApJ, 709, 920,
+doi: 10.1088/0004-637X/709/2/920
+Shang, C., Haiman, Z., Knox, L., & Oh, S. P. 2012,
+MNRAS, 421, 2832,
+doi: 10.1111/j.1365-2966.2012.20510.x
+Shaw, L. D., Nagai, D., Bhattacharya, S., & Lau, E. T.
+2010, ApJ, 725, 1452,
+doi: 10.1088/0004-637X/725/2/1452
+Shaw, L. D., Rudd, D. H., & Nagai, D. 2012, ApJ, 756, 15,
+doi: 10.1088/0004-637X/756/1/15
+Shirokoff, E., Benson, B. A., Bleem, L. E., et al. 2009,
+IEEE Transactions on Applied Superconductivity, 19,
+517, doi: 10.1109/TASC.2009.2018229
+Shirokoff, E., Reichardt, C. L., Shaw, L., et al. 2011, ApJ,
+736, 61, doi: 10.1088/0004-637X/736/1/61
+Story, K. T., Reichardt, C. L., Hou, Z., et al. 2013, ApJ,
+779, 86, doi: 10.1088/0004-637X/779/1/86
+The HDF Group. 1997, Hierarchical Data Format, version 5
+Tristram, M., Macı́as-Pérez, J. F., Renault, C., & Santos,
+D. 2005, MNRAS, 358, 833,
+doi: 10.1111/j.1365-2966.2005.08760.x
+van der Walt, S., Colbert, S., & Varoquaux, G. 2011,
+Computing in Science Engineering, 13, 22,
+doi: 10.1109/MCSE.2011.37
+Viero, M. P., Wang, L., Zemcov, M., et al. 2013, ApJ, 772,
+77, doi: 10.1088/0004-637X/772/1/77
+
+16
+
+C. L. Reichardt, S. Patil, et al.
+
+Zahn, O., Reichardt, C. L., Shaw, L., et al. 2012, ApJ, 756,
+65, doi: 10.1088/0004-637X/756/1/65
+
+

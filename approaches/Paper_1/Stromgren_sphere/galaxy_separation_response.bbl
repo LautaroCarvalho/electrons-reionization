@@ -1,0 +1,79 @@
+\begin{thebibliography}{8}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Chakraborty and Choudhury(2025)]{Chakraborty2025}
+Anirban Chakraborty and Tirthankar~Roy Choudhury.
+\newblock {Reionization and its sources}.
+\newblock \emph{arXiv:2502.12004v1 (preprint)}, 2025.
+\newblock File: \texttt{Chakraborty2025\_arXiv2502.12004v1.pdf}.
+
+\bibitem[Furlanetto et~al.(2004)Furlanetto, Zaldarriaga, and
+  Hernquist]{Furlanetto2004}
+Steven Furlanetto, Matias Zaldarriaga, and Lars Hernquist.
+\newblock {The Growth of HII Regions During Reionization}.
+\newblock \emph{Astrophys.J. 613 (2004) 1-15}, 2004.
+\newblock \doi{10.1086/423025}.
+\newblock File: \texttt{Furlanetto2004\_arXiv\_astro-ph\_0403697v1.pdf}.
+
+\bibitem[Kitayama et~al.(2004)Kitayama, Yoshida, Susa, and
+  Umemura]{Kitayama2004}
+T.~Kitayama, N.~Yoshida, H.~Susa, and M.~Umemura.
+\newblock {The Structure and Evolution of Early Cosmological HII Regions}.
+\newblock \emph{Astrophys.J. 613 (2004) 631-645}, 2004.
+\newblock \doi{10.1086/423313}.
+\newblock File: \texttt{Kitayama2004\_arXiv\_astro-ph\_0406280v1.pdf}.
+
+\bibitem[Llerena et~al.(2025)Llerena, Pentericci, Napolitano, Mascia, Amor\'in,
+  Calabr\`o, Castellano, Cleri, Giavalisco, Grogin, Hathi, Hirschmann,
+  Koekemoer, Nanayakkara, Pacucci, Shen, Wilkins, Yoon, Yung, Bhatawdekar,
+  Lucas, Wang, Haro, Bagley, Finkelstein, Kartaltepe, Merlin, Papovich,
+  Pirzkal, and Santini]{Llerena2024}
+M.~Llerena, L.~Pentericci, L.~Napolitano, S.~Mascia, R.~Amor\'in, A.~Calabr\`o,
+  M.~Castellano, N.~J. Cleri, M.~Giavalisco, N.~A. Grogin, N.~P. Hathi,
+  M.~Hirschmann, A.~M. Koekemoer, T.~Nanayakkara, F.~Pacucci, L.~Shen, S.~M.
+  Wilkins, I.~Yoon, L.~Y.~A. Yung, R.~Bhatawdekar, R.~A. Lucas, X.~Wang,
+  P.~Arrabal Haro, M.~B. Bagley, S.~L. Finkelstein, J.~S. Kartaltepe,
+  E.~Merlin, C.~Papovich, N.~Pirzkal, and P.~Santini.
+\newblock {The ionizing photon production efficiency of star-forming galaxies
+  at $z\sim4$--10}.
+\newblock \emph{A\&A 698, A302 (2025)}, 2025.
+\newblock File: \texttt{Llerena2024\_arXiv2412.01358v1.pdf}.
+
+\bibitem[Madau and Dickinson(2014)]{MadauDickinson2014}
+Piero Madau and Mark Dickinson.
+\newblock {Cosmic Star-Formation History}.
+\newblock \emph{Ann.Rev.Astron.Astrophys. 52 (2014) 415-486}, 2014.
+\newblock File: \texttt{MadauDickinson2014\_arXiv1403.0007v3.pdf}.
+
+\bibitem[{Planck Collaboration}(2020)]{Planck2018VI}
+{Planck Collaboration}.
+\newblock {Planck 2018 results. VI. Cosmological parameters}.
+\newblock \emph{A\&A 641, A6 (2020)}, 2020.
+\newblock \doi{10.1051/0004-6361/201833910}.
+\newblock File: \texttt{Planck2018VI\_arXiv1807.06209v4.pdf}.
+
+\bibitem[Robertson et~al.(2015)Robertson, Ellis, Furlanetto, and
+  Dunlop]{Robertson2015}
+Brant~E. Robertson, Richard~S. Ellis, Steven~R. Furlanetto, and James~S.
+  Dunlop.
+\newblock {Cosmic Reionization and Early Star-forming Galaxies: A Joint
+  Analysis of New Constraints from Planck and the Hubble Space Telescope}.
+\newblock \emph{ApJL 802, L19 (2015)}, 2015.
+\newblock \doi{10.1088/2041-8205/802/2/L19}.
+\newblock File: \texttt{Robertson2015\_arXiv1502.02024v1.pdf}.
+
+\bibitem[Umeda et~al.(2023)Umeda, Ouchi, Nakajima, Harikane, Ono, Xu, Isobe,
+  and Zhang]{Umeda2023}
+Hiroya Umeda, Masami Ouchi, Kimihiko Nakajima, Yuichi Harikane, Yoshiaki Ono,
+  Yi~Xu, Yuki Isobe, and Yechi Zhang.
+\newblock {JWST Measurements of Neutral Hydrogen Fractions and Ionized Bubble
+  Sizes at $z=7-12$ Obtained with Ly$\alpha$ Damping Wing Absorptions in 27
+  Bright Continuum Galaxies}.
+\newblock \emph{arXiv:2306.00487v3 (preprint)}, 2023.
+\newblock File: \texttt{Umeda2023\_arXiv2306.00487v3.pdf}.
+
+\end{thebibliography}

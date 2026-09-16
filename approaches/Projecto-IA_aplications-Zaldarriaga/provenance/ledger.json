@@ -1,0 +1,3619 @@
+{
+ "bib": {
+  "Aharonian2019": {
+   "note": "",
+   "title": "Massive stars as major factories of Galactic cosmic rays",
+   "url": "https://arxiv.org/abs/1804.02331"
+  },
+  "Aharonian2024": {
+   "note": "IN TREE (added 2026-09-15). VERIFIED from the PDF. Injected electron spectrum parameterised as $dN/dEpropto E^-Gamma_eexp(-E/E_rm cut)$ --- EXACTLY this project's $alpha_e$ convention. They fix $Gamma_e=2$, justified because synchrotron from electrons of index $Gamma_e$ gives a photon index $(Gamma_e+1)/2$, and the measured X-ray photon index at both outer jet bases is $simeq1.5$. $E_rm cut>200$~T",
+   "title": "Acceleration and transport of relativistic electrons in the jets of the microquasar SS~433",
+   "url": "https://arxiv.org/abs/2401.16019"
+  },
+  "Asthana2024": {
+   "note": "VERIFIED from the abstract page. QSO-assisted model: AGN supply 17% of the total hydrogen-ionizing emissivity with 1% of haloes hosting AGN; a QSO-only model needs 10% of haloes hosting AGN. ``A modest AGN contribution to reionization aligns with the Lyman-$alpha$ forest data.'' Lower end of the AGN box. AGREES with citeJiang2025: both place AGN in the 17--33% minority band. A widely-circulated ``",
+   "title": "The impact of faint AGN discovered by JWST on reionization",
+   "url": "https://arxiv.org/abs/2409.15453"
+  },
+  "Astropy2022": {
+   "note": "",
+   "title": "The Astropy Project: Sustaining and Growing a Community-oriented Open-source Project and the Latest Major Release (v5.0) of the Core Package",
+   "url": "https://arxiv.org/abs/2206.14220"
+  },
+  "Austin2025": {
+   "note": "",
+   "title": "Resolving the ionizing photon budget crisis with JWST/NIRCam",
+   "url": "https://arxiv.org/abs/2512.10839"
+  },
+  "Bera2023": {
+   "note": "",
+   "title": "Impact of cosmic rays on the global 21-cm signal during cosmic dawn",
+   "url": "https://arxiv.org/abs/2202.12308"
+  },
+  "Bevins2022": {
+   "note": "",
+   "title": "Astrophysical constraints from the SARAS 3 non-detection of the cosmic dawn sky-averaged 21-cm signal",
+   "url": "https://arxiv.org/abs/2212.00464"
+  },
+  "Blumenthal1970": {
+   "note": "",
+   "title": "Bremsstrahlung, Synchrotron Radiation, and Compton Scattering of High-Energy Electrons Traversing Dilute Gases",
+   "url": "https://ui.adsabs.harvard.edu/abs/1970RvMP...42..237B"
+  },
+  "Bosman2022": {
+   "note": "",
+   "title": "Hydrogen reionisation ends by $z = 5.3$: Lyman-$alpha$ optical depth measured by the XQR-30 sample",
+   "url": "https://arxiv.org/abs/2108.03699"
+  },
+  "BosmanDavies2024": {
+   "note": "IN TREE. Lyman-$alpha$ forest constraint on $langle f_rm escxi_rm ionrangle$ at $z=5$. For $xi_rm ionsim10^25.3$ -- essentially the value adopted in this project -- it requires a population-averaged $f_rm esc=9.5^+6.0_-3.5%$; for $xi_rm ionsim10^25.5$, $6.0^+3.5_-2.2%$. Volume not confirmed from the copy in papers/",
+   "title": "A measurement of the escaping ionising efficiency of galaxies at redshift 5",
+   "url": "https://arxiv.org/abs/2409.08315"
+  },
+  "Bromm2013": {
+   "note": "",
+   "title": "Formation of the first stars",
+   "url": "https://arxiv.org/abs/1305.5178"
+  },
+  "Bykov2017": {
+   "note": "",
+   "title": "Pulsar wind nebulae with bow shocks: non-thermal radiation and cosmic ray leptons",
+   "url": "https://arxiv.org/abs/1705.00950"
+  },
+  "CaprioliSpitkovsky2014": {
+   "note": "IN TREE. Hybrid simulations: 10--20% of the bulk kinetic energy goes into non-thermal protons at parallel and quasi-parallel strong shocks, dropping to ZERO for quasi-perpendicular ones. About 10% inferred for Tycho (Morlino & Caprioli 2012). The source for $epsilon_rm CR$",
+   "title": "Simulations of Ion Acceleration at Non-relativistic Shocks. I. Acceleration Efficiency",
+   "url": "https://doi.org/10.1088/0004-637X/783/2/91"
+  },
+  "Chabrier2003": {
+   "note": "",
+   "title": "Galactic Stellar and Substellar Initial Mass Function",
+   "url": "https://doi.org/10.1086/376392"
+  },
+  "Chemerynska2026": {
+   "note": "IN TREE. Uses the same $K_rm UV=1.15times10^-28$ (Salpeter) as citeMadauDickinson2014. Reaches $M_rm UV=-13$ via lensing: at $z=9.5$--$10.5$, $logrho_rm UV=25.20pm0.44$ to $M_rm UV=-16$ and $25.47pm0.44$ to $-13$, against $25.12^+0.07_-0.08$ to $-17$ in citeDonnan2024",
+   "title": "The first GLIMPSE of the faint galaxy population at Cosmic Dawn with JWST: the evolution of the ultraviolet luminosity function across $zsim9-15$",
+   "url": "https://arxiv.org/abs/2509.24881"
+  },
+  "Donnan2024": {
+   "note": "IN TREE. Table 3, $z=10$ row: $logrho_rm UV=25.12^+0.07_-0.08$, integrated down to $M_rm UV=-17$. They convert with $K_rm UV=1.15times10^-28$ (Salpeter), the same value used here",
+   "title": "JWST PRIMER: A new multi-field determination of the evolving galaxy UV luminosity function",
+   "url": "https://arxiv.org/abs/2403.03171"
+  },
+  "Ferrara2025fesc": {
+   "note": "IN TREE. Attenuation-Free Model: outflows switch on above sSFR$^ast$; eqs.~(3)--(5) with $f_0=0.007$, $f_1=0.643$, sSFR$^ast=35.4$ Gyr$^-1$ give a globally averaged $f_rm esc$ rising from 0.007 at $z=0$ to 0.6 at $z=20$. Reconstructing their model at $z=10$ gives $f_rm escsimeq0.16$. Journal reference not confirmed from the copy in papers/",
+   "title": "Redshift evolution of Lyman continuum escape fraction after JWST",
+   "url": "https://arxiv.org/abs/2505.10619"
+  },
+  "Fixsen2009": {
+   "note": "",
+   "title": "The Temperature of the Cosmic Microwave Background",
+   "url": "https://doi.org/10.1088/0004-637X/707/2/916"
+  },
+  "Furlanetto2010": {
+   "note": "",
+   "title": "Secondary ionization and heating by fast electrons",
+   "url": "https://arxiv.org/abs/0910.4410"
+  },
+  "Gaikwad2020": {
+   "note": "",
+   "title": "Probing the thermal state of the intergalactic medium at $z > 5$ with the transmission spikes in high-resolution Ly$alpha$ forest spectra",
+   "url": "https://arxiv.org/abs/2001.10018"
+  },
+  "GesseyJones2023": {
+   "note": "",
+   "title": "Signatures of cosmic ray heating in 21-cm observables",
+   "url": "https://arxiv.org/abs/2304.07201"
+  },
+  "Ghara2025": {
+   "note": "",
+   "title": "Constraints on the state of the intergalactic medium at $z sim 8-10$ using redshifted 21-cm observations with LOFAR",
+   "url": "https://arxiv.org/abs/2505.00373"
+  },
+  "Gladstone2009": {
+   "note": "IN TREE (added 2026-09-14). VERIFIED from the PDF, Table~6 and S4.3: a broken power law is preferred over a single power law at $>98%$ in 11 of 12 ULXs, with break energies $3.5$--$7$ keV and steepening $DeltaGammasimeq1$--$2$; $Gamma_1simeq1.38$--$3.1$ (typical $2.1$), single-PO fits $1.6<Gamma<3.3$ (S4.1). Preferred physical model (S4.5.1, Table~8): a COOL, OPTICALLY THICK corona $kT_esim1$--$3$",
+   "title": "The ultraluminous state",
+   "url": "https://arxiv.org/abs/0905.4076"
+  },
+  "Gould1972": {
+   "note": "",
+   "title": "Energy loss of fast electrons and positrons in a plasma",
+   "url": "https://ui.adsabs.harvard.edu/abs/1972Phy....60..145G"
+  },
+  "Graziani2018": {
+   "note": "VERIFIED from the article page. Purpose-built reionization-era quasar ionizing SED: a power law $S(nu)proptonu^-1.5$ over 13.6 eV--3 keV (soft X-ray band 200 eV--3 keV). Independently corroborates citeTelfer2002's radio-quiet $alpha_rm EUV=1.57pm0.17$. The source for the AGN photon channel. Their own footnote 7 flags that a single power law is often inappropriate for sources spanning UV to X-ray -",
+   "title": "X-ray ionization of the intergalactic medium by quasars",
+   "url": "https://academic.oup.com/mnras/article/479/4/4320/5033410"
+  },
+  "HERA2023": {
+   "note": "",
+   "title": "Improved Constraints on the 21 cm EoR Power Spectrum and the X-Ray Heating of the IGM with HERA Phase I Observations",
+   "url": "https://arxiv.org/abs/2210.04912"
+  },
+  "HuiGnedin1997": {
+   "note": "IN TREE. Case-B $alpha_B(T)$ fit used to confirm $alpha_B(2times10^4,mathrmK)=1.43times10^-13$ to 0.16%",
+   "title": "Equation of State of the Photoionized Intergalactic Medium",
+   "url": "https://arxiv.org/abs/astro-ph/9612232"
+  },
+  "ICRU1984": {
+   "note": "NOT in tree. Mean excitation energy $I=14.99$ eV; route 1 only",
+   "title": "Stopping Powers for Electrons and Positrons",
+   "url": ""
+  },
+  "Jana2018": {
+   "note": "",
+   "title": "Cosmic ray heating of intergalactic medium: patchy or uniform?",
+   "url": "https://arxiv.org/abs/1806.01295"
+  },
+  "Jeong2025": {
+   "note": "IN TREE. eq.~(2): top-heavy Pop~II IMF, $xi(m)propto m^-1.3$, $1$--$100,M_odot$, galaxies at $z=10$",
+   "title": "Simulating high-redshift galaxies: Enhancing UV luminosity with star formation efficiency and a top-heavy IMF",
+   "url": "https://arxiv.org/abs/2411.17007"
+  },
+  "Jiang2025": {
+   "note": "VERIFIED from the abstract page. Separates point-source (AGN) from extended components in JWST FUV imaging down to $M_rm UVapprox-15$, over $7.15le zle7.75$. Result: AGN supply AT MOST ONE THIRD of the LyC photon budget at $zsim7.5$, which rules them out as the dominant ionizing source. Upper bound on the AGN box of the source-competition figure. NOTE measured at $zsim7.5$; its use at $z=10$ is an",
+   "title": "AGN ruled out as the dominant source of cosmic reionization",
+   "url": "https://arxiv.org/abs/2502.03683"
+  },
+  "Kanzaki2008": {
+   "note": "",
+   "title": "Electron and photon energy deposition in the Universe",
+   "url": "https://arxiv.org/abs/0805.3969"
+  },
+  "Karzas1961": {
+   "note": "",
+   "title": "Electron Radiative Transitions in a Coulomb Field",
+   "url": "https://ui.adsabs.harvard.edu/abs/1961ApJS....6..167K"
+  },
+  "Kaur2022": {
+   "note": "",
+   "title": "The 21-cm signal from the Cosmic Dawn: metallicity dependence of high mass X-ray binaries",
+   "url": "https://arxiv.org/abs/2203.10851"
+  },
+  "Kim2000": {
+   "note": "",
+   "title": "Extension of the binary-encounter-dipole model to relativistic incident electrons",
+   "url": "https://ui.adsabs.harvard.edu/abs/2000PhRvA..62e2710K"
+  },
+  "KimRudd1994": {
+   "note": "",
+   "title": "Binary-encounter-dipole model for electron-impact ionization",
+   "url": "https://ui.adsabs.harvard.edu/abs/1994PhRvA..50.3954K"
+  },
+  "Klessen2023": {
+   "note": "",
+   "title": "The First Stars: Formation, Properties, and Impact",
+   "url": "https://arxiv.org/abs/2303.12500"
+  },
+  "Larson1998": {
+   "note": "NOT in tree. CMB temperature-floor argument for a rising characteristic mass at high $z$; cited through citeJeong2025",
+   "title": "Early star formation and the evolution of the stellar initial mass function in galaxies",
+   "url": ""
+  },
+  "Lehmer2016": {
+   "note": "VERIFIED from the article page, eq.~(6): $L_2-10,rm keV(rm HMXB)/rm SFR = (1.8^+0.5_-0.4)times10^39,(1+z)$ erg,s$^-1$,(M$_odot$,yr$^-1$)$^-1$, band 2--10 keV, redshift exponent exactly 1. The source for the HMXB/microquasar luminosity normalisation. CAUTION: a widely-quoted variant $10^39.28(1+z)^1.31$ circulates in secondary summaries and is NOT this paper's eq.~(6) --- checked and rejected",
+   "title": "The Evolution of Normal Galaxy X-ray Emission through Cosmic History: Constraints from the 6 Ms Chandra Deep Field-South",
+   "url": "https://iopscience.iop.org/article/10.3847/0004-637X/825/1/7"
+  },
+  "Leite2017": {
+   "note": "",
+   "title": "Do cosmic rays heat the early intergalactic medium?",
+   "url": "https://arxiv.org/abs/1703.09337"
+  },
+  "Llerena2025": {
+   "note": "IN TREE. Median $logxi_rm ion=25.28$ at $zsimeq7.14$, observed scatter 0.42 dex",
+   "title": "The ionizing photon production efficiency of star-forming galaxies at $zsim4-10$",
+   "url": "https://arxiv.org/abs/2412.01358"
+  },
+  "MadauDickinson2014": {
+   "note": "IN TREE. eq.~(10) $K_rm UV=1.15times10^-28$, a compromise over age and metallicity; eq.~(24) $langle t_rm recrangle$",
+   "title": "Cosmic Star-Formation History",
+   "url": "https://doi.org/10.1146/annurev-astro-081811-125615"
+  },
+  "MarquesChaves2026": {
+   "note": "IN TREE. BPASS v2.2.1, $Z=0.003$, 6.8 Myr population; the LyC shape adopted for the stellar SED",
+   "title": "A study of the $z=10.255$ galaxy U37126",
+   "url": "https://arxiv.org/abs/2602.02322"
+  },
+  "Mertens2025": {
+   "note": "",
+   "title": "Deeper multi-redshift upper limits on the Epoch of Reionization 21-cm signal power spectrum from LOFAR between $z=8.3$ and $z=10.1$",
+   "url": "https://arxiv.org/abs/2503.05576"
+  },
+  "Mirabel2011": {
+   "note": "",
+   "title": "Stellar black holes at the dawn of the Universe",
+   "url": "https://arxiv.org/abs/1102.1891"
+  },
+  "Munoz2024": {
+   "note": "",
+   "title": "Reionization after JWST: a photon budget crisis?",
+   "url": "https://arxiv.org/abs/2404.07250"
+  },
+  "Murchikova2020": {
+   "note": "IN TREE (added 2026-09-15). VERIFIED from the PDF: ``in all cases the EUV spectra between 13.6 and 54.4 eV have similar frequency dependence: $L_nuproptonu^-4.5pm0.4$''. The slope $gamma$ is defined over 13.6--54.4 eV in EXACTLY this project's convention ($L_nuproptonu^-alpha$), so $alpha_gamma=4.5pm0.4$ with no conversion. The ONLY direct measurement of the ionizing-continuum slope in our band. C",
+   "title": "Reconstructing the EUV Spectrum of Star-forming Regions from Millimeter Recombination Lines of H,textsci",
+   "url": "https://arxiv.org/abs/2006.15153"
+  },
+  "NIST_ASD": {
+   "note": "HI ionization energy 13.598434599702 eV",
+   "title": "NIST Atomic Spectra Database",
+   "url": "https://physics.nist.gov/asd"
+  },
+  "Nath1993": {
+   "note": "",
+   "title": "Did Cosmic Rays Reionize the Intergalactic Medium?",
+   "url": "https://arxiv.org/abs/astro-ph/9306001"
+  },
+  "OsterbrockFerland2006": {
+   "note": "NOT in tree. Table 2.1: case-B recombination coefficients",
+   "title": "Astrophysics of Gaseous Nebulae and Active Galactic Nuclei",
+   "url": ""
+  },
+  "Owen2017": {
+   "note": "",
+   "title": "Cosmic rays in early star-forming galaxies and their effects on the interstellar medium",
+   "url": "https://arxiv.org/abs/1708.06808"
+  },
+  "PDG2022": {
+   "note": "Particle Data Group. Critical-density coefficient $rho_rm crit/h^2 = 1.87834times10^-29$ g cm$^-3$",
+   "title": "Review of Particle Physics",
+   "url": "https://doi.org/10.1093/ptep/ptac097"
+  },
+  "Park2015": {
+   "note": "IN TREE (added 2026-09-14). Defines $K_epequiv f_e(p)/f_p(p)$ for $pgtrsim p_rm inj$ -- at the same MOMENTUM. Both species share the universal DSA index $p^-4$, so ``$K_ep$ is independent of $p$''. $K_epapprox1$--$3times10^-3$ at realistic SNR shock speeds, $approx1.6times10^-3$ inferred for Tycho, $approx0.01$ for CRs measured at Earth. The source for $f_e$; note the project uses the Earth value,",
+   "title": "Simultaneous Acceleration of Protons and Electrons at Nonrelativistic Quasiparallel Collisionless Shocks",
+   "url": "https://arxiv.org/abs/1412.0672"
+  },
+  "Pawlik2009": {
+   "note": "",
+   "title": "Keeping the Universe ionized: photoheating and the clumping factor of the high-redshift intergalactic medium",
+   "url": "https://arxiv.org/abs/0807.3963"
+  },
+  "Planck2020": {
+   "note": "",
+   "title": "Planck 2018 results. VI. Cosmological parameters",
+   "url": "https://arxiv.org/abs/1807.06209"
+  },
+  "Ricotti2002": {
+   "note": "NOT in tree. The energy-dependent $f_rm ion$ fits quoted as eqs.~(13)--(14) of citeFurlanetto2010",
+   "title": "The Fate of the First Galaxies. I. Self-consistent Cosmological Simulations with Radiative Transfer",
+   "url": ""
+  },
+  "Robertson2022": {
+   "note": "",
+   "title": "Galaxy Formation and Reionization: Key Unknowns and Expected Breakthroughs by the James Webb Space Telescope",
+   "url": "https://arxiv.org/abs/2110.13160"
+  },
+  "Ruszkowski2023": {
+   "note": "",
+   "title": "Cosmic ray feedback in galaxies and galaxy clusters. A pedagogical introduction and a topical review of the acceleration, transport, observables, and dynamical impact of cosmic rays",
+   "url": "https://arxiv.org/abs/2306.03141"
+  },
+  "Salpeter1955": {
+   "note": "IN TREE. Power law quoted for $log(M/M_odot)in[-0.4,+1.0]$ only",
+   "title": "The Luminosity Function and Stellar Evolution",
+   "url": "https://doi.org/10.1086/145971"
+  },
+  "Samui2005": {
+   "note": "arXiv preprint",
+   "title": "Can Cosmic Rays Heat the Intergalactic Medium?",
+   "url": "https://arxiv.org/abs/astro-ph/0505590"
+  },
+  "Sazonov2015": {
+   "note": "",
+   "title": "Preheating of the Universe by cosmic rays from primordial supernovae at the beginning of cosmic reionization",
+   "url": "https://ui.adsabs.harvard.edu/abs/2015MNRAS.454.3464S"
+  },
+  "Schaerer2024": {
+   "note": "IN TREE. Table~2 gives $xi_rm ion$ AND $kappa_rm UV$ for the same models at $Z=0.006$, constant SFR at equilibrium",
+   "title": "Observable and ionizing properties of star-forming galaxies with very massive stars and different initial mass functions",
+   "url": "https://arxiv.org/abs/2407.12122"
+  },
+  "Shull1985": {
+   "note": "",
+   "title": "X-ray secondary heating and ionization in quasar emission-line clouds",
+   "url": "https://ui.adsabs.harvard.edu/abs/1985ApJ...298..268S"
+  },
+  "Slatyer2009": {
+   "note": "",
+   "title": "CMB constraints on WIMP annihilation: Energy absorption during the recombination epoch",
+   "url": "https://arxiv.org/abs/0906.1197"
+  },
+  "Slatyer2016": {
+   "note": "",
+   "title": "Indirect dark matter signatures in the cosmic dark ages. II. Ionization, heating, and photon production from arbitrary energy injections",
+   "url": "https://arxiv.org/abs/1506.03812"
+  },
+  "Stone2002": {
+   "note": "",
+   "title": "Electron-Impact Cross Sections for Dipole- and Spin-Allowed Excitations of Hydrogen, Helium, and Lithium",
+   "url": "https://ui.adsabs.harvard.edu/abs/2002JRNIST.107..327S"
+  },
+  "Telfer2002": {
+   "note": "VERIFIED from the abstract page. HST composite over rest-frame 500--1200 AA. With $f_nuproptonu^-alpha$: $alpha_rm EUV=1.57pm0.17$ (radio-quiet), $1.96pm0.12$ (radio-loud), $1.76pm0.12$ (full composite). The source for the AGN photon index. NOTE the fit does not extend above 24.8 eV; any harder band top is an extrapolation",
+   "title": "The Rest-Frame Extreme-Ultraviolet Spectral Properties of Quasi-stellar Objects",
+   "url": "https://arxiv.org/abs/astro-ph/0109531"
+  },
+  "Tiesinga2021": {
+   "note": "",
+   "title": "CODATA recommended values of the fundamental physical constants: 2018",
+   "url": "https://doi.org/10.1103/RevModPhys.93.025010"
+  },
+  "Valdes2010": {
+   "note": "",
+   "title": "Particle energy cascade in the intergalactic medium",
+   "url": "https://arxiv.org/abs/0911.1125"
+  },
+  "Zackrisson2011": {
+   "note": "IN TREE. Its IMFs are Kroupa (Pop~I/II), a log-normal $M_c=10,M_odot$ (Pop~III.2) and a Schaerer (2002) power law $alpha=2.35$ over $50$--$500,M_odot$ at $Z=0$ (Pop~III.1). It tabulates neither $xi_rm ion$ nor $K_rm UV$",
+   "title": "The spectral evolution of the first galaxies. I. James Webb Space Telescope detection limits and colour criteria for population III galaxies",
+   "url": "https://doi.org/10.1088/0004-637X/740/1/13"
+  },
+  "Zdziarski1989": {
+   "note": "",
+   "title": "Absorption of X-rays and gamma rays at cosmological distances",
+   "url": "https://ui.adsabs.harvard.edu/abs/1989ApJ...344..551Z"
+  }
+ },
+ "meta": {
+  "description": "Neutral IGM at z = 10, x_e held static at 1e-4, pure atomic hydrogen at mean density. Stellar UV photons versus SN-accelerated CR electrons as reionization agents.\n",
+  "scenario_name": "fiducial-z10"
+ },
+ "numbers": [
+  {
+   "doc": "ionization_yield",
+   "key": "N_e_loss_sat",
+   "literal": "1.171\\times10^{4}",
+   "registry": "yield_comparison_results.json",
+   "value": 11706.819297474065
+  },
+  {
+   "doc": "ionization_yield",
+   "key": "N_e_loss_ic_sat",
+   "literal": "4.911\\times10^{6}",
+   "registry": "yield_comparison_results.json",
+   "value": 4910960.982934165
+  },
+  {
+   "doc": "ionization_yield",
+   "key": "lossic_over_loss_sat",
+   "literal": "419.5",
+   "registry": "yield_comparison_results.json",
+   "value": 419.495753555689
+  },
+  {
+   "doc": "ionization_yield",
+   "key": "lossic_over_depfit_1e12",
+   "literal": "1.071",
+   "registry": "yield_comparison_results.json",
+   "value": 1.0705540357565733
+  },
+  {
+   "doc": "ionization_yield",
+   "key": "loss_over_ic_min",
+   "literal": "1.017",
+   "registry": "yield_comparison_results.json",
+   "value": 1.0168732169987413
+  },
+  {
+   "doc": "ionization_yield",
+   "key": "loss_over_ic_max",
+   "literal": "1.102",
+   "registry": "yield_comparison_results.json",
+   "value": 1.1022390191202962
+  },
+  {
+   "doc": "ionization_yield",
+   "key": "FKN_window_lo",
+   "literal": "1.0",
+   "registry": "yield_comparison_results.json",
+   "value": 1.0
+  },
+  {
+   "doc": "ionization_yield",
+   "key": "FKN_window_hi",
+   "literal": "0.9999",
+   "registry": "yield_comparison_results.json",
+   "value": 0.9999149897676332
+  },
+  {
+   "doc": "ionization_yield",
+   "key": "peakfrac_compton",
+   "literal": "1.000",
+   "registry": "yield_comparison_results.json",
+   "value": 0.9999997027743012
+  },
+  {
+   "doc": "ionization_yield",
+   "key": "peakfrac_ionization",
+   "literal": "0.7304",
+   "registry": "yield_comparison_results.json",
+   "value": 0.7303645477630569
+  },
+  {
+   "doc": "ionization_yield",
+   "key": "peakfrac_excitation",
+   "literal": "0.3532",
+   "registry": "yield_comparison_results.json",
+   "value": 0.35322551115872775
+  },
+  {
+   "doc": "ionization_yield",
+   "key": "peakfrac_adiabatic",
+   "literal": "0.0929",
+   "registry": "yield_comparison_results.json",
+   "value": 0.09292318768874995
+  },
+  {
+   "doc": "ionization_yield",
+   "key": "peakfrac_coulomb",
+   "literal": "0.002336",
+   "registry": "yield_comparison_results.json",
+   "value": 0.0023357435625517156
+  },
+  {
+   "doc": "ionization_yield",
+   "key": "peakfrac_bremsstrahlung",
+   "literal": "4.159\\times10^{-5}",
+   "registry": "yield_comparison_results.json",
+   "value": 4.1586855439721024e-05
+  },
+  {
+   "doc": "ionization_yield",
+   "key": "peakfrac_synchrotron",
+   "literal": "1.176\\times10^{-7}",
+   "registry": "yield_comparison_results.json",
+   "value": 1.1764229085703999e-07
+  },
+  {
+   "doc": "ionization_yield",
+   "key": "N_e_loss_1e+02",
+   "literal": "2.477",
+   "registry": "yield_comparison_results.json",
+   "value": 2.4772703226733332
+  },
+  {
+   "doc": "ionization_yield",
+   "key": "N_e_loss_ic_1e+02",
+   "literal": "2.478",
+   "registry": "yield_comparison_results.json",
+   "value": 2.478082836833389
+  },
+  {
+   "doc": "ionization_yield",
+   "key": "W_loss_1e+02",
+   "literal": "40.37",
+   "registry": "yield_comparison_results.json",
+   "value": 40.36701165986824
+  },
+  {
+   "doc": "ionization_yield",
+   "key": "N_e_loss_1e+03",
+   "literal": "28.35",
+   "registry": "yield_comparison_results.json",
+   "value": 28.353870728948092
+  },
+  {
+   "doc": "ionization_yield",
+   "key": "N_e_loss_ic_1e+03",
+   "literal": "28.36",
+   "registry": "yield_comparison_results.json",
+   "value": 28.355979596320026
+  },
+  {
+   "doc": "ionization_yield",
+   "key": "W_loss_1e+03",
+   "literal": "35.27",
+   "registry": "yield_comparison_results.json",
+   "value": 35.26855326243139
+  },
+  {
+   "doc": "ionization_yield",
+   "key": "W_loss_1e+04",
+   "literal": "36.18",
+   "registry": "yield_comparison_results.json",
+   "value": 36.18304922134145
+  },
+  {
+   "doc": "ionization_yield",
+   "key": "W_loss_1e+05",
+   "literal": "45.4",
+   "registry": "yield_comparison_results.json",
+   "value": 45.40433018225491
+  },
+  {
+   "doc": "ionization_yield",
+   "key": "N_e_loss_1e+06",
+   "literal": "6523",
+   "registry": "yield_comparison_results.json",
+   "value": 6523.119197167329
+  },
+  {
+   "doc": "ionization_yield",
+   "key": "N_e_loss_ic_1e+06",
+   "literal": "6523",
+   "registry": "yield_comparison_results.json",
+   "value": 6522.959890592499
+  },
+  {
+   "doc": "ionization_yield",
+   "key": "N_e_loss_1e+09",
+   "literal": "1.058\\times10^{4}",
+   "registry": "yield_comparison_results.json",
+   "value": 10584.68709598779
+  },
+  {
+   "doc": "ionization_yield",
+   "key": "N_e_loss_ic_1e+09",
+   "literal": "4.892\\times10^{6}",
+   "registry": "yield_comparison_results.json",
+   "value": 4892189.019417955
+  },
+  {
+   "doc": "ionization_yield",
+   "key": "N_e_loss_1e+12",
+   "literal": "1.171\\times10^{4}",
+   "registry": "yield_comparison_results.json",
+   "value": 11706.819297474065
+  },
+  {
+   "doc": "ionization_yield",
+   "key": "N_e_loss_ic_1e+12",
+   "literal": "4.911\\times10^{6}",
+   "registry": "yield_comparison_results.json",
+   "value": 4910960.982934165
+  },
+  {
+   "doc": "ionization_yield",
+   "key": "N_gamma_loss_1e+02",
+   "literal": "3.077",
+   "registry": "yield_comparison_results.json",
+   "value": 3.076581144381044
+  },
+  {
+   "doc": "ionization_yield",
+   "key": "N_gamma_loss_1e+03",
+   "literal": "28.97",
+   "registry": "yield_comparison_results.json",
+   "value": 28.967137039689437
+  },
+  {
+   "doc": "ionization_yield",
+   "key": "loss_over_ic_min",
+   "literal": "1.017",
+   "registry": "yield_comparison_results.json",
+   "value": 1.0168732169987413
+  },
+  {
+   "doc": "ionization_yield",
+   "key": "loss_over_ic_max",
+   "literal": "1.102",
+   "registry": "yield_comparison_results.json",
+   "value": 1.1022390191202962
+  },
+  {
+   "doc": "ionization_yield",
+   "key": "loss_over_ic_1e12",
+   "literal": "1.32",
+   "registry": "yield_comparison_results.json",
+   "value": 1.319955356549124
+  },
+  {
+   "doc": "ionization_yield",
+   "key": "F_KN_at_1e12",
+   "literal": "0.8111",
+   "registry": "yield_comparison_results.json",
+   "value": 0.8110740829248472
+  },
+  {
+   "doc": "ionization_yield",
+   "key": "lossic_over_depfit_1e12",
+   "literal": "1.071",
+   "registry": "yield_comparison_results.json",
+   "value": 1.0705540357565733
+  },
+  {
+   "doc": "ionization_yield",
+   "key": "env_dn_H",
+   "literal": "1.05\\times10^{-10}",
+   "registry": "yield_comparison_results.json",
+   "value": 1.0487620075622407e-10
+  },
+  {
+   "doc": "ionization_yield",
+   "key": "env_dE_th",
+   "literal": "0",
+   "registry": "yield_comparison_results.json",
+   "value": 0.0
+  },
+  {
+   "doc": "ionization_yield",
+   "key": "env_dH_z",
+   "literal": "0.001369",
+   "registry": "yield_comparison_results.json",
+   "value": 0.001368695512918484
+  },
+  {
+   "doc": "ionization_yield",
+   "key": "n_H_cm3_route2",
+   "literal": "",
+   "registry": "yield_comparison_results.json",
+   "value": 0.00025287233597289714
+  },
+  {
+   "doc": "ionization_yield",
+   "key": "x_e_route2",
+   "literal": "",
+   "registry": "yield_comparison_results.json",
+   "value": 0.0001
+  },
+  {
+   "doc": "ionization_yield",
+   "key": "E_th_eV_route2",
+   "literal": "",
+   "registry": "yield_comparison_results.json",
+   "value": 13.598434599702
+  },
+  {
+   "doc": "ionization_yield",
+   "key": "B0_T_route2",
+   "literal": "",
+   "registry": "yield_comparison_results.json",
+   "value": 1.0000000000000002e-13
+  },
+  {
+   "doc": "ionization_yield",
+   "key": "H_z_s_route2",
+   "literal": "",
+   "registry": "yield_comparison_results.json",
+   "value": 4.4717288570818224e-17
+  },
+  {
+   "doc": "ionization_yield",
+   "key": "Ewindow_lo_eV",
+   "literal": "",
+   "registry": "yield_comparison_results.json",
+   "value": 20224355.343519654
+  },
+  {
+   "doc": "ionization_yield",
+   "key": "Ewindow_hi_eV",
+   "literal": "",
+   "registry": "yield_comparison_results.json",
+   "value": 355406690.3544084
+  },
+  {
+   "doc": "ionization_yield",
+   "key": "peakE_adiabatic_eV",
+   "literal": "",
+   "registry": "yield_comparison_results.json",
+   "value": 304585.53406742844
+  },
+  {
+   "doc": "ionization_yield",
+   "key": "E_crit_D_eV",
+   "literal": "",
+   "registry": "yield_comparison_results.json",
+   "value": 148656.8563309262
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "zeta_gamma_s",
+   "literal": "4.647\\times10^{-18}",
+   "registry": "photon_vs_electron_results.json",
+   "value": 4.646968520258357e-18
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "zeta_e_s",
+   "literal": "8.299\\times10^{-22}",
+   "registry": "photon_vs_electron_results.json",
+   "value": 8.299279685445583e-22
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "zeta_ratio",
+   "literal": "5599",
+   "registry": "photon_vs_electron_results.json",
+   "value": 5599.243183005062
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "eps_cr_fe_crossover",
+   "literal": "5.6",
+   "registry": "photon_vs_electron_results.json",
+   "value": 5.599243183005062
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "zeta_gamma_trec",
+   "literal": "0.06472",
+   "registry": "photon_vs_electron_results.json",
+   "value": 0.06472331725758051
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "zeta_gamma_tH",
+   "literal": "0.1039",
+   "registry": "photon_vs_electron_results.json",
+   "value": 0.1039188347231521
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "t_rec_over_t_H",
+   "literal": "0.6228",
+   "registry": "photon_vs_electron_results.json",
+   "value": 0.6228256641830953
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "ion_per_atom_needed_per_tH",
+   "literal": "2.606",
+   "registry": "photon_vs_electron_results.json",
+   "value": 2.6055857321030764
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "reion_shortfall_factor",
+   "literal": "25.1",
+   "registry": "photon_vs_electron_results.json",
+   "value": 25.073277034375536
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "reion_shortfall_factor_CR",
+   "literal": "1.404\\times10^{5}",
+   "registry": "photon_vs_electron_results.json",
+   "value": 140391.37551032458
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "z",
+   "literal": "10",
+   "registry": "photon_vs_electron_results.json",
+   "value": 10.0
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "log_rho_UV",
+   "literal": "25.12",
+   "registry": "photon_vs_electron_results.json",
+   "value": 25.12
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "K_UV",
+   "literal": "1.15\\times10^{-28}",
+   "registry": "photon_vs_electron_results.json",
+   "value": 1.15e-28
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "log_xi_ion",
+   "literal": "25.28",
+   "registry": "photon_vs_electron_results.json",
+   "value": 25.28
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "xi_ion_scatter_dex",
+   "literal": "0.42",
+   "registry": "photon_vs_electron_results.json",
+   "value": 0.42
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "f_esc_fid",
+   "literal": "0.10",
+   "registry": "photon_vs_electron_results.json",
+   "value": 0.1
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "CR_index",
+   "literal": "2.2",
+   "registry": "photon_vs_electron_results.json",
+   "value": 2.2
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "sn_per_Msun",
+   "literal": "7.422\\times10^{-3}",
+   "registry": "photon_vs_electron_results.json",
+   "value": 0.0074217799329784374
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "ndot_gamma_cMpc3",
+   "literal": "2.512\\times10^{49}",
+   "registry": "photon_vs_electron_results.json",
+   "value": 2.5118864315095926e+49
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "R_sn_cMpc3_s",
+   "literal": "3.565\\times10^{-13}",
+   "registry": "photon_vs_electron_results.json",
+   "value": 3.565423860952666e-13
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "L_e_erg_s_cMpc3",
+   "literal": "3.565\\times10^{35}",
+   "registry": "photon_vs_electron_results.json",
+   "value": 3.565423860952666e+35
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "ndot_e_cMpc3",
+   "literal": "3.769\\times10^{43}",
+   "registry": "photon_vs_electron_results.json",
+   "value": 3.7686669089671406e+43
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "zeta_ratio_decades",
+   "literal": "3.75",
+   "registry": "photon_vs_electron_results.json",
+   "value": 3.748129329924649
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "t_rec_z6_C1_Gyr",
+   "literal": "3.149",
+   "registry": "reionization_budget.json",
+   "value": 3.148676737397136
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "t_rec_over_t_H",
+   "literal": "0.6228",
+   "registry": "photon_vs_electron_results.json",
+   "value": 0.6228256641830953
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "zeta_gamma_trec",
+   "literal": "0.06472",
+   "registry": "photon_vs_electron_results.json",
+   "value": 0.06472331725758051
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "ion_per_atom_needed_per_tH",
+   "literal": "2.606",
+   "registry": "photon_vs_electron_results.json",
+   "value": 2.6055857321030764
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "reion_shortfall_factor",
+   "literal": "25.1",
+   "registry": "photon_vs_electron_results.json",
+   "value": 25.073277034375536
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "reion_shortfall_factor_CR",
+   "literal": "1.404\\times10^{5}",
+   "registry": "photon_vs_electron_results.json",
+   "value": 140391.37551032458
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "eps_cr_fe_crossover",
+   "literal": "5.6",
+   "registry": "photon_vs_electron_results.json",
+   "value": 5.599243183005062
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "zeta_gamma_lo",
+   "literal": "1.470\\times10^{-18}",
+   "registry": "photon_vs_electron_results.json",
+   "value": 1.4695004739118712e-18
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "zeta_gamma_hi",
+   "literal": "1.436\\times10^{-17}",
+   "registry": "photon_vs_electron_results.json",
+   "value": 1.4360505593188835e-17
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "Emin_sensitivity_1keV_over_1MeV",
+   "literal": "2.577",
+   "registry": "photon_vs_electron_results.json",
+   "value": 2.5767916820732117
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "Emin_sensitivity_1keV_over_1MeV",
+   "literal": "2.577",
+   "registry": "photon_vs_electron_results.json",
+   "value": 2.5767916820732117
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "meanN_blackbody_5e4_K",
+   "literal": "1.0063",
+   "registry": "photon_vs_electron_results.json",
+   "value": 1.0062834482475584
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "meanN_power_law_a1",
+   "literal": "1.0714",
+   "registry": "photon_vs_electron_results.json",
+   "value": 1.0713960360084067
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "meanN_power_law_a2",
+   "literal": "1.0326",
+   "registry": "photon_vs_electron_results.json",
+   "value": 1.0326361523119671
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "meanN_power_law_a3",
+   "literal": "1.0134",
+   "registry": "photon_vs_electron_results.json",
+   "value": 1.0133994959362478
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "sed_shape_spread",
+   "literal": "1.065",
+   "registry": "photon_vs_electron_results.json",
+   "value": 1.0647060108901143
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "N_e_loss_sat",
+   "literal": "1.171\\times10^{4}",
+   "registry": "yield_comparison_results.json",
+   "value": 11706.819297474065
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "N_e_loss_ic_sat",
+   "literal": "4.911\\times10^{6}",
+   "registry": "yield_comparison_results.json",
+   "value": 4910960.982934165
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "lossic_over_loss_sat",
+   "literal": "419.5",
+   "registry": "yield_comparison_results.json",
+   "value": 419.495753555689
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "peakfrac_adiabatic",
+   "literal": "0.0929",
+   "registry": "yield_comparison_results.json",
+   "value": 0.09292318768874995
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "peakfrac_coulomb",
+   "literal": "0.002336",
+   "registry": "yield_comparison_results.json",
+   "value": 0.0023357435625517156
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "N_e_loss_sat",
+   "literal": "1.171\\times10^{4}",
+   "registry": "yield_comparison_results.json",
+   "value": 11706.819297474065
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "N_e_loss_ic_sat",
+   "literal": "4.911\\times10^{6}",
+   "registry": "yield_comparison_results.json",
+   "value": 4910960.982934165
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "lossic_over_loss_sat",
+   "literal": "419.5",
+   "registry": "yield_comparison_results.json",
+   "value": 419.495753555689
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "E_crit_D_eV",
+   "literal": "1.487\\times10^{5}",
+   "registry": "yield_comparison_results.json",
+   "value": 148656.8563309262
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "exc_frac_at_100eV",
+   "literal": "0.3532",
+   "registry": "figure_claims.json",
+   "value": 0.35322551115872775
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "exc_over_next_nonionizing",
+   "literal": "151",
+   "registry": "figure_claims.json",
+   "value": 151.22615205790896
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "Efrac_adiabatic_max_pct",
+   "literal": "7.696",
+   "registry": "figure_claims.json",
+   "value": 7.6961566951684395
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "Efrac_adiabatic_1keV_pct",
+   "literal": "0.0145",
+   "registry": "figure_claims.json",
+   "value": 0.014486597186162162
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "Efrac_adiabatic_1TeV_pct",
+   "literal": "0.000106",
+   "registry": "figure_claims.json",
+   "value": 0.00010551158181633159
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "Efrac_compton_1TeV_pct",
+   "literal": "99.99",
+   "registry": "figure_claims.json",
+   "value": 99.98736158445337
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "peakfrac_adiabatic",
+   "literal": "0.0929",
+   "registry": "yield_comparison_results.json",
+   "value": 0.09292318768874995
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "peakE_adiabatic_eV",
+   "literal": "3.046\\times10^{5}",
+   "registry": "yield_comparison_results.json",
+   "value": 304585.53406742844
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "peak_coulomb_pct",
+   "literal": "0.2336",
+   "registry": "figure_claims.json",
+   "value": 0.23357435625517156
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "peak_bremsstrahlung_pct",
+   "literal": "0.00416",
+   "registry": "figure_claims.json",
+   "value": 0.0041587527205796575
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "peak_synchrotron_pct",
+   "literal": "1.18\\times10^{-5}",
+   "registry": "figure_claims.json",
+   "value": 1.1764229085703999e-05
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "loss_over_ic_min",
+   "literal": "1.017",
+   "registry": "yield_comparison_results.json",
+   "value": 1.0168732169987413
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "loss_over_ic_max",
+   "literal": "1.102",
+   "registry": "yield_comparison_results.json",
+   "value": 1.1022390191202962
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "loss_over_ic_1e12",
+   "literal": "1.32",
+   "registry": "yield_comparison_results.json",
+   "value": 1.319955356549124
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "F_KN_at_1e12",
+   "literal": "0.8111",
+   "registry": "yield_comparison_results.json",
+   "value": 0.8110740829248472
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "lossic_over_depfit_1e12",
+   "literal": "1.071",
+   "registry": "yield_comparison_results.json",
+   "value": 1.0705540357565733
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "env_dn_H",
+   "literal": "1.05\\times10^{-10}",
+   "registry": "yield_comparison_results.json",
+   "value": 1.0487620075622407e-10
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "env_dE_th",
+   "literal": "0",
+   "registry": "yield_comparison_results.json",
+   "value": 0.0
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "env_dH_z",
+   "literal": "0.001369",
+   "registry": "yield_comparison_results.json",
+   "value": 0.001368695512918484
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "peakfrac_adiabatic",
+   "literal": "0.0929",
+   "registry": "yield_comparison_results.json",
+   "value": 0.09292318768874995
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "env_dn_H",
+   "literal": "1.05\\times10^{-10}",
+   "registry": "yield_comparison_results.json",
+   "value": 1.0487620075622407e-10
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "env_dE_th",
+   "literal": "0",
+   "registry": "yield_comparison_results.json",
+   "value": 0.0
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "loss_over_ic_min",
+   "literal": "1.017",
+   "registry": "yield_comparison_results.json",
+   "value": 1.0168732169987413
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "loss_over_ic_max",
+   "literal": "1.102",
+   "registry": "yield_comparison_results.json",
+   "value": 1.1022390191202962
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "lossic_over_depfit_1e12",
+   "literal": "1.071",
+   "registry": "yield_comparison_results.json",
+   "value": 1.0705540357565733
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "loss_over_ic_1e12",
+   "literal": "1.320",
+   "registry": "yield_comparison_results.json",
+   "value": 1.319955356549124
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "F_KN_at_1e12",
+   "literal": "0.8111",
+   "registry": "yield_comparison_results.json",
+   "value": 0.8110740829248472
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "photon_band_dex",
+   "literal": "0.6023",
+   "registry": "figure_claims.json",
+   "value": 0.6022917456205037
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "photon_band_hi_eV",
+   "literal": "54.42",
+   "registry": "figure_claims.json",
+   "value": 54.422772491976
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "electron_band_dex",
+   "literal": "9.00",
+   "registry": "figure_claims.json",
+   "value": 9.0
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "band_dex_ratio",
+   "literal": "14.94",
+   "registry": "figure_claims.json",
+   "value": 14.942924364217976
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "band_gap_dex",
+   "literal": "1.264",
+   "registry": "figure_claims.json",
+   "value": 1.2642193374681365
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "Ewindow_lo_eV",
+   "literal": "2.022\\times10^{7}",
+   "registry": "yield_comparison_results.json",
+   "value": 20224355.343519654
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "Ewindow_hi_eV",
+   "literal": "3.554\\times10^{8}",
+   "registry": "yield_comparison_results.json",
+   "value": 355406690.3544084
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "audit_E_esc_z10_eV",
+   "literal": "1218.0",
+   "registry": "audit_registry.json",
+   "value": 1217.956948675339
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "fesc_parity_pct_z10",
+   "literal": "1.786",
+   "registry": "registry_z20.json",
+   "value": 1.785955650283632
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "zeta_ratio",
+   "literal": "5599",
+   "registry": "photon_vs_electron_results.json",
+   "value": 5599.243183005062
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "zeta_ratio_decades",
+   "literal": "3.748",
+   "registry": "photon_vs_electron_results.json",
+   "value": 3.748129329924649
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "zeta_gamma_s",
+   "literal": "4.647\\times10^{-18}",
+   "registry": "photon_vs_electron_results.json",
+   "value": 4.646968520258357e-18
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "zeta_gamma_lo",
+   "literal": "1.470\\times10^{-18}",
+   "registry": "photon_vs_electron_results.json",
+   "value": 1.4695004739118712e-18
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "zeta_gamma_hi",
+   "literal": "1.436\\times10^{-17}",
+   "registry": "photon_vs_electron_results.json",
+   "value": 1.4360505593188835e-17
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "zeta_e_s",
+   "literal": "8.299\\times10^{-22}",
+   "registry": "photon_vs_electron_results.json",
+   "value": 8.299279685445583e-22
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "zeta_ratio",
+   "literal": "5599",
+   "registry": "photon_vs_electron_results.json",
+   "value": 5599.243183005062
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "zeta_ratio_decades",
+   "literal": "3.748",
+   "registry": "photon_vs_electron_results.json",
+   "value": 3.748129329924649
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "eps_cr_fe_crossover",
+   "literal": "5.6",
+   "registry": "photon_vs_electron_results.json",
+   "value": 5.599243183005062
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "chi_derived",
+   "literal": "1.0811",
+   "registry": "reionization_budget.json",
+   "value": 1.0811258278145695
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "Y_P",
+   "literal": "0.245",
+   "registry": "reionization_budget.json",
+   "value": 0.245
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "n_H_cm3_z10",
+   "literal": "2.5287\\times10^{-4}",
+   "registry": "reionization_budget.json",
+   "value": 0.00025287233594637685
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "alpha_B_2e4K",
+   "literal": "1.430\\times10^{-13}",
+   "registry": "reionization_budget.json",
+   "value": 1.43e-13
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "alpha_B_HG97_2e4",
+   "literal": "1.4277\\times10^{-13}",
+   "registry": "reionization_budget.json",
+   "value": 1.4276758454238053e-13
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "C_MD14_z10",
+   "literal": "1.8384",
+   "registry": "reionization_budget.json",
+   "value": 1.8384331778959595
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "t_rec_z6_C1_Gyr",
+   "literal": "3.1487",
+   "registry": "reionization_budget.json",
+   "value": 3.148676737397136
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "Y_P",
+   "literal": "0.245",
+   "registry": "reionization_budget.json",
+   "value": 0.245
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "X_H",
+   "literal": "0.755",
+   "registry": "reionization_budget.json",
+   "value": 0.755
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "n_He_over_n_H",
+   "literal": "0.08113",
+   "registry": "reionization_budget.json",
+   "value": 0.08112582781456953
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "chi_derived",
+   "literal": "1.0811",
+   "registry": "reionization_budget.json",
+   "value": 1.0811258278145695
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "chi_HeIII",
+   "literal": "1.1623",
+   "registry": "reionization_budget.json",
+   "value": 1.1622516556291391
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "pawlik_exp_delta",
+   "literal": "42.95",
+   "registry": "reionization_budget.json",
+   "value": 42.94842597876301
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "C_pawlik_vs_MD14_maxreldiff_pct",
+   "literal": "0.084",
+   "registry": "reionization_budget.json",
+   "value": 0.083927049014898
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "pawlik_fit_z_lo",
+   "literal": "6",
+   "registry": "reionization_budget.json",
+   "value": 6.0
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "pawlik_fit_z_hi",
+   "literal": "20",
+   "registry": "reionization_budget.json",
+   "value": 20.0
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "alpha_B_ratio_1e4_over_2e4",
+   "literal": "1.815",
+   "registry": "reionization_budget.json",
+   "value": 1.8154090689896718
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "Nreq_z10_CMD14",
+   "literal": "2.606",
+   "registry": "reionization_budget.json",
+   "value": 2.6055857321030764
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "Nreq_z10_CMD14_at_1e4K",
+   "literal": "3.915",
+   "registry": "reionization_budget.json",
+   "value": 3.9147948991003467
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "t_rec_z6_C1_Gyr",
+   "literal": "3.149",
+   "registry": "reionization_budget.json",
+   "value": 3.148676737397136
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "t_rec_over_t_H",
+   "literal": "0.6228",
+   "registry": "photon_vs_electron_results.json",
+   "value": 0.6228256641830953
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "C_IGM",
+   "literal": "1.838",
+   "registry": "photon_vs_electron_results.json",
+   "value": 1.8384331778959595
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "t_rec_over_t_H",
+   "literal": "0.6228",
+   "registry": "photon_vs_electron_results.json",
+   "value": 0.6228256641830953
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "t_rec_over_t_H_z20",
+   "literal": "0.3457",
+   "registry": "registry_z20.json",
+   "value": 0.3457376682647484
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "zeta_gamma_tH",
+   "literal": "0.1039",
+   "registry": "photon_vs_electron_results.json",
+   "value": 0.1039188347231521
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "zeta_gamma_tH_z20",
+   "literal": "0.03937",
+   "registry": "registry_z20.json",
+   "value": 0.03937288011505398
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "zeta_gamma_trec",
+   "literal": "0.06472",
+   "registry": "photon_vs_electron_results.json",
+   "value": 0.06472331725758051
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "zeta_gamma_trec_z20",
+   "literal": "0.01361",
+   "registry": "registry_z20.json",
+   "value": 0.013612687763846242
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "zeta_e_trec",
+   "literal": "1.156\\times10^{-5}",
+   "registry": "photon_vs_electron_results.json",
+   "value": 1.1559297416127605e-05
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "zeta_e_trec_z20",
+   "literal": "2.368\\times10^{-6}",
+   "registry": "registry_z20.json",
+   "value": 2.368289340710276e-06
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "ion_per_atom_needed_per_tH",
+   "literal": "2.606",
+   "registry": "photon_vs_electron_results.json",
+   "value": 2.6055857321030764
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "ion_per_atom_needed_per_tH_z20",
+   "literal": "3.892",
+   "registry": "registry_z20.json",
+   "value": 3.892366356894183
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "C_IGM",
+   "literal": "1.838",
+   "registry": "photon_vs_electron_results.json",
+   "value": 1.8384331778959595
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "C_IGM_z20",
+   "literal": "1.256",
+   "registry": "registry_z20.json",
+   "value": 1.25627554336224
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "t_rec_over_t_H_z20",
+   "literal": "0.3457",
+   "registry": "registry_z20.json",
+   "value": 0.3457376682647484
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "ion_per_atom_needed_per_tH",
+   "literal": "2.606",
+   "registry": "photon_vs_electron_results.json",
+   "value": 2.6055857321030764
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "zeta_gamma_tH",
+   "literal": "0.1039",
+   "registry": "photon_vs_electron_results.json",
+   "value": 0.1039188347231521
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "reion_shortfall_factor",
+   "literal": "25.1",
+   "registry": "photon_vs_electron_results.json",
+   "value": 25.073277034375536
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "reion_shortfall_factor_CR",
+   "literal": "1.404\\times10^{5}",
+   "registry": "photon_vs_electron_results.json",
+   "value": 140391.37551032458
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "zeta_ratio",
+   "literal": "5599",
+   "registry": "photon_vs_electron_results.json",
+   "value": 5599.243183005062
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "reion_shortfall_factor",
+   "literal": "25.1",
+   "registry": "photon_vs_electron_results.json",
+   "value": 25.073277034375536
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "band_gap_dex",
+   "literal": "1.264",
+   "registry": "figure_claims.json",
+   "value": 1.2642193374681365
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "Ewindow_lo_eV",
+   "literal": "2.022\\times10^{7}",
+   "registry": "yield_comparison_results.json",
+   "value": 20224355.343519654
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "Ewindow_hi_eV",
+   "literal": "3.554\\times10^{8}",
+   "registry": "yield_comparison_results.json",
+   "value": 355406690.3544084
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "eps_cr_fe_crossover",
+   "literal": "5.599",
+   "registry": "photon_vs_electron_results.json",
+   "value": 5.599243183005062
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "eps_cr_fe_crossover",
+   "literal": "5.599",
+   "registry": "photon_vs_electron_results.json",
+   "value": 5.599243183005062
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "n_H_cm3_route1",
+   "literal": "2.528723\\times10^{-4}",
+   "registry": "yield_comparison_results.json",
+   "value": 0.00025287233594637685
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "n_H_cm3_route1_z20",
+   "literal": "1.759467\\times10^{-3}",
+   "registry": "registry_z20.json",
+   "value": 0.0017594670948154739
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "n_H_ratio_z20_over_z10",
+   "literal": "6.958",
+   "registry": "registry_z20.json",
+   "value": 6.957926371149511
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "H_z_s_route2",
+   "literal": "4.471729\\times10^{-17}",
+   "registry": "yield_comparison_results.json",
+   "value": 4.4717288570818224e-17
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "H_z_s_route2_z20",
+   "literal": "1.180246\\times10^{-16}",
+   "registry": "registry_z20.json",
+   "value": 1.1802460238314185e-16
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "H_ratio_z20_over_z10",
+   "literal": "2.639",
+   "registry": "registry_z20.json",
+   "value": 2.639350599181069
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "U_CMB_ratio_z20_over_z10",
+   "literal": "13.28",
+   "registry": "registry_z20.json",
+   "value": 13.283313981285433
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "env_dn_H_z20",
+   "literal": "1.05\\times10^{-10}",
+   "registry": "registry_z20.json",
+   "value": 1.0487607647243741e-10
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "env_dE_th_z20",
+   "literal": "0",
+   "registry": "registry_z20.json",
+   "value": 0.0
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "env_dH_z_z20",
+   "literal": "0.002675",
+   "registry": "registry_z20.json",
+   "value": 0.002675109655810946
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "dt_z12p5_to_z20_Myr",
+   "literal": "168",
+   "registry": "registry_z20.json",
+   "value": 168.3458480741109
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "N_e_loss_sat_z20",
+   "literal": "7433",
+   "registry": "registry_z20.json",
+   "value": 7433.219019092033
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "N_e_loss_sat",
+   "literal": "1.171\\times10^{4}",
+   "registry": "yield_comparison_results.json",
+   "value": 11706.819297474065
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "N_e_loss_ic_sat_z20",
+   "literal": "4.124\\times10^{6}",
+   "registry": "registry_z20.json",
+   "value": 4124228.6667295545
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "N_e_loss_ic_sat",
+   "literal": "4.911\\times10^{6}",
+   "registry": "yield_comparison_results.json",
+   "value": 4910960.982934165
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "E_crit_D_eV_z20",
+   "literal": "8.896\\times10^{4}",
+   "registry": "registry_z20.json",
+   "value": 88963.2511400454
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "loss_sat_drop_frac_z20",
+   "literal": "0.3651",
+   "registry": "registry_z20.json",
+   "value": 0.3650522118594698
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "Esat_drop_frac_z20",
+   "literal": "0.1602",
+   "registry": "registry_z20.json",
+   "value": 0.160199260173018
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "lossic_over_loss_sat_z20",
+   "literal": "554.8",
+   "registry": "registry_z20.json",
+   "value": 554.8375012409266
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "adiabatic_peak_frac_z20",
+   "literal": "0.02339",
+   "registry": "registry_z20.json",
+   "value": 0.02338585800843066
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "Efrac_adiabatic_max_pct",
+   "literal": "7.696",
+   "registry": "figure_claims.json",
+   "value": 7.6961566951684395
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "Efrac_adiabatic_max_z20_pct",
+   "literal": "1.849",
+   "registry": "figure_claims.json",
+   "value": 1.8491838427131548
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "Efrac_adiabatic_drop_z20",
+   "literal": "4.162",
+   "registry": "figure_claims.json",
+   "value": 4.161920798462366
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "N_e_loss_1e+03_z20",
+   "literal": "28.34",
+   "registry": "registry_z20.json",
+   "value": 28.341889672613362
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "N_e_loss_1e+03",
+   "literal": "28.35",
+   "registry": "yield_comparison_results.json",
+   "value": 28.353870728948092
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "W_loss_1keV_z20",
+   "literal": "35.28",
+   "registry": "registry_z20.json",
+   "value": 35.28346244909334
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "W_loss_1keV",
+   "literal": "35.27",
+   "registry": "yield_comparison_results.json",
+   "value": 35.26855326243139
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "E_crit_D_eV",
+   "literal": "1.487\\times10^{5}",
+   "registry": "yield_comparison_results.json",
+   "value": 148656.8563309262
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "E_crit_D_eV_z20",
+   "literal": "8.896\\times10^{4}",
+   "registry": "registry_z20.json",
+   "value": 88963.2511400454
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "loss_sat_drop_frac_z20",
+   "literal": "0.3651",
+   "registry": "registry_z20.json",
+   "value": 0.3650522118594698
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "Esat_drop_frac_z20",
+   "literal": "0.1602",
+   "registry": "registry_z20.json",
+   "value": 0.160199260173018
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "lossic_over_loss_sat",
+   "literal": "419.5",
+   "registry": "yield_comparison_results.json",
+   "value": 419.495753555689
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "lossic_over_loss_sat_z20",
+   "literal": "554.8",
+   "registry": "registry_z20.json",
+   "value": 554.8375012409266
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "peakfrac_adiabatic",
+   "literal": "0.0929",
+   "registry": "yield_comparison_results.json",
+   "value": 0.09292318768874995
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "adiabatic_peak_frac_z20",
+   "literal": "0.02339",
+   "registry": "registry_z20.json",
+   "value": 0.02338585800843066
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "loss_over_ic_min_z20",
+   "literal": "1.047",
+   "registry": "registry_z20.json",
+   "value": 1.047223441443188
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "loss_over_ic_max_z20",
+   "literal": "1.102",
+   "registry": "registry_z20.json",
+   "value": 1.1017732630368091
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "lossic_over_depfit_1e12_z20",
+   "literal": "1.073",
+   "registry": "registry_z20.json",
+   "value": 1.0732753808720155
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "lossic_over_depfit_1e12",
+   "literal": "1.071",
+   "registry": "yield_comparison_results.json",
+   "value": 1.0705540357565733
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "loss_over_ic_min_z20",
+   "literal": "1.047",
+   "registry": "registry_z20.json",
+   "value": 1.047223441443188
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "loss_over_ic_max_z20",
+   "literal": "1.102",
+   "registry": "registry_z20.json",
+   "value": 1.1017732630368091
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "lossic_over_depfit_1e12_z20",
+   "literal": "1.073",
+   "registry": "registry_z20.json",
+   "value": 1.0732753808720155
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "zeta_ratio_z20",
+   "literal": "5748",
+   "registry": "registry_z20.json",
+   "value": 5747.898928499863
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "zeta_ratio_decades_z20",
+   "literal": "3.760",
+   "registry": "registry_z20.json",
+   "value": 3.759509122861508
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "zeta_ratio_decades",
+   "literal": "3.748",
+   "registry": "photon_vs_electron_results.json",
+   "value": 3.748129329924649
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "eps_cr_fe_crossover_z20",
+   "literal": "5.748",
+   "registry": "registry_z20.json",
+   "value": 5.747898928499864
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "zeta_gamma_s_z20",
+   "literal": "4.647\\times10^{-18}",
+   "registry": "registry_z20.json",
+   "value": 4.646968520258358e-18
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "zeta_e_s_z20",
+   "literal": "8.085\\times10^{-22}",
+   "registry": "registry_z20.json",
+   "value": 8.084638540210317e-22
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "zeta_e_s",
+   "literal": "8.299\\times10^{-22}",
+   "registry": "photon_vs_electron_results.json",
+   "value": 8.299279685445583e-22
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "zeta_e_drop_frac_z20",
+   "literal": "0.02586",
+   "registry": "registry_z20.json",
+   "value": 0.025862623428835718
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "Esat_drop_frac_z20",
+   "literal": "0.1602",
+   "registry": "registry_z20.json",
+   "value": 0.160199260173018
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "zeta_ratio_z20",
+   "literal": "5748",
+   "registry": "registry_z20.json",
+   "value": 5747.898928499863
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "zeta_ratio_decades_z20",
+   "literal": "3.760",
+   "registry": "registry_z20.json",
+   "value": 3.759509122861508
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "zeta_ratio_decades",
+   "literal": "3.748",
+   "registry": "photon_vs_electron_results.json",
+   "value": 3.748129329924649
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "eps_cr_fe_crossover_z20",
+   "literal": "5.748",
+   "registry": "registry_z20.json",
+   "value": 5.747898928499864
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "eps_cr_fe_crossover_z20",
+   "literal": "5.748",
+   "registry": "registry_z20.json",
+   "value": 5.747898928499864
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "fesc_parity_pct_z10",
+   "literal": "1.786",
+   "registry": "registry_z20.json",
+   "value": 1.785955650283632
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "fesc_parity_pct_z20",
+   "literal": "1.740",
+   "registry": "registry_z20.json",
+   "value": 1.7397661518397447
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "fesc_parity_pct_z10",
+   "literal": "1.786",
+   "registry": "registry_z20.json",
+   "value": 1.785955650283632
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "fesc_parity_pct_z20",
+   "literal": "1.740",
+   "registry": "registry_z20.json",
+   "value": 1.7397661518397447
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "zeta_ratio",
+   "literal": "5599",
+   "registry": "photon_vs_electron_results.json",
+   "value": 5599.243183005062
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "zeta_ratio_z20",
+   "literal": "5748",
+   "registry": "registry_z20.json",
+   "value": 5747.898928499863
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "zeta_ratio_rise_z20_pct",
+   "literal": "2.655",
+   "registry": "registry_z20.json",
+   "value": 2.6549256861356563
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "n_H_ratio_z20_over_z10",
+   "literal": "6.958",
+   "registry": "registry_z20.json",
+   "value": 6.957926371149511
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "U_CMB_ratio_z20_over_z10",
+   "literal": "13.28",
+   "registry": "registry_z20.json",
+   "value": 13.283313981285433
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "Nreq_excess_linearity_C12_over_C1",
+   "literal": "12.0000000000",
+   "registry": "reionization_budget.json",
+   "value": 11.999999999999998
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "Nreq_excess_ratio_z20_z10_C1",
+   "literal": "2.636",
+   "registry": "reionization_budget.json",
+   "value": 2.6362266435192048
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "Nreq_excess_ratio_predicted",
+   "literal": "2.638",
+   "registry": "reionization_budget.json",
+   "value": 2.637788158884165
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "chi_He",
+   "literal": "1.08",
+   "registry": "reionization_budget.json",
+   "value": 1.08
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "alpha_B_2e4K",
+   "literal": "1.430\\times10^{-13}",
+   "registry": "reionization_budget.json",
+   "value": 1.43e-13
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "n_H0_cm3",
+   "literal": "1.900\\times10^{-7}",
+   "registry": "reionization_budget.json",
+   "value": 1.8998672873506902e-07
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "t_rec_z6_C1_Gyr",
+   "literal": "3.149",
+   "registry": "reionization_budget.json",
+   "value": 3.148676737397136
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "t_H_Gyr_z20",
+   "literal": "0.2685",
+   "registry": "reionization_budget.json",
+   "value": 0.268492839279655
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "n_H_cm3_z20",
+   "literal": "1.7595\\times10^{-3}",
+   "registry": "reionization_budget.json",
+   "value": 0.0017594670948154743
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "Nreq_z20_C1",
+   "literal": "3.302",
+   "registry": "reionization_budget.json",
+   "value": 3.3023343661957973
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "Nreq_z20_C3",
+   "literal": "7.907",
+   "registry": "reionization_budget.json",
+   "value": 7.907003098587392
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "Nreq_z20_C12",
+   "literal": "28.63",
+   "registry": "reionization_budget.json",
+   "value": 28.628012394349568
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "Nreq_z20_CMD14",
+   "literal": "3.892",
+   "registry": "reionization_budget.json",
+   "value": 3.8923663568941835
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "t_H_Gyr_z10",
+   "literal": "0.7086",
+   "registry": "reionization_budget.json",
+   "value": 0.708646736228584
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "n_H_cm3_z10",
+   "literal": "2.5287\\times10^{-4}",
+   "registry": "reionization_budget.json",
+   "value": 0.00025287233594637685
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "Nreq_z10_C1",
+   "literal": "1.873",
+   "registry": "reionization_budget.json",
+   "value": 1.8733446237848195
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "Nreq_z10_C3",
+   "literal": "3.620",
+   "registry": "reionization_budget.json",
+   "value": 3.620033871354458
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "Nreq_z10_C12",
+   "literal": "11.48",
+   "registry": "reionization_budget.json",
+   "value": 11.480135485417833
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "Nreq_z10_CMD14",
+   "literal": "2.606",
+   "registry": "reionization_budget.json",
+   "value": 2.6055857321030764
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "t_H_Gyr_z5p5",
+   "literal": "1.556",
+   "registry": "reionization_budget.json",
+   "value": 1.5560362767241547
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "n_H_cm3_z5p5",
+   "literal": "5.2175\\times10^{-5}",
+   "registry": "reionization_budget.json",
+   "value": 5.217510537886833e-05
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "Nreq_z5p5_C1",
+   "literal": "1.396",
+   "registry": "reionization_budget.json",
+   "value": 1.3956740716147156
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "Nreq_z5p5_C3",
+   "literal": "2.187",
+   "registry": "reionization_budget.json",
+   "value": 2.1870222148441467
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "Nreq_z5p5_C12",
+   "literal": "5.748",
+   "registry": "reionization_budget.json",
+   "value": 5.748088859376586
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "Nreq_z5p5_CMD14",
+   "literal": "2.318",
+   "registry": "reionization_budget.json",
+   "value": 2.3177906892092546
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "t_H_Gyr_z20",
+   "literal": "0.2685",
+   "registry": "reionization_budget.json",
+   "value": 0.268492839279655
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "n_H_cm3_z20",
+   "literal": "1.7595\\times10^{-3}",
+   "registry": "reionization_budget.json",
+   "value": 0.0017594670948154743
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "NreqTrec_z20_C1",
+   "literal": "1.434",
+   "registry": "reionization_budget.json",
+   "value": 1.4343417770600906
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "NreqTrec_z20_C3",
+   "literal": "1.145",
+   "registry": "reionization_budget.json",
+   "value": 1.1447805923533636
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "NreqTrec_z20_C12",
+   "literal": "1.036",
+   "registry": "reionization_budget.json",
+   "value": 1.036195148088341
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "NreqTrec_z20_CMD14",
+   "literal": "1.346",
+   "registry": "reionization_budget.json",
+   "value": 1.3457376682647484
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "t_H_Gyr_z10",
+   "literal": "0.7086",
+   "registry": "reionization_budget.json",
+   "value": 0.708646736228584
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "n_H_cm3_z10",
+   "literal": "2.5287\\times10^{-4}",
+   "registry": "reionization_budget.json",
+   "value": 0.00025287233594637685
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "NreqTrec_z10_C1",
+   "literal": "2.145",
+   "registry": "reionization_budget.json",
+   "value": 2.1450233650792896
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "NreqTrec_z10_C3",
+   "literal": "1.382",
+   "registry": "reionization_budget.json",
+   "value": 1.38167445502643
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "NreqTrec_z10_C12",
+   "literal": "1.095",
+   "registry": "reionization_budget.json",
+   "value": 1.0954186137566075
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "NreqTrec_z10_CMD14",
+   "literal": "1.623",
+   "registry": "reionization_budget.json",
+   "value": 1.6228256641830954
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "t_H_Gyr_z5p5",
+   "literal": "1.556",
+   "registry": "reionization_budget.json",
+   "value": 1.5560362767241547
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "n_H_cm3_z5p5",
+   "literal": "5.2175\\times10^{-5}",
+   "registry": "reionization_budget.json",
+   "value": 5.217510537886833e-05
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "NreqTrec_z5p5_C1",
+   "literal": "3.527",
+   "registry": "reionization_budget.json",
+   "value": 3.527332650125586
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "NreqTrec_z5p5_C3",
+   "literal": "1.842",
+   "registry": "reionization_budget.json",
+   "value": 1.8424442167085289
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "NreqTrec_z5p5_C12",
+   "literal": "1.211",
+   "registry": "reionization_budget.json",
+   "value": 1.2106110541771322
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "NreqTrec_z5p5_CMD14",
+   "literal": "1.759",
+   "registry": "reionization_budget.json",
+   "value": 1.7588458532819458
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "Nreq_z5p5_C1",
+   "literal": "1.396",
+   "registry": "reionization_budget.json",
+   "value": 1.3956740716147156
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "Nreq_z20_C12",
+   "literal": "28.63",
+   "registry": "reionization_budget.json",
+   "value": 28.628012394349568
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "Nreq_rise_z5p5_to_z20_C1",
+   "literal": "2.366",
+   "registry": "reionization_budget.json",
+   "value": 2.366121455831865
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "Nreq_rise_z5p5_to_z20_C3",
+   "literal": "3.615",
+   "registry": "reionization_budget.json",
+   "value": 3.615419653682332
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "Nreq_rise_z5p5_to_z20_C12",
+   "literal": "4.980",
+   "registry": "reionization_budget.json",
+   "value": 4.980440124485905
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "Nreq_rise_z5p5_to_z20_CMD14",
+   "literal": "1.679",
+   "registry": "reionization_budget.json",
+   "value": 1.6793433397655577
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "Nreq_z10_CMD14",
+   "literal": "2.606",
+   "registry": "reionization_budget.json",
+   "value": 2.6055857321030764
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "zeta_gamma_tH",
+   "literal": "0.1039",
+   "registry": "photon_vs_electron_results.json",
+   "value": 0.1039188347231521
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "reion_shortfall_factor",
+   "literal": "25.07",
+   "registry": "photon_vs_electron_results.json",
+   "value": 25.073277034375536
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "reion_shortfall_factor_CR",
+   "literal": "1.404\\times10^{5}",
+   "registry": "photon_vs_electron_results.json",
+   "value": 140391.37551032458
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "Nreq_z10_CMD14",
+   "literal": "2.606",
+   "registry": "reionization_budget.json",
+   "value": 2.6055857321030764
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "snM_topheavy",
+   "literal": "0.02754",
+   "registry": "imf_comparison_results.json",
+   "value": 0.02754257125300587
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "snM_salpeter",
+   "literal": "0.007422",
+   "registry": "imf_comparison_results.json",
+   "value": 0.0074217799329784374
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "f_snM",
+   "literal": "3.711",
+   "registry": "imf_comparison_results.json",
+   "value": 3.7110466089975738
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "eta_UV_topheavy",
+   "literal": "3.57\\times10^{28}",
+   "registry": "imf_comparison_results.json",
+   "value": 3.57e+28
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "K_ratio_jeong",
+   "literal": "0.2801",
+   "registry": "imf_comparison_results.json",
+   "value": 0.2801120448179272
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "K_topheavy",
+   "literal": "3.221\\times10^{-29}",
+   "registry": "imf_comparison_results.json",
+   "value": 3.221288515406162e-29
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "K_salpeter",
+   "literal": "1.150\\times10^{-28}",
+   "registry": "imf_comparison_results.json",
+   "value": 1.15e-28
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "f_product",
+   "literal": "1.040",
+   "registry": "imf_comparison_results.json",
+   "value": 1.039508854060945
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "zeta_e_salpeter",
+   "literal": "8.299\\times10^{-22}",
+   "registry": "imf_comparison_results.json",
+   "value": 8.299279685445583e-22
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "zeta_e_topheavy",
+   "literal": "8.627\\times10^{-22}",
+   "registry": "imf_comparison_results.json",
+   "value": 8.627174715348819e-22
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "ratio_salpeter",
+   "literal": "5599",
+   "registry": "imf_comparison_results.json",
+   "value": 5599.243183005062
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "ratio_topheavy",
+   "literal": "5386",
+   "registry": "imf_comparison_results.json",
+   "value": 5386.431448978101
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "f_ratio",
+   "literal": "0.9620",
+   "registry": "imf_comparison_results.json",
+   "value": 0.9619927681167891
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "eps_parity_topheavy",
+   "literal": "5.386",
+   "registry": "imf_comparison_results.json",
+   "value": 5.3864314489781
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "audit_RBED_code_vs_paper_maxreldiff",
+   "literal": "1.41\\times10^{-9}",
+   "registry": "audit_registry.json",
+   "value": 1.4115822826808111e-09
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "audit_Ni_H1s",
+   "literal": "0.434306",
+   "registry": "audit_registry.json",
+   "value": 0.43430553083333334
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "audit_Dt_maxreldiff",
+   "literal": "2.1\\times10^{-16}",
+   "registry": "audit_registry.json",
+   "value": 2.115887043949183e-16
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "audit_RBED_total_vs_SDCS_maxreldiff",
+   "literal": "4.67\\times10^{-5}",
+   "registry": "audit_registry.json",
+   "value": 4.665892471931578e-05
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "audit_RBED_over_RBEB_15eV",
+   "literal": "1.384",
+   "registry": "audit_registry.json",
+   "value": 1.3843150672075764
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "audit_RBED_over_RBEB_1GeV",
+   "literal": "0.6436",
+   "registry": "audit_registry.json",
+   "value": 0.6436371264080939
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "audit_nondipole_coeff",
+   "literal": "1.5657",
+   "registry": "audit_registry.json",
+   "value": 1.5656944691666665
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "audit_nondipole_coeff_BEQ",
+   "literal": "1.4332",
+   "registry": "audit_registry.json",
+   "value": 1.4332
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "audit_zscaling_maxreldiff",
+   "literal": "5.6\\times10^{-16}",
+   "registry": "audit_registry.json",
+   "value": 5.551115123125783e-16
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "audit_E_esc_z10_eV",
+   "literal": "1218.0",
+   "registry": "audit_registry.json",
+   "value": 1217.956948675339
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "audit_E_esc_z20_eV",
+   "literal": "1626",
+   "registry": "audit_registry.json",
+   "value": 1625.7002510763639
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "audit_E_esc_ratio",
+   "literal": "1.3348",
+   "registry": "audit_registry.json",
+   "value": 1.334776449072761
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "N_e_loss_1e+03",
+   "literal": "28.35",
+   "registry": "yield_comparison_results.json",
+   "value": 28.353870728948092
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "N_e_loss_1e+03_z20",
+   "literal": "28.34",
+   "registry": "registry_z20.json",
+   "value": 28.341889672613362
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "audit_bKN_window_top_z20",
+   "literal": "2.27\\times10^{-5}",
+   "registry": "audit_registry.json",
+   "value": 2.270484633927458e-05
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "audit_bKN_1e12_z20",
+   "literal": "0.0756",
+   "registry": "audit_registry.json",
+   "value": 0.0755541661395393
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "audit_bKN_1e12_z10",
+   "literal": "0.0396",
+   "registry": "audit_registry.json",
+   "value": 0.03957599178737772
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "audit_rho_lo_correction_pct",
+   "literal": "14.8",
+   "registry": "audit_registry.json",
+   "value": 14.815362149688283
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "audit_dt_z14p5_to_z20_Myr",
+   "literal": "103",
+   "registry": "audit_registry.json",
+   "value": 103.311194568445
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "audit_R_over_B",
+   "literal": "1.000534",
+   "registry": "audit_registry.json",
+   "value": 1.0005337763871849
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "audit_B_Rydberg_vs_NIST_maxreldiff_pct",
+   "literal": "0.225",
+   "registry": "audit_registry.json",
+   "value": 0.2249861864177527
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "audit_sdcs_relfactor_err_1e4eV_pct",
+   "literal": "1.91",
+   "registry": "audit_registry.json",
+   "value": 1.9098199457619147
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "audit_sdcs_relfactor_err_1e5eV_pct",
+   "literal": "15.4",
+   "registry": "audit_registry.json",
+   "value": 15.442273291344177
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "audit_sdcs_relfactor_err_1e6eV_pct",
+   "literal": "25.5",
+   "registry": "audit_registry.json",
+   "value": 25.535087541999644
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "audit_salpeter_fit_M_lo",
+   "literal": "0.398",
+   "registry": "audit_registry.json",
+   "value": 0.3981071705534972
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "audit_salpeter_fit_M_hi",
+   "literal": "10.0",
+   "registry": "audit_registry.json",
+   "value": 10.0
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "audit_salpeter_extrap_dex_lo",
+   "literal": "0.60",
+   "registry": "audit_registry.json",
+   "value": 0.5999999999999999
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "audit_salpeter_extrap_dex_hi",
+   "literal": "1.00",
+   "registry": "audit_registry.json",
+   "value": 1.0
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "zeta_gamma_s",
+   "literal": "4.647\\times10^{-18}",
+   "registry": "photon_vs_electron_results.json",
+   "value": 4.646968520258357e-18
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "zeta_ratio",
+   "literal": "5599",
+   "registry": "photon_vs_electron_results.json",
+   "value": 5599.243183005062
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "audit_H_gap_slope_spread_pct",
+   "literal": "7.39",
+   "registry": "audit_registry.json",
+   "value": 7.391780462370082
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "audit_Omega_r_implied",
+   "literal": "7.78\\times10^{-5}",
+   "registry": "audit_registry.json",
+   "value": 7.78403414047342e-05
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "audit_H_gap_z10",
+   "literal": "0.001369",
+   "registry": "audit_registry.json",
+   "value": 0.0013686955129184053
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "audit_H_gap_z20",
+   "literal": "0.002675",
+   "registry": "audit_registry.json",
+   "value": 0.002675109655810859
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "W_gamma_fiducial_eV",
+   "literal": "21.07",
+   "registry": "source_map.json",
+   "value": 21.073146001096802
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "W_e_fiducial_eV",
+   "literal": "48.04",
+   "registry": "source_map.json",
+   "value": 48.038066106825056
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "eff_gamma_percent",
+   "literal": "64.5",
+   "registry": "xcomp.json",
+   "value": 64.52496585794658
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "eff_e_percent",
+   "literal": "28.3",
+   "registry": "xcomp.json",
+   "value": 28.307807113139486
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "spectral_factor_fiducial",
+   "literal": "0.4387",
+   "registry": "source_map.json",
+   "value": 0.4386759857117315
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "n_req_U37126",
+   "literal": "6.94\\times10^{-3}",
+   "registry": "source_map.json",
+   "value": 0.006939720301446225
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "n_implied_by_rho_UV",
+   "literal": "2.77\\times10^{-4}",
+   "registry": "source_map.json",
+   "value": 0.00027675090241113516
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "n_req_over_n_implied",
+   "literal": "25.08",
+   "registry": "source_map.json",
+   "value": 25.07569168152784
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "shortfall_vs_C_IGM",
+   "literal": "25.08",
+   "registry": "source_map.json",
+   "value": 25.080170636551944
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "zeta_gamma_tH_starforming",
+   "literal": "0.1039",
+   "registry": "source_map.json",
+   "value": 0.10390678906314954
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "E_max_gamma_tau1_eV",
+   "literal": "1218",
+   "registry": "xcomp.json",
+   "value": 1217.9569486753135
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "tau_1keV",
+   "literal": "1.934",
+   "registry": "source_map.json",
+   "value": 1.9341435312727515
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "tau_3keV",
+   "literal": "0.0476",
+   "registry": "source_map.json",
+   "value": 0.047565788457437454
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "X_comp_fiducial",
+   "literal": "2.28",
+   "registry": "xcomp.json",
+   "value": 2.2794053103462177
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "X_comp_igm_cap",
+   "literal": "2.07",
+   "registry": "xcomp.json",
+   "value": 2.0730197056107325
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "X_comp_fiducial",
+   "literal": "2.28",
+   "registry": "xcomp.json",
+   "value": 2.2794053103462177
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "X_comp_DSA_beta_0p01",
+   "literal": "4.06",
+   "registry": "xcomp.json",
+   "value": 4.059807388418043
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "x_e",
+   "literal": "",
+   "registry": "photon_vs_electron_results.json",
+   "value": 0.0001
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "n_H_cm3",
+   "literal": "",
+   "registry": "photon_vs_electron_results.json",
+   "value": 0.00025287233594637685
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "T_eff_K",
+   "literal": "",
+   "registry": "photon_vs_electron_results.json",
+   "value": 50000.0
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "CR_E_min_eV",
+   "literal": "",
+   "registry": "photon_vs_electron_results.json",
+   "value": 1000.0
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "CR_E_max_eV",
+   "literal": "",
+   "registry": "photon_vs_electron_results.json",
+   "value": 1000000000000.0
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "E_SN_erg",
+   "literal": "",
+   "registry": "photon_vs_electron_results.json",
+   "value": 1e+51
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "eps_CR_fe_fid",
+   "literal": "",
+   "registry": "photon_vs_electron_results.json",
+   "value": 0.001
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "mean_injected_E_eV",
+   "literal": "",
+   "registry": "photon_vs_electron_results.json",
+   "value": 5904.906408545915
+  },
+  {
+   "doc": "photon_vs_electron",
+   "key": "mean_ionizing_E_eV",
+   "literal": "",
+   "registry": "photon_vs_electron_results.json",
+   "value": 21.759817095546346
+  }
+ ],
+ "params": [
+  {
+   "note": "",
+   "path": "cosmology.h",
+   "source": "Planck2020",
+   "status": "C",
+   "units": "--",
+   "value": 0.6766
+  },
+  {
+   "note": "",
+   "path": "cosmology.Omega_m",
+   "source": "Planck2020",
+   "status": "C",
+   "units": "--",
+   "value": 0.3111
+  },
+  {
+   "note": "",
+   "path": "cosmology.Omega_b_h2",
+   "source": "Planck2020",
+   "status": "C",
+   "units": "--",
+   "value": 0.02242
+  },
+  {
+   "note": "",
+   "path": "cosmology.T_cmb0",
+   "source": "Fixsen2009",
+   "status": "C",
+   "units": "K",
+   "value": 2.7255
+  },
+  {
+   "note": "primordial He mass fraction, BBN + Planck",
+   "path": "cosmology.Y_P",
+   "source": "Planck2020",
+   "status": "C",
+   "units": "--",
+   "value": 0.245
+  },
+  {
+   "note": "the snapshot. Change this and re-run to move redshift.",
+   "path": "scenario.z",
+   "source": "",
+   "status": "U",
+   "units": "--",
+   "value": 10.0
+  },
+  {
+   "note": "held STATIC. Releasing it breaks the linear-yield regime the whole W-value construction rests on: N_gamma(1 keV) falls 26.4 -> 2.9 from x_e 1e-4 to 0.5.",
+   "path": "scenario.x_e",
+   "source": "",
+   "status": "U",
+   "units": "--",
+   "value": 0.0001
+  },
+  {
+   "note": "pure hydrogen target, no helium",
+   "path": "scenario.Z_target",
+   "source": "",
+   "status": "U",
+   "units": "--",
+   "value": 1.0
+  },
+  {
+   "note": "1 nG comoving; B(z) = B0 (1+z)^2",
+   "path": "scenario.B0_tesla",
+   "source": "",
+   "status": "U",
+   "units": "T",
+   "value": 1e-13
+  },
+  {
+   "note": "HI ionization potential. A PHYSICAL floor, not a choice.",
+   "path": "photon_band.E_min_eV",
+   "source": "NIST_ASD",
+   "status": "V",
+   "units": "eV",
+   "value": 13.598434599702
+  },
+  {
+   "note": "conventional top of the stellar LyC band; He II opacity takes over above it and BPASS spectra drop there",
+   "path": "photon_band.stellar_cutoff_ryd",
+   "source": "",
+   "status": "U",
+   "units": "Ryd",
+   "value": 4.0
+  },
+  {
+   "note": "energy at which tau_IGM = 1 over one Hubble length, solved from this project's own sigma_photoion. 1218 eV at z = 10.",
+   "path": "photon_band.igm_cutoff",
+   "source": "",
+   "status": "D",
+   "units": "eV",
+   "value": "derived"
+  },
+  {
+   "note": "Table 3, z = 10 row. CAVEAT still unstated in the manuscript: integrated only to M_UV = -17.",
+   "path": "stellar_source.log_rho_UV",
+   "source": "Donnan2024",
+   "status": "V",
+   "units": "log10(erg s^-1 Hz^-1 cMpc^-3)",
+   "value": 25.12
+  },
+  {
+   "note": "asymmetric 1-sigma as published",
+   "path": "stellar_source.log_rho_UV_err",
+   "source": "Donnan2024",
+   "status": "V",
+   "units": "dex",
+   "value": [
+    -0.08,
+    0.07
+   ]
+  },
+  {
+   "note": "median at z ~ 7.14; their own fit extrapolates to 25.42 at z = 10, so 25.28 is conservative for photons",
+   "path": "stellar_source.log_xi_ion",
+   "source": "Llerena2025",
+   "status": "V",
+   "units": "log10(Hz erg^-1)",
+   "value": 25.28
+  },
+  {
+   "note": "OBSERVED scatter, not an error bar",
+   "path": "stellar_source.xi_ion_scatter_dex",
+   "source": "Llerena2025",
+   "status": "V",
+   "units": "dex",
+   "value": 0.42
+  },
+  {
+   "note": "eq. (10), Salpeter 0.1-100 Msun. TRUNCATED form.",
+   "path": "stellar_source.K_UV",
+   "source": "MadauDickinson2014",
+   "status": "V",
+   "units": "Msun yr^-1 / (erg s^-1 Hz^-1)",
+   "value": 1.15e-28
+  },
+  {
+   "note": "'powerlaw' or 'blackbody'; blackbody kept as the comparison case only",
+   "path": "stellar_source.sed_model",
+   "source": "",
+   "status": "U",
+   "units": "--",
+   "value": "powerlaw"
+  },
+  {
+   "note": "f_nu ~ nu^-alpha. OUR PARAMETRISATION, not a measured value: Marques-Chaves+26 report beta_UV = -2.88 over lambda_rest >= 1400 A and NO LyC index. The only direct measurement in our band is Murchikova+20's 4.5 +- 0.4 (13.6-54.4 eV), but from four GALACTIC HII regions.",
+   "path": "stellar_source.sed_alpha",
+   "source": "",
+   "status": "U",
+   "units": "--",
+   "value": 2.0
+  },
+  {
+   "note": "",
+   "path": "stellar_source.sed_alpha_range",
+   "source": "",
+   "status": "S",
+   "units": "--",
+   "value": [
+    1.0,
+    3.0
+   ]
+  },
+  {
+   "note": "blackbody comparison case only",
+   "path": "stellar_source.T_eff_K",
+   "source": "",
+   "status": "U",
+   "units": "K",
+   "value": "5.0e4"
+  },
+  {
+   "note": "fitted for 0.4-10 Msun only",
+   "path": "stellar_source.imf_slope",
+   "source": "Salpeter1955",
+   "status": "V",
+   "units": "--",
+   "value": 2.35
+  },
+  {
+   "note": "range adopted to match K_UV",
+   "path": "stellar_source.imf_mass_limits",
+   "source": "MadauDickinson2014",
+   "status": "C",
+   "units": "Msun",
+   "value": [
+    0.1,
+    100.0
+   ]
+  },
+  {
+   "note": "core-collapse threshold",
+   "path": "stellar_source.m_sn_min",
+   "source": "",
+   "status": "U",
+   "units": "Msun",
+   "value": 8.0
+  },
+  {
+   "note": "standard core-collapse budget; NO source established by this project",
+   "path": "cr_channel.E_SN_erg",
+   "source": "",
+   "status": "X",
+   "units": "erg",
+   "value": "1.0e51"
+  },
+  {
+   "note": "RETAINED. Hybrid sims give 10-20% at parallel and quasi-parallel shocks but ZERO at quasi-perpendicular, so an obliquity-averaged value would be lower. Not applied: keeping 0.1 is generous to CRs.",
+   "path": "cr_channel.eps_CR",
+   "source": "CaprioliSpitkovsky2014",
+   "status": "C",
+   "units": "--",
+   "value": 0.1
+  },
+  {
+   "note": "RETAINED. This is K_ep measured at EARTH. Park+15 derive 1-3e-3 at realistic SNR shock speeds and 1.6e-3 for Tycho, so 0.01 is 3-10x high. Not applied.",
+   "path": "cr_channel.f_e",
+   "source": "Park2015",
+   "status": "C",
+   "units": "--",
+   "value": 0.01
+  },
+  {
+   "note": "the product actually used; = eps_CR x f_e",
+   "path": "cr_channel.eps_CR_f_e",
+   "source": "",
+   "status": "S",
+   "units": "--",
+   "value": 0.001
+  },
+  {
+   "note": "dN/dE ~ E^-index. Your choice, revised from 2.1. DSA strong-shock theory predicts exactly 2.0 (Park+15: f(p) ~ p^-3r/(r-1), r = 4).",
+   "path": "cr_channel.index",
+   "source": "",
+   "status": "U",
+   "units": "--",
+   "value": 2.2
+  },
+  {
+   "note": "RETAINED. A convention with no source. Park+15's DSA injection momentum p_inj ~ 3 m_p v_u puts the electron power law at 28-56 MeV for young-SNR v_u = 0.01-0.02c, four to five decades higher. Not applied: it would move X_comp 2.07 -> 3.69. This is the single least constrained input in the project -- it slides the whole X_comp map by more than its own axis does.",
+   "path": "cr_channel.E_min_eV",
+   "source": "",
+   "status": "U",
+   "units": "eV",
+   "value": "1.0e3"
+  },
+  {
+   "note": "",
+   "path": "cr_channel.E_max_eV",
+   "source": "",
+   "status": "U",
+   "units": "eV",
+   "value": "1.0e12"
+  },
+  {
+   "note": "assumption A11: every injected electron deposits in the IGM. A CEILING on the electron channel, not an estimate.",
+   "path": "cr_channel.f_dep",
+   "source": "",
+   "status": "U",
+   "units": "--",
+   "value": 1.0
+  },
+  {
+   "note": "RETAINED convention. The alternative f_esc/(1-f_esc) normalisation would raise zeta_gamma by 11%. Not applied. The canonical 0.10 is a convention, not a measurement.",
+   "path": "scanned.f_esc",
+   "source": "",
+   "status": "S",
+   "units": "--",
+   "value": 0.1
+  },
+  {
+   "note": "",
+   "path": "scanned.f_esc_range",
+   "source": "",
+   "status": "S",
+   "units": "--",
+   "value": [
+    1e-06,
+    1.0
+   ]
+  },
+  {
+   "note": "bounded above by unity on energy grounds",
+   "path": "scanned.eps_CR_f_e_range",
+   "source": "",
+   "status": "S",
+   "units": "--",
+   "value": [
+    1e-06,
+    1.0
+   ]
+  },
+  {
+   "note": "multiplier on Donnan+24; ignorance band at z = 20 only",
+   "path": "scanned.rho_sfr_scale",
+   "source": "",
+   "status": "S",
+   "units": "--",
+   "value": 1.0
+  },
+  {
+   "note": "RETAINED. Jet efficiency x leptonic fraction, scanned because the proton content of jets is not observationally constrained. BUT Aharonian+24 MEASURE 1.3e-3 for SS 433 -- the very bottom of this range. The AGN parity crossing in the budget plane lives at the top of this scan, which that measurement argues against. Not applied.",
+   "path": "scanned.jet_e_frac",
+   "source": "",
+   "status": "S",
+   "units": "--",
+   "value": [
+    0.001,
+    1.0
+   ]
+  },
+  {
+   "note": "+-0.17; fit over 500-1200 A = 10.3-24.8 eV, which covers only 13% of our band in log energy",
+   "path": "source_classes.agn_radio_quiet.alpha_gamma",
+   "source": "Telfer2002",
+   "status": "V",
+   "units": "--",
+   "value": 1.57
+  },
+  {
+   "note": "+-0.12; same partial-band caveat",
+   "path": "source_classes.agn_radio_loud.alpha_gamma",
+   "source": "Telfer2002",
+   "status": "V",
+   "units": "--",
+   "value": 1.96
+  },
+  {
+   "note": "S(nu) ~ nu^-1.5 over 13.6 eV - 3 keV: the ONLY index covering 100% of our band",
+   "path": "source_classes.agn_eor_template.alpha_gamma",
+   "source": "Graziani2018",
+   "status": "V",
+   "units": "--",
+   "value": 1.5
+  },
+  {
+   "note": "17% (Asthana+24) to <=1/3 (Jiang+25), both at z ~ 7.5. Carried to z = 10, conservative for photons.",
+   "path": "source_classes.agn_eor_template.lyc_budget_fraction",
+   "source": "Asthana2024",
+   "status": "V",
+   "units": "--",
+   "value": [
+    0.17,
+    0.3333
+   ]
+  },
+  {
+   "note": "alpha = Gamma - 1. Fitted at 2-10 keV: NO overlap with our band, and in our band ULXs are disc- not corona-dominated (kT_in 0.17-1.7 keV).",
+   "path": "source_classes.ulx.Gamma_1",
+   "source": "Gladstone2009",
+   "status": "V",
+   "units": "--",
+   "value": [
+    1.38,
+    3.1
+   ]
+  },
+  {
+   "note": "",
+   "path": "source_classes.ulx.E_break_keV",
+   "source": "Gladstone2009",
+   "status": "V",
+   "units": "keV",
+   "value": [
+    3.5,
+    7.0
+   ]
+  },
+  {
+   "note": "",
+   "path": "source_classes.ulx.delta_Gamma",
+   "source": "Gladstone2009",
+   "status": "V",
+   "units": "--",
+   "value": [
+    1.0,
+    2.0
+   ]
+  },
+  {
+   "note": "SECOND-HAND. Only Gamma < 2.1 for the low/hard state is first-hand (Gladstone+09 sec 4.1). Fitted at 2-10 keV: no overlap with our band. This is the class showing the LARGEST spectral effect, resting on the weakest index.",
+   "path": "source_classes.bhb_hard_state.Gamma",
+   "source": "Gladstone2009",
+   "status": "X",
+   "units": "--",
+   "value": 1.7
+  },
+  {
+   "note": "+-0.4 over 13.6-54.4 eV, L_nu ~ nu^-gamma: EXACTLY our convention, no conversion. The only direct measurement in our band. But four GALACTIC HII regions at roughly solar metallicity, and the authors find it disagrees with BPASS/Starburst99. Metal-poor z~10 should be harder (smaller).",
+   "path": "source_classes.star_forming.alpha_gamma_measured",
+   "source": "Murchikova2020",
+   "status": "V",
+   "units": "--",
+   "value": 4.5
+  },
+  {
+   "note": "from their own f(p) ~ p^-3r/(r-1): r = 4 (strong shock) gives exactly 2.0, r = 3 gives 2.5",
+   "path": "source_classes.star_forming.alpha_e_dsa",
+   "source": "Park2015",
+   "status": "V",
+   "units": "--",
+   "value": [
+    2.0,
+    2.5
+   ]
+  },
+  {
+   "note": "Gamma_e = 2 with dN/dE ~ E^-Gamma_e, EXACTLY our convention. E_cut > 200 TeV. Electron power measured above 10 MeV = 0.13% of a 1e39 erg/s jet.",
+   "path": "source_classes.ss433_jets.alpha_e",
+   "source": "Aharonian2024",
+   "status": "V",
+   "units": "--",
+   "value": 2.0
+  },
+  {
+   "note": "SS 433 and the S26 microquasar",
+   "path": "source_classes.ss433_jets.L_mech_erg_s",
+   "source": "Mirabel2011",
+   "status": "V",
+   "units": "erg/s",
+   "value": [
+    "1.0e39",
+    "1.0e40"
+   ]
+  },
+  {
+   "note": "eq. (6), 2-10 keV, x (1+z)^1; exponent fixed at 1",
+   "path": "accretion_sources.lehmer_norm",
+   "source": "Lehmer2016",
+   "status": "V",
+   "units": "erg s^-1 / (Msun yr^-1)",
+   "value": "1.8e39"
+  },
+  {
+   "note": "",
+   "path": "accretion_sources.lehmer_norm_err",
+   "source": "Lehmer2016",
+   "status": "V",
+   "units": "erg s^-1 / (Msun yr^-1)",
+   "value": [
+    "1.4e39",
+    "2.3e39"
+   ]
+  },
+  {
+   "note": "eqs. (3)-(4)",
+   "path": "accretion_sources.L_edd_per_msun",
+   "source": "Mirabel2011",
+   "status": "V",
+   "units": "erg s^-1 Msun^-1",
+   "value": "1.5e38"
+  },
+  {
+   "note": "their own fiducial; they call it conservative",
+   "path": "accretion_sources.f_edd",
+   "source": "Mirabel2011",
+   "status": "V",
+   "units": "--",
+   "value": 0.1
+  },
+  {
+   "note": "",
+   "path": "accretion_sources.f_2_10",
+   "source": "Mirabel2011",
+   "status": "V",
+   "units": "--",
+   "value": 0.1
+  },
+  {
+   "note": "OUR choice; box position scales linearly with it",
+   "path": "accretion_sources.M_BH_range",
+   "source": "",
+   "status": "U",
+   "units": "Msun",
+   "value": [
+    5.0,
+    30.0
+   ]
+  },
+  {
+   "note": "+-0.05, z = 10.255, lensed mu ~ 2.2",
+   "path": "accretion_sources.M_UV_U37126",
+   "source": "MarquesChaves2026",
+   "status": "V",
+   "units": "AB",
+   "value": -20.1
+  },
+  {
+   "note": "derived here as 1 + (Y_P/4)/X_H = 1.0811",
+   "path": "budget.chi_He",
+   "source": "MadauDickinson2014",
+   "status": "V",
+   "units": "--",
+   "value": 1.08
+  },
+  {
+   "note": "",
+   "path": "budget.alpha_B_2e4K",
+   "source": "OsterbrockFerland2006",
+   "status": "V",
+   "units": "cm^3 s^-1",
+   "value": 1.43e-13
+  },
+  {
+   "note": "",
+   "path": "budget.clumping_factors",
+   "source": "",
+   "status": "S",
+   "units": "--",
+   "value": [
+    1.0,
+    3.0,
+    12.0
+   ]
+  },
+  {
+   "note": "",
+   "path": "budget.redshifts",
+   "source": "",
+   "status": "U",
+   "units": "--",
+   "value": [
+    20.0,
+    10.0,
+    5.5
+   ]
+  },
+  {
+   "note": "quadrature resolution for every zeta integral. Raised from 400 because the trapezoid error sat on a rounding boundary and put 5600 in the paper instead of 5599.",
+   "path": "numerics.zeta_n",
+   "source": "",
+   "status": "U",
+   "units": "--",
+   "value": 4001
+  },
+  {
+   "note": "cached N_gamma / N_e master grid",
+   "path": "numerics.master_grid_n",
+   "source": "",
+   "status": "U",
+   "units": "--",
+   "value": 2400
+  },
+  {
+   "note": "tolerance for checks comparing two quadratures of N_gamma. MEASURED, not chosen: W_gamma oscillates by 4.98e-5 between n = 1200 and 9600, and does NOT fall as h^2, so this is the interpolation noise floor of IY.N_gamma itself.",
+   "path": "numerics.quad_tol",
+   "source": "",
+   "status": "D",
+   "units": "--",
+   "value": 0.001
+  },
+  {
+   "note": "above this the IGM is utterly transparent",
+   "path": "numerics.e_top_master_eV",
+   "source": "",
+   "status": "U",
+   "units": "eV",
+   "value": "1.0e5"
+  }
+ ],
+ "producers": {
+  "imf_comparison_fig": "imf_comparison.py::main",
+  "ionization_yield_fig_igm": "ionization_yield_igm.py::main",
+  "ionization_yield_fig_igm_z20": "ionization_yield_igm.py::main via run_redshift_suite.py",
+  "photon_vs_electron_fig1": "photon_vs_electron.py::make_figures",
+  "photon_vs_electron_fig1_z20": "photon_vs_electron.py::make_figures via run_redshift_suite.py",
+  "photon_vs_electron_fig2a": "photon_vs_electron.py::make_figures",
+  "photon_vs_electron_fig2a_z20": "photon_vs_electron.py::make_figures via run_redshift_suite.py",
+  "photon_vs_electron_fig2b": "photon_vs_electron.py::make_figures",
+  "photon_vs_electron_fig2b_z20": "photon_vs_electron.py::make_figures via run_redshift_suite.py",
+  "photon_vs_electron_fig3": "photon_vs_electron.py::make_figures",
+  "photon_vs_electron_fig3_z20": "photon_vs_electron.py::make_figures via run_redshift_suite.py",
+  "source_budget_objects": "source_map.py::make_figure_A_objects",
+  "source_budget_plane": "source_map.py::make_figure_A",
+  "source_spectral_index": "source_map.py::make_figure_D",
+  "xcomp_map": "make_xcomp_definitions.py::make_figure_X",
+  "yield_comparison_fig": "yield_comparison.py::make_figure",
+  "yield_comparison_fig_z20": "yield_comparison.py::make_figure via run_redshift_suite.py"
+ },
+ "registries": [
+  "audit_registry.json",
+  "figure_claims.json",
+  "imf_comparison_results.json",
+  "photon_vs_electron_results.json",
+  "registry_z20.json",
+  "reionization_budget.json",
+  "source_map.json",
+  "xcomp.json",
+  "yield_comparison_results.json"
+ ]
+}

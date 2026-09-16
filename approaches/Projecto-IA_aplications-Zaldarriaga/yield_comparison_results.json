@@ -1,0 +1,128 @@
+{
+  "_scenario": {
+    "scenario": "fiducial-z10",
+    "scenario_hash": "4609fe6ee468"
+  },
+  "checks": [
+    {
+      "detail": "n_H: 2.528723e-04 vs 2.528723e-04 cm^-3 (1.05e-10, i.e. round-off -- HARMONISED); E_th: 13.598435 vs 13.598435 eV (0.00e+00 -- HARMONISED on the NIST value); x_e identical. H(z): 4.465617e-17 vs 4.471729e-17 s^-1 (0.137%) -- NOT harmonised: two different evaluations of the same Planck 18 cosmology. It enters the yield only through the adiabatic loss term, which never exceeds a tenth of dK/dt.",
+      "id": "C20",
+      "name": "environments agree where harmonised, and by how much where not",
+      "state": "PASS"
+    },
+    {
+      "detail": "1e+02: D/B=1.078  1e+03: D/B=1.102  1e+04: D/B=1.044  1e+05: D/B=1.021  1e+06: D/B=1.017. Route 1 is a published deposition FIT; route 2 counts events against RBED cross sections with an explicit cascade. Nothing is shared between them but the physical scenario.",
+      "id": "C24",
+      "name": "two INDEPENDENT methods agree below 1 MeV",
+      "state": "PASS"
+    },
+    {
+      "detail": "route 1 (Bethe vs Thomson IC) 1.3030e+05 eV; route 2 (Compton vs excitation+ionization, KN-corrected) 1.4866e+05 eV; ratio 1.141. Different definitions of 'collisional', so agreement to tens of per cent is the most that is meaningful.",
+      "id": "C26",
+      "name": "E_crit: deposition-fit route vs 7-mechanism loss route",
+      "state": "PASS"
+    },
+    {
+      "detail": "D/B = 1.320 at 1e12 eV. Route 1 uses Thomson-limit IC; route 2 applies the KN kernel, F_KN = 0.8111 at b = 3.958e-02, which REDUCES the IC loss and leaves more energy for the gas. The companion work flagged this as an unquantified caveat ('KN suppression would raise the IC route'); this is the quantification: +32%.",
+      "id": "C36",
+      "name": "the D/B divergence above 1e8 eV is Klein-Nishina",
+      "state": "PASS"
+    },
+    {
+      "detail": "adiabatic expansion peaks at 9.3% of the loss rate near 3.05e+05 eV. Route 1 has no adiabatic term. Synchrotron (B0 = 1 nG) peaks at 0.0000%, Coulomb at 0.23%, bremsstrahlung at 0.0042% -- all negligible, which is why route 1 omitting them costs little.",
+      "id": "C20",
+      "name": "route 2 contains a channel route 1 does not have at all",
+      "state": "PASS"
+    },
+    {
+      "detail": "Y(1e12) = 1.17166e+04 at n=260 vs 1.17049e+04 at n=1040, rel.diff 1.00e-03",
+      "id": "C31",
+      "name": "the loss route converged in grid resolution",
+      "state": "PASS"
+    },
+    {
+      "detail": "max Y/(E/E_th) = 0.3856; min diff = 2.67e-03",
+      "id": "C20",
+      "name": "the loss route under the E/E_th ceiling and monotone",
+      "state": "PASS"
+    },
+    {
+      "detail": "min(E-D) = 0.00e+00; max E/(K/E_th) = 0.3857",
+      "id": "C20",
+      "name": "the loss+IC route >= the loss route everywhere, monotone, under the ceiling",
+      "state": "PASS"
+    },
+    {
+      "detail": "at 5% of the channel: K=2.022e+07 eV, gamma=4.058e+01, b_KN=8.21e-07, F_KN=1.00000; at 95% of the channel: K=3.554e+08 eV, gamma=6.965e+02, b_KN=1.41e-05, F_KN=0.99991. KN corrections are below 1e-4 across the window, so mixing a KN-corrected loss rate with a Thomson-limit photon spectrum is consistent. CHECKED, not assumed.",
+      "id": "C20",
+      "name": "Thomson-limit BG70 spectrum is valid where the loss+IC route operates",
+      "state": "PASS"
+    },
+    {
+      "detail": "1e+07: E/C=0.976  1e+08: E/C=1.050  1e+09: E/C=1.070  1e+12: E/C=1.071. Saturated: E = 4.9110e+06 vs C = 4.5873e+06.",
+      "id": "C24",
+      "name": "routes still agree once BOTH carry the secondary channel",
+      "state": "PASS"
+    }
+  ],
+  "derived": {
+    "B0_T_route2": 1.0000000000000002e-13,
+    "E_crit_D_eV": 148656.8563309262,
+    "E_th_eV_route1": 13.598434599702,
+    "E_th_eV_route2": 13.598434599702,
+    "Ewindow_hi_eV": 355406690.3544084,
+    "Ewindow_lo_eV": 20224355.343519654,
+    "FKN_window_hi": 0.9999149897676332,
+    "FKN_window_lo": 1.0,
+    "F_KN_at_1e12": 0.8110740829248472,
+    "H_z_s_route1": 4.465616787422464e-17,
+    "H_z_s_route2": 4.4717288570818224e-17,
+    "N_e_loss_1e+02": 2.4772703226733332,
+    "N_e_loss_1e+03": 28.353870728948092,
+    "N_e_loss_1e+06": 6523.119197167329,
+    "N_e_loss_1e+09": 10584.68709598779,
+    "N_e_loss_1e+12": 11706.819297474065,
+    "N_e_loss_ic_1e+02": 2.478082836833389,
+    "N_e_loss_ic_1e+03": 28.355979596320026,
+    "N_e_loss_ic_1e+06": 6522.959890592499,
+    "N_e_loss_ic_1e+09": 4892189.019417955,
+    "N_e_loss_ic_1e+12": 4910960.982934165,
+    "N_e_loss_ic_sat": 4910960.982934165,
+    "N_e_loss_sat": 11706.819297474065,
+    "N_gamma_loss_1e+02": 3.076581144381044,
+    "N_gamma_loss_1e+03": 28.967137039689437,
+    "W_loss_1e+02": 40.36701165986824,
+    "W_loss_1e+03": 35.26855326243139,
+    "W_loss_1e+04": 36.18304922134145,
+    "W_loss_1e+05": 45.40433018225491,
+    "W_loss_1keV": 35.26855326243139,
+    "adiabatic_peak_E_eV": 304585.53406742844,
+    "adiabatic_peak_frac": 0.09292318768874995,
+    "env_dE_th": 0.0,
+    "env_dH_z": 0.001368695512918484,
+    "env_dn_H": 1.0487620075622407e-10,
+    "loss_over_ic_1e12": 1.319955356549124,
+    "loss_over_ic_max": 1.1022390191202962,
+    "loss_over_ic_min": 1.0168732169987413,
+    "lossic_over_depfit_1e12": 1.0705540357565733,
+    "lossic_over_loss_sat": 419.495753555689,
+    "n_H_cm3_route1": 0.00025287233594637685,
+    "n_H_cm3_route2": 0.00025287233597289714,
+    "peakE_adiabatic_eV": 304585.53406742844,
+    "peakE_bremsstrahlung_eV": 608781.0885914756,
+    "peakE_compton_eV": 1000000000000.0,
+    "peakE_coulomb_eV": 100.0,
+    "peakE_excitation_eV": 100.0,
+    "peakE_ionization_eV": 4509.572135676144,
+    "peakE_synchrotron_eV": 1000000000000.0,
+    "peakfrac_adiabatic": 0.09292318768874995,
+    "peakfrac_bremsstrahlung": 4.1586855439721024e-05,
+    "peakfrac_compton": 0.9999997027743012,
+    "peakfrac_coulomb": 0.0023357435625517156,
+    "peakfrac_excitation": 0.35322551115872775,
+    "peakfrac_ionization": 0.7303645477630569,
+    "peakfrac_synchrotron": 1.1764229085703999e-07,
+    "x_e_route1": 0.0001,
+    "x_e_route2": 0.0001
+  }
+}

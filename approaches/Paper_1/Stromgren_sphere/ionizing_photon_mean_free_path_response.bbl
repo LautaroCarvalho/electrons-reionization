@@ -1,0 +1,61 @@
+\begin{thebibliography}{7}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Cen and Haiman(2000)]{Cen2000}
+Renyue Cen and Zoltan Haiman.
+\newblock {Quasar Strömgren Spheres Before Cosmological Reionization}.
+\newblock \emph{arXiv:astro-ph/0006376v2 (preprint)}, 2000.
+\newblock \doi{10.1086/312937}.
+\newblock File: \texttt{Cen2000\_arXiv\_astro-ph\_0006376v2.pdf}.
+
+\bibitem[Choudhury(2022)]{Choudhury2022}
+Tirthankar~Roy Choudhury.
+\newblock {A Short Introduction to Reionization Physics}.
+\newblock \emph{General Relativity and Gravitation, 54, 102 (2022)}, 2022.
+\newblock \doi{10.1007/s10714-022-02987-4}.
+\newblock File: \texttt{Choudhury2022\_arXiv2209.08558v1.pdf}.
+
+\bibitem[Gnedin and Madau(2022)]{Gnedin2022}
+Nickolay~Y. Gnedin and Piero Madau.
+\newblock {Modeling Cosmic Reionization}.
+\newblock \emph{arXiv:2208.02260v2 (preprint)}, 2022.
+\newblock File: \texttt{Gnedin2022\_arXiv2208.02260v2.pdf}.
+
+\bibitem[Miralda-Escude et~al.(2000)Miralda-Escude, Haehnelt, and
+  Rees]{MiraldaEscude2000}
+Jordi Miralda-Escude, Martin Haehnelt, and Martin~J. Rees.
+\newblock {Reionization of the Inhomogeneous Universe}.
+\newblock \emph{Astrophys.J. 530 (2000) 1-16}, 2000.
+\newblock \doi{10.1086/308330}.
+\newblock File: \texttt{MiraldaEscude1998\_arXiv\_astro-ph\_9812306v2.pdf}.
+
+\bibitem[Nebrin(2023)]{Nebrin2023}
+Olof Nebrin.
+\newblock {Case A or Case B? The effective recombination coefficient in gas
+  clouds of arbitrary optical thickness}.
+\newblock \emph{arXiv:2305.05764v1 (preprint)}, 2023.
+\newblock \doi{10.3847/2515-5172/acd37a}.
+\newblock File: \texttt{Nebrin2023\_arXiv2305.05764v1.pdf}.
+
+\bibitem[{Planck Collaboration}(2020)]{Planck2018VI}
+{Planck Collaboration}.
+\newblock {Planck 2018 results. VI. Cosmological parameters}.
+\newblock \emph{A\&A 641, A6 (2020)}, 2020.
+\newblock \doi{10.1051/0004-6361/201833910}.
+\newblock File: \texttt{Planck2018VI\_arXiv1807.06209v4.pdf}.
+
+\bibitem[Robertson et~al.(2015)Robertson, Ellis, Furlanetto, and
+  Dunlop]{Robertson2015}
+Brant~E. Robertson, Richard~S. Ellis, Steven~R. Furlanetto, and James~S.
+  Dunlop.
+\newblock {Cosmic Reionization and Early Star-forming Galaxies: A Joint
+  Analysis of New Constraints from Planck and the Hubble Space Telescope}.
+\newblock \emph{ApJL 802, L19 (2015)}, 2015.
+\newblock \doi{10.1088/2041-8205/802/2/L19}.
+\newblock File: \texttt{Robertson2015\_arXiv1502.02024v1.pdf}.
+
+\end{thebibliography}

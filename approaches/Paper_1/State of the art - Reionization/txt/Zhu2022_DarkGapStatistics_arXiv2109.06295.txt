@@ -1,0 +1,3498 @@
+Draft version September 15, 2021
+Typeset using LATEX twocolumn style in AASTeX63
+
+Chasing the Tail of Cosmic Reionization with Dark Gap Statistics in the Lyα Forest over 5 < z < 6
+
+arXiv:2109.06295v1 [astro-ph.CO] 13 Sep 2021
+
+Yongda Zhu ,1 George D. Becker ,1 Sarah E. I. Bosman ,2 Laura C. Keating ,3
+Holly M. Christenson ,1 Eduardo Bañados ,2 Fuyan Bian ,4 Frederick B. Davies ,2
+Valentina D’Odorico ,5, 6, 7 Anna-Christina Eilers ,8, ∗ Xiaohui Fan ,9 Martin G. Haehnelt ,10
+Girish Kulkarni ,11 Andrea Pallottini ,6 Yuxiang Qin ,12, 13 Feige Wang ,9, ∗ and Jinyi Yang 9, †
+1 Department of Physics & Astronomy, University of California, Riverside, CA 92521, USA
+2 Max-Planck-Institut für Astronomie, Königstuhl 17, D-69117 Heidelberg, Germany
+3 Leibniz-Institut für Astrophysik Potsdam (AIP), An der Sternwarte 16, D-14482 Potsdam, Germany
+4 European Southern Observatory, Alonso de Córdova 3107, Casilla 19001, Vitacura, Santiago 19, Chile
+5 INAF-Osservatorio Astronomico di Trieste, Via Tiepolo 11, I-34143 Trieste, Italy
+6 Scuola Normale Superiore, Piazza dei Cavalieri 7, I-56126 Pisa, Italy
+7 IFPU—Institute for Fundamental Physics of the Universe, via Beirut 2, I-34151 Trieste, Italy
+8 MIT Kavli Institute for Astrophysics and Space Research, 77 Massachusetts Ave., Cambridge, MA 02139, USA
+9 Steward Observatory, University of Arizona, 933 North Cherry Avenue, Tucson, AZ 85721, USA
+10 Kavli Institute for Cosmology and Institute of Astronomy, Madingley Road, Cambridge, CB3 0HA, UK
+11 Tata Institute of Fundamental Research, Homi Bhabha Road, Mumbai 400005, India
+12 School of Physics, University of Melbourne, Parkville, VIC 3010, Australia
+13 ARC Centre of Excellence for All Sky Astrophysics in 3 Dimensions (ASTRO 3D)
+
+Submitted to ApJ
+ABSTRACT
+We present a new investigation of the intergalactic medium (IGM) near the end of reionization using
+“dark gaps” in the Lyman-alpha (Lyα) forest. Using spectra of 55 QSOs at zem > 5.5, including
+new data from the XQR-30 VLT Large Programme, we identify gaps in the Lyα forest where the
+transmission averaged over 1 comoving h−1 Mpc bins falls below 5%. Nine ultra-long (L > 80 h−1 Mpc)
+dark gaps are identified at z < 6. In addition, we quantify the fraction of QSO spectra exhibiting gaps
+longer than 30 h−1 Mpc, F30 , as a function of redshift. We measure F30 ' 0.9, 0.6, and 0.15 at z = 6.0,
+5.8, and 5.6, respectively, with the last of these long dark gaps persisting down to z ' 5.3. Comparing
+our results with predictions from hydrodynamical simulations, we find that the data are consistent
+with models wherein reionization extends significantly below redshift six. Models wherein the IGM is
+essentially fully reionized that retain large-scale fluctuations in the ionizing UV background at z . 6
+are also potentially consistent with the data. Overall, our results suggest that signature of reionization
+in the form of islands of neutral hydrogen and/or large-scale fluctuations in the ionizing background
+remain present in the IGM until at least z ' 5.3.
+Unified Astronomy Thesaurus concepts: Reionization (1383), Intergalactic medium (813), Quasar absorption line spectroscopy (1317), High-redshift galaxies (734)
+1. INTRODUCTION
+
+Corresponding author: Yongda Zhu
+yzhu144@ucr.edu
+∗ NASA Hubble Fellow
+† Strittmatter Fellow
+
+The reionization of the intergalactic medium (IGM) is
+the last major phase transition in the history of the Universe. In the widely accepted picture, neutral hydrogen
+in the IGM was reionized by ultraviolet photons emitted by the first luminous sources (e.g., Bromm & Larson
+2004; McQuinn 2016; Dayal & Ferrara 2018). Determining when reionization occurred as well as what sources
+were responsible is therefore important for the under-
+
+2
+
+Zhu et al.
+
+standing of formation and evolution of the first stars,
+galaxies, and black holes.
+Multiple observations now constrain the timing of
+reionization. Cosmic microwave background (CMB)
+measurements suggest a midpoint at redshift zre =
+7.7 ± 0.7 (Planck Collaboration et al. 2020; see also de
+Belsunce et al. 2021). The redshift evolution in the fraction of UV-selected galaxies detected in Lyman-alpha
+(Lyα) emission also suggests that the IGM was significantly neutral near z ∼ 7–8 (e.g., Mason et al. 2018,
+2019; Hoag et al. 2019; Hu et al. 2019, and references
+therein, but see Wold et al. 2021). These results are
+broadly consistent with multiple probes of the IGM using QSO spectra. For example, the IGM thermal history
+at z > 4 inferred from the Lyα flux power spectrum suggests a mean redshift of reionization near zre ' 8.5+1.1
+−0.8
+(Boera et al. 2019, see also Gaikwad et al. 2020; Walther
+et al. 2019). Similarly, Lyα damping wing measurements
+of zem > 7 QSOs indicate that the IGM was significantly
+neutral at z ∼ 7–7.5 (e.g., Bañados et al. 2018; Davies
+et al. 2018a; Greig et al. 2017, 2019; Wang et al. 2020;
+Yang et al. 2020a). The appearance of transmitted flux
+in the Lyα and Lyβ forests suggests that the reionization mostly completed by z ' 6 (e.g., McGreer et al.
+2015). On the other hand, large fluctuations in the observed IGM effective opacity (τeff = − ln hF i, where F
+is the continuum-normalized flux) in the Lyα forest at
+z < 6 suggest that signatures of reionization may persist in the IGM down to even lower redshifts (Fan et al.
+2006; Becker et al. 2015; Bosman et al. 2018; Eilers et al.
+2018; Yang et al. 2020b; Bosman et al. 2021a).
+Multiple models have been proposed to explain the
+large-scale fluctuations in IGM Lyα opacity at z < 6.
+If the IGM is mostly ionized at z ≥ 6, then large variations in Lyα opacity may persist to lower redshifts due
+to either lingering temperature fluctuations produced by
+inhomogeneous reionization (D’Aloisio et al. 2015), or
+fluctuations in the ionizing UV background produced by
+a short and spatially variable mean free path (Davies &
+Furlanetto 2016; Nasir & D’Aloisio 2020), or rare sources
+such as QSOs (Chardin et al. 2017; see also Meiksin
+2020). Alternatively, if reionization continues substantially to z < 6 then the observed scatter in τeff could be
+due to the presence of large patches of neutral gas coupled with UVB fluctuations (e.g., Kulkarni et al. 2019a;
+Keating et al. 2020a; Nasir & D’Aloisio 2020; Qin et al.
+2021). The combination of neutral patches and UVB
+fluctuations may naturally explain the presence of giant
+Lyα troughs such as the 110 h−1 Mpc trough towards
+ULAS J0148+0600 identified by Becker et al. (2015)
+
+(e.g., Keating et al. 2020b). A late-ending reionization1
+scenario is also consistent with the evolution of O I absorbers at z ' 6 (Becker et al. 2019), and is preferred
+by recent Bayesian inference results that simultaneously
+match Lyα forest, CMB, and galaxy data (Choudhury
+et al. 2021; Qin et al. 2021).
+Some progress has been made towards distinguishing
+between these models observationally. Measurements of
+Lyα emitting galaxies (LAEs, Becker et al. 2018, Christenson et al., in prep) and Lyman break galaxies (LBGs,
+Kashino et al. 2020) in the field of ULAS J0148+0600
+have demonstrated that the Lyα trough along this line of
+sight is associated with a large-scale underdensity. This
+result disfavors the temperature fluctuation model, but
+is consistent with either the pure UVB fluctuation or
+late-reionization model. The QSO UVB model is potentially also consistent with this result, though it is disfavored by measurements of the QSO luminosity function
+near z ∼ 6 (e.g., Parsa et al. 2018; Kulkarni et al. 2019b).
+Recent measurements of the mean free path of ionizing
+photons over 5 < z < 6 are consistent with late reionization models wherein the IGM is still significantly neutral
+at z = 6, and disfavor models in which reionization ends
+early enough that the IGM relaxes hydrodynamically
+by z = 6 (Becker et al. 2021). Simultaneously matching the mean free path measurements and other IGM
+constraints further favors a late and rapid reionization
+scenario driven by galaxies that are efficient at producing and/or emitting ionizing photons (Cain et al. 2021;
+Davies et al. 2021).
+A key question, therefore, is whether and for how long
+the impacts of reionization continued below z = 6. It
+is also of interest to determine whether a late reionization scenario with islands of neutral gas and UVB fluctuations at z < 6 can be distinguished observationally
+from an early reionization scenario with UVB fluctuations alone. Better measurements of the spatial scale of
+the Lyα opacity fluctuations may provide some insights.
+Determining how long these fluctuations persist and how
+they evolve with redshift may also be helpful. One way
+to do this is by identifying individual “dark gaps” in
+the Lyα forest (e.g. Songaila & Cowie 2002; Furlanetto
+et al. 2004; Paschos & Norman 2005; Fan et al. 2006;
+Gallerani et al. 2008), which could be created by regions
+of neutral IGM and/or low UV background (e.g., Nasir
+& D’Aloisio 2020). Because dark gaps contain multi1 Throughout this paper, for convenience, we refer to “the end of
+
+reionization” as when the volume filling factor of ionized gas in
+the IGM reaches 99%. We use “early” for scenarios wherein reionization ends at z ≥ 6, and “late” for cases where reionization ends
+below z = 6.
+
+3
+
+Dark Gap Statistics
+
+from the XQR-30 VLT Large Programme. The XQR-30
+program is targeting 30 bright QSOs at 5.8 . z . 6.6
+for the study of reionization and other aspects of the
+early Universe. The full data set will be described in
+D’Odorico et al., in prep. The 23 objects out of the
+XQR-30 sample selected for this project are those that
+meet our S/N threshold and do not contain strong BAL
+features. In addition, we use 30 spectra reduced from
+archival X-Shooter and ESI data, of which 27 are from
+the sample of Becker et al. (2019). Recent deep (20 hour)
+X-Shooter observations (PI: Fuyan Bian) of the lensed
+z = 6.5 QSO J0439+1634 are also included in the dark
+gaps statistics. Finally, we acquired a deep (7 hour)
+ESI spectrum of SDSS J1250+3130. Observations for
+all objects except SDSS J1250+3130 were taken without
+any foreknowledge of dark gaps in the Lyα forest. In the
+case of SDSS J1250+3130, we targeted the QSO based
+on indications from a shallower (1 hour) ESI spectrum
+that its spectrum contained a long dark gap in the Lyα
+forest. We discuss the impact of including this object
+on our results in Section 3.4.
+Details of the data reduction are given in Becker et al.
+(2019). Briefly, we used a custom pipeline that includes
+optimal techniques for sky subtraction (Kelson 2003)
+and one-dimensional spectral extraction (Horne 1986).
+Telluric absorption corrections were computed for individual exposures using models based on the Cerro
+Paranal Advanced Sky Model (Noll et al. 2012; Jones
+et al. 2013). The spectra were extracted using 10 km s−1
+pixels for the VIS arm of X-Shooter and 15 km s−1 pixels
+for ESI. Typical resolutions for the X-Shooter and ESI
+are FWHM ≈ 25 km s−1 and 45 km s−1 , respectively.
+In addition, for J0439+1634, to reduce the contamination from continuum emission of a foreground galaxy, we
+fit a power law of the flux zero point over the Lyα forest
+and subtract it from the flux. The spectra are plotted
+in Figure Set 1.
+
+scale spatial information, they provide complementary
+information to τeff measurements averaged over intervals
+of fixed length, and may therefore be useful for distinguishing between models of the IGM at z < 6.
+In this paper, we use dark gap statistics to characterize the opacity of the IGM over 5 . z . 6. In particular, we use these statistics to determine how long large
+Lyα-opaque regions persist in the IGM, and whether
+the data are consistent with existing late reionization
+models and/or early reionization models that retain a
+fluctuating UVB. We use a sample of 55 high signalto-noise (S/N) spectra of QSOs at 5.5 . zem . 6.5,
+including 23 new X-Shooter spectra from the XQR-30
+VLT Large Programme (D’Odorico et al., in prep). In
+addition to the distribution of dark gap lengths, we
+measure the fraction of QSO spectra exhibiting long
+(L ≥ 30 h−1 Mpc) dark gaps as a function of redshift
+for the first time.
+We present our data in Section 2. In Section 3 we
+describe our methods for measuring dark gaps and the
+results of dark gap statistics. Section 4 introduces the
+models to which we compare our measurements. We
+then discuss the implications for the models in Section
+5. Finally, we summarize our conclusions in Section 6.
+Throughout this paper we quote distances in comoving
+units unless otherwise noted, and assume a ΛCDM cosmology with h = 0.678, Ωm = 0.308 and ΩΛ = 0.692.
+
+2. THE DATA
+
+2.1. QSO spectra
+This study is based on spectra of 55 QSOs at 5.5 .
+zem . 6.5 taken with the X-Shooter spectrograph on
+the Very Large Telescope (VLT; Vernet et al. 2011) and
+the Echellette Spectrograph and Imager (ESI) on Keck
+(Sheinis et al. 2002). Of these, 23 X-Shooter spectra are
+
+Table 1. QSO spectra used in this work
+No.
+
+QSO
+
+zem
+
+[Ref.]
+
+Source
+
+Instrument
+
+S/N
+
+(1)
+
+(2)
+
+(3)
+
+(4)
+
+(5)
+
+(6)
+
+J2207-0416
+
+5.529b
+
+archival (B19)
+
+X-Shooter
+
+42
+
+J0108+0711
+
+b
+
+archival (B19)
+
+X-Shooter
+
+29
+
+b
+
+1
+2
+
+5.577
+
+3
+
+J1335-0328
+
+5.693
+
+archival (B19)
+
+X-Shooter
+
+30
+
+4
+
+SDSSJ0927+2001
+
+5.7722c
+
+archival (B19)
+
+X-Shooter
+
+76
+
+SDSSJ1044-0125
+
+o
+
+other archival
+
+ESI
+
+71
+
+5
+
+5.7847
+
+Table 1 continued
+
+4
+
+Zhu et al.
+Table 1 (continued)
+No.
+
+QSO
+
+zem
+
+[Ref.]
+
+Source
+
+Instrument
+
+S/N
+
+(1)
+
+(2)
+
+(3)
+
+(4)
+
+(5)
+
+(6)
+
+6
+
+PSOJ065+01
+
+5.790q
+
+XQR-30
+
+X-Shooter
+
+47
+
+7
+
+PSOJ308-27
+
+5.794q
+
+XQR-30
+
+X-Shooter
+
+58
+
+g
+
+8
+
+SDSSJ0836+0054
+
+5.810
+
+other archival
+
+ESI
+
+152
+
+9
+
+PSOJ004+17
+
+5.8165e
+
+other archival
+
+X-Shooter
+
+21
+
+5.820
+
+b
+
+archival (B19)
+
+ESI
+
+93
+
+q
+
+XQR-30
+
+X-Shooter
+
+28
+
+archival (B19)
+
+ESI
+
+41
+
+10
+
+SDSSJ0002+2550
+
+11
+
+PSOJ242-12
+
+5.834
+
+12
+
+SDSSJ0840+5624
+
+5.8441n
+b
+
+13
+
+SDSSJ0005-0006
+
+5.847
+
+archival (B19)
+
+ESI
+
+24
+
+14
+
+PSOJ025-11
+
+5.849q
+
+XQR-30
+
+X-Shooter
+
+53
+
+15
+
+PSOJ183-12
+
+5.857q
+
+XQR-30
+
+X-Shooter
+
+66
+
+16
+
+SDSSJ1411+1217
+
+5.904g
+
+archival (B19)
+
+ESI
+
+46
+
+q
+
+17
+
+PSOJ108+08
+
+5.950
+
+XQR-30
+
+X-Shooter
+
+70
+
+18
+
+PSOJ056-16
+
+5.9670e
+
+archival (B19)
+
+X-Shooter
+
+35
+
+PSOJ029-29
+
+q
+
+XQR-30
+
+X-Shooter
+
+51
+
+b
+
+19
+
+5.981
+
+20
+
+SDSSJ0818+1722
+
+5.997
+
+archival (B19)
+
+X-Shooter
+
+108
+
+21
+
+ULASJ0148+0600
+
+5.998b
+
+archival (B19)
+
+X-Shooter
+
+126
+
+b
+
+22
+
+PSOJ340-18
+
+5.999
+
+archival (B19)
+
+X-Shooter
+
+32
+
+23
+
+PSOJ007+04
+
+6.0008d
+
+XQR-30
+
+X-Shooter
+
+53
+
+24
+
+SDSSJ2310+1855
+
+6.0031o
+
+XQR-30
+
+X-Shooter
+
+81
+
+25
+
+SDSSJ1137+3549
+
+6.007j
+
+archival (B19)
+
+ESI
+
+28
+
+b
+
+26
+
+ATLASJ029.9915-36.5658
+
+6.021
+
+XQR-30
+
+X-Shooter
+
+48
+
+27
+
+SDSSJ1306+0356
+
+6.0330k
+
+archival (B19)
+
+X-Shooter
+
+71
+
+28
+
+J0408-5632
+
+q
+
+6.035
+
+XQR-30
+
+X-Shooter
+
+71
+
+d
+
+29
+
+ULASJ1207+0630
+
+6.0366
+
+archival (B19)
+
+X-Shooter
+
+25
+
+30
+
+SDSSJ2054-0005
+
+6.0391o
+
+archival (B19)
+
+ESI
+
+29
+
+e
+
+31
+
+PSOJ158-14
+
+6.0681
+
+XQR-30
+
+X-Shooter
+
+59
+
+32
+
+SDSSJ0842+1218
+
+6.0763d
+
+XQR-30
+
+X-Shooter
+
+71
+
+j
+
+33
+
+SDSSJ1602+4228
+
+6.079
+
+archival (B19)
+
+ESI
+
+34
+
+34
+
+PSOJ239-07
+
+6.1098e
+
+XQR-30
+
+X-Shooter
+
+65
+
+35
+
+CFHQSJ1509-1749
+
+6.1225d
+
+archival (B19)
+
+X-Shooter
+
+54
+
+b
+
+36
+
+SDSSJ2315-0023
+
+6.124
+
+archival (B19)
+
+ESI
+
+25
+
+37
+
+ULASJ1319+0950
+
+6.1330o
+
+archival (B19)
+
+X-Shooter
+
+86
+
+38
+
+SDSSJ1250+3130
+
+6.137j
+
+new observation
+
+ESI
+
+53
+
+39
+
+VIKJ2318-3029
+
+6.1458d
+
+archival (B19)
+
+X-Shooter
+
+21
+
+d
+
+40
+
+PSOJ217-16
+
+6.1498
+
+XQR-30
+
+X-Shooter
+
+68
+
+41
+
+PSOJ217-07
+
+6.165q
+
+XQR-30
+
+X-Shooter
+
+42
+
+e
+
+42
+
+PSOJ359-06
+
+6.1718
+
+XQR-30
+
+X-Shooter
+
+67
+
+43
+
+PSOJ060+24
+
+6.177q
+
+XQR-30
+
+X-Shooter
+
+53
+
+PSOJ065-26
+
+d
+
+6.1877
+
+XQR-30
+
+X-Shooter
+
+73
+
+PSOJ308-21
+
+d
+
+archival (B19)
+
+X-Shooter
+
+26
+
+44
+45
+
+6.2341
+
+Table 1 continued
+
+5
+
+Dark Gap Statistics
+Table 1 (continued)
+No.
+
+QSO
+
+zem
+
+[Ref.]
+
+Source
+
+Instrument
+
+S/N
+
+(1)
+
+(2)
+
+(3)
+
+(4)
+
+(5)
+
+(6)
+
+46
+
+SDSSJ1030+0524
+
+6.309f
+
+archival (B19)
+
+X-Shooter
+
+35
+
+47
+
+SDSSJ0100+2802
+
+6.3270l
+
+archival (B19)
+
+X-Shooter
+
+212
+
+48
+
+ATLASJ025.6821-33.4627
+
+6.3373k
+
+archival (B19)
+
+X-Shooter
+
+61
+
+49
+
+J1535+1943
+
+6.381q
+
+XQR-30
+
+X-Shooter
+
+30
+
+50
+
+SDSSJ1148+5251
+
+6.4189h
+
+archival (B19)
+
+ESI
+
+64
+
+d
+
+51
+
+J1212+0505
+
+6.4386
+
+XQR-30
+
+X-Shooter
+
+41
+
+52
+
+J0439+1634
+
+6.5188p
+
+new observation
+
+X-Shooter
+
+224
+
+53
+
+VDESJ0224-4711
+
+6.5223m
+
+XQR-30
+
+X-Shooter
+
+29
+
+54
+
+PSOJ036+03
+
+6.541a
+
+archival (B19)
+
+X-Shooter
+
+38
+
+XQR-30
+
+X-Shooter
+
+30
+
+55
+
+PSOJ323+12
+
+i
+
+6.5881
+
+Note—Columns: (1) QSO index number, (2) QSO name, (3) QSO redshift with reference,
+(4) source of the spectrum used for dark gap statistics, (5) instrument used for dark gap
+statistics, (6) continuum signal-to-noise ratio per 30 km s−1 near rest wavelength 1285 Å.
+Sources of the spectra. XQR-30: spectra from the XQR-30 program; new observation:
+spectra from new observations; archival (B19): archival spectra used and reduced in
+Becker et al. (2019); other archival: spectra from the public archives but not included in
+Becker et al. (2019).
+References— Redshift lines and references. a. [C II] 158µm: Bañados et al. (2015); b.
+apparent start of the Lyα forest: Becker et al. (2019); c. CO: Carilli et al. (2007); d.
+[C II] 158µm: Decarli et al. (2018); e. [C II] 158µm: Eilers et al. (2020); f. Mg II: Jiang
+et al. (2007); g. Mg II: Kurk et al. (2007); h. [C II] 158µm: Maiolino et al. (2005); i.
+[C II] 158µm: Mazzucchelli et al. (2017); j. Mg II: Shen et al. (2019); k. [C II] 158µm:
+Venemans et al. (2020); l. [C II] 158µm: Wang et al. (2019); m. [C II] 158µm: Wang
+et al. (2021); n. CO: Wang et al. (2010); o. [C II] 158µm: Wang et al. (2013); p. [C II]
+158µm: Yang et al. (2019); q. apparent start of the Lyα forest: this work.
+
+Fig. Set 1.
+
+QSO spectra and continuum fits
+
+We adopt QSO redshifts measured from CO, [C II]
+158µm or Mg II lines if available. Otherwise we use redshifts inferred from the apparent start of the Lyα forest,
+following Becker et al. (2019). Table 1 summarizes QSO
+spectra used in this work with the QSO redshifts, instruments, and estimated signal-to-noise ratios, which
+is calculated as the median ratio of unabsorbed QSO
+continuum to noise per 30 km s−1 near 1285 Å in the
+rest frame.
+2.2. Continuum Fitting
+The detection of dark gaps relies on the construction
+of the intrinsic continuum over the Lyα forest. In order
+to estimate QSO continua blueward of the Lyα emission line, we use Principal Component Analysis (PCA),
+which is less biased than the conventional power law
+fitting (e.g., Bosman et al. 2021b). In this work, we
+apply the log-PCA method of Davies et al. (2018b) as
+implemented in the Lyα forest portion of the spectrum
+
+by Bosman et al. (2021a), with 15 and 10 components
+used for the red-side (rest-frame wavelength λ0 > 1230
+Å) and blue-side (λ0 < 1170 Å) continuum. For each
+QSO, we fit the red-side continuum with principal components, and map the corresponding red principal component coefficients to the blue side coefficients with a
+projection matrix. For X-Shooter spectra with observations from the NIR arm, we fit the red continuum over
+1230 < λ < 2000 Å in the rest frame.
+The ESI spectra are fit using an optical-only PCA,
+which is presented in Bosman et al. (2021b). QSOs with
+strong broad absorption lines (BALs) in their spectra
+were excluded from our sample. For QSOs with mild absorption features that interfere minimally with the Lyα
+forest, we mask out the absorption lines when fitting
+their spectra. In addition, we intentionally leave out the
+Lyα emission peak and the proximity zone when fitting
+and predicting the continuum on account of the large
+object-to-object variations in these regions. The typical
+1σ uncertainty of the PCA continuum fitting over the
+Lyα forest is less than 10%. Continuum fits and blue-
+
+6
+
+Zhu et al.
+
+950
+
+Restframe Wavelength (Å)
+1100
+1150
+1200
+
+1250
+
+1300
+
+1350
+
+SDSSJ1250+3130 zem = 6.137
+
+
+
+10
+
+s cm2 Å
+
+1050
+
+5
+
+Fλ
+
+
+
+10−17 erg
+
+1000
+
+0
+
+Normalized Flux
+
+7000
+
+7500
+
+8000
+Wavelength (Å)
+
+8500
+
+9000
+
+9500
+
+1.0
+zgap = 5.42 − 5.51
+30 h−1 Mpc
+
+0.5
+
+zgap = 5.64 − 5.91
+81 h−1 Mpc
+
+0.0
+7400
+
+7600
+
+7800
+
+8000
+Wavelength (Å)
+
+8200
+
+8400
+
+Figure 1. Spectrum, continuum fits and dark gap detection details of the zem = 6.137 quasar SDSS J1250+3130. Top: QSO
+spectrum and continuum fits. The light blue and dark red lines represents flux and flux error in the original binning. Dashed
+red and blue curves are the best-fitting QSO continuum based on PCA. Bottom: Lyα forest and dark gaps detected. The
+dashed black line labels the flux threshold of 0.05. The thick black line displays the flux binned to 1 h−1 Mpc. Light blue and
+dark red lines show the flux and flux error in the original binning. Dark gaps detected are shaded with gray. We also label the
+redshift range and length of each long dark gap (L ≥ 30 h−1 Mpc), if any.
+(The complete figure set (55 images) is available in the online journal. For this preprint, online materials are available at
+https://ydzhuastro.github.io/Zhu21.html.)
+
+side predictions are shown in Figure Set 1 along with the
+QSO spectra. We also verify that our dark gap statistics results do not significant change if we use power-law
+continua (see Appendix C), which have a typical bias of
+∼10% over the Lyα forest (Bosman et al. 2021b).
+3. DARK GAP STATISTICS
+
+3.1. Method
+We define a dark gap to be a continuous spectral region in which all pixels binned to 1 h−1 Mpc have an
+observed normalized flux F = Fobs /Fc < 0.05, where
+Fobs is the observed flux and Fc is the continuum flux.
+The minimum length of a dark gap is 1 h−1 Mpc. We apply this definition when searching for dark gaps in both
+the real data and the mock spectra. The bin size and
+flux threshold were chosen to enable a uniform analysis
+over our large sample of spectra. A bin size of 1 h−1 Mpc
+(corresponding to a velocity interval of ∆v ' 150 km s−1
+at z = 5.6) provides a convenient scale that preserves
+most of the structure of the Lyα forest. The choice of
+the flux threshold Ft is mainly restricted by the quality of the data. Our choice of Ft = 0.05 corresponds to
+
+non-detection of transmission lower than approximately
+twice the binned flux error (2σ) in the spectrum with the
+lowest S/N in our sample. Using such a threshold, all
+dark gaps longer than 30 h−1 Mpc have τeff > 4. 2 We
+have tested that using 0.1 or 0.025 for the flux threshold
+does not change our conclusions fundamentally when applying the same criteria to both the observed and mock
+spectra. Setting Ft = 0.1 tends to yield dark gaps that
+are less opaque, while setting Ft = 0.025 would decrease
+the number of usable QSO sightlines from 55 to 37.
+In order to avoid the QSO proximity region, we identify dark gaps in the Lyα forest starting from 7 proper
+Mpc (pMpc) blueward from the QSO, which is close to
+the size of the largest proximity zones of bright QSOs
+at these redshifts (Eilers et al. 2017, 2020). On the
+blue end, we limit our search to greater than 1041 Å
+2 Throughout this paper,
+
+τeff of a dark gap is calculated based
+on flux averaged along the full length of the gap rather than
+over windows of a fixed length. Most low τeff values for short
+dark gaps are caused by skyline subtraction or telluric correction
+residuals.
+
+7
+
+Dark Gap Statistics
+in the rest frame in order to avoid contamination from
+associated Lyβ or O VI absorption (e.g., Becker et al.
+2015). For the purpose of comparing our results to
+simulations, we wish to avoid dark gaps that may be
+truncated by transmission peaks within the proximity
+zone. When quantifying the fraction of lines of sight
+that intersect gaps of length L ≥ 30 h−1 Mpc (Sections
+3.4 and 3.5), the highest redshift at which we register
+an individual sightline that shows a long gap, if any,
+is therefore 30 h−1 Mpc blueward of our proximity zone
+cut, although the gap may include pixels that extend up
+to the proximity zone. Nevertheless, we still record the
+full lengths of gaps extending to this 30 h−1 Mpc “buffer
+zone” when searching for the longest possible dark gaps
+in both data and simulations. Dark gaps completely located in the QSO proximity zone and/or in this “buffer
+zone”, however, are discarded. This ensures that the
+pixel at the red end of each sightline may intersect a
+long (L ≥ 30 h−1 Mpc) dark gap.3 Finally, we limit our
+analysis to z < 6 because the mean transmitted flux at
+z > 6 is so low that most spectra show long dark gaps,
+making the dark gap statistics less informative.
+We note that there is no perfect way to handle the
+proximity zone effect. It is difficult to precisely define and measure the proximity zone size for each QSO,
+which partly motivates our choice to use a fixed proximity zone cut. The proximity zone for the brightest
+QSOs in our sample (e.g., SDSS J0100+2802 and VDES
+J0224+4711) may be larger than our adopted cut of 7
+pMpc. Fortunately, the use of an additional 30 h−1 Mpc
+buffer zone minimizes the potential effect of the larger
+proximity zone of these objects. In addition, because we
+limit our statistics over 5 < z < 6, proximity zone transmission at z > 6 towards some extremely bright QSOs
+does not impact our results. Still, one should treat dark
+gaps near the QSO proximity zone with caution.
+Noisy residuals from skyline subtraction and telluric
+correction may divide an otherwise continuous region
+of depressed flux. To deal with this, when searching
+for dark gaps we mask out ±75 km s−1 intervals of the
+spectra centered at peaks in the flux error array, which
+typically correspond to skyline residuals. The exception to this is that we do not mask out any pixels with
+F > 3σF . For consistency, we apply the same masking
+3 If we do not introduce this “buffer zone”, there is a possibility
+
+that the F30 (Section 3.4) is underestimated near the red end of
+a sightline, since there can exist otherwise > 30 h−1 Mpc gaps
+that are truncated by the edge or peaks in the proximity zone.
+
+procedure to the mock spectra. 4 In Appendix B, we
+use the mock spectra to show that such masking only
+produces a minor change in the results. We also test
+that the impact of masking telluric correction residuals
+near 7600-7650 Å is neglectable.
+As for contamination from damped Lyα systems
+(DLAs) or other metal-enriched absorbers, we made no
+correction for their effect on dark gap detection following, e.g., Fan et al. (2006). Even strong DLAs can
+hardly, on their own, produce dark gaps as long as 30
+h−1 Mpc, which are the primary focus of this work. Nevertheless, in the results we label dark gaps with intervening metal systems for reference based on the systems
+identified by Chen et al. (2017) and Becker et al. (2019),
+as well as our own inspections. We visually searched all
+L ≥ 30 h−1 Mpc dark gaps for metal absorbers not listed
+in the literature. The systems were identified via the coincidence of multiple metal lines in redshift. The metal
+lines we used include C II λ1334, C IV λλ1548, 1550, O I
+λ1302, Mg II λλ2797, 2803, Al II λ1670, Si II λ1527, and
+Si IV λλ1394, 1403. A detection required these metal
+lines (if available) to have significant absorption features
+and self-consistent velocity profiles at the same redshift.
+We have a good wavelength coverage for most metal lines
+mentioned above in QSO spectra taken with X-Shooter.
+Even for these objects, however, we caution that the list
+of metal absorbers may be still incomplete. A full list
+of metal absorbers in the XQR-30 spectra will be presented by R. Davies et al., in prep. We also note that
+the simulations we used do not include DLAs or other
+metal-enriched absorbers.
+3.2. Notable dark gaps
+Long dark gaps play an important role in characterizing the IGM in the later stages of reionization. Among
+50 dark gaps with L ≥ 30 h−1 Mpc detected in our sample, Figure 2 displays some notable examples. They either extend down to or below z ∼ 5.5, are extremely
+long (L > 80 h−1 Mpc), or both.
+Two long dark gaps entirely at z < 5.5 are identified towards PSO J183-12 and PSOJ340-18. They span
+zgap = 5.36 − 5.47 and zgap = 5.31 − 5.42, corresponding
+to lengths of L = 37 h−1 Mpc and L = 34 h−1 Mpc, respectively. Most spikes and sharp dips with negative flux
+in the un-binned spectra inside the two gaps are skyline
+subtraction residuals as indicated by the peaks in the
+4 Since we add noise to the mock spectra pixel-wise according to
+
+the noise array of each observed spectrum with a Gaussian distribution, the skyline residuals in the mock spectra are not actually
+modeled. However, masking ±75 km s−1 intervals makes the profile of sky subtraction residuals unimportant.
+
+8
+
+Zhu et al.
+
+F
+
+Binned F
+
+FLy + 0.3
+
+zgap = 5.31 5.42
+34 h 1 Mpc
+
+...
+
+0.5
+
+Flux threshold 0.05
+
+F
+
+PSOJ340-18
+Ly
+
+Ly
+
+0.0
+5.30
+
+5.35
+
+5.40
+zgap = 5.36 5.47
+37 h 1 Mpc
+
+0.5
+Ly
+
+Ly
+
+5.45
+PSOJ183-12
+Ly
+
+0.0
+5.30
+
+5.35
+
+5.40
+
+5.45
+
+5.50
+
+5.55
+
+zgap = 5.42 5.51
+
+SDSSJ1250+3130
+
+...30 h 1 Mpc
+
+0.5
+Lyman Limit
+
+Ly
+
+0.0
+Normalized Flux
+
+5.35
+
+5.40
+
+5.45
+
+5.50
+
+5.55
+
+zgap = 5.46 5.67
+68 h 1 Mpc
+
+0.5
+Ly
+
+PSOJ025-11
+
+0.0
+5.45
+
+5.50
+
+5.55
+
+5.60
+
+5.65
+
+5.70
+
+zgap = 5.50 5.88
+118 h 1 Mpc
+
+0.5
+Ly
+
+ULASJ0148+0600
+
+Ly
+
+0.0
+5.5
+
+5.6
+
+5.7
+
+5.8
+
+zgap = 5.64 5.91
+81 h 1 Mpc
+
+0.5
+Ly
+
+SDSSJ1250+3130
+
+Ly
+
+0.0
+5.60
+
+5.65
+
+5.70
+
+zgap = 5.65 5.87
+68 h 1 Mpc
+
+0.5
+
+Lyman Limit
+
+5.75
+
+...
+
+Ly
+
+5.80
+
+5.85
+
+zgap = 5.88 6.43
+154 h 1 Mpc
+
+Ly
+
+5.90
+
+5.95
+PSOJ323+12
+
+Ly
+
+0.0
+5.6
+
+5.7
+
+5.8
+
+5.9
+
+6.0
+
+zabs
+
+6.1
+
+6.2
+
+6.3
+
+6.4
+
+Figure 2. Examples of notable dark gaps identified. Dark gaps are labeled with gray shades. The thick black line is the binned
+flux with binning size of 1 h−1 Mpc. Dashed black horizontal line sets the flux threshold of 0.05. Un-binned flux and flux
+uncertainty are represented by thin blue and dark red lines, respectively. The text boxes display the redshift span and length
+of each long dark gap (L ≥ 30 h−1 Mpc). Regions redward the proximity zone cut are labeled with hatches and are excluded
+from the statistics. For reference, the green line, offset by 0.3 in flux, is shifted in wavelength to show the Lyβ and higher-order
+Lyman forest at the same redshifts. Vertical ticks label the starting points of higher-order Lyman forests.
+
+9
+
+Dark Gap Statistics
+
+5 We use a power-law fit to the continuum for regions blueward of
+
+the Lyα forest because our PCA implementation does not cover
+these wavelengths; however, this should not significantly affect
+the qualitative results for the higher-order Lyman series transmission shown in Figure 2.
+
+der Lyman series absorption, as indicated in the figure.
+Although dark gaps are highly opaque to Lyα, there
+are often narrow transmission peaks corresponding to
+Lyβ. These peaks demonstrate that the dark gaps in
+Lyα typically cannot arise from continuous regions of
+neutral gas, which would be highly opaque to all Lyman series lines. Broken regions of neutral gas may still
+be present, however, with the Lyβ transmission corresponding to gaps between neutral sections (e.g., Keating
+et al. 2020b; Nasir & D’Aloisio 2020).
+3.3. Overview of dark gaps
+In total, we detected 1329 dark gaps from the sample,
+of which 50 have a length of L ≥ 30 h−1 Mpc. Properties
+of all dark gaps detected are summarized in Table 2.
+Details on dark gap detection for each QSO sightline
+are shown in Figure Set 1.
+
+200
+dark gaps
+cut at the red end
+metal absorbers
+
+150
+100
+80
+L (h−1 Mpc)
+
+flux error array. Both dark gaps are highly opaque, with
+τeff > 6. The spectra of both QSOs have a good coverage of redshifted common metal lines. We searched their
+X-Shooter VIS and NIR spectra and found no metal absorption within the redshift ranges of the dark gaps. In
+addition, a 30 h−1 Mpc dark gap extending just above
+z = 5.5 is identified towards SDSS J1250+3130. Most
+of the spikes inside this gap are also probably due to sky
+lines as indicated by peaks in the flux error array.
+The fourth through sixth rows in Figure 2 display
+three examples of long dark gaps extending down to
+z ∼ 5.5. The long gap extending to z = 5.46 with a
+length of L = 68 h−1 Mpc towards PSOJ025-11 is one
+of the longest troughs below redshift six discovered in
+this work. The only weak transmission peaks in the unbinned flux array that seem to be real are the ones at
+zabs ' 5.47, 5.48, and 5.67. Overall, however, it is extremely dark, with τeff ≥ 6.4. We also reproduce the
+detection of the long trough discovered towards ULAS
+J0148+0600 by Becker et al. (2015), which extends down
+to z = 5.5 with a total length L > 110 h−1 Mpc. Due
+to the use of a different definition of dark gap compared
+to Becker et al. (2015), the trough detected in this work
+includes an additional small transmission peak that appears in the un-binned spectrum near the blue end. This
+yields a slightly larger L but a comparable τeff value.
+We also find a gap of L = 81 h−1 Mpc extending down
+to z = 5.64 towards SDSS J1250+3130. Spikes within
+the trough are skyline subtraction residuals, as shown
+by peaks in the error array. We do not see any strong
+metal absorbers that would indicate dense absorption
+systems such as DLAs or Lyman limit systems (LLSs),
+in any of these gaps. Finally, we find dark gaps longer
+than 110 h−1 Mpc towards several QSOs with the highest redshifts in our sample. This is not surprising because the IGM is more neutral at higher redshifts and
+therefore more likely to produce large Lyα opaque regions. For example, Barnett et al. (2017) identified a
+240 h−1 Mpc gap at z > 6.1 towards the z = 7.1 QSO
+ULAS J1120+0641. Here we display a remarkably long
+dark gap towards PSO J323+12. It covers zgap = 5.88–
+6.43 and has a length of 154 h−1 Mpc, as shown in the
+bottom row of Figure 2.
+For reference, we overplot in green the regions of spectra corresponding to Lyβ for the Lyα shown in Figure 2.5
+In many cases the Lyβ forest also includes higher or-
+
+60
+40
+30 h−1 Mpc
+
+20
+0
+5.00
+
+5.25
+
+5.50
+z
+
+5.75
+
+6.00
+
+Figure 3. Gap length versus central redshift for dark gaps
+detected from our sample. Dark gaps located completely in
+the “buffer zone” are excluded from this plot. Arrows indicate dark gaps whose red edge lies within 7 pMpc from the
+QSO and are therefore potentially truncated by the proximity effect; lower limits on the length are therefore given for
+these gaps. Red symbols indicate dark gaps with one or more
+metal absorbers.
+
+As an overview, Figure 3 plots all dark gaps identified in this work according to their central redshift
+and length. Dark gaps with associated metal absorbers
+are labeled in red. This figure has excluded dark gaps
+that are completely inside the 7 proper-Mpc proximity zone and/or inside the 30 h−1 Mpc “buffer zone” beyond the proximity zone. Not surprisingly, as redshift
+
+10
+
+Zhu et al.
+Table 2. Properties of dark gaps
+Index
+
+QSO
+
+zblue
+
+zred
+
+L ( h−1 Mpc)
+
+τeff
+
+zabsorber
+
+(1)
+
+(2)
+
+(3)
+
+(4)
+
+(5)
+
+(6)
+
+(7)
+
+26
+157
+240
+281
+292
+294
+350
+817
+959
+
+ULASJ1319+0950
+SDSSJ0100+2802
+PSOJ108+08
+PSOJ183-12
+PSOJ183-12
+SDSSJ1602+4228
+ATLASJ025.6821-33.4627
+SDSSJ1148+5251
+SDSSJ1137+3549
+
+5.876
+5.883
+5.661
+5.332
+5.690
+5.065
+5.285a
+5.853
+5.683
+
+6.012b
+5.988
+5.836b
+5.350
+5.702
+5.071
+5.356
+6.285b
+5.686
+
+≥ 40
+31
+≥ 54
+6
+4c
+2
+24
+≥ 124
+1
+
+≥ 6.674
+7.874 ± 0.339
+6.062 ± 0.145
+4.193 ± 0.133
+3.951 ± 0.082
+3.580 ± 0.251
+5.680 ± 0.226
+≥ 7.558
+≥ 3.569
+
+5.945, 5.940
+
+6.258, 6.011, 6.131
+
+Note—Columns: (1) index of the dark gap, (2) QSO name, (3) redshift at the blue end of the gap, (4)
+redshift at the red end of the gap, (5) dark gap length, (6) effective opacity of the dark gap based on the
+flux and flux error in the original binning, (7) redshift(s) of known metal absorber(s) in the dark gap, if
+any.
+a
+Dark gap starting at the blue edge of the Lyα forest.
+b
+Dark gap ending at the red edge of the Lyα forest.
+c
+Dark gap located completely inside the buffer zone.
+(This table is published in its entirety in the machine-readable format. A portion is shown here for guidance
+regarding its form and content.)
+
+increases, there are more long dark gaps and a larger
+scatter in dark gap length. The lowest-redshift gaps
+with L ≥ 30 h−1 Mpc appear around z = 5.3.
+Figure 4 displays the Lyα forest coverage and all dark
+gaps identified for every line of sight in our sample. At
+z . 5.2, most QSO sightlines are highly transmissive;
+a few gaps with L ∼ 10–20 h−1 Mpc appear but these
+tend to contain metal absorbers and are likely to be
+DLAs. Dark gaps longer than 30 h−1 Mpc appear in the
+sightlines of PSO J340-18 and PSO J183-12 at z ' 5.3
+and 5.4, respectively. The frequency of long dark gaps
+increases with redshift such that most lines of sight at
+z ' 5.8 show gaps longer than 30 h−1 Mpc in the Lyα
+forest. Interestingly, the J1535+1943 sightline is relatively transmissive at z ∼ 6 compared to others at the
+same redshift. Although J1535 has a reddened spectrum, the continuum re-construction is acceptable and
+most of the transmission peaks in the Lyα forest appear
+to be real.
+3.4. Fraction of QSO spectra exhibiting long dark gaps
+We introduce the fraction of QSO spectra exhibiting
+long (L ≥ 30 h−1 Mpc) gaps as a function of redshift,
+F30 (z), as a new Lyα forest statistic. As mentioned in
+Section 3.1, in order to deal with the finite length of the
+spectra for this statistic we cut off each QSO sightline at
+the blue edge of the 30 h−1 Mpc buffer zone. F30 quan-
+
+tifies how common the large Lyman-alpha-opaque regions are and how they evolve with redshift. We choose
+30 h−1 Mpc because we found that this length most effectively distinguishes between the models described in
+Section 4, especially between the homogeneous-UVB and
+other models. The comparison of the dark gap length
+distribution, P (L), predicted by different models in Section 4.5 also implies that dark gaps with L ≥ 30 h−1 Mpc
+are potentially good probes for H I if the late reionization scenario is indeed preferred. We note that we include all long dark gaps regardless of the presence of
+associated metal absorbers since the dense absorption
+systems alone are not likely to create troughs longer than
+30 h−1 Mpc.
+Figure 5 displays the evolution of F30 with redshift
+measured from the QSO spectra. The result is averaged over ∆z = 0.02 bins. The mean, 68% limits, and
+95% limits of F30 are calculated based on 10000 bootstrap re-samplings of the whole sample. In each realization, we randomly select 55 QSO spectra, with replacement, and add up the number of sightlines showing
+L ≥ 30 h−1 Mpc dark gaps at a given redshift. The total is then normalized by the number of QSO sightlines
+at each redshift, which yields F30 (z) for this realization.
+F30 starts to be nonzero from z ' 5.3 and increases
+strongly with redshift. At z = 6, ∼90% of sightlines
+present long gaps.
+
+11
+
+Dark Gap Statistics
+
+Dark gaps L ≥ 30 h−1 Mpc
+
+50
+
+L ≤ 30 h−1 Mpc
+Lyα forest
+QSOs
+Metal absorbers
+
+QSO sightlines
+
+40
+
+30
+
+20
+
+10
+
+0
+5.0
+
+55:PSOJ323+12
+54:PSOJ036+03
+53:VDESJ0224-4711
+52:J0439+1634
+51:J1212+0505
+50:SDSSJ1148+5251
+49:J1535+1943
+48:ATLASJ025.6821-33.4627
+47:SDSSJ0100+2802
+46:SDSSJ1030+0524
+45:PSOJ308-21
+44:PSOJ065-26
+43:PSOJ060+24
+42:PSOJ359-06
+41:PSOJ217-07
+40:PSOJ217-16
+39:VIKJ2318-3029
+38:SDSSJ1250+3130
+37:ULASJ1319+0950
+36:SDSSJ2315-0023
+35:CFHQSJ1509-1749
+34:PSOJ239-07
+33:SDSSJ1602+4228
+32:SDSSJ0842+1218
+31:PSOJ158-14
+30:SDSSJ2054-0005
+29:ULASJ1207+0630
+28:J0408-5632
+27:SDSSJ1306+0356
+26:ATLASJ029.9915-36.5658
+25:SDSSJ1137+3549
+24:SDSSJ2310+1855
+23:PSOJ007+04
+22:PSOJ340-18
+21:ULASJ0148+0600
+20:SDSSJ0818+1722
+19:PSOJ029-29
+18:PSOJ056-16
+17:PSOJ108+08
+16:SDSSJ1411+1217
+15:PSOJ183-12
+14:PSOJ025-11
+13:SDSSJ0005-0006
+12:SDSSJ0840+5624
+11:PSOJ242-12
+10:SDSSJ0002+2550
+9:PSOJ004+17
+8:SDSSJ0836+0054
+7:PSOJ308-27
+6:PSOJ065+01
+5:SDSSJ1044-0125
+4:SDSSJ0927+2001
+3:J1335-0328
+2:J0108+0711
+1:J2207-0416
+
+5.5
+
+6.0
+
+6.5
+
+7.0
+
+z
+Figure 4. Overview of dark gaps identified in the Lyα forest of 55 QSO sightlines. Black bars and gray shaded regions represent
+dark gaps longer and shorter than 30 h−1 Mpc, respectively. Red short lines denote known associated metal absorbers intervening
+dark gaps. Light blue shaded regions indicate the redshift coverage of the Lyα forest. Redshifts of QSOs are marked with blue
+dots. The Lyα forest is truncated at 7 pMpc from the QSO. The Lyα forest shown in this figure includes the 30 h−1 Mpc buffer
+zone on the red end, which is excluded from the statistical analysis of dark gaps. See Section 3.1 for details.
+
+12
+
+Zhu et al.
+1.0
+
+1.0
+
+mean
+95%
+68%
+
+0.8
+P (< L)
+
+0.8
+
+F30
+
+0.6
+0.4
+
+0.6
+5.1 < zcentral < 5.3
+5.3 < zcentral < 5.5
+5.5 < zcentral < 5.7
+5.7 < zcentral < 5.9
+
+0.4
+0.2
+0.2
+0.0
+5.0
+
+5.2
+
+5.4
+
+5.6
+
+5.8
+
+6.0
+
+z
+Figure 5. Measured fraction of QSO spectra exhibiting long
+(L ≥ 30 h−1 Mpc) dark gaps as a function of redshift. We
+use bootstrap re-sampling to calculate the mean, 68% and
+95% limits of F30 averaged over ∆z = 0.02 bins, presented
+with the solid orange line, dark and light shaded regions,
+respectively.
+(Tabular Data behind the Figure (DbF) is available online.)
+
+We noted above that a deep spectrum of SDSS
+J1250+3130 was obtained based on preliminary indications from shallower data of a long gap in its spectrum.
+This is the only QSO in the sample for which the selection is related to the foreknowledge of dark gaps. We
+include J1250 for completeness, but note that excluding
+this line of sight from our sample would only decrease
+(increase) F30 by . 0.02 (0.05) over 5.50 < z < 5.90
+(5.90 < z < 5.93).
+Finally, we test whether metal absorbers could be linking adjacent dark gaps in a way that would impact our
+F30 statistic. For this we calculate a “pessimistic” F30 by
+dividing dark gaps at the redshifts of DLAs and other
+metal systems (Appendix D). The resulting change in
+F30 is minor, with a maximum decrease of ∼ 0.1 at
+z ∼ 5.8. The differences between the observations and
+model predictions (Section 5.1; Figure D1) can still be
+well distinguished. We therefore conclude that this potential impact of metal absorbers on F30 is not significant.
+3.5. Distribution of dark gap length
+In addition to F30 , we investigate the cumulative distribution function (CDF) of gap length, P (< L). Figure
+6 plots P (< L) in redshift bins of ∆z = 0.2. Dark gaps
+are assigned to a bin based on the central redshift of the
+gap, and we do not truncate gaps extending beyond the
+edges of the redshift windows. We treat the dark gaps
+truncated by the 7 proper-Mpc proximity zone cut by
+
+0
+
+20
+
+40
+60
+L (h−1 Mpc)
+
+80
+
+100
+
+Figure 6. Cumulative distributions of dark gap length. We
+include all dark gaps regardless of the presence of associated
+metal absorbers. The upper and lower bounds of the shaded
+regions correspond to the most pessimistic and optimistic
+cases for P (< L). See text for details.
+
+plotting the most pessimistic and optimistic bounds on
+P (< L). The pessimistic bound is calculated by considering the lengths of dark gaps are as measured. The optimistic bound, however, is given by assuming the lengths
+of truncated dark gaps are infinite, which indicates the
+most extreme dark gap length possible in the absence of
+the QSO. In the latter case, we still use the measured
+central redshift of each dark gap to assign it to a redshift
+bin.
+Figure 6 demonstrates that longer dark gaps become
+more common towards higher redshifts. This is consistent with the result of F30 . Moreover, similar to the
+rapid redshift evolution in F30 near z ' 5.7, P (< L)
+shows a large change between 5.5 < z < 5.7 and
+5.7 < z < 5.9.
+To test the effects of metal absorbers on P (< L), we
+calculate the distribution by excluding dark gaps with
+known associated metal absorbers. We find the difference is minor. The maximum increment on the most
+pessimistic P (< L) over 5.7 < z < 5.9 is less than 0.03,
+and the difference is less than 0.005 over the other redshift bins.
+4. MODELS AND SIMULATIONS FOR
+
+COMPARISON
+
+We compare our measurements to predictions from
+hydrodynamical simulations that span a range of reionization histories and UV backgrounds. Here we briefly
+describe the simulations. The key information is summarized in Table 3, with the redshift evolution of the
+volume-weighted neutral hydrogen fraction hxHI i for
+each simulation plotted in Figure 7.
+
+13
+
+Dark Gap Statistics
+Table 3. Models used in this work
+Model
+
+Reionization
+
+z95
+
+z50
+
+(1)
+
+(2)
+
+(3)
+
+(4)
+
+late
+late
+late
+late
+late
+early
+
+15
+5.6
+5.6
+5.9
+5.3
+5.4
+6.6
+
+6.7
+6.7
+8.4
+7.0
+7.5
+8.7
+
+homogeneous-UVB
+K20-low-τCMB
+K20-low-τCMB -hot
+K20-high-τCMB
+ND20-late-longmfp
+ND20-late-shortmfp
+ND20-early-shortmfp
+
+Note—Columns: (1) name of the model, (2) qualitative description of the reionization model, (3) redshift at which the volume
+filling factor of ionized gas reaches 95%, (4) redshift at which
+the volume filling factor of ionized gas reaches 50%, We use K20
+for models from Keating et al. (2020a) and ND20 for models from
+Nasir & D’Aloisio (2020). See Sections 4.2 & 4.3 for details.
+
+0.7
+0.6
+0.5
+hxHI i
+
+0.4
+0.3
+
+K20-low-τCMB
+K20-low-τCMB -hot
+K20-high-τCMB
+ND20-early-shortmfp
+ND20-late-shortmfp
+ND20-late-longmfp
+
+0.2
+0.1
+0.0
+4.5
+
+5.0
+
+5.5
+z
+
+6.0
+
+6.5
+
+Figure 7. Redshift evolution of the volume-weighted average neutral hydrogen fraction of reionization models used
+in this work. See Table 3 for the key information of these
+models and details in Section 4.
+
+4.1. Homogeneous UV Background
+We first include a baseline model wherein reionization
+is fully completed at z > 6 and the UVB is spatially uniform. For this we use a run from the Sherwood simulation suite, which successfully reproduces multiple characteristics of the observed Lyα forest over 2.5 < z < 5
+(Bolton et al. 2017). The Sherwood suite uses a homogeneous Haardt & Madau (2012) UV background.
+Reionization occurs instantaneously at z = 15, allowing
+the IGM to fully relax hydrodynamically by z = 6. The
+
+simulations were run with the parallel smoothed particle hydrodynamics code P-GADGET-3, which is an updated and extended version of GADGET-2 (Springel 2005).
+We use the simulation with 2 × 20483 particles and box
+size of (160 h−1 Mpc)3 to build mock spectra for the
+homogeneous-UVB model, as described in Section 4.4.
+
+4.2. Late Reionization
+We use two sets of models wherein reionization continues significantly below redshift six. In these models,
+long dark gaps in Lyα transmission at z < 6 arise from a
+combination of neutral islands and regions of suppressed
+UVB, which are often adjacent to one another.
+The first late reionization models are from Keating
+et al. (2020a). They include three models with different
+ionization and/or thermal histories. We denote the fiducial model as K20-low-τCMB , wherein the volume filling
+fraction of ionized gas reaches 95% at z = 5.6 and 99.9%
+at z = 5.2. Two other runs, the K20-low-τCMB -hot
+and K20-high-τCMB models, are also included. Briefly,
+the K20-low-τCMB -hot model uses a higher temperature for the input blackbody ionizing spectrum, namely
+T = 40000 K instead of T = 30000 K as used in the
+K20-low-τCMB model. They have a volume-weighted
+mean temperature at the mean density at z = 6 of T0 '
+10000 K and 7000 K, respectively. The K20-high-τCMB
+model shares a similar IGM thermal history with the
+K20-low-τCMB model, but it has an earlier reionization
+midpoint of zmid = 8.4.
+The K20 simulations are modified versions of the late
+reionization model published in Kulkarni et al. (2019a).
+The model was modified such that (i) the IGM temperature evolution is in better agreement with recent
+observations (Boera et al. 2019; Walther et al. 2019;
+Gaikwad et al. 2020), and (ii) the mean Lyα transmission is in better agreement with data at z < 4.7
+(Becker et al. 2015). The ionization state of the IGM is
+modeled using the radiative transfer code ATON (Aubert
+& Teyssier 2008, 2010) that post-processes underlying
+hydrodynamic simulations performed with P-GADGET-3.
+The simulations use the identical initial condition and
+box size of the Sherwood simulation suite. The radiative transfer, however, leads to an extended and selfconsistent reionization history. This produces scatter in
+the Lyα τeff . The simulations also contain fluctuations
+in temperature and photoionization rates. A lightcone
+from the radiative transfer simulation were extracted on
+the fly. Using sightlines through this lightcone, Keating
+et al. (2020a) computed the optical depths continuously
+spanning 4.0 . z . 7.5 for each model, which allows us
+to avoid having to do any interpolation.
+
+14
+
+Zhu et al.
+
+The second set of late reionization models is from
+Nasir & D’Aloisio (2020). In these models, the volume
+filling factor of ionized gas reaches 95% at z = 5.3–5.4.
+As in the Keating et al. (2020a) models, fluctuations
+in both the UVB and temperature are present. The
+UVB fluctuations are driven by a short and spatially
+variable mean free path, similar to the model in Davies
+& Furlanetto (2016). In the two Nasir & D’Aloisio
+(2020) models, which we denote as ND20-late-longmfp
+and ND20-late-shortmfp, the volume-weighted average
+mean free path for 912 Å photons at z = 5.6 is hλ912
+mfp i =
+30 h−1 Mpc and 10 h−1 Mpc, respectively. As a result of the shorter mean free path, ND20-late-shortmfp
+contains stronger fluctuations in the UVB. The shorter
+hλ912
+mfp i is also more consistent with the recent mean free
+path measurement of Becker et al. (2021).
+The Nasir & D’Aloisio (2020) simulations use a modified version of the Eulerian hydrodynamics code from
+Trac & Pen (2004). They use 2 × 20483 gas and
+dark matter resolution elements and a box size of L =
+200 h−1 Mpc. To model the effects of reionization on
+the forest, they post-process the hydrodynamics simulations using semi-numeric methods. Optical depth skewers are available at z = 5.6, 5.8, and 6.0, and neutral
+fraction information is available at z = 5.6 and 5.8. A
+sample of 4000 lines of sight were extracted at each redshift, with each optical depth skewer having a length of
+500 h−1 Mpc by making use of the periodic boundary
+conditions (F. Nasir, private communication).
+4.3. Early reionization with a fluctuating UVB
+Finally, we include a model from Nasir & D’Aloisio
+(2020) wherein the volume filling factor of ionized
+gas reaches ∼ 98% by z = 6 but the UVB retains large spatial fluctuations to somewhat lower red−1
+shifts.6
+It has hλ912
+Mpc as in the
+mfp i = 10 h
+ND20-late-shortmfp model. We refer to this model as
+ND20-early-shortmfp. It is essentially a modified version of the fluctuating UVB model proposed by Davies
+& Furlanetto (2016) with temperature fluctuations included. Compared to the ND20-late-shortmfp model
+mentioned previously, the ND20-early-shortmfp model
+has a similarly broad UVB distribution but a much earlier end of reionization. In this model, long dark gaps at
+z < 6 primarily correspond to regions with a low UVB.
+Since the IGM is not technically fully ionized in this
+model until down to z ' 5, however, a small fraction of
+dark gaps may still contain some neutral hydrogen.
+
+4.4. Construction of mock spectra
+In order to directly compare the observations to the
+models we construct mock spectra from the simulations with properties similar to the real data. We
+firstly describe how we create mock spectra for the
+homogeneous-UVB model.
+The snapshots for the homogeneous-UVB model are
+available on every ∆z = 0.1 interval over 3.9 ≤ z ≤
+8.9. To be consistent with the simulations from Nasir
+& D’Aloisio (2020) we only use snapshots from every
+∆z = 0.2, and the same snapshots are used for every
+sightline. We have verified, however, that using snapshots spaced every ∆z = 0.1 would not significantly impact our results. Each snapshot was used to extract 5000
+160 h−1 Mpc skewers along which the native Lyα optical
+depths have been calculated (Bolton et al. 2017). For a
+mock spectrum centered at redshift z0 we combine skewers from redshifts z0 − 0.2, z0 , and z0 + 0.2 7 after shifting the periodic lines of sight by random amounts. The
+resulting mock spectra are still 160 h−1 Mpc in length
+but contain information about the redshift evolution of
+the Lyα-opaque regions. We fit the τeff evolution over
+5 ≤ z ≤ 6 from Bosman et al. (2018) with a power law
+of τeff ∝ (1 + z)12.34 and re-normalize the optical depths
+of the mock spectra such that their average Lyα transmission matches this evolution. We have also checked
+that the mean transmission measured directly from our
+observed sample is within the 1σ uncertainties of the
+measurement in Bosman et al. (2018). We create 5000
+mock spectra matching each of our 55 lines of sight. For
+each QSO, we bin the mock spectra using exactly the
+same wavelength array as the observed spectrum. We
+then add Gaussian noise to the mock spectra based on
+the corresponding flux error array.
+Because each optical depth skewer from the Nasir &
+D’Aloisio (2020) models has a length of 500 h−1 Mpc, we
+first clip them to 160 h−1 Mpc and then follow a similar
+procedure to build the mock spectra set at z0 = 5.8 as
+described above, including rescaling the effective optical
+depth. In order to cover the full redshift range of the
+simulation outputs, we extend the mock spectra down
+to z = 5.6 and up to z = 6.0 by making use of the unclipped skewers to create mock spectra sets centered at
+z0 = 5.6 and 6.0. However, since the spatial structure
+of the IGM is only recovered over 5.6 ≤ z ≤ 6.0, we restrict our dark gap analysis to this redshift range. As for
+K20 models, Keating et al. (2020a) ran many radiative
+7 We cut the skewers into three pieces and then stitch the corre-
+
+6 The volume filling factor of ionized gas no longer increases sig-
+
+nificantly at z < 6. Although it has not reached 99% strictly by
+z = 6, we still consider this model as an early reionization model.
+
+sponding pieces with those from the adjacent redshifts. Only a
+portion of a 160 h−1 Mpc skewer from a given snapshot is therefore used for a mock spectrum centered at z0 .
+
+15
+
+Dark Gap Statistics
+transfer simulations until converged on a reionization
+history that self-consistently reproduces the mean flux
+of the Lyα forest as measured by Bosman et al. (2018).
+We therefore only needed to re-bin the skewers and add
+noise in order to match them to each individual observed
+QSO spectrum. We note that continuum errors are not
+considered for the mock spectra. This is because the
+continuum errors for the observed spectra are estimated
+to be small (.10%; Section 2.2), and partly because we
+are primarily concerned with very low flux levels, which
+are less affected in an absolute sense by continuum uncertainties.
+In Figure 8, we display mock spectra randomly selected from all the models with S/N chosen to match the
+the Lyα forest of ULAS J0148+0600 as examples. The
+homogeneous-UVB model exhibits more small transmission peaks than the other models, as expected because
+the IGM is fully ionized by a uniform UVB. The other
+models tend to show longer dark gaps interspersed with
+regions of high transmission.
+
+lands start to be the majority for L & 25–30 h−1 Mpc at
+z > 5.4. Long dark gaps with L & 30 h−1 Mpc are therefore of potentially high interest in terms of identifying
+regions of the IGM that may contain neutral gas. This
+paper is therefore largely focused on these long gaps.
+We further investigate the correlation between neutral islands coverage and dark gap length in the
+K20-low-τCMB model at different redshift, as shown in
+Figure 10. The histogram is calculated based on 10000
+realizations, and we include all dark gaps regardless of
+whether they contain neutral pixels. The neutral islands
+coverage shown here is the sum of the line-of-sight length
+of neutral pixels inside a dark gap. The mean neutral
+islands coverage is proportional to the dark gap length,
+meaning that long dark gaps may contain more neutral
+gas. Nevertheless, the neutral islands coverage is, on average, significantly less than the dark gap length. This
+suggests that UVB fluctuations also play a significant
+role in producing the dark gaps in the late reionization
+models.
+
+4.5. Neutral islands and dark gaps
+
+5. DISCUSSION
+
+Here we examine the connection between dark gaps
+and regions of neutral hydrogen. For this we calculate
+the dark gap length distribution P (L) predicted by models. We use the method described in Section 3.1 to find
+dark gaps in mock spectra generated in Section 4.4, but
+with no noise added, and identify gaps that contain regions of neutral hydrogen. The frequency of dark gaps
+with length L for each model in each redshift bin is calculated based on 10000 realizations and normalized by the
+total count of dark gaps in each redshift bin, with P (L)
+averaged over bins of ∆L = 5 h−1 Mpc. We consider a
+dark gap to contain neutral hydrogen if any pixels inside
+this gap have xHI > 0.9. Over each redshift bin, dark
+gaps extending beyond the boundaries of the ∆z = 0.2
+window are truncated at the edge. We do so to avoid
+artifacts in P (L) caused by the finite length of the mock
+spectra.
+As shown in Figure 9, P (L) varies significantly between models. Firstly, no dark gaps with neutral pixels are found in the homogeneous-UVB model because
+the IGM is fully ionized. In the ND20-early-shortmfp
+model, the IGM is 98% ionized by z = 6, and therefore only a small fraction of dark gaps contain neutral
+islands. Dark gaps with no neutral islands also dominate in the K20-high-τCMB model that has an extended
+reionization history. The situation is very different in
+the rapid late reionization scenarios, however. Dark
+gaps with neutral islands become dominant for L ≥ 15–
+20 h−1 Mpc in both ND20-late models. Similarly, in the
+K20-low-τCMB (-hot) model, dark gaps with neutral is-
+
+5.1. Model comparisons
+We now compare our results to predictions from the
+simulations described in Section 4. Figure 11 plots the
+dark gap length versus central redshift for representative
+mock samples drawn from the homogeneous-UVB model
+and the K20-low-τCMB model. Qualitatively, as redshift increases, the homogeneous-UVB model predicts a
+milder increase in long dark gaps than is seen in either
+the K20-low-τCMB model or the observations (Figure
+3). To quantify the differences, we compute the relevant statistics by drawing mock samples from the simulations that match our observed QSO spectra in redshift
+and S/N ratio. We then compute the dark gap statistics
+described in Section 3. We repeat this process 10000
+times for each model and compute the mean, 68% and
+95% limits on the expected scatter for the present sample size. Figure 12 compares F30 predicted by models to
+that calculated from data. The jagged edges of the simulation confidence intervals are caused by the combined
+effects of step changes in the number of sightlines with
+redshift and the quantization of F30 for a finite sample
+size.
+The top left panel shows that the homogeneous-UVB
+model is highly inconsistent with the observations over
+5.3 . z . 5.9. At z ∼ 5.8, the homogeneous-UVB model
+under-predicts F30 by a factor of three. At z ∼ 5.4 and
+over 5.5 . z . 5.8, this model is rejected by the data
+with > 99.9% confidence.
+On the other hand, the K20-low-τCMB and
+K20-low-τCMB -hot models, wherein reionization ends
+
+16
+
+Zhu et al.
+0.5
+0.0
+0.5
+
+homogeneous-UVB
+
+0.0
+0.5
+0.0
+0.5
+0.0
+0.5
+
+K20-low-τCMB
+
+0.0
+0.5
+
+Normalized Flux
+
+0.0
+0.5
+
+K20-low-τCMB -hot
+
+0.0
+0.5
+0.0
+0.5
+
+K20-high-τCMB
+
+0.0
+0.5
+0.0
+0.5
+
+ND20-early-shortmfp
+
+0.0
+0.5
+0.0
+0.5
+
+ND20-late-longmfp
+
+0.0
+0.5
+0.0
+0.5
+
+ND20-late-shortmfp
+
+0.0
+5.60
+
+5.65
+
+5.70
+
+5.75
+
+5.80
+
+5.85
+
+z
+Figure 8. Example mock spectra with binning and S/N chosen to match the Lyα forest of ULAS J0148+0600. We randomly
+select mock sightlines from each model here. The colored lines represent the flux arrays.
+
+at z ' 5.3, produce F30 results that are generally consistent with the observations over 5 < z < 6. One
+exception is that these models under-predict the small
+number of long dark gaps observed at z ∼ 5.4. The
+K20-high-τCMB model is consistent with the observations at z ≥ 5.75 but under-predicts F30 at lower redshifts. This is a natural consequence of the earlier reionization in this model, which leads to a lower neutral hydrogen fraction and smaller UVB fluctuations at these
+redshifts.
+As shown in the right panels, F30 values from the
+Nasir & D’Aloisio (2020) models are consistent with
+the observations within their 95% limits over the
+available redshift range. Among the ND20 models,
+ND20-early-shortmfp gives lower F30 values compared
+to ND20-late, but the difference is within the 68% range
+for the present sample size.
+
+We compare the cumulative distributions of dark gap
+length in Figure 13, and give the differences between
+the observation and the model predictions in Figure 14.
+In order to facilitate a direct comparison between the
+observations and simulations, we divide the data into
+redshift bins of ∆z = 0.2. Here, dark gaps extending
+beyond the boundaries of a redshift bin are truncated at
+the edge when calculating P (< L) for both the observation and models. Similar to our approach in Section
+4.5, we do this to avoid artifacts from the finite length
+of the mock spectra.
+We present numerical convergence tests for the
+homogeneous-UVB model in Appendix A. We find that
+the results for both F30 and P (< L) are relatively insensitive to box size, but that the number of small gaps
+increases with increasing mass resolution. The impact
+of mass resolution is more significant for P (< L) at
+
+17
+
+P (L)
+
+Dark Gap Statistics
+
+5.0 ≤ z ≤ 5.2
+
+101
+100
+10−1
+10−2
+10−3
+10−4
+101
+100
+10−1
+10−2
+10−3
+10−4
+101
+100
+10−1
+10−2
+10−3
+10−4
+101
+100
+10−1
+10−2
+10−3
+10−4
+101
+100
+10−1
+10−2
+10−3
+10−4
+
+5.2 ≤ z ≤ 5.4
+
+5.4 ≤ z ≤ 5.6
+
+5.6 ≤ z ≤ 5.8
+
+5.8 ≤ z ≤ 6.0
+
+homogeneousUVB
+
+K20-low-τCMB
+
+K20-low-τCMB hot
+
+K20-high-τCMB
+
+0
+
+50
+
+0
+
+ND20early-shortmfp
+5.6 ≤ z ≤ 5.8
+
+0
+
+50
+
+50
+
+0
+
+ND20late-longmfp
+5.6 ≤ z ≤ 5.8
+
+0
+
+50
+
+50
+ND20late-shortmfp
+5.6 ≤ z ≤ 5.8
+
+0
+
+0
+
+50
+
+0
+
+50
+
+All
+With neutral islands
+Without neutral islands
+
+50
+L (h−1 Mpc)
+
+Figure 9. Distribution of dark gaps with and without neutral hydrogen predicted by simulations. A dark gap is considered to
+contain neutral gas if any pixels inside this gap have a neutral fraction of xHI > 0.9. P (L) is calculated with count of dark gaps
+over ∆L = 5 h−1 Mpc bins divided by the total count of dark gaps. The distribution is calculated with dark gaps detected in
+10000 sets of mock spectra (Section 4.4) for each simulation, but with no noise added. We note that the volume neutral fraction
+information of Nasir & D’Aloisio (2020) models is only available at z = 5.6 and 5.8. The plots for ND20 models are therefore
+not extended to z = 6.0.
+
+smaller gap lengths than for F30 . For P (< L) measured from the homogeneous-UVB model, therefore, we
+display predictions based on a higher-resolution run with
+2 × 20483 particles and a box size of L = 40 h−1 Mpc
+(hereafter 40_2048) instead of the fiducial configuration
+of 2 × 20483 particles and box size of L = 160 h−1 Mpc
+(hereafter 160_2048). Because Keating et al. (2020a)
+use post-processed radiative transfer simulations, and
+Nasir & D’Aloisio (2020) simulations are based on an
+Eulerian code instead of a SPH code, mass resolution effects may be significantly different for these models than
+
+for the homogeneous-UVB model. We therefore present
+results as they are, although mass resolution corrections
+may be needed.
+Over z = 5.6–6.0, the homogeneous-UVB model predicts significantly fewer long gaps than are observed in
+the data. The discrepancies between the data and the
+homogeneous-UVB model persist down to the z = 5.2–
+5.4 bin.
+In
+contrast,
+the
+late
+reionization
+models,
+K20-low-τCMB ,
+K20-low-τCMB -hot,
+and
+K20-high-τCMB , predict P (< L) values that are gen-
+
+18
+
+Zhu et al.
+
+60
+5.2 ≤ z ≤ 5.4
+
+Lneutral islands (h−1 Mpc)
+
+40
+
+mean
+68%
+
+5.4 ≤ z ≤ 5.6
+
+100
+10−1
+
+20
+
+10−2
+
+0
+60
+
+10−3
+5.6 ≤ z ≤ 5.8
+
+40
+
+5.8 ≤ z ≤ 6.0
+
+10−4
+10−5
+
+20
+10−6
+0
+
+0
+
+20
+
+40
+
+60 0
+Ldark gap (h
+
+20
+−1
+
+40
+
+60
+
+Mpc)
+
+Figure 10. Correlation between neutral islands coverage and dark gap length in the K20-low-τCMB model based on 10000
+realizations. The histogram is calculated on 5 × 5 ( h−1 Mpc)2 bins and color indicates the normalized probability, and all dark
+gaps are included regardless of whether they contain neutral gas. Solid and dashed lines show the mean and 68% interval of the
+neutral islands coverage.
+
+erally consistent with the data. Nevertheless, over
+z = 5.7–5.9, we note that these models, especially
+the K20-high-τCMB model, systematically yield higher
+P (< L), i.e. fewer long gaps, than the observed for some
+L, though the discrepancies are less conspicuous compared to those for the homogeneous-UVB. At lower redshifts, there are minor differences between the K20 models and the observation. The ND20-early-shortmfp
+and ND20-late models are generally consistent with
+the observation in the redshift range (5.6 ≤ z ≤ 6.0)
+currently probed by the simulations.
+5.2. Implications for reionization
+Combining the results for F30 and P (< L), it is evident that a fully ionized IGM with a homogeneous UV
+background is disfavored by the observations down to
+z ∼ 5.3. This result is consistent with the large-scale
+inhomogeneities in IGM Lyα opacity seen in recent τeff
+measurements (Becker et al. 2015; Bosman et al. 2018;
+Eilers et al. 2018; Yang et al. 2020b; Bosman et al.
+2021a).
+The late reionization models from Keating et al.
+(2020a) and Nasir & D’Aloisio (2020) are generally consistent with dark gap statistics in the Lyα forest. In
+
+these models, the residual neutral islands at z < 6
+coupled with UVB fluctuations can naturally explain
+the appearance of long dark gaps in the Lyα forest.
+Among these models, the data tend to prefer those with
+later and more rapid reionization histories. For example, the K20-low-τCMB and K20-low-τCMB -hot models, which have a reionization midpoint of z50 = 6.7, is
+somewhat more consistent (see curves and shades near
+5.6 ≤ z ≤ 5.8 in Figures 12, 13, and 14) with the dark
+gap statistics at z < 6 than the K20-high-τCMB mode,
+for which z50 = 8.4. A late and rapid reionization is
+also suggested by the recent mean free path measurement from Becker et al. (2021) (see also Cain et al. 2021;
+Davies et al. 2021).
+Alternatively, long dark gaps can arise from a fully
+reionized IGM provided that there are large UVB fluctuations. The early reionization model from Nasir &
+D’Aloisio (2020), which retains post-reionization fluctuations in the UV background and IGM temperature,
+is consistent with the data over at least 5.6 < z < 6.0,
+where the available simulation outputs allow mock spectra to be compared to the data using the methods described above. Extending these simulations down to
+
+19
+
+Dark Gap Statistics
+200
+
+L (h−1 Mpc)
+
+150
+
+homogeneous-UVB
+
+K20-low-τCMB
+
+100
+80
+60
+40
+
+30 h−1 Mpc
+
+30 h−1 Mpc
+
+20
+0
+5.0
+
+5.5
+
+6.0
+
+5.0
+
+5.5
+
+6.0
+
+z
+Figure 11. Gap length versus central redshift for dark gaps detected in mock spectra. For both models, the results shown here
+are based on one randomly selected set of mock spectra that matches our QSO sample in redshift and S/N ratio.
+
+lower redshifts would be helpful for testing the pure fluctuating UVB model further.
+
+• In terms of both F30 and P (< L), a fully ionized
+IGM with a homogeneous UVB is disfavored by
+the data down to z ' 5.3.
+
+6. SUMMARY
+
+• Models wherein reionization ends significantly below redshift six (Keating et al. 2020a; Nasir &
+D’Aloisio 2020) are broadly consistent with the
+data. Among these, the data favor models with
+a reionization midpoint near z ∼ 7 and an end at
+z ' 5.3 or later. In these models, dark gaps arise
+from a combination of neutral patches in the IGM
+and regions of low ionizing UV background, which
+are often adjacent to one another.
+
+In this paper, we present a search for dark gaps in
+the Lyα forest over 5 < z < 6. We use high-S/N spectra of 55 QSOs at zem > 5.5 taken with Keck ESI and
+VLT X-Shooter, including data from the new XQR-30
+VLT Large Programme. We focus on two statistics:
+the fraction of sightlines containing dark gaps of length
+L ≥ 30 h−1 Mpc as a function of redshift, F30 , which
+we introduce here for the first time, and the dark gap
+length distribution, P (< L). Our primary goal is to
+quantify the persistence of large Lyα-opaque regions in
+the IGM below redshift six, and to evaluate the consistency between the observed dark gap statistics and
+predictions from various models. We include a model
+with a fully ionized IGM and a uniform ionizing UV
+background, and others with large islands of neutral gas
+and/or UVB fluctuations. Our main results can be summarized as follows:
+• We identify 50 long dark gaps (L ≥ 30 h−1 Mpc)
+in the Lyα forest from our sample. Two long dark
+gaps are found at z < 5.5, with one extending
+down to z ' 5.3. We also report new ultra-long
+dark gaps (L > 80 h−1 Mpc) below z = 6, similar to the one previously reported towards ULAS
+J0148+0600 by Becker et al. (2015). The presence
+of long dark gaps at these redshifts demonstrates
+that large regions of the IGM remain opaque to
+Lyα down to z ' 5.3.
+
+• We also find consistency with a model wherein
+reionization ends by z = 6 but the IGM retains
+large fluctuations in the UV background (Nasir &
+D’Aloisio 2020), at least over 5.6 < z < 6.0.
+Overall, the evolution of dark gaps observed at z < 6
+suggests that signatures of reionization remain present
+in the IGM until at least z ' 5.3 in the form of neutral
+hydrogen islands and/or fluctuations in the ionizing UV
+background. We note that this work focuses on dark
+gaps in the Lyα forest. Given its lower optical depth,
+however, Lyβ may also be a useful tool. For example,
+islands of neutral gas may tend to produce more long
+Lyβ troughs than are created by fluctuations in the UV
+background (e.g., Nasir & D’Aloisio 2020). These and
+other statistics should provide further details on how the
+IGM evolves near the end of reionization.
+ACKNOWLEDGMENTS
+
+20
+
+Zhu et al.
+
+1.00
+0.75
+
+homogeneous-UVB
+Observation
+Simulation-mean
+Simulation-68% limit
+Simulation-95% limit
+
+0.50
+0.25
+0.00
+1.00
+0.75
+
+K20-low-τCMB
+
+ND20-early-shortmfp
+
+K20-low-τCMB -hot
+
+ND20-late-longmfp
+
+K20-high-τCMB
+
+ND20-late-shortmfp
+
+0.50
+0.25
+F30
+
+0.00
+1.00
+0.75
+0.50
+0.25
+0.00
+1.00
+0.75
+0.50
+0.25
+0.00
+5.00
+
+5.25
+
+5.50
+
+5.75
+
+6.005.00
+z
+
+5.25
+
+5.50
+
+5.75
+
+6.00
+
+Figure 12. The fraction of sightlines located in dark gaps with L ≥ 30 h−1 Mpc as a function of redshift. Both the observations
+(solid black line) and simulations (colored solid line and shaded regions) include gaps that are truncated at the red end of the
+Lyα forest. Note that we discard dark gaps that are entirely in the 7 proper-Mpc proximity zone and/or in the buffer zone
+that covers 30 h−1 Mpc blueward the proximity zone cut. Dark and light shaded regions show the 68% and 95% intervals,
+respectively, spanned by the models.
+
+We thank Elisa Boera and Fahad Nasir for their help
+and useful discussion. We also thank the anonymous reviewer for their careful reading of the paper and thoughtful comments.
+YZ, GDB, and HMC were supported by the National
+Science Foundation through grants AST-1615814 and
+AST-1751404. HMC was also supported by the National Science Foundation Graduate Research Fellowship Program under Grant No. DGE-1326120. SEIB acknowledges funding from the European Research Coun-
+
+cil (ERC) under the European Union’s Horizon 2020
+research and innovation programme (grant agreement
+No. 740246 “Cosmic Gas”). LCK was supported by
+the European Union’s Horizon 2020 research and innovation programme under the Marie Skłodowska-Curie
+grant agreement No. 885990. FB acknowledges support
+from the Australian Research Council through Discovery
+Projects (award DP190100252) and Chinese Academy of
+Sciences (CAS) through a China-Chile Joint Research
+Fund (CCJRF1809) administered by the CAS South
+
+21
+
+Dark Gap Statistics
+
+5.0 ≤ z ≤ 5.2
+
+5.2 ≤ z ≤ 5.4
+
+5.4 ≤ z ≤ 5.6
+
+5.6 ≤ z ≤ 5.8
+
+5.8 ≤ z ≤ 6.0
+
+1.0
+homogeneousUVB
+
+0.5
+1.0
+
+K20low-τCMB
+
+P (< L)
+
+0.5
+1.0
+
+K20low-τCMB -hot
+
+0.5
+1.0
+
+K20high-τCMB
+
+0
+
+50
+
+0
+L (h
+
+−1
+
+50 0
+Mpc)
+
+observation
+simulation-mean
+simulation-68% limit
+simulation-95% limit
+
+501.0
+ND20early-shortmfp
+
+0.5
+P (< L)
+
+0.5
+
+1.0
+ND20late-longmfp
+
+0.5
+1.0
+
+ND20late-shortmfp
+
+0.5
+0
+
+50
+
+0
+
+50
+
+L (h−1 Mpc)
+Figure 13. Cumulative distributions of dark gap length. In each redshift bin, the black line shows P (< L) of the observed
+dark gaps. Dark gaps extending beyond the boundaries of the ∆z = 0.2 window are truncated at the edge. The colored lines
+and dark/light shaded regions represent the mean and 68%/95% limits of P (< L) in mock samples drawn from the models. In
+this figure, we use a high-mass-resolution run from the Sherwood Simulation Suite (Bolton et al. 2017) for the homogeneous-UVB
+model instead of the fiducial configuration. See text for details.
+
+America Center for Astronomy (CASSACA). ACE acknowledges support by NASA through the NASA Hubble Fellowship grant #HF2-51434 awarded by the Space
+Telescope Science Institute, which is operated by the Association of Universities for Research in Astronomy, Inc.,
+for NASA, under contract NAS5-26555. XF and JY acknowledge support from the NSF grants AST 15-15115
+and AST 19-08284. MGH acknowledges support from
+the UKRI STFC (grant numbers ST/N000927/1 and
+
+ST/S000623/1). GK’s research is partly supported by
+the Max Planck Society via a partner group grant. AP
+acknowledges support from the ERC Advanced Grant
+INTERSTELLAR H2020/740120. Parts of this work
+was supported by the Australian Research Council Centre of Excellence for All Sky Astrophysics in 3 Dimensions (ASTRO 3D), through project #CE170100013.
+FW thanks the support provided by NASA through the
+NASA Hubble Fellowship grant #HST-HF2-51448.001-
+
+22
+
+Zhu et al.
+
+5.0 ≤ z ≤ 5.2
+
+5.2 ≤ z ≤ 5.4
+
+5.4 ≤ z ≤ 5.6
+
+5.6 ≤ z ≤ 5.8
+
+5.8 ≤ z ≤ 6.0
+
+homogeneousUVB
+
+0.25
+
+P (< L) − P (< L)obs
+
+0.00
+K20low-τCMB
+
+0.25
+0.00
+
+K20low-τCMB -hot
+
+0.25
+0.00
+
+K20high-τCMB
+
+0.25
+0.00
+
+50
+
+0
+
+50 0
+L (h−1 Mpc)
+
+50
+0.25
+
+ND20early-shortmfp
+
+P (< L) − P (< L)obs
+
+0
+
+0.00
+
+observation
+simulation-mean
+simulation-68% limit
+simulation-95% limit
+
+ND20late-longmfp
+
+0.25
+0.00
+
+ND20late-shortmfp
+
+0.25
+0.00
+0
+
+50
+
+0
+
+50
+
+L (h−1 Mpc)
+Figure 14. Similar to Figure 13, but showing the differences on cumulative distributions of dark gap length between the models
+and the observations.
+
+A awarded by the Space Telescope Science Institute,
+which is operated by the Association of Universities for
+Research in Astronomy, Incorporated, under NASA contract NAS5-26555.
+Based on observations collected at the European Southern Observatory under ESO programmes
+060.A-9024(A), 084.A-0360(A), 084.A-0390(A), 084.A0550(A), 085.A-0299(A), 086.A-0162(A), 086.A0574(A), 087.A-0607(A), 088.A-0897(A), 091.C0934(B), 096.A-0095(A), 096.A-0418(A), 097.B1070(A), 098.A-0111(A), 098.B-0537(A), 0100.A0243(A), 0100.A-0625(A), 0101.B-0272(A), 0102.A-
+
+0154(A), 0102.A-0478(A), 1103.A-0817(A), and 1103.A0817(B).
+Some of the data presented herein were obtained at the
+W. M. Keck Observatory, which is operated as a scientific partnership among the California Institute of Technology, the University of California and the National
+Aeronautics and Space Administration. The Observatory was made possible by the generous financial support
+of the W. M. Keck Foundation. The authors wish to recognize and acknowledge the very significant cultural role
+and reverence that the summit of Maunakea has always
+had within the indigenous Hawaiian community. We
+
+Dark Gap Statistics
+are most fortunate to have the opportunity to conduct
+observations from this mountain. Finally, this research
+has made use of the Keck Observatory Archive (KOA),
+which is operated by the W.M. Keck Observatory and
+the NASA Exoplanet Science Institute (NExScI), under
+contract with the National Aeronautics and Space Administration.
+This work was performed using the Cambridge Service for Data Driven Discovery (CSD3), part of which
+is operated by the University of Cambridge Research
+Computing on behalf of the STFC DiRAC HPC Facility (www.dirac.ac.uk). The DiRAC component of
+CSD3 was funded by BEIS capital funding via STFC
+capital grants ST/P002307/1 and ST/R002452/1 and
+STFC operations grant ST/R00689X/1. This work further used the DiRAC@Durham facility managed by the
+Institute for Computational Cosmology on behalf of
+the STFC DiRAC HPC Facility. The equipment was
+funded by BEIS capital funding via STFC capital grants
+ST/P002293/1 and ST/R002371/1, Durham University
+and STFC operations grant ST/R000832/1. DiRAC is
+part of the National e-Infrastructure.
+
+Facilities: Keck:II (ESI), VLT:Kueyen (X-Shooter)
+Software: Astropy (Astropy Collaboration et al.
+2013, 2018), Matplotlib (Hunter 2007), NumPy (Harris
+et al. 2020), SpectRes (Carnall 2017)
+
+23
+
+24
+
+Zhu et al.
+APPENDIX
+
+A. NUMERICAL CONVERGENCE
+
+160 2048
+80 1024
+40 512
+20 256
+
+1.0
+
+F30
+
+0.8
+0.6
+
+40 512
+40 1024
+40 2048
+
+0.4
+0.2
+0.0
+
+5.0
+
+5.2
+
+5.4
+
+5.6
+
+5.8
+
+6.0 5.0
+z
+
+5.2
+
+5.4
+
+5.6
+
+5.8
+
+6.0
+
+Figure A1. Fractions of QSO spectra exhibiting long (L ≥ 30 h−1 Mpc) dark gaps as a function of redshift with different
+simulation configurations. The left panel compares results for varying box sizes but fixed mass resolution. The dark gray and
+light gray shaded regions are the 68% and 95% limits on the expected scatter for the present sample size from the 160_2048
+simulation, which are the same as the shaded regions in Figure 12. The right panel compares results for varying mass resolutions
+but fixed box size. The dash dotted line is the mean, and shaded regions are 68% and 95% limits of the prediction from the
+40_512 simulation.
+
+Here we test the convergence of our results for the homogeneous-UVB model with different box sizes and mass
+resolutions. We denote different simulation configurations as X_Y, where X is the box size in comoving Mpc h−1 and
+Y = [(number of dark matter + baryon particles)/2]1/3 . The fiducial configuration used in Section 3 is 160_2048.
+To calculate F30 with smaller boxes, we firstly stitch the short skewers to form 160 Mpc/h skewers, and then create
+mock spectra following the method described in Section 4.4. In Figure A1, we compare F30 for mock data generated
+from different simulation configurations. We find little dependence on box size. F30 decreases slightly with increasing
+mass resolution, though the differences are within the expected 68% scatter for the present sample size. We compare
+P (< L) with different configurations to the baseline configurations by calculating P (< L) − P (< L)baseline in Figure
+A2. For a fixed mass resolution and varying box size, we compare simulations to our fiducial 160_2048 simulation.
+For a fixed box size but varying mass resolution, we compare simulations to the 40_512 configuration, which has the
+same mass resolution of 160_2048. Similar to F30 , the variations in P (< L) with box size are relatively minor. The
+impact of mass resolution is more significant, especially for smaller L.
+Figures A1 and A2 suggest that mass resolution has a larger impact than box size on our statistics, in the sense that
+simulations with lower mass resolutions tend to produce more long gaps and fewer short gaps. This is because weak,
+narrow Lyα transmission peaks tend to be suppressed at lower resolution. This effect may need to be considered for
+larger samples. We emphasize that the homogeneous-UVB models that we are using for these convergence tests contain
+significantly fewer long gaps than the late reionization and fluctuating UVB models. It is therefore unclear how well
+the trends we see for large L would apply to these models, although it is likely that the effects of mass resolution we
+see at smaller gap lengths would generally be present in SPH simulations.
+
+25
+
+Dark Gap Statistics
+
+5.0 ≤ z ≤ 5.2
+
+0.1
+
+5.2 ≤ z ≤ 5.4
+
+5.4 ≤ z ≤ 5.6
+
+50
+
+0
+50
+−1
+L (h Mpc)
+
+5.6 ≤ z ≤ 5.8
+
+5.8 ≤ z ≤ 6.0
+
+P (< L) − P (< L)baseline
+
+160 2048
+80 1024
+40 512
+20 256
+
+0.0
+0.1
+
+40 512
+40 1024
+40 2048
+
+0.0
+0
+
+50
+
+0
+
+0
+
+50
+
+0
+
+50
+
+Figure A2. Difference on dark gap length distributions for different box sizes and mass resolutions compared to the baseline
+configurations. The top and bottom rows compare results for varying box sizes and varying mass resolutions, respectively. The
+dark gray and light gray shaded regions are the 68% and 95% limits on the expected scatter for the present sample size from
+the 160_2048 simulation (Top panel) and from the 40_512 simulation (Bottom panel).
+B. SIMULATION PREDICTIONS WITHOUT MASKING
+
+For consistency with the observations, we mask out small wavelength regions in the mock spectra that coincide with
+peaks in the observed flux error arrays, as described in Section 3.1. Figure B1 shows how the simulation results change
+without masking. The model predictions for F30 decrease because the masks sometimes fall on transmission peaks.
+The overall impact is minor; however, we emphasize that the observations should be compared to the simulation results
+with masking included.
+C. F30 BASED ON THE POWER LAW CONTINUUM FITTING
+
+For reference, in this section, we calculate F30 based on the power law continuum fitting. The power-law continua
+are in the form of aλ−b , with a and b being free parameters. We generally estimate the power-law continua over
+∼1285-1350 Å in the rest frame, which is relatively free of emission lines, and we extend the fitting range out to
+∼ 2000 Å when possible. Figure C1 compares the results. The consistency (within 1σ) between F30 based on the PCA
+continuum and power law continuum suggests that our results are insensitive to continuum fitting methods.
+D. EFFECT METAL ABSORBERS ON F30
+
+The strong H I absorption typically associated with metal systems may potentially impact the observed F30 by
+connecting otherwise shorter gaps. We test whether this effect could be significant by dividing dark gaps at the
+redshifts of DLAs and other metal systems. We also exclude a 3000 km s−1 region surrounding the redshift of the
+metal absorber in order to allow for extended DLA absorption and/or strong absorbers clustered around the metal
+system. As shown in Figure D1, the impact on F30 is relativel minor, with a maximum decrease of ∼0.1 at z ∼ 5.8.
+We caution that list of metal absorbers used here may be incomplete; however, we have verified that the three long
+dark gaps at z . 5.5 in particular do not contain metals to within the sensitivity of our data. In summary, we find
+that the impact of metal systems on F30 in this regard is minor, and that the homogenous-UVB model is strongly ruled
+out regardless of how these systems are treated.
+
+26
+
+Zhu et al.
+
+1.00
+0.75
+
+homogeneous-UVB
+Observation
+Simulation-mean
+Simulation-68% limit
+Simulation-95% limit
+
+0.50
+0.25
+0.00
+1.00
+0.75
+
+K20-low-τCMB
+
+ND20-early-shortmfp
+
+K20-low-τCMB -hot
+
+ND20-late-longmfp
+
+K20-high-τCMB
+
+ND20-late-shortmfp
+
+0.50
+0.25
+F30
+
+0.00
+1.00
+0.75
+0.50
+0.25
+0.00
+1.00
+0.75
+0.50
+0.25
+0.00
+5.00
+
+5.25
+
+5.50
+
+5.75
+
+6.005.00
+z
+
+5.25
+
+5.50
+
+5.75
+
+6.00
+
+Figure B1. The fraction of sightlines located in dark gaps with L ≥ 30 h−1 Mpc as a function of redshift. The dashed thick
+(thin) lines show the mean values (95% range) of simulation predictions without masking regions in the mock spectra that
+coincide with peaks in the flux error array. Other lines and shaded regions are as described in Figure 12.
+
+27
+
+Dark Gap Statistics
+1.0
+0.8
+
+F30
+
+0.6
+
+mean
+mean: power law
+95%
+68%
+
+0.4
+0.2
+0.0
+5.0
+
+5.2
+
+5.4
+
+5.6
+
+5.8
+
+6.0
+
+z
+Figure C1. Measured fraction of QSO spectra exhibiting long (L ≥ 30 h−1 Mpc) dark gaps as a function of redshift. The dot
+dashed line shows the result based on the power law continuum fitting. Other lines and regions are as described in Figure 5.
+
+28
+
+Zhu et al.
+
+1.00
+0.75
+
+homogeneous-UVB
+
+Observation
+Observation, gaps divided
+Simulation-mean
+Simulation-68% limit
+Simulation-95% limit
+
+0.50
+0.25
+0.00
+1.00
+0.75
+
+K20-low-τCMB
+
+ND20-early-shortmfp
+
+K20-low-τCMB -hot
+
+ND20-late-longmfp
+
+K20-high-τCMB
+
+ND20-late-shortmfp
+
+0.50
+0.25
+F30
+
+0.00
+1.00
+0.75
+0.50
+0.25
+0.00
+1.00
+0.75
+0.50
+0.25
+0.00
+5.00
+
+5.25
+
+5.50
+
+5.75
+
+6.005.00
+z
+
+5.25
+
+5.50
+
+5.75
+
+6.00
+
+Figure D1. The fraction of sightlines located in dark gaps with L ≥ 30 h−1 Mpc as a function of redshift. The dashed lines
+show F30 from observations with dark gaps divided at the redshifts of DLAs or metal systems with a 3000 km s−1 interval.
+Other lines and shaded regions are as described in Figure 12.
+
+Dark Gap Statistics
+
+29
+
+REFERENCES
+Astropy Collaboration, Price-Whelan, A. M., Sipőcz, B. M.,
+et al. 2018, AJ, 156, 123
+Astropy Collaboration, Robitaille, T. P., Tollerud, E. J.,
+et al. 2013, A&A, 558, A33
+Aubert, D. & Teyssier, R. 2008, MNRAS, 387, 295
+—. 2010, ApJ, 724, 244
+Bañados, E., Decarli, R., Walter, F., et al. 2015, ApJL, 805,
+L8
+Bañados, E., Venemans, B. P., Mazzucchelli, C., et al. 2018,
+Nature, 553, 473
+Barnett, R., Warren, S. J., Becker, G. D., et al. 2017, A&A,
+601, A16
+Becker, G. D., Bolton, J. S., Madau, P., et al. 2015,
+MNRAS, 447, 3402
+Becker, G. D., D’Aloisio, A., Christenson, H. M., et al.
+2021, arXiv:2103.16610
+Becker, G. D., Davies, F. B., Furlanetto, S. R., et al. 2018,
+ApJ, 863, 92
+Becker, G. D., Pettini, M., Rafelski, M., et al. 2019, ApJ,
+883, 163
+Boera, E., Becker, G. D., Bolton, J. S., & Nasir, F. 2019,
+ApJ, 872, 101
+Bolton, J. S., Puchwein, E., Sijacki, D., et al. 2017,
+MNRAS, 464, 897
+Bosman, S. E. I., Davies, F. B., Becker, G. D., et al. 2021a,
+arXiv:2108.03699
+Bosman, S. E. I., Ďurovčíková, D., Davies, F. B., & Eilers,
+A. C. 2021b, MNRAS, 503, 2077
+Bosman, S. E. I., Fan, X., Jiang, L., et al. 2018, MNRAS,
+479, 1055
+Bromm, V. & Larson, R. B. 2004, ARA&A, 42, 79
+Cain, C., D’Aloisio, A., Gangolli, N., & Becker, G. D. 2021,
+arXiv:2105.10511
+Carilli, C. L., Neri, R., Wang, R., et al. 2007, ApJ, 666, L9
+Carnall, A. C. 2017, arXiv:1705.05165
+Chardin, J., Puchwein, E., & Haehnelt, M. G. 2017,
+MNRAS, 465, 3429
+Chen, S.-F. S., Simcoe, R. A., Torrey, P., et al. 2017, ApJ,
+850, 188
+Choudhury, T. R., Paranjape, A., & Bosman, S. E. I. 2021,
+MNRAS, 501, 5782
+D’Aloisio, A., McQuinn, M., & Trac, H. 2015, ApJL, 813,
+L38
+Davies, F. B., Bosman, S. E. I., Furlanetto, S. R., Becker,
+G. D., & D’Aloisio, A. 2021, arXiv:2105.10518
+Davies, F. B. & Furlanetto, S. R. 2016, MNRAS, 460, 1328
+Davies, F. B., Hennawi, J. F., Bañados, E., et al. 2018a,
+ApJ, 864, 142
+—. 2018b, ApJ, 864, 143
+
+Dayal, P. & Ferrara, A. 2018, PhR, 780, 1
+de Belsunce, R., Gratton, S., Coulton, W., & Efstathiou, G.
+2021, arXiv:2103.14378
+Decarli, R., Walter, F., Venemans, B. P., et al. 2018, ApJ,
+854, 97
+Eilers, A.-C., Davies, F. B., & Hennawi, J. F. 2018, ApJ,
+864, 53
+Eilers, A.-C., Davies, F. B., Hennawi, J. F., et al. 2017,
+ApJ, 840, 24
+Eilers, A.-C., Hennawi, J. F., Decarli, R., et al. 2020, ApJ,
+900, 37
+Fan, X., Strauss, M. A., Becker, R. H., et al. 2006, AJ, 132,
+117
+Furlanetto, S. R., Hernquist, L., & Zaldarriaga, M. 2004,
+MNRAS, 354, 695
+Gaikwad, P., Srianand, R., Haehnelt, M. G., & Choudhury,
+T. R. 2020, arXiv:2009.00016
+Gallerani, S., Ferrara, A., Fan, X., & Choudhury, T. R.
+2008, MNRAS, 386, 359
+Greig, B., Mesinger, A., & Bañados, E. 2019, MNRAS, 484,
+5094
+Greig, B., Mesinger, A., Haiman, Z., & Simcoe, R. A. 2017,
+MNRAS, 466, 4239
+Haardt, F. & Madau, P. 2012, ApJ, 746, 125
+Harris, C. R., Millman, K. J., van der Walt, S. J., et al.
+2020, Nature, 585, 357
+Hoag, A., Bradač, M., Huang, K., et al. 2019, ApJ, 878, 12
+Horne, K. 1986, PASP, 98, 609
+Hu, W., Wang, J., Zheng, Z.-Y., et al. 2019, ApJ, 886, 90
+Hunter, J. D. 2007, CSE, 9, 90
+Jiang, L., Fan, X., Vestergaard, M., et al. 2007, AJ, 134,
+1150
+Jones, A., Noll, S., Kausch, W., Szyszka, C., &
+Kimeswenger, S. 2013, A&A, 560, A91
+Kashino, D., Lilly, S. J., Shibuya, T., Ouchi, M., &
+Kashikawa, N. 2020, ApJ, 888, 6
+Keating, L. C., Kulkarni, G., Haehnelt, M. G., Chardin, J.,
+& Aubert, D. 2020a, MNRAS, 497, 906
+Keating, L. C., Weinberger, L. H., Kulkarni, G., et al.
+2020b, MNRAS, 491, 1736
+Kelson, D. D. 2003, PASP, 115, 688
+Kulkarni, G., Keating, L. C., Haehnelt, M. G., et al. 2019a,
+MNRAS, 485, L24
+Kulkarni, G., Worseck, G., & Hennawi, J. F. 2019b,
+MNRAS, 488, 1035
+Kurk, J. D., Walter, F., Fan, X., et al. 2007, ApJ, 669, 32
+Maiolino, R., Cox, P., Caselli, P., et al. 2005, A&A, 440,
+L51
+
+30
+
+Zhu et al.
+
+Mason, C. A., Fontana, A., Treu, T., et al. 2019, MNRAS,
+485, 3947
+Mason, C. A., Treu, T., Dijkstra, M., et al. 2018, ApJ, 856,
+2
+Mazzucchelli, C., Bañados, E., Venemans, B. P., et al. 2017,
+ApJ, 849, 91
+McGreer, I. D., Mesinger, A., & D’Odorico, V. 2015,
+MNRAS, 447, 499
+McQuinn, M. 2016, ARA&A, 54, 313
+Meiksin, A. 2020, MNRAS, 491, 4884
+Nasir, F. & D’Aloisio, A. 2020, MNRAS, 494, 3080
+Noll, S., Kausch, W., Barden, M., et al. 2012, A&A, 543,
+A92
+Parsa, S., Dunlop, J. S., & McLure, R. J. 2018, MNRAS,
+474, 2904
+Paschos, P. & Norman, M. L. 2005, ApJ, 631, 59
+Planck Collaboration, Aghanim, N., Akrami, Y., et al.
+2020, A&A, 641, A6
+Qin, Y., Mesinger, A., Bosman, S. E. I., & Viel, M. 2021,
+2101, arXiv:2101.09033
+
+Sheinis, A. I., Bolte, M., Epps, H. W., et al. 2002, PASP,
+114, 851
+Shen, Y., Wu, J., Jiang, L., et al. 2019, ApJ, 873, 35
+Songaila, A. & Cowie, L. L. 2002, AJ, 123, 2183
+Springel, V. 2005, MNRAS, 364, 1105
+Trac, H. & Pen, U.-L. 2004, NewA, 9, 443
+Venemans, B. P., Walter, F., Neeleman, M., et al. 2020,
+ApJ, 904, 130
+Vernet, J., Dekker, H., D’Odorico, S., et al. 2011, A&A,
+536, A105
+Walther, M., Oñorbe, J., Hennawi, J. F., & Lukić, Z. 2019,
+ApJ, 872, 13
+Wang, F., Davies, F. B., Yang, J., et al. 2020, ApJ, 896, 23
+Wang, F., Fan, X., Yang, J., et al. 2021, ApJ, 908, 53
+Wang, F., Wang, R., Fan, X., et al. 2019, ApJ, 880, 2
+Wang, R., Carilli, C. L., Neri, R., et al. 2010, ApJ, 714, 699
+Wang, R., Wagg, J., Carilli, C. L., et al. 2013, ApJ, 773, 44
+Wold, I. G. B., Malhotra, S., Rhoads, J., et al. 2021,
+arXiv:2105.12191
+Yang, J., Venemans, B., Wang, F., et al. 2019, ApJ, 880,
+153
+Yang, J., Wang, F., Fan, X., et al. 2020a, ApJL, 897, L14
+—. 2020b, ApJ, 904, 26
+
+

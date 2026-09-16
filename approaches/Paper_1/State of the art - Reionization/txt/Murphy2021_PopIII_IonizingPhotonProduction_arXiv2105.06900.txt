@@ -1,0 +1,1872 @@
+MNRAS 000, 1–20 (2021)
+
+Preprint 19 July 2021
+
+Compiled using MNRAS LATEX style file v3.0
+
+Ionizing photon production of Population III stars: effects of
+rotation, convection, and initial mass function
+Laura J. Murphy1? , Jose H. Groh1 †, Eoin Farrell1 , Georges Meynet2 ,
+Sylvia
+Ekström2 , Sophie Tsiatsiou2 , Alexander Hackett3 , Sébastien Martinet2
+1
+School of Physics, Trinity College Dublin, the University of Dublin, College Green, Dublin
+
+2 Department of Astronomy, University of Geneva, Chemin des Maillettes 51, 1290 Versoix, Switzerland
+
+arXiv:2105.06900v3 [astro-ph.SR] 16 Jul 2021
+
+3 Institute of Astronomy, University of Cambridge, Madingley Road, Cambridge CB3 0HA, UK
+
+Accepted XXX. Received YYY; in original form ZZZ
+
+ABSTRACT
+
+The first stars are thought to be one of the dominant sources of hydrogen reionization in the
+early Universe, with their high luminosities and surface temperatures expected to drive high
+ionizing photon production rates. In this work, we take our Geneva stellar evolution models
+of zero-metallicity stars and predict their production rates of photons capable to ionize H,
+He I and He II, based on a blackbody approximation. We present analytical fits in the range
+1.7-500 M . We then explore the impact of stellar initial mass, rotation, and convective overshooting for individual stars. We have found that ionizing photon production rates increase
+with increasing initial mass. For the rotational velocities considered we see changes of up to
+25% to ionizing photons produced. This varies with initial mass and ionizing photon species
+and reflects changes to surface properties due to rotation. We have also found that higher
+convective overshooting increases ionizing photon production by approximately 20% for the
+change in overshooting considered here. For stellar populations, we explore how the production of ionizing photons varies as a function of the initial mass function (IMF) slope, and
+minimum and maximum initial masses. For a fixed population mass we have found changes
+of the order of 20-30% through varying the nature of the IMF. This work presents ionizing
+photon production predictions for the most up to date Geneva stellar evolution models of
+Population III stars, and provides insight into how key evolutionary parameters impact the
+contribution of the first stars to reionization.
+Key words: stars: population III – stars: evolution – stars: rotation – stars: massive
+
+1
+
+INTRODUCTION
+
+The formation of the first stars a few hundred million years after
+the Big Bang (e.g., Bromm 2013) fundamentally changed the history of the universe. The first stellar generation, commonly referred
+to as Population III (Pop III) stars, was composed of metal-free,
+luminous hot stars that were the first sources of hydrogen ionizing photons, initiating the epoch of reionization. It is generally accepted that the first stellar populations were a significant, and perhaps dominant, source for the reionization of hydrogen in the intergalactic medium (IGM; Haehnelt et al. 2001; Faucher-Giguère et al.
+2008, 2009; Becker & Bolton 2013; Wise et al. 2014). Active galactic nuclei (AGNs) also contribute to reionization and are the drivers
+of the full reionization of He I in the IGM (Barkana & Loeb 2001;
+Faucher-Giguère et al. 2009; McQuinn 2016; Worseck et al. 2016).
+The relative contribution of AGN and stars to cosmic reionization is
+
+?
+
+E-mail: murphl25@tcd.ie
+† E-mail: jose.groh@tcd.ie
+© 2021 The Authors
+
+a topic at the forefront of Astrophysics research, with ongoing observational and theoretical efforts from different groups. Our paper
+deals with one of the important aspects within this broader theme,
+which is the production of ionizing photons from Pop III stars and
+how this is affected by fundamental, yet poorly constrained, stellar
+properties such as rotation and convection.
+Previous studies have shown that Pop III stars are expected
+to produce many ionizing photons since zero-metallicity stars are
+more luminous and hotter than stars at higher metallicities (Marigo
+et al. 2001, 2003; Ekström et al. 2008; Yoon et al. 2012; Murphy
+et al. 2021). The ionizing photon production rates for higher metallicity stars have been studied in Topping & Shull (2015). In that
+work, ionizing photon production rates were determined for a range
+of metallicities from stellar evolution model grids of Ekström et al.
+(2012) and Georgy et al. (2013), and also compared to work from
+Schaerer (2003) on ionizing photon production at very low metallicities (Z = 10−5 − 10−7 ). Predictions for ionizing photon production of Pop III stars have been made in Tumlinson & Shull (2000);
+Schaerer (2002); Heger & Woosley (2010) and Yoon et al. (2012).
+Using the available evolutionary tracks of metal-free stars at that
+
+2
+
+L.J.Murphy et al.
+
+time (Castellani et al. 1983; El Eid et al. 1983; Chieffi & Tornambe
+1984), Tumlinson & Shull (2000) used a fitting method to produce
+‘static stellar models’ and, combined with atmosphere models, predicted the ionizing photon production of the first stars. This work
+provided a first look at how much more efficient Pop III stars are at
+producing ionizing photons than higher metallicity stars, but there
+was still much to be done in accurately modelling surface properties of the first stars.
+With new stellar evolution model grids of zero-metallicity
+stars, Schaerer (2002) combined stellar evolution and atmosphere
+models to predict ionization rates. This was an important step, because for the first time it allowed the study of the evolution of ionizing photon production rates over the lifetime of Pop III stars. Based
+on the Geneva stellar evolution models at that time, they found that
+redward evolution of Pop III stars decreased ionizing photon production by a factor of two over the stellar lifetime. This shows the
+significant impact that stellar evolution can have on ionizing photon production, and why it is important to have updated predictions
+with the most recent model grids available. A new stellar evolution
+grid of Pop III models was presented in Heger & Woosley (2010)
+for a fine grid of 120 non-rotating models in the mass range 10100 M , from which the ionizing photon production per solar mass
+was determined. This provided further insight on how a population
+of zero-metallicity stars may have contributed to reionization. The
+effects of rotation on the ionizing photon production of Pop III stars
+was explored for the first time in Yoon et al. (2012). The models in
+that work also included internal magnetic fields and studied the impact of chemically homogeneous evolution on the first stars. This
+was a significant development in understanding how stellar properties impact ionizing photon production, and further demonstrates
+the importance of exploring how internal mixing impacts the ionizing photon contribution of the first stars.
+More recently, the contribution of stripped stars and binaries were investigated in Götberg et al. (2020) for metallicities
+Z = 0.014, 0.006, 0.002, and 0.0002. They show that due to their
+hotter surface temperatures and higher luminosities, stripped stars
+are expected to significantly increase the contribution to ionization, however, this effect decreases at lower metallicities since these
+stars are already very hot and luminous as single stars. Berzin
+et al. (2021) has recently confirmed this, in showing that stellar
+populations at these metallicities (Z = 0.0002 − 0.014) which include stripped stars produce significantly more ionizing photons
+than those without. They also showed that Pop III stellar populations produce much more ionizing photons than higher metallicity
+populations, even those where stripped stars are included.
+Given that it is expected that stellar initial mass will impact
+the ionizing photon production rate (Tumlinson & Shull 2000;
+Schaerer 2002; Alvarez et al. 2006), the initial mass function (IMF)
+will have an impact on the ionizing photon production of the first
+stellar populations. Much work has been done to understand the initial mass function of the first stars. The first hydrodynamical simulations (e.g. Abel et al. 2002) predicted preferential formation of
+very massive first stars (> 100 M ; Bromm et al. 2002). However,
+more recent simulations predict significant fragmentation (Stacy
+et al. 2010; Clark et al. 2011), the formation of binaries (Turk et al.
+2009), and a wide initial mass distribution from tens to hundreds
+of solar masses (Hirano et al. 2014, 2015). In fact, a redshift dependent IMF for Pop III stars was proposed in Hirano et al. (2015),
+where stars form on the order of hundreds of solar masses at redshifts z > 20, while stars form on the order of tens of solar masses
+at lower redshifts due to relatively cool formation environments.
+Although research to constrain the exact distribution of the Pop III
+
+IMF continues, there is general agreement on a top-heavy primordial IMF (Greif et al. 2011; Stacy & Bromm 2013; Susa et al. 2014;
+Hirano et al. 2014, 2015; Stacy et al. 2016; Jeřábková et al. 2018;
+Wollenberg et al. 2020). The IMF for solar metallicity stars is typically parameterized using the Salpeter (1955) IMF and its recent
+revisions (Scalo 1986; Kroupa 2001; Chabrier 2003), with a slope
+of α = 2.35 in the massive star regime. The slope here refers to
+the IMF relation dN/dM ∝ M −α which defines the number of stars
+of different initial masses (Mini ) in a population. Stacy & Bromm
+(2013) performed cosmological simulations of Pop III stellar systems in a range of minihalo environments, and in doing so were
+able to derive an IMF slope of α = 0.17. While much remains to
+be done to constrain the primordial IMF, this value is very useful
+for comparing to higher metallicity populations, which follow the
+Salpeter IMF slope. Such approaches have been used to study the
+enrichment of Population II stars (Jaacks et al. 2018; Welsh et al.
+2021), and the statistics of Pop III binaries (Liu et al. 2021). As
+observations of the early Universe increase with upcoming facilities such as the James Webb Space Telescope (JWST), the Wide
+Infrared Survey Telescope (WFIRST), and the Square Kilometre
+Array (SKA), we will soon have further constraints on the Pop III
+IMF, and until then we need to consider a broad range of IMFs.
+It is an exciting time for research of the early Universe ahead
+of new observational facilities, and we must prepare for the groundbreaking detections that are expected in the coming decade. To
+understand the impact of the first stars on reionization, we need
+to have updated predictions for ionizing photon production from
+Pop III stars, for a broad range of parameters. In Murphy et al.
+(2021) we presented a new grid of Pop III stellar evolution models
+of initial masses 1.7 M 6 Mini 6 120 M , with and without rotation.
+These models extend the GENEC model grid (Ekström et al. 2012;
+Georgy et al. 2013; Groh et al. 2019) down to zero metallicity and
+have improved our understanding of rotational effects on the evolution of surface properties and metal enrichment in Pop III stars.
+This grid provides opportunity to study the impact of rotation and
+initial mass on ionizing photon production. Since surface properties of these stars directly impact ionization, it is important to make
+updated predictions with the latest stellar evolution models, these
+new predictions are presented in this work. The paper is organised
+as follows. Section 2 describes the methods and the calculation of
+the ionizing photon production rate, the results of this work are presented in Section 3, we provide further discussion in Section 4, and
+present our conclusions in Section 5.
+
+2
+
+METHODS
+
+We employ our recent grid of Pop III stellar models from Murphy et al. (2021). This grid extends the GENEC model grids (Ekström et al. 2012; Georgy et al. 2013; Groh et al. 2019) to zero
+metallicity. From this grid we select 16 models of initial masses
+Mini = 9, 12, 15, 20, 30, 40, 60, 85, 120 M , both non-rotating
+q and
+GM
+rotating with initial velocity υini = 0.4 υcrit , where υcrit = 23 Rpol,crit
+is the break-up velocity at critical rotation and Rpol,crit is the polar
+radius at υcrit . We assume no magnetic field, and due to the zerometallicity nature of the models we assume no mass loss unless
+the critical rotation limit is reached. Convective zones are determined using the Schwarzschild criterion, and for the main sequence
+(MS) and the He-burning phase the convective core is extended
+with an overshooting parameter dover /HP = 0.1, where dover is the
+distance of overshooting beyond the Schwarzchild boundary and
+HP is the pressure scale-height at the edge of the core. For further
+MNRAS 000, 1–20 (2021)
+
+Pop III ionizing photon production
+information on model ingredients we refer the reader to the grid
+paper Murphy et al. (2021). We also compute new models with
+different assumptions about convective mixing to complement our
+Pop III grid. These new models are non-rotating models of initial
+masses Mini = 9, 15, 20, 30, 40, 60, 85, 120 M with a higher overshooting parameter of dover /HP = 0.3.
+In addition, we compute new stellar structure models using
+SNAPSHOT (Farrell et al. 2020) to study the impact of other mixing
+properties. For this we take the abundance profile of a non-rotating
+20 M model halfway through the MS and modify the abundance
+profile to mimic stronger or weaker mixing processes. This involves
+creating a smoother or steeper H profile above the H burning core.
+Once the abundance profile has been modified the star is allowed
+to relax to hydrostatic and thermal equilibrium. For more details on
+this method we refer the reader to Farrell et al. (2020).
+To calculate the total number of ionizing photons produced by
+these models during their lifetime, we must first calculate the radiative flux produced at each timestep. We approximate the radiative
+flux at each timestep using a blackbody emitter with the luminosity
+and effective temperature predicted by the Geneva stellar evolution
+model, which is obtained using a grey-atmosphere approximation.
+This caveat of using blackbodies should be taken into account when
+interpreting our results. The radiative flux of stars is well known to
+deviate from blackbodies, in particular at lower temperatures and/or
+when opacity effects are important. Previous work from our group
+investigated the time evolution of the stellar flux and spectral lines
+for a 60 M star at solar metallicity (Groh et al. 2014). In that work
+we merged the Geneva stellar evolution code with radiative transfer calculations using the CMFGEN code (Hillier & Miller 1998)
+and predicted the flux in different bands, including the emission of
+ionizing photons. These are computationally-demanding computations that we will defer for future work. For Pop III stars the main
+effect of not using stellar atmospheres will be seen in the emission
+of He II (and to a lesser degree He I) ionizing photons as we discuss
+later in this paper. The number of H ionizing photons produced by
+Pop III stars is only weakly affected by using blackbodies (. 0.2
+dex), since H is fully ionized in the atmospheres of all the models
+that we analyze here. We discuss this point further in Section 4.2,
+where we compare our results to those from Schaerer (2002). The
+qualitative results of our paper should not be substantially affected
+by using blackbodies.
+Once the radiative flux Fλ has been computed under the assumptions above, the ionizing photon production rate is computed
+by integrating below the threshold wavelengths λi for ionizing photons of HI, HeI and HeII. These wavelengths are 912, 504, and
+228Å for HI, HeI, and HeII respectively. To calculate the ionizing photon production rate, Qi , in photons s−1 (Tumlinson & Shull
+2000; Schaerer 2002), we use
+Z
+4π 2 λi
+Qi =
+R?
+λ Fλ dλ
+(1)
+hc
+0
+where R? is the stellar radius. The number of ionizing photons produced by a model of a given initial mass during their full
+lifetime (Ni ) is then computed by integrating Qi across its stellar
+lifetime.
+To calculate the number of stars formed at various initial
+masses in a population, we use the initial mass function (IMF) of
+the form ξ(M) = ξ0 M −α , where α is the slope of the IMF, and ξ0 is
+a factor that depends on the total mass of the population. For most
+of this work we assume a total mass of the population of 106 M .
+Through varying the slope of the IMF we can produce different
+populations where different initial masses will dominate ionizing
+MNRAS 000, 1–20 (2021)
+
+3
+
+photon production. The slope used varies from α = −1 to α = 2.35
+to cover a range of potential IMFs from top-heavy (α < 0 Greif et al.
+2011; α < 2 Bromm 2012) to the Salpeter IMF (α = 2.35; Salpeter
+1955) which is widely accepted as the IMF for solar-metallicity
+stars. While we explore the ionizing photon production of stellar
+populations of these various IMF slopes, we will focus on α = 0.17,
+which is found in Stacy & Bromm (2013) (see Section 1), to represent the IMF for a Pop III stellar population. To determine the total
+number of ionizing photons produced by the population (Npop ) we
+use the following equation,
+Npop =
+
+Z Mmax Z t
+Mmin
+
+Qi ξ(M) dt dM
+
+(2)
+
+0
+
+For most of the paper we will assume a minimum mass (Mmin )
+of 9 M , and a maximum mass (Mmax ) of 120 M . In Section 3.7 we
+test the effect of Mmin on the ionizing photons produced. We do this
+by using our intermediate mass models from Murphy et al. (2021)
+of Mini = 1.7, 2, 2.5, 3, 4, 5, 7 M . We also test the effect of Mmax
+in Section 3.8 by using newly computed zero-metallicity models
+of initial masses Mini = 180, 250, 300, 500 M (Martinet et al., in
+prep). These very massive star models are non-rotating, and unlike
+our Pop III grid models use opacity tables of Grevesse & Noels
+(1993) rather than Asplund et al. (2005), and use the Ledoux criterion for convective boundaries with convective overshooting of
+αov = 0.2. We note that these massive stars have very large convective cores and thus the differences in the implementation of the
+physics with respect to the models in Murphy et al. (2021) are not
+very relevant here. The very massive star models are also run only
+to the end MS, so we assume that the total photons produced by the
+end of the MS account for 90% of the total photons produced by
+the end of the evolution. This assumption gives an upper estimate
+to the ionizing photons produced given that models tend to have
+lower effective temperatures in post MS phases.
+The time interval for integration in eq. 2, t, refers to the age of
+the population. Since stellar lifetime increases with decreasing initial mass Mini , t must be at least the lifetime of the smallest initial
+mass model in order for all of the stars in the population to have
+produced their total ionizing photons. Therefore, if considering a
+population without rotation where Mmin = 9 M , the time interval
+must be t = 20 Myr, the lifetime of the non-rotating 9 M model,
+for the population to have produced its total ionizing photons after
+R Mmax
+a single starburst, i.e. Npop = M
+Ni ξ(M) dM. However, we can
+min
+also vary the value of t to study the evolution of the ionizing photons produced by the population, as we will discuss in Section 3.6.
+
+3
+3.1
+
+RESULTS
+Analytical prescription of total ionizing photons
+produced by Pop III stars
+
+We first present our analytical fits of the total ionizing photons produced by non-rotating models in the full mass range 1.7 M 6 Mini6
+500 M . These fits will be useful for future studies and allow for
+convenient calculation of primordial ionizing photon production in
+hydrodynamical simulations. In Figure 1 we plot the total ionizing photons produced, log(NH ), log(NHeI ) and log(NHeII ), versus the
+initial mass, log(Mini /M ), along with their least-squares polynomial fits for the mass ranges 1.7-9 M , 9-120 M , and 120-500 M .
+These fits are described by log(Ni ) = a0 + a1 x + a2 x2 + a3 x3 , where
+x = log(Mini /M ), and the coefficients for each fit are presented in
+
+4
+
+L.J.Murphy et al.
+Table 1. Coefficients of least squares polynomial fits of total ionizing
+photons produced, log(Ni ), by non-rotating models in the full mass range
+1.7 M 6 Mini 6 500 M , of the form log(Ni ) = a0 + a1 x + a2 x2 + a3 x3 ,
+where x = log(Mini /M ). The mass range is divided into three ranges to
+cover the intermediate mass models 1.7-9 M (Murphy et al. 2021), the
+massive models 9-120 M (Murphy et al. 2021), and the very massive models 120-500 M (Martinet et al., in prep). These fits are illustrated in Figure 1.
+
+Figure 1. Total ionizing photons produced, log(Ni ), by individual nonrotating models in the mass range 1.7 M 6 Mini 6 500 M . The different symbols correspond to photons capable of ionizing H (diamonds), He I
+(asterisks), and He II (triangles). Also indicated are the mass ranges corresponding to the different fits, and the equation of the cubic polynomial fit.
+The coefficients of each of the six fits are presented in Table 1.
+
+Table 1. We note that unlike Schaerer (2002) these values are based
+on a blackbody approximation. For zero-metallicity stars the main
+effect of not using stellar atmospheres will be seen in the emission
+of He II (and to a lesser degree He I) ionizing photons. H ionizing
+photons are not expected to be significantly impacted since H is
+fully ionized in the atmospheres of our models. We investigate the
+impact of this blackbody approximation in Section 4.2. In the following sections we study how rotation and convection impact the
+ionizing photon production. These analytical fits, in conjunction
+with our predictions for variations with evolutionary parameters,
+can be used to inform future studies on Pop III ionizing radiation.
+
+3.2
+
+Rotation: Impact on ionizing photon production rate
+
+We now look at how the ionizing photon production rate, Qi , varies
+throughout the evolution of our Pop III models from Murphy et al.
+(2021). Figure 2 shows this evolution for photons capable of ionizing H, He I and He II. Higher initial mass models can be distinguished by their shorter stellar lifetimes. We see that the higher the
+initial mass the larger the ionizing photon production rate. This is
+not surprising given that more massive models are typically hotter and more luminous than models of lower initial mass. Figure 2
+shows that there are two competing effects in determining how
+many ionizing photons will be produced by a model during its lifetime: the ionizing photon production rate, which depends on the
+surface properties; and the stellar lifetime, which limits the time
+available for producing ionizing photons. Models including rotation are indicated by dashed lines and are noticeable for their longer
+
+Quantity
+
+Mini
+
+log(NH )
+log(NH )
+log(NH )
+log(NHeI )
+log(NHeI )
+log(NHeI )
+log(NHeII )
+log(NHeII )
+log(NHeII )
+
+1.7-9 M
+9-120 M
+120-500 M
+1.7-9 M
+9-120 M
+120-500 M
+1.7-9 M
+9-120 M
+120-500 M
+
+a0
+
+a1
+
+a2
+
+a3
+
+56.97
+57.81
+96.12
+50.76
+54.53
+92.51
+33.55
+44.96
+86.11
+
+15.26
+7.89
+-44.18
+29.54
+12.11
+-41.09
+68.19
+23.64
+-36.27
+
+-16.02
+-3.82
+19.84
+-30.19
+-5.95
+18.96
+-69.13
+-11.52
+17.61
+
+6.36
+0.72
+-2.88
+11.68
+1.09
+-2.81
+26.64
+2.03
+-2.70
+
+lifetimes compared to non-rotating models (solid lines). We would
+expect that this will then increase the total number of ionizing photons produced by rotators, but this is not clear given that the ionizing photon production rate varies due to differences in surface
+properties with rotation.
+To further illustrate how the ionizing photon production rate
+varies with different initial masses we plot the production rate of
+H ionizing photons, log(QH ), over the evolutionary tracks of the
+models in Figure 3. The values of log(QH ) are taken at equal intervals of age, so this also has the advantage of visualising the time
+evolution across the Hertzsprung-Russell diagram, and where each
+model spends the majority of its time producing ionizing photons.
+Since these stars spend approximately 90% of their lifetimes on the
+MS, it is not surprising that they produce the majority of their ionizing photons there. From this figure we can see how the H ionizing
+photon production rate varies in different regions of luminosity and
+effective temperature, and visualise why models of higher initial
+mass have higher ionizing photon production rates. We can also
+observe how rotational effects on the surface properties result in
+changes to the ionizing photon production rate. For example, the
+12 M model with rotation experiences a decrease in surface temperature (Teff ) at late evolutionary stages which results in a large
+decrease in QH .
+To better understand how the ionizing photon production rate,
+Qi , varies with rotation we calculate the ratio of Qi for models with
+rot
+, for each of the three ionizing phorotation to those without, QQnorot
+ton species, H, He I, and He II. In order to compare their time evolutions properly, this is done for the normalised age of each model.
+These ratios are shown in Figure 4 for each initial mass in the range
+9 M 6 Mini 6 120 M . It can be seen that rotation impacts the production rate of each species differently. In the case of H photons
+(left panel Figure 4), while rotating models start their lives producing less H photons, the ratio of Qrot to Qnorot increases steadily
+through most of the lifetime, although there is some divergence in
+late stages for the more massive models. Focusing now on He I
+photons (middle panel Figure 4) we see an earlier divergence in the
+trend for varying initial masses. From about half-way through the
+lives of the models, less massive models see an increase of Qrot to
+Qnorot while more massive models see a decrease in this ratio. We
+also note that, with the exception of the late stages of models with
+MNRAS 000, 1–20 (2021)
+
+Pop III ionizing photon production
+
+5
+
+Figure 2. Evolution of the ionizing photon production rate (Qi ) for models in the mass range 9 M 6 Mini 6 120 M . Three ionizing photons species are shown,
+H (left panel), He I (middle panel), He II (right panel). Solid lines show non-rotating models, dashed lines show rotating models, and colours indicate different
+initial masses as shown in legend.
+
+Figure 3. Left: Evolutionary tracks of non-rotating models from Murphy et al. (2021) in the mass range 9 M 6 Mini 6 120 M . Overplotted are the values for
+the H ionizing photon production rate, log(QH ), as indicated by the colour bar on the right-hand side. Right: Same as left panel but for models rotating with
+initial velocity υini = 0.4 υcrit .
+
+Mini =9-20 M , more He I photons are produced by non-rotating
+models. Finally we look at the effect of rotation on the production
+of He II photons. The changes in behaviour moving from H to He I
+photons seem amplified here. That is to say that the ratio of Qrot to
+Qnorot has decreased even further, with more massive rotating models producing as little as half the He II photons as their non-rotating
+counterparts for a significant fraction of the lifetime. These evolving trends for different photon species call into question how these
+ionizing photon production rates depend on the surface properties.
+To understand the trends seen in Figure 4 and what leads to
+differences from species to species, we look at the impact of rotation on surface properties throughout the normalised lifetimes.
+This is shown in Figure 5, again using ratios to disentangle where
+rotating models are hotter or more luminous than non-rotating modMNRAS 000, 1–20 (2021)
+
+els, and vice versa. We see separate trends here for these two surface properties. On the one hand, the effective temperature (Teff )
+of rotating models tends to decrease over the evolution relative to
+non-rotating models, a trend which is more strongly seen as initial mass increases. This decrease in Teff for more massive models,
+Mini = 60, 85, 120 M , corresponds to their approach towards critical rotation (see Figure 6, Murphy et al. 2021). On the other hand,
+the luminosity of rotating models tends to increase over the evolution relative to non-rotating models, and in contrast to the trend
+for temperature this is more strongly seen for less massive models.
+This explains two things from Figure 4. Firstly, it explains the dichotomy of trends with initial mass at late stages where the impact
+of rotation appears to diverge, and secondly, it illustrates which of
+the surface properties dominates the production rate of each ioniz-
+
+6
+
+L.J.Murphy et al.
+
+Figure 4. Left: Evolution of ratio of H photon production rate, QH (eq. 1), by models with rotation to models without rotation. Colours represent different
+initial masses, Mini . The white region indicates where QH is higher with rotation, conversely the grey region indicates where non-rotating models have higher
+QH . Middle: Same as left panel but for He I photons. Right: Same as left panel but for He II photons.
+
+ing photon species. We can now observe that H photons are dominated by the luminosity of the model since the trends seen in the
+left panel of Figure 4 most closely resemble the trends seen in the
+lower panel of Figure 5. Similarly we deduce that He II photons are
+dominated by effective temperature, while the dependencies of He I
+photons on the surface properties lie somewhere in between. This is
+a reflection of how each species of photon is determined in the first
+place, and the sensitivity of the stellar radiative flux to the effective
+temperature in different wavelength domains. As discussed in Section 2, we use a blackbody approximation to obtain the radiative
+flux and subsequently integrate below the different threshold wavelengths to determine the ionizing photon production rate for each
+species. The lower the wavelength, the larger the effect of changing
+the effective temperature on the number of photons at that wavelength. This phenomenon would be similar had we used detailed
+atmospheres.
+
+3.3
+
+Rotation: Impact on total ionizing photons produced
+
+As has been identified in Section 3.2, while Qi increases with initial
+mass, more massive models also have shorter lifetimes, and therefore the outcome for total ionizing photons produced by a star of
+a given initial mass (Ni ) depends on the combination of these two
+effects. In Figure 6 we present the results for total ionizing photons
+produced for each initial mass model, with and without rotation.
+These values are also presented in Table 2. From this figure it is
+clear that the total number of ionizing photons increases for increasing initial mass, despite the decrease in stellar lifetimes. This
+is true for all three species of ionizing photons. The trend with initial mass is apparent from the left panel of this figure, however, the
+trend with rotation is more difficult to observe. To clarify this we
+present in the right panel of Figure 6 the ratio of total ionizing photons produced by rotating and non-rotating models of a given initial
+mass.
+The complexity of the trends in this figure reflects the complexities of the impact of rotation on the surface properties. The
+effect of rotation is not the same for each initial mass, and each
+species is affected differently by rotation, following on from what
+we have discussed in Section 3.2. For each ionizing photon species
+
+we see a decrease in the ratio Nrot /Nnorot as we move to higher initial
+masses. For the 9 M model, we see that rotation increases the total
+photons produced for all three species, with the rotating model producing 25% more H photons than the non-rotating 9 M model. For
+all other initial masses rotating models produce less He II photons
+than non-rotating models, with the 120 M rotating model producing 25% less He II photons than the non-rotating model. This result
+is important, because it tells us that not only will the total ionizing photons produced change for differing initial masses, but the
+rotational effects vary also. The impact of rotation on surface properties and stellar evolution of the first stars is discussed in detail
+in Murphy et al. (2021). While rotational effects are complex and
+differ significantly with initial mass, the dominant effects are increasing luminosity, due to larger convective cores, and decreasing
+surface temperature, due to changes to stellar structure. The outcome of these two competing effects varies with initial mass. We
+saw this in Figure 5, where decreasing surface temperature with
+rotation was more prominent for higher initial masses, and increasing luminosity with rotation was more prominent for lower initial
+masses. From Section 3.2 we found that H photons are dominated
+by luminosity effects, and He II photons are dominated by surface
+temperature effects. This is why in the right panel of Figure 6 we
+see a stronger change to H photons with rotation at lower initial
+masses, and a stronger change to He II photons at higher initial
+masses. The mass dependency of rotational effects is thus evident
+in the ionizing photon species most impacted. This effect should be
+considered in studying the impact of the initial mass function on
+ionizing photons produced.
+
+3.4
+
+Convection: Impact on total ionizing photons produced
+
+Similarly to rotation, convective overshooting above the core increases interior mixing and impacts stellar evolution significantly.
+For consistency with previous Geneva stellar evolution grids (Ekström et al. 2012; Georgy et al. 2013; Groh et al. 2019) the model
+grid used here (Murphy et al. 2021) takes a value of αov = 0.1 for
+the overshooting parameter. However, in recent research it has been
+predicted that the overshooting parameter could be higher for massive stars, with αov = 0.3 − 0.5 more closely matching observations
+MNRAS 000, 1–20 (2021)
+
+Pop III ionizing photon production
+
+7
+
+which experiences the largest increase in MS lifetime with higher
+overshooting for this initial mass range. Similarly to what we discussed regarding Figure 6, the impact on different ionizing photon
+species tells us the dominant effect on surface properties for different initial masses. Changes to surface temperature impact He
+II photons more strongly, while changes to luminosity predominantly impact H photons. Despite these variations for different stellar masses, higher overshooting increases ionizing photon production for all initial masses considered here, which suggests that we
+can scale the contribution of Pop III stars to ionization with the
+overshooting parameter considered.
+3.5
+
+Figure 5. Upper: Evolution of ratio of effective temperature (Teff ) by models with rotation to models without rotation. Colours represent different initial masses, Mini . The white region indicates where Teff is higher with rotation, conversely the grey region indicates where non-rotating models have
+higher Teff . Lower: Same as upper panel but for luminosity.
+
+of massive MS stars (Castro et al. 2014; Schootemeijer et al. 2019;
+Higgins & Vink 2019; Martinet et al. 2021). We therefore want to
+investigate the impact that increased convective overshooting will
+have on ionizing photon production. To do this we take additional
+Geneva stellar evolution models of Pop III stars with consistent
+physical ingredients to our Murphy et al. 2021 non-rotating grid,
+barring the overshooting parameter which in this new set of models
+is αov = 0.3. By comparing these models we can discern the effect
+that increased convective overshooting has on the surface properties, and subsequently the ionizing photon production. The results
+of this investigation are presented in Figure 7, with values given
+in Table 2. We show the total ionizing photons produced by each
+model in the left panel, while the right panel shows the ratio of
+photons produced by the models with higher overshooting, to those
+with the lower overshooting parameter in the original model grid.
+We find that for all ionizing photon species, at all initial masses
+considered here, that increased convective overshooting increases
+the total ionizing photons produced. This increase varies for different initial masses, but generally speaking we find an increase of
+approximately 20% to ionizing photons produced. This result is a
+reflection of the increased luminosity and surface temperature of
+the models with higher convective overshooting, but mainly results
+from the increased lifetime of models with higher overshooting.
+This is evident from the variations in the percentage increase of
+ionizing photons for different initial masses. The most notable increase in ionizing photons produced is that of the 15 M model,
+MNRAS 000, 1–20 (2021)
+
+Initial Mass Function: Impact on ionizing photons
+produced by stellar populations
+
+Now that we understand ionizing photon production for individual stars at zero-metallicity, we turn our attention to the ionizing
+photon production of populations of these stars. To investigate this
+we produce initial mass functions (IMFs) of the form ξ(M) ∝ M −α
+(see Section 2) and vary the slope, α, with a fixed total stellar mass
+for the population of Mtot = 106 M . Figure 8 shows the total photons produced by stars of different initial masses weighted by the
+different IMFs, i.e. log(Ni ξ(M)). The stars considered here are nonrotating with αov = 0.1. For each IMF, the total photons produced
+at each initial mass vary depending on the number of stars produced at that initial mass. Furthermore, the total photons produced
+as depicted here represents the number produced following the lifetime of each model, such that each star has enough time to produce
+their total number of ionizing photons, Ni (see Section 2). From
+this figure we find which initial mass model dominates the ionizing photon production for different IMFs. For the steepest IMF, the
+Salpeter IMF (α = 2.35), less massive models dominate photon production, then as you move to lower values of α the more massive
+models become more important for ionization. This trend holds for
+each ionizing photon species, however, the more energetic He photons are dominated by higher initial masses than H photons. For
+the Salpeter IMF (α = 2.35), the 12 M stars contribute most to H
+photon production, the 15 M stars contribute most to He I photon production, and the production of He II photons is dominated
+by 40 M stars. However, for the Stacy & Bromm (2013) (SB13,
+α = 0.17) IMF, the 120 M model dominates H, He I, and He II
+photon production.
+The impacts of rotation and convection for varying IMF slopes
+are summarised in Figure 9. Similarly to Figures 6 and 7, the total
+photons produced for different initial conditions are shown on the
+left, and ratios of these points are shown on the right. Unlike Figures 6 and 7, which showed photons produced by individual stars of
+different initial masses (Ni ), this plot shows the total photons produced by stellar populations of different IMF slopes (Npop ). We still
+assume here a population stellar mass of Mtot = 106 M , and that all
+stars in the population have produced their total ionizing photons
+for their full lifetimes, having formed from a single starburst. This
+figure depicts the importance of the choice of IMF in determining
+a population’s contribution to reionization. As the IMF slope increases, the number of massive stars in the population decreases.
+Since these more massive stars produce the most ionizing photons,
+we see a trend of decreasing ionizing photon production with increasing IMF slope. We see this clearly for He II ionizing photons,
+however, for H ionizing photons the decrease with increasing IMF
+slope is much less significant, and may be less than effects due to
+convection or rotation depending on the IMF slopes being compared. This infers that the H ionizing photon production per solar
+
+8
+
+L.J.Murphy et al.
+
+Figure 6. Left: Total ionizing photons produced from the zero age main sequence (ZAMS) to end He-burning as a function of Mini . Models with (without)
+rotation are indicated by a diamond (asterisk) symbol. Colours show the different ionizing photon species. Right: Ratio of total ionizing photons produced
+by models with rotation to models without rotation as a function of Mini . Similarly to Figure 4, the grey region shows where rotating models produced less
+ionizing photons from the ZAMS to the end of He-burning, and the white region shows where more ionizing photons were produced by rotators.
+
+Figure 7. Left: Total ionizing photons produced by models with convective overshooting parameter αov = 0.1 (diamond symbols) and αov = 0.3 (asterisk
+symbols). Right: Ratio of total ionizing photons produced by models with αov = 0.3 to models with αov = 0.1.
+
+MNRAS 000, 1–20 (2021)
+
+Pop III ionizing photon production
+
+9
+
+Figure 8. Total ionizing photons produced by non-rotating stars of different initial masses weighted by initial mass functions of the form ξ(M) ∝ M −α . Each
+panel represents a different species of ionizing photon, H, He I, He II, as indicated by the titles. The total mass of stars in each population is 106 M . Ionizing
+photons produced at each initial mass vary based on the number of stars produced at that mass by the given IMF. IMF slope values are indicated by the legend.
+
+mass of stars of different initial masses (NH /Mini ) is more similar than that of He II ionizing photon production per solar mass
+(NHeII /Mini ).
+
+The right panel of Figure 9 shows how effects due to rotation
+and convection vary with IMF slope. Since the IMF slope determines the dominant initial mass in the population, the rotational effects seen here are a reflection of the trends seen in the right panel
+of Figure 6, and equivalently the effects of convection seen here
+are a reflection of the trends seen in Figure 7. Lower IMF slopes
+follow the trend for more massive models, for example a stronger
+decrease in He II photons produced by rotating stars. By contrast,
+as IMF slope increases we start to observe the trend for less massive models, which is a stronger increase in H photons produced by
+stars with rotation, and stars with higher overshooting. The differences between effects due to rotation and convection in this figure
+serve as a reminder that rotational effects are more complex than
+changes in convective core size alone. This reinforces the importance of accurately modelling rotational effects in stellar evolution
+models, to fully understand the impact that rotation has on stellar
+structure.
+
+The main conclusion from Figure 9 is the relative importance
+of rotation, convective overshooting, and slope of the initial mass
+function, in determining the total ionizing photons produced by
+a population of zero-metallicity stars of a given fixed total mass.
+Taking the non-rotating αov = 0.1 SB13 population as a reference,
+the value for total H ionizing photons produced per stellar mass of
+the population (Npop /Mtot ) is 1.13×1062 photons M−1 (see Table 4).
+This value increases by 7.7% when rotation of υini = 0.4 υcrit is included, by 9.9% with higher overshooting of αov = 0.3, and decreases by 26% when we assume a Salpeter IMF slope. Therefore,
+if comparing between the SB13 and Salpeter IMF slopes, then the
+choice of IMF slope is relatively more impactful than the effect of
+rotation or convective overshooting for the values considered here.
+MNRAS 000, 1–20 (2021)
+
+3.6
+
+Initial Mass Function: Evolution of ionizing photon
+production
+
+Now we investigate the time evolution of the ionizing photons produced by a population of Pop III stars. The results of this are shown
+for IMF slopes −1 6 α 6 2.35 in Figure 10, for non-rotating stars
+with convective overshooting αov = 0.1. At each time, t, from 120 Myr after formation, the total ionizing photons produced (Npop )
+are shown, where the time considered is the time since the starburst
+when the population with total stellar mass Mtot = 106 M formed.
+The mass range here is 9 M 6 Mini 6 120 M , thus at 20 Myr the
+population has produced its total ionizing photons. Therefore, the
+rightmost point in each panel of Figure 10 represents the total ionizing photons produced by the population, over the full lifetimes
+of each star within the population. In the case of the SB13 IMF
+(α = 0.17) we note that the total H ionizing photons produced by the
+population changes little after 4 Myr, having produced 93% of its
+H ionizing photons by this time. This is because a population with
+IMF slope α = 0.17 is dominated by massive stars with lifetimes of
+only a few million years. On the other hand, we see a more gradual
+evolution in total H ionizing photons produced by the Salpeter IMF
+(α = 2.35) population, with 60% of H ionizing photons produced in
+the first 4 Myr, and 94% of H ionizing photons produced by 10 Myr.
+It is clear from Figure 10 that the lower the IMF slope α, the faster
+the ionizing photon production, which is expected given that more
+massive models have shorter lifetimes. This demonstrates that the
+chosen IMF of the population could have an important impact on
+the reionization timescale, with more top-heavy IMFs potentially
+resulting in an earlier end to the reionization epoch.
+We now provide estimates for ionizing photon production in
+the case of continuous star formation. To find the number of ionizing photons produced we need to know the mass of stars formed.
+To address this we present the number of ionizing photons formed
+per solar mass of the population (Ni /Mtot weighted by ξ(M)) in Figure 11, for a population based on the SB13 IMF. By doing so, to
+know the number of photons produced by a Pop III population by
+time t since initial star formation, you would only need to multiply
+by the mass of stars formed by that time. We are essentially representing continuous star formation by dividing the total photons pro-
+
+10
+
+L.J.Murphy et al.
+
+Figure 9. Left: Total ionizing photons produced by populations of varying IMF slope α. Three model sets are shown. The non-rotating models with overshooting parameter αov = 0.1 (diamond symbols), the rotating models with αov = 0.1 (asterisk symbols), and finally the non-rotating models with higher overshooting
+αov = 0.3 (triangle symbols). Colours show the different ionizing photon species. The total mass of stars in each population is 106 M . Right: Asterisk symbols
+show the ratio of total ionizing photons produced by models with rotation to models without rotation for each IMF slope, while triangle symbols show the
+ratio of total ionizing photons produced by models with higher overshooting to models with lower overshooting.
+
+duced by a population by the population’s total mass, which, under
+the assumption of continuous and constant star formation, allows
+one to determine the number of ionizing photons produced at any
+time t by the mass of stars formed at that time. This is a basic estimate and we encourage further studies to investigate the evolution
+of the ionizing photon production of Pop III stars. All three ionizing
+photon species are included in Figure 11, for populations with and
+without rotation, and with higher overshooting. These values are
+also quoted in Table 3. This data is valuable for understanding the
+contribution of Pop III stars of different initial masses, weighted by
+the IMF, to reionization. We also present the total number of photons produced per solar mass by populations with different IMFs
+in Figure 12. This is the same trend as is seen in the left panel of
+Figure 9, but now can be scaled based on the stellar mass of the
+population. These values are presented in Table 4. We note that the
+escape fraction is expected to vary with population mass (Kitayama
+et al. 2004; Wise et al. 2014), so this needs be considered in scaling
+these values and determining the contribution to reionization of a
+given Pop III population, the escape fraction is discussed further in
+Section 4.6.
+
+3.7
+
+Initial Mass Function: Impact of minimum mass
+
+Up to now we have assumed a minimum mass of the population
+of Mmin = 9 M . We will now investigate how the ionizing photon production of the population is impacted by decreasing Mmin .
+To compare how changing Mmin impacts the total ionizing photons
+produced by the population, we reevaluate the number of stars at
+each initial mass in a population of Mtot = 108 M . The results of
+this investigation are presented in Figure 13. It is clear from the
+
+plot that the impact of varying Mmin is highly dependent on the
+IMF slope. For IMF slopes of α < 1 the ionizing photon production of the population remains largely unchanged as the minimum
+mass decreases. However, for IMF slopes > 1 we begin to see a significant decrease to the total ionizing photons produced. For example, we find a reduction of ∼ 50% to H ionizing photons produced
+by a population with Salpeter IMF when Mmin is decreased from
+9 M to 1.7 M . This result is unsurprising given that steeper IMFs
+significantly increase the fraction of low-mass stars for a population of fixed total mass. Decreasing the minimum mass in these
+steeper IMF populations thus reduces the number of ionizing photons produced because lower-mass models are cooler and less luminous (see Figure 1, Murphy et al. 2021), therefore, they have much
+lower ionizing photon production rates.
+Since the Pop III IMF is expected to be top-heavy (Greif et al.
+2011; Stacy & Bromm 2013; Susa et al. 2014; Hirano et al. 2014,
+2015; Stacy et al. 2016; Jeřábková et al. 2018; Wollenberg et al.
+2020), a variation of minimum mass in the range 1.7 − 9 M may
+have little effect on the ionizing photon production of the population. However, it is important to keep this effect in mind as research
+on the primordial IMF continues. We also note that changing the
+minimum mass of the population may have a significant impact on
+the timescale of reionization. As we discussed in Section 3.6 more
+top-heavy IMF populations produce their ionizing photons faster
+than populations with a Salpeter IMF slope, since more massive
+models have shorter lifetimes. Reducing the minimum mass of the
+population would delay the production of ionizing photons by a
+Salpeter IMF population even further, since the lifetimes of these
+low-mass stars can be significantly longer. A 1.7 M Pop III star
+has a lifetime of ∼ a billion years, compared to the 20 Myr lifeMNRAS 000, 1–20 (2021)
+
+Pop III ionizing photon production
+
+11
+
+Table 2. Total number of ionizing photons produced by individual stars over their lifetime (Ni ), for different initial masses. Headings indicate ionizing photon
+species H, He I and He II, and initial conditions where the top section gives non-rotating vs. rotating models, and the bottom section gives lower vs. higher
+overshooting models. These values are graphically presented in the left panels of Figures 6 and 7.
+Mini (M )
+
+NH (no rot)
+
+NH (rot)
+
+NHeI (no rot)
+
+NHeI (rot)
+
+NHeII (no rot)
+
+NHeII (rot)
+
+9
+12
+15
+20
+30
+40
+60
+85
+120
+
+2.9697e+62
+6.3686e+62
+9.6272e+62
+1.5595e+63
+2.7315e+63
+4.0139e+63
+6.6986e+63
+9.9302e+63
+1.4816e+64
+
+3.6921e+62
+7.3393e+62
+1.1304e+63
+1.8620e+63
+3.2348e+63
+4.4694e+63
+7.3097e+63
+1.0436e+64
+1.5774e+64
+
+3.9789e+61
+1.1477e+62
+2.1015e+62
+4.1023e+62
+8.5739e+62
+1.3697e+63
+2.4910e+63
+3.9221e+63
+6.1039e+63
+
+4.7302e+61
+1.2298e+62
+2.2958e+62
+4.4970e+62
+9.4340e+62
+1.4293e+63
+2.4663e+63
+3.7264e+63
+5.8296e+63
+
+6.0183e+58
+4.2085e+59
+1.3917e+60
+4.9688e+60
+1.8505e+61
+3.9957e+61
+1.0103e+62
+1.9661e+62
+3.5737e+62
+
+6.3006e+58
+3.9861e+59
+1.3631e+60
+4.7739e+60
+1.7676e+61
+3.6487e+61
+8.5209e+61
+1.5662e+62
+2.6896e+62
+
+Mini (M )
+
+NH (αov = 0.1)
+
+NH (αov = 0.3)
+
+NHeI (αov = 0.1)
+
+NHeI (αov = 0.3)
+
+NHeII (αov = 0.1)
+
+NHeII (αov = 0.3)
+
+9
+15
+20
+30
+40
+60
+85
+120
+
+2.9697e+62
+9.6272e+62
+1.5595e+63
+2.7315e+63
+4.0139e+63
+6.6986e+63
+9.9302e+63
+1.4816e+64
+
+3.5357e+62
+1.4013e+63
+2.0425e+63
+3.3212e+63
+4.6039e+63
+7.2436e+63
+1.0629e+64
+1.6202e+64
+
+3.9789e+61
+2.1015e+62
+4.1023e+62
+8.5739e+62
+1.3697e+63
+2.4910e+63
+3.9221e+63
+6.1039e+63
+
+4.6342e+61
+2.9675e+62
+5.4138e+62
+1.0628e+63
+1.6100e+63
+2.7878e+63
+4.3961e+63
+7.0818e+63
+
+6.0183e+58
+1.3917e+60
+4.9688e+60
+1.8505e+61
+3.9957e+61
+1.0103e+62
+1.9661e+62
+3.5737e+62
+
+7.0159e+58
+1.8393e+60
+6.6130e+60
+2.4239e+61
+4.9812e+61
+1.2056e+62
+2.3507e+62
+4.5272e+62
+
+Table 3. Total number of ionizing photons produced per solar mass of the population, by stars of different initial masses, based on a population of IMF slope
+α = 0.17 (Ni ξ(M)/Mtot ). Headings indicate ionizing photon species H, He I and He II, and initial conditions where the top section gives non-rotating vs.
+rotating models, and the bottom section gives lower vs. higher overshooting models. These values are graphically presented in Figure 11.
+Mini (M )
+
+NH M−1 (no rot)
+
+NH M−1 (rot)
+
+NHeI M−1 (no rot)
+
+NHeI M−1 (rot)
+
+NHeII M−1 (no rot)
+
+NHeII M−1 (rot)
+
+9
+12
+15
+20
+30
+40
+60
+85
+120
+
+5.9137e+58
+1.2077e+59
+1.7576e+59
+2.7112e+59
+4.4325e+59
+6.2027e+59
+9.6618e+59
+1.3499e+60
+1.8995e+60
+
+7.3522e+58
+1.3917e+59
+2.0637e+59
+3.2371e+59
+5.2492e+59
+6.9066e+59
+1.0543e+60
+1.4187e+60
+2.0223e+60
+
+7.9233e+57
+2.1763e+58
+3.8366e+58
+7.1321e+58
+1.3913e+59
+2.1166e+59
+3.5929e+59
+5.3319e+59
+7.8254e+59
+
+9.4194e+57
+2.3320e+58
+4.1913e+58
+7.8183e+58
+1.5309e+59
+2.2086e+59
+3.5573e+59
+5.0658e+59
+7.4738e+59
+
+1.1984e+55
+7.9805e+55
+2.5408e+56
+8.6384e+56
+3.0029e+57
+6.1746e+57
+1.4572e+58
+2.6728e+58
+4.5816e+58
+
+1.2546e+55
+7.5586e+55
+2.4886e+56
+8.2996e+56
+2.8684e+57
+5.6384e+57
+1.2290e+58
+2.1292e+58
+3.4482e+58
+
+Mini (M )
+
+NH M−1 (αov = 0.1)
+
+NH M−1 (αov = 0.3)
+
+NHeI M−1 (αov = 0.1)
+
+NHeI M−1 (αov = 0.3)
+
+NHeII M−1 (αov = 0.1)
+
+NHeII M−1 (αov = 0.3)
+
+9
+15
+20
+30
+40
+60
+85
+120
+
+5.9137e+58
+1.7576e+59
+2.7112e+59
+4.4325e+59
+6.2027e+59
+9.6618e+59
+1.3499e+60
+1.8995e+60
+
+7.0406e+58
+2.6572e+59
+3.7289e+59
+5.7741e+59
+7.4710e+59
+1.1193e+60
+1.5331e+60
+2.2025e+60
+
+7.9233e+57
+3.8366e+58
+7.1321e+58
+1.3913e+59
+2.1166e+59
+3.5929e+59
+5.3319e+59
+7.8254e+59
+
+9.2282e+57
+5.6272e+58
+9.8840e+58
+1.8477e+59
+2.6126e+59
+4.3080e+59
+6.3408e+59
+9.6272e+59
+
+1.1984e+55
+2.5408e+56
+8.6384e+56
+3.0029e+57
+6.1746e+57
+1.4572e+58
+2.6728e+58
+4.5816e+58
+
+1.3971e+55
+3.4878e+56
+1.2073e+57
+4.2141e+57
+8.0832e+57
+1.8630e+58
+3.3906e+58
+6.1545e+58
+
+time of a 9 M star. Furthermore, the escape fraction is expected
+to change rapidly as a function of redshift (e.g. Haardt & Madau
+2012), so not only will decreasing the minimum mass increase the
+timescale for ionizing photon production, but the escape fraction
+may be very different, which will impact the number of ionizing
+photons that reach the IGM.
+
+MNRAS 000, 1–20 (2021)
+
+3.8
+
+Initial Mass Function: Impact of maximum mass
+
+We now turn our attention to the upper mass limit of the population,
+and investigate how the ionizing photon production of the population is impacted by increasing the maximum mass, Mmax , using our
+original minimum mass value of Mmin = 9 M . We use the recently
+computed zero-metallicity very massive star models from Mar-
+
+12
+
+L.J.Murphy et al.
+
+Table 4. Total number of ionizing photons produced per solar mass of the population, by populations of various IMF slopes (Npop /Mtot ). Headings indicate
+ionizing photon species H, He I and He II, and initial conditions where the top section gives non-rotating vs. rotating models, and the bottom section gives
+lower vs. higher overshooting models. These values are graphically presented in Figure 12.
+IMF slope (α)
+
+NH M−1 (no rot)
+
+NH M−1 (rot)
+
+NHeI M−1 (no rot)
+
+NHeI M−1 (rot)
+
+NHeII M−1 (no rot)
+
+NHeII M−1 (rot)
+
+-1.00
+-0.50
+0.00
+0.17
+0.50
+1.00
+1.50
+2.00
+2.35
+
+1.1718e+62
+1.1575e+62
+1.1360e+62
+1.1264e+62
+1.1033e+62
+1.0541e+62
+9.8479e+61
+8.9836e+61
+8.3354e+61
+
+1.2502e+62
+1.2386e+62
+1.2211e+62
+1.2131e+62
+1.1937e+62
+1.1510e+62
+1.0887e+62
+1.0078e+62
+9.4503e+61
+
+4.6294e+61
+4.5298e+61
+4.3854e+61
+4.3221e+61
+4.1727e+61
+3.8649e+61
+3.4484e+61
+2.9491e+61
+2.5874e+61
+
+4.4556e+61
+4.3759e+61
+4.2588e+61
+4.2068e+61
+4.0826e+61
+3.8206e+61
+3.4555e+61
+3.0045e+61
+2.6696e+61
+
+2.3815e+60
+2.2745e+60
+2.1306e+60
+2.0709e+60
+1.9363e+60
+1.6805e+60
+1.3669e+60
+1.0273e+60
+8.0269e+59
+
+1.8638e+60
+1.7900e+60
+1.6886e+60
+1.6458e+60
+1.5482e+60
+1.3588e+60
+1.1207e+60
+8.5692e+59
+6.7897e+59
+
+IMF slope (α)
+
+NH M−1 (αov = 0.1)
+
+NH M−1 (αov = 0.3)
+
+NHeI M−1 (αov = 0.1)
+
+NHeI M−1 (αov = 0.3)
+
+NHeII M−1 (αov = 0.1)
+
+NHeII M−1 (αov = 0.3)
+
+-1.00
+-0.50
+0.00
+0.17
+0.50
+1.00
+1.50
+2.00
+2.35
+
+1.1718e+62
+1.1575e+62
+1.1360e+62
+1.1264e+62
+1.1033e+62
+1.0541e+62
+9.8479e+61
+8.9836e+61
+8.3354e+61
+
+1.2745e+62
+1.2625e+62
+1.2456e+62
+1.2381e+62
+1.2205e+62
+1.1831e+62
+1.1297e+62
+1.0605e+62
+1.0064e+62
+
+4.6294e+61
+4.5298e+61
+4.3854e+61
+4.3221e+61
+4.1727e+61
+3.8649e+61
+3.4484e+61
+2.9491e+61
+2.5874e+61
+
+5.2839e+61
+5.1727e+61
+5.0164e+61
+4.9490e+61
+4.7916e+61
+4.4709e+61
+4.0389e+61
+3.5192e+61
+3.1397e+61
+
+2.3815e+60
+2.2745e+60
+2.1306e+60
+2.0709e+60
+1.9363e+60
+1.6805e+60
+1.3669e+60
+1.0273e+60
+8.0269e+59
+
+2.9342e+60
+2.7978e+60
+2.6171e+60
+2.5427e+60
+2.3762e+60
+2.0623e+60
+1.6801e+60
+1.2682e+60
+9.9623e+59
+
+tinet et al., in prep, with initial masses Mini = 180, 250, 300, 500 M .
+Similarly to Section 3.7, we vary Mmax and reevaluate the number of stars in the population, keeping the total stellar mass constant with Mtot = 108 M . Figure 14 shows how varying the maximum mass affects the total ionizing photons produced by a zerometallicity population. It can be clearly seen from Figure 14 that
+increasing the maximum mass from 120 M increases the total ionizing photons produced by the population for all IMF slopes shown
+here. We know from Section 3.3 that total ionizing photons produced, Ni , increases with increasing initial mass, and the same is
+true for masses > 120 M . However, from Figure 14 we see an interesting change in trend for the Mmax = 500 M case.
+Looking at the right panel it can be observed that when increasing Mmax to 500 M , the maximum increase in emission of
+H ionizing photons occurs at an IMF slope of α = 1. For α 6 0
+the increase to H ionizing photon produced is in fact higher for
+Mmax = 300 M than Mmax = 500 M . We have found that this
+occurs because, despite the 500 M model producing more ionizing photons than the 300 M model, it produces less ionizing photons per solar mass than the 300 M . This can be observed from
+Figure 15, where we plot the total ionizing photons produced by
+individual stars divided by their initial mass (Ni /Mini ). From this
+figure we see that the total H ionizing photons produced per initial mass increases rapidly moving from intermediate mass models
+(1.7 M 6 Mini 6 9 M ) to massive models Mini > 9 M , showing
+that massive models will play a dominant role in ionizing photon
+production. The values for log(Ni /Mini ) peak at 300 M and decrease moving to 500 M . This means for instance that two 250 M
+stars would produce more ionizing photons than one 500 M star.
+Since the stellar mass of the population is kept constant, when
+500 M models are included the total ionizing photons produced
+decrease compared to the population with Mmax = 300 M , or
+Mmax = 250 M .
+
+This decrease in log(Ni /Mini ) for 500 M models occurs due
+to an inflation of their envelope due to their high Eddington factors (see also Sanyal et al. 2017 for Pop III models). This inflation
+causes their temperature to decrease, thus impacting their ionizing
+photon production. It is clear that the ionizing photons produced
+per solar mass is crucial in understanding how stars of different initial mass will contribute to the ionizing photon production of the
+population. We will further discuss the impact of envelope inflation
+in Section 4.4.
+From Figure 14 we find that varying the maximum mass of
+the population can increase the total H ionizing photons produced
+by up to ∼ 30% for Mmax = 500 M compared to Mmax = 120 M .
+We have found that for a SB13 IMF (α = 0.17) the total H ionizing photons produced increases by 28.4% when Mmax is increased
+from 120 M to 500 M , while for a Salpeter IMF (α = 2.35) this
+increase is 15.5%. Given that the minimum and maximum initial
+masses of Pop III stars are still debated in cosmological simulations
+(see Table 1, Stacy et al. 2016), this significant shift in total ionizing
+photons produced as maximum mass varies should be considered
+in future studies of how the first stars contributed to reionization.
+We note here that we have considered a constant IMF slope
+across the full mass range of the population. Hydrodynamical simulations of Pop III star formation predict a more complex distribution however (e.g. Figure 17 of Hirano et al. 2015), with a nonmonotonic IMF. While a top-heavy IMF is predicted, the characteristic mass is not yet certain and the nature of the IMF above this
+characteristic mass is yet to be constrained. Therefore, while the
+maximum mass of the population is expected to be > 120 M the
+IMF slope may change for very massive stars, and thus we advise
+the reader to carefully consider the nature of the IMF slope in different mass ranges, as well as the minimum and maximum masses
+in predicting Pop III ionizing photon production for a given IMF.
+MNRAS 000, 1–20 (2021)
+
+Pop III ionizing photon production
+
+13
+
+Figure 11. Total number of ionizing photons produced per solar mass of
+the population, by stars of different initial masses, based on a population of
+IMF slope α = 0.17, i.e. log(Ni ξ(M)/Mtot ). Black, blue and green symbols
+indicate ionizing photon species H, He I and He II respectively, as shown
+in legend. Different symbols and line styles show initial parameters corresponding to rotation and convective overshooting. The values shown here
+are also presented in Table 3.
+
+Figure 10. Temporal variation of Npop (see eq. 2) for different IMF slopes,
+α, indicated by different colours as shown in the legend. The three panels
+show H (upper), He I (middle), and He II (lower) ionizing photons. The
+time, t, considered is the time since the starburst when the non-rotating
+population with total stellar mass Mtot = 106 M formed. The mass range
+here is 9 M 6 Mini 6 120 M , thus at 20 Myr the population has produced
+its total ionizing photons.
+
+MNRAS 000, 1–20 (2021)
+
+Figure 12. Total number of ionizing photons produced per solar mass of
+the population, by populations of various IMF slopes. Similarly to Figure 11, colours indicate different ionizing photon species, and symbols indicate different initial parameters corresponding to rotation and convective
+overshooting. The values shown here are also presented in Table 4.
+
+14
+
+L.J.Murphy et al.
+
+Figure 13. Impact of varying the minimum mass of the population, Mmin , on the ionizing photons produced by populations of different IMF slopes, α, based
+on the relation ξ(M) ∝ M −α . All stars are non-rotating with convective overshooting of αov = 0.1, and the total mass of the population is Mtot = 108 M
+as indicated in the figure. Colours indicate the minimum mass of the population, and H, He I and He II ionizing photons are indicated by different symbols.
+Left: Total ionizing photons produced. Right: Ratio of ionizing photons produced by populations of lower minimum mass to our fiducial population with
+Mmin = 9 M , for H, He I and He II ionizing photons.
+
+Figure 14. Impact of varying the maximum mass of the population, Mmax , on the ionizing photons produced by populations of different IMF slopes, α, based
+on the relation ξ(M) ∝ M −α . All stars are non-rotating with convective overshooting of αov = 0.1, and the total mass of the population is Mtot = 108 M
+as indicated in the figure. Colours indicate the maximum mass of the population, and H, He I and He II ionizing photons are indicated by different symbols.
+Left: Total ionizing photons produced. Right: Ratio of H ionizing photons produced by populations of higher maximum mass to our fiducial population with
+Mmax = 120 M .
+
+MNRAS 000, 1–20 (2021)
+
+Pop III ionizing photon production
+
+15
+
+Figure 15. Total ionizing photons (Ni ) produced by models in the mass
+range 1.7 M 6 Mini 6 500 M , divided by their initial mass (Mini ), for H
+ionizing photons in black, and He I ionizing photons in blue.
+
+4
+4.1
+
+DISCUSSION
+Impact of mixing processes: SNAPSHOT models
+
+The luminosity, effective temperature and ionizing photon production rate are ultimately set by the internal abundance profile. To test
+the effects of the uncertainties in the internal hydrogen abundance
+profile on the production of ionizing photons produced in our models, we compute several SNAPSHOT stellar structure models using a
+the method described in (Farrell et al. 2020) with the MESA stellar
+evolution code (Paxton et al. 2011, 2013, 2015). The SNAPSHOT
+models allow us to test the effect of arbitrary internal abundance
+profiles on the luminosity and effective temperature without relying on results based on specific prescriptions for mixing. While
+the abundance profiles are artificial and generated by hand, they
+mimic the effects produced by physical processes such as rotation,
+convection, semi-convection and other mixing processes that may
+have effects but are not accounted for in these models. We find that
+slight variations in the internal hydrogen abundance profile can affect the rate of ionizing photons by up to 20% during the middle of
+the MS and by 30% at the end of the MS. Fig. 16 shows the internal hydrogen abundance profile for four 20 M SNAPSHOT stellar
+models at the middle of the MS, as well as their location in the HR
+diagram. Quoted in the figure are the fractions, for models T, U,
+V, of ionizing photons produced relative to model W, for H, He I,
+and He II respectively. This gives an idea of the extent to which
+moderate adjustments to the abundance profile may impact surface
+properties, and subsequently the number of ionizing photons produced. We conclude that moderate variations of the sort shown in
+Figure 16 can have a moderate effect on the overall result for ionizing photon production.
+
+4.2
+
+Impact of detailed stellar atmosphere modelling
+
+To determine how much our results are impacted by using a blackbody rather than modelling the atmosphere we can compare to
+Schaerer (2002) (S02). Since the stellar evolution models used are
+not the same we choose three cases to compare our findings with
+the S02 values. Case 1 is the values of QH , QHeI , QHeII taken directly from S02 Table 3, which are calculated from a modelled atMNRAS 000, 1–20 (2021)
+
+Figure 16. Upper: Internal hydrogen abundance profiles of four 20 M
+SNAPSHOT stellar models at the middle of the MS phase. Lower: Location in the HR diagram of the models from the upper panel. For reference,
+we also plot the evolutionary track of a non-rotating 20 M computed with
+MESA. For each SNAPSHOT model T, U, V, we quote the fraction of ionizing photons produced relative to model W in order of H, He I, He II respectively.
+
+mosphere. These values are the ionizing photon production rates at
+the ZAMS for each stellar evolution model. We select the values
+for initial masses in the range 9 M 6 Mini 6 120 M , of which four
+masses overlap with the initial masses included in this work, these
+are Mini = 9, 15, 60, 120 M . Case 2 takes the L and Teff values
+from the same table in S02, but uses our method (see Section 2) to
+calculate QH , QHeI and QHeII through a blackbody fit, thus tests the
+impact of not modelling the atmosphere. Case 3 is then the ZAMS
+Qi values from this work for our non-rotating models. The comparison of these three cases is shown in the left panel of Figure 17,
+while ratios of case 2 to case 1, and case 3 to case 1 are shown
+in the right panel. For each case we linearly interpolate the values so that we can compare all three cases for the full mass range
+9 M 6 Mini 6 120 M .
+It is clear from the figure that the most significant impact of
+not modelling the atmosphere is the overestimation of He II photons at low initial masses. In particular, if we look at the right panel
+of Figure 17, we see that He II photons are overestimated for initial masses Mini < 40 M when we use a blackbody fit. Referring
+back to the rightmost panel of Figure 8, we see that for all IMFs
+with slopes α 6 2.35 He II ionizing photon production is dominated
+
+16
+
+L.J.Murphy et al.
+
+by models of initial masses Mini > 40 M . In this mass range we
+have found that our blackbody fit reproduces the ionizing photon
+production rates with errors of less than 0.5 dex (see right panel
+Figure 17). This is not necessarily the case for larger IMF slopes
+of > 2.35 where we expect that He II ionizing photon production is
+dominated by initial masses of < 40 M , however, simulations predict that there were more massive stars in the early universe (Turk
+et al. 2009; Clark et al. 2011; Greif et al. 2012; Stacy & Bromm
+2013; Hirano et al. 2014, 2015) and it is generally accepted that the
+Pop III IMF will have a lower slope than the Salpeter IMF.
+The numbers of H and He I ionizing photons are well reproduced with a blackbody approximation within . 0.2 dex. Therefore, our comparison to the ionizing photon values presented in
+Schaerer (2002) has shown that our method of using a blackbody
+fit to determine ionizing photon production, rather than modelling
+the atmosphere, is a reasonable approximation. It is important to
+note here that this is for ZAMS values, therefore, we may see more
+absorption of photons at later times if surface metallicity increases,
+however this is not expected for our models.
+4.3
+
+Impact of internal magnetic fields
+
+It is also useful to compare to Yoon et al. (2012) (Y12) to study
+how differences in stellar evolution modelling will impact ionizing photon production. Internal magnetic fields were included in
+the Y12 Pop III stellar models, assuming a Taylor-Spruit dynamo
+(Spruit 2002). This allowed for a different approach to the effects
+of rotation in these stars, where chemically homogeneous evolution
+(CHE) is more easily achieved (see discussion in Groh et al. 2019).
+The evolution of stellar surface properties is strongly impacted by
+CHE, in particular CHE leads to much higher surface temperatures.
+Therefore, we expect that the inclusion of magnetic fields and subsequent CHE will increase ionizing photon production. To test this
+we have selected four models from Y12 rotating models, for the
+same initial mass, with similar initial rotational velocities to our
+models of υini = 0.4υcrit . These include m15vk04 (υini = 0.43υcrit ),
+m20vk04 (υini = 0.44υcrit ), m30vk04 (υini = 0.47υcrit ), and m60vk03
+(υini = 0.39υcrit ), of initial masses Mini = 15, 20, 30, 60 M , and we
+direct the reader to their paper for further details on initial parameters. We compare the total ionizing photons produced by these
+models (see Y12 Table 3) to the total ionizing photons produced by
+our rotating and non-rotating models of the same initial masses.
+The results of this comparison are presented in Figure 18. As
+expected we see that the ionizing photon output is higher for rotating Y12 models, with the exception of the 15 M case where CHE
+is not achieved. From the right panel of Figure 18, we see that He II
+photons are the species most impacted by CHE. This is because
+He II ionizing photon production is dominated by surface temperature effects (see Section 3.2). The average increase to He II ionizing
+photons produced with CHE (for Mini = 20, 30, 60 M ) is 1.02 dex,
+while for He I ionizing photons the average increase is 0.46 dex,
+and for H ionizing photons the average increase is 0.27 dex. These
+results tell us that for our massive rotators (Mini > 20 M ), we can
+expect to see an increase in ionizing photon production if magnetic fields are included. Looking at the right panel of Figure 18,
+we also see a small increase (< 0.1 dex) in He II photons when
+we compare our non-rotating models to the Y12 non-rotators. This
+is due to higher surface temperatures in our models. As with this
+work, Yoon et al. (2012) assumed blackbody radiation. An important consequence of CHE is the increase to surface metallicity, so
+the increase in ionizing photon production with the inclusion of
+magnetic fields may vary with radiative transfer modelling of the
+
+atmosphere. Therefore, further work with modelling of the atmosphere is required to accurately determine the impact of magnetic
+fields on the production of ionizing photons by Pop III stars.
+
+4.4
+
+Impact of envelope inflation
+
+Hot massive stars have envelopes in which the transport of energy
+occurs mainly through radiation. Gräfener et al. (2012) discussed
+the possibility of formation of inflated stellar envelopes when stars
+have high Eddington parameters, & 0.3 (see also Ishii et al. 1999;
+Petrovic et al. 2006 for further discussion on envelope inflation),
+which is likely for very massive stars due to their high luminosities. In these works the inflation of the envelope is mainly triggered
+by the presence of a sudden increase in opacity due to Fe (the socalled Fe bump). Sanyal et al. (2017) presented numerical stellar
+evolution models for a range of metallicities, showing that the nature of the inflated envelopes is sensitive to the Fe content. They
+also showed that for Pop III models, the presence of inflated envelopes during the MS should occur for Mini & 150 M . If these
+stars do experience inflation of their envelopes, their surface temperature will subsequently decrease, which in turn will decrease
+their ionizing photon production rates.
+Based on these previous studies, we do not expect Pop III
+stars to experience substantial envelope inflation during the MS for
+Mini . 150 M , which is consistent with our model grid (Murphy
+et al. 2021). Inflation may be important for the very massive star
+models, and based on the one-dimensional energy transport prescriptions available we estimate a decrease of around ∼ 20% for
+the number of hydrogen ionizing photons coming from individual
+stars above 150 M . This is a rough estimate, obtained by comparing the number of photons produced per M for the 300 M model
+to the 500 M model. As we discussed in Section 3.8, the impact
+will be lower than 20% for a population of fixed mass and reasonable IMF, since the majority of the stars will have Mini < 150 M .
+It is worth noting that ultimately the structure and radial extension of radiatively-dominated envelopes is challenging to accurately model in 1-D. We encourage the development of 3-D radiation hydrodynamic simulations for Pop III stellar envelopes, similarly to the study of solar-metallicity models from Jiang et al.
+(2015).
+
+4.5
+
+Supernovae, binaries and supermassive Pop III stars
+
+We note that in this work we have studied the ionizing photon production during the lifetime of individual stars, and integrated this
+to determine the ionizing photon production of a stellar population.
+We have therefore omitted the impact of explosive events such as
+supernovae in the contribution to ionization of the first stellar populations. In addition, our models are based on single stars. Yet, we
+stress that the impact of the physical effects discussed here, such
+as rotation and convective overshooting, will also hold for binary
+stars. Berzin et al. (2021) discussed the contribution of stripped
+stars to reionization. These authors found that the contribution of
+stripped stars compared to single stars reduces moving towards
+lower metallicities, but stripped stars still have a noticeable effect
+in the spectral energy distribution of galaxies in the early Universe.
+The relative contribution of binary stars to the production of ionizing photons depend on their initial orbital separation. The statistics
+of Pop III binaries were investigated in Liu et al. (2021), which
+showed that relatively close binaries (semi major axis < 100 au)
+tend to be rare in Pop III systems. This is in contrast with many
+MNRAS 000, 1–20 (2021)
+
+Pop III ionizing photon production
+
+17
+
+Figure 17. Left: Comparison to Schaerer (2002) (S02) ionizing photon production rates (Qi ) for non-rotating ZAMS models. Triangle symbols and dashed
+lines indicate the values from Table 3 in S02. Cross symbols and dashed dotted lines indicate values using L and Teff values from S02 but computed using our
+blackbody method described in Section 2. Diamond symbols and solid lines indicate ionizing photon production rates from non-rotating models in this work
+on the ZAMS. Right: Ratio of Qi from this work to S02 values (diamonds and solid lines), and ratio of Qi from S02 calculated using blackbody to S02 values
+(crosses and dashed dotted lines). Results are logarithmically scaled. Colours indicate ionizing photon species as shown in the left panel.
+
+Figure 18. Left: Comparison to ionizing photons produced over lifetime (Ni ) by Yoon et al. (2012) (Y12) models to values in this work. Rotating models are
+shown by dashed lines, and selected for having similar initial rotational velocities to our rotating models in Murphy et al. (2021) (M21), while solid lines show
+ionizing photons produced by non-rotating models. Triangle symbols indicate Y12 model values, and diamond symbols indicate ionizing photons produced
+by M21 models which are presented in this work. Right: Ratio of Ni from this work to Y12 values. Colours indicate ionizing photon species as shown in the
+left panel.
+
+MNRAS 000, 1–20 (2021)
+
+18
+
+L.J.Murphy et al.
+
+previous results (Kinugawa et al. 2014; Hartwig et al. 2016; Belczynski et al. 2017; Liu & Bromm 2020) and tends to weaken the
+importance of close binary evolution for these Pop III stars. If close
+binary evolution is rare for Pop III stars, we expect our results for
+the ionizing photon production of Pop III stellar populations to be
+largely unchanged by the inclusion of binaries. Given the caveats
+associated with Pop III star formation, we encourage further research to investigate Pop III binaries and their impact on ionization.
+Recent studies have provided new insights into the nature of
+Pop III supermassive stars (SMSs) and their role in the formation of
+the first quasars (Hosokawa et al. 2013; Umeda et al. 2016; Woods
+et al. 2017; Haemmerlé et al. 2018, 2019; Haemmerlé 2021), these
+objects are expected to contribute significantly to ionization, so
+should be included in further studies alongside the mass range
+of stars discussed in this work. The detectability of such objects
+with JWST has been investigated in Martins et al. (2020), showing that SMSs should be detectable if they are luminous and relatively cool. Additionally, for a narrow range of initial masses it had
+been found that SMSs may explode as general relativity supernovae
+(GRSNe) (Chen et al. 2014). The detectability of such enormous
+explosive events by JWST and Galaxy and Reionization EXplorer
+(G-REX) was studied recently in Moriya et al. (2021). They found
+that GRSNe would have long plateau phases that appear as persistent sources at high redshifts, but would be distinguishable from
+high redshift galaxies. If SMSs and GRSNe are found with these
+new facilities in the coming years, then it is likely that they will
+significantly affect reionization at high redshifts.
+4.6
+
+Escape rates of ionizing photons
+
+The contribution of the first stars to cosmic reionization not only
+depends on ionizing photons produced, but also on the escape fraction ( fesc ) of these photons from the minihalo or host galaxy. Simulations of the early Universe have been used to study the contribution of the first stellar populations to hydrogen reionization (Gnedin
+& Ostriker 1997; Sokasian et al. 2004; Whalen et al. 2004; Kitayama et al. 2004; McQuinn et al. 2007; Haardt & Madau 2012;
+Wise et al. 2014; Finlator et al. 2018; Katz et al. 2019) and can reproduce hydrogen reionization up to z = 6. However, to do so they
+require escape fractions of at least 20%. Some studies have shown
+that the first galaxies had high escape fractions with Whalen et al.
+(2004) suggesting fesc > 0.95, and Wise & Cen (2009) finding escape fractions of 0.25 < fesc < 0.8 for galaxies of masses greater
+than 107 M with a top-heavy initial mass function (IMF). Alvarez
+et al. (2006) also showed high escape fractions of up to 90% when
+stars of masses 80M < Mini < 500M are included. More recent
+work (Wise et al. 2014) has shown that the escape fraction is inversely dependent on halo mass with fesc ∼ 0.5 for halo masses
+< 2 × 107 M and escape fractions as low as fesc ∼ 0.05 for halo
+masses > 2 × 108 M , which is similar to results found in Kitayama
+et al. (2004) showing that halos of mass < 106 M have escape fractions of more than 80% while the escape fraction for higher mass
+halos (> 107 M ) is essentially zero. This inverse relationship of
+escape fraction and halo mass was further supported by the Renaissance simulations (Xu et al. 2016). As work to constrain the escape
+fraction of ionizing photons continues, it is important to keep this
+limit in mind in determining how the first stars contributed to reionization. Through simultaneous efforts to predict the ionizing photon
+contribution of Pop III stars and the escape rates of photons from
+these populations we move closer to understanding the epoch of
+reionization, and prepare for prospective detections from facilities
+such as JWST.
+
+5
+
+CONCLUSIONS
+
+Here we have investigated the ionizing photon production rates
+and total ionizing photons produced by our Geneva Pop III model
+grid. We have presented analytical fits for the ionizing photons produced by non-rotating zero-metallicity models in the mass range
+1.7 M 6 Mini 6 500 M . We have discussed the results for individual models and explained the impact of initial mass, rotation,
+and convective overshooting. We have analysed the ionizing photon
+production of populations of these stars for a number of different
+IMFs, and showed how this evolves over time. We have also compared our results to previous works on ionizing photon production
+of Pop III stellar evolution models, Schaerer (2002) and Yoon et al.
+(2012). The following points summarise our findings.
+• The total number of ionizing photons produced over the lifetime of individual stars increases with increasing initial mass despite shorter lifetimes at higher initial masses. This is due to the
+higher luminosity and surface temperatures of more massive models which drive higher ionizing photon production rates.
+• Rotation impacts the total ionizing photons produced by up to
+25% for the initial rotational velocity considered here. The most
+significant impact is higher H ionizing photon production for less
+massive models and lower He II ionizing photon production for
+more massive models. The difference in rotational effects for different ionizing photon species reflects the dominant surface property in each case. H ionizing photons are dominated by changes in
+luminosity, while He II ionizing photons are dominated by changes
+in surface temperature.
+• Higher convective overshooting increases the total number of
+ionizing photons produced for all species at all initial masses considered here. Increases in luminosity and surface temperature contribute to higher ionizing photon production rates but increased lifetimes is the dominant factor in increasing total ionizing photons
+produced with higher convective overshooting.
+• Ionizing photon production increases with decreasing IMF
+slope, because more top-heavy IMFs are dominated by higher initial masses which produce more ionizing photons. This variation
+depends on the IMF slopes considered, with a decrease of 26%
+comparing the non-rotating αov = 0.1 SB13 IMF population to the
+Salpeter IMF population.
+• Along with producing less ionizing photons than more topheavy IMF populations, populations of higher IMF slope, α, take
+longer to produce ionizing photons since they are dominated by less
+massive models with longer lifetimes.
+• Varying the minimum mass, Mmin , of the population decreases
+the total H ionizing photons produced for populations with IMF
+slopes of α > 1, by up to ∼ 50% for Mmin = 1.7 M compared to
+Mmin = 9 M where α = 2.35.
+• Varying the maximum mass, Mmax , of the population increases
+the total H ionizing photons produced for all IMF slopes considered
+here, by up to ∼ 30% for Mmax = 500 M compared to Mmax =
+120 M where α = 1.
+• Our modifications to the H abundance profile using the SNAPSHOT method impact the ionizing photon production rates of a
+20 M model by up to 20% halfway through the MS and 30% at
+the end of the MS.
+• Through comparing our results to Schaerer (2002), we have
+found that our approach of using a blackbody fit is a good approximation for H ionizing photons. While we find that a blackbody
+fitting overestimates He II photons at initial masses 6 40 M , this
+is unexpected to impact our ionizing photon production results for
+MNRAS 000, 1–20 (2021)
+
+Pop III ionizing photon production
+the population since the He II photon production for all IMF slopes
+6 2.35 is dominated by stars with Mini > 40 M .
+• Through comparing our results to Yoon et al. (2012), we have
+found that models that achieve CHE produce significantly more
+ionizing photons with increases of up to 1.4 dex. This shows that
+massive rotators should produce more ionizing photons if magnetic
+fields are included, which will impact top-heavy IMF populations
+significantly.
+
+ACKNOWLEDGEMENTS
+We wish to acknowledge the Irish Research Council (IRC)
+for funding this research, as well as ”ChETEC” COST Action
+(CA16117), supported by COST (European Cooperation in Science
+and Technology) which aided our collaboration with co-authors.
+Georges Meynet and Sylvia Ekström have received funding from
+the European Research Council (ERC) under the European Union’s
+Horizon 2020 research and innovation programme (grant agreement no. 833925, project STAREX).
+
+DATA AVAILABILITY
+The derived data generated in this research will be shared on reasonable request to the corresponding author.
+
+REFERENCES
+Abel T., Bryan G. L., Norman M. L., 2002, Science, 295, 93
+Alvarez M. A., Bromm V., Shapiro P. R., 2006, ApJ, 639, 621
+Asplund M., Grevesse N., Sauval A. J., 2005, in Barnes Thomas G. I., Bash
+F. N., eds, Astronomical Society of the Pacific Conference Series Vol.
+336, Cosmic Abundances as Records of Stellar Evolution and Nucleosynthesis. p. 25
+Barkana R., Loeb A., 2001, Phys. Rep., 349, 125
+Becker G. D., Bolton J. S., 2013, MNRAS, 436, 1023
+Belczynski K., Ryu T., Perna R., Berti E., Tanaka T. L., Bulik T., 2017,
+MNRAS, 471, 4702
+Berzin E., Secunda A., Cen R., Menegas A., Götberg Y., 2021, arXiv eprints, p. arXiv:2102.08408
+Bromm V., 2012, The First Stars and Galaxies - Basic Principles
+(arXiv:1203.3824)
+Bromm V., 2013, Reports on Progress in Physics, 76
+Bromm V., Coppi P. S., Larson R. B., 2002, The Astrophysical Journal, 564,
+23
+Castellani V., Chieffi A., Tornambe A., 1983, ApJ, 272, 249
+Castro N., Fossati L., Langer N., Simón-Dı́az S., Schneider F. R. N., Izzard
+R. G., 2014, A&A, 570, L13
+Chabrier G., 2003, PASP, 115, 763
+Chen K.-J., Heger A., Woosley S., Almgren A., Whalen D. J., Johnson J. L.,
+2014, ApJ, 790, 162
+Chieffi A., Tornambe A., 1984, ApJ, 287, 745
+Clark P. C., Glover S. C., Smith R. J., Greif T. H., Klessen R. S., Bromm V.,
+2011, Science, 331, 1040
+Ekström S., Meynet G., Chiappini C., Hirschi R., Maeder A., 2008, Astronomy & Astrophysics, 489, 685
+Ekström S., et al., 2012, A&A, 537, A146
+El Eid M. F., Fricke K. J., Ober W. W., 1983, A&A, 119, 54
+Farrell E., Groh J., Meynet G., Eldridge J., Ekström S., Georgy C., 2020,
+arXiv e-prints, p. arXiv:2005.06454
+Faucher-Giguère C.-A., Lidz A., Hernquist L., Zaldarriaga M., 2008, ApJ,
+688, 85
+Faucher-Giguère C.-A., Lidz A., Zaldarriaga M., Hernquist L., 2009, ApJ,
+703, 1416
+MNRAS 000, 1–20 (2021)
+
+19
+
+Finlator K., Keating L., Oppenheimer B. D., Davé R., Zackrisson E., 2018,
+MNRAS, 480, 2628
+Georgy C., et al., 2013, A&A, 558, A103
+Gnedin N. Y., Ostriker J. P., 1997, ApJ, 486, 581
+Götberg Y., de Mink S. E., McQuinn M., Zapartas E., Groh J. H., Norman
+C., 2020, A&A, 634, A134
+Gräfener G., Owocki S. P., Vink J. S., 2012, A&A, 538, A40
+Greif T. H., Springel V., White S. D. M., Glover S. C. O., Clark P. C., Smith
+R. J., Klessen R. S., Bromm V., 2011, ApJ, 737, 75
+Greif T. H., Bromm V., Clark P. C., Glover S. C. O., Smith R. J., Klessen
+R. S., Yoshida N., Springel V., 2012, MNRAS, 424, 399
+Grevesse N., Noels A., 1993, in Prantzos N., Vangioni-Flam E., Casse M.,
+eds, Origin and Evolution of the Elements. pp 15–25
+Groh J. H., Meynet G., Ekström S., Georgy C., 2014, A&A, 564, A30
+Groh J. H., et al., 2019, A&A, 627, A24
+Haardt F., Madau P., 2012, ApJ, 746, 125
+Haehnelt M. G., Madau P., Kudritzki R., Haardt F., 2001, ApJ, 549, L151
+Haemmerlé L., 2021, A&A, 647, A83
+Haemmerlé L., Woods T. E., Klessen R. S., Heger A., Whalen D. J., 2018,
+MNRAS, 474, 2757
+Haemmerlé L., Meynet G., Mayer L., Klessen R. S., Woods T. E., Heger
+A., 2019, A&A, 632, L2
+Hartwig T., Volonteri M., Bromm V., Klessen R. S., Barausse E., Magg M.,
+Stacy A., 2016, MNRAS, 460, L74
+Heger A., Woosley S. E., 2010, ApJ, 724, 341
+Higgins E. R., Vink J. S., 2019, A&A, 622, A50
+Hillier D. J., Miller D. L., 1998, ApJ, 496, 407
+Hirano S., Hosokawa T., Yoshida N., Umeda H., Omukai K., Chiaki G.,
+Yorke H. W., 2014, ApJ, 781, 60
+Hirano S., Hosokawa T., Yoshida N., Omukai K., Yorke H. W., 2015, MNRAS, 448, 568
+Hosokawa T., Yorke H. W., Inayoshi K., Omukai K., Yoshida N., 2013, ApJ,
+778, 178
+Ishii M., Ueno M., Kato M., 1999, PASJ, 51, 417
+Jaacks J., Thompson R., Finkelstein S. L., Bromm V., 2018, MNRAS, 475,
+4396
+Jeřábková T., Hasani Zonoozi A., Kroupa P., Beccari G., Yan Z., Vazdekis
+A., Zhang Z. Y., 2018, A&A, 620, A39
+Jiang Y.-F., Cantiello M., Bildsten L., Quataert E., Blaes O., 2015, ApJ,
+813, 74
+Katz H., Kimm T., Haehnelt M. G., Sijacki D., Rosdahl J., Blaizot J., 2019,
+MNRAS, 483, 1029
+Kinugawa T., Inayoshi K., Hotokezaka K., Nakauchi D., Nakamura T.,
+2014, MNRAS, 442, 2963
+Kitayama T., Yoshida N., Susa H., Umemura M., 2004, ApJ, 613, 631
+Kroupa P., 2001, MNRAS, 322, 231
+Liu B., Bromm V., 2020, MNRAS, 495, 2475
+Liu B., Meynet G., Bromm V., 2021, MNRAS, 501, 643
+Marigo P., Girardi L., Chiosi C., Wood P. R., 2001, A&A, 371, 152
+Marigo P., Chiosi C., Kudritzki R. P., 2003, A&A, 399, 617
+Martinet S., et al., 2021, arXiv e-prints, p. arXiv:2103.03672
+Martins F., Schaerer D., Haemmerlé L., Charbonnel C., 2020, A&A, 633,
+A9
+McQuinn M., 2016, ARA&A, 54, 313
+McQuinn M., Lidz A., Zahn O., Dutta S., Hernquist L., Zaldarriaga M.,
+2007, MNRAS, 377, 1043
+Moriya T. J., Chen K.-J., Nakajima K., Tominaga N., Blinnikov S. I., 2021,
+MNRAS,
+Murphy L. J., et al., 2021, MNRAS, 501, 2745
+Paxton B., Bildsten L., Dotter A., Herwig F., Lesaffre P., Timmes F., 2011,
+ApJS, 192, 3
+Paxton B., et al., 2013, ApJS, 208, 4
+Paxton B., et al., 2015, ApJS, 220, 15
+Petrovic J., Pols O., Langer N., 2006, A&A, 450, 219
+Salpeter E. E., 1955, ApJ, 121, 161
+Sanyal D., Langer N., Szécsi D., -C Yoon S., Grassitelli L., 2017, A&A,
+597, A71
+Scalo J. M., 1986, Fundamentals Cosmic Phys., 11, 1
+
+20
+
+L.J.Murphy et al.
+
+Schaerer D., 2002, A&A, 382, 28
+Schaerer D., 2003, A&A, 397, 527
+Schootemeijer A., Langer N., Grin N. J., Wang C., 2019, arXiv e-prints, p.
+arXiv:1903.10423
+Sokasian A., Yoshida N., Abel T., Hernquist L., Springel V., 2004, MNRAS,
+350, 47
+Spruit H. C., 2002, A&A, 381, 923
+Stacy A., Bromm V., 2013, Monthly Notices of the Royal Astronomical
+Society, 433, 1094
+Stacy A., Greif T. H., Bromm V., 2010, MNRAS, 403, 45
+Stacy A., Bromm V., Lee A. T., 2016, MNRAS, 462, 1307
+Susa H., Hasegawa K., Tominaga N., 2014, ApJ, 792, 32
+Topping M. W., Shull J. M., 2015, ApJ, 800, 97
+Tumlinson J., Shull J. M., 2000, ApJ, 528, L65
+Turk M. J., Abel T., O’Shea B., 2009, Science, 325, 601
+Umeda H., Hosokawa T., Omukai K., Yoshida N., 2016, ApJ, 830, L34
+Welsh L., Cooke R., Fumagalli M., 2021, MNRAS, 500, 5214
+Whalen D., Abel T., Norman M. L., 2004, ApJ, 610, 14
+Wise J. H., Cen R., 2009, ApJ, 693, 984
+Wise J. H., Demchenko V. G., Halicek M. T., Norman M. L., Turk M. J.,
+Abel T., Smith B. D., 2014, MNRAS, 442, 2560
+Wollenberg K. M. J., Glover S. C. O., Clark P. C., Klessen R. S., 2020,
+MNRAS, 494, 1871
+Woods T. E., Heger A., Whalen D. J., Haemmerlé L., Klessen R. S., 2017,
+ApJ, 842, L6
+Worseck G., Prochaska J. X., Hennawi J. F., McQuinn M., 2016, ApJ, 825,
+144
+Xu H., Wise J. H., Norman M. L., Ahn K., O’Shea B. W., 2016, ApJ, 833,
+84
+Yoon S. C., Dierks A., Langer N., 2012, A&A, 542, A113
+
+MNRAS 000, 1–20 (2021)
+
+

@@ -1,0 +1,1328 @@
+                                       Mon. Not. R. Astron. Soc. 000, 000–000 (0000)     Printed 11 October 2018    (MN LATEX style file v1.4)
+
+
+
+
+                                       Equation of State of the Photoionized Intergalactic
+                                       Medium
+
+                                       Lam Hui and Nickolay Y. Gnedin
+                                       1 NASA/Fermilab Astrophysics Center, Fermi National Accelerator Laboratory, Batavia, IL 60510
+arXiv:astro-ph/9612232v1 26 Dec 1996
+
+
+
+
+                                       2 Department of Astronomy, University of California, Berkeley, CA 94720
+
+
+
+
+                                       11 October 2018
+
+
+
+                                                                        ABSTRACT
+                                                                        We develop an efficient method to study the effects of reionization history on
+                                                                        the temperature-density relation of the intergalactic medium in the low den-
+                                                                        sity limit (overdensity δ <
+                                                                                                  ∼ 5). It is applied to the study of photo-reionization
+
+                                                                        models in which the amplitude, spectrum and onset epoch of the ionizing flux,
+                                                                        as well as the cosmology, are systematically varied. We find that the mean
+                                                                        temperature-density relation at z = 2 − 4 is well approximated by a power-
+                                                                        law equation of state for uniform reionization models. We derive analytical
+                                                                        expressions for its evolution and exhibit its asymptotic behavior: it is found
+                                                                        that for sufficiently early reionization, imprints of reionization history prior
+                                                                        to z ∼ 10 on the temperature-density relation are washed out. In this limit
+                                                                                                                                        √
+                                                                        the temperature at cosmic mean density is proportional to [Ωb h/ Ω0 ]1/1.7 .
+                                                                        While the amplitude of the radiation flux at the ionizing frequency of H i is
+                                                                        found to have a negligible effect on the temperature-density relation as long
+                                                                        as the universe reionizes before z ∼ 5, the spectrum can change the overall
+                                                                        temperature by about 20%, through variations in the abundances of helium
+                                                                        species. However the slope of the mean equation of state is found to lie within
+                                                                        a narrow range for all reionization models we study, where reionization takes
+                                                                        place before z ∼ 5. We discuss the implications of these findings for the ob-
+                                                                        servational properties of the Lyα forest. In particular, uncertainties in the
+                                                                        temperature of the intergalactic medium, due to the uncertain reionization
+                                                                        history of our universe, introduces a 30% scaling in the amplitude of the col-
+                                                                        umn density distribution while the the slope of the distribution is only affected
+                                                                        by about 5%. Finally, we discuss how a fluctuating ionizing field affects the
+                                                                        above results. We argue that under certain conditions, the loss of memory
+
+
+                                       c 0000 RAS
+2    Hui and Gnedin
+                             of reionization history implies that at late times, the temperature-density re-
+                             lation of a gas in a fluctuating ionizing background can be approximated by
+                             one that results from a uniform radiation field, provided the universe reionizes
+                             sufficiently early.
+
+                             Key words: cosmology: theory — intergalactic medium — quasars: absorp-
+                             tion lines
+
+
+
+1   INTRODUCTION
+
+Absorption line studies of the low column density Lyα forest (NH i <      −2
+                                                                   ∼ 15 cm ; see Hu et al.
+
+1995; Lu et al. 1996; Cristiani et al. 1996) offer a unique probe of the universe which is
+free of luminosity bias, spans a wide redshift range z ∼ 2 − 4 and where the overdensity is
+mildly nonlinear (overdensity δ <
+                                ∼ 5, see Hui, Gnedin & Zhang 1996) and hence the relevant
+
+physics is simple to understand. Recent hydrodynamic simulations support the hypothesis
+that the Lyα forest arises from a fluctuating intergalactic medium which is the natural result
+of gravitational instability in hierarchical clustering cosmological models (Cen et al. 1994;
+Zhang et al. 1995; Hernquist et al. 1996; Miralda-Escudé et al. 1996; Wadsley & Bond 1996).
+    The main quantity of interest in such studies is the Lyα transmission (or optical depth) as
+a function of frequency, which is determined by the density of neutral hydrogen as a function
+of position. The Gunn-Peterson effect (Gunn & Peterson 1965) tells us that hydrogen (as
+well as helium) is highly ionized for z <
+                                        ∼ 5. Several models for its origin have been studied:
+
+photoionization by first generation of stars or quasars, collisional ionization induced by
+shock-heated gas, decaying neutrinos and so on (Ikeuchi & Ostriker 1986; Couchman &
+Rees 1986; Sciama 1990; Miralda-Escudé & Ostriker 1992; Shapiro, Giroux, & Babul 1994;
+Giroux & Shapiro 1996; Haiman & Loeb 1996). The reader is also referred to Shapiro (1995)
+for an excellent review on the subject. We focus on photoionization models in this paper
+although the semi-analytical method we propose in this paper can be applied to any model.
+    Ionization equilibrium, which should hold after the universe reionizes, dictates that the
+neutral hydrogen density is approximately proportional to ρ2b T −0.7 where ρb is the baryon
+density and T is the temperature (see § 3.1.1). It is therefore important to know the am-
+plitude of T and its dependence on ρb . As we will discuss later, the temperature-density
+relation can significantly affect observed properties of the Lyα forest, its column density
+distribution for instance.
+    Imagine a fluid element evolving in a photoionized intergalactic medium. Its temperature
+                                                                            c 0000 RAS, MNRAS 000, 000–000
+                                                            Equation of State of the IGM      3
+at z ∼ 2 − 4 is influenced by a number of factors: how its density evolves with time, which
+determines the amount of heating/cooling; how and when the ionizing radiation is turned on;
+the radiation amplitude and spectrum, which control how much photoionization heating the
+fluid element suffers; cosmological parameters such as baryon density, the Hubble constant
+and the density parameter Ω0 which affects the recombination rate, adiabatic cooling rate
+and the evolution of density.
+   The temperature-density relation for a set of fluid elements is then determined by, among
+other things, the reionization history of the universe. Given a reionization scenario and cos-
+mological model, hydrodynamic simulations can predict this relation accurately, but limited
+computer resources obviously restrict the number of reionization histories one can study. It is
+therefore important that we develop alternative tools in order to understand the effects of a
+full range of reionization histories, considering the as yet poor knowledge of the actual reion-
+ization history of our universe. Moreover, it is worth pointing out that there exists analytical
+tools borrowed from studies of large scale structure which can predict the distribution of ρb
+with reasonable accuracy in the low density regime (Bi, Borner & Chu 1992; Bi & Davidsen
+1996; Gnedin & Hui 1996; Hui, Gnedin & Zhang 1996). By their analytical/semi-analytical
+nature, it is possible to study a whole range of cosmological models in an efficient manner.
+What remains to be specified for these methods, in order to calculate quantities like the
+column density distribution of hydrogen, is the temperature-density relation. A calculation
+aiming at just that is attempted here.
+   We propose to model the density evolution of each fluid element using the Zel’dovich
+approximation (Zel’dovich 1970), which is known to be a good approximation in the mildly
+nonlinear regime (Coles, Melott, & Shandarin 1993) and for elements where hydrodynamic
+effects like pressure and shock-heating are unimportant. Given a probability distribution of
+the initial configuration for these elements, which can be deduced for any given cosmological
+model, one can generate a whole set of such elements and simply follow their thermal and
+chemical evolution. The resulting bulk temperature-density relation can then be studied
+for any chosen reionization history. The virtue of this method is that each element can be
+treated independently and that the density evolution is given by an analytical formula (from
+the Zel’dovich approximation) while the thermal and chemical evolution equations involve
+a set of ordinary differential equations which can be solved numerically. Obviously, such a
+Lagrangian method does not incorporate the effects of shock-heating properly. We check the
+
+
+c 0000 RAS, MNRAS 000, 000–000
+4    Hui and Gnedin
+results of our method against full hydrodynamic simulations and find good agreement for
+δ<
+ ∼ 5, implying shock effects are not significant in the low density regime (§ 2.2).
+
+    Most previous work investigating the effects of different reionization histories either as-
+sumes a uniform intergalactic medium (eg. Giroux & Shapiro 1996) or uses the spherical
+collapse model for density evolution (eg. Miralda-Escudé & Rees 1994). For the low column
+density Lyα forest, which arises naturally from a mildly fluctuating intergalactic medium,
+and which hydrodynamic simulations indicate to be consisting mostly of filaments and pan-
+cakes (Cen et al. 1994), the density evolution is better approximated by the Zel’dovich
+approximation (Hui et al. 1996).
+    A great deal of effort has been made to examine radiative transfer effects after the onset of
+ionizing radiation, including the expansion of H ii regions, reprocessing by absorption systems
+etc. (Zuo 1992a,b; Meiksin & Madau 1993; Miralda-Escudé & Rees 1994; Giroux & Shapiro
+1996; Haardt & Madau 1996; see also Gnedin & Ostriker 1996 for numerical simulations that
+include some of these effects). These effects can in principle be incorporated in our method
+by specifying how the radiation intensity correlates with density and possibly allowing the
+onset of reionization to occur at different times for different fluid elements. While more work
+still needs to be done in order to make such a specification with reasonable accuracy, we
+focus in this paper on reionization models in which the ionizing flux is uniform, but allowing
+the onset-epoch, spectrum and amplitude of the ionizing flux as well as the cosmology to
+vary. It turns out one can learn something about the more realistic fluctuating case, even
+from these simple models, which we will discuss in § 5.
+    As we will show, the mean temperature-density relation of the photoionized intergalactic
+medium in the low density regime is well-approximated by a power law equation of state
+(T ∝ [1 + δ]γ−1 ) where δ is the mass overdensity). The questions we would like to address are
+then: how does the amplitude and slope of the equation of state depend on the reionization
+history, characteristics of the ionizing radiation as well as cosmological parameters; what are
+the implications for observational properties of the Lyα forest?
+    Organization of the paper is as follows. In the next section, we outline a semi-analytical
+method to predict the temperature-density relation for any given cosmology and reionization
+history, using the Zel’dovich approximation. An example is discussed and a comparison is
+made with the result of a full hydrodynamic simulation, computed using the same reion-
+ization history. Then, in § 3 we apply the method to study models in which the universe
+reionizes suddenly, due to a rapid outburst of radiation. We investigate systematically how
+                                                                     c 0000 RAS, MNRAS 000, 000–000
+                                                            Equation of State of the IGM      5
+varying the epoch of reionization, cosmological parameters and the radiation amplitude and
+spectrum affects the equation of state at later redshifts. Analytical approximations to the
+equation of state are derived. In § 4, it is shown that models in which reionization occurs
+after a period of reheating (gradual turn-on of radiation) give equations of state that can
+be well-fitted by that of an appropriate sudden reionization model. Finally we discuss the
+implications of our findings for the observational properties of the Lyman-alpha Forest and
+the intergalactic medium in § 5. A summary of relevant reaction rates is provided in the
+Appendix.
+      A few words about our terminology. The three different methods or procedures to study
+the effects of reionization history, are respectively referred to as “analytical approximation”,
+“semi-analytical method” and “hydrodynamic simulation”. The first is discussed in § 3,
+where a few approximations are made to derive the equation of state in closed form; the
+second is explained in § 2.1, which evolves the density analytically but requires numerical
+integration of the thermal and chemical evolution equations, though not a full scale hydrody-
+namic simulation and the third is what its name suggests. While the last method is perhaps
+the most accurate (provided the numerical resolution is sufficient), the second, which is the
+focus of this paper, allows us to study the temperature-density relation for a large number
+of reionization histories in an efficient and accurate manner, albeit restricted to the low
+density regime; the first allows us to give useful approximate quantitative expressions that
+embody the correct qualitative trends. Standard symbols are used for cosmological parame-
+ters: a = (1 + z)−1 where 1 + z is the cosmological redshift factor, H for the Hubble constant
+as a function of z, H0 for the Hubble constant today, h for H0 /100 km s−1 Mpc−1 , Ω for
+the density parameter today, with the subscript b to denote its baryon portion and 0 all its
+matter content, and Λ for the contribution from cosmological constant. We use the symbol
+h (in distinct from h) to denote the Planck constant in a few places where it arises and kB
+to denote the Boltzman constant.
+
+
+2     THE SEMI-ANALYTICAL METHOD
+
+2.1     The Equations
+
+In a nutshell, the method we propose is very simple: assume that the density evolution
+of a given fluid element is governed by the Zel’dovich approximation; allow the element to
+cool/heat and its constituents to change according to standard thermal and chemical reaction
+
+c 0000 RAS, MNRAS 000, 000–000
+6    Hui and Gnedin
+rates; repeat the same procedure for a whole set of fluid elements with initial parameters
+drawn from a distribution implied by whatever cosmological initial conditions one prefers (in
+this paper, we study only Gaussian random initial conditions). The resulting temperature-
+density relation can be obtained by making a scatter-plot of temperature versus density for
+all the fluid elements at a given time of interest.
+    The density evolution of a fluid element, according to the Zel’dovich approximation, is
+given by:
+
+1 + δ = det−1 [δij + D+ (t)ψij ] ,                                                            (1)
+
+where δ is the mass overdensity, δij is the Kronecker delta and D+ (t) is the linear growth
+factor (Peebles 1980), the time dependence of which is completely specified by cosmology
+(e.g. it equals the Hubble scale factor a for a universe at critical matter density). The
+normalization is chosen such that D+ = 1 today.
+    The tensor ψij is a 3 × 3 symmetric matrix determined by initial conditions (i.e. its
+components vary from one fluid element to another). One can always choose a basis in which
+the matrix is diagonal. So, the problem of initial conditions reduces to finding the probability
+distribution of its three eigenvalues. This problem was solved by Doroshkevich (1970) for
+Gaussian random initial density field, (see also Bartelmann and Schneider (1992) for an
+elegant alternative derivation) which we also assume in this paper. For recent discussions of
+how to generate realizations of matrix ψij , see Bertschinger and Jain (1994) and Reisenegger
+and Miralda-Escudé (1995). It can be shown that the probability distribution of the matrix
+ψij is uniquely specified by the dispersion of its trace. In the limit where D+ (t) is small,
+it can be seen that the trace multiplied by −D+ (t) is equal to δ i.e. the linear overdensity.
+Therefore, the average of the trace vanishes and its rms (root mean squared) value is equal
+to the rms linear density fluctuation today σ. At a given redshift and for a fixed number
+of fluid elements, a given rms σ value would imply a probable range of δ’s in which most
+elements will end up. For the range we are interested in (δ between about −0.9 and 5, at
+z from 2 to 4), we find that setting the rms value σ to 2 is adequate. For a fixed number
+of fluid elements, choosing a higher value for σ has the effect of shifting the probable range
+of densities upward and also increasing the scatter in a plot of temperature versus density.
+Alternatively, for a fixed rms value σ, one can reproduce this latter effect and increase the
+number of fluid elements that fall in the desired density range by increasing the total number
+of fluid elements in a realization. We find that for our densities and redshifts of interest,
+
+                                                                    c 0000 RAS, MNRAS 000, 000–000
+                                                                 Equation of State of the IGM          7
+using a different σ does not change the overall temperature-density relation significantly.
+But it should be kept in mind the scatter in temperature-density relation is limited, in part,
+by the finite number of elements in the realizations.
+    Temperature obeys the following equation of evolution:
+dT            2T dδ       T d i X̃i     2 dQ
+                                           P
+   = −2HT +             −P          +           ,                                                    (2)
+dt          3(1 + δ) dt    i X̃i dt   3kB nb dt
+where d/dt is the Lagrangian derivative following each fluid element, nb is the proper number
+density of all gas particles (i.e. everything except noninteracting dark matter) and T is
+the temperature which depends on both space and time. The symbol X̃i is defined by
+ni ≡ (1 + δ)X̃i ρ̄b /mp , where ni is the proper number density of the specie i, ρ̄b is the mean
+mass density of baryons at the time of interest and mp is the mass of the proton and δ is the
+mass overdensity. For example the neutral fraction of hydrogen, XH i (to be distinguished
+from X̃H i ), is then X̃H i /(X̃H i + X̃H ii ). Note that X̃i is a function of space and time in general.
+    The first two terms on the right hand side take care of adiabatic cooling or heating. The
+third accounts for the change of internal energy per particle due to the change in the number
+of particles. The last term dQ/dt is the heat gain (or negative hear loss) per unit volume by
+the gas particles from the surrounding radiation field. The heating and cooling rates due to
+photoionization, recombination and compton scattering are summarized in the Appendix.
+    Equation (2) has to be supplemented by one that determines the abundance of each
+particle type, which takes the form:
+                                 "           #
+dX̃i             X               ρ̄b (1 + δ)
+     = −X̃i Γi +     X̃j X̃k Rjk             ,                                                       (3)
+ dt              j,k                  mp
+where Γi is the photoionization rate of the specie i and Rjk is the recombination rate (in
+units of volume per unit time) of the species j and k to give i. The photoionization rate is
+given by
+                       dν
+       Z ∞
+Γi =         4πJν σi      ,                                                                          (4)
+       νi              hν
+where Jν is the specific intensity of the ionizing radiation as a function of frequency ν, νi is
+the frequency above which a photon can ionize the specie i and σi is the cross-section for
+this process. The cross-sections for different species as well as the recombination rates are
+given in the Appendix.
+    What remains to be specified is the time evolution of the specific intensity of the ionizing
+radiation as a function of frequency, which determines the photoionization (Γi ) and photoion-
+
+
+c 0000 RAS, MNRAS 000, 000–000
+8      Hui and Gnedin
+
+
+
+
+Figure 1. A a scatter-plot (black dots) of temperature versus density of 40000 cells randomly drawn from a 643 CDM+Λ
+hydrodynamic at z = 4 using the SLH-P3 M algorithm (see Gnedin 1995 and Gnedin & Bertschinger 1996) with Ω0 = 0.35,
+ΩΛ = 0.65, Ωb = 0.055 and h = 0.7 (left panel ). The evolution of the ionizing background for the simulation is shown in shown
+in Fig. 2. The right panel shows the temperature-density relation obtained for exactly the same cosmological and radiation
+parameters using the semi-analytical method described in § 2.1, applied to 2000 fluid elements. The larger scatter in Fig. 1a
+compared to 1b is in part due to the smaller number of elements in the latter. The solid line plotted in both figures correspond
+to the analytical approximation expressed in equations (13), (19) and (22) for a sudden reionization model where the epoch of
+reionization is z = 9.6.
+
+
+ization heating (dQ/dt) rates. We will examine the effects of a wide range of amplitudes,
+spectra and time evolution of the ionizing radiation in this paper.
+      Equations (1), (2), and (3) completely determine the thermal and chemical evolution
+of a fluid element. They are numerically integrated for each fluid element with the initial
+condition for δ determined as discussed before. The thermal and chemical initial conditions
+are chosen as follows. The gas temperature T is equal to the cosmic microwave background
+temperature at 1 + z = 100(Ωb h2 /0.0125)2/5 (maintained by Compton scattering; Peebles
+1993) and evolves adiabatically after that until the universe is reionized by the UV back-
+ground. Abundances are assumed to be primordial, which is consistent with observations so
+far in the low density intergalactic medium. All species are neutral to high accuracy until
+reionization occurs. One can integrate equations (2) and (3) forward starting from any time
+between z = 100 and the beginning of reionization.
+
+
+2.2     Comparison with Hydrodynamic Simulation
+
+We show in Fig. 1 scatter plots of temperature versus density at z = 4 obtained using the
+semi-analytical method outlined above and using a full hydrodynamic simulation respec-
+
+
+                                                                                          c 0000 RAS, MNRAS 000, 000–000
+                                                                              Equation of State of the IGM                 9
+
+
+
+
+Figure 2. Evolution of JH i (solid line), JHe i (dashed line) and JHe ii (dotted line) as a function of redshift, used in the
+computations shown in Fig. 1. The Ji ’s are defined in equation (5).
+
+
+tively. The same uniform ionization field has been used for both of them, the evolution of
+which is shown in Fig. 2.⋆ The radiation field is computed in a hydrodynamic simulation
+that includes the effects of star formation (see Gnedin and Ostriker 1996). In Fig. 22, we
+quantify the level of the ionizing radiation by the photoionization rates it implies i.e.
+       R∞
+           4πJν σi dν/ν
+Ji = νRi ∞              (10−21 ergs Hz−1 s−1 cm−2 ster−1 )−1 ,                                                           (5)
+        νi  4πσ i dν/ν
+where the notations are the same as those defined in equation (4). For instance, JH i is
+related to the photoionization rate of neutral hydrogen ΓH i by ΓH i ∼ 4 × 10−12 JH i s−1 (A
+more accurate proportionality constant can be inferred from the cross-section σH i given in
+our Appendix). The three different quantities JH i , JHe i and JHe ii shown in Fig. 2 do not
+completely specify Jν , but they give an indication of how Jν changes with time at different
+frequencies. The full spectrum of Jν is of course known and used in producing the results
+
+⋆ See § 5 for a discussion of the effect of a non-uniform radiation field.
+
+
+
+
+c 0000 RAS, MNRAS 000, 000–000
+10      Hui and Gnedin
+shown in Fig. 1 but we do not show it here. (In practice, one actually needs only three
+more pieces of information regarding Jν for the thermal evolution of a gas of primordial
+composition: the photoionization heating rates of H i, He i and He ii.)
+      Our simple semi-analytical method gives a temperature-density relation which is well-
+approximated by a power law for δ <
+                                  ∼ 5. It gives the correct mean behavior of gas elements
+
+in the full hydrodynamic simulation in the low density regime. The larger scatter in Fig.
+1a compared to 1b is in part due to the smaller number of fluid elements in the latter. At
+higher densities, one begins to see the effect of shocks: a wide scatter of temperature at a fixed
+density. The calculation shown in Fig. 1b is not reliable in this regime. This is because by
+assuming that density evolves as prescribed by the Zel’dovich approximation, which is only
+a good approximation for pressureless (dark) matter or baryons at large scales, one misses
+the effects of gas pressure and shocks as the fluid element is compressed to sufficiently high
+densities.
+      We have made a number of similar comparisons between the temperature-density rela-
+tions obtained from hydrodynamic simulations versus using our semi-analytical method, for
+a number of different Jν ’s as a function of time. The semi-analytical method consistently
+gives the correct mean behavior of gas elements of low density. Keeping in mind the intrinsic
+scatter such as that seen in Fig. 1a, we can make use of our simple semi-analytical method
+to efficiently study the mean temperature-density relation at the low density regime for a
+large number of reionization scenarios, which is the subject of the next two sections.
+
+
+3     SUDDEN REIONIZATION MODELS
+
+3.1     Variation with the Epoch of Reionization
+
+In Fig. 3a,b,c and d, we show the temperature-density relation for four different sudden
+reionization models, where the reionization epoch is systematically varied. All of them have
+no ionizing background until the specified epoch and then JH i (eq. [5]) is taken to be 0.5
+from thereon i.e.
+         Jion for a ≥ areion , and
+       (
+JH i =                                                                                         (6)
+         0    for a < areion ,
+where areion = (1 + zreion )−1 is the Hubble scale factor when the radiation is turned on and
+the parameter Jion is chosen to be 0.5 (we will study the effects of varying Jion later on).
+
+
+
+                                                                     c 0000 RAS, MNRAS 000, 000–000
+                                                                                Equation of State of the IGM                   11
+
+
+
+
+Figure 3. The temperature-density relation for 4 different sudden-reionization models: sudden reionization (see eq. [6]) at
+z = 5 (a), z = 7 (b), z = 10 (c), and z = 19 (d). For each reionization model, the black dots shown are the results of calculations
+using the semi-analytical method outlined in §2.1 for 2000 elements, shown at three different instants: z being 4, 3 and 2 from
+top to bottom. The cosmological parameters are h = 0.5, Ω0 = 1 and Ωb h2 = 0.0125 (with primordial abundances for hydrogen
+and helium). The ionizing background is specified by its amplitude JH i = 0.5 (eq. [5]) and spectrum obeying equation (7)
+with f = 0.01. The solid, dotted, and dashed lines, from top to bottom for each reionization model, represent the analytical
+expressions for the equation of state in equations (13), (19), and (22), using the corresponding cosmological parameters and
+reionization-epoch for each model. The only exception is panel (d) where the lines shown are exactly the same as those in the
+panel (c), i.e. setting areion = 1/11 in equations (19) and (22) (see explanation in the text).
+
+
+     It is assumed that Jν ∝ ν −1 , except that it suffers a factor of f = 0.01 reduction beyond
+the frequency corresponding to the ionization of He ii:
+                           −1
+                         ν
+       
+           J0       ν
+                                   for ν ≤ νHe ii , and
+Jν =              H i −1                                                                                                    (7)
+        f J0            ν
+       
+                     νH i
+                                   for ν > νHe i ,
+where J0 is chosen so that JH i (eq. [5]) has the desired value, νHe ii is the frequency corre-
+sponding to the ionization of He ii and f (now chosen to be 0.01) is a parameter specifying
+by how much the ionizing radiation is to be further diminished beyond νHe ii .
+
+c 0000 RAS, MNRAS 000, 000–000
+12        Hui and Gnedin
+     Ignoring for the time being the solid, dotted and dashed lines in Fig. 3 which will be
+discussed in the next section, the first trend to notice is that the earlier the epoch of reion-
+ization, the lower the overall temperature at a given redshift, except that for sufficiently
+early reionization (zreion > 10) , the temperature-density relation approaches an asymptote.
+The second, somewhat striking, result is how well the temperature-density relations are ap-
+proximated by power-law equations of state, where the slope steepens as universe reionizes
+earlier. The third is that when the reionization epoch is pushed sufficiently early, the exact
+time when it occurs makes very little difference to the equation of state: hence the very
+similar temperature-density relations for reionization starting at z = 10 and z = 19 in Fig.
+3c and 3d.
+     To understand these trends, we perform the following approximate analytical calculation.
+
+
+3.1.1 Analytical Calculation
+
+First, let us determine the reionization temperature. In the limit when a substantial amount
+of radiation is suddenly turned on, one can approximate equations (2) and (3) by:
+     dT         T d i X̃i            2 X̃HI                                       dν
+                         P                      Z ∞
+           = −P                 +                       4πJν σH i (hν − hνH i )                             (8)
+     dt         i X̃i     dt        3kB i X̃i                                     hν
+                                         P
+                                                 νH i
+
+dX̃H i                              dν
+                    Z ∞
+           = −X̃H i       4πJν σH i    ,
+ dt                  νH i           hν
+where we have used equation (4) and have taken the crude approximation that the only two
+processes which significantly affect the temperature under the short timescale of reionization
+(reciprocal of photoionization rate) are photoionization heating of hydrogen:
+dQ        Z ∞
+                                        dν
+   ∼ nH i       4πJν σH i (hν − hνH i )                                                                     (9)
+dt         νH i                         hν
+and the change in the total number of gas particles. Note that during this brief period of
+radiation turn-on, the abundances of various species are far from equilibrium.
+     To integrate the above equations, we adopt the further approximation that the universe
+has only hydrogen, i.e. the term           i X̃i = 2 − X̃H i . Putting T = 0 right before reionization
+                                       P
+
+because the temperature right after is much higher, we obtain the large time limit of T :
+                                "Z                                                         #
+          1                        ∞                         dν                        dν
+                                                                      Z ∞
+Treion =     EJ ,        EJ ≡         4πJν σH i (hν − hνH i ) /              4πJν σH i    ,                (10)
+         3kB                     νH i                        hν         νH i           hν
+where EJ is kept constant after the radiation field is turned on. This is the temperature that
+the intergalactic medium reaches asymptotically before recombination processes become
+important and halts the exponential decrease of X̃H i , setting its value to that implied by
+
+                                                                                  c 0000 RAS, MNRAS 000, 000–000
+                                                              Equation of State of the IGM        13
+
+ionization equilibrium thereafter (hydrogen is now highly ionized). Making use of Jν ∝ ν −1 ,
+it can be shown that Treion ∼ 20000 K. This value is not significantly affected by the slope
+of Jν assuming it is between −1 and −1.5 at frequencies immediately above νH i , nor by the
+behavior of Jν at still higher frequencies.
+   Therefore, the first conclusion to draw is that for sudden reionization models, the tem-
+perature of reionization is largely independent of JH i , density, the epoch of reionization or
+even cosmology. We checked this for a few fluid elements in the computations shown in Fig.
+3 and found that it is indeed the case. One possible exception, which we will discuss in § 3.3,
+is that changing the spectrum of Jν can affect the helium abundance, which in turn has a
+non-negligible effect on Treion . For sufficiently high redshifts, areion <
+                                                                          ∼ 1/15, we also find Treion
+
+to be a little less than the value given above, because of non-negligible amount of Compton
+cooling.
+   Next, we consider the evolution of T from the epoch of reionization to z = 2, 3 and 4.
+Judging from the result in Fig. 3 that for sufficiently early reionization, the temperature-
+density relation approaches an asymptote, it seems reasonable to assume that what matters
+is the dominant thermal and chemical reaction rates at the later redshifts. In this regime, the
+dominant heating mechanism is again the photoionization of neutral hydrogen, aside from
+adiabatic heating/cooling (recall that we assume a universe filled with only hydrogen). For
+sufficiently low temperature, recombination (of proton and electron) cooling is subdominant
+compared to photoionization heating (at temperature of the order of 104 K, recombination
+cooling rate is smaller but actually not negligible compared to photoionization heating; it is
+again a crude approximation we adopt to make the problem tractable analytically). Putting
+all these into equation (2), the thermal evolution is then approximated by:
+dT            2T dδ      2 X̃H ii X̃e ρ̄b
+   = −2HT +            +                  (1 + δ)REJ                                            (11)
+dt          3(1 + δ) dt 3kB i X̃i mp
+                            P
+
+where we have ignored the term in equation (2) due to the change in the number of species,
+used equations (4), (9) and (10) and assumed ionization equilibrium (setting the right hand
+side of eq. [3] to zero), with R approximately given by
+                   T −0.7 3 −1
+R ≈ 4 × 10−13 (        ) cm s .                                                                 (12)
+                  104K
+A more accurate expression for R is given in the Appendix and used for our semi-analytical
+computation but this approximate form suffices for the present analytical calculation. More-
+
+
+
+c 0000 RAS, MNRAS 000, 000–000
+14     Hui and Gnedin
+
+over, assuming again there is only hydrogen in the universe, we will approximate X̃H ii X̃e /     i X̃i
+                                                                                                P
+
+by 1/2 (recall that hydrogen is now highly ionized).
+     Even with this highly simplified equation, the problem of predicting the temperature-
+density relation is still untractable analytically, if one uses the density evolution as expressed
+in equation (1). One possible approximation is to assume the collapse/expansion occurs
+only along one direction i.e. 1 + δ = 1/(1 − D+ λ) where λ is a constant specified by initial
+conditions. Equation (11) can then be solved analytically but it turns out the resulting
+equations of state differ qualitatively from the ones shown in Fig. 3 in the sense that at high
+and low densities, the predicted temperature tends to be higher than what it actually is. This
+is because in three dimensions, most fluid elements that reach higher densities do so by having
+one axis collapsing while the two others expand. By ignoring the expansion in the other two
+axes (as in a one-dimensional calculation) and thereby missing extra adiabatic cooling, the
+temperature is systematically over-estimated. Moreover, most elements that reach the lower
+densities also have at least two axes expanding and so the one-dimensional calculation again
+underestimates the amount of cooling. The combination of both effects conspire to give an
+equation of state that resembles a power-law for genuine three-dimensional fluid elements.
+     The next best question to ask is then: given that the outcome is a power-law equation
+of state, can we at least predict its amplitude and slope? To do so, we turn to linear theory.
+We expand the logarithm of T to first order in δ:
+
+lnT = lnT0 + (γ − 1)δ = lnT0 + (γ − 1)[ln(1 + δ)] ,                                             (13)
+
+where T0 is simply the temperature of a fluid element that remains at the cosmic mean
+density and γ − 1 multiplied by δ gives the fluctuation about the mean (the notation γ − 1
+is chosen to agree with the common notation as in eq. [14]). The second equality holds
+in the small δ limit. The power-law slope relating temperature and density for small δ is
+then given by d lnT /d ln(1 + δ) = γ − 1. Knowing that a single power-law equation of state
+approximately holds even for δ not very small, γ −1 is then taken to be the correct power-law
+slope throughout our range of interest i.e.
+
+T = T0 (1 + δ)γ−1                                                                               (14)
+
+     Putting δ = 0 into equation (11) and making use of the relation H = H0 Ω0 1/2 (1 + z)3/2
+where Ω0 is the ratio of matter density to critical density today (the expression is exact for
+Ω0 = 1 and approximately true at sufficiently high redshift; see Peebles 1993 Chapter 5), it
+is possible to show that
+                                                                     c 0000 RAS, MNRAS 000, 000–000
+                                                                             Equation of State of the IGM    15
+
+da2 T0             1
+       = T0−0.7 a− 2 B                                                                                      (15)
+ da
+where B is defined by
+                          2
+                                                Ωb h2
+                                                         "                     #
+   ρc100          0.7 Ωb h        0.7       1
+B≡       Treion RT0    √    ≈ 10 K Treion  √                                                                (16)
+    mp               H0 Ω0                h Ω0 0.0125
+where ρc100 is the critical density today if H0 = 100 km s−1 Mpc−1 , Treion is given by equation
+(10) and R is the recombination rate give in equation (12) (note that the combination
+RT 0.7 is independent of temperature) and Ωb , Ω0 , h and H0 are cosmological parameters as
+explained in the Introduction. Note also temperature is measured in Kelvin and B has the
+dimension of K1.7 , hence the factor of K0.7 in the last expression.
+    Integrating equation (15), we obtain:
+         a2
+                                        "                1.9 #
+                              1.7 − 3      areion
+                                              
+T01.7 = ( reion
+            2
+                Treion )1.7 +    a 2    1−                         B.                                       (17)
+           a                 1.9             a
+The initial condition is chosen such that T = Treion (eq. [10]) at a = areion , the epoch of
+reionization.
+    The equation of evolution for γ − 1 can be derived from equation (11) by expanding T
+as in equation (13) and collecting terms that are first order in δ:
+                   Ω0 0.6       d lna2 T0   dlna2 T0 2 Ω0 0.6
+                       "                          #
+d(γ − 1)
+         + (γ − 1)        + 1.7           =         +         .                                             (18)
+   da               a              da          da     3 a
+In deriving the above, we have made use of the fact that the linear growth factor D+ , which
+controls the growth of δ for small δ (δ ∝ D+ ) obeys the relation d lnD+ /d lna = Ω0 0.6 , which
+is exact for critical matter density and approximate otherwise (Peebles 1980).
+    Equation (18) is a linear ordinary differential equation for γ, which is straightforward,
+if somewhat tedious, to solve. Recalling that Treion is independent of δ, we use the initial
+condition γ − 1 = 0 at a = areion and obtain:
+                                  !1.7                       
+                                                     Ω0 0.6
+      1    a2reion Treion                  areion                      2   1
+                                                                                
+γ−1=     1−                                                    +         −   (a2 T0 )−1.7 Ω0 0.6 C ,       (19)
+     1.7        a2 T0                         a                         3 1.7
+where C is defined by
+                       a1.9                                  a1.9
+                   "                                                                            #
+         1.7                             areion 1.9+Ω0 0.6                areion Ω0 0.6
+                                                                           
+                                                              reion
+C≡           B                0.6  1 − (       )           −    0.6 1 − (       )                           (20)
+         1.9      1.9 + Ω0                 a                 Ω0             a
+           (a2reion Treion )1.7       areion Ω0 0.6
+                                                   
+         +                        1−(        )
+                  Ω0 0.6                 a
+where B and T0 are defined in equations (16) and (17). The slope γ − 1 = d lnT /d ln(1 + δ)
+exhibits the correct qualitative behavior found using our semi-analytical computation shown
+in Fig. 3. We plot in Fig. 4 the evolution of γ − 1 as given by equation (19) for a number
+
+c 0000 RAS, MNRAS 000, 000–000
+16     Hui and Gnedin
+
+
+
+
+Figure 4. The evolution of γ − 1 as given by equation (19) for areion = 1/6 (solid line), areion = 1/8 (dotted line) and
+areion = 1/11 (dashed line). Here Treion = 20000 K and Ω0 = 1 in all cases.
+
+
+of different areion . An interesting consequence of the above expression for the slope is a limit
+as to how steep the temperature-density relation can be (or an upper limit to γ − 1). In the
+limit where reionization occurs very early:
+                1   0.078Ω0
+γmax − 1 =        +             .                                                                                 (21)
+               1.7 1.9 + Ω0 0.6
+Hence, the maximum possible value for γ −1 is 0.62 (assuming Ω0 ≤ 1). This has interesting
+implications for the slope of the column density distribution of the Lyman alpha forest, which
+we will discuss in § 5.
+     We show in Fig. 5 a comparison of the above expressions (eq. [13], [17] and [19]) with the
+temperature-density relation obtained by solving numerically the rate equations as outlined
+in Sec 2.1. The evolution of the slope is quite accurately captured by our analytical approx-
+imation in equation (19). However, the amplitude T0 predicted by equation (17) is off: the
+overall predicted temperature is lower than what it actually is and the the predicted spread
+in T0 from z = 2 to z = 4 is also larger than what the semi-analytical calculation shows (Fig.
+5b). This is mainly because helium is not taken into account at all in the above treatment.
+By ignoring heating due to photoionization of helium, we systematically underestimates T0
+in our analytical calculation. The time evolution for T0 is also not quite right for the same
+reason. We therefore introduce the following modification of equation (17) that gives an
+excellent fit to the results of the semi-analytical calculations shown in Fig. 3:
+
+
+                                                                                     c 0000 RAS, MNRAS 000, 000–000
+                                                                              Equation of State of the IGM                  17
+
+
+
+
+Figure 5. Temperature-density relation for two sudden-reionization models: comparison of results of semi-analytical calcula-
+tions (black dots) and predictions based on analytical approximations expressed in equations (13), (17), and (19) (solid, dotted
+and dashed lines). The model parameters are described in the caption of Fig. 3. The black dots in the left panel and right panel
+are exactly the same points as those in Fig. 3a and Fig. 3c respectively , i.e. sudden reionization at z = 6 and z = 19. From
+top to bottom for each figure, the results are shown at z = 4, 3, and 2 respectively for the black dots and also for the lines.
+Notice how the predicted slopes match quite well while the amplitudes are off. A modified version of equation (17) (eq. [22])
+gives much better fit to the amplitudes and is used instead in the rest of this paper.
+
+
+         a2                    1.7 − 3 + a−0.25    areion 1.9
+                                                                     
+T01.7 = ( reion
+            2
+                T̃reion )1.7 +     a 2     a    1−            B                ,   T̃reion = 25000 K                      (22)
+          a                    1.9                   a
+where we have modified the power index of a in the second term on the right hand side and
+used T̃reion = 25000, in place of Treion given in equation (10). In general, a different best-fit
+T̃reion would have to be chosen for different abundances of the helium species, when one
+varies the spectrum of the ionizing radiation, for instance. We will return to this point later.
+    On the other hand, the slope of the equation of state γ − 1 is quite insensitive to the
+exact value of Treion , and using the original estimate (eq. [10]) in equation (19) is sufficiently
+accurate.
+    The analytical predictions for the equation of state shown in Fig. 3 are based on this
+modified version of T0 (eq. [22]) together with equations (13) and (19). Note that, for the
+case in which the universe reionizes at z = 19, the temperature-density relation is very close
+to that of the case in which the universe reionizes at z = 10. This turns out to be a general
+trend, that there is an asymptotic temperature-density relation when the universe reionizes
+sufficiently early. To see how this asymptotic state is approached, we show in Fig. 10 the
+evolution in temperature of one particular fluid element for different reionization histories.
+Notice how the solid line (sudden reionization at z = 10) and the dotted line (sudden
+
+c 0000 RAS, MNRAS 000, 000–000
+18      Hui and Gnedin
+
+
+
+
+Figure 6. The temperature-density relations for Ωb h2 = 0.025 (upper black dots) and Ωb h2 = 0.0125 (lower black dots)
+at z = 3 for sudden reionization model with radiation-turn-on at z = 7. The rest of the cosmological parameters are exactly
+the same as those given in Fig. 3. The dotted and solid lines are the predictions according to equations (13), (19) and (22),
+respectively for the two models.
+
+
+reionization at z = 19) converges. The other lines in the figure corresponds to reionization
+models that will be discussed later. We also find that fluid elements at other densities also
+exhibit the same kind of convergence towards an asymptotic state.
+      The expressions in equations (13), (19), and (22) are derived by ignoring processes like
+Compton cooling which are important at higher redshifts, if the universe is already reionized
+by then. Hence, the analytical expressions are not quite as accurate for areion < 1/11. How-
+ever, we can make use of the knowledge of asymptotic behavior for early reionization models
+and use simply the areion = 1/11 result of equations (13), (19), and (22) for any models in
+which reionization occurs earlier than z = 10. This is what we have done in making Fig. 3d.
+      We now turn to two other interesting variations of the sudden-reionization models.
+
+
+3.2     Variation with Cosmology
+
+We investigate the temperature-density relations for different cosmological parameters, in-
+cluding the baryon density, the Hubble constant and the fraction of critical density in mat-
+ter. One example is shown in Fig. 6, where Ωb h2 has been increased by a factor of two from
+the value in Fig. 3. Once again, we find that a power-law equation of state gives an ade-
+quate description of the temperature-density relation. Moreover, the analytical expressions
+in equations (13), (19), and (22) work quite well in describing the change in amplitude and
+
+                                                                                        c 0000 RAS, MNRAS 000, 000–000
+                                                           Equation of State of the IGM     19
+
+slope. As predicted by equations (22) and (16), the overall temperature increases as Ωb h2
+is raised because the rate of photoionization heating is increased. (Recombination cooling
+rate is actually also increased but photoionization heating is the dominant entropy changing
+process.)
+      We have also tried other variations such as lowering Ω0 . A realistic structure formation
+model such as the cosmological constant dominated Cold Dark Matter model with Ω0 = 0.35
+and h = 0.7 (Kofman, Gnedin, & Bahcall 1993; Ostriker & Steinhardt 1995) does not give
+a very different temperature-density relation from the ones shown in Fig. 3 (using the same
+Ωb h2 ). This can be understood from equations (22) and (16), where it is clear the overall
+                                                                          √
+temperature to the 1/1.7-th power is dependent upon the combination h Ω0 which only
+varies from 0.5 for the model in Fig. 3 to about 0.4 in the cosmological constant model.
+      In general, we find that equations (13), (19) and (22) give an agreement to the actual
+temperature-density relation to within 20% for a variety of cosmological models we have
+tested. A large part of this error has to do with the fact that changing Ω0 and h changes the
+amount of time helium photoionization heating or recombination cooling has to act to make
+a difference to the thermal evolution. The effect of helium is what we will discuss next.
+
+
+3.3     Variation with Amplitude and Spectrum of Radiation
+
+The last set of tests we perform for the class of sudden reionization models is to vary the
+spectrum and amplitude of the ionization radiation. We find that varying the amplitude
+of the ionization radiation does not affect the temperature-density relation significantly,
+as predicted by equations (19) and (22), as long as the flux level is sufficient to maintain
+the universe highly ionized. This is shown in Fig. 7a and 7b, which corresponds to choosing
+Jion = 0.1 and Jion = 2.0 respectively in equation (6). A comparison of the two figures reveals
+a slight decrease in temperature when JH i is raised, which is a result of more opportunities
+for recombination cooling, but the effect is very small and becomes insignificant at lower
+redshifts (z = 2).
+      The main effect of varying the spectrum (when fixing JH i defined in eq. [5]) is that one
+changes the relative abundance of the different species of helium. which could have a non-
+negligible effect on the temperature due to recombination cooling of the ionized species and
+photoionization heating of neutral helium. We test this effect by varying the He ii cut-off
+factor f in equation (7). Two examples are shown in Fig. 8 where we replot the lines in Fig.
+
+
+c 0000 RAS, MNRAS 000, 000–000
+20      Hui and Gnedin
+
+
+
+
+Figure 7. The effect of varying the amplitude of Jν on the temperature-density relation. Black points in the left panel (Fig.
+7a) are the result of semi-analytical calculation of sudden reionization at areion = 1/8 with Jion = 0.1 (eq. [6]) while those in
+the right panel (Fig. 7b) has Jion = 2.0 starting from the same areion . The spectrum is chosen to be the same with f = 0.01
+(eq. [7]) for both panels. The outputs from top to bottom are at z = 4, 3 and 2. The same solid, dotted, and dashed lines are
+drawn for both panels to facilitate comparison. They are also exactly the same as the lines in Fig. 3b, based on the analytical
+expressions in equations (13), (19), and (22), using areion = 1/8. The cosmological parameters in Fig. 7 are exactly the same
+as those in Fig. 3.
+
+
+
+
+Figure 8. The effect of varying radiation spectrum on the temperature-density relation. Black dots are the results obtained
+by the semi-analytical calculation explained in § 2.1. The reionization and cosmological model here is, except for the spectrum,
+exactly the same as that in Fig. 3a where the universe reionizes suddenly at z = 6. The solid, dotted and dashed lines of Fig. 3a
+are reproduced here for comparison. Above and below the solid line at the top are two sets of points at z = 4 which correspond
+to choosing f = 1.0 (less He ii) and f = 10−4 (more He ii) respectively in equation (7). The same is also true for the two sets of
+points surrounding the dotted line, except that they are at z = 3. Results are not shown for z = 2 because the two different f ’s
+give significantly overlapping results that are well-represented by the dashed line. The amplitude JH i = 0.5 (eq. [5]) is adopted
+throughout.
+
+
+
+
+                                                                                            c 0000 RAS, MNRAS 000, 000–000
+                                                             Equation of State of the IGM    21
+3a (which match the temperature-density relations for f = 0.01 quite well) together with
+the result of two semi-analytical calculations for f = 1.00 and f = 10−4 respectively. By
+decreasing f or the amount of radiation energetic enough to ionize He ii, one increases the
+abundance of He ii offering more opportunities for recombination cooling, thereby lowering
+the overall temperature. The reverse happens when f is raised. The change in temperature
+due to this effect could be as large as 20%, with less change as one goes to lower redshift,
+for a fixed reionization history. One can compensate the error in the analytical estimate
+of T0 (which ignores the effect of helium) by lowering/raising T̃reion in equation (22) as
+one decreases/increases f (For instance, choosing T̃reion = 28000 for the f = 1 case and
+T̃reion = 22000 for the f = 10−4 works reasonably well).
+   The power-law slope, on the other hand, does not vary significantly with the spectrum of
+the ionizing background. It can be seen from Fig. 8 that there is a slight decrease of slope for
+the corresponding redshifts as one lowers f . This is due to the fact that He ii recombination
+cooling has a stronger effect at higher density. The analytical prediction for the slope in
+equation (19) works best when the effects of helium is negligible, as can be seen from the
+better match of slopes for the f = 1 case. Nevertheless, on the whole, we find that the
+prediction of equation (19) for the slope is quite robust.
+   To summarize the results of this section, we find that the temperature-density relation
+at z of 2 to 4 for sudden-reionization models is well described by a power-law equation
+of state, with a scatter that depends on the total number of fluid elements. The overall
+amplitude decreases and the slope steepens as the epoch of reionization is pushed earlier;
+but the equation of state rapidly approaches an asymptotic limit for reionization occurring
+at redshifts beyond 10. Quantitative estimates for the slope and amplitude are given in
+equations (19) and (22). While the analytical prediction for the slope is relatively robust
+for various cosmologies and spectra, the prediction for the amplitude agrees with the results
+of the semi-analytical calculations (outlined in § 2.1) to within 20% for reasonable range of
+cosmological and ionization parameters. Most of the error comes from the neglect of helium
+in obtaining the analytical estimate, which can be compensated if one allows T̃reion to change
+in equation (22) according to the abundance of the helium species (Fig. 8).
+
+
+
+
+c 0000 RAS, MNRAS 000, 000–000
+22     Hui and Gnedin
+4    REIONIZATION PRECEDED BY REHEATING
+
+The idealization of sudden reionization in the last section allows us to understand the various
+trends of the temperature-density relation analytically. It is quite possible that the ionizing
+radiation is turned on more gradually in nature. In particular, we focus on a class of models
+in which radiation is turned on at some early time, with an intensity large enough to heat
+up the intergalactic medium but small enough so that the neutral fractions remain high
+(large recombination rates) though slowly decreasing. This is motivated by hydrodynamic
+simulations (see Gnedin & Ostriker 1996) in which collapsed regions of high density (could
+be stars/quasars) are assumed to give out radiation. As the formation rate of these regions
+increases with time and the neutral fraction drops steadily, the ionizing intensity climbs until
+at some point, the universe becomes highly ionized (neutral fraction of hydrogen less than
+10−4 ), thus completing the reionization process when the radiation levels off and species
+abundances are simply given by ionization equilibrium. The simulation shown in Fig. 1a
+and 2 is one such example.
+     To investigate the implications of these reionization models systematically, we adopt the
+following parametrization for the evolution of the ionizing radiation:
+        Jion         for a ≥ aion ,
+       
+       
+                          7
+                      a
+JH i =  Jheat       aion
+                                 for aion > a ≥ aheat ,                                       (23)
+       
+       
+           0                     for aheat > a,
+where JH i is defined in equation (5), aheat and aion denote the size of the Hubble scale factor
+at the onset of reheating and reionization. The slope a7 in the second row of equation (23)
+comes from fitting JH i (a) in Fig. 2. The spectrum of Jν is assumed to have the same form
+as in equation (7) with f = 0.01 and J0 chosen to match whatever JH i specified above.
+     Before discussing the results for these models, let us point out that in Fig. 1, we have
+already shown an example of the temperature-density relation of a reionization-preceded-by-
+reheating model where J varies with time as in Fig. 2. Notice how the temperature-density
+relation can be approximated by an equation of state resulting from a sudden reionization
+model (the solid line in Fig. 1). The same turns out to be true for all other reionization
+models we have tested, with the parametrization given in equation (23).
+     Two interesting examples are shown in Fig. 9. Both have the same epochs of reheating and
+reionization (aheat and aion ). The only difference is the amount of reheating that occurs: Jheat
+being 0.001 versus 0.1 in equation (23). They can both be approximately fitted with sudden
+reionization models (no preceding reheating period) where the epoch of sudden reionization
+                                                                     c 0000 RAS, MNRAS 000, 000–000
+                                                                               Equation of State of the IGM                  23
+
+
+
+
+Figure 9. Black dots in Fig. 9a on the left show the temperature-density relation for a reionization model in which aheat = 1/20,
+aion = 1/6, Jheat = 0.001 and Jion = 0.5 (see eq. [23]). The three sets of points are from top to bottom at z = 4, 3 and 2. The
+solid, dotted and dashed lines are analytical approximations of sudden reionization models expressed in equations (13), (19),
+and (22), choosing areion = 1/8.4. Fig. 9b on the right, on the other hand, corresponds to the choice of parameters aheat = 1/20,
+aion = 1/6, Jheat = 0.1 and Jion = 0.5 in eq. [23]. The analytical approximations shown have areion equal to 1/10 in equation
+(13), (19) and (22). For both Fig. 9a and 9b, the cosmological model is the same as that in Fig. 3.
+
+
+is chosen to lie somewhere between aheat and aion . The larger the amount of reheating, the
+earlier the epoch of reionization is required. It is also interesting to note that in Fig. 9a, the
+fit to the result at z = 4 is not as good as those at z = 3 or z = 2. It is because it takes some
+time for the universe to settle to its asymptotic state (i.e a state which is independent of
+prior history, whether it be sudden reionization, gradual reionization with preheating, etc).
+The same should also be true for Fig. 9b, except that because the amount of preheating
+is more significant, the universe, in effect, has more time to settle to its asymptotic state,
+hence the better agreement with sudden reionization models for all three redshifts.
+    To illustrate this convergence towards an asymptotic state, we show in Fig. 10 the evolu-
+tion of temperature for one particular fluid element for four different reionization histories.
+The tendency to approach the same limiting temperature, for a given density evolution,
+can be clearly seen. Note how the model illustrated with a long-dashed line evolves to a
+temperature a little higher than the others, by z = 2. This is because of its relatively small
+amount of reheating (small Jheat in eq. [23]) which implies the universe effectively reionizes
+at a latter redshift, giving it less time to settle to its asymptotic state.
+    We have tested several other reionization models where all the parameters in equation
+(23) are varied systematically. The same conclusion holds for all of them, namely that a sud-
+
+
+c 0000 RAS, MNRAS 000, 000–000
+24      Hui and Gnedin
+
+
+
+
+Figure 10. Examples of convergence towards an asymptotic state. In the upper panel is shown the evolution of the overdensity
+of a fluid element as a function of redshift. In the lower panel is shown the evolution of temperature for the same fluid element,
+but for a variety of reionization histories. The solid and dotted lines both correspond to sudden reionization models in which
+areion = 1/11 and areion = 1/20 respectively and Jion = 0.5 in equation (6). Their reionization and cosmological parameters
+are exactly the same as those in Fig. 3c and 3d respectively. The short dashed and long dashed lines correspond exactly to
+the reionization models shown in Fig. 9b and 9a respectively i.e. reionization-preceded-by-reheating models with aheat = 1/20,
+aion = 1/6, Jion = 0.5 and Jheat = 0.1 for short dashed line and Jheat = 0.001 for long dashed line (see eq. [23]). The
+cosmological parameters for these two latter models are the same as those for the solid and dotted lines.
+
+
+den reionization model (no preceding reheating) can always be found to fit the temperature-
+density relation of any reionization model with reheating, with the turn-on redshift of the
+former chosen somewhere between the epochs of reheating and reionization of the latter.
+
+
+5    DISCUSSION
+
+Let us summarize what we have learned so far.
+     We find that the temperature-density relation of the low density intergalactic medium,
+while having an intrinsic scatter, is well described by a mean equation of state of the form
+T = T0 (1 + δ)γ−1 . It is shown that any reionization model with gradual radiation-turn-on
+produces equation of state that can be well approximated by one produced by a suitably
+chosen sudden turn-on model (§ 4).
+     In general, the mean temperature T0 at δ = 0 at a given redshift z ∼ 2 − 4 decreases
+as the epoch of reionization is pushed earlier. It is only weakly dependent on the ampli-
+tude of the ionizing flux JH i at z ∼ 2 − 4 assuming reionization takes place at z >
+                                                                                   ∼ 5. The
+
+spectrum of Jν can introduce about 20% change to T0 . Its main effect is on the abundances
+of helium species, affecting the amount of photoionization heating and recombination cool-
+
+                                                                                            c 0000 RAS, MNRAS 000, 000–000
+                                                              Equation of State of the IGM      25
+ing. Cosmological parameters change T0 in a simple way: for sufficiently early reionization,
+           √
+T0 ∝ (Ωb h/ Ω0 )1/1.7 . All the dependence mentioned above are expressed in a quantita-
+tive way in equation (22), with about 20% accuracy depending on the spectrum of Jν and
+cosmology.
+   The slope of the equation of state, γ − 1, increases with redshift and with earlier reion-
+ization epoch (eq. [19] and Fig. 4). Its evolution is only weakly dependent on cosmology.
+There exists a maximum as to how steep γ − 1 can get, which is about 0.62 (eq. [21]).
+Strictly speaking, γ − 1 can be as small as 0 right at the onset of sudden reionization, but
+for reionization occurring earlier than zreion ∼ 5, it is greater than 0.3 at z = 3; for zreion > 7
+the minimum γ is about 0.47.
+   What do all these imply for the observable properties of the low column density Lyα
+forest? Firstly, for a given density (or 1 + δ) profile and the Hubble constant h, the column
+density it corresponds to is proportional to Ω2b T −0.7 JH−1i . Uncertainty in the reionization
+history introduces about 50% uncertainty in T (see Fig. 3), which in turn implies about 30%
+uncertainty in column density. This means an additional uncertainty in the amplitude of the
+column density distribution on top of that due to Ωb and JH i , even if one is given a known
+cosmological model (Hui et al. 1996).
+   Note that for sufficiently early reionization, the dependence T0 ∝ Ωb 1/1.7 implies that the
+                                 2−0.7/1.7
+column density is scaled by Ωb               = Ω1.6
+                                                b , which is roughly consistent with the result of
+
+Croft et al. (1996), who found Ω1.7
+                                b scaling using hydrodynamic simulations.
+
+   The good news, on the other hand, is that the slope of the column density distribution is
+relatively independent of reionization history. The slope of the column density distribution
+(number of absorption lines per unit column density per unit redshift ∝ NH−βi where NH i is
+the column density) is approximately given by:
+                 1
+β =1+                      [0.96 − 2(σ0 − 1)]                                                 (24)
+         1.68 − 0.7(γ − 1)
+where σ0 is the rms mass fluctuation at scales close to the Jeans length. It is close to 1 but
+its precise value is determined by the cosmological model (Hui et al. 1996). Taking the range
+of γ − 1 from 0.3 to 0.62 we have derived before and σ0 ∼ 1, the uncertainty in β introduced
+by unknown reionization history is of the order of 5%.
+   This is a very important conclusion because the slope of column density distribution then
+becomes a powerful discriminant of cosmological models through σ0 . It is relatively free of
+uncertainties due to reionization history, or the values of Ωb and JH i , unlike the amplitude
+
+c 0000 RAS, MNRAS 000, 000–000
+26     Hui and Gnedin
+of the column density distribution. The reader is referred to Hui et al. (1996) for a more
+detailed discussion of the predictions of various cosmological models for β.
+     The temperature-density relation also has significant implications for the b parameter
+distribution. There exists a rather sharp lower cut-off of about b = 20 km s−1 according to
+high resolution data of the low column density Lyα observation (Hu et al. 1996). If one
+                                                                                     q
+naively assumes the observed b is completely a result of thermal broadening b =         2kT /mp ,
+one obtains a lower cut-off temperature of about 24000 K. Judging from Fig. 3, it is clear
+that at z ∼ 3, which is the relevant redshift for these observations, unless the universe
+reionizes quite a bit later than z = 5, all the underdense regions (and including some
+overdense regions too, depending on the reionization history) have lower temperature that
+this cut-off. This is true even if one allows for a lot of helium photoionization heating or very
+little helium recombination cooling by varying the spectrum (see Fig. 8). There are a few
+possible resolutions: first, it is possible that the low column density objects that we observe
+(column density lower than about 1015 cm2 ) actually correspond to higher densities (δ) ,
+but that would imply a very high JH i (higher than about 2.0) which is difficult to reconcile
+with observations (see Hui et al. 1996); second, it could be that the universe is not photo-
+reionized after all and some other mechanism is at work; third, the observed b parameter
+for these low column density systems is not the result of thermal broadening alone. We
+consider the last possibility the most likely one. As we have argued in an earlier paper (Hui
+et al. 1996) and was pointed out before by numerous authors (see for instance Cen et al.
+1994; Hernquist et al. 1996; Miralda-Escudé et al. 1996; Zhang et al. 1995), the observed
+absorption profiles do not necessarily conform to the classic Voigt profile but can instead
+reflect more the underlying mass density profile and peculiar velocity structure. For instance,
+a structure collapsing perpendicular to the line of sight (thus having density enhancement
+to induce enhanced absorption) can have an expanding velocity component along the line
+of sight, thus creating a profile broader than what naive thermal broadening would predict.
+     Finally, let us speculate on how a fluctuating ionizing field might change the results of
+our paper. From Fig. 8, it is clear that a fluctuating field with inhomogeneous spectrum can
+certainly introduce a lot of scatter to the temperature-density relation, by giving different
+photoionization heating and recombination cooling rates even for fluid elements with the
+same density evolution. Moreover, the ionizing field can also turn on at different times
+for different fluid elements because of radiative transfer effects (Zuo 1992a,b). This would
+
+
+                                                                    c 0000 RAS, MNRAS 000, 000–000
+                                                             Equation of State of the IGM        27
+introduce additional scatter because as we have seen, the earlier the reionization epoch, the
+lower the temperature at a given redshift.
+    However, we also learn that the temperature-density relation approaches an asymptotic
+limit if one waits long enough. For sufficiently early reionization, neither the amplitude of
+JH i nor the reionization history (eg. at what different times radiation turns on at different
+elements) affects the temperature very much, assuming JH i is large enough to keep the
+universe reionized (see § 3.3). Therefore, provided the amplitude of Jν at the helium ionizing
+frequencies does not vary significantly with position at later times z ∼ 2 − 4, the equation
+of state we calculate for the early reionization models should be valid, even if the amplitude
+of JH i fluctuates at z ∼ 2 − 4. This certainly warrants further research, which we will leave
+for future work.
+    We are grateful to Prof. Martin Rees for valuable comments and suggestions that consid-
+erably improved the manuscript. This work was supported in part by the DOE and by the
+NASA (NAGW-2381) at Fermilab and by the UC Berkeley grant 1-443839-07427. Simula-
+tions were performed on the NCSA Power Challenge Array under the grant AST-960015N.
+N. G. is grateful to Joshua Frieman and the Theoretical Astrophysics group at Fermilab for
+hospitality, where part of this work is completed.
+
+
+APPENDIX A: IONIZATION AND RECOMBINATION RATES
+
+In this section we compile the ionization and recombination rates used in our calculations.
+We believe that this compilation is sufficiently up-to-date to reflect all recent improvements.
+In some of the equations below the following notation is used:
+          (TR)
+      T
+λj = 2 j         ,
+        T
+                                   (TR)
+where T is the temperature, and Tj        are ionization thresholds for species j = H i, He i, He ii
+expressed in temperature units,
+   (TR)
+ TH i     = 157807 K,
+  (TR)
+ THe i    = 285335 K,
+  (TR)
+ THe ii   = 631515 K.
+The symbol kB denotes the Boltzmann constant.
+    For chemical evolution, we use the symbols RI, CI and DI to denote hydrogen and
+helium recombination rates, collisional ionization rates and dielectronic recombination rates.
+
+
+c 0000 RAS, MNRAS 000, 000–000
+28     Hui and Gnedin
+     For thermal evolution, we use the symbols RC, CC, DC and EC to denote hydrogen
+and helium recombination cooling, collisional ionization cooling, dielectronic recombination
+cooling and line excitation cooling rates.
+     Superscripts and subscripts are added to the above symbols to distinguish between dif-
+ferent processes within each class.
+     Molecular hydrogen and metal cooling are not expected to be important for the low
+density intergalactic medium that we are interested in (see Songaila & Cowie 1996 for a
+discussion of metals detected in the Lyα forest).
+     Compton cooling rates and the photoionization cross-sections are given at the end.
+
+ case A H ii recombination coefficient: our fit to the data from Ferland et al. (1992); accu-
+rate to 2% from 3 K to 109 K:
+                                                λ1.503
+                                                  Hi
+RIHA ii = 1.269 × 10−13 cm3 sec−1
+                                    (1.0 + (λH i /0.522)0.470 )1.923
+ case A H ii recombination cooling rate: our fit to the data from Ferland et al. (1992); ac-
+curate to 2% from 3 K to 109 K:
+                                                            λ1.965
+                                                              Hi
+RCHA ii = 1.778 × 10−29 erg cm3 sec−1 K−1 T
+                                                (1.0 + (λH i /0.541)0.502)2.697
+ case A He ii recombination coefficient: from from Burgess & Seaton (1960); accurate to
+∼10% from 5 × 103 K to 5 × 105 K:
+  A
+RIHe ii = 3.0 × 10
+                   −14
+                       cm3 sec−1 λ0.654
+                                  He i
+
+ case A He ii recombination cooling rate: from from Burgess & Seaton (1960); accurate to
+∼10% from 5 × 103 K to 5 × 105 K:
+  A              A
+RCHe ii = kB T RIHe ii
+
+ case A He iii recombination coefficient: our fit to the data from Ferland et al. (1992); ac-
+curate to 2% from 1 K to 109 K:
+  A                                                      λ1.503
+                                                           He ii
+RIHe iii = 2.0 × 1.269 × 10
+                            −13
+                                cm3 sec−1
+                                            (1.0 + (λHe ii /0.522)0.470)1.923
+ case A He iii recombination coefficient: our fit to the data from Ferland et al. (1992); ac-
+curate to 2% from 1 K to 109 K:
+  A                                                                     λ1.965
+                                                                           He ii
+RCHe iii = 8 × 1.778 × 10
+                          −29
+                              erg cm3 dimsec−1 K−1 T
+                                                           (1.0 + (λHe ii /0.541)0.502 )2.697
+ case B H ii recombination coefficient: our fit to the data from Ferland et al. (1992); accu-
+rate to 0.7% from 1 K to 109 K:
+                                                                          c 0000 RAS, MNRAS 000, 000–000
+                                                                       Equation of State of the IGM   29
+
+                                                  λ1.500
+                                                    Hi
+RIHB ii = 2.753 × 10−14 cm3 sec−1
+                                      (1.0 + (λH i /2.740)0.407 )2.242
+ case B H ii recombination cooling rate: our fit to the data from Ferland et al. (1992); ac-
+curate to 2% from 1 K to 109 K:
+                                                                   λ1.970
+                                                                     Hi
+RCHB ii = 3.435 × 10−30 erg cm3 sec−1 K−1 T
+                                                       (1.0 + (λH i /2.250)0.376)3.720
+ case B He ii recombination coefficient: from from Burgess & Seaton (1960); accurate to
+∼10% from 5 × 103 K to 5 × 105 K:
+  B
+RIHe ii = 1.26 × 10
+                    −14
+                        cm3 sec−1 λ0.750
+                                   He i
+
+
+ case B He ii recombination cooling rate: from from Burgess & Seaton (1960); accurate to
+∼10% from 5 × 103 K to 5 × 105 K:
+  B              B
+RCHe ii = kB T RIHe ii
+
+ case B He iii recombination coefficient: our fit to the data from Ferland et al. (1992); ac-
+curate to 2% from 3 K to 109 K:
+  B                                                          λ1.500
+                                                               He ii
+RIHe iii = 2.0 × 2.753 × 10
+                            −14
+                                cm3 sec−1
+                                                (1.0 + (λHe ii /2.740)0.407)2.242
+ case B He iii recombination cooling rate: our fit to the data from Ferland et al. (1992);
+accurate to 2% from 3 K to 109 K:
+  B                                                                       λ1.970
+                                                                             He ii
+RCHe iii = 8 × 3.435 × 10
+                          −30
+                              erg cm3 sec−1 K−1 T
+                                                             (1.0 + (λHe ii /2.250)0.376 )3.720
+ H i collisional ionization coefficient: our fit to the data from Lotz (1967); accurate to 3%
+from 104 K to 109 K:
+                                                        λ−1.089
+                  3
+CIH i = 21.11 cm sec K T −1   3/2   −3/2
+                                           e−λH i /2     Hi
+                                             (1 + (λH i /0.354)0.874 )1.101
+ H i collisional ionization cooling rate: derived from the collisional ionization coefficient:
+              (TR)
+CCH i = kB TH i      CIH i
+
+ He i collisional ionization coefficient: our fit to the data from Lotz (1967); accurate to 3%
+from 104 K to 109 K:
+                                                         λ−1.146
+                     3
+CIHe i = 32.38 cm sec K T−1   3/2   −3/2
+                                           e−λHe i /2      He i
+                                              (1 + (λHe i /0.416)0.987 )1.056
+ He i collisional ionization cooling rate: derived from the collisional ionization coefficient:
+               (TR)
+CCHe i = kB THe i CIHe i
+
+
+c 0000 RAS, MNRAS 000, 000–000
+30     Hui and Gnedin
+
+Table A1. Photoionization cross-section parameters
+
+
+ Species      E0 ( eV)        σ0 ( cm2 )           P          ya       yw        y0       y1
+   Hi      4.298 × 10−1     5.475 × 10−14        2.963       32.88      0         0       0
+  He i      1.361 × 101     9.492 × 10−16        3.188       1.469    2.039    0.4434   2.136
+  He ii        1.720        1.369 × 10−14        2.963       32.88      0         0       0
+
+
+ He ii collisional ionization coefficient: our fit to the data from Lotz (1967); accurate to 3%
+from 104 K to 109 K:
+                                                          λ−1.089
+CIHe ii = 19.95 cm3 sec−1 K3/2 T −3/2 e−λHe ii /2            He ii
+                                               (1 + (λHe ii /0.553)0.735 )1.275
+ He ii collisional ionization cooling rate: derived from the collisional ionization coefficient:
+                   (TR)
+CCHe ii = kB THe ii CIHe ii
+
+ He ii dielectronic recombination coefficient: from Aldrovandi & Pequignot (1973); accurate
+to ∼5% from 3 × 104 K to 106 K:
+                                                                                                                
+DIHe ii = 1.90 × 10       −3      3
+                               cm sec   −1
+                                             K   3/2
+                                                       T   −3/2
+                                                                  e−0.75λHe iii /2 1 + 0.3e−0.15λHe iii /2
+
+ He ii dielectronic recombination cooling rate: derived from the dielectronic recombination
+coefficient:
+                          (TR)
+DCHe ii = 0.75kB THe iii DIHe iii
+
+ H i line excitation cooling rate: from Black (1981) with the correction from Cen (1992);
+accurate to ∼10% from 5 × 103 K to 5 × 105 K:
+                                                                               1
+ECH i = 7.5 × 10−19 erg cm3 sec−1 e−0.75λH i /2
+                                                                       1 + (T /105 K)1/2
+ He ii line excitation cooling rate: from Black (1981)with the correction from Cen (1992);
+accurate to ∼10% from 5 × 103 K to 5 × 105 K:
+                                                                  0.397
+                                                           1K                                        1
+                                                       
+ECHe ii = 5.54 × 10       −17           3
+                                 erg cm sec      −1
+                                                                           e−0.75λHe ii /2
+                                                            T                                1 + (T /105 K)1/2
+ Compton heating/cooling term in the equation (2) is given by the following expression
+(Peebles 1993), which is exact in the nonrelativistic limit:
+dQCompton
+          = 6.35 × 10−41 erg cm−3 s−1 K−1 Ωb h2 X̃e (1 + z)7 (2.726 K(1 + z) − T ) .
+   dt
+     Photoionization cross-sections are taken from Verner et al. (1996) in the following form:
+               h                   i    y 0.5P −5.5
+σ(E) = σ0 (x − 1)2 + yw2                    q              P ,
+                                       1+        y/ya
+
+
+
+                                                                                                 c 0000 RAS, MNRAS 000, 000–000
+                                                                             Equation of State of the IGM           31
+                                                q
+where x = E/E0 − y0 and y =                          x2 + y12 . Quantities σ0 , E0 , yw , P , ya , y0 , and y1 are
+fitting parameters and are given in the Table A. They are accurate to within 10% from the
+respective ionization thresholds to 5 keV.
+
+
+REFERENCES
+Aldrovandi, S. M. V., & Pequignot, D. 1973, A&A, 25, 137
+Bartelmann, M., & Schneider, P. 1992, A&A, 259, 413
+Bertschinger, E., & Jain, B. 1994, ApJ, 431, 486
+Bi, H. G., Borner, G., & Chu, Y. 1992, A&A, 266, 1
+Bi, H. G., & Davidsen, A. F. 1996, ApJ, in press (astro-ph 9611062)
+Black, J. H. 1981, MNRAS, 197, 553
+Burgess, A., & Seaton, M. J. 1960, MNRAS, 121, 471
+Cen, R. 1992, ApJS, 78, 341
+Cen, R. Y., Miralda-Escudé, J., Ostriker, J. P., & Rauch, M. R. 1994, ApJ, 437, L9
+Coles, P., Melott, A. L., & Shandarin, S. F. 1993, MNRAS, 260, 765
+Couchman, H. M. P., & Rees, M. J. 1986, MNRAS, 221, 53
+Cristiani, S., D’Odorico, S., D’Odorico, V., Fontana, A., Giallongo, E., & Savaglio., S. 1996, MNRAS, in press (astro-ph
+    9610006)
+Croft, R. A. C., Weinberg, D. H., Katz, N., & Hernquist, L. 1996, ApJ, submitted (astro-ph 9611053)
+Doroshkevich, A. G. 1970, Astrofizika, 6, 581
+Ferland, G. J., Peterson, B. M., Horne, K., Welsh, W. F., & Nahar, S. N. 1992, ApJ, 387, 95
+Giroux, M. L., & Shapiro, P. R. 1996, ApJS, 102, 191
+Gnedin, N. Y. 1995, ApJS, 97, 231
+Gnedin, N. Y., & Bertschinger, E. 1996, ApJ, 470, 115
+Gnedin, N. Y., & Hui, L. 1996, ApJ, 472, L73
+Gnedin, N. Y., & Ostriker, J. P. 1996, ApJ, submitted (astro-ph 9612127)
+Gunn, J. E., & Peterson, B. A. 1965, ApJ, 142, 1633
+Haiman, Z., & Loeb, A. 1996, ApJ, submitted (astro-ph 9611028)
+Haardt, F., & Madau, P. 1996, ApJ, 461, 20
+Hernquist, L., Katz, N., Weinberg, D. H., & Miralda-Escudé, J. 1996, ApJ, 457, L51
+Hu, E., Kim, T., Cowie, L. L., & Songalia, A. 1995, AJ, 110, 1526
+Hui, L., Gnedin, N. Y., & Zhang, Y. 1996, ApJ, submitted (astro-ph 9608157)
+Ikeuchi, S., & Ostriker, J. P. 1986, ApJ, 301, 522
+Kofman, L. A., Gnedin, N. Y., & Bahcall, N. A. 1993, ApJ, 413, 1
+Lotz, W. 1967, ApJS, 14, 207
+Lu, L., Sargent, W. L. W., Womble, D. S., & Takada-Hidai, M. 1996, ApJ, 472, 509
+Meiksin, A.,& Madau, P. 1993, ApJ, 412, 34
+Miralda-Escudé, J., Cen, R., Ostriker, J. P., & Rauch, M. 1996, ApJ, 471, 582
+Miralda-Escudé, J., & Ostriker, J. P. 1992, ApJ, 392, 15
+Miralda-Escudé, J., & Rees, M. J. 1994, MNRAS, 266, 343
+Ostriker, J. P., & Gnedin, N. Y. 1996, ApJ, 472, L63
+Ostriker, J. P., & Steinhardt, P. J. 1995, Nature, 377, 600
+Peebles, P. J. E. 1980, The Large Scale Structure of the Universe, Princeton: Princeton University Press
+
+
+c 0000 RAS, MNRAS 000, 000–000
+32     Hui and Gnedin
+Peebles, P. J. E. 1993, Principles of Physical Cosmology, Princeton: Princeton University Press
+Reisenegger, A., & Miralda-Escudé, J. 1995, ApJ, 449, 476
+Sciama, D. W., 1990, ApJ, 364, 549
+Shapiro, P. R. 1995, ASP Conf. Ser., 80
+Shapiro, P. R., Giroux, M. L., & Babul, A. 1994, ApJ, 427, 25
+Songaila, A., & Cowie, L. L. 1996, ApJ, 112, 335
+Verner, D. A., Ferland, G. J., Korista, K. T., & Yakovlev, D. G. 1996, ApJ, 465, 487
+Wadsley, J. W., & Bond, J. R. 1996, preprint astro-ph 9612148, to appear in Proc. 12th Kingston Conference, Halifax
+Zel’dovich, Ya. B. 1970, A&A, 5, 84
+Zhang, Y., Anninos, P., & Norman, M. L. 1995, ApJ, 453, L57
+Zuo, L. 1992a, MNRAS, 258, 36
+——— 1992b, MNRAS, 258, 45
+
+
+
+
+                                                                                        c 0000 RAS, MNRAS 000, 000–000
+

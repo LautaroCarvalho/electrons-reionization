@@ -1,0 +1,1001 @@
+SCIENCE CHINA
+Physics, Mechanics & Astronomy
+
+p r i n t - c r o s s m a r k
+
+?? 2026 Vol. ?? No. ??: 000000
+https://doi.org/??
+
+. Article .
+
+arXiv:2607.26373v2 [astro-ph.CO] 3 Aug 2026
+
+No way ouτ: Epoch of Reionization Observations Do not Support
+Large Values of the Optical Depth to Reionization
+Paulo Montero-Camacho∗1 , and Yi Mao†2
+1Department of Strategic and Advanced Interdisciplinary Research,
+Pengcheng Laboratory, Nanshan District, Shenzhen, Guangdong 518000, China;
+2Department of Astronomy, Tsinghua University, Beijing 100084, China
+
+Received ??; accepted ??
+
+Recent cosmological analyses combining high-redshift cosmic microwave background (CMB) measurements with
+low-redshift baryon acoustic oscillation (BAO) data have reported a preference for dynamical dark energy, with
+the cosmological constant scenario (ΛCDM) disfavored at the ∼ 3σ level. These analyses, however, typically rely
+on large-scale CMB polarization measurements to constrain the optical depth to reionization τreio ∼ 0.06, raising
+the question of whether potential systematics in this dataset could influence the inferred cosmological preference.
+Excluding large-scale polarization data substantially weakens the tension with ΛCDM to the ≲ 2σ level, nevertheless
+at a price of increasing τreio significantly to ∼ 0.09. Here, we use a physically motivated Gompertzian reionization
+framework to perform a self-consistent Bayesian analysis combining CMB (excluding large-scale polarization data),
+BAO, and independent measurements of the neutral hydrogen fraction evolution from quasar damping wing observations and dark pixel constraints. We derive τreio = 0.067 ± 0.011 (dynamical dark energy scenario) in good agreement
+with cosmological analyses that would include large-scale CMB polarization data, while the inferred reionization
+history is consistent with multiple observational constraints. Our analysis recovers a preference for dynamical dark
+energy at the ⪆ 2σ level. These results demonstrate that astrophysical probes of reionization independently recover
+the optical depth required by CMB polarization measurements, suggesting that potential systematics in large-scale
+polarization alone are unlikely to fully explain the emerging preference for dynamical dark energy.
+Cosmology, Cosmic Microwave Background, Dark Energy, Cosmic Reionization
+PACS number(s):
+Citation:
+
+98.80.-k, 98.70.Vc, 95.36.+x
+
+Montero-Camacho, et al,
+, Sci. China-Phys. Mech. Astron. ??, 000000 (2026), https://doi.org/??
+
+∗ Email: pmontero@pcl.ac.cn
+† Email: ymao@tsinghua.edu.cn
+
+© Science China Press and Springer-Verlag GmbH Germany, part of Springer Nature 2020
+
+phys.scichina.com
+
+link.springer.com
+
+Montero-Camacho, et al.
+
+Sci. China-Phys. Mech. Astron.
+
+?? (2026)
+
+Vol. ??
+
+No. ??
+
+000000-2
+
+Contents
+1
+
+Introduction
+
+000000-2
+
+2
+
+Data and Method
+
+000000-3
+
+3
+
+Optical depth from joint CMB and EoR observations in ΛCDM
+
+000000-4
+
+4
+
+Preference for dynamical dark energy
+
+000000-6
+
+5
+
+Conclusions
+
+000000-8
+
+Appendix A Gompertzian reionization
+
+1 Introduction
+The standard cosmological model (ΛCDM) with its cosmological constant has been remarkably successful in describing the evolution of the Universe and a wide range
+of cosmological observables, such as the Cosmic Microwave Background (CMB). However, recent measurements from the Dark Energy Spectroscopic Instrument
+(DESI; [1]) indicate a preference for dynamical dark energy (w0 wa CDM), leading to an emerging ∼ 3σ tension
+with ΛCDM [2]1) .
+In this work, we investigate the exclusion of largescale CMB polarization data as a possible mechanism
+for resolving this tension [5-9]. Excluding these data allows the optical depth to reionization τreio to increase to
+∼ 0.09. Since the CMB-inferred τreio is negatively correlated with the total matter density, Ωm , a higher value
+of τreio can accommodate a lower Ωm , thus reducing the
+discrepancy between early and late-time measurements
+of Ωm [10] and potentially alleviating the H0 tension simultaneously [11]. However, large-scale CMB polarization data, last measured by the Planck collaboration [12]
+and routinely included in modern CMB analyses, tightly
+constrain τreio to ∼ 0.06 [13, 14]2) , hence preventing the
+exploitation of this degeneracy. Furthermore, when the
+interplay between reionization and cosmological parameters is modeled self-consistently, the τreio −Ωm degeneracy
+becomes significantly weaker (see Figure 1 of [18]).
+Motivated by the large value of τreio reported by [5,6],
+several mechanisms have been proposed or revisited to
+explain such an increase. For instance, Ref. [19] introduces inflationary features that enhance the value of τreio ,
+
+000000-9
+Ref. [20] considers the impact of infrared cutoff models,
+and Ref. [21] suggests that supermassive Population III
+stars could produce an early contribution to reionization
+while remaining consistent with constraints from the end
+stages of reionization.
+Refs. [5, 6] showed that excluding large-scale CMB
+polarization data relaxes the 3σ tension with ΛCDM
+to ≲ 2σ. At the same time, it alleviates the apparent preference for negative neutrino masses and weak∑
+ens the exclusion of the mν ≥ 0.06 eV lower bound implied by neutrino oscillation experiments, which is otherwise disfavored by approximately ∼ 3σ [18,22,23]. Measuring CMB polarization is considerably challenging as
+the signal is several orders of magnitude weaker than
+temperature anisotropies, requiring careful treatment of
+instrumental systematics and astrophysical foregrounds
+[13, 24-26]. Nevertheless, no evidence of unresolved systematic effects in the low-ℓ EE power spectrum has been
+reported to date.
+Among the primary free parameters of the standard
+cosmological model, τreio remains the only one that has
+not yet been measured with percent-level precision (see
+Figure 1 in [27] for recent developments). It quantifies the cumulative Thomson scattering experienced by
+CMB photons as they propagate towards our telescopes.
+As such, τreio is not a fundamental cosmological parameter but rather an effective quantity determined by the
+ionization history of the Universe. Consequently, it can
+technically be demoted to derived parameter rather than
+a free parameter [18, 27, 28]. Its inferred value depends
+on the assumed reionization history xH i (z).
+Most CMB analyses model the reionization history
+
+1) The inclusion of full-shape DESI DR1 data reduces this tension to 1.4σ and 1σ for power spectrum [3] and bispectrum [4], respectively.
+2) The preference for τreio ∼ 0.06 remains even when extending the parameter space, e.g., by allowing for running of the spectral index,
+varying the effective number of non-photon radiation species, and considering quintessence-like dark energy models (see, e.g., [15-17]).
+
+Montero-Camacho, et al.
+
+Sci. China-Phys. Mech. Astron.
+
+using a hyperbolic tangent, a fast symmetric sigmoid
+that does not reflect the behavior predicted by reionization simulations [29-32]. Simulations instead favor
+an asymmetric evolution, with a gradual start driven
+by the scarcity of ionizing sources at high redshifts.
+Furthermore, the tanh prescription performs poorly in
+joint analysis combining CMB and epoch of reionization (EoR) observations (see Appendix C of [18] and
+Figure 3). When only CMB data are considered, the effect of adopting an asymmetric reionization history can
+be modest, altering the large-scale polarization signal by
+≲ 4% [33]. Notably, early asymmetric parameterizations
+relied on generic functional forms chosen to reproduce
+the expected asymmetry [34, 35]. More recent models,
+however, are calibrated directly against reionization simulations, such as the Gompertzian reionization model introduced in [27]. Relative to the tanh prescription, the
+Gompertzian model provides a substantially better description of joint CMB + EoR data and typically yields
+lower values of τreio .
+As an alternative to simulation-informed reionization
+models, such as the Gompertzian prescription or neutral
+network-based approaches [28], Refs. [8,9] reconstructed
+the reionization history directly from publicly available
+xH i measurements. This strategy implicitly treats all xH i
+observations as equally reliable, although their robustness can vary significantly (e.g., [36]). Moreover, these
+generic reconstructions do not incorporate physical insights from our current understanding of the reionization
+process. Nevertheless, both studies found that including
+a broad compilation of xH i constraints favors low values
+of the optical depth, thus preserving the ΛCDM tension.
+Even if some issue were identified in the large-scale
+CMB polarization data, current EoR observations appear broadly consistent with the optical depths inferred
+from those measurements [9]. Consequently, any systematic affecting the low-ℓ CMB EE power spectrum
+would also need to be accompanied by inconsistencies in
+multiple independent EoR observations. In this work, we
+investigate whether including robust EoR constraints –
+while still excluding large-scale CMB polarization data
+– and adopting the physically motivated Gompertzian
+reionization model alters the reported relaxation of the
+tension with ΛCDM.
+The remainder of this paper is organized as follows.
+We describe the data and methodology used throughout this work in Section 2. In Section 3, we present a
+comparison of the optical depth inferences obtained for
+different reionization models within ΛCDM. Section 4
+
+?? (2026)
+
+Vol. ??
+
+No. ??
+
+000000-3
+
+reports our main results, i.e., the effect of a joint analysis of CMB and robust epoch of reionization data on
+dynamical dark energy preferences within a physically
+motivated Gompertzian reionization model. We summarize our findings in Section 5. Appendix A introduces
+the Gompertzian reionization model established in [27].
+
+2 Data and Method
+For BAO, we use the DESI DR2 measurements [2]. For
+the high-ℓ CMB TT, TE, and EE likelihood, we adopt
+the combination of Planck PR4 [37] and ACT DR6 [14],
+following [14]. We additionally include the Planck PR3
+large-scale (2 ≤ ℓ ≤ 30) temperature anisotropy measurements [12], which we refer to as low-ℓ CMB TT.
+For CMB lensing, we combine the Planck PR4 [38] and
+ACT DR6 [39] data, following [39]. Moreover, we supplement these cosmological datasets with robust constraints
+on the reionization history from quasar damping wings
+(QSO DW; [40-43]) and the two lowest-redshift Lyman-α
+and Lyman-β dark pixel measurements from [44]3) .
+We employ a physically motivated Gompertzian reionization model [27] to reconstruct the global neutral hydrogen fraction xH i (z) as a function of redshift. In contrast to the standard tanh prescription, which models
+reionization as a symmetric sigmoid with an often fixed
+duration and thus a single free parameter corresponding
+to the midpoint of reionization, the Gompertzian model
+describes reionization with an asymmetric sigmoid characterized by two free parameters. Its main advantages
+compared to the hyperbolic tangent prescriptions are
+that the model is physically motivated as it agrees well
+with the expectations from EoR simulations and it is
+well-suited for joint analyses of CMB and EoR observations. The self-consistent inclusion of robust EoR measurements improves constraints on τreio , thereby reducing
+degeneracies with cosmological parameters. We recap
+the Gompertzian reionization model in Appendix A.
+The Gompertzian reionization model has been shown
+to accurately reproduce the reionization history of simulations spanning a range of astrophysical prescriptions
+[27]. These simulations, however, assume ΛCDM. This
+approximation is well justified because cosmic reionization occurs deep within the matter-dominated era, where
+the impact of dark energy should be negligible. Although the exact timing of the transition from matter
+domination to dark energy domination depends weakly
+on the underlying reionization model, the effect on the
+
+3) As shown in Figure 1, the two lowest redshift dark pixel (DP) bounds provide the strongest model independent constraints on the
+late stages of reionization.
+
+Montero-Camacho, et al.
+
+ΛT
+
+Sci. China-Phys. Mech. Astron.
+
+ΛG*
+
+?? (2026)
+
+Vol. ??
+
+ΛG
+
+w0 wa T
+
+000000-4
+
+No. ??
+
+w0 wa G
+
+DESI DR2
+w0 wa CDM
+
+ΛCDM
+
+ΛCDM
+
+ΛCDM
+
+w0 wa CDM
+
+w0 wa CDM
+
+tanh
+
+Gompertzian
+
+Gompertzian
+
+tanh
+
+Gompertzian
+
+tanh
+
+Data
+
+= lowℓ CℓEE
+
+= lowℓ CℓEE
+
+= lowℓ CℓEE , ∋ DW + DP
+
+= lowℓ CℓEE
+
+= lowℓ CℓEE , ∋ DW + DP
+
+∋ lowℓ CℓEE
+
+τreio
+
+0.090 ± 0.012
+
+0.087 ± 0.011
+
+0.077 ± 0.011
+
+0.0870 ± 0.0056
+
+0.067 ± 0.011
+
+∼ 0.06
+
+Informative τreio prior
+
+U(0.02, 0.2)
+
+Derived param.
+
+Derived param.
+
+N(0.09, 0.006)
+
+Derived param.
+
+U(0.01, 0.8)
+
+< 2σ
+
+⪆ 2σ
+
+> 3σ
+
+Model
+Reionization
+
+ΛCDM tension
+Reference
+
+[5]
+
+[5]
+
+[2]
+
+Table 1 Models considered throughout this work in the context of both results from DESI DR2 and Ref. [5]. The former established the
+current w0 wa CDM−ΛCDM tension, while the latter proposes a potential resolution through the exclusion of large-scale CMB polarization
+data. Note that our work does not impose any priors on the optical depth to reionization since it is a derived parameter within the
+Gompertzian reionization framework.
+
+reionization history is expected to be small. In fact,
+Gompertzian reionization generally favor later (lower
+redshift) transitions to matter domination than that inferred using the hyperbolic tangent prescription (see Appendix 5 of [18]).
+We perform self-consistent joint Monte Carlo Markov
+Chain (MCMC) analyses using cobaya [45], combining
+high-ℓ CMB, low-ℓ CMB TT, CMB lensing, BAO, QSO
+DW, and dark pixel data. The Gompertzian reionization
+model is implemented directly in the Boltzmann solver
+CLASS [46]4) , while the implementation of the EoR
+likelihood follows [18, 27]. We denote the Gompertzian
+ΛCDM and w0 wa CDM models by ΛG and w0 wa G, respectively. The w0 wa model additionally allow the sum
+of the neutrino masses to vary. We also introduce
+a benchmark ΛCDM Gompertzian reionization model
+ΛG* which does not include QSO DW nor dark pixel
+data. For comparison, we refer to the corresponding hyperbolic tangent models from [5]5) as ΛT and w0 wa T
+for ΛCDM and w0 wa CDM, respectively. Note that as
+Ref. [5] used the hyperbolic tangent prescription, they do
+not include EoR observations, instead they sample over
+τreio , while w0 wa T also adds a Gaussian prior centered
+at τreio = 0.09 (the ΛT value), which obscures the direct
+comparison between the different models. Table 1 summarizes these models and contextualizes them in terms
+of the DESI DR2 results.
+
+ing power of the EoR data, we also show the 1σ CL obtained from a ΛCDM analysis that excludes both largescale CMB polarization and EoR constraints (ΛG*). As
+expected, this analysis yields substantially weaker constraints on xH i , particularly yielding loose constraints at
+the end stages of reionization. Consequently, τreio shifts
+to larger values. For comparison, we show the ΛT result from [5], which samples over τreio directly without
+the use of any EoR observations. Its derived midpoint
+of reionization is largely inconsistent with EoR observations.
+
+3 Optical depth from joint CMB and EoR observations in ΛCDM
+Figure 1 shows the inferred reionization history and its
+corresponding 1σ confidence level (CL) region in the
+context of multipole independent EoR observations for
+both the ΛT and ΛG models. To illustrate the constrain4) https://github.com/paulomontero/class_gomp
+5) These models are available at https://zenodo.org/records/15298950. ΛT corresponds to ‘lcdm_mnu=0.06_tau=free_cmb-p+cmbl+bao’ while w0 wa T is ‘w0wa_mnu=0.06_tau=0.09_cmb-p+cmb-l+bao’.
+
+Montero-Camacho, et al.
+
+Sci. China-Phys. Mech. Astron.
+
+Neutral hydrogen fraction
+
+1.0
+
+0.8
+
+ΛG*
+ΛG
+ΛT
+Dark Pixel
+JWST Gal DW
+JWST Lya LF
+QSO DW
+
+0.6
+
+0.4
+
+0.2
+
+0.0
+
+6
+
+8
+
+10
+
+12
+
+Redshift
+
+14
+
+16
+
+18
+
+Figure 1 Reionization histories inferred from representative posterior best fits using high-ℓ CMB, low-ℓ CMB TT, CMB lensing,
+and BAO as the cosmological dataset. The purple shaded region
+shows the 1σ confidence interval obtained with a Gompertzian
+reionization model in ΛCDM without EoR data (ΛG*). Furthermore, the green shaded region depicts the reionization history obtained from a Gompertzian reionization model in ΛCDM (ΛG)
+with the additional inclusion of QSO DW and Dark Pixel measurements of the reionization timeline. For comparison, the orange
+shaded region shows the corresponding 1σ constraint obtained by
+Ref. [5] using a hyperbolic tangent (ΛT). Representative observational constraints on the epoch of reionization are overlaid, including dark pixel measurements [44, 47], quasar and galaxy damping
+wing observation [40-43,48,49], and Lyα luminosity functions constraints [50, 51].
+
+ΛG
+ΛG*
+ΛT
+w0 w a G
+w0 w a T
+
+0.05
+
+0.10
+τreio
+
+Figure 2
+Posterior distributions of the optical depth to reionization for Bayesian analyses that do not include large-scale CMB
+polarization. The solid green, dashed-dotted purple, and solid blue
+curves show the Gompertzian ΛCDM (ΛG), ΛCDM without EoR
+data (ΛG*), and w0 wa CDM (w0 wa G) constraints, respectively. For
+comparison, we also show the corresponding ΛCDM (ΛT) and
+w0 wa CDM (w0 wa T) constraints from Ref. [5] as the dashed orange and dashed magenta curves, respectively. The shaded pink
+region indicates the 1σ constraint from the ACT DR6 analysis [14],
+which includes low-ℓ CMB polarization data.
+6) For example, Planck PR3 gives σ8 Ω0.25
+m = 0.589 ± 0.020 [52].
+
+?? (2026)
+
+Vol. ??
+
+000000-5
+
+No. ??
+
+Figure 2 shows the posterior distributions of τreio for
+the different models. Overall, we find a preference for
+lower values of τreio than those reported by [5], reflecting the use of a physically motivated and observationally
+supported reionization model. In contrast to the nearly
+symmetric narrowing of the posterior from ΛT to w0 wa T,
+the transition from ΛG to w0 wa G exhibits a noticeably
+asymmetric narrowing driven by the inclusion of EoR
+observations. As discussed in Section 4, this behavior
+ultimately arises from the interplay between constraints
+provided by CMB lensing and EoR observations.
+In the absence of large-scale CMB polarization data,
+CMB lensing helps break the As e−2τreio degeneracy between the amplitude of the primordial power spectrum
+As and τreio present in the high-ℓ CMB temperature and
+polarization power spectra. CMB lensing constrains
+the combination σ8 Ω0.25
+m , where σ8 is the present-day
+root-mean-square amplitude of the matter density field
+smoothed over scales of 8 h−1 Mpc6) . Consequently, it
+also tightly constrains the combination of As and Ωm .
+Interestingly, our model that does not include EoR
+observations has the same central value as the w0 wa T
+model. The ΛG* posterior shape is symmetric given
+that it does not have the additional constraints at the
+low-end from, particularly, dark pixel upper limits. The
+inclusion of EoR measurements breaks the symmetry in
+the posterior and shifts τreio to smaller values than those
+obtained from ΛT and ΛG*. Note that the broad symmetric posteriors of ΛT and ΛG* are in good agreement,
+the usage of a physically motivated model does shifts the
+posterior to slightly smaller values while also reducing
+the spread slightly. In terms of cosmological parameters, the shift is due to ΛT yielding larger As than the
+two other ΛCDM models, which requires larger τreio to
+comply with high-ℓ CMB data.
+From our ΛCDM MCMC analysis, we obtain the following constraints on τreio
+τreio = 0.087 ± 0.011
+
+(68% CL, ΛG∗) ,
+
+(1)
+
+τreio = 0.077 ± 0.011
+
+(68% CL, ΛG) .
+
+(2)
+
+For comparison, Ref. [5] reported τreio = 0.090 ± 0.012
+(68% CL) for the ΛT model. Thus, in ΛCDM at least,
+EoR observations still allow relatively large values of the
+optical depth but with the 0.09 value outside the 1σ
+limit. In the w0 wa CDM scenario, which provides a better fit to the data, the situation changes drastically (see
+Section 4).
+Refs. [8, 9] also investigated the impact of including EoR neutral hydrogen observations while exclud-
+
+Montero-Camacho, et al.
+
+Sci. China-Phys. Mech. Astron.
+
+ing large-scale CMB polarization data. However, both
+studies incorporated a broad compilation of reionization
+constraints, including measurements with varying levels
+of robustness7) and model dependence, and employed a
+pragmatic reconstruction of xH i directly from the observations. In contrast, we restrict our analysis to measurements that we consider the most robust, based on
+their conservative uncertainty estimates, precise redshift
+determinations, and minimal model dependence. These
+include quasar damping wing measurements (e.g., [41])
+and Lyα (and Lyβ) dark pixel constraints [44,47]. In addition, we adopt the physically motivated Gompertzian
+reionization model, which was calibrated against reionization simulations [27], rather than a generic functional
+form.
+For further comparison, Ref. [8] reported τreio =
+0.0492+0.0014
+−0.0030 (68% CL, xH i (z) + BBN + BAO, ΛCDM),
+consistent with a rapid and late reionization history
+while Ref. [9] found τreio = 0.0552+0.0019
+−0.0026 (68% CL, CMB
+without lowE + xH i (z), ΛCDM). Our more conservative selection of EoR constraints – with a physicallymotivated reionization model – yields larger values of
+τreio , although they remain below the τreio ≃ 0.08 required
+to substantially relax the ΛCDM−w0 wa CDM tension [5].
+
+Neutral hydrogen fraction
+
+0.8
+
+ΛG*
+w0 w a G
+w0 w a T
+Dark Pixel
+JWST Gal DW
+JWST Lya LF
+QSO DW
+
+0.4
+
+0.2
+
+0.0
+
+6
+
+8
+
+10
+
+12
+
+Redshift
+
+14
+
+16
+
+Vol. ??
+
+No. ??
+
+000000-6
+
+4 Preference for dynamical dark energy
+
+The flexibility of the Gompertzian reionization model allows for a gradual start of reionization followed by a more
+rapid late-time evolution, in agreement with the behavior predicted by reionization simulations [29-32]. The
+integrand of the optical depth favorably weights highredshift contributions to the timeline of reionization, a
+positive sign for raising the value of τreio . However, our
+analysis also includes EoR observations that constrain
+the later stages of reionization. As shown in Figure
+3, the 1σ w0 wa G reionization history is already in excellent agreement with high-redshift constraints. Thus,
+the inclusion of additional, currently less accurate, highredshift EoR observations is unlikely to increase the inferred value of τreio significantly.
+The w0 wa G model yields
+
+τreio = 0.067 ± 0.011
+
+(68% CL, w0 wa G) ,
+
+(3)
+
+in excellent agreement with the ACT DR6 analysis [14],
+despite excluding low-ℓ CMB polarization data. For
+comparison, although recall that w0 wa T leverages an informative prior centered on high values of the optical
+depth, Ref. [5] reported τreio = 0.087 ± 0.0056 (68% CL)
+for w0 wa T.
+
+1.0
+
+0.6
+
+?? (2026)
+
+18
+
+Figure 3 Same as Figure 1 but for the histories inferred from the
+w0 wa scenarios using high-ℓ CMB, low-ℓ CMB TT, CMB lensing,
+and BAO as the cosmological dataset. The blue shaded region depicts the reionization history obtained from a Gompertzian reionization model in w0 wa CDM (w0 wa G) with the additional inclusion
+of QSO DW and Dark Pixel measurements of the reionization
+timeline. The magenta shaded region shows the corresponding 1σ
+constraint obtained by Ref. [5] using a hyperbolic tangent (w0 wa T).
+For comparison, we have included the ΛG* constraint from Figure
+1 as a benchmark.
+
+Figure 2 shows the corresponding posteriors for the
+optical depth obtained from w0 wa G and w0 wa T. The narrowing of the posterior that occurs from ΛT to w0 wa T
+(partially driven by the informative prior on w0 wa T)
+does not occur, to the same extend, for the Gompertzian
+reionization models.
+In a w0 wa CDM scenario without EoR data, the additional freedom introduced by w0 and wa broadens the
+posterior of Ωm , reconciling early and late probes of Ωm
+and ultimately shifting its posterior toward higher values. To satisfy the CMB lensing constraint, As correspondingly shifts to lower values with its posterior becoming narrower. Through the As e−2τreio degeneracy, this
+drives τreio toward higher values while simultaneously reducing its uncertainty.
+
+7) For example, galaxy damping wing constraints may be significantly affected by cosmic variance [36].
+
+0.45
+
+Montero-Camacho, et al.
+
+Sci. China-Phys. Mech. Astron.
+
+w0 w a G
+
+w0 w a T
+
+000000-7
+
+No. ??
+
+0
+
+0.35
+
+wa
+
+Ωm
+
+Vol. ??
+
+w0 w a G
+
+0.40
+
+0.30
+0.25
+
+?? (2026)
+
+−1
+−2
+−3
+
+0.06
+
+0.08
+
+0.10
+
+τreio
+Figure 4 Constraints in the Ωm − τreio plane from the joint analysis of high-ℓ CMB, low-ℓ CMB TT, CMB lensing, BAO, QSO
+DW, and dark pixel data using a Gompertzian reionization model
+(w0 wa G; solid blue contours). The orange pentagon marks the
+corresponding maximum-likelihood point. For comparison, the
+dashed magenta contours show the w0 wa CDM results obtained by
+Ref. [5] (w0 wa T), with the associated maximum-likelihood point
+indicated by the purple square.
+
+The situation changes once EoR observations are included. In this case, τreio can no longer increase freely because larger optical depths generally imply earlier reionization histories that could be disfavored by the late
+stage xH i measurements but still allow some leeway for
+extended timelines. Although CMB lensing stills favors
+lower values of As , its posterior no longer contracts appreciably, as it must remain consistent with the tighter
+EoR constraints on τreio through their degeneracy.
+Figure 4 illustrates the relationship between τreio and
+Ωm for the w0 wa G model. Consistent with the asymmetric posterior shown in Figure 2, the 1σ and 2σ confidence regions exhibit an extended tail toward larger
+values of τreio . As expected, allowing for a dynamical
+dark energy equation of state substantially weakens the
+constraint on Ωm , broadening it from 0.2991 ± 0.0037 in
+ΛG to 0.352 ± 0.024 in w0 wa G. A comparable degradation is observed for the hyperbolic tangent models, from
+0.2993 ± 0.0038 in ΛT to 0.334 ± 0.020 in w0 wa T.
+Figure 4 also indicates the maximum likelihood points
+of the w0 wa G and w0 wa T chains. The w0 wa T best-fit
+solution favors a relatively high value of τreio , driven in
+part by the informative prior used in [5]. In contrast, the
+w0 wa G best-fit solution prefers a lower value of τreio that
+is consistent with analysis including large-scale CMB polarization.
+
+−4
+
+−1.0
+
+−0.5
+
+0.0
+
+w0
+Figure 5
+Constraints in the w0 − wa plane from the joint analysis of epoch of reionization observations, low-ℓ CMB TT, high-ℓ
+CMB, CMB lensing, and BAO using a Gompertzian reionization
+model. The contours denote the 68% and 95% confidence levels,
+while the orange pentagon marks the maximum-likelihood point
+of the MCMC posterior.
+
+Figure 5 shows that a joint analysis combining low-ℓ
+CMB TT, high-ℓ CMB TTTEEE, CMB lensing, BAO,
+QSO DW, and dark pixel xH i constraints, together with
+a physically motivated reionization model, still yields a
+preference for w0 wa CDM with ΛCDM excluded at ⪆ 2σ.
+Moreover, the maximum likelihood point is located decisively away from the ΛCDM point.
+Specifically, we obtain the following 68% CL constraints on the dynamical dark energy parameters
+w0 = −0.42 ± 0.25 ,
+
+(4)
+
+wa = −1.74 ± 0.77 ,
+
+(5)
+
+while the corresponding 95% CL upper bound on the
+∑
+sum of the neutrino masses is mν < 0.219 eV. The
+posterior peaks at approximately 0.1 eV, making it
+compatible with both the normal and inverted neutrino mass hierarchies and in excellent agreement with
+neutrino oscillation experiments [53]. We note that
+the inclusion of large-angular polarization in the Gompertzian framework further shifts the optical depth to
+smaller values (τreio ≈ 0.058) and further strengthens the
+w0 wa CDM−ΛCDM tension to > 2σ level [18].
+We find ∆χ2 ≡ χ2w0 wa G −χ2ΛG = −4.6, indicating a preference for the dynamical dark energy scenario. However,
+the improvement in the fit is modest given the additional
+complexity of the model due to the increased number of
+parameters introduced in the w0 wa G model.
+
+Montero-Camacho, et al.
+
+Sci. China-Phys. Mech. Astron.
+
+5 Conclusions
+We present a joint analysis of CMB, BAO, and reionization observations excluding large-scale CMB polarization data. Our analysis adopts a Gompertzian reionization model [27], a physically motivated framework calibrated against reionization simulations and designed to
+jointly fit CMB and reionization observations [18].
+We find that including quasar damping wing and dark
+pixel constraints on xH i yields larger values of τreio than
+those reported in [8, 9], which reconstructed xH i (z) directly from a heterogeneous compilation of EoR observations. Nevertheless, in our analysis the optical
+depth decreases when extending ΛCDM to w0 wa CDM,
+with ∆τreio = −0.010. Interestingly, this trend is also
+present in other works. For instance, Ref. [5] results
+yield ∆τreio = −0.003, while Ref. [8] likewise found a decrease in τreio when moving from ΛCDM to w0 wa CDM,
+although the shift was small (∆τreio = −0.0006) for their
+combination of BAO, BBN, and a broad compilation of
+xH i measurements.
+Our ΛCDM analysis excludes high values of the optical depth to reionization (τreio ≈ 0.09) at more than
+1σ. Moreover, we found that the dynamical dark energy
+model provides a better fit to the data.
+Notably, our w0 wa CDM analysis yields a value of τreio
+that is consistent with analyses including large-scale
+CMB polarization data (see Figure 2), while simultaneously providing an excellent match to multiple independent measurements of the reionization history that
+were not included in the likelihood computation (see
+Figure 3). Despite excluding large-scale CMB polarization data, incorporating quasar damping wing and dark
+pixel xH i constraints together with a physically motivated reionization model still leaves a ⪆ 2σ preference
+for w0 wa CDM over ΛCDM (see Figure 5). Finally, although the increase in τreio is insuﬀicient to substantially
+alleviate the dark energy tension, it is large enough to
+resolve the apparent preference for a negative sum of
+neutrino masses.
+We conclude that, even if an undiscovered systematic
+were present in large-scale CMB polarization spectra, it
+would not by itself restore consistency with ΛCDM. Reconciling ΛCDM with the data would also require multiple independent EoR observations to be affected by
+previously unidentified systematics in a mutually consistent manner. Nevertheless, relaxing some of the physical assumptions underlying ΛCDM could help alleviate
+the remaining tension within our framework. For instance, departing from the cold dark matter paradigm
+introduces additional freedom to modify the energy in-
+
+?? (2026)
+
+Vol. ??
+
+No. ??
+
+000000-8
+
+jected into the intergalactic medium during cosmic dawn
+and the early stages of reionization. In particular, dark
+matter annihilation, dark matter decay, and primordial
+black holes can inject energy into the IGM, partially ionizing neutral hydrogen before the onset of astrophysical
+reionization [54-58], hence modifying the early evolution
+of xH i (z). Such scenarios are naturally compatible with
+the Gompertzian framework and will be explored in future work.
+The authors thank Noah Sailer for comments.
+PMC acknowledges the support from the Basic and Frontier Research Project of PCL (grant No. 2025QYB012), and the Major
+Key Project of PCL. YM acknowledges the support from the National SKA Program of China (grant No. 2020SKA0110401). The
+authors acknowledge the Tsinghua Astrophysics High-Performance
+Computing platform at Tsinghua University and PCL’s Cloud
+Brain for providing computational and data storage resources that
+have contributed to the research results reported within this paper.
+Conflict of interest
+flict of interest.
+
+The authors declare that they have no con-
+
+1 DESI Collaboration, B. Abareshi et al., AJ164, 207 (2022),
+arXiv: 2205.10939.
+2 DESI Collaboration, M. Abdul Karim et al., Phys. Rev. D112,
+083515 (2025), arXiv: 2503.14738.
+3 D. Forero-Sánchez et al., arXiv e-prints arXiv:2602.18761
+(2026), arXiv: 2602.18761.
+4 D. Forero-Sánchez et al., arXiv e-prints arXiv:2606.23936
+(2026), arXiv: 2606.23936.
+5 N. Sailer, G. S. Farren, S. Ferraro, and M. White,
+Phys. Rev. Lett.136, 081002 (2026), arXiv: 2504.16932.
+6 T. Jhaveri, T. Karwal, and W. Hu, Phys. Rev. D112, 043541
+(2025), arXiv: 2504.21813.
+7 I. J. Allali, L. Li, P. Singh, and J. Fan, Phys. Rev. D113,
+083515 (2026), arXiv: 2509.09678.
+8 W. Elbers, arXiv e-prints arXiv:2508.21069 (2025), arXiv:
+2508.21069.
+9 Y. Kageura, M. Ouchi, F. Naokawa et al., arXiv e-prints
+arXiv:2601.09644 (2026), arXiv: 2601.09644.
+10 X. T. Tang, D. Brout, T. Karwal, C. Chang, V. Miranda, and
+M. Vincenzi, ApJ983, L27 (2025), arXiv: 2412.04430.
+11 I. J. Allali, P. Singh, J. Fan, and L. Li, J. Cosmology Astropart. Phys.2025, 082 (2025), arXiv: 2503.05691.
+12 Planck Collaboration, N. Aghanim et al., A&A641, A5
+(2020), arXiv: 1907.12875.
+13 L. Pagano, J.-M. Delouis, S. Mottet, J.-L. Puget, and L. Vibert, A&A635, A99 (2020), arXiv: 1908.09856.
+14 The Atacama Cosmology Telescope Collaboration, T. Louis
+et al., J. Cosmology Astropart. Phys.2025, 062 (2025), arXiv:
+2503.14452.
+15 S. Roy Choudhury and T. Okumura, ApJ976, L11 (2024),
+arXiv: 2409.13022.
+16 S. Roy Choudhury, ApJ986, L31 (2025), arXiv: 2504.15340.
+17 S. Roy Choudhury, T. Okumura, and K. Umetsu, ApJ994,
+L26 (2025), arXiv: 2509.26144.
+18 P. Montero-Camacho, Y. Li, M. Barquero-Hernández, P. Renard, Y. Wang, and X.-D. Li, arXiv e-prints arXiv:2604.13423
+(2026), arXiv: 2604.13423.
+19 T. Jhaveri, W. Hu, and V. Miranda, arXiv e-prints
+arXiv:2606.20795 (2026), arXiv: 2606.20795.
+
+Montero-Camacho, et al.
+
+Sci. China-Phys. Mech. Astron.
+
+20 U. Upadhyay, Y. Tiwari, and T. Souradeep, J. Cosmology
+Astropart. Phys.2026, 019 (2026), arXiv: 2602.16659.
+21 Y. Aggarwal, C. Cain, G. Lopez, H. Trac, A. D’Aloisio,
+P. Tanedo, and J. C. Tan, arXiv e-prints arXiv:2606.19459
+(2026), arXiv: 2606.19459.
+22 W. Elbers et al., Phys. Rev. D112, 083513 (2025), arXiv:
+2503.14744.
+23 D. Green and J. Meyers, Phys. Rev. D111, 083507 (2025),
+arXiv: 2407.07878.
+24 J.-M. Delouis, L. Pagano, S. Mottet, J.-L. Puget, and L. Vibert, A&A629, A38 (2019), arXiv: 1901.11386.
+25 Planck Collaboration, N. Aghanim et al., A&A641, A1
+(2020), arXiv: 1807.06205.
+26 M. Lopez-Radcenco, J.-M. Delouis, and L. Vibert, A&A651,
+A65 (2021), arXiv: 2012.09702.
+27 P. Montero-Camacho, Y. Li, and M. Cranmer, arXiv e-prints
+arXiv:2405.13680 (2024), arXiv: 2405.13680.
+28 G. Facchinetti, Phys. Rev. D112, 043506 (2025), arXiv:
+2503.11261.
+29 A. Mesinger, S. Furlanetto, and R. Cen, MNRAS411, 955
+(2011), arXiv: 1003.3878.
+30 R. Kannan, E. Garaldi, A. Smith, R. Pakmor, V. Springel,
+M. Vogelsberger, and L. Hernquist, MNRAS511, 4005 (2022),
+arXiv: 2110.00584.
+31 E. Puchwein, J. S. Bolton, L. C. Keating et al., MNRAS519,
+6162 (2023), arXiv: 2207.13098.
+32 O. Zier, A. Smith, X. Shen et al., arXiv e-prints
+arXiv:2605.15310 (2026), arXiv: 2605.15310.
+33 Planck Collaboration, R. Adam et al., A&A596, A108 (2016),
+arXiv: 1605.03507.
+34 M. Douspis, N. Aghanim, S. Ilić, and M. Langer, A&A580,
+L4 (2015), arXiv: 1509.02785.
+35 H. Trac, ApJ858, L11 (2018), arXiv: 1804.00672.
+36 S. Bruton, C. Scarlata, F. Haardt, M. J. Hayes, C. Mason,
+A. M. Morales, and A. Mesinger, ApJ953, 29 (2023), arXiv:
+2305.04949.
+37 G.
+Efstathiou
+and
+S.
+Gratton,
+arXiv
+e-prints
+arXiv:1910.00483 (2019), arXiv: 1910.00483.
+38 J. Carron, M. Mirmelstein, and A. Lewis, J. Cosmology Astropart. Phys.2022, 039 (2022), arXiv: 2206.07773.
+39 F. J. Qu et al., ApJ962, 112 (2024), arXiv: 2304.05202.
+40 B. Greig, A. Mesinger, F. B. Davies, F. Wang, J. Yang, and
+J. F. Hennawi, MNRAS512, 5390 (2022), arXiv: 2112.04091.
+41 B. Greig, A. Mesinger, E. Bañados et al., MNRAS530, 3208
+(2024), arXiv: 2404.12585.
+42 B. Spina, S. E. I. Bosman, F. B. Davies, P. Gaikwad, and
+Y. Zhu, A&A688, L26 (2024), arXiv: 2405.12273.
+43 D. Ďurovčíková, A.-C. Eilers, H. Chen et al., ApJ969, 162
+(2024), arXiv: 2401.10328.
+44 F. B. Davies, S. E. I. Bosman, V. D’Odorico et al., MNRAS545, staf1862 (2026), arXiv: 2510.25829.
+45 J. Torrado and A. Lewis, J. Cosmology Astropart. Phys.2021,
+057 (2021), arXiv: 2005.05290.
+46 D. Blas, J. Lesgourgues, and T. Tram, J. Cosmology Astropart. Phys.2011, 034 (2011), arXiv: 1104.2933.
+47 I. D. McGreer, A. Mesinger, and V. D’Odorico, MNRAS447,
+499 (2015), arXiv: 1411.5375.
+48 C. A. Mason, Z. Chen, D. P. Stark, T. Yi Lu, M. Topping,
+and M. Tang, A&A705, A114 (2026), arXiv: 2501.11702.
+49 H. Umeda, M. Ouchi, Y. Kageura, Y. Harikane, M. Nakane,
+
+50
+
+51
+52
+53
+
+54
+55
+56
+57
+58
+59
+
+?? (2026)
+
+Vol. ??
+
+No. ??
+
+000000-9
+
+T. T. Thai, and K. Nakajima, ApJ997, 86 (2026), arXiv:
+2504.04683.
+A. M. Morales, C. A. Mason, S. Bruton, M. Gronke,
+F. Haardt, and C. Scarlata, ApJ919, 120 (2021), arXiv:
+2101.01205.
+Y. Kageura, M. Ouchi, M. Nakane et al., ApJS278, 33 (2025),
+arXiv: 2501.05834.
+Planck Collaboration, N. Aghanim, Y. Akrami et al.,
+A&A641, A8 (2020), arXiv: 1807.06210.
+I. Esteban, M. C. Gonzalez-Garcia, M. Maltoni, I. MartinezSoler, J. P. Pinheiro, and T. Schwetz, Journal of High Energy
+Physics 2024, 216 (2024), arXiv: 2410.05380.
+C. Xu, W. Qin, and T. R. Slatyer, Phys. Rev. D110, 123529
+(2024), arXiv: 2408.13305.
+J. Cang, Y. Gao, and Y.-Z. Ma, Phys. Rev. D112, 103048
+(2025), arXiv: 2312.17499.
+L. Hou and K. J. Mack, J. Cosmology Astropart. Phys.2025,
+081 (2025), arXiv: 2411.10626.
+E. Koivu, N. Y. Gnedin, and C. M. Hirata, J. Cosmology
+Astropart. Phys.2026, 060 (2026), arXiv: 2510.00246.
+A. P. Klipfel and D. I. Kaiser, Phys. Rev. D113, 063031
+(2026), arXiv: 2601.05935.
+B. Gompertz, Philosophical transactions of the Royal Society
+of London 513–583 (1825).
+
+Appendix A Gompertzian reionization
+Here we provide a brief description of the Gompertzian
+reionization model for the purpose of self-consistency.
+For details and discovery, see [27].
+The Gompertzian curve is an asymmetric sigmoid
+function originally introduced to analyze age-dependent
+mortality [59]. The Gompertzian reionization model easily matches EoR constraints and has the expected slow
+start with a following rapid acceleration past its midpoint.
+The expression for the neutral hydrogen evolution is
+given by
+xH i (ã) = exp {− exp[P5 (ã)]} ,
+P5 (ã) =
+
+5
+∑
+
+cm lnm ã ,
+
+(a1)
+(a2)
+
+m=0
+
+c = {0, 1, 0.1252, 0.03533, 0.002203, 0.000007483} , (a3)
+[ a ]β
+(a4)
+ã(a) =
+,
+α
+where a is the scale factor, α is the power-law pivot,
+and β a rescaling tilt. Furthermore, the 5th-degree polynomial is introduced to account for residuals from the
+Gompertz shape and its coeﬀicients were calibrated using simulations [18].
+
+

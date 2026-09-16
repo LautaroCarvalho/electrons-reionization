@@ -1,0 +1,7 @@
+1) Search through the web in arxiv, nasa ads and astro-ph the most relevant papers about the physics, constraints and main agents of heatin and ionization during the Epoch of Reionization. Prioritize the most recent and most cited papers.
+
+2) Download the selected papers and separate them into two different folders. One folder "Agents" should contain those papers that are mainly focused in indentifying the effect and contribution of different drivers of reionization and heating (photons, protons, electrons, etc) and their sources (HMXRB, quasars, star forming galaxy, POP III star, etc). And the other folder should contain those papers focused on the constrains of the parameters that dfine the epoch of reionization (redshift, temperatura, densities, ionization fraction, etc).
+
+3) Make a .tex file what contains a summary of all the papers divided in two main sections. The first one that states all known information about the epoch of reionization supported by observations. And another section that catalogues all the possible agents of reionization and if their contribution is dominant, significant or neglible. Explictly state the criterias that are usually considered in the literature to calculate the contribution of a population of agent to heating and ionization of the IGM.
+
+4) If you find any other aspect or caveat about reionization that you are unsure if it's worth adding to the summary file. Do not decide on your own.

@@ -1,0 +1,536 @@
+Preprint typeset using LATEX style emulateapj v. 5/2/11
+
+COSMIC REIONIZATION AFTER PLANCK: COULD QUASARS DO IT ALL?
+Piero Madau1 and Francesco Haardt2,3
+
+arXiv:1507.07678v2 [astro-ph.CO] 9 Oct 2015
+
+1 Department of Astronomy & Astrophysics, University of California, 1156 High Street, Santa Cruz, CA 95064, USA
+2 Dipartimento di Scienza e Alta Tecnologia, Università dell’Insubria, via Valleggio 11, 22100 Como, Italy
+3 INFN, Sezione Milano/Bicocca, P.za della Scienza 3, 20126 Milano, Italy
+
+ABSTRACT
+We assess a model of late cosmic reionization in which the ionizing background radiation arises
+entirely from high redshift quasars and other active galactic nuclei (AGNs). The low optical depth
+to Thomson scattering reported by the Planck Collaboration pushes the redshift of instantaneous
+reionization down to z = 8.8+1.7
+−1.4 and greatly reduces the need for significant Lyman-continuum emission at very early times. We show that, if recent claims of a numerous population of faint AGNs at
+z = 4 − 6 are upheld, and the high inferred AGN comoving emissivity at these epochs persists to
+higher, z >
+∼ 10, redshifts, then active galaxies may drive the reionization of hydrogen and helium with
+little contribution from normal star-forming galaxies. We discuss an AGN-dominated scenario that
+satisfies a number of observational constraints: the H I photoionization rate is relatively flat over the
+range 2 < z < 5, hydrogen gets fully reionized by z ≃ 5.7, and the integrated Thomson scattering
+optical depth is τ ≃ 0.056, in agreement with measurements based on the Lyα opacity of the intergalactic medium (IGM) and cosmic microwave background (CMB) polarization. It is a prediction of
+the model that helium gets doubly reionized before redshift 4, the heat input from helium reionization
+dominates the thermal balance of the IGM after hydrogen reionization, and z > 5 AGNs provide a
+significant fraction of the unresolved X-ray background at 2 keV. Singly- and doubly-ionized helium
+contribute about 13% to τ , and the He III volume fraction is already 50% when hydrogen becomes
+fully reionized.
+Subject headings: cosmology: theory — dark ages, reionization, first stars — diffuse radiation —
+intergalactic medium — galaxies: active
+1. INTRODUCTION
+
+The reionization of the all-pervading IGM marks a
+turning point in the history of structure formation in
+the universe. The details of this process reflect the nature of the first astrophysical sources of radiation and
+heating as well as the early thermodynamics of cosmic
+baryons, and continue to be the subject of considerable
+observational and theoretical efforts (for a recent review,
+see Robertson et al. 2010). Studies of resonant absorption in the spectra of distant quasars show that, while
+inhomogeneous hydrogen reionization may still be ongoing at z ∼ 6, it has fully completed by redshift 5 (e.g.,
+Becker et al. 2015; McGreer et al. 2015; Fan et al. 2006).
+It is generally agreed that the IGM is kept ionized by
+the integrated UV emission from active nuclei and starforming galaxies, but there is still no consensus on the
+relative contributions of these sources as a function of
+epoch. The high ionization threshold (4 ryd) and small
+photoionization cross section of He II, the rapid recombination rate of He III, and the fact that most hot stars
+lack 4 ryd emission, all delay the double ionization of
+helium. This is expected to be completed by hard UVemitting quasars and other AGNs around the apparent
+peak of their activity at z ≈ 2.5 (e.g., McQuinn et al.
+2009; Haardt & Madau 2012), later than the reionization of H I and He I. It is the traditional view that, at
+z > 3, as the declining population of optically bright
+quasars makes an increasingly small contribution to the
+1 ryd radiation background (e.g. Shapiro & Giroux 1987),
+massive stars in early galactic halos take over and provide the additional ionizing flux needed (e.g., Madau et
+
+al. 1999; Meiksin 2005; Faucher-Giguère et al. 2009).
+While plausible, this “two-components” picture for
+cosmic reionization is not necessarily correct, and warrants further investigation for validation. In particular,
+star-forming galaxies at z > 5 can keep the Universe substantially ionized only if one extrapolates the steep UV
+luminosity function well below the observed limits and
+assumes a globally-averaged absolute escape fraction of
+Lyman-continuum (LyC) radiation into the early IGM,
+f¯esc , that exceeds 20% (e.g., Bouwens et al. 2012; Finkelstein et al. 2012; Haardt & Madau 2012). Such leakage
+values are higher than typically inferred from observations of luminous galaxies at z ∼ 3 − 4 once contamination by foreground low-redshift interlopers is accounted
+for (Vanzella et al. 2012). Despite significant efforts and
+the examination of hundreds of galaxies, there exists only
+a handful of robust detections as of today (e.g., Siana et
+al. 2015; Mostardi et al. 2015).
+The Planck Collaboration (2015) has reported a new,
+smaller value, τ = 0.066 ± 0.016 of the integrated
+reionization optical depth from low-multipoles polarization, lensing, and high-multipole temperature CMB
+data. This corresponds to a sudden reionization event
+at z = 8.8+1.7
+−1.4 and reduces the need for a large LyC
+background at very early times. Together with the recent claim by Giallongo et al. (2015) (see also Glikman
+et al. 2011) of a significant population of faint AGNs
+at 4 < z < 6.5, these facts have prompted us to reassess a scenario in which quasars and active galaxies
+may actually dominate the cosmic reionization process
+at all epochs, with normal star-forming galaxies making
+only a negligible contribution due to their small leakages.
+
+2
+
+Reionization by AGNs
+
+We explore this intriguing possibility below, assuming a
+(ΩM , ΩΛ , Ωb ) = (0.3, 0.7, 0.045) flat cosmology throughout with H0 = 70 km s−1 Mpc−1 .
+2. QSO COMOVING EMISSIVITY
+
+Figure 1 shows the inferrred quasar/AGN comoving
+emissivity at 1 ryd as a function of redshift. Our modeling is based on a limited number of contemporary,
+optically-selected AGN samples (see also Khaire & Srianand 2015 for a similar compilation). All the surveys
+cited below provide best-fit luminosity function (LF) parameters, which are then used to integrate the LF down
+to the same relative limiting luminosity, Lmin /L⋆ = 0.01.
+Most of these LFs have faint-end slopes > −1.7, which
+makes the corresponding volume emissivities rather insensitive to the value of the adopted limiting luminosity.
+Schulze et al. (2009) combined the Sloan Digital Sky Survey (SDSS) and the Hamburg/ESO survey results into
+a single z = 0 AGN LF covering 4 orders of magnitude
+in luminosity. In the redshift range 0.68 < z < 3.0, the
+g-band LF of Palanque-Delabrouille et al. (2013) combines SDSS-III and Multiple Mirror Telescope quasar
+data with the 2SLAQ sample of Croom et al. (2009).
+The 1 < z < 4 AGN LF by Bongiorno et al. (2007)
+again merges SDSS data at the bright end with a faint
+AGN sample from the VIMOS-VLT Deep Survey. The
+high-redshift quasar LF in the Cosmic Evolution Survey
+(COSMOS) in the bins 3.1 < z < 3.5 and 3.5 < z < 5 has
+been investigated by Masters et al. (2012), who find a decrease in the space density of faint quasars by roughly a
+factor of four from redshift 3 to 4. A significantly higher
+number of faint AGNs at z ∼ 4 is found by Glikman
+et al. (2011) in the NOAO Deep Wide-Field Survey and
+the Deep Lens Survey, and by Giallongo et al. (2015)
+at z = 4 − 6 in the CANDELS GOODS-South field. A
+novel detection criterion is adopted in Giallongo et al.
+(2015), whereby high-redshift galaxies are first selected
+in the NIR H band using photometric redshifts, and become AGN candidates if detected in X-rays by Chandra.
+AGN candidates are found to have X-ray luminosities
+and rest-frame UV/X-ray luminosity ratios that are typical of Seyfert-like and brighter active nuclei. If correct,
+these claims suggest that AGNs may be a more significant contributor to the ionizing background radiation
+than previously estimated.
+We have converted the integrated optical emissivity inferred from these studies, ǫλ (in units of
+erg s−1 Mpc−3 Hz−1 ), into a 1 ryd emissivity, ǫ912 , using a power-law spectral energy distribution, ǫ912 =
+ǫλ (λ/912)−αuv f¯esc , with αuv = 0.61 following Lusso et
+al. (2015). We assume an escape fraction of hydrogenionizing radiation f¯esc = 1. To assess whether a faint
+AGN population can dominate the cosmic reionization
+process under reasonable physical assumptions, we adopt
+in the following an AGN comoving emissivity of the form
+log ǫ912 (z) = 25.15e−0.0026z − 1.5e−1.3z ,
+
+(1)
+
+for z < zQSO , and zero otherwise. Despite the significant
+scatter in the data points, this function fits reasonably
+well the z = 0, z < 2.5, and 4 < z < 5 emissivities from
+Schulze et al. (2009), Bongiorno et al. (2007), and Giallongo et al. (2015), respectively. Note that this emissivity
+does not drop at high redshift like, e.g., the LyC emissiv-
+
+ity of luminous quasars inferred by Hopkins et al. (2007)
+(see Fig. 1). It is also higher compared to previous estimates at low redshift, a fact that could contribute to
+solve the “photon underproduction crisis” of Kollmeier
+et al. (2014) (see also Khaire & Srianand 2015).
+
+Fig. 1.— The AGN comoving ionizing emissivity inferred from
+Schulze et al. (2009) (cyan pentagon), Palanque-Delabrouille et al.
+(2013) (orange triangles), Bongiorno et al. (2007) (magenta circles),
+Masters et al. (2012) (red pentagons), Glikman et al. (2011) (blue
+square), and Giallongo et al. (2015) (green squares). The solid
+curve shows the functional form given in Equation (1). The LyC
+AGN emissivity of Hopkins et al. (2007) is shown for comparison
+(dotted line). See text for details.
+
+3. REIONIZATION HISTORY
+
+Reionization is achieved when ionizing sources have radiated at least one LyC photon per atom, and the rate of
+LyC photon production is sufficient to balance radiative
+recombinations. Specifically, the time-dependent ionization state of the IGM can be modeled semi-analytically
+by integrating the “reionization equations” (Madau et al.
+1999; Shapiro & Giroux 1987)
+dQHII
+ṅion,H
+QHII
+=
+−
+dt
+hnH i
+trec,H
+ṅion,He
+QHeIII
+dQHeIII
+=
+−
+dt
+hnHe i
+trec,He
+
+(2)
+(3)
+
+for the volume fractions Q of ionized hydrogen and
+doubly-ionized helium. Here, the angle brackets denote
+a volume average, gas densities are expressed in comoving units, trecR is a characteristic recombination timescale,
+and ṅion = dν(ǫν /hν) is the injection rate density of
+ionizing radiation, i.e. photons between 1 and 4 ryd in
+the case of H I (ṅion,H ) and above 4 ryd for He II (ṅion,He ).
+We do not explicitly follow the transition from neutral
+to singly-ionized helium, as this occurs nearly simultaneously to and cannot be readily decoupled from the reionization of hydrogen.
+
+Madau and Haardt
+The ODEs above assume that the mean free path of
+UV radiation is always much smaller than the horizon
+and that the absorption of photons above 4 ryd is dominated by He II. Because only a negligible amount of
+recombinations occurs in mostly neutral gas, these equations do not explicitly account for the presence of optically thick absorbers that reduce the mean free path
+of LyC radiation and may further delay reionization
+(Bolton et al. 2009). They allow, mathematically, for
+values of Q that are > 1, which is physically impossible.
+Following the results of cosmological hydrodynamical
+simulations by Shull et al. (2012) (see also Finlator et al.
+2012), we define the characteristic hydrogen recombination timescale as
+trec,H = [(1 + χ)hnH i(1 + z)3 hαB (T )i CRR ]−1 ,
+
+(4)
+
+where αB is the case-B radiative recombination rate coefficient, χ ≡ Y /[4(1 − Y )] = 0.083 allows for the presence
+of photoelectrons from He II (here Y is the primordial
+helium mass fraction), and CRR = 2.9[(1 + z)/6]−1.1 is
+the clumping factor of ionized hydrogen that accounts for
+both density and temperature effects on the average recombination rate. Similarly, the recombination timescale
+of doubly ionized helium is
+trec,He = [(1+2χ)hnH i(1+z)3 ZhαB (T /Z 2 )i CRR ]−1 , (5)
+where Z = 2 is the ionic charge and we have assumed that
+H II and He III have similar clumping factors. We have
+numerically integrated the reionization equations from
+zQSO = 12 onwards, extrapolating the AGN emissivity in
+Equation (1) to zQSO , and assuming an EUV power-law
+spectrum ∝ ν −αeuv with αeuv = 1.7 (Lusso et al. 2015)
+and a gas temperature of T = 20, 000 K. The integrated
+electron scattering optical depth can be calculated as
+Z z
+(1 + z ′ )2 dz ′
+[QHII (1 + χ) + χQHeIII],
+τ (z) = cσT hnH i
+H(z ′ )
+0
+(6)
+where c is the speed of light, σT the Thomson cross section, H(z) is the Hubble parameter, and we assumed
+QHeII = QHII − QHeIII.
+Figure 2 shows the resulting ionization history, quantified by QHII , QHeIII , and τ (z). The shading shows
+the effects of changing clumping factor [CRR = 9.25 −
+7.21 log(1 + z), Finlator et al. 2012], IGM temperature
+(T = 15, 000 K), and EUV spectral slope (αeuv = 1.57,
+Telfer et al. 2002; Stevans et al. 2014). With our default parameters, hydrogen reionization is completed by
+z ≃ 5.7, helium is doubly ionized by z ≃ 4.2, and the
+Thomson scattering optical depth is τ ≃ 0.056. The last
+is consistent with the value reported by the Planck collaboration at the 1σ level. The first agrees with an updated analysis by Becker et al. (2015) of the line-of-sight
+variance in the intergalactic Lyα opacity at 4 < z < 6,
+showing that the data near z = 5.6 − 5.8 require fluctuations in the volume-weighted hydrogen neutral fraction that are higher than expected from density variations alone. These fluctuations are most likely driven by
+large-scale variations in the mean free path, a signature
+of the trailing edge of the cosmic reionization epoch. As
+shown in Figure 2, our reionization history is also consistent with the dark pixel fraction observed in the Lyα
+and Lyβ forest of z > 6 quasars, which provides a model-
+
+3
+
+independent upper limit of 1 − QHII < 0.11 at z = 5.9
+(McGreer et al. 2015).
+The redshift-dependent fraction of color-selected
+galaxies revealing Lyα emission has become a valuable
+constraint on the evolving neutrality of the early IGM.
+We notice here that, in our late reionization model, the
+hydrogen neutral fraction evolves quite rapidly from redshift 6 (1 − QHII = 0.15) to redshift 8 (1 − QHII = 0.65).
+This will cause a fast decline of the mean Lyα line transmissivity of the IGM and may explain the swift drop
+observed in the space density of Lyα emitting galaxies
+at z > 6 (e.g., Choudhury et al. 2015; Schenker et al.
+2014).
+While a late hydrogen reionization epoch is not a
+unique feature of an AGN-dominated scenario, the early
+reionization of He II is. Traditionally, the peak in luminous quasar activity observed at z ≈ 2.5 has been expected to coincide with the end of helium reionization.
+And while observations of patchy absorption in the He II
+Lyα forest at these epochs have been interpreted as signaling the tail end of He II reionization at z ≤ 2.7 (e.g.,
+Shull et al. 2010, and references therein), the large fluctuations in the background radiation field above 4 ryd
+predicted from the rarity of bright quasars and the relatively short attenuation lengths of EUV photons make
+the interpretation of the He II data still controversial. Indeed, rather than complete Gunn-Peterson absorption at
+higher redshifts, recent observations have revelead hightransmission regions out to z = 3.5 (Worseck et al. 2015),
+in conflict with numerical models of He II reionization
+driven by luminous quasars (McQuinn et al. 2009; Compostella et al. 2013). According to Worseck et al. (2015),
+the observed mild evolution with redshift of He II absorption demands that the bulk of intergalactic helium
+was already doubly ionized at z > 3.5 by a population
+of early EUV sources. The high AGN comoving emissivity present at z > 4 in our model may accomplish
+just that. We find that singly- and doubly-ionized helium contribute about 13% to τ , and the He III fraction
+is already 50% when hydrogen becomes fully reionized at
+redshift 5.7.
+4. DISCUSSION
+
+Only the most luminous distant quasars can be detected in surveys such as the SDSS, leaving the contribution of faint AGNs to the early ionizing background
+highly uncertain. Recent multiwavelength deep surveys
+have suggested the presence of a hitherto unknown population of faint AGNs (Fiore et al. 2012; Giallongo et
+al. 2015) and have prompted a reexamination of the role
+played by AGNs in the reionization of the IGM. We have
+expanded on previous studies and assessed a model in
+which the UV radiation responsible for the reionization of
+hydrogen and helium in the universe arises entirely from
+quasars and active galaxies. We have assumed here that
+normal star-forming galaxies will make only a negligible
+contribution to the AGN LyC emissivity given in Equation (1), which is true provided their globally-averaged
+escape fraction does not exceed a few percent or so (e.g.,
+Madau & Dickinson 2014).
+Compared to the standard picture widely discussed in
+the literature, the AGN-dominated scenario examined in
+this work completes hydrogen reionization late (z <
+∼ 6),
+double helium reionization early (z >
+∼ 4), and produces
+
+4
+
+Reionization by AGNs
+
+Fig. 2.— Reionization history for our AGN-dominated scenario. Left panel: evolving H II (blue) and He III (magenta) ionized volume
+fractions for our AGN-dominated scenario. Hydrogen in the IGM is fully reionized when QHII = 1, while helium is doubly reionized when
+QHeIII = 1. The solid lines correspond to our default model parameters, while the shading shows the effects of changing clumping factor,
+IGM temperature, and EUV spectral slope (see text for details). Note the “non-standard” early reionization of helium, QHeIII = 1 at
+z>
+∼ 4. The data point at z = 7 and the upper limit at z = 8 show the constraint on the neutral hydrogen fraction of the IGM inferred from
+the redshift-dependent prevalence of Lyα emission in the UV spectra of z = 6 − 8 galaxies (Schenker et al. 2014). The 1σ lower limit at
+z = 5.9 shows the bound on the neutral hydrogen fraction of the IGM inferred from the dark pixel statistics (McGreer et al. 2015). Right
+panel: Thomson optical depth to electron scattering, τ , integrated over redshift from the present day (green curve). The Planck constraint
+τ = 0.066 ± 0.016 is shown as the gray area.
+
+Fig. 3.— The hydrogen photoionization rate, ΓHI , from z = 2
+to z = 5. The green solid line corresponds to our default AGNdominated model, while the shading shows the effects of changing
+the IGM mean free path to ionizing radiation by ±25 percent.
+Red squares: empirical measurements from the Lyα forest effective
+opacity by Becker & Bolton (2013). Blue pentagon: same using the
+quasar proximity effect (Calverley et al. 2011).
+
+a low electron scattering optical depth that is consistent
+
+with the Planck value at the 1σ level. It may provide
+an explanation to some otherwise puzzling recent findings, from the rapid decline of the space density of Lyα
+emitting galaxies observed at z > 6, to an IGM whose
+temperature is found to increase from redshift 5 to 2
+and where He II appears to be predominantly ionized at
+z ≃ 3.5. It is, of course, a model that is also plagued by a
+number of uncertanties regarding the properties of faint
+AGNs (their space densities and EUV spectra at high-z),
+and of the early IGM (its temperature and clumpiness).
+As already pointed out by Giallongo et al. (2015), a critical assumption is the high escape fraction of ionizing
+radiation needed for the global AGN population to dominate reionization. While no discernible continuum edge
+at 912 Å is seen in a composite FUV spectrum of 159
+0 < z < 1.5 quasars and active galaxies obtained with
+the Cosmic Origins Spectrograph (COS) (Stevans et al.
+2014), it is uncler whether escape fractions of order unity
+are also typical of fainter, higher redshift AGNs. The
+model is also somewhat sensitive to zQSO , the “formation epoch” of the earliest AGNs. Here, we have assumed
+zQSO = 12 and a comoving AGN emissivity that is only a
+factor of 3 smaller at zQSO than at redshift 4. In a model
+with zQSO = 9, for example, hydrogen reionization would
+only be completed by z ≃ 5.4.
+As a corroboration of the slowly evolving LyC emissivity adopted in this work, we have run a modified version of our radiative transfer code CUBA (Haardt &
+Madau 2012) to estimate the intensity and spectrum of
+the filtered ionizing background – specifically the hydrogen photoionization rate ΓHI – predicted by our AGN-
+
+Madau and Haardt
+dominated scenario,
+ΓHI ≡
+
+Z ∞
+νHI
+
+dν
+
+4πJν
+σHI (ν).
+hν
+
+(7)
+
+Here, Jν is the angle-averaged monochromatic intensity,
+h is the Planck constant, and σHI and νHI are the hydrogen photoionization cross section and ionizing threshold
+frequency. We have computed the background ionizing
+intensity J using the emissivity in Equation (1), a EUV
+spectrum with αeuv = 1.7, and a new a piecewise parameterization of the distribution in redshift and column
+density of intergalactic absorbers that fits the measurements of the mean free path of 1 ryd photons by Worseck
+et al. (2014). The results, shown in Figure 3, are in formal agreement with empirical determinations of ΓHI in
+the interval 2 < z < 5 based on the Lyα opacity of the
+IGM (Becker & Bolton 2013). Note that, in the traditional view, the slowly evolving emissivity needed to
+reproduce the Lyα opacity data can only be achieved
+by carefully tuning the escape fraction from star-forming
+galaxies to increase rapidly with lookback time, so as to
+compensate for the decline in the star formation activity towards early epochs (e.g., Haardt & Madau 2012;
+Kuhlen & Faucher-Giguère 2012).
+
+Fig. 4.— Photoheating rates for H I (blue curve), He I (green
+curve), and He II (red curve) in our AGN-dominated model, from
+the present epoch to z = 5, i.e. after the reionization of hydrogen.
+All photoheating rates are expressed per hydrogen atom in units
+of eV s−1 , and are computed for gas at the mean cosmic density.
+
+In our AGN-dominated scenario, the heat input from
+helium reionization will start dominating the thermal
+balance of the IGM earlier than in the standard picture. In Figure 4 we plot the photoheating rates after
+the reionization of hydrogen for gas at the mean density,
+
+5
+
+Z ∞
+Jν σi (hν − hνi )dν/(hν),
+(8)
+Hi = hni /nH i
+for species i = H I, He νIi, or He II. Here, σi and νi are the
+photoionization cross section and threshold frequency for
+the respective species, and ni is their abundance (computed integrating the non-equilibrium rate equations for
+gas at the mean density). The formula above should
+provide the correct mean heating rate of intergalactic
+gas once the background intensity Jν is properly reprocessed while propagating through the IGM (Puchwein et
+al. 2015). He II photoheating exceeds the hydrogen term
+by nearly a factor of three. Measurements of the IGM
+temperature evolution from redshift 5 to 2 derived from
+the Lyα forest have been known to be inconsistent with
+the mononotic decrease with redshift expected after the
+completion of hydrogen reionization (Becker et al. 2011).
+This discrepancy may be solved by the additional heating provided by an earlier and more extended period of
+He II reionization.
+The population of faint, high redshift AGNs invoked
+here should leave an imprint on the cosmic X-ray background (XRB). Moretti et al. (2012) derived a value of
+−27
+J2 keV ≃ 2.9+1.6
+erg cm−2 s−1 Hz−1 sr−1 to the
+−1.3 × 10
+2 keV unresolved XRB. The expected contribution at 2
+keV from AGNs above redshift zx can be estimated as
+(Haardt & Salvaterra 2015)
+Z ∞
+c
+dz
+J2 keV =
+ǫ2 keV (z)(1 + z)−αx , (9)
+4π zx (1 + z)H(z)
+where the specific comoving emissivity at 2 keV is related
+to the LyC emissivity by
+
+α 
+−αox
+2500 uv 2 keV
+ǫ2 keV (z) = ǫ912 (z) × RII
+.
+912
+2500 Å
+(10)
+Here, αox is the optical-to-X-ray spectral index needed
+to join the emissivity at 2500 Å with that at 2 keV,
+and RII is a correction factor that accounts for the possible contribution of UV obscured (“Type II”) AGNs
+at z ≥ zx to the observed XRB. Using αuv = 0.61
+as before, αox = 1.37 (Lusso et al. 2010), αx = 0.9,
+zx = 5, and RII = 2 (Merloni et al. 2014) we obtain
+J2 keV = 1.64 × 10−27 erg cm−2 s−1 Hz−1 sr−1 , i.e. a contribution of nearly 60% to the unresolved XRB. We find
+that z > 5 active galaxies can reionize the universe without overproducing the unresolved XRB provided their
+properties (i.e. fraction of obscured objects, optical-toX-ray spectral indices) are similar to those of their lower
+redshift counterparts (cf. Haardt & Salvaterra 2015; Dijkstra et al. 2004).
+Finally, we conclude by pointing out that, in order to
+promote further testing of this model against new and
+old observations, we will make the results of our radiative transfer calculations of an AGN-dominated UV
+background freely available for public use at http://
+www.ucolick.org/~pmadau/CUBA.
+We thank E. Giallongo. Z. Haiman, E. Lusso, and
+A. Meiksin for helpful discussions on various aspects
+of this paper. P.M. acknowledges support by the NSF
+through grant AST-1229745 and NASA through grant
+NNX12AF87G.
+
+6
+
+Reionization by AGNs
+REFERENCES
+
+Becker, G. D., & Bolton, J. S. 2013, MNRAS, 436, 1023
+Becker, G. D., Bolton, J. S., Haehnelt, M. G., & Sargent, W. L.
+W. 2011, MNRAS, 410, 1096
+Becker, G. D., Bolton, J. S., Madau, P., et al. 2015, MNRAS, 447,
+3402
+Bolton, J. S., Oh, S. P., & Furlanetto, S. R. 2009, MNRAS, 395,
+736
+Bongiorno, A., Zamorani, G., Gavignaud, I., et al. 2007, A&A
+472, 443
+Bouwens, R. J., Illingworth, G. D., Oesch, P. A., et al. 2012,
+ApJL, 752, L5
+Calverley, A. P., Becker, G. D., Haehnelt, M. G., & Bolton, J. S.
+2011, MNRAS, 412, 2543
+Choudhury, T. R., Puchwein, E., Haehnelt, M. G., & Bolton, J. S.
+2015, MNRAS, 452, 261
+Compostella, M., Cantalupo, S., & Porciani, C. 2013, MNRAS,
+435, 3169
+Croom, S. M., Richards, G. T., Shanks, T., et al. 2009, MNRAS,
+399, 1755
+Dijkstra, M., Haiman, Z., & Loeb, A. 2004, 613, 646
+Fan, X., Strauss, M. A., Becker, R. H., et al. 2006, AJ, 132, 117
+Faucher-Giguère, C.-A., Lidz, A., Zaldarriaga, M., & Hernquist,
+L. 2009, ApJ, 703, 1416
+Finkelstein, S. L., Papovich, C., Ryan, R. E., et al. 2012, ApJ,
+758, 93
+Finlator, K., Oh, S. P., Özel, F., & Davé, R. 2012, MNRAS, 427,
+2464
+Fiore, F., Puccetti, S., Grazian, A., et al. 2012, A&A, 537, A16
+Giallongo, E., Grazian, A., Fiore, F., et al. 2015, A&A 578, A83
+Glikman, E., Djorgovski, S. G., Stern, D. et al. 2011, ApJL, 728,
+L26
+Haardt, F., & Madau, P. 2012, ApJ, 746, 125
+Haardt, F., & Salvaterra, R. 2015, A&A, 575, L16
+Hopkins, P. F., Richards, G. T., & Hernquist, L. 2007, ApJ, 654,
+731
+Khaire, V., & Srianand, R. 2015, MNRAS, 451, L30
+Kollmeier, J. A., Weinberg, D. H., Oppenheimer, B. D., et al.
+2014, ApJL, 789, L32
+Kuhlen, M., & Faucher-Giguère, C.-A. 2012, MNRAS, 423, 862
+
+Lusso, E., Comastri, A., Vignali, C., et al. 2010, A&A, 512, A34
+Lusso, E., Worseck, G., Hennawi, J. F., et al. 2015, MNRAS, 449,
+4204
+Madau, P., & Dickinson, M. 2014, ARA&A, 52, 415
+Madau, P., Haardt, F., & Rees, M. J. 1999, ApJ, 514, 648
+Masters, D., Capak, P., Salvato, M., et al. 2012, 755, 169
+McGreer, I. D., Mesinger, A., & D’Odorico, V. 2015, MNRAS,
+447, 499
+McQuinn, M., Lidz, A., Zaldarriaga, M., et al. 2009, ApJ, 694, 842
+Meiksin, A. 2005, MNRAS, 356, 596
+Merloni, A., Bongiorno, A., Brusa, M., et al. 2014, MNRAS, 437,
+3550
+Moretti, A., Vattakunnel, S., Tozzi, P., et al. 2012, A&A, 548, A87
+Mostardi, R. E., Shapley, A. E., Steidel, C. C., et al. 2015, ApJ,
+810, 107
+Palanque-Delabrouille, N., Magneville, Ch., Yèche, Ch., et al.
+2013, A&A, 551, A29
+Planck Collaboration 2015, submitted to A&A (arXiv:1502.01589)
+Puchwein, E., Bolton, J. S., Haehnelt, M. G., et al. 2015,
+MNRAS, 450, 4081
+Robertson, B. E., Ellis, R. S., Dunlop, J. S., et al. 2010, Nature
+468, 49
+Schenker, M. A., Ellis, R. S., Konidaris, N. P., & Stark, D. P.
+2014, ApJ, 795, 20
+Schulze, A., Wisotzki, L., & Husemann, B. 2009, A&A 507, 781
+Shapiro, P. R., & Giroux, M. L. 1987, ApJL, 321, L107
+Shull, J. M., France, K., Danforth, C. W., et al. 2010, ApJ, 722,
+1312
+Shull, J. M., Smith, B. D., & Danforth, C. W. 2012, ApJ, 759, 23
+Siana, B., Shapley, A. E., Kulas, K. R., et al. 2015, ApJ, 804, 17
+Stevans, M. L., Shull, J. M., Danforth, C. W., & Tilton, E. M.
+2014, ApJ, 794, 75
+Telfer, R. C., Zheng, W., Kriss, G. A., & Davidsen, A. F. 2002,
+ApJ, 565, 773
+Vanzella, E., Guo, Y., Giavalisco, M., et al. 2012, ApJ, 751, 70
+Worseck, G., Prochaska, J. X., Hennawi, J. F., & McQuinn, M.
+2015, ApJ, submitted (arXiv:1405.7405)
+Worseck, G., Prochaska, J. X., O’Meara, John M., et al. 2014,
+MNRAS, 445, 1745
+
+

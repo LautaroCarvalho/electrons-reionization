@@ -329,3 +329,25 @@ TSWLatexianTemp*
 # option is specified. Footnotes are the stored in a file with suffix Notes.bib.
 # Uncomment the next line to have this generated file ignored.
 #*Notes.bib
+
+# Python runtime caches
+__pycache__/
+*.py[cod]
+.ipynb_checkpoints/
+
+# Preserve imported bibliography outputs and historical source backups
+!approaches/**/*.bbl
+!approaches/**/*.bak
+!approaches/**/*.backup
+!approaches/**/*.sav
+
+# Preserve research run logs (not LaTeX build logs)
+!/approaches/Paper_1/State of the art - Reionization/ionizing_emissivity/emis_verify.log
+!/approaches/Paper_1/Notebooks/redo/stage9_verify_budget.log
+!/approaches/Paper_1/Notebooks/redo/stage9_budget.log
+!/approaches/Paper_1/Notebooks/redo/stage8_verify.log
+!/approaches/Paper_1/Notebooks/redo/stage8_converge.log
+!/approaches/Paper_1/Notebooks/redo/run_stage2_transport.log
+!/approaches/Paper_1/Notebooks/redo/run_stage6_range.log
+!/approaches/Paper_1/Notebooks/redo/run_stage7_range_ionized.log
+!/approaches/Paper_1/Notebooks/redo/run_stage2.log

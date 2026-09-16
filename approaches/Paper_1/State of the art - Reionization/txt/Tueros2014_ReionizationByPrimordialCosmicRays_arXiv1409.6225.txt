@@ -1,0 +1,607 @@
+Astronomy & Astrophysics manuscript no. Tueros-DelValle-Romero-for-Arxiv
+August 19, 2018
+
+c ESO 2018
+
+Letter to the Editor
+
+Cosmic reionization by primordial cosmic rays
+M. Tueros1 , M.V. del Valle1 , and G.E. Romero1,2
+1
+
+arXiv:1409.6225v1 [astro-ph.CO] 22 Sep 2014
+
+Instituto Argentino de Radioastronomı́a, C.C.5, (1894) Villa Elisa, Buenos Aires, Argentina
+e-mail: mjtueros@iar-conicet.gov.ar
+2
+Facultad de Ciencias Astronómicas y Geofı́sicas, Universidad Nacional de La Plata, Paseo del Bosque, 1900 La Plata, Argentina
+
+Received; accepted
+ABSTRACT
+
+Context. After the so-called cosmic recombination, the expanding universe entered into a period of darkness since most of the matter
+was in a neutral state. About a billion years later, however, the intergalactic space was once again ionized. The process, known as the
+cosmic reionization, required the operation of mechanisms that are not well understood. Among other ionizing sources, Population
+III stars, mini-quasars, and X-ray emitting microquasars have been invoked.
+Aims. We propose that primordial cosmic rays, accelerated at the termination points of the jets of the first microquasars, may have
+contributed to the reionization of the intergalactic space as well.
+Methods. We quantify the ionization power of cosmic rays (electrons and protons) in the primordial intergalactic medium. This power
+is calculated using extensive particle cascade simulations.
+Results. We establish that, depending on the fraction of electrons to protons accelerated in the microquasar jets, cosmic rays should
+have contributed to the reionization of the primordial intergalactic medium as much as X-rays from microquasar accretion disks. If
+the primordial magnetic field was of the order of 10−17 G, as some models suggest, cosmic rays had an important role in ionizing the
+neutral material far beyond the birth places of the first stars.
+Key words. Cosmic rays – dark ages, reionization, first stars – intergalactic medium – cosmology: miscellaneous.
+
+1. Introduction
+The standard Big Bang model of the expanding universe requires
+that when the temperature of the primordial plasma dropped below the combination temperature, around 380000 yr after the
+beginning of the current expansion phase, the combination of
+protons and electrons formed neutral gas, allowing the radiation to decouple with matter. The universe then entered in to a
+“dark age”, which lasted up to about a billion years (e.g., Ellis,
+Maartens & MacCallum 2012). How the universe was reionized
+is a major topic in current cosmology. The influence of cosmic
+rays (CRs) from the first galaxies on the reionization process
+has been studied by Biermann & Nath (1993), who showed that
+models with strong evolution and early (z ∼ 10) galaxy formation could account for the reionization of the universe. Later
+measurements of the Wilkinson Microwave Anisotropy Probe
+(WMAP) satellite (Kogut et al. 2003) hinted that the reionization could have occurred as early as 11 < z < 30, requiring
+much older ionization sources.
+The decay of exotic primordial particles is sometimes invoked as a possible ionization source (i.e., Belikov & Hooper
+2009, Natarajan & Schwarz 2010, Iocco 2010). A more conservative hypothesis, requiring no new physics, is that the reionization was produced or at least initiated by the first stellar objects.
+The formation of the first stars of zero metallicity, at redshift
+z ∼ 20, resulted in the injection of a large number of ultraviolet
+(UV) photons (e.g., Loeb 2010). However, it seems difficult for
+these photons to interact with neutral gas at large distances from
+the stars, given the high-column densities of primordial starforming clouds. Recently, Mirabel et al. (2011) have proposed
+that X-rays from accreting black holes in early binary systems
+
+might have played a crucial role, because of the longer mean
+free path of X-rays with respect to UV radiation.
+The first generations of microquasars (MQs) should have
+not only produced copious X-rays, but also relativistic particles
+through their jets.
+The jets can propagate hundreds of parsecs and escape the
+original cloud where the star formation took place. Once the jets
+were in what would become the intergalactic medium (IGM),
+the termination shocks could reaccelerate protons and electrons
+up to relativistic energies. Then, these particles would diffuse,
+ionizing the medium they encountered. In this letter we offer a
+quantitative estimate of the ionizing power of these particles as
+they diffused through the early universe, and we compare this
+power with that of the X-ray emission of the same MQs
+In the next section, we describe the simulations of CR propagation in the early universe that we have performed to estimate
+the average ionizing power per primordial CR. Then, in Section
+3, we develop the microquasar scenario and ponder the relative
+strength of both the X-ray and cosmic-ray output of these systems. We close with a discussion of our results in Section 4.
+
+2. Ionization power of cosmic rays
+We have used a heavily modified version of the AIRES code
+(see AIRES Manual) to estimate the ionization power of electrons and protons injected directly into the IGM by the jets from
+microquasars. Detailed simulations of the ionization power of
+electrons in the IGM have been reported by Valdes et al. (2010)
+for fixed values of z and energies up to the TeV range. For this
+letter, a new simulation that takes into account the evolution of
+
+the IGM conditions was necessary, as high energy particles can
+survive through al the reionization period.
+We have modified AIRES propagation routines to include a
+redshift-dependent monochromatic photon field to simulate the
+cosmic microwave background (CMB) and a material medium
+of hydrogen atoms with redshift-dependent number density. We
+added inverse Compton scattering and e± photo-pair production
+for electrons, positrons, and photons. Neutron decays have been
+also included. All relevant hadronic interactions are present in
+the code, including secondary meson interactions.
+When a particle cascade develops, most of the ionization
+in the traversed medium is produced by low-energy particles,
+especially electrons and photons in and below the keV energy
+range. Unfortunately, the full simulation of all processes leading
+to particles in and below the keV range would require humongous amounts of CPU time. To circumvent this problem, the
+generation of particles below a certain threshold (100 keV for
+electrons and photons, and 500 keV for other particles) has not
+been directly simulated. Instead, the generation of low-energy
+particles is represented by an averaged energy loss per amount
+of traversed matter, which has been subtracted from all charged
+particles during their propagation.
+As low-energy particles lose most of their energy through
+ionization, the subtracted energy (Elost ) has been considered to
+be ultimately deposited in the traversed medium through ionization. The number of ions that would have been generated by
+these low-energy particles can then be estimated using the mean
+energy loss per ionization event IH . We take IH to be ≈ 36 eV,
+considering that 10.2 eV goes to ionize the atom and ≈ 25.8 eV
+corresponds to the average kinetic energy of the outgoing electron, of which 22.3 eV are lost in excitations of atomic levels
+and 3.4 eV in heating of the gas (Spitzer & Tomasko 1968).
+To further speed up the simulations, we have discarded particles that fell below the low-energy threshold during their propagation. The energy carried away by these particles (Edis ) has
+also been considered to be ultimately deposited in the medium
+through ionization. Then, the total number of produced ions is:
+Nions =
+
+(Elost + Edis )
+.
+IH
+
+(1)
+
+The IGM has a redshift dependence. We have adopted a density
+of the primordial IGM of nH = 2.5 × 10−30 (1 + z)3 g cm−3 (e.g.,
+Ellis et al. 2012). The CMB has been considered monoenergetic
+with photon energy ECMB = 3.75 × 10−4 (1 + z) eV, and a photon density uCMB = 0.05 (1 + z)3 cm−3 . For the magnetic field of
+the IGM, we have taken the value B = 10−17 G (e.g., Stacy &
+Bromm 2007; Loeb 2010; Bromm 2013). Note that several theories proposing the generation of magnetic fields during the inflation phase yield magnetic fields ten orders of magnitude higher
+at z =20 (Widrow et al. 2012). The magnetic field strength has
+almost no effect on the ionization efficiency of CRs, but it will
+strongly affect their diffusion scale.
+The model we have used for the evolution of the universe is
+that of the standard spatially-flat six-parameter ΛCDM cosmology, with a Hubble constant H0 = 67.3 ± 1.2 km s−1 Mpc−1 and
+a matter density parameter Ωm = 0.315 ± 0.017, in accordance
+with latest results from the Planck collaboration (2014).
+Under these assumptions, simulations of electrons in the 1
+MeV - 100 TeV and protons in the 1 GeV - 100 TeV energy
+range have been generated. Particles start at redshift z = 19 and
+they are propagated through the IGM until they reach z = 5,
+the epoch at which the reionization is considered to be complete
+(Loeb 2010). During this span, particles can traverse up to ∼
+3.1 g cm−2 of matter.
+
+10
+
+3
+
+10
+
+2
+
+10
+10
+
+10-2 GeV
+10-12 GeV
+10 GeV
+104 GeV
+
+10
+
+3
+
+10
+
+2
+
+1
+
+10
+
+1
+
+0
+
+10
+
+0
+
+10
+
+-1
+
+10
+
+-1
+
+10
+
+-2
+
+10
+
+-2
+
+10
+
+-3
+
+10
+
+-3
+
+0
+
+0.5
+
+1
+1.5
+2
+2.5
+2
+Traversed mass [g/cm ]
+
+Total energy of electrons (symbols-[GeV])
+
+M.Tueros et al.: Reionization of the universe
+
+Average number of electrons (lines)
+
+2
+
+3
+
+Fig. 1. Average longitudinal development of electrons of several
+energies injected in the IGM at redshift z = 19
+
+Our simulations for electron primaries show that below the
+energy threshold for interactions with the CMB, roughly 1 GeV,
+no particle cascades are produced. An example of the average longitudinal development of 10 MeV electrons is shown in
+Figure 1. At these energies, electrons propagate losing their energy mainly by ionization of the occasional hydrogen atoms they
+encounter on their path.
+Electrons below 10 MeV lose all their energy in the IGM
+before the reionization epoch ends, producing a number of ionizations (i.e., an ionization power) proportional to their initial
+energy.
+Above 10 MeV, electrons survive the reionization epoch, as
+can be seen on the average longitudinal profile for 100 MeV
+electrons shown in Fig. 1. This gives a plateau in the ionization
+power for electrons between 10 MeV and 1 GeV. The energy deposited through ionization by a single particle for a fixed amount
+of traversed matter has little dependency on its energy.
+Once the energy of the primary electrons reaches the threshold of inverse Compton with the CMB, particle cascades start
+being generated. The number of particles quickly rises, as does
+the total energy lost through ionization. At some point these
+particles start having enough energy to survive the reionization
+epoch. This yields the second plateau in Fig. 2.
+A second sudden, but smaller rise in the ionizing power
+is produced when secondaries also reach the CMB interaction
+threshold, triggering more cascades. An example of this type of
+cascades is shown in Fig. 1 for 10 TeV electrons, where it can
+be seen that the number of electrons and the energy they carry
+continues to rise, in contrast with the 100 GeV case.
+For proton primaries, we started our calculations at 1 GeV.
+At these energies, protons have a large variability in their ionization power as the 3.1 g cm−2 of traversed matter is well below
+the mean free path of p − p interactions. Protons that do not
+interact survive the reionization epoch and deposit very little energy, yielding a small ionization power. Protons that do interact
+generate pions that promptly decay into muons and photons that
+in turn generate cascades that do have a large ionization power.
+This yields a large variability in the ionization power of protons,
+especially at low energies, as can be seen in Fig. 2. We show
+in this figure also the fraction of energy of the primary particles
+available for heating the medium. It can be seen that particles
+
+0
+
+1000
+
+10
+
+100
+
+10
+
+-1
+
+-2
+
+10
+10
+
+-3
+
+10
+1
+
+-4
+
+10
+0.1
+0.01
+
+-5
+
+10
+
+Proton
+Electron
+-3
+
+-2
+
+-6
+
+-1
+
+0
+
+1
+
+2
+
+3
+
+4
+
+5
+
+10
+
+Fraction of energy available for heating
+
+6
+
+Average Number of Ionized Atoms [10 ]
+
+M.Tueros et al.: Reionization of the universe
+
+10 10 10 10 10 10 10 10 10
+Kinetic Energy [GeV]
+
+Fig. 2. Ionization power (left axis, points with lines) and fraction
+of the primary energy available for gas heating (right axis, lines
+only) of particles injected in the IGM at redshift z = 19 as a
+function of the primary energy.
+
+below 10 MeV have a heating efficiency of 0.1 and could have a
+sensible contribution not only to ionizing but also to heating the
+IGM. A detailed discussion of heating of the primordial IGM by
+CRs will be presented elsewhere.
+In the next section, we will use these results to calculate the
+total ionization power of a microquasar that injects particles directly into the IGM with a given injection spectrum of the form
+N(E) = N0 E −β , where N0 is the normalization constant. As the
+ionization power of particles I(E) is a function the energy, we
+characterize the ionization power of the particles with the equivalent ionization power IEc , defined as the ionization power that
+particles of characteristic energy Ec would need to have if the
+energy budget of the microquasar jet goes entirely to particles of
+that energy:
+R E2
+I(E) N0 E −β dE
+Nionizations
+E
+
+I Ec =
+= R 1
+.
+(2)
+E2
+Etotal /Ec
+N E −β dE E −1
+E1
+
+0
+
+c
+
+For a spectral index β = 2.2 (as expected from nonrelativistic shock acceleration, e.g., Drury 1983), and integration
+limits E1 =1 GeV for protons, E1 =1 MeV for electrons, and
+E2 =100 TeV, we obtain I1pGeV ≈ 105 ionizations per injected
+1 GeV proton, and I1e MeV ≈ 1.5 × 104 ionizations per injected 1
+MeV electron.
+
+3. Cosmic-ray ionization power from primordial
+microquasar jets
+As mentioned above, MQs produce collimated relativistic jets
+(Mirabel & Rodrı́guez 1999). The supersonic impact of the relativistic fluid with the external medium produces a termination
+shock (Heinz & Sunyaev 2002). At these shocks, relativistic particles (in principle both protons and electrons) are expected to be
+accelerated via a diffusive first-order mechanism such as Fermi I
+(e.g., Zealey, Dopita & Malin 1980; Bordas et al. 2009). The
+relativistic particles cool in the acceleration region producing
+nonthermal radiation, and the maximum energy achieved is the
+
+3
+
+result of the balance between energy gain and losses. In these
+systems, particles are more efficiently accelerated at the reverse
+shock, which is the fastest. Most of the relativistic particles escape from the acceleration region, without losing much energy,
+and diffuse into the ambient medium (see Bordas et al. 2009).
+Jets of galactic MQs are known to extend up to a distances of
+several parsecs from the accreting black hole, but some extragalactic microquasar jets can reach up to 300 pc from the binary system (e.g., Pakull, Soria & Motch 2010; Middleton et al.
+2013). Primordial MQs are expected to be very powerful: they
+should be formed by a very massive donor star with almost zero
+metallicity and a black hole of ten or more solar masses. Since
+Pop III stars have no winds (that are line-driven, e.g., Krtička &
+Kubát 2006, 2009), these early MQs must have been in a Rochelobe overflow accretion regime. So they would be more similar
+to Galactic low-mass MQs, where jets carry a power that is a
+significant fraction of the Eddington accretion rate (Romero &
+Vila 2008; Vila & Romero 2010; Vila et al. 2012). With powers
+reaching ∼ 1038−39 erg s−1 , the jets of these Pop III MQs might
+have been able to inject relativistic particles outside the regions
+of the primordial clouds where they formed. These clouds are
+thought to have radii ∼ 0.1-1 kpc (e.g., Stacy & Bromm 2007).
+The ratio of ionizations produced by CRs to those produced
+by X-rays, χ, can be estimated as:
+χ=
+
+(Nio,e Ne + Nio,p N p ) ǫCR
+Nio,CR NCR ǫCR
+κ=
+κ,
+Nio,X NX ǫX
+Nio,X NX
+ǫX
+
+(3)
+
+where Nio,CR , Nio,e , Nio,p , and Nio,X are the number of ionizations produced by a CR (electron/proton) and an X-ray photon,
+respectively; NCR is the number of CRs and NX is the number
+of X-ray photons. The parameters ǫCR and ǫX are the fraction
+of CRs or photons escaping into the IGM, respectively. κ is the
+fraction of X-ray binaries that produce jets. The number of ionizations N p,e and NX can be estimated as
+N p,e =
+
+Le,p tCR
+LX tX
+, NX =
+.
+hEe,p i
+hEX i
+
+(4)
+
+Here Le,p (LX ) is the total power in electrons/protons (Xrays) per microquasar, tCR (tX ) is the CRs (X-rays) source lifespan, and hEe,p i (hEX i) is electron/proton (X-ray) mean energy.
+The total power in x-rays, LX , is a fraction fX of Eddington’s
+luminosity LEdd (e.g., Poutanen, Krolik & Ryde 1997; Fender,
+Belloni & Gallo 2004; Bosch-Ramon, Romero & Paredes 2006;
+Romero & Vila 2008). If the CRs are accelerated at the shocks
+of the jet of the MQs, LCR is a fraction fCR of LEdd (because the
+jet’s power is in turn a fraction of LEdd ). The power in CRs then
+is LCR = Le + L p = Le + a Le = Le (1 + a) = fCR LEdd , where a is
+the electron/proton power ratio.
+Then, Le = fCR LEdd /(1 + a) and L p = a fCR LEdd /(1 + a), so
+!
+Nio,p
+Nio,e
+1 hEX i fCR LEdd tCR ǫCR
+χ=
+κ.
++a
+hEe i
+hE p i (1 + a) Nio,X fX LEdd tX ǫX
+
+(5)
+
+The active stage of the sources can be assumed to be of the
+same order because jet launching and X-ray emission are both
+intimately related with accretion, so tCR /tX ∼ 1. For the same
+reason we can consider fCR ∼ fX .
+The power-law shape of the electron/proton distribution implies a great fraction of electrons/protons of energy of a few
+me,p c2 . We have assumed 1 keV for hEX i, 1 MeV for hEe i and
+
+4
+
+M.Tueros et al.: Reionization of the universe
+
+1 GeV hE p i. For these values, the rate hEX i/hEe i ∼ 10−3 and
+hEX i/hE p i ∼ 10−6 . Equation (5) then reads,
+χ=
+
+Nio,p
+10−3 Nio,e
++ a 10−3
+(1 + a) Nio,X
+Nio,X
+
+!
+
+ǫCR
+κ.
+ǫX
+
+(6)
+
+According to our calculations from the previous section,
+Nio,p = I1pGeV ∼ 105 , and Nio,e = I1e MeV ∼ 1.5 × 104 (see Eq. 2)
+and Nio,X ∼ 25, at EX = 1 keV (e.g., Shull & van Steenberg
+1985); then Nio,p /Nio,X ∼ 4 × 103 and Nio,e /Nio,X ∼ 6 × 102 .
+Before reaching the IGM, X-rays photons must traverse
+the dense cloud in which the system was formed. The optical depth is τ = σH NHI , where σH is the bound-free absorption cross-section for H, and NHI is the column density of HI
+in the primordial clouds. The cross section is σH (Eph ) = 6 ×
+10−18 (13.6 eV/Eph )3 . For Eph = 1 keV, and a column density
+NHI = 1021 cm−2 (e.g., Wise & Abel 2012), τ ∼ 0.015. Then, the
+optical depth results in an attenuation factor of ǫX = e−τ ∼ 0.98
+for X-rays. On the other hand, the jets inject the relativistic particles directly into the IGM and ǫCR = 1. With the above estimates,
+χ yields
+!
+6 × 10−3
+2
+χ=
+102 + a κ.
+(7)
+(1 + a)
+3
+In the primordial universe κ is expected to be ∼ 1. This is
+because at high redshifts and low metallicities no colliding wind
+binaries are expected to exist and all X-ray emission is due to accretion. The jet-disk symbiosis (e.g., Falcke & Biermann 1995)
+implies that most X-ray binaries should actually be MQs.
+The actual content of the jets of MQs is unknown. Both
+purely leptonic and lepto-hadronic models have been proposed
+in the literature (e.g. Bosch-Ramon et al. 2006, Vila et al. 2012).
+In the case only electrons are accelerated, a = 0, χ is ∼ 0.6, and
+the ionization produced by CRs on the IGM is 60% of the X-ray
+ionization.
+If a = 100, as observed locally in CRs (Ginzburg &
+Syrovatskii 1964), the number of ionizations produced by CRs
+is ∼ 0.01 of the number of ionizations produced by X-rays.
+As these particles are injected directly into the IGM, the
+slowest diffusion speed is given by Bohm diffusion, one scattering per gyroradius
+ E  10−18 G !
+rL = 1.1Mpc
+(8)
+GeV
+B
+√
+The distance these particles diffuse is sBohm = ctrL . In the
+9
+10 yr duration of the reionization period, this gives 5.8 Mpc for
+1 GeV protons and 0.18 Mpc for 1 MeV electrons, showing that
+for a magnetic field B=1017G CRs and hard X-rays can propagate on comparable distances.
+
+4. Discussion
+The first generation of MQs started the process of reionization
+of the IGM a few Myr after the formation of the first stars. As
+soon as the firsts Pop III stars imploded creating the first stellar
+mass black holes, MQ jets were switched on. We then arrive at
+a picture where early reionization was achieved locally by UV
+from stars and by X-ray ray photons from accreting black holes
+at medium scales but still inside the primordial gas clouds. The
+jets associated with the accretion processes transport energy and
+create CR sources at their termination points, outside the clouds.
+
+Then, the reionization of the IGM might have started at a very
+early epoch. The cooling time of low-energy CRs, which constitute the bulk of the primordial CR population, is such as to allow
+these particles to reach epochs with z ∼ 5. There is then an accumulative effect through the whole reionization era. At some
+point, CR contributions from jets of high-redshift AGNs will
+start to play a role as well, along with the X-ray photons from putative intermediate mass black holes and the accretion disks of
+early quasars. Regarding CR production in Pop III supernovae
+(e.g., Stacy & Bromm 2007), they will be mostly confined to the
+original clouds surrounding the stars. It is not even clear whether
+such CRs would be produced at all, since very massive stars
+might implode directly into black holes without going through
+an explosion (e.g., Mirabel & Rodrigues 2003). The final fate
+of Pop III stars might be long gamma-ray bursts (e.g., Mészáros
+& Rees 2010), which might inject additional CRs into the IGM,
+enhancing the effects discussed in this Letter.
+The reionization of the universe was likely a complex process, involving different types of mechanisms operating simultaneously with effects on different scales. Both high-energy photons and charged relativistic particles seem to have played a role
+in this crucial period of the cosmic history.
+Acknowledgements. We thank Alejandra Kandus for insightful discussions on
+primordial magnetic fields and an anonymous referee for constructive comments.
+This work was supported by PICT 2012-00878, Préstamo BID (ANPCyT) and
+grant AYA 2013-47337-C3-1-P (MINECO, Spain).
+
+References
+Aires Manual, S. Sciutto. www2. f isica.unlp.edu.ar/augeraires/eg Aires.html
+Biermann, P. & Nath, B. 1993 MNRAS, 265,241
+Belikov, A. & Hooper, D., Phys.Rev. D, 80, 3, 035007
+Bordas, P., Bosch-Ramon, V., Paredes, J. M., Perucho, M. 2009, A& A, 497, 325
+Bosch-Ramon, V., Romero, G. E. & Paredes, J. M. 2006, A & A, 447,263
+Bromm, V. 2013, Rep. Progr. Phys., 76, 112901
+Cumberbatch et al., 2010, Phys. Rev. D, 82, 103508
+Drury, L. O. 1983, Rep. Progr. Phys., 46, 973
+Ellis G., Maartens R. & MacCallum M. 2012, Relativistic Cosmology,
+Cambridge University Press, Cambridge
+Falcke, H. & Biermann, P. L. 1995, å, 293, 665
+Fender, R. P., Belloni, T. M. & Gallo, E. 2004, MNRAS, 355, 1105
+Ginzburg, V.L. & Syrovatskii, S.I. 1964, The Origin of Cosmic Rays, Pergamon
+Press, Oxford
+Heinz, S., Sunyaev, R. 2002, A&A, 390, 751
+Iocco, F. AIP Conf. Proc, 1241, pp. 379-387 (2010).
+Kogut, A. et al. 2003, ApJS 148,161
+Krtička, J. & Kubát, J. 2006, A & A, 446, 1039
+Loeb, A. 2010, How Did the First Stars and Galaxies Form?, Princeton
+University Press, Princeton
+Mészáros, P. & Rees, M. J. 2010, ApJ, 715, 967
+Middleton, M. J., Miller-Jones, J. C. A., Markoff, S., Fender, R. et al. 2013,
+Nature, 493, 187
+Mirabel, I. F. & Rodrı́guez, L. F. 1999, Annu. Rev. Astron. Astrophys., 37, 409
+Mirabel, I. F. & Rodrigues, I. 2003, Science, 300, 1119
+Mirabel, I. F., Dijkstra, M., Laurent, P., Loeb, A. & Pritchard, J. R. 2011, A& A
+528, A149
+Natarajan, A. & Schwarz, D.,2010, Phys. Rev. D, 81, 12, 123510
+Pakull, M. W., Soria, R., Motch, C. 2010, Nature, 466, 209
+Planck collaboration, arXiv:1303.5076
+Poutanem, J., Krolik, J. H., & Ryde, F. 1997, MNRAS, 292, L21
+Romero, G. E., & Vila, G. S. 2008, A& A, 485, 623
+Shull, J. M., & van Steenberg, M. E. 1985, ApJ, 298, 268
+Spitzer, L. & Tomasko, M., 1968, ApJ, 152, 971
+Stacy, A. & Bromm, V. 2007, MNRAS, 382, 229
+Valdeś, M. et al. 2010, MNRAS, 404, 1569
+Vila, G. S. & Romero, G. E. 2010, MNRAS, 403, 1457
+Vila, G. S., Romero, G. E., & Casco, N. A. 2012, A& A, 538, A97
+Widrow, L et al. 2012, Space Sc. Rev., 166,4,37
+Wise, J. & Abel, T. 2010, ApJ, 684, 1
+Zealey, W. J., Dopita, M. A. & Malin, D. F., MNRAS, 192, 731
+
+

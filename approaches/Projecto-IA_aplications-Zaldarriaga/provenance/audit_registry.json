@@ -1,0 +1,123 @@
+{
+  "_scenario": {
+    "scenario": "fiducial-z10",
+    "scenario_hash": "4609fe6ee468"
+  },
+  "checks": [
+    {
+      "detail": "code [-0.0224728, 1.177455, -0.4626461, 0.08906479] vs Table I [-0.022473, 1.1775, -0.46264, 0.089064]; code [-0.0224728, 1.177455, -0.4626461, 0.08906479] vs Table I [-0.022473, 1.1775, -0.46264, 0.089064]; worst deviation is 0.79 units of the table's last printed digit (<= 1 means the table is the code's value truncated to 5 s.f.)",
+      "id": "K1",
+      "name": "df/dw fit coefficients == Kim & Rudd 1994 Table I, H(1s)",
+      "state": "PASS"
+    },
+    {
+      "detail": "sum a_i/(i+1) = 0.434306 vs Table I N_i = 0.4343",
+      "id": "K2",
+      "name": "N_i derived from those coefficients == Table I value",
+      "state": "PASS"
+    },
+    {
+      "detail": "code 1.565694 = 2 - N_i/N. The BEQ/BEB alternative would be 2 - Q = 1.4332 (Kim & Rudd eq. 60). These are DIFFERENT MODELS; eq. (20) is the one with D(t), and it takes N_i/N. Using 2 - Q here would be an error of 8.5%.",
+      "id": "K3",
+      "name": "non-dipole coefficient is [2 - N_i/N] (eq. 20), not [2 - Q]",
+      "state": "PASS"
+    },
+    {
+      "detail": "max relative difference over t = 1.5 ... 1e6 is 2.12e-16. The code's Horner form is the analytic integral of the Table I polynomial.",
+      "id": "K4",
+      "name": "D(t) closed form in the code == numerical quadrature of eq. (56)",
+      "state": "PASS"
+    },
+    {
+      "detail": "max relative difference over 15 eV - 1 GeV is 1.41e-09, which is the level of the independently sourced constants (the code builds the prefactor from its own r_e, this check from a_0 and alpha). The code implements RBED (eq. 20), which uses the true D(t) -- NOT RBEB (eq. 22).",
+      "id": "K5",
+      "name": "coll_ionisation_cross_section == Kim 2000 eq. (20), reimplemented",
+      "state": "PASS"
+    },
+    {
+      "detail": "total from the DIFFERENTIAL formula agrees with the closed form to 4.67e-05 -- an independent check of both.",
+      "id": "K6",
+      "name": "eq. (20) is the integral of eq. (19), as the paper states",
+      "state": "PASS"
+    },
+    {
+      "detail": "swapping the NIST binding energy for Kim's tabulated Rydberg changes the RBED cross section by at most 0.225% over 20 eV - 1 GeV. It is a REAL inconsistency -- the Table I fit, M^2, N_i and the (R/B)^2 in S were all derived with B = R -- but it is below every other uncertainty here, and it is redshift-INDEPENDENT, so it cancels from any z=10 / z=20 comparison.",
+      "id": "K7",
+      "name": "the B ambiguity is bounded and small",
+      "state": "PASS"
+    },
+    {
+      "detail": "n_HI, n_H, T_CMB, u_CMB and B(z) all reproduce their stated powers of (1+z) to better than 5.6e-16. Measured by evaluating the code at both redshifts, not by reading the source.",
+      "id": "Z1",
+      "name": "every analytic z-scaling in the code is the one the equations state",
+      "state": "PASS"
+    },
+    {
+      "detail": "the gap vanishes at z=0 (|-2.2e-16|) and is proportional to (1+z) over z=5..30: gap/(1+z) = 1.1968e-04..1.2893e-04, a spread of only 7.4%. That is the signature of an Omega_r (1+z)^4 term missing from under the square root, with an implied Omega_r = 2*slope*Omega_m = 7.78e-05 -- the right order for photons plus the relativistic part of the neutrino background (Omega_gamma = 5.4e-5). CONSEQUENCE: this is not two cosmologies and not a coding error. Route 1 drops a term that grows as (1+z), which is exactly why the gap DOUBLES from 1.369e-03 at z=10 to 2.675e-03 at z=20. Route 2 (astropy Planck18), which the yield actually uses, is the complete one. The earlier 'pending decision' is therefore settled on physics: the yield already uses the better H(z).",
+      "id": "Z2",
+      "name": "the route-1 / route-2 H(z) gap is a missing relativistic term",
+      "state": "PASS"
+    },
+    {
+      "detail": "sigma_ion at 100 eV / 1 keV / 1 MeV is bit-identical at z=10 and z=20: 5.783777e-21, 1.249236e-21, 9.913644e-24 m^2. Kim 2000 eq. (20) and Stone & Kim 2002 are ATOMIC physics -- no cosmology enters them. Redshift acts only through the target DENSITY n_HI(z), which multiplies them. This is why the yield below ~10 keV is z-invariant: every competing channel there is collisional and carries the same n_HI, which cancels from the branching ratio.",
+      "id": "D1",
+      "name": "RBED and the excitation cross sections are redshift-independent",
+      "state": "PASS"
+    },
+    {
+      "detail": "b = 4 gamma kT/mc^2 is the Klein-Nishina parameter; the Thomson limit needs b << 1. Over the channel window (2e7-3e8 eV at z=20) b stays below 2.27e-05, so BG70 eq. (2.42) is valid there at BOTH redshifts.Already checked independently as F_KN = 0.99999/0.99986 at the 5%/95% points of the z=20 window. At the top of the grid, 1e12 eV, b rises to 0.076 at z=20 against 0.040 at z=10 -- still below unity, so the Thomson spectrum is marginal rather than invalid there (a few per cent), and the LOSS rate uses the full KN kernel at every energy regardless.",
+      "id": "D2",
+      "name": "Thomson limit still holds for the IC-secondary channel at z=20",
+      "state": "PASS"
+    },
+    {
+      "detail": "E_esc = 1218.0 eV at z=10 and 1625.7 eV at z=20, a ratio of 1.3348 against the analytic estimate (1+z)^0.5 = 1.3817 (3.4% from it, the residual being the energy dependence of sigma_pi departing from a pure E^-3). It is solved from tau(E) at the requested redshift, NOT held at its z=10 value -- so the IC-secondary window shifts correctly. The prose '~1.2 keV' in the code comments and '~1.4 keV' in ionization_yield.py are z=10 statements and should not be read as constants.",
+      "id": "D4",
+      "name": "the escape energy is recomputed from z, and moves as predicted",
+      "state": "PASS"
+    },
+    {
+      "detail": "x_e enters only the Coulomb term, whose peak share of dK/dt is 0.23% at z=10 and 0.23% at z=20 (measured, C20 in yield_comparison). Post-recombination freeze-out leaves x_e ~ a few 1e-4 and only falls slowly, so 1e-4 is the same order at z=20 as at z=10. NOT DERIVED HERE and not measured: it is the user's stated value, and the yield is insensitive to it at the 0.2% level either way.",
+      "id": "D3",
+      "name": "x_e = 1e-4 is a defensible constant at BOTH redshifts, but it IS a choice",
+      "state": "PASS"
+    }
+  ],
+  "derived": {
+    "audit_B_Rydberg_vs_NIST_maxreldiff": 0.002249861864177527,
+    "audit_B_Rydberg_vs_NIST_maxreldiff_pct": 0.2249861864177527,
+    "audit_Dt_maxreldiff": 2.115887043949183e-16,
+    "audit_E_esc_ratio": 1.334776449072761,
+    "audit_E_esc_z10_eV": 1217.956948675339,
+    "audit_E_esc_z20_eV": 1625.7002510763639,
+    "audit_H_gap_slope_spread": 0.07391780462370082,
+    "audit_H_gap_slope_spread_pct": 7.391780462370082,
+    "audit_H_gap_z10": 0.0013686955129184053,
+    "audit_H_gap_z20": 0.002675109655810859,
+    "audit_Ni_H1s": 0.43430553083333334,
+    "audit_Omega_r_implied": 7.78403414047342e-05,
+    "audit_RBED_code_vs_paper_maxreldiff": 1.4115822826808111e-09,
+    "audit_RBED_over_RBEB_15eV": 1.3843150672075764,
+    "audit_RBED_over_RBEB_1GeV": 0.6436371264080939,
+    "audit_RBED_total_vs_SDCS_maxreldiff": 4.665892471931578e-05,
+    "audit_R_over_B": 1.0005337763871849,
+    "audit_bKN_1e12_z10": 0.03957599178737772,
+    "audit_bKN_1e12_z20": 0.0755541661395393,
+    "audit_bKN_window_top_z20": 2.270484633927458e-05,
+    "audit_dt_z14p5_to_z20_Myr": 103.311194568445,
+    "audit_nondipole_coeff": 1.5656944691666665,
+    "audit_nondipole_coeff_BEQ": 1.4332,
+    "audit_rho_lo_correction_pct": 14.815362149688283,
+    "audit_salpeter_extrap_dex_hi": 1.0,
+    "audit_salpeter_extrap_dex_lo": 0.5999999999999999,
+    "audit_salpeter_fit_M_hi": 10.0,
+    "audit_salpeter_fit_M_lo": 0.3981071705534972,
+    "audit_sdcs_relfactor_err_1e4eV": 0.019098199457619147,
+    "audit_sdcs_relfactor_err_1e4eV_pct": 1.9098199457619147,
+    "audit_sdcs_relfactor_err_1e5eV": 0.15442273291344177,
+    "audit_sdcs_relfactor_err_1e5eV_pct": 15.442273291344177,
+    "audit_sdcs_relfactor_err_1e6eV": 0.25535087541999646,
+    "audit_sdcs_relfactor_err_1e6eV_pct": 25.535087541999644,
+    "audit_zscaling_maxreldiff": 5.551115123125783e-16
+  }
+}

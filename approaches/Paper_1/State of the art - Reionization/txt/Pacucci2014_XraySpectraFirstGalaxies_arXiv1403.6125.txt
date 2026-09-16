@@ -1,0 +1,1151 @@
+Mon. Not. R. Astron. Soc. 000, 000–000 (0000)
+
+Printed 1 August 2018
+
+(MN LATEX style file v2.2)
+
+The X-ray spectra of the first galaxies: 21cm signatures
+Fabio
+Pacucci1 ? , Andrei Mesinger1 , Stefano Mineo2 , Andrea Ferrara1,3
+1
+Scuola Normale Superiore, Piazza dei Cavalieri, 7 56126 Pisa, Italy
+
+arXiv:1403.6125v2 [astro-ph.CO] 20 Jun 2014
+
+2 Harvard-Smithsonian Center for Astrophysics, 60 Garden Street Cambridge, MA 02138, USA
+3 Kavli Institute for the Physics and Mathematics of the Universe (WPI), Todai Institutes for Advanced Study, the University of Tokyo
+
+submitted to MNRAS
+
+ABSTRACT
+
+The cosmological 21cm signal is a physics-rich probe of the early Universe, encoding information about both the ionization and the thermal history of the intergalactic medium (IGM).
+The latter is likely governed by X-rays from star-formation processes inside very high redshift
+(z >
+∼ 15) galaxies. Due to the strong dependence of the mean free path on the photon energy,
+the X-ray SED can have a significant impact on the interferometric signal from the cosmic
+dawn. Recent Chandra observations of nearby, star-forming galaxies show that their SEDs
+are more complicated than is usually assumed in 21cm studies. In particular, these galaxies
+have ubiquitous, sub-keV thermal emission from the hot interstellar medium (ISM), which
+generally dominates the soft X-ray luminosity (with energies <
+∼ 1 keV, sufficiently low to significantly interact with the IGM). Using illustrative soft and hard SEDs, we show that the IGM
+temperature fluctuations in the early Universe would be substantially increased if the X-ray
+spectra of the first galaxies were dominated by the hot ISM, compared with X-ray binaries
+with harder spectra. The associated large-scale power of the 21cm signal would be higher by
+a factor of ∼ three. More generally, we show that the peak in the redshift evolution of the
+large-scale (k ∼ 0.2 Mpc−1 ) 21cm power is a robust probe of the soft-band SED of the first
+galaxies, and importantly, is not degenerate with their bolometric luminosities. On the other
+hand, the redshift of the peak constrains the X-ray luminosity and halo masses which host the
+first galaxies.
+Key words: cosmology: theory – dark ages, reionization, first stars – diffuse radiation –
+early Universe – galaxies: evolution – formation – high-redshift – intergalactic medium –
+X-rays:diffuse background – galaxies – binaries – ISM
+
+1
+
+INTRODUCTION
+
+The redshifted 21cm line is sensitive to the thermal and ionization state of the cosmic gas, making it a powerful probe of the
+early Universe. As it is a line transition, it has the potential to map
+out the three dimensional structure of cosmic gas and its evolution.
+First generation interferometers, including the Low Frequency Array (LOFAR; van Haarlem et al. 2013)1 , Murchison Wide Field
+Array (MWA; Tingay et al. 2013)2 , and the Precision Array for
+Probing the Epoch of Reionization (PAPER; Parsons et al. 2010)3 ,
+are already taking data. Their focus is on a statistical detection
+of reionization, though even earlier epochs of heating (when the
+cosmic gas was heated to temperatures above the CMB) could be
+detectable (Mesinger et al. 2014). Second generation instruments,
+
+like the Square Kilometre Array (SKA; Mellema et al. 2013)4 will
+be coming on-line soon, with high sensitivity and wide frequency
+coverage, allowing us to witness the birth of the very first galaxies
+through their imprint on the intergalactic medium (IGM).
+X-rays play a very important role during these epochs. Reionization with a significant X-ray contribution proceeds more uniformly, complicating the interpretation of 21cm fluctuations on
+large-scales (Mesinger et al. 2013). More importantly, X-rays
+are thought to be responsible for heating the IGM to temperatures above the CMB, before reionization gets well-underway (e.g.
+Furlanetto 2006; McQuinn & O’Leary 2012). In fiducial models,
+the large-scale temperature fluctuations during this heating epoch
+are responsible for the strongest 21cm interferometric signal, an
+order of magnitude greater than the signal during reionization. Understanding the timing and homogeneity of X-ray heating is critical
+in interpreting 21cm observations of the pre-reionization and reion-
+
+?
+
+fabio.pacucci@sns.it
+http://www.lofar.org/
+2 http://www.mwatelescope.org/
+3 http://eor.berkeley.edu
+1
+
+4
+
+http://www.skatelescope.org/
+
+2
+
+F. Pacucci et al.
+
+ization epochs (e.g. Pritchard & Furlanetto 2007; Mesinger et al.
+2014).
+A common approach is to parameterize our uncertainty of the
+early X-ray background by fixing the galactic X-ray spectral energy
+distribution (SED), and varying its normalization, i.e. bolometric
+luminosity (e.g. Furlanetto 2006; Santos et al. 2011; Christian &
+Loeb 2013; Mesinger et al. 2014; though see also exploratory work
+in Pritchard & Furlanetto 2007; Baek et al. 2010; Mesinger et al.
+2013). The X-ray luminosity of the first galaxies5 regulates the timing of the heating epoch. However, the actual X-ray SED should
+also be important in setting the signal, as the mean free path of Xrays through the IGM, λX , has a very strong dependence on the
+photon energy (e.g. Furlanetto et al. 2006; McQuinn 2012):
+
+2.6 
+−2
+EX
+1+z
+λX ≈ 34 x̄−1
+comoving Mpc ,
+HI
+0.5 keV
+15
+(1)
+where x̄HI is the mean neutral fraction of the IGM. Soft photons are
+much more likely to be absorbed closer to the galaxies, while high
+energy photons heat (or ionize) the IGM more uniformly. Indeed,
+Mesinger et al. (2013) showed that if X-ray heating is dominated
+by high-energy photons, the redshift evolution of the amplitude of
+the large-scale 21cm power spectrum does not show an associated
+pronounced peak. It is important to also note that because of this
+strong energy dependence of λX , photons with energies >
+∼ 2 keV
+effectively free-steam, barely interacting with the IGM; this makes
+the soft X-ray SED much more relevant for the 21cm signal.
+Observations show that the SED of local galaxies is more
+complicated than is usually assumed in 21cm studies. Locally, the
+hot ISM contributes significantly to the galaxy’s soft X-ray emission (e.g. Strickland et al. 2000; Grimes et al. 2005a; Owen & Warwick 2009; Strickland et al. 2004a; Li & Wang 2013; see the review
+in §7.1 of Mineo et al. 2012b). As an example, we note that using
+Chandra, Mineo et al. (2012b) recently studied the diffuse emission in a local sample of 21 star-forming galaxies, finding sub-keV
+thermal emission from the hot ISM in every galaxy in the sample. The stacked, bolometric soft-band (0.5–2 keV) luminosity per
+star formation rate (SFR) of the thermal emission is comparable to
+that from resolved sources, dominated by high mass X-ray binaries (HMXBs) with much harder spectra (e.g. Gilfanov et al. 2004;
+Mineo et al. 2012a).
+In this paper we illustrate the impact of the X-ray SED of the
+first galaxies on the 21cm power spectrum. We use simple models representative of dominant populations of either soft (corresponding to the hot ISM) or hard (corresponding to HMXBs) Xray sources. To show the robustness of our results, we also vary the
+X-ray luminosity per SFR (SED normalization) and the halo mass
+which hosts the dominant galaxy population.
+As this work was nearing completion, a related study was published by Fialkov et al. (2014). The most important distinction between the two works is that our analysis is motivated by Chandra
+observations of nearby star-forming galaxies, rather then a theoretical model of HMXBs. Furthermore, our proof-of-concept focuses
+
+5
+
+For convenience, we use the adjective “first” somewhat imprecisely, referring to the galaxies responsible for heating the IGM, which likely occurs
+at z ∼10–20 (see below). The very first galaxies could appear even earlier (z ∼ 30), though star formation inside these rare mini-halos is likely
+insufficient to significantly heat the IGM (e.g. McQuinn & O’Leary 2012).
+Nevertheless, our qualitative conclusions are not affected by the precise redshift at which the relevant galaxies appear (see below).
+
+on predicting qualitative trends which are robust to the many astrophysical uncertainties.
+This paper is organized as follows. In §2 we discuss possible contributions to the X-ray SED of high−z galaxies, placing them in the context of recent Chandra observations. In §3
+we present our simulations of the cosmological 21cm signal. In
+§4 we discuss our main results, showing how the SED has a
+robust imprint in the 21cm signal. Finally, we conclude in §5.
+Unless stated otherwise, we quote all quantities in comoving
+units. Throughout, we adopt recent Planck cosmological parameters (Planck Collaboration et al. 2013): (Ωm , ΩΛ , Ωb , h, ns , σ8 ) =
+(0.32, 0.68, 0.049, 0.67, 0.96, 0.83).
+
+2
+
+X-RAYS FROM THE FIRST GALAXIES
+
+As we do not know the X-ray SEDs of high-redshift, z > 10,
+galaxies6 we are forced to make educated guesses, motivated by
+observations of low-z (z <
+∼ 4) galaxies. In the local Universe, active galactic nuclei (AGN) dominate the X-ray background (XRB;
+e.g. Moretti et al. 2012). However at high-redshifts (z >
+∼ 5; e.g.
+Haardt & Madau 2012; Fragos et al. 2013), the contribution of
+AGN to the X-ray background should become sub-dominant to that
+of end products of stellar evolution, accreting gas from companion
+stars. These are characterized by the masses of their donor stars,
+and comprise HMXBs, intermediate mass X-ray binaries (IMXBs),
+low mass X-ray binaries (LMXBs), cataclysmic variables and active binaries. However, the characteristic timescales of all but the
+HMXBs are longer than the Hubble time at the very high redshifts
+of interest. Furthermore, the bolometric7 X-ray luminosity of local, star-forming galaxies is found to be dominated by resolved
+HMXBs (e.g. Grimm et al. 2003; Ranalli et al. 2003; Swartz et al.
+2004a; Persic & Rephaeli 2007; Lehmer et al. 2010; Swartz et al.
+2011; Walton et al. 2011; Mineo et al. 2012a). For these reasons,
+many studies of early IGM heating focus on HMXBs as the primary
+source of X-rays in star-forming galaxies (e.g. Furlanetto 2006;
+Pritchard & Furlanetto 2007; Mesinger et al. 2011; Santos et al.
+2011; though see, e.g., Valdés et al. 2013 and Evoli et al., in prep.
+for more exotic models in which heating can be dominated by annihilating dark matter).
+On the other hand, the hot ISM could contribute a significant
+amount of soft X-rays. Heated by supernovae (SNe) explosions
+and winds to temperatures of 106−7 K, this hot plasma emits Xrays through a combination of thermal bremsstrahlung and metal
+line cooling. It is diffuse and more spatially extended than the
+point sources discussed above. Its presence is typically detected
+in normal star-forming galaxies and starbursts (e.g Strickland et al.
+2000, 2004b; Grimes et al. 2005b; Mineo et al. 2012b; Li & Wang
+2013), as well as in high-resolution ISM simulations of the first,
+atomically-cooled galaxies (e.g. Wise et al. 2012; Aykutalp et al.,
+in prep). The contribution of soft emission from the hot ISM to the
+X-ray heating epoch has not been considered previously.
+Below we take HMXBs and the hot ISM as the two potential
+
+6
+
+QSOs at z <
+∼ 6 have been detected in X-rays (e.g. Brandt et al. 1999;
+Fan et al. 1999), as well as galaxies at z <
+∼ 4 through stacking analysis
+(Basu-Zych et al. 2013).
+7 We stress again that high-energy X-rays are unlikely to interact with the
+IGM at redshift relevant for the 21cm signal, given their long mean free
+paths. Hence the soft-band (<
+∼ 2 keV) SED and luminosity is more relevant
+for predicting the 21cm signal.
+
+resolved HMXBs, _=0.8
+
+10−5
+
+hot ISM, _=3
+
+10−6
+
+Photons cm−2 s−1 keV−1
+
+10−4
+
+The X-ray spectra of the first galaxies: 21cm signatures
+
+unresolved point sources
+
+1
+
+2
+Energy (keV)
+
+Figure 1. Composite observed X-ray SEDs from a sample of 21 local,
+star-forming galaxies (for further details, see Mineo et al. 2012b). Points
+correspond to unresolved emission, which at low energies (<
+∼ 2 keV) is
+dominated by the hot ISM, while at high energies (>
+2
+keV)
+by
+faint point
+∼
+sources (unresolved HMXBs, LMXBs, cataclysmic variables and active binaries). A best-fit thermal bremsstrahlung profile for the hot ISM is shown
+with the green, dashed curve. Our fiducial toy-model SED for the hot ISM
+(a power-law with energy index α=3) is indicated with a solid red curve,
+which is a good match to the bremsstrahlung profile. The intrinsic SED for
+resolved HMXBs (blue dot-dashed curve) is instead a power-law with energy index α=0.8, based on the average spectrum of HMXBs (see Swartz
+et al. 2004b; Mineo et al. 2012a). The normalization of the blue dot-dashed
+curve is done to preserve the observed relative ratio of the soft-band (0.5–2
+keV) luminosities per unit SFR for the HMXB and hot ISM (Mineo et al.
+2012a,b). The red (blue) curve corresponds to our fiducial soft (hard) model
+for the intrinsic emission. In order to compare to the observed emergent
+spectra, all curves include intrinsic absorption by an equivalent HI column
+density of NHI ∼2–3×1021 cm−2 , assuming solar abundances and metallicity.
+
+sources of X-ray emission from the first galaxies. In nearby galaxies, the total luminosity of both of these sources is observed to be
+proportional to the galaxy’s star-formation rate (e.g. Gilfanov et al.
+2004). Interestingly, both HMXBs and the hot ISM have a comparable, observed soft-band (0.5–2 keV) luminosity per SFR: ∼ 8 and
+5 ×1038 erg s−1 M yr−1 , respectively (Mineo et al. 2012a,b).
+However, their SEDs are dramatically different, as we discuss further below. We also make the distinction between the intrinsic and
+observed (or emerging) SEDs, the later including absorption from
+the host galaxy.
+
+2.1
+
+The intrinsic SED of the hot, diffuse ISM
+
+Star-forming galaxies are known to output abundant X-ray emission from hot ionized gas of sub-keV temperatures, whose luminosity correlates with the SFR of the host galaxy (e.g. Strickland
+et al. 2000, 2004b; Grimes et al. 2005b; Li & Wang 2013). Recently, Mineo et al. (2012b) presented Chandra observations of
+21 local, star-forming galaxies, isolating the contribution of hot,
+diffuse ISM. They took special care of various systematic effects
+and controlled the contamination of unresolved emission by bright
+compact sources of all types as well as by unresolved faint highmass X-ray binaries. Every galaxy in their sample showed evidence
+of hot plasma, with temperatures in the range of 0.2–0.3 keV, with
+
+3
+
+1/3 of their sample showing evidence of a second thermal peak at
+∼0.7 keV.
+In Fig. 1, we show the composite SED of the unresolved emission from their sample of 21 galaxies, corrected for the Chandra
+instrument response (black points). At these temperatures the emission from the hot plasma should be governed by metal line cooling
+and thermal bremsstrahlung (e.g. Gaetz & Salpeter 1983). At soft
+energies (<
+∼ 2 keV), the composite can be roughly approximated
+by either templates: (i) a solar-metallicity, thermal (MEKAL from
+XSPEC) component with mean energy hkTi ∼ 0.3 keV; or (ii) thermal bremsstrahlung, also with hkTi ∼ 0.3 keV. The latter is shown
+with the green dashed curve in Fig. 1. At higher energies (>
+∼ 2 keV),
+the composite SED of the unresolved emission is dominated by
+faint point sources with harder spectra.
+With the red solid curve we also show in Fig. 1 a power-law
+α
+SED, with the specific luminosity scaling as LX ∝ EX
+and an
+energy index of α = 3. In our analysis below, we adopt this simple
+power-law for the intrinsic emission for our fiducial soft SED, as it
+provides a reasonable fit to the SED of the hot, diffuse ISM.
+
+2.2
+
+The intrinsic SED of HMXBs
+
+Composite SEDs of HMXBs generally follow a hard power-law,
+with a spectral energy index of α ≈0.7–1 (Rephaeli et al. 1995;
+Swartz et al. 2004b; Mineo et al. 2012a). This corresponds to the
+so-called, ’hard state’ resulting from Comptonization of soft photons on hot electrons (”corona”), in the vicinity of the compact object. Accreting compact objects also show evidence of a ’soft state’,
+which is believed to originate in the optically thick/geometrically
+thin accretion disk (Shakura & Sunyaev 1973), well represented
+by a superposition of black body spectra with hkTi <
+∼ 1 keV (for a
+review see McClintock & Remillard 2006 or Gilfanov 2010). However, the composite SEDs of bright X-ray compact sources associated with young stellar populations, such as resolved HMXBs (Mineo et al. 2012a) or ultra-luminous X-ray sources (ULXs; Swartz
+et al. 2004b) are typically dominated by the ’hard state’ and are
+well fit with an absorbed power-law (with spectral energy index of
+∼ 0.7 − 1).8
+For our fiducial hard SED below, corresponding to the intrinsic emission from bright HMXBs, we adopt a power-law with energy index α = 0.8. We show this hard power-law as a blue dotdashed curve in Fig. 1, obscured with an equivalent HI column density of NHI ∼ 3 × 1021 cm−2 (Mineo et al. 2012a).
+
+2.3
+
+Intrinsic absorption from the host galaxy
+
+The shape of the spectrum at low energies can depend strongly on
+the intrinsic absorption of the host galaxy. For our purposes, it is
+useful to decompose the intrinsic absorption into two contributions:
+(i) an HI column density, and (ii) metal abundance.
+For gas with a solar abundance and metallicity, the metals
+
+8
+
+There is evidence that bright UXLs have a spectral cut-off at highenergies, EX >
+∼ 6–10 keV (e.g. Miyawaki et al. 2009; Bachetti et al. 2013).
+Our results are not sensitive to such modifications of the fiducial SED, since
+1/3
+1/2 keV have
+photons with energies above EX >
+∼ 1.8x̄HI [(1 + z)/15]
+mean free paths exceeding the Hubble length (e.g. McQuinn 2012), and
+thus do not interact significantly with the IGM. However, fiducial normalizations of the X-ray luminosity to SFR ratios (see below), as well as estimates of their redshift evolution, should account for possible high-energy
+cut-offs (e.g. Kaaret 2014).
+
+4
+
+F. Pacucci et al.
+
+dominate the absorption of photons with energies >
+∼ 0.5 keV,
+while helium dominates at lower energies (Morrison & McCammon 1983). The standard approach in X-ray studies is to assume a
+solar abundance and metallicity when constructing the absorption
+profile, and then quote the associated HI column density (NHI ∼2–
+3×1021 cm−2 in the case of the curves shown in Fig. 1). However,
+the early galaxies at z ∼10–20 which drive the IGM heating should
+be much less enriched than local ones. If the average sight-line out
+of the galaxy contains less metals, more soft photons would escape into the IGM for a given HI column density. Just based on
+qualitative arguments about metal evolution, one would expect the
+emergent spectra of the first galaxies to be softer than shown in Fig.
+1.
+It is even less clear how to estimate the HI column density
+of the first galaxies. Empirical trends suggest that the fraction of
+ionizing photons escaping galaxies increases rapidly towards high
+redshifts (e.g. Haardt & Madau 2012; Kuhlen & Faucher-Giguere
+2012), perhaps driven by the shallower potential wells of typical
+galaxies which make the gas distribution more susceptible to feedback (e.g. Ferrara & Loeb 2012; Alvarez et al. 2012). If confirmed,
+it would be reasonable to assume that the average column density
+relevant for X-ray absorption follows similar qualitative trends.
+There could also be a relative difference in opacities for our
+two sources of X-rays: hot ISM and HMXBs. One could imagine that the diffuse, spatially-extended hot ISM might have lower
+covering fractions of HI, compared to the HMXBs which can be
+embedded in dust clouds (which further attenuate soft X-rays). Indeed, observations of the diffuse, hot ISM show that less than half
+of local, star-forming galaxies have evidence of any host galaxy
+absorption (Mineo et al. 2012b).
+The discussion above is clearly very speculative, and depends
+on the unknown morphology and enrichment of the first galaxies.
+The absorption of X-ray photons by the high-z host galaxies could
+have a strong impact on the emerging X-ray SED, and we will return to this in future work. For this proof-of-concept, we assume a
+very simple model for host-galaxy obscuration, truncating the intrinsic SED at energies below < 0.3 keV. Photons below this energy have an optical depth greater than unity, for the column densi21.5
+cm−2 , assuming that helium domties greater than NHI >
+∼ 10
+9
+inates the total opacity . In other words, we assume that the first
+galaxies have similar column densities as local ones, but take the
+gas to have a low metal abundance. For illustration, we also present
+an ’extreme’ model in which we truncate all photons with energies
+below ≤ 1 keV. This model is ’extreme’ in the sense that it assumes the first galaxies were much more obscured than even the
+more massive, evolved local ones (Fig. 1).
+
+2.4
+
+Normalizations of the model SEDs
+
+Following previous work, we normalize our fiducial soft and hard
+SEDs with the parameter, fX ≡ NX /0.1, where NX is the total
+number of X-ray photons escaping the galaxy per stellar baryon.
+For both our soft and hard spectra, the fiducial choice of fX =
+1 yields band-integrated luminosities per unit SFR comparable to
+observed ones. Our hard SED yields a 0.5–8 keV luminosity of
+39
+Lα=0.8
+erg s−1 M yr−1 , similar to the observed
+X,0.5−8keV ≈ 5 × 10
+9
+
+We caution that metal abundance and column density are not disentangled in present analysis of local galaxies, which assumes solar abundances
+and metallicity. If the sightline-averaged metallicity of the host galaxy is
+lower, the best fit HI column density would be higher, and vice versa.
+
+39
+value of Lobs,HMXB
+erg s−1 M yr−1 from eq. (39)
+X,0.5−8keV ≈ 3 × 10
+in Mineo et al. (2012a). Similarly our soft SED yields a 0.5–2 keV
+38
+luminosity of Lα=3
+erg s−1 M yr−1 , similar
+X,0.5−2keV ≈ 8 × 10
+obs,ISM
+to the observed value of LX,0.5−2keV ≈ 5×1038 erg s−1 M yr−1
+from eq. (2) in Mineo et al. (2012b).
+We caution however that these comparisons are only illustrative. Moreover, it is difficult to guess how the relevant z ∼ 15
+galaxies are different than local ones. Using stacked spectra, BasuZych et al. (2013) recently measured an evolution in the X-ray luminosity to SFR ratio for star-forming galaxies out to z ∼ 4. On the
+theoretical side, there is also no reason to think that the first galaxies
+should have similar X-ray luminosities per SFR as local ones. For
+example, the expected lower metallicity of early galaxies, discussed
+above in the context of intrinsic obscuration, could also result in a
+higher fraction of HMXBs (e.g. Mirabel et al. 2011; Fragos et al.
+2013). Similarly, at these high redshifts Compton cooling might
+become important for the hot plasma (provided a large fraction of
+it manages to be blown out to low densities), thereby decreasing
+the fraction of its energy radiated away as soft X-rays. For Compton cooling to be more efficient than radiative cooling, the hot ISM
+−3
+(with T ∼ 106 K) needs to be at densities lower than: <
+∼ 10 –
+−2
+−3
+4
+10 cm [(1 + z)/15] , with the quoted range spanning solar to
+zero metallicities (e.g. Gaetz & Salpeter 1983). Modeling the ISM
+at these redshifts is very difficult, and model-dependent. We note
+that numerical simulations of Tvir ≈ 104 K galaxies at z ∼9–15
+do find significant reservoirs of hot ISM at higher number densities (e.g. Wise et al. 2012; Aykutalp et al., in prep), suggesting that
+radiative cooling would still dominate. We postpone more detailed
+estimates to future work. Below we explore a wide range of fX
+values.
+
+To summarize, we have two fiducial models for the X-ray
+spectra of the first galaxies (c.f. the red and blue curves in Fig. 1): (i)
+a hard SED with a power-law index of α = 0.8, representing X-ray
+emission dominated by HMXBs; and (ii) a soft SED with a powerlaw index of α = 3, representing X-ray emission dominated by the
+hot ISM. In both cases, metal-poor gas inside the host galaxies is
+assumed to absorb all photons with energies below E0 = hν0 =0.3
+keV, corresponding to equivalent column densities as seen locally.
+Finally, both SEDs are normalized according to their total number
+of X-ray photons escaping the galaxy per stellar baryon, with the
+fiducial choice being fX ≡ NX /0.1 = 1.
+It is interesting to note that the combined observed SED from
+both components (hot ISM + HMXBs) in local galaxies strongly
+resembles our fiducial, fX = 1, hard (α = 0.8) SED for the first
+galaxies (see the red+blue curves in Fig. 1). This is because the
+absorption of the hard HMXB power-law by a metal-enriched ISM
+is almost exactly compensated for by the absorbed soft contribution
+from the hot ISM. The resulting total emergent spectrum (in which
+the hot ISM and HMXBs comparably contribute to the soft-band
+luminosity per SFR) resembles an unabsorbed, α ∼ 1 power law
+down to low energies.
+
+3
+
+SIMULATING THE 21CM SIGNAL
+
+The 21cm signal is usually represented in terms of the offset of the
+21cm brightness temperature from the CMB temperature, Tγ , at an
+
+The X-ray spectra of the first galaxies: 21cm signatures
+z 0 )/(1 + z):
+
+observed frequency ν (Furlanetto et al. 2006):
+δTb (ν) =
+
+TS − Tγ
+(1 − e−τν21 ) ≈
+1+z
+
+
+
+H
+Tγ
+27xHI (1 + δnl )
+1−
+dvr /dr + H
+TS
+
+1/2 
+
+2
+1 + z 0.15
+Ωb h
+×
+mK,
+10 ΩM h2
+0.023
+
+ −α
+νe
+NX
+hν (νe , x, z 0 ) =αh
+µmp ν0
+
+
+dfcoll
+ρcrit,0 Ωb f∗ (1 + δ̄nl )
+,
+dt
+(2)
+
+where TS is the gas spin temperature, τν21 is the optical depth at the
+21cm frequency ν21 , δnl (x, z) ≡ (ρ/ρ̄ − 1) is the evolved (Eulerian) density contrast, H(z) is the Hubble parameter, dvr /dr is the
+comoving gradient of the line of sight component of the comoving
+velocity, and all quantities are evaluated at redshift z = ν21 /ν − 1.
+To simulate the 21cm signal, we use a parallelized version
+of the publicly available 21CMFAST10 code. It uses perturbation
+theory and excursion-set formalism to generate density, velocity,
+source, ionization, and spin temperature fields. For further details
+and tests of the code, interested readers are encouraged to see
+Mesinger & Furlanetto (2007), Mesinger et al. (2011), and Zahn
+et al. (2011). Here we outline our simulation set-up.
+Our simulation boxes are 750 Mpc on a side, with a resolution
+of 5003 . Density fields are generated by perturbing Gaussian initial
+conditions, sampled on a higher-resolution, 20003 grid (Zel’Dovich
+1970). Ionization by UV photons is computed in an excursion-set
+fashion, by comparing the time-integrated number of ionizing photons to the number of neutral atoms in regions of decreasing scale
+(Furlanetto et al. 2004). Specifically, a simulation cell at coordinate
+x is flagged as ionized if
+ζUV fcoll (x, z, R, Tvir ) ≥ 1 − xe (x, z, R) ,
+
+(3)
+
+where ζUV is an ionizing efficiency parameter (here taken to be
+ζUV = 30 so that our reionization histories match the mean observed value of the Thompson scattering optical depth to the CMB;
+Hinshaw et al. 2013), and fcoll is the fraction of mass residing
+in dark matter halos with virial temperatures greater than Tvir
+inside a sphere of radius R and mass M = 4/3πR3 ρ, where
+ρ = ρ̄[1 + δ̄nl ], while xe is the fraction of gas partially-ionized
+by X-rays (Mesinger et al. 2013).
+We compute the Wouthuysen-Field (WF; Wouthuysen 1952;
+Field 1958) coupling (i.e. Lyα pumping; when the Lyα background
+from the first stars couples the spin temperature to the gas temperature) using the Lyman resonance backgrounds from both X-ray
+excitation of HI, and direct stellar emission. The latter is found to
+dominate by two orders of magnitude for fX ∼ 1. For the direct
+stellar emission, we assume standard Population II spectra from
+Barkana & Loeb (2005), and sum over the Lyman resonance backgrounds (Mesinger et al. 2011).
+As reionization and WF coupling are not the focus of this
+work, we keep their relevant parameters fixed. Instead we focus
+on the X-ray background, responsible for heating and partiallyionizing the IGM. The angle-averaged X-ray specific intensity,
+J(ν, x, z), (in erg s−1 Hz−1 cm−2 sr−1 ) can be computed integrating along the light-cone:
+Z
+(1 + z)3 ∞ 0 cdt
+J(ν, x, z) =
+dz
+hν ,
+(4)
+4π
+dz 0
+z
+with the comoving specific emissivity evaluated at νe = ν(1 +
+
+10
+
+http://homepage.sns.it/mesinger/Sim.html
+
+5
+
+(5)
+
+where NX is the number of X-ray photons per stellar baryon (recall
+fX ≡ NX /0.1), µmp is the mean baryon mass, ρcrit,0 is the current critical density, f∗ is fraction of baryons converted into stars
+(we take f∗ = 0.1). The IGM ionization and heating (including
+adiabatic and Compton) is tracked locally, with the X-ray contribution computed from eq. 4, given the appropriate energy deposition
+fractions (taken from Furlanetto & Stoever 2010).
+Our fiducial model assumes that the “first” galaxies formed in
+atomically-cooled halos (with virial temperatures Tvir ≥ 104 K)11 ,
+though we also consider a couple of models with Tvir ≥ 105 K,
+corresponding to inefficient star-formation in dwarf galaxies near
+the atomic cooling threshold.
+
+4
+
+RESULTS
+
+We take as the main observable the 3D 21cm power spectrum, de¯ b (z)2 h|δ21 (k, z)|2 ik , where
+fined as P21 (k, z) = k3 /(2π 2 V ) δT
+¯
+δ21 (x, z) ≡ δTb (x, z)/δTb (z) − 1. We focus on the large-scale
+power, specifically at k = 0.2 Mpc−1 . These scales are small
+enough to be relatively clean of foregrounds (Pober et al. 2013),
+while still large enough to achieve reasonable signal-to-noise (S/N)
+with even first generation instruments (Mesinger et al. 2014). Our
+default power spectrum bin width is d ln k = 0.5.
+In most models, the amplitude of the large-scale 21cm power
+rises and falls with three prominent peaks (e.g. Pritchard & Furlanetto 2007; Baek et al. 2010; see also Fig. 5), corresponding to
+(from high to low redshift): (i) WF coupling; (ii) X-ray heating;
+(iii) reionization. These are sourced mainly by fluctuations in the
+(i) WF coupling coefficient (sourced by the Lyα background); (ii)
+gas temperature; (iii) ionized fraction, respectively. WF coupling
+and reionization are most likely dominated by direct stellar emission of UV photons (McQuinn & O’Leary 2012; Mesinger et al.
+2013). Hence, here we focus on the middle, “X-ray heating” peak in
+21cm power, shortly after the X-rays from the first galaxies started
+heating the cosmic gas, and the spatial fluctuations in gas temperature12 were the largest. After TS  Tγ , the 21cm signal is no
+longer sensitive to the thermal state of the gas (c.f. eq. 2).
+In Fig. 2 we show slices through the 21cm brightness temperature maps for our fiducial model (fx = 1, Tvir = 104 K), with
+the hard (soft) SED at the top (bottom). Both of the slices are taken
+at roughly the same redshift [zpeak =16.7 (16.3) for the top (bottom) panels], when the large-scale (k = 0.2 Mpc−1 ) 21cm power
+is the strongest in each model, corresponding to the X-ray heating
+11
+
+The very first galaxies are likely hosted by smaller halos, in which gas
+accretes via the molecular cooling channel (e.g., Haiman et al. 1996; Abel
+et al. 2002; Bromm et al. 2002). However, H2 is easily disrupted by external background radiation fields which sterilize star formation inside these
+“mini-halos”. Even just the background radiation from atomically-cooled
+halos is enough to sterilize mini-halos already at z >
+∼ 20 (Holzbauer &
+Furlanetto 2012; McQuinn & O’Leary 2012; Fialkov et al. 2013; Dijkstra
+et al. in prep).
+12 In most models we consider, the spin temperature, T , is already closely
+S
+coupled to the gas kinetic temperature at the time of the peak in 21cm power
+associated with heating. Hence we use the two terms interchangeably below.
+
+6
+
+F. Pacucci et al.
+50
+
+1.0
+
+0
+
+α =0.8, Tvir =104 K
+α =3.0, Tvir =104 K
+α =0.8, E0 =1.0 keV
+
+∆T [mK]
+
+50
+
+CDF
+
+0.8
+0.6
+
+emission absorption
+
+0.4
+
+100
+
+0.2
+
+150
+0.0
+
+0
+
+1
+
+2
+
+200
+
+3
+
+Tγ /TS
+
+4
+
+5
+
+6
+
+7
+
+Figure 3. CDFs of Tγ /TS corresponding to the fiducial soft/hard SED
+models shown in Fig. 2. With the green curve, we also show an extremely
+hard SED model, in which all soft photons with energies below E0 = 1
+keV are assumed to be absorbed by their host galaxies. The curves correspond to z ∼ 16.5.
+
+50
+1200
+
+0
+
+1000
+800
+
+100
+
+P [mK2 ]
+
+∆T [mK]
+
+50
+
+α =0.8, Tvir =104 K
+α =3.0, Tvir =104 K
+α =0.8, Tvir =105 K
+α =3.0, Tvir =105 K
+
+600
+400
+
+150
+
+200
+
+200
+
+0
+10-2
+
+10-1
+
+k [Mpc−1 ]
+
+100
+
+Figure 2. Slices through the 21cm brightness temperature fields for our fiducial
+model with a hard (top) and soft (bottom) X-ray SED. Slices are 1.5 Mpc thick,
+and are taken at zpeak = 16.7 (top) and zpeak = 16.3 (bottom), corresponding to the redshift when the k = 0.2 Mpc−1 21cm power is the largest for each
+model.
+
+Figure 4. Power spectra corresponding to soft (blue curves) and hard (red
+curves) SEDs. Galaxies are assumed to be hosted by halos with virial temperatures greater than 104 K (solid curves) and 105 K (dotted curves).
+As above, power spectra are taken at the redshift where the amplitude at
+k = 0.2 Mpc−1 is the largest, corresponding to zpeak ∼ 16.5 and 12, for
+the Tvir = 104 K and 105 K models, respectively.
+
+peak. It is evident from the figure that the hard SED results in more
+uniform brightness temperature maps, due to the longer distances
+traveled by more energetic photons.
+We quantify this in Fig. 3 which shows the corresponding temperature distributions. Specifically, we plot the cumulative distribution functions (CDFs) of Tγ /TS (c.f. eq. 2) for the soft (red) and
+hard (blue) SEDs. The soft SED has a noticeably broader distribution of temperatures. Because heating is more patchy in this model,
+there are large regions distant from galaxies which are still cooling adiabatically at this epoch. Such cold gas is absent in the model
+with the hard SED. With the green curve we also show an extremely
+
+hard SED model, in which all soft photons with energies below 1
+keV are assumed to be absorbed by their host galaxy. With no soft
+photons, the heating is extremely uniform, with the temperature
+distribution approaching a step function.
+During the X-ray heating epoch, the temperature distribution sets the 21cm power. Broader distributions generally result in
+higher power spectrum amplitudes. The 21cm power spectra corresponding to the fiducial soft/hard SED models from Fig. 2 are
+shown in Fig. 4. Indeed the 21cm power is higher with the soft
+SED, corresponding to X-rays from the hot ISM. On large scales,
+this difference is a factor of ∼ 3. Interestingly, the power-spectrum
+
+The X-ray spectra of the first galaxies: 21cm signatures
+4
+
+MWA
+X
+X
+
+3
+
+Log10P [mK2 ]
+
+α =0.8, Tvir =104 K
+α =3.0, Tvir =104 K
+α =0.8, Tvir =105 K
+α =3.0, Tvir =105 K
+α =0.8, E0 =1.0 keV
+α =3.0, E0 =0.1 keV
+
+Parsons+2013
+
+X
+X
+
+2
+1
+
+HERA
+SKA
+
+0
+1
+
+10
+
+15
+
+20
+
+z
+
+25
+
+30
+
+35
+
+Figure 5. Redshift evolution of the 21cm power amplitude at k = 0.2
+Mpc−1 . The red and blue lines correspond to our two fiducial SEDs (soft
+and hard, respectively). The green (purple) line corresponds to an illustrative model with more (less) absorption by the host galaxy, such that all
+photons below EX ≤ 1 (0.1) keV are absorbed locally inside the host’s
+ISM. The three peaks in the fiducial models correspond to (from high to
+low redshift): (i) WF coupling, (ii) X-ray heating (labeled with an ”X”),
+(iii) reionization. We also show the 2σ upper limit at z ≈ 8 from the PAPER experiment (Parsons et al. 2013), as well as 1σ thermal noise estimates
+corresponding to a 1000h observation with some upcoming and current instruments (taken from Mesinger et al. 2014).
+
+peaks at a scale of k ∼ 0.2 Mpc−1 , which corresponds to the mean
+free path of the average photon in this model, EX ∼ 0.5 keV. We
+caution however that more realistic models for the intrinsic absorption of the host galaxies could smear out this feature.
+In Fig. 4 we also include power spectra for the same fiducial
+soft/hard SEDs, but assuming instead that the dominant galaxy population corresponds to much more massive systems, with Tvir ≥
+105 K. If such massive systems are required for efficient starformation, the X-ray heating peak is delayed until zpeak ∼ 12 (see
+Fig. 5). These host halos are more biased than those corresponding
+to our fiducial, Tvir = 104 K ones. The additional modulation by
+their larger correlation lengths drives the power spectrum peak to
+somewhat larger scales, k ∼ 0.1 Mpc−1 . Interestingly, the largescale power in the soft SED model is also a factor of ∼ 3 higher
+than in the hard SED model, as was the case for our fiducial choice
+of Tvir ; we elaborate more on this below.
+From here on, we focus only on the amplitude of the 21cm
+power at k = 0.2 Mpc−1 , lying in the narrow k-space window
+accessible with the first generation interferometers, as mentioned
+above. We note however that the evolution of large-scale power is
+qualitatively self-similar for a wide range of wave-numbers (e.g.
+Baek et al. 2010; Santos et al. 2011). In Fig. 5 we show the redshift evolution of the 21cm power amplitude at k = 0.2 Mpc−1 .
+The aforementioned characteristic three-peaked structure is evident, with the WF coupling, X-ray heating and reionization peaks
+clearly separated in the fiducial models, assuming either Tvir =
+104 or 105 K. In the figure we also present S/N estimates for three
+interferometric arrays: the MWA (Beardsley et al. 2012), the proposed second-generation Hydrogen Epoch of Reionization Arrays
+(HERA; http://reionization.org/; Pober et al., in prep), and the SKA
+Phase 1 (Dewdney et al. 2013). The S/N is computed assuming
+
+7
+
+a 1000h integration, with a fixed ∆z = 0.5 band. The MWA is
+currently taking data, and is expected to achieve 1000h integration
+in >
+∼ 2016, while HERA and the SKA are expected to begin taking observations in a few years. We note that a 1000h survey with
+SKA Phase 1 is planned as part of the early science results (Koopmans et al. in prep). For details on the noise calculations please see
+Mesinger et al. (2014).
+Here we again see explicitly that the X-ray SED impacts the
+X-ray heating epoch (i.e. the middle peak). Moreover, the difference between the soft and hard SEDs is comparable (factor of ∼ 3
+in power amplitude at the X-ray heating peak) for two very different choices of Tvir .
+In Fig. 5 we also include the redshift evolution in the E0 = 1
+keV model (also assuming Tvir = 104 K, α = 0.8, fX = 1),
+corresponding to host-galaxy intrinsic absorption which is considerably stronger than what is observed in local galaxies. The high
+energy (>
+∼ 1 keV) X-rays which manage to escape the first galaxies in this model, heat the IGM uniformly and inefficiently (as
+the absorption cross-section is smaller). The uniformity of heating dramatically suppresses the temperature fluctuations (see Fig.
+3), and therefore there is no noticeable X-ray heating peak (see
+also Mesinger et al. 2013). Furthermore, these high energy photons
+interact weakly with the IGM, only managing to heat it to temperatures TS ∼ Tγ when reionization commences. The resulting
+narrow temperature distribution centered around (1 − Tγ /TS ) ∼ 0
+(c.f. eq. 2) results in a much deeper drop in power at z ∼ 12. Even
+at the midpoint of reionization (z ∼ 10), the neutral IGM patches
+are only heated to (1 − Tγ /TS ) ∼ 0.6–0.7, which suppresses the
+amplitude of the 21cm signal by tens of percent.
+We stress that the E0 = 1 keV model is quite extreme because
+we observe copious low-energy X-rays escaping even from nearby
+galaxies, which are more massive and evolved than the first galaxies. Instead, it is more likely that the first galaxies had even lower
+host galaxy absorption, owing to lower average HI column densities (as discussed above). To illustrate such a scenario, we also
+include i Fig. 5 a model with E0 = 0.1 keV, shown with a thin
+purple curve (also assuming Tvir = 104 K, α = 3, fX = 1). The
+X-ray peak is not significantly increased in such a model, as even
+our fiducial hot ISM SED is soft enough to leave standing large
+cold patches when the IGM near the galaxies is heated (see Fig.
+3). However, the peak location is shifted to lower redshifts, since
+the mean energy absorbed by the IGM is considerably lower in this
+model.
+4.1
+
+Is the imprint of the SED degenerate with the
+luminosity?
+
+We noted above that the difference in the amplitude of the X-ray
+heating peaks for soft vs hard SEDs was remarkably similar even
+assuming very disparate values of Tvir . In Fig. 6 we further investigate the robustness of the SED imprint by plotting the peak amplitude of the k = 0.2 Mpc−1 21cm power, as a function of fX . We
+remind the reader that fX is a proxy for the total number of X-ray
+photons per stellar baryon, serving to normalize our SEDs.
+We explore a wide range of values: 10−2 < fX < 102 . For
+a given SED, the amplitude of the peak power is remarkably con1.5
+<
+stant over a wide range of luminosities: 10−1.5 <
+∼ fX ∼ 10 ,
+as already noted in Mesinger et al. (2014). This is due to the fact
+that the large-scale 21cm power peaks when the large-scale temperature fluctuations are maximized, which is roughly a self-similar
+¯ b ∼ −100 mK (Mesinger et al. 2014). If
+process occurring at δT
+−1.5
+<
+fX ∼ 10
+, the first galaxies are too faint in X-rays to heat the
+
+8
+
+F. Pacucci et al.
+=104 K
+
+α =0.8 Tvir
+α =3.0 Tvir =104 K
+α =0.8 Tvir =105 K
+α =3.0 Tvir =105 K
+
+Cold
+Reionization
+
+Peak Power [mK2 ]
+
+103
+
+Heating
+WF
+overlap
+
+102
+
+10-2
+
+10-1
+
+100
+
+fx
+
+101
+
+102
+
+Figure 6. Peak amplitude (over all redshifts) of the k = 0.2 Mpc−1 21cm
+power, as a function of fX . Circles (triangles) correspond to models with
+Tvir = 104 (105 ) K. Red (blue) colors indicate hard (soft) SEDs. The
+regions of parameter space in which the X-ray heating epoch overlaps with
+reionization and WF coupling are shaded in blue and pink, respectively.
+
+Redshift of Peak Power
+
+22
+20
+
+α =0.8 Tvir =104 K
+α =3.0 Tvir =104 K
+α =0.8 Tvir =105 K
+α =3.0 Tvir =105 K
+
+18
+16
+14
+12
+10 -2
+10
+
+10-1
+
+100
+
+fx
+
+101
+
+102
+
+Figure 7. Same as Fig. 6, but instead showing the redshift at which the
+k = 0.2 Mpc−1 21cm power peaks on the y-axis.
+
+IGM before reionization commences. The resulting contrast between the ionized and very cold neutral patches can drive up the
+21cm signal considerably (e.g. Parsons et al. 2013). On the other
+1.5
+hand if fX >
+∼ 10 , X-ray heating merges with WF coupling, and
+the spin temperature is never able to fully couple to the kinetic temperature, TK , before the gas was heated. If TS > TK during the
+X-ray heating peak, the amplitude of the signal decreases.
+On the other hand, the amplitude of the peak power is strongly
+affected by the assumed SED. For our soft SED, corresponding to
+the hot ISM, the 21cm signal peaks at P21 ∼ 600-700 mK2 over
+a broad range of fX and Tvir values. Similarly, for our hard SED,
+corresponding to HMXBs, the 21cm signal peaks at P21 ∼ 200-300
+4
+< 1.5
+mK2 , again over a broad range: 10−1.5 <
+∼ fX ∼ 10 and 10 K
+< Tvir < 105 K. Therefore, the peak amplitude of the large-scale
+∼
+∼
+
+21cm power is a robust probe of the X-ray SED of the first galaxies,
+not degenerate with their X-ray luminosities and host halo masses.
+Finally, Fig. 7 shows the redshift of the peak power, zpeak ,
+on the vertical axis, as a function of the X-ray efficiency fx . An
+increase in the X-ray efficiency, or a decrease in the host halo virial
+temperature, corresponds to a higher zpeak , since the IGM is heated
+earlier. However, the X-ray SED does not have a strong impact on
+the redshift of the peak power.
+Thus, upcoming interferometers can determine the X-ray luminosities and host halo mass of the first galaxies from the redshift
+of the peak 21cm power (Mesinger et al. 2014), while the amplitude
+of the peak power can constrain the SED. Hence we should soon
+have a complete picture of the X-ray properties of the first galaxies.
+
+5
+
+CONCLUSIONS
+
+In this proof-of-concept, we investigated if the X-ray SED of the
+first galaxies could have a robust imprint in the 21cm signal. We
+were motivated by Chandra observations of local star-forming
+galaxies, in which the relevant soft-band luminosity has two main
+contributors: (i) the hot, diffuse ISM and (ii) HMXBs. Using simple SEDs corresponding to these two populations, we studied their
+imprint on the 21cm signal, focusing on the epoch when the first
+galaxies began heating the IGM with their X-rays.
+Understandably a soft SED, representative of the hot ISM, results in larger fluctuations of the IGM temperature, as the absorption cross-section for X-rays has a strong dependence on the photon
+energy. Low energy photons are much more likely to be absorbed
+closer to the galaxies. These stronger temperature fluctuations drive
+up the amplitude of the large-scale (k ∼ 0.2 Mpc−1 ) 21cm power
+by a factor of ∼ 3, compared with models dominated by hard SEDs
+representative of HMXBs.
+More generally, we show that the X-ray SED determines the
+amplitude of the peak 21cm power, for a wide range of X-ray lumi< 1.5
+nosities (10−1.5 <
+∼ fX ∼ 10 ) and host halo virial temperatures
+5
+4
+<
+(10 K <
+∼ Tvir ∼ 10 K). The reverse is true for the redshift at
+which the large-scale power peaks: it is insensitive to the SED, and
+instead determined by the X-ray luminosity and host halo mass of
+the first galaxies. Thus, upcoming interferometers can determine
+the X-ray luminosities and host halo mass of the first galaxies from
+the redshift of the peak 21cm power, while the amplitude of the
+peak power will constrain the SED.
+The absorption intrinsic to the host galaxies remains a significant source of uncertainty, and could substantially impact the
+emerging soft-band SED. In this work, our fiducial models assume
+a sharp cut below E0 = 0.3 keV, corresponding to photons whose
+mean free path is greater than unity given the same column densities observed in local galaxies, but assuming a low metallicity such
+that the ISM absorption is dominated by hydrogen and helium. If
+on the other hand the emerging X-ray SED of the first galaxies is
+exactly as observed in local ones, the 21cm signal should be as
+predicted in our hard, α = 0.8 models. This is because in observed composite spectra (see Fig. 1), the additional absorption of
+the HMXB template at <
+∼ 1 keV provided by the metals is almost
+exactly compensated for by the additional contribution from the absorbed, hot ISM. This makes the total spectrum (absorbed hot ISM
++ absorbed HMXBs) look like an unabsorbed, α ∼ 0.8 power law
+down to low energies (<
+∼ 0.5 keV), which is effectively our hard
+SED for the first galaxies.
+Subsequent work will focus on constructing more complete
+and detailed models of the X-ray SEDs emerging from the first
+
+The X-ray spectra of the first galaxies: 21cm signatures
+galaxies, guided by hydrodynamic simulations including metal pollution. Combined with upcoming 21cm interferometric observations, we will be able to robustly study high energy processes inside
+the first galaxies.
+
+We thank Bret Lehmer for stimulating conversations which
+contributed to motivating this work. SM acknowledges support
+from the NASA’s Astrophysics Data Analysis Program (ADAP)
+grant NNH13CH56C.
+
+REFERENCES
+Abel T., Bryan G. L., Norman M. L., 2002, Science, 295, 93
+Alvarez M. A., Finlator K., Trenti M., 2012, ApJ, 759, L38
+Bachetti M., et al., 2013, ApJ, 778, 163
+Baek S., Semelin B., Di Matteo P., Revaz Y., Combes F., 2010, A&A, 523,
+A4
+Barkana R., Loeb A., 2005, ApJ, 626, 1
+Basu-Zych A. R., Lehmer B. D., Hornschemeier A. E., Bouwens R. J., Fragos T., Oesch P. A., Belczynski K., Brandt W. N., Kalogera V., Luo B.,
+Miller N., Mullaney J. R., Tzanavaris P., Xue Y., Zezas A., 2013, ApJ,
+762, 45
+Beardsley A. P., et al., 2012, Monthly Notices of the Royal Astronomical
+Society, 425, 1781
+Brandt W. N., Comastri A., Gallagher S. C., Sambruna R. M., Boller T.,
+Laor A., 1999, ApJ, 525, L69
+Bromm V., Coppi P. S., Larson R. B., 2002, ApJ, 564, 23
+Christian P., Loeb A., 2013, JCAP, 9, 14
+Dewdney P., et al., 2013, SKA1 SYSTEM BASELINE DESIGN
+http://www.skatelescope.org/wp-content/uploads/
+2013/03/SKA-TEL-SKO-DD-001-1 BaselineDesign1.pdf,
+pp 1–98
+Fan X., et al., 1999, ApJ, 526, L57
+Ferrara A., Loeb A., 2012, ArXiv e-prints:1209.2123
+Fialkov A., Barkana R., Visbal E., 2014, Nature, 506, 197
+Fialkov A., Barkana R., Visbal E., Tseliakhovich D., Hirata C. M., 2013,
+MNRAS, 432, 2909
+Field G. B., 1958, Proceedings of the Institute of Radio Engineers, 46, 240
+Fragos T., et al., 2013, ApJ, 776, L31
+Furlanetto S. R., 2006, MNRAS, 371, 867
+Furlanetto S. R., Oh S. P., Briggs F. H., 2006, Physics Reports, 433, 181
+Furlanetto S. R., Stoever S. J., 2010, MNRAS, 404, 1869
+Furlanetto S. R., Zaldarriaga M., Hernquist L., 2004, ApJ, 613, 1
+Gaetz T. J., Salpeter E. E., 1983, ApJS, 52, 155
+Gilfanov M., 2010, in Belloni T., ed., Lecture Notes in Physics, Berlin
+Springer Verlag Vol. 794 of Lecture Notes in Physics, Berlin Springer
+Verlag, X-Ray Emission from Black-Hole Binaries. p. 17
+Gilfanov M., Grimm H.-J., Sunyaev R., 2004, MNRAS, 347, L57
+Grimes J. P., Heckman T., Strickland D., Ptak A., 2005a, ApJ, 628, 187
+Grimes J. P., Heckman T., Strickland D., Ptak A., 2005b, ApJ, 628, 187
+Grimm H.-J., Gilfanov M., Sunyaev R., 2003, MNRAS, 339, 793
+Haardt F., Madau P., 2012, ApJ, 746, 125
+Haiman Z., Thoul A. A., Loeb A., 1996, ApJ, 464, 523
+Hinshaw G., et al., 2013, ApJS, 208, 19
+Holzbauer L. N., Furlanetto S. R., 2012, MNRAS, 419, 718
+Kaaret P., 2014, MNRAS, 440, L26
+Kuhlen M., Faucher-Giguere C.-A., 2012, MNRAS, 423, 862
+Lehmer B. D., Alexander D. M., Bauer F. E., Brandt W. N., Goulding A. D.,
+Jenkins L. P., Ptak A., Roberts T. P., 2010, ApJ, 724, 559
+Li J.-T., Wang Q. D., 2013, MNRAS, 435, 3071
+McClintock J. E., Remillard R. A., 2006, Black hole binaries. pp 157–213
+McQuinn M., 2012, MNRAS, 426, 1349
+McQuinn M., O’Leary R. M., 2012, ApJ, 760, 3
+Mellema G., et al., 2013, Experimental Astronomy, 36, 235
+
+9
+
+Mesinger A., Ewall-Wice A., Hewitt J., 2014, MNRAS; arXiv:1310.0465
+Mesinger A., Ferrara A., Spiegel D. S., 2013, MNRAS, 431, 621
+Mesinger A., Furlanetto S., 2007, ApJ, 669, 663
+Mesinger A., Furlanetto S., Cen R., 2011, MNRAS, 411, 955
+Mineo S., Gilfanov M., Sunyaev R., 2012a, MNRAS, 419, 2095
+Mineo S., Gilfanov M., Sunyaev R., 2012b, MNRAS, 426, 1870
+Mirabel I. F., Dijkstra M., Laurent P., Loeb A., Pritchard J. R., 2011, A&A,
+528, A149
+Miyawaki R., Makishima K., Yamada S., Gandhi P., Mizuno T., Kubota A.,
+Tsuru T. G., Matsumoto H., 2009, PASJ, 61, 263
+Moretti A., Vattakunnel S., Tozzi P., Salvaterra R., Severgnini P., Fugazza
+D., Haardt F., Gilli R., 2012, A&A, 548, A87
+Morrison R., McCammon D., 1983, ApJ, 270, 119
+Owen R. A., Warwick R. S., 2009, MNRAS, 394, 1741
+Parsons A. R., et al., 2010, AJ, 139, 1468
+Parsons A. R., et al., 2013, ArXiv e-prints:1304.4991
+Persic M., Rephaeli Y., 2007, A&A, 463, 481
+Planck Collaboration Ade P. A. R., Aghanim N., Armitage-Caplan C., Arnaud M., Ashdown M., Atrio-Barandela F., Aumont J., Baccigalupi C.,
+Banday A. J., et al. 2013, ArXiv e-prints
+Pober J. C., et al., 2013, The Astrophysical Journal Letters, 768, L36
+Pritchard J. R., Furlanetto S. R., 2007, MNRAS, 376, 1680
+Ranalli P., Comastri A., Setti G., 2003, A&A, 399, 39
+Rephaeli Y., Gruber D., Persic M., 1995, A&A, 300, 91
+Santos M. G., Silva M. B., Pritchard J. R., Cen R., Cooray A., 2011, A&A,
+527, A93
+Shakura N. I., Sunyaev R. A., 1973, A&A, 24, 337
+Strickland D. K., Heckman T. M., Colbert E. J. M., Hoopes C. G., Weaver
+K. A., 2004a, ApJS, 151, 193
+Strickland D. K., Heckman T. M., Colbert E. J. M., Hoopes C. G., Weaver
+K. A., 2004b, ApJS, 151, 193
+Strickland D. K., Heckman T. M., Weaver K. A., Dahlem M., 2000, AJ,
+120, 2965
+Swartz D. A., Ghosh K. K., Tennant A. F., Wu K., 2004a, ApJS, 154, 519
+Swartz D. A., Ghosh K. K., Tennant A. F., Wu K., 2004b, ApJS, 154, 519
+Swartz D. A., Soria R., Tennant A. F., Yukita M., 2011, ApJ, 741, 49
+Tingay S. J., et al., 2013, PASA, 30, 7
+Valdés M., Evoli C., Mesinger A., Ferrara A., Yoshida N., 2013, MNRAS,
+429, 1705
+van Haarlem M. P., et al., 2013, A&A, 556, A2
+Walton D. J., Roberts T. P., Mateos S., Heard V., 2011, MNRAS, 416, 1844
+Wise J. H., Abel T., Turk M. J., Norman M. L., Smith B. D., 2012, MNRAS,
+427, 311
+Wouthuysen S. A., 1952, AJ, 57, 31
+Zahn O., Mesinger A., McQuinn M., Trac H., Cen R., Hernquist L. E., 2011,
+MNRAS, 414, 727
+Zel’Dovich Y. B., 1970, A&A, 5, 84
+
+

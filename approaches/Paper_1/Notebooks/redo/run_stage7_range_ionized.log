@@ -1,0 +1,25 @@
+t(z=10.0) = 471.4 Myr    t(z=5.5) = 1038.5 Myr    Delta t = 567.0 Myr
+F_KN:  b=1e-04->9.994e-01   b=1e-01->6.345e-01   b=1e+00->1.473e-01   b=1e+02->3.045e-04
+Tablas colisionales listas (n=2..10, 700 nodos).
+Raices de Planck:  x_max=8.1723   x_min=0.2278
+fully ionized medium: x_e = 1, T_gas = 1e+04 K, K_term = 1.2926 eV (4 grid nodes start below it)
+[  13.9s] z_i= 5.75 | chi(1 keV)=3.956e-03 cMpc chi(1 MeV)=1.077e+02 cMpc chi_max=1.159e+02 cMpc @ K=1.000e+13 eV | 33 window-truncated
+[  28.9s] z_i= 6.00 | chi(1 keV)=3.684e-03 cMpc chi(1 MeV)=2.055e+02 cMpc chi_max=2.253e+02 cMpc @ K=1.000e+13 eV | 32 window-truncated
+[  56.1s] z_i= 6.50 | chi(1 keV)=3.219e-03 cMpc chi(1 MeV)=3.644e+02 cMpc chi_max=4.247e+02 cMpc @ K=1.000e+13 eV | 30 window-truncated
+[  81.4s] z_i= 7.00 | chi(1 keV)=2.837e-03 cMpc chi(1 MeV)=3.979e+02 cMpc chi_max=5.960e+02 cMpc @ K=1.000e+13 eV | 29 window-truncated
+[ 106.1s] z_i= 7.50 | chi(1 keV)=2.519e-03 cMpc chi(1 MeV)=3.413e+02 cMpc chi_max=7.291e+02 cMpc @ K=1.000e+13 eV | 27 window-truncated
+[ 133.5s] z_i= 8.00 | chi(1 keV)=2.253e-03 cMpc chi(1 MeV)=2.952e+02 cMpc chi_max=7.622e+02 cMpc @ K=1.000e+13 eV | 0 window-truncated
+[ 166.1s] z_i= 8.50 | chi(1 keV)=2.026e-03 cMpc chi(1 MeV)=2.573e+02 cMpc chi_max=6.383e+02 cMpc @ K=1.000e+13 eV | 0 window-truncated
+[ 193.2s] z_i= 9.00 | chi(1 keV)=1.833e-03 cMpc chi(1 MeV)=2.257e+02 cMpc chi_max=5.413e+02 cMpc @ K=1.000e+13 eV | 0 window-truncated
+[ 220.2s] z_i=10.00 | chi(1 keV)=1.521e-03 cMpc chi(1 MeV)=1.769e+02 cMpc chi_max=4.015e+02 cMpc @ K=1.000e+13 eV | 0 window-truncated
+[ 247.4s] z_i=11.00 | chi(1 keV)=1.283e-03 cMpc chi(1 MeV)=1.415e+02 cMpc chi_max=3.077e+02 cMpc @ K=1.000e+13 eV | 0 window-truncated
+[ 274.3s] z_i=12.00 | chi(1 keV)=1.097e-03 cMpc chi(1 MeV)=1.151e+02 cMpc chi_max=2.420e+02 cMpc @ K=1.000e+13 eV | 0 window-truncated
+[ 303.5s] z_i=13.00 | chi(1 keV)=9.488e-04 cMpc chi(1 MeV)=9.507e+01 cMpc chi_max=1.943e+02 cMpc @ K=1.000e+13 eV | 0 window-truncated
+[ 330.4s] z_i=14.00 | chi(1 keV)=8.290e-04 cMpc chi(1 MeV)=7.951e+01 cMpc chi_max=1.587e+02 cMpc @ K=1.000e+13 eV | 0 window-truncated
+[ 357.3s] z_i=15.00 | chi(1 keV)=7.307e-04 cMpc chi(1 MeV)=6.724e+01 cMpc chi_max=1.315e+02 cMpc @ K=1.000e+13 eV | 0 window-truncated
+[ 384.2s] z_i=16.00 | chi(1 keV)=6.490e-04 cMpc chi(1 MeV)=5.743e+01 cMpc chi_max=1.104e+02 cMpc @ K=1.000e+13 eV | 0 window-truncated
+[ 412.3s] z_i=17.00 | chi(1 keV)=5.803e-04 cMpc chi(1 MeV)=4.947e+01 cMpc chi_max=9.366e+01 cMpc @ K=1.000e+13 eV | 0 window-truncated
+[ 439.3s] z_i=18.00 | chi(1 keV)=5.221e-04 cMpc chi(1 MeV)=4.295e+01 cMpc chi_max=8.022e+01 cMpc @ K=1.000e+13 eV | 0 window-truncated
+[ 471.3s] z_i=19.00 | chi(1 keV)=4.723e-04 cMpc chi(1 MeV)=3.755e+01 cMpc chi_max=6.929e+01 cMpc @ K=1.000e+13 eV | 0 window-truncated
+[14296.1s] z_i=20.00 | chi(1 keV)=4.293e-04 cMpc chi(1 MeV)=3.304e+01 cMpc chi_max=6.030e+01 cMpc @ K=1.000e+13 eV | 0 window-truncated
+saved /home/byaku/Desktop/Doctorado-Trabajo/Paper_1/Notebooks/redo/redo_range_table_ionized.npz in 14296.1 s

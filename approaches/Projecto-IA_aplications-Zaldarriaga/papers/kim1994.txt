@@ -1,0 +1,1066 @@
+PHYSICAL REVIEW A                                    VOLUME 50, NUMBER 5                                          NOVEMBER I 994
+
+
+                   Binary-encounter-dipole                 model for electron-impact                 ionization
+                                                            Yong-Ki Kim
+                         National Institute of Standards    and Technology,   Gaithersburg,   Maryland   20899
+
+                                                           M. Eugene Rudd
+            Department   of Physics and Astronomy,    University of Nebraska Linc-oln, Lincoln, Nebraska 68588 0111-
+                                                      (Received 6 May 1994)
+                 A theoretical model, which is free of adjustable or fitted parameters, for calculating electron-
+             impact ionization cross sections for atoms and molecules is presented. This model combines the
+             binary-encounter theory with the dipole interaction of the Bethe theory for fast incident electrons.
+             The ratios of the contributions from distant and close collisions and interference between the direct
+             and exchange terms are determined by using the asymptotic behaviors predicted by the Bethe theory
+             for ionization and for stopping cross sections. Our model prescribes procedures to calculate the singly
+             differential cross section (energy distribution) for each subshell using the binding energy, average
+             kinetic energy, and the differential dipole oscillator strengths for that subshell. Then the singly
+             differential cross section is integrated over the ejected electron energy to obtain the total ionization
+             cross section. The resulting total ionization cross section near the threshold is proportional to the
+             excess energy of the projectile electron. We found that this model yields total ionization cross
+             sections for a variety of atoms and molecules from threshold to several keV which are in good
+             agreement ( 10%%uo or better on average) with known experimental results. The energy distributions
+             also exhibit the expected shapes and magnitudes. We offer a simpler version of the model that can
+             be used when differential oscillator strengths are not known. For the ionization of ions with an open-
+             sheQ configuration, we found that a minor modification of our theory greatly improves agreement
+             with experiment.
+
+              PACS number(s): 34.80.Dp, 34.80.Gs, 34.80.Kw
+
+
+                  I. INTRODUCTION                                    interaction between the incident particle and the target
+                                                                     electron.
+                                                                        The symmetric form of the binary-encounter theory de-
+    Electron-impact ionization cross sections are widely             scribed by Vriens [4], which is meant for electron-impact
+ used in applications such as the modeling of fusion plas-           ionization, augments the Mott formula by assigning a
+ mas in tokamaks, modeling of radiation effects for both             velocity or momentum distribution to a target electron
+ materials and medical research, and aeronomy, as well               instead of a wave function, but still lacks the dipole con-
+ as in basic research in astrophysics, atomic, molecular,            tribution and hence leads to an incorrect cross section
+ and plasma physics. Although the method we present in               when the dipole interaction dominates at high incident
+            —
+ this article to be referred to as the binary-encounter-             energies. In contrast, contributions Rom hard collisions
+                      —
+ dipole (BED) model is equally applicable to ionization              dominate at lower incident energies.
+ of atoms and molecules, we shall hereafter refer to the                There have been many attempts to combine the dipole
+ targets as "atoms" for brevity.                                     contribution with either the Rutherford or Mott cross
+   Ionization cross sections at all energies of incident par-        section to derive the "correct" ionization cross sections
+ticles and ejected electrons are needed to follow the his-           [5,6], but these attempts have all had only limited suc-
+tory of an incident particle and its products for all ranges         cess because they failed to find the correct mixing ratio
+of energy transferred in individual collisions. Proper un-           between the expressions for the soft and hard collisions.
+derstanding of the role of ejected electrons is crucial be-          In addition, since the scattered and ejected electrons are
+cause a large number of them, mostly slow electrons, are             indistinguishable   after an ionizing collision, electron ex-
+generated in the course of an energetic incident parti-              change effect must be included, as is the case for the Mott
+cle penetrating through matter. These electrons in turn              and Vriens formulas.
+interact with other targets until the electrons are ther-               Other approaches to represent ionization cross sections
+malized.                                                             in compact, analytic forms [2,7—10] require parameters
+   Electron-atom collisions can be divided into two broad            that must be fitted to some theoretical or experimental
+types: soft or distant collisions with large impact pa-              ionization cross sections.
+rameters and hard or close collisions with small impact                 The BED model uses the relation between the asymp-
+parameters. The Mott theory [1], which describes the                 totic (i.e. , high incident energy) cross sections for ion-
+collision of two free electrons, accounts for hard collisions        ization and for stopping (defined later) to deduce the
+well but not soft collisions [2]. Bethe [3] has shown that           mixing ratios not only between the soft and hard colli-
+soft collisions take place essentially through the dipole            sions but also for the electron exchange term. The BED
+
+                                                              50
+50                           BINARY-ENCOUNTER-DIPOLE           MODEL FOR ELECTRON-. . .                                            3955
+
+
+model, however, does not depend on any empirical or fit-       der(W, T)     4m a20R        1               1                  1
+ted parameters, though accurate experimental or theoret-          dW            T          W2      W(T —W)                (T —W)2
+ical data on binding energies and photoionization cross
+sections are needed.                                                                                                                (3)
+   An important ingredient of the BED model is the dif-        In this nonrelativistic formula, T is the kinetic energy
+ferential dipole oscillator strength for ionization, which     of the incident electron, and T —W is the kinetic en-
+can be derived &om either theoretical or experimental          ergy of the scattered electron. The Mott cross section
+photoionization cross sections. The BED model con-             above is given in the form of a singly differential cross
+structs ionization cross sections subshell by subshell, and    section (SDCS), or the energy distribution of the ejected
+in principle can be used to construct ionization cross sec-    electron.
+tions for any target atom or molecule as long as cor-              Because the scattered and ejected electrons are indis-
+responding differential oscillator strengths for ionization    tinguishable, it is customary to call the faster one of the
+are known. When high accuracy (10%%uo or better) is not         two (after a collision) the primary electron and the slower
+required, differential oscillator strengths calculated &om      one the 8econdary electron. The first term in the square
+Hartree-Fock or similar wave functions are suHicient.           brackets of Eq. (3) is the direct collision term, the second
+   We also have included a simpler version of the BED           term represents the interference between the direct and
+model, to be referred to as the binary-encounter-Bethe          exchange collision terms, and the third term is the ex-
+(BEB) model, which may be used when the required dif-           change collision term. Note that the Mott cross section
+ferential oscillator strengths are not available.               is symmetric in the kinetic energies of the secondary elec-
+   We present a brief outline of the underlying theory in       tron, W, and the primary electron, T —W, as it should
+Sec. II, our BED model in Sec. III, the BEB model in            be. Both the Rutherford and the Mott cross sections,
+Sec. IV, discussions of the total ionization cross section
+in Sec. V, modification of the theory for ion targets in
+                                                                however, diverge when W          ~
+                                                                                                 0 or when W              ~
+                                                                                                                    T in the
+                                                                case of electron-electron collision.
+Sec. VI, and comparisons of our results with experiments           Of course, for a real atom, the cross section for ejecting
+in Sec. VII. Our conclusions are presented in Sec. VIII.        an electron with W = 0 is finite, and W cannot be equal
+Often applications of ionization cross sections require to-     to T because the binding energy must be overcome for a
+tal ionization cross sections only. In such cases, the total    bound electron to be ejected. With these restrictions in
+ionization cross sections calculated &om the present the-       mind, one can slightly modify the Rutherford and Mott
+ory can be recast into a simpler function of the incident       cross sections by replacing W by the energy transfer
+electron energy. This simpler form is discussed in the
+Appendix.                                                                                E=W+B,                                     (4)
+                                                               where  B is the binding energy of the ejected electron.
+          II. RUTHERFORD, MOTT) AND                            With this substitution, the modified Rutherford cross
+     BINARY-ENCOUNTER            CROSS SECTIONS                section for a subshell becomes
+
+                                                                           do(W, T)        do        4ma    Z N R
+              A. Rutherford cross section                                                                           E2'             (5)
+                                                                              dW           dE              T
+   The collision of a particle with charge Zqe with a free     where we have included the number of bound electrons,
+electron at rest is described by the Rutherford cross sec-     N, in the subshell. Similarly, the modified Mott cross
+tion [11]:                                                     section for a subshell is, after replacing W by E and T
+                                                               by T + B in the square brackets of Eq. (3), given by
+             d~(W, T)      4~a Z2R2     1
+                dW             T      W2'                           do (W, T)       do     47rao2R2N            1          1
+where W is the kinetic energy of the ejected electron, ao              dW         dE             T             E2    E(T —W)
+is the Bohr radius (= 5.29 x10 ~~ m), R is the Rydberg
+energy (= 13.6 eV), and T is the mduced kinetic energy                                               1
+                                                                                                                                    (6)
+defined by                                                                                      (T —W) 2
+                     T=mv /2,                            (2)   Note that, while the original Mott cross section, Eq. (3),
+with the relative speed e and the electron mass m re-          is an exact solution for the collision of two &ee electrons,
+gardless of the actual mass of the projectile. For incident    the modified Mott cross section, Eq. (6), is an approx
+electrons, T is the nonrelativistic kinetic energy.            imation for a bound target electron. In fact, Eq. (6)
+                                                               becomes a good approximation for ejecting a fast elec-
+                                                               tron only when W        »
+                                                                                       B.
+                 B. Mott cross section
+                                                                           C. Binary-encounter             cross section
+   Mott generalized the Rutherford cross section for the
+collision of two electrons [1,11] to take account of ex-          An extension of the Mott cross section to describe the
+change:                                                        ionization of a bound electron is to assign a velocity or
+                                                     YONG-KI KIM AND M. EUGENE RUDD
+
+momentum distribution to the target electron to repre-                             III. BINARY-ENCOUNTER-DIPOLE                                     (BED)
+sent the orbital motion of the bound electron. Although                                                              MODEL
+one can regard the Mott cross section itself as a formula
+that describes a binary collision, i.e. , a billiard-bali-like                    Both the Mott and the binary-encounter cross sections
+collision between two free electrons, it is more common in                     for electron-impact ionization can be recast as a series:
+a binary-encounter theory to associate some kind of mo-
+mentum or velocity distribution with the target particie.
+Such a momentum distribution is often derived from the
+                                                                                 do(WT)              S        .F„" t              1
+                                                                                                                                      1)" +
+                                                                                                                                                1
+                                                                                                                                                      . 15
+wave function for the target electron.
+                                                                                       dW            8                     (w +               (t —w)"
+   The symmetric form (i.e. , for the primary and sec-                            The term containing m + 1 represents the secondary
+ondary electrons) of the binary-encounter theory [4] dif-                      electrons ejected from the target during the collision
+fers from the Mott cross section in that it has an extra
+                                                                               while the term containing t —m describes the scattered
+term and introduces the average kinetic energy U:
+                                                                               primary electrons which have lost energy. Both types of
+                                                                               electrons are detected in experiment, and they are indis-
+der(E, T)      4xaoR N            1                  1                         tinguishable. As was mentioned earlier, the n = 1 term in
+   dE          T+ U+B         E2          E(T —W)                              Eq. (15) represents interference between the primary and
+                                                                               secondary electrons, and the n = 2 term arises &om close
+                                  4U                                           collisions. The n = 3 term accounts for the broadening
+                )T —wp                s   zm             )r —w)s )             of the energy distribution due to the intrinsic momentum
+                                                                               distribution of a bound electron being ionized.
+                                                                                  The Mott cross section corresponds to the following
+In Eq. (7),                                                                    choice of F„(t):
+
+                        —(P')/2
+                      U =
+                                                                                                                             1
+                                                                                                                         F2 ——,           F, =O,
+                                                                                                                              t
+where p is the momentum operator of the electrons in a                         and the binary-encounter                  cross section is reproduced        by
+subshell.                                                                      choosing
+   At this point, it is convenient to express cross sections
+in terms of energy variables in units of the binding energy
+B of the electrons in a subshell:                                                           t+ 1'              t + u+ 1                   3(t+ u+ 1)
+                                                                                 The total ionization cross section o;, which is obtained
+                t=T/B;                                                   (9)   by integrating  the SDCS [Eq. (15)] from w = 0 to
+                w =W/B;                                                 (io)     —
+                                                                               (t 1)/2,  reduces   to a simple expression
+                u=U/B;                                                  (11)
+                                                                                                 (t —1)j2 d
+                S = 4vrao&(R/B)             .                           (i2)                                   dtU
+                                                                                             0  de
+  With these reduced variables, the modi6ed Mott cross                                 = S[F&lnt+F2(1 —t ')+ 2Fs(l —t                               )].   (19)
+section becomes
+                                                                                  One can see that Eq. (19) with Eq. (16) or (17) leads
+        der(W, T)     do (w, t)
+                                                                               to the asymptotic (t )) 1) behavior o; -+ t ~, which
+          de           Bdu)                                                    does not agree with the predictions of the Bethe theory
+                      S                                    1                   nor with experiment. An example of this failure is shown
+                                                                               in Sec. VIID. A more realistic asymptotic t dependence
+                      Bt (w+ 1)2                 (w + 1)(t —w)
+                                                                               is predicted by the Bethe theory [3], viz. , t ~ lnt, which
+                                                                               arises from the dipole interaction.
+                                                                                  To correct this de6ciency, we consider the asymptotic
+                                  (t —w)'                                      case first. In the asymptotic region t )) zu, and hence the
+                                                                               (t —w) " terms may be ignored, i.e. ,
+  Similarly, the binary-encounter               cross section, Eq. (7),
+can be rewritten as                                                                                                  3
+                                                                                                          = S) F„(t)f„(w),                                (20)
+    do(W, T)             S                       1                1                                                m=1
+       dW           B(t + u+. 1)          (w +. 1)2              —
+                                                               (t w)2
+                              1                                                                                1
+                                                                                                 (w) =                            for n = 1, 2,
+                     (w+ 1)(t —w)                                                                        („+,).
+                      4u          1                  1                         whileF (t) and fs(w) are to be determined.
+                                                                        (14)
+                                                 (t —w)'
+                                                                    '
+                           (w + 1)'                             )                We now introduce the stopping cross section for ion-
+50                                     BINARY-ENCOUNTER-DIPOLE                       MODEL FOR ELECTRON-. . .                                        3957
+
+                                                                                                                                         i
+ization cr, t,-, which is defined by                                                    There is no function Fi(t) that will yield a t lnt de-
+                                                                                     pendence in both Eqs. (30)     and  (31).  Hence,  we  choose
+                             (~-~)/2                                                                                both  equations fall     faster
+            o.  .„—
+                  =B
+                         0
+                                       (u + 1)
+                                                     dtU
+                                                           duJ.              (22)
+                                                                                     Fq  to make  the first term in                      ofF
+                                                                                     than t lnt so as to become asymptotically negligible in
+                                                                                     both equations. The simplest way to accomplish this is
+  The asymptotic limits of cr; and O, t,. are obtained by                            to choose Fy oc t . This is consistent with the t de-
+substituting Eq. (20) into Eqs. (18) and (22):                                       pendence of Fz in the Mott and the binary-encounter
+                                                                                     cross sections provided that we make Fq negative, i.e. ,
+                 o; = S(Fi ln t + F2 + FsG),                                 (23)    make the interference term negative. If we now choose
+                                                                                     F2 oc t    as in the Mott and the binary-encounter cross
+where                                                                                sections, the second term in Eq. (30) becomes negligi-
+                                                                                                                                               i
+                                                                                     ble but the second term in Eq. (31) matches the t lnt
+                      G=           fs(uJ)duJ,                                (24)    dependence in the remainder of that equation.
+                               p
+                                                                                         With these choices for Fq and F2, the third term dom-
+and                                                                                  inates in the asymptotic equation for o, , Eq. (30), while
+                                                                                     the second and the third terms dominate in the asymp-
+         &sti    = SB [(ln 2) Fit + F2 ln t + F3H],                                  totic equation for o,t;, Eq. (31).
+                                                                                         The asymptotic expression for the SDCS in the Bethe
+where                                                                                 theory [14] is
+
+                  H=           m+1           3 m dm.                         (26)                       do         Slnt       1    df(uJ)
+                                                                                                                                                     (32)
+                                                                                                        dm          Nt m+ 1          dm
+The upper limits of the integration for G and H have                                 where df (uJ)/duJ is the difFerential oscillator strength.       On
+been extended to oo in the anticipation that fs(uJ) di-                              the other hand, the asymptotic limit of Eq. (20) is
+minishes rapidly enough as ur            ~
+                                   oo such that the asymp-
+totic part of fs(uJ) does not contribute to the asymptotic                                                   do'
+t dependence in Eqs. (23) and (25). This requires that                                                             = SFB(t)fs( ).                    (33)
+                                                                                                             de)
+fs(uJ) m uJ      with m & 2 for uJ     1.        »                                    Prom Eqs. (32) and (33), we get
+   The corresponding asymptotic cross sections derived
+by Bethe using the first Born approximation are [3,12]
+                                                                                                                          lnt       1       df
+                                                                                                   Fs(t)fs(~) =                                      (34)
+                              SQ lnt
+                         &i =                                                (27)
+                                   2     t                                              An obvious choice is to set
+where                                                                                             lnt
+                                                                                        Fs(t) =                    and
+         2BM;2                               R               1     df (uJ)
+          NR                                 B p           QJ+ 1    dtU                                                                              (35)
+                                                                             (28)     From this choice of fs (uJ), the definition of M2 [Eq. (28)],
+                                                                                      and Eq. (24), we get
+and
+                                                                                                             1             1      df (uJ)
+                        &sti   = 2SB lnt                                     (29)                            N            m+1      dm
+                                                                                                                                                     (36)
+                                             t                                                                      p
+                                                                                                             BM2
+    On the right-hand side (RHS) of Eq. (29), we have                                                                                                (37)
+used the asymptotic form of the Bethe cross section for
+                                                                                                             RN '
+o', i, which (unlike o', t;) includes excitations to both dis-                        and from Eq. (26)
+crete and continuum states. We made this approxima-
+tion for two reasons. The first is that the coeKcient of the
+t ln t term for ionization not only is dificult to calculate
+                                                                                                   0=—
+                                                                                                     1 df (ui)
+                                                                                                                           dm
+                                                                                                                                            N;
+                                                                                                                                            N'
+but will also be difFerent from one atom to another. The
+                                                                                      where
+second reason is that at high incident energy, ionizing
+collisions account for 80% or more of o', q [13], and hence
+using the asymptotic dependence of cr, t on the RHS of                                                                                                (39)
+Eq. (29) is a simple yet efFective approximation.
+      Matching Eqs. (23) and (25) with Eqs. (27) and (29)                             Earlier, we mentioned that fs(uJ) for io      1 should di- »
+ leads to                                                                             minish as m      with m             )
+                                                                                                                 2 so that the upper limits in
+                                                                                      Eqs. (24) aad (26) can be extended to oo. This require-
+                    Fg ln t + F2 + F3G           =—
+                                                  Q lnt
+                                                  2 t
+                                                        '                     (30)    meat is satisfied by our choice of fs(uJ) since df/duJ di-
+                                                                                      minishes in the asymptotic region as to    where m & 3.5
+                                    lnt
+           (ln2)Fit+ F2 lnt+FsH = 2                                                   [i5].
+                                     t
+3958                                                  YONG-KI KIM AND M. EUGENE RUDD
+
+   To find Fz(t), let F2 —a/t. Then, from the second and                           as in the Mott cross section. At present, it is not clear
+third terms of Eq. (31),                                                           what the appropriate symmetric form of the dipole in-
+                                                                                   teraction should be. We simply omit the exchange term
+                  aint          N; lnt       2lnt                                  (t —u))     in Eq. (15) until this question is resolved in
+                        t        ¹             t                                   the future. Besides, the exchange interaction becomes
+                                                                                   negligible at high incident energies where the dipole in-
+which leads to
+                                                                                   teraction is important.
+                            a = 2 —(N;/N),                                            Finally, we combine our choice for F„and fs with the
+                                                                           (41)
+                                                                                   symmetric binary-encounter cross section, Eq. (17), and
+or                                                                                 set
+           2 —(N;/N)
+                '                                   lnt                                                              2 —(N;/N)                      ln t
+ F2(t) =                        and   Fs(t) = t             for t   )) l. (42)                   F2
+                   t                                                                             t+1'                    t+u+1       '
+                                                                                                                                                 t+u+1
+   What we have done so far is basically to let the Fs f3
+term in Eq. (15) represent the dipole interaction. The
+Bethe theory normally is not used in a symmetric form,                               With Eqs. (15) and fs(u)) defined in Eq. (35), the
+i.e. , it does not have the exchange and interference terms                        SDCS of a subshell based on the BED model is given by
+
+
+                             do(W, T)                   S              (N, /N) —2 (       1       1
+                                                                                                +t—
+                                dW           B(t+ u+1)                   t+ 1      iu)+ 1             u))
+                                                                           1        1                   ln t       df (u))
+                                             +2 — N; N                 (w+ 1)~
+                                                                               +   —
+                                                                                 (t w)~
+                                                                                                 + N(w +
+                                                                                                                 1) dw
+                                                                                                                                                           (44)
+
+
+
+According to the binary-encounter        theory, the extra                         subshell of a target. Of these,           8
+                                                                                                                        and N are readily avail-
+terms in the denominators of Eqs. (43) u and 1—              —                     able from the literature. The values of N, and M; can
+represent the acceleration of the incident electron due                            be calculated from df/dhv The ave. rage kinetic energy U
+to the nuclear attraction. These extra terms are essen-                            needed in the BED model is strictly a theoretical quan-
+tial in producing reliable ionization cross sections for low                       tity, but can easily be obtained from wave function codes
+incident energies.                                                                 such as those developed by Froese-Fischer [18]. For one-
+    Now we look at the threshold behavior of the SDCS,                             electron atoms, the virial theorem can be used to deduce
+i.e. , the dependence as t            ~
+                                 1. Let t = 1 + At with                            U from the known binding energy, i.e. , U = B. However,
+b, t (( 1. Then, our choice of F„and f„(u)) leads to                               one should not assume the virial theorem to hold for each
+ [Rom Eq. (44))                                                                    subshell in atoms and molecules with complicated elec-
+                                                                                   tronic structures. The virial theorem holds only between
+                 cr,   (1+ At) = const x At                                (45)    the total potential energy and the totaE kinetic energy.
+                                                                                   Binding and kinetic energies for subshells of many atoms
+Although the Wannier theory [16] predicts o, oc (b, t) '                           and molecules are listed in Ref. [19]. Values of U for H,
+when At is extremely small, Eq. (45) represents a more                             He, H2, and Ne are included in Table I.
+macroscopic threshold behavior [17].                                                   Differential oscillator strengths are harder to get, a].-
+   To use the BED model, values of 8, U, X, and the dif-                           though total and partial values of df/dho for many atoms
+ferential oscillator strengths, df/Chu, are needed for each                        and molecules may be found in the literature.          Good
+
+  TABLE I. Power-series fit to differential oscillator strengths of H, He, Hz, snd Ne. [df/d(E/B) = ay + by + cy
++dy + ey + fy + gy, where y = B/E, E = photon energy. ] Numbers in square brackets are powers of ten, B (in eV)
+is the binding   energy, snd U (in eV) is the average kinetic energy.
+                   H                       He                   H2
+Coeff.             ls                       ls                  1erg              2p, I                2p, II
+                                                                                   4.8791
+     6           —2.24V3[ —2]                                                     —2.8820              —5.8514                1.7769
+     C            1.1775                   1.2178 [1]           1.1262            —7.4711[—1]           3.2930[2]             2. 8135                 5.2475
+                 —4.6264[ —1]             —2.9585 [1]          6.3982                                  —1.6788 [3]           —3.1510[1]              —2.8121
+                  8.9064[—2]               3.12S1[1]          —7.8055                                   3.2985 [3]               6.3469 [1]
+     f                                    —1.21VS[1]           2. 1440                                 —2.32S0[3]            —5.2528[1]
+     9                                                                                                                        1.5982 [1]
+  B               1.36057[1]               2.459[1]             1.S43[1]           2. 160[1]                2. 160[1]            4.847[1]             8.669[2]
+  U               1.360S7[1]               3.951[1]             2.568[1]           1.1602 [2]               1.1602 [2]           1.4188[2]            1.2S91[3]
+ M,               0.2834                   0.489                0.680                                       1.552                4.800[—2]            1.642[ —2]
+ N;               0.4343                   1.605                1.173                                       6.963                v. os6[ —1]          1.686
+
+ Ne(2p, I) covers photon energies from the 2p ionization threshold                    (21.60 eV) to the 2s ionization threshold                (48.47 eV), and
+Ne(2p, II) covers photon energies from 48.47 eV and above.
+ This number is the sum of 2p, I and 2p, II contributions.
+50                                 BINARY-ENCOUNTER-DIPOLE        MODEL FOR ELECTRON-. . .                                     3959
+
+
+sources are the book by Berkowitz [20] and the review                          M; = RN;/2B and Q = N;/N.                       (49)
+article by Gallagher et al. [21], &om which one can find
+original references. For convenience, we have listed values          Note that the specific relationship between N; and Mz
+of   ¹ and M; for H, He, Ne, and H2 in Table I and also           (and Q) above is a result of choosing df/dm to have the
+presented values of df /d(E/B), where E is the photon en-         special form in Eq. (46). Equations (49) are not expected
+ergy, in the form of simple polynomials of B/E. The dif-          to hold for all subshells in targets with complicated shell
+ferential oscillator strength for H is a fit to the exact the-    structures.
+oretical values, and the others are Sts to the experimental          After substituting Eqs. (46) (first term only) and (47)
+values compiled and recommended by Berkowitz [20]. We             into Eq. (35), we have
+emphasize that we have used experimental df/du& when
+they are more reliable than calculated ones, particularly                              f.(~) = /(~+1)'
+near the threshold.      Although any form of theoretical         which puts us back to the form of the binary-encounter
+df/dhu can be used, analytic fits are certainly more con-         cross section, Eq. (14), except that 4u/3 is now replaced
+venient to use than nhhhhherical tables or graphs.
+                                                                  by Q. This similarity between Eq. (50) and the binary-
+                                                                  encounter theory is probably the reason for the appar-
+                                                                  ent success in the early days of the binary-encounter and
+         IV. BINARY-ENCOUNTER-BETHE                (BEB)          other related classical theories (e.g. , by Gryzinski [23])
+                              MODEL
+                                                                  on these targets with simple shell structures.
+                                                                     Since fs will always be used with Fs as a product [see
+   Although the BED model is substantially simpler to             Eq. (34)], one can transfer Q in Eq. (50) to Fs to simplify
+use than most ab initio theories for electron-impact ion-         our notation for fs
+ization, it is often difficult to get the differential oscilla-
+tor strengths, particularly subshell by subshell. For such
+                                                                   F(t)=                        and        fs(u') = 1/(hs+1) . (51)
+cases, we ofFer a simplified version, to be referred to as the
+binary-encounter-Bethe      (BEB) model, in which a simple         With Eqs. (15), (43), (49), and (51), the SDCS in the
+function is used for the fs(m) in Eq. (20).                       BEB model is given by
+   Sometimes, the values of N; and/or M; for an atom are                                    3
+known but not the details of the corresponding df/du&,
+because N; and M; can be determined kom appropriate                              =~).F (t)[f ( )+f (t — ))                     (52)
+sum rules without df/dm if accurate oscillator strengths
+for discrete excitations are known [22]. In general, there         where
+is no simple relationship between N; and M2 and hence
+knowing N; does not automatically lead to the value of                f (~) = (u'+1)                  f»(t —~) = (t —ho)       (53)
+Mz unless the details of df/dm are also known.
+   In the BEB model, we asshhhhhe a simple form of df/du),
+                                                                        P2                            2 —Q                  qlnt
+which can be integrated to obtain N; and M~. How-                  Pq- t+1'
+ever, these quantities can be replaced by better values if                                            t+u+1                t+u+1
+they are known. The BEB model even ofFers help when                                                                            (54)
+nothing is known about N;, M~z, and df/dtu, though the
+                                                                      Equations (54) are most useful to estimate the total
+reliability of resulting cross sections may suffer in this
+                                                                   ionization cross section (TICS) when only the value of
+case.
+                                                                   Mhz (and thus Q = 2BMz/NR) is known. As a further
+   As will be shown in Sec. VII, deferential oscillator
+                                                                   approximation if M; is not available, we can set Q =
+strengths for H, He, and Hz have simple shapes (except
+for resonances which are not important for our purpose)
+                                                                   1. This is a useful approximation that will still lead to
+                                                                   ionization cross sections of correct orders of magnitude
+which can be represented by inverse powers of m + 1,
+                                                                   when nothing is known about difFerential or total dipole
+starting from (m+ 1) 2, that is,
+                                                                   oscillator strengths.
+                 d             b
+                                                           (46)
+                 dm       (w+ 1)                                    V. TOTAL CROSS SECTION FOR IONIZATION
+where b is a constant.        If we retain only the arst term,               BY ELECTRON IMPACT
+then
+                                                                    Using Eqs. (15) and (43) with the F„and f from the
+                                   de                              BED model, Eq. (18) reduces to a simple expression for
+               N;=b
+                          0    (~+ 1)' =b,                 (47)
+                                                                   0;(t) for all t:
+and                                                                                         S
+                                                                           cr;(t) =
+                     Rb             dm      Rb                                        t+u+1 D(t) lnt
+                                                           (48)                                   W
+
+
+
+                      B 0 (m+ l)s           2B                                         t'       N i    (t —1     lnt )
+By combining Eqs. (28), (47), and (48), we get                                                  N)     g   t    , +, )I        (55)
+3960                                                              YONG-KI KIM AND M. EUGENE RUDD
+
+where                                                                                            VI. MODIFICATION FOR ELECTRON-ION
+                                                                                                                    COLLISIONS
+                                                                                      (56)
+                        p                    tU+1                                                We chose our F„(t) to have t+u+ 1 in the denominator
+and N; is defined by Eq. (39).                                                               while the Mott and Bethe cross sections have only t. Our
+   Note that the above cross section is for a given sub-                                     choice originated &om the symmetric form of the binary-
+shell, and these cross sections must be summed over all                                      encounter theory [25] in which the incident electron was
+subshells that contribute to ionization. In practice, only                                   assumed to gain a kinetic energy of U+ B before the col-
+the valence shell and a few subshells below it will make                                     lision to make it equivalent to the target electron, which
+significant contributions to 0, .                                                            has a potential energy of —~U+ B]. This denominator,
+   Equation (55) has the same asymptotic form as the                                         t+u+1, reduces the cross section, which is the desired ef-
+Bethe theory [Eq. (27)] since from Eqs. (28) and (56)                                        fect since most collision theories overestimate ionization
+D(oo) = (B/RN)MP. The advantages of the BED for-                                             cross sections near the peak. As is shown later, much
+mula for 0; over the Bethe theory                         —
+                                      or other variations of                                 of the success of our model for neutral targets can be
+                    —
+the Bethe theory are that the BED formula (a) is de-                                         attributed to this denominator.
+signed to approach the low t region with an appropriate                                         The symmetric binary-encounter theory and the BED
+threshold behavior, (b) includes the interference term be-                                   model do not distinguish between collisions with neutral
+tween the direct and exchange interactions, which man-                                       atoms and those with ions, as far as the incident electron
+ifests itself as the lnt/(t + 1) term, and (c) leads to a                                    is concerned, although the target electron description dif-
+reduction in the dipole contribution D(t) as t decreases.                                    fers through U, B, and df/dpi The co. rrect theory should,
+In Fig. 1, we compare the o; for H deduced Erom the BED                                      however, also alter the description of the incident electron
+model with other theories as well as the experimental ~,                                     since the long-range Coulomb force between the incident
+measured by Shah et al. [24]. Note that the BED model                                        electron and a target ion should distort the wave func-
+does not contain any empirical or adjustable parameters.                                     tion of the incident electron for its entire path, while such
+The TICS's based on the BED model for some simple                                            distortion should occur only in the vicinity of a neutral
+atoms also agree well (6 10%%uo or better in most cases)                                     target. The Coulomb-Born and the distorted-wave Born
+with available accurate measurements [see Sec. VII].                                         approximations are examples in which such distortions
+   The TICS based on the BEB model is given by                                               are included. Qualitatively, the charge density of the in-
+                                                                                             cident electron is attracted toward the target ion, thus
+                                                                                             increasing the overlap between the charge densities of the
+                                                                                             incident and target electrons. This results in increased
+                                                                                             cross sections.
+                                                                                                Indeed, we found the BED cross sections with t+ u+ 1
+                                                                                      (57)   in the denominator for the ionization of He+ and Li2+
+                                                                                             are too low compared to reliable experiments [26—       29] as
+where Q is defined by Eq. (28).                                                              is shown later. Instead, we found that replacing t+ u+ 1
+                                                                                             in Eqs. (43) and (54) with t + 1 resulted in better agree-
+                                                                                             ments with experiment. At this point, we cannot prove
+                                                                                             that t + 1 is the correct denominator for ions. Further-
+                                                                                             more, a preliminary application of the BED model to Li+
+                                                                                             slightly favors the use of t + u + 1 in the denominator.
+                                                                                             Hence we tentatively propose to use, for target ions with
+         0.8-
+                                                                                             open-shell valence electrons,
+                                                                                                                          2 —N;/N
+   E
+  ocv
+         0
+                                                                                                                                                   lnt
+
+   C
+    O
+                                                                                                                             t+1                  t+1
+   0
+   U
+         04-                                                                                                                                             (58)
+   tti
+   UJ
+                                                                                             for the BED model, and
+         0.2—
+                                                                                                                          2 —Q
+                                                                                                                                       I"s —
+                                                                                                                          i+1         4+1 (59)
+         0.010'          I   i   a   s   I    I       I   I   I   I   I   I   I   I
+
+
+                                     10                                       ) 03           for the BEB model. We recommend to use t+u+ 1 in the
+                                             T (ev)
+                                                                                             denominator for ions with closed-shell conagurations.
+  FIG. 1. Total cross section for ionization of H by electron                                   Actually, the differential dipole oscillator strength in
+impact. The abscissa is the incident electron energy T in                                    units of appropriate binding energies, df/d(E/B), for
+eV. Filled circles, experimental data by Shah et al. [24]; solid                             one-electron ions is independent of the nuclear charge Z.
+line, BED cross section; short-dashed line, BEB cross sec-                                   The coefficients for the hydrogen atom in Table I may
+tion; medium-dashed line, Gryzinski s classical cross section                                also be used for this universal df/d(E/B) in powers of
+[23]; long-dashed line, distorted-wave Born cross section with                               B/E. This is a fit to the exact theoretical expression for
+electron exchange correction by Younger [34].                                                the photoionization of a ls electron in a hydrogenic ion.
+50                                 BINARY-ENCOUNTER-DIPOLE           MODEL FOR ELECTRON-. . .                                        3961
+
+
+The data in Table I can be used to calculate ionization              tion.  However, this scaling of the dipole contribution
+cross sections using Eqs. (58).                                      will be difFerent from one atom to another. Because of
+   For all one-electron ious [22], M2 = 0.2834/Z and                 the complexity of this scaling, one cannot simply add the
+hence Q = 0.5668. With these results, we have a simple,              dipole contribution to the Rutherford (or the Mott) cross
+universal formula for the ionization of one-electron ions            section to "synthesize" SDCS. Nevertheless, the Platz-
+based on the BEB model:                                              man plot provides many useful clues to the reliability of
+                                                                     experimental as well as theoretical do/dW, particularly
+           1.4332               1.4332          0.5668 ln t
+                                                                     when reliable values of difFerential oscillator strengths are
+        (t+1)"                  t+1 '             t+1                known [31].
+                                                                        The success of the BED model is achieved by fixing this
+                                         with t = T/Z     R. (60)    "scaling" between difFerent components of the ionization
+                                                                     cross section through Eqs. (43).
+Equations (60) should be used with          f
+                                          defined by Eqs.               We present an example of the Platzman plot for the
+(53), and the matching BEB total ionization cross section            ionization of the hydrogen atom by 60-eV electrons in
+for a one-electron atom is given by                                  Fig. 2. Experimental electron-impact data by Shyn [32]
+                                                                     are presented in Fig. 2(a) and the corresponding (ex-
+      4xa2
+             [Fi(t) lnt+F2(t)(1 —t        )+ 2Fs(t)(1 —t      )],    act) differential oscillator strength of hydrogen in Fig.
+                                                                     2(b). We can see immediately that the shapes of the two
+                                                                     curves are very similar, indicating that dipole contribu-
+                                         with t = T/Z2R.      (61)
+                                                                          2.0-    (o) e on H, T=60 eV
+     VII. COMPARISONS %6TH EXPERIMENTS
+                                                                          1.6-
+   Before we compare the BED and BEB cross sections
+                                                                          1 02
+with available experimental data, we discuss a simple and
+powerful way to graphically compare theoretical and ex-
+perimental results first proposed by Platzman to graph-                   0.8-
+                                                                                                                             Mott
+ically represent SDCS's [2,30]. In his method, which
+we shall refer to as the Platzman plot, the ratio Y of                    0.4-
+do(W, T)/dW to the Rutherford cross section, Eq. (5)
+with N and Zq equal to 1, is plotted as a function of the                 0.0
+inverse energy transfer R/E:
+                                                                                  (b) hv on H
+                        do(W, T) T E2                                     0.8—
+                                                              (62)
+                           dW   4ma20 R
+                                                                          0.6-
+where do/dW      can either be experimental or theoreti-              U
+
+cal. If the target is a multishell atom, the lowest bind-
+ing energy is used to define E in Eq. (62). Since                    4J   0.4
+do(W, T)/dW = do(E, T) jdE,
+                                                                          0.2-
+           (R
+            —=&         T         der(W)
+                                         dW=
+                                                T
+     Ydi                                             n;. (63)
+           i,E)       4z ao2R       dW
+                  i
+
+                                             4vra2oR
+                                                                          0.0      I              I           I    I     I           I
+
+                                                                                  0.4     0.5    0.6      0.7     0.8   0.9         1.0
+In other words, the area under the Platzman plot is pro-                                                R/E
+portional to the TICS. This fact can be used to normalize
+do/dW because o; is often known with a better accuracy                  FIG. 2. Energy distribution of secondary electrons from H
+than do/dW from independent measurements.                            by electron impact. The abscissa is the inverse of the energy
+                                                                     transferred to the target, E, in rydbergs. (a) Platzman plot
+   Similarly to the physical interpretation of the dipole
+                                                                     of the SDCS at T = 60 eV. Filled circles, experimental data
+oscillator strength, Y can be interpreted as the effective
+                                                                     by Shyn [32j; solid line, BED cross section; short-dashed line,
+                                                                     BEB cross section; medium-dashed line marked "Ruth, " the
+number of target electrons participating in an ionizing
+                                                                     Rutherford cross section; long-dashed line marked "Mott, "
+collision. In this way, we expect that the value of Y will
+approach the number of valence electrons as W )& B pro-              Mott cross section. Shyn's data were renormalized so that
+vided that the valence shell contributions dominate the                                         —
+                                                                     the integrated cross section which is proportional to the area
+TICS as is the case in most atoms and molecules. For                 under the data points between R/E = 1 and 0.370 matches —
+slow secondary electrons, the shape of the Platzman plot             the total ionization cross section at T = 60 eV in Fig. 1. (b)
+is expected to follow the shape of the diH'erential oscilla-         Differential oscillator strength df/dE for ionization of H(ls).
+tor strengths (multiplied by the energy transfer) "scaled"           The ordinate is the dipole function E(df/dE) that matches
+by some function of t and superposed on the contribu-                the dipole contribution in a Platzman plot. The energy trans-
+tions &om close collisions, i.e. , the Rutherford cross sec-         ferred, E, is the actual photon energy.
+3962                                    YONG-KI KIN AND M. EUGENE RUDD
+
+tions are prominent at the incident energy of T = 60 eV.      for the hydrogen atoxn to one-electron ions as outlined in
+The Mott cross section [Eq. (6)] is marked "Mott, " while     Sec. VI.
+the Rutherford cross section [Eq. (5)] is marked "Ruth. "        Experimental TICS's for He+ and Li + are available
+   To match the accurate TICS measured by Shah et al.          [26—29]. In Fig. 3, we compare our BED cross sections
+[24], however, the data by Shyn have been renormalized        for total ionization using the t + 1 denominator (solid
+to the height shown in Fig. 2(a). The area under Shyn's       line) and those using the t+ u+ 1 denominator (medium-
+data between the threshold (R/E = 1) and the upper            dashed line) with the experiment [26] as well as with
+limit of the secondary electron energy (R/E = 0.370)          Younger's distorted-wave Born cross section (dot-dashed
+reproduces the electron-impact o; measured by Shah et         line) [34] and Gryzinski s classical cross section (long-
+aL [24], o;(expt. ) = 6. 16 xlO 2i m2. The BED model          dashed line) [23]. While both BED and BEB cross sec-
+leads to 0;(BED) = 6.47 x10 2 m2, while the BEB re-           tions with the t + u+ 1 denominator are lower than the
+sult is a;(BEB) = 6.12 x10 i m2 for Q = 0.5668 and            experimental data near the peak, the BED cross section
+6.60 x10 i m for Q = 1.                                       with the t + 1 denominator is in good agreement, as we
+   Note that it is very simple to extrapolate the electron-   have discussed in Sec. VI. Gryzinski s cross section is
+impact data for slow secondary electrons, W & 5 eV,           remarkably close to our BED cross section, but this is an
+using the shape of the dipole contribution in Fig. 2(b).      accidental agreement, in view of the disagreement seen
+This possibility is important because most experimen-         in the case of H and H2, for instance. The cross sections
+tal data on secondary electrons are either unavailable or     for the ionization of He+ measured by De&ance et aL [27]
+unreliable at W  (   5 eV.
+   Figure 2 clearly demonstrates the power of the Platz-
+                                                              and those by Achenbach et aL [28] are in good agreement
+                                                              with those by Peart et aL [26] and hence with our BED
+man plot in (a) checking the reliability of experimen-        model with the t + 1 denominator.
+tal cross sections, (b) normalizing the overall magnitude,       As is shown in Fig. 4, the BED cross section with the
+and (c) extrapolating do/dW to values of W inaccessi-         t + 1 denominator (solid line) is in good agreement with
+ble to experiments, as long as the dipole contribution is     the experimental data by Tinschert et al. [29]. The BED
+discernible.                                                  cross section with the t+ u+ 1 denominator (long-dashed
+                                                              line) is too small, while Gryzinski's classical cross section
+                                                              (mediuin-dashed line) [23] merges with experiment only
+                   A. Hydrogen atom                           beyond the peak.
+
+   In Fig. 1, the BEB cross section (short-dashed line)
+nearly coincides with the experimental 0; [24] while the                                            C. Helium atom
+BED cross section (solid line) is slightly higher than the
+experiment, though still within the experimental error           In Fig. 5, we compare our BED cross section (with
+limits. It is well known that the plane-wave Born cross       the t + u + 1 denominator for a neutral target) for the
+section overestimates the peak cross section by about         ionization of He with experimental data by Shah et al.
+65% [33]. The long-dashed line is the distorted-wave          (filled circles) [35] and those by Montague et al. (filled
+Born cross section that includes electron exchange cor-       triangles) [36].
+rection by Younger [34]. The medium-dashed line is the           Again, we see excellent agreement between the BED
+cross section based on Gryzinski's classical theory [23].     cross section and the experimental dna. The distorted-
+   Although the BEB cross section for the total ionization
+appears to agree better with the experiment than the                   Q, 06   I   I   1   I   I
+
+
+BED cross section, Fig. 2(a) indicates that the shape of
+the experimental SDCS's by Shyn [32] is in better agree-               0.05-                                                    e on He'
+ment with the shape of the BED model (solid line) than           E
+that of the BEB model (short-dashed line). The impor-                  P.04-
+tance of using the correct df/dm will become more ap-
+parent when we compare the SDCS from the BED model               o     0.03-
+                                                                 0
+with other experimental data (see Sec. VIIE).                     07
+
+
+   At high incident energies, the dipole contribution to
+                                                                 Ch
+                                                                 g     002-
+          —
+the SDCS the difFerence between the solid line and the
+                               —
+Mott cross section in Fig. 2(a) increases while the Mott               0.01
+cross section remains almost constant, making the overall              p pp                           I         I   i   a   I      I   I   C   I   I   I   I
+
+
+
+shape of the Platzman plot strongly resemble the shape                                         10                       10                                 1P'
+of the dipole function in Fig. 2(b).                                                                        T (ev)
+
+                                                                 FIG. 3. Total cross section for ionization of He+ by elec-
+                                                              tron impact. Filled circles, experimental data by Peart et al.
+                  B. One-electron   ions
+                                                              [26]; solid line, BED cross section with the t+ I denominator;
+                                                              medium-dashed line, the same with the t + u + 1 denomina-
+   In the nonrelativistic form, the difFerential oscillator   tor (see Sec. VI); long-dashed line, Gryzinski's classical cross
+strengths of hydrogenic ions scale as a function of     Z,    section [23]; dot-dashed line, Younger's distorted-wave Born
+and hence it is simple to extend the BED cross section        cross section [34].
+50                            BINARY-ENCOUNTER-DIPOLE                                               MODEL FOR ELECTRON-. . .                                         3963
+
+
+              12
+
+              10-                                                                                                    e on He
+     E                                                                                                      s- T=500eV
+  CV
+     I                                                                                                                                            Ji
+  C)
+
+         C
+         0                                                                                            &-    4-                   ~    II+
+         0
+     M
+         M
+
+
+     O
+         (6
+         O                                        e on Li++
+
+                                                                                                                                                        I
+               0                                                                              1O'           0           I         I          I                  I
+
+
+
+                  10                                                                                        0.0        0.1       0.2        0.3        0.4     0.5   0.6
+                                   T (ev)                                                                                                   R/E
+
+   FIG. 4. Total cross section for ionization of Li + by elec-                                        FIG. 6. Energy distribution of secondary electrons from
+tron impact. Filled circles, experimental data by Tinschert et                                      He at T = 500 eV. This is a Platzman plot of SDCS of He.
+al. [29]; solid line, BED cross section with the t+ 1 denomina-                                     Solid line, BED cross section; filled circles, experimental data
+tor; long-dashed line, the same vrith the t+u+ 1 denominator                                        by Opal et al. [37]; Blled triangles, data by Goruganthu and
+(see Sec. VI); medium-dashed line, Gryzinski's classical cross                                      Bonham [38]. The small peak at R/E           0.23 arises from the
+section [23].                                                                                       autoionization of the doubly excited state 2s2p.
+
+
+wave    Born cross section (medium-dashed            line) by                                       have indicated their presence by including such details
+Younger [34] overestimates the peak cross section.                                                  seen in photoionization experiments in the dipole func-
+   A Platzman plot of the SDCS of He by 500-eV elec-                                                tion E(df/dE) we have used. The shape and height of
+trons is presented in Fig. 6. The solid line is our BED                                             such resonances in SDCS's, however, would have been in-
+cross section, the filled circles are experimental data by                                          correct because the BED model does not account for the
+Opal et al. [37], and the filled triangles are those by Goru-                                       intricate interference between the doubly excited states
+ganthu and Bonham [38]. One can see from the areas in                                               and the background continuum.
+the Platzman plot that the data by Opal et aL lead to
+too large a total cross section, while the normalization of
+the Goruganthu-Bonham         data seems to be correct. The                                                                  D. Hydrogen molecule
+advantage of a Platzman plot is amply demonstrated by
+the small peak at R/E         0.23, which represents the au-                                           In Fig. 7, we compare our BED cross section (solid
+toionization of the doubly excited 282@ state. The overall                                          line) for the ionization of Hz with electron-impact exper-
+shape of the Platzman plot comes from that of the dipole                                            imental data by Rapp and Englander-Golden          [39]. Al-
+function E(df/dE) for He, which is similar in shape to                                              though the BED cross section is somewhat smaller than
+that shown for H in Fig. 2(b), though the magnitude and                                             the experimental data before reaching the peak, agree-
+abscissa are very difFerent from those for H.                                                       ment between our theory and experiment is still far better
+   The BED model is too simple to account for sharp                                                 than any theoretical efForts made in the past. Gryzin-
+autoionization peaks and resonances, although we could                                              ski's classical cross section (long-dashed line) overesti-
+
+
+
+                                                                                                            1.2-
+                                                                                                                                                            e onH2
+         E
+                                                                                                            1.0-
+     O                                                                                                O
+              0g                                                                                      cz
+         O
+                                                                                                      p     o.  s-
+         C                                                                                             C
+                                                                                                       0
+                                                                                                            0.6-
+         O
+         0    0.2-                                                                                     O
+         0)
+         V)                                                                                           M
+                                                                                                       to
+                                                                                                            04
+         o    o                                                                                       O
+                                                                                                            0.2-
+
+              0.010'      I    I      I   ~   I   I   I   ~   ~
+
+
+
+                                                              1O'
+                                                                  I   I   I   I   I   ~   I   I
+                                                                                                            0.0
+                         10                                                                   10               10                            10~                     1 03
+
+                                   T (ev)                                                                                                   T (ev)
+
+   FIG. 5. Total cross section for ionization of He by electron                                        FIG. 7. Total cross section for ionization of Hz by elec-
+impact. Filled circles, experimental data by Shah et aL [35];                                       tron impact. Filled circles, experimental data by Rapp and
+Slled triangles, data by Moutague et al. [36]; solid line, BED                                      Englander-Golden [39]; open squares, calculations by Schultz
+cross section (with the t + u+ 1 denominator for a neutral                                          et al. [40] based on the classical trajectory Monte Carlo
+target); medium-dashed line, Younger's distorted-wave Born                                          (CTMC) method; solid line, BED cross section; long-dashed
+cross section [34].                                                                                 line, Gryzinski's classical cross section [23].
+3964                                                       YONG-KI KIN AND M. EUGENE RUDD
+
+mates the peak cross section. The squares represent the
+classical trajectory Monte Carlo (CTMC) cross section
+calculated by Schultz et al. [40], which agrees well with                           08                                                       e on Ne
+experiment &om threshold to the peak. The CTMC cross                           E
+                                                                                                                       .ill& "~—
+section begins to fall below the experimental data beyond                           o. s ]-
+the peak because CTMC cross sections lack the dipole
+contribution that increases at high incident energies.                         II   0.4 [-
+   A Platzman plot of SDCS at T = 100 eV is presented
+in Fig. 8. Two sets of experimental data are available at
+                                                                                    0.2 "
+this incident energy, those by Shyn et at. [41] (filled cir-
+cles) and those by DuBois and Rudd [42] (filled triangles).
+Both sets of experimental data indicate a departure from                            0.0                                             I   I        I   I   I   I       I   I
+
+
+
+                                                                                        10'                           10                                                 10'
+the expected shape for slow secondary electrons, TV & 10                                                               T (ev)
+eV. Since the lowest secondary electron energy measured
+by DuBois and Rudd is TV = 4 eV, their data must be                           FIG. 9. Total cross section for ionization of Ne by elec-
+extrapolated to the threshold, R' = 0 eV, before the                       tron impact. Solid line, BED cross section; filled circles, ex-
+                                                                           perimental data by Rapp and Englander-Golden        [39]; filled
+corresponding integrated cross sections, o., at T = 100
+                                                                           triangles, data by Wetzel et al. [43].
+eV, can be determined. Judging from the area under the
+Platzman plot, the data by DuBois and Rudd would lead
+to o, at T = 100 eV, signi6cantly lower than that shown                    from the shape of the dipole function E(df/dE)   while-
+in Fig. 7. As shown in this example, the Platzman plot                     the data by DuBois and Rudd for slow secondaries are
+provides an effective guide to extrapolate SDCS's to the                   too low, as they themselves indicated [42].
+threshold, where experimental difEculties are the great-                      The overall shape of the Platzman plot with a peak                     —
+est.                                                                       at R/E                   —
+                                                                                      0.2 refiects the shape of E(df/dE). Had we
+                                                                           used the BEB model, the shape of the Platzman plot
+                                                                           would have resembled that shown in Fig. 2.
+                               E. Neon atom
+
+   The TICS is compared in Fig. 9, where the BED cross                                                   F. Water molecule
+section (solid line) overestimates o;. at low incident en-
+ergies, but agrees better with the measurement by Rapp                        In Figs. 11 and 12, it is seen that the BEB model
+and Englander-Golden      39 (filled circles) than the exper-              may also be applied quite successfully to molecules with
+iment by Wetzel et at. 43 (filled triangles).                              several molecular orbitals. Using Q = 1 and values of
+   In Fig. 10, the SDCS's at T = 500 eV are compared.                      B and U from Rudd et al. [19], the contributions to the
+The solid line is the BED cross section, while the filled                  SDCS's and TICS's from the five molecular orbitals were
+circles are the experixnental data by Opal et al. [37], and                calculated and then summed. The total cross section is
+the filled triangles are those by DuBois and Rudd [42].                    shown in Fig. 11 as a solid line. Considering the spread
+The magnitudes of both sets of experimental data are                       among the various experimental values, the agreement is
+too small to match the TICS's in Fig. 9. The data by                       satisfactory.
+Opal et al. resemble the expected shape which comes              —            In Fig. 12, the SDCS's for T = 1500 eV are com-
+
+
+
+
+                   e       On H2
+                   T = 100 e
+
+
+              il                                                                                               k k~
+                                               k k k
+                                                       k
+                                                                                              ~I                           k k lk
+              ~~It
+
+                                                                                                                                        e on Ne
+                                                                                                                                        T=500 eV
+                                                                                                                                             I                   I
+                                                I
+                                                                                    0                     I      I             I
+
+
+        0.2          0.3           0.5         0. 6        0.7   0.8                0.0            0.1   0.2   0.3            0.4           0.5              0.6
+                                         R/E
+
+   FIC. S. Energy distribution of secondary electrons from Hz                 FIG. 10. Energy distribution of secondary electrons from
+at T = 100 eV. This is a Platzman plot of SDCS of H2. Solid                 Ne at T = 500 eV. This is a Platzman plot of SDCS of Ne.
+line, BED cross section; 61led circles, experimental data by                Solid line, BED cross section; 6lled circles, experimental data
+Shyn et al. [41]; filled triangles, data by DuBois and Rudd                 by Opal et al. [37]; filled triangles, data by DuBois and Rudd
+[42].                                                                       [42].
+50                                          BINARY-ENCOUNTER-DIPOLE                      MODEL FOR ELECTRON-. . .                                 3965
+
+
+                                                                                         present the details of the SDCS beyond the "operational"
+          2.5                                                                            definition of the upper limit, W     = (T —B)/2, of the
+                    II
+                                            ~
+                                                                                         secondary electron energy.
+                             T
+          2.0                    II   ~~                   e       on H20
+                         T
+oE
+CV
+I
+
+          1.5—
+                                                                                                          VIII. CONCLUSIONS
+     C
+     0                                                                                      %'e have successfully combined the binary-encounter
+     O    1.0
+                                                                                         theory and the dipole interaction     —  referred to as the
+    M
+     Ol
+
+                                                                                         binary-encounter-dipole                —
+                                                                                                                     (BED) model to provide a re-
+     0
+     L
+          05                                                                             markably reliable method to predict singly differential
+    O                                                                                    and total ionization cross sections. Both types of cross
+          0.0                                                                            sections have three basic components: the electron ex-
+            10                   02                    10'                  10'          change term, the hard collision term, and the dipole in-
+                                                T   (eV)                                 teraction term. The ratios between these components
+                                                                                         were determined by requiring the asymptotic total ion-
+    FIG. 11. Total cross section for ionization of water vapor by                        ization cross section and the stopping cross section to
+electron impact. Filled triangles, experimental data by Duric                            agree with the asymptotic form given by the Bethe the-
+et aL [48]; filled squares, data by Bolorizadeh and Rudd [49];                           ory.
+filled circles, data by Schutten et aL [50]; solid line, BEB cross                          The BED model derives the differential and total ion-
+section.                                                                                 ization cross sections for each subshell of the target atom
+                                                                                         or molecule using the binding energy, average kinetic en-
+pared with experimental data of Hollman et al. [44] and                                  ergy, and the differential oscillator strength of the sub-
+with calculations using the Miller model [5,44]. The peak                                shell. One can deduce the required differential oscilla-
+near 500 eV is &om K Auger transitions in oxygen and                                     tor strengths either &om reliable photoionization exper-
+the sharp drop near 1000 eV results &om the fact that                                    iments or &om accurate theoretical calculations.          For
+1500-eV incident electrons which have ionized K elec-                                    atomic ions with an open-shell configuration, we found
+trons cannot have energies above that value. There are                                   that a minor modification brought the BED and experi-
+similar drops in the 1470—1490-eV region due to the other                                mental cross sections into good agreement. For the cases
+molecular orbitals, but they are not resolved. Note that                                 we have tested, the BED cross sections agree very well
+the ordinate in Fig. 12 is the ratio of do'/dW to the                                    with experiment &om threshold to high incident ener-
+Mott cross section, unlike the Platzman plot. Also, the                                  gies. The BED theory does not contain any fitted or
+abscissa is the secondary electron energy itself, R', to                                 adjustable parameters and is not a perturbation theory.
+                                                                                         It works well at low incident energies because it is closely
+                                                                                         linked to the Mott theory, which includes the Coulomb
+                                                                                         interaction to all orders, although it was derived for a
+                                                                                         &ee-electron target.
+           25                                                                               When details of differential oscillator strengths are
+                                                                                         not available, we offer the simple binary-encounter-Bethe
+           2O                                                                             (BEB) model. This model provides ionization cross sec-
+                                                                                         tions for targets which are theoretically difficult to han-
+            15                                                                           dle, e.g. , polyatomic molecules. The shape of the differ-
+                                                                                         ential ionization cross section based on the BEB model
+            10                                                                           may not be realistic, but we found that the corresponding
+                                                                                         total ionization cross sections are reasonable.
+                                                                                            A systematic application of the BED model to more
+                                                                                         complex targets than those presented here is needed to
+                                                               I
+
+                                                                                         understand the validity of this simple but remarkably ef-
+                                      5QO                    1000                 1500   fective model. To do so, not only reliable total photoion-
+                                                W   (eV)                                 ization cross sections but also cross sections for each of
+   FIG. 12. Energy distribution of secondary electrons from                              the outer subshells of atoms and molecules, e.g. , those
+water vapor at T = 1500 eV. The ordinate is the SDCS [a (W)]                             measured using a synchrotron light source, are needed.
+divided by the corresponding Mott cross section [O'M(W), Eq.                                Further comparisons of the BED theory with experi-
+(6)]. Filled circles, experimental data by Hollmau et aL [44];                           mental 0;. of He-like and Li-like ions available in the liter-
+dashed line, calculations using the Miller model [5,44]; solid                           ature [26,45 —  47] should reveal whether the use of the t+ 1
+line, calculations using the BEB model, Eqs. (52)—(54). Us-                              denominator is necessary or sufficient to represent the
+ing the method described by Hollman et aL [44], the five                                 distortion of the incident-electron wave function. Work
+highest-energy experimental points have been corrected for                               is in progress to determine reliable differential oscilla-
+small-angle scattered primaries which were not detected. The                             tor strengths for these ions so that the BED model can
+bumps at about 65G, 1100, and 1300 eV in the experimental                                be applied. Experimental data on the ionization of other
+data are artifacts due to the coarseness of the angular mesh.                            one-electron ions would be welcome. Currently, there are
+3966                                      YONG-KI KIM AND M. EUGENE RUDD
+
+no experimental SDCS's of one-electron ions to compare            which only total ionization cross sections are needed, the
+with our theory.                                                  TICS can be fitted to an even simpler function of t than
+   With the BED and BEB models, both singly difFeren-             that used in Eq. (55), by avoiding the summation over
+tial and total ionization cross sections can easily be cal-       subshells, using a single t defined by the lowest binding
+culated for most atoms, atomic ions, and molecules. The           energy B, and by omitting u.
+accuracy of electron-impact ionization cross sections pro-           When a reliable TICS is known                      —
+                                                                                                         usually through ac-
+vided by the BED and BEB models over the entire range             curate measurements                —
+                                                                                           then a simple form to fit u, is
+of energies should be adequate for most applications, in-
+cluding modeling of radiation and plasma eKects.                                4vrao                     I'
+                                                                                                 aint +b] 1 —— ]+c
+                                                                                                                        1)         lnt
+                                                                      o;(t) =                                                  t+1             (Al)
+                                                                                      t,
+                                                                                                          (             t)
+                ACKNOWLEDGMENTS                                   where a, b, and c are fitting parameters. Note that the
+                                                                  first term containing lnt in Eq. (Al) arises from the
+   This research was supported in part by the OfBce of Fu-        dipole interaction, while the second lnt results &om in-
+sion Energy of the U. S. Department of Energy (Y.K.K.)            tegrating the interference term in the Mott formula. If
+and by the National Science Foundation Grant No. PHY-             this three-term fit is inadequate, then more terms can be
+9119818 (M. E.R.). We wish to thank M. Inokuti for sug-           used:
+gesting the compact expression of Eq. (15), and G. Dunn
+for providing references to experiments on one-electron
+                                                                              4m'ao                            1)            lnt         lnt
+ions.                                                              cr;(t) =                 a 1 nt   + b] 1 —— + c t+1 + d t+1 2
+                                                                                                               ty
+                                                                                                                    ~
+
+
+
+
+       APPENDIX: APPROPRIATE FORM POR                                                      lnt
+                                                                                                                                           (A2)
+        PITTING TOTAL IONIZATION CROSS                                           (t+ I)'
+                   SECTIONS
+                                                                  For multishell atoms, 0, may require more fitting param-
+   Equation (55) indicates an appropriate functional form         eters than for those with simple shell structures. Note
+of the total ionization cross section (TICS) to be used           that Eq. (A2) can also be adapted to ionizing events
+in fitting the cross section into a compact analytic for-         that take place without appreciable dipole interaction-
+mula independent of whether the cross section was de-                                                    —
+                                                                  e.g. , double ionization of He by dropping the a ln t term
+rived Rom the BED model or not. For applications in               but keeping the other lnt terms.
+
+
+
+
+ [1] N. F. Mott, Proc. R. Soc. London Ser. A 126, 259 (1930).         One     and T-rso Electron Atom-s (Springer Verlag, Berlin,
+ [2] Y.-K. Kim, Rsdiat. Res. 61, 21 (1975); B4, 96 (1975);             1957), p. 305.
+     64, 205 (1975).                                              [16] G. H. Wannier, Phys. Rev. 90, 817 (1953).
+ [3] H. Bethe, Ann. Phys. (Leipzig) 5, 325 (1930).                [17] M. R.H. Rudge, Rev. Mod. Phys. 40, 564 (1968).
+ [4] L. Vriens, in Case Studies in Atomic Physics, edited by      [18] C. Froese-Fischer, Comput. Phys. Commun. B4, 431
+     E.W. McDaniel and M. R.C. McDowell (North-Holland,               (1991).
+     Amsterdam, 1969), Vol. 1, p. 335.                            [19] M. E. Rudd, Y.-K. Kim, D.H. Madison, and T.J. Gsy,
+ [5] See, for instance, J.H. Miller, W. E. Wilson, S.T. Manson,        Rev. Mod. Phys. 64, 441 (1992).
+     and M. E. Rudd, J. Chem. Phys. 86, 157 (1987), and           [20] J. Berkowitz, Photoobsorption,   Photoionisation, and
+     references therein.                                               Photoelectron Spectroscopy (Academic Press, New York,
+ [6] See, for instance, S.P. Khare and W. J. Meath, J. Phys.          1979).
+     B 20, 2101 (1987), and references therein.                   [21] J.W. Gallagher, C.E. Brion, J.A. R. Samson, snd F.W.
+ [7] M. Inokuti, M. A. Dillon, J.H. Miller, and K. Omidvar, J.         Lsngholf, J. Phys. Chem. Ref. Data 17, 9 (1988), and
+     Chem. Phys. 8'7, 6967 (1987).                                     references therein.
+ [8] Y.-K. Kiin and J.P. Desclaux, Phys. Rev. A $8, 1805          [22] Y.-K. Kim and M. Inokuti, Phys. Rev. A $, 665 (1971).
+    (1988).                                                       [23] M. Gryzinski, Phys. Rev. 1$8, A305 (1965); 1$8, A322
+ [9] M. E. Rudd, Phys. Rev. A 44, 1644 (1991).                         (1965); 1$8, A336 (1965).
+[10] Y.-K. Kim, J. Res. Nat. Inst. Stand. Technol.    97, 689     [24] M. B. Shah, D.S. Elliott, and H. B. Gilbody, J. Phys. B
+     (1992).                                                          20, 3501 (1987).
+[11] L.D. Landau aud E.M. Lifshitz, Quantum      Mechanics        [25] L. Vriens, Proc. Phys. Soc. London 89, 13 (1966).
+    Nonrelatinistic Theory, 2nd ed. (Addison-Wesley, Read-        [26] B. Peart, D. S. Walton, and K.T. Dolder, J. Phys. B 2,
+    ing, MA, 1965), p. 575.                                           1347 (1969).
+[12] M. Inokuti, Rev. Mod. Phys. 4$, 297 (1971).                  [27) P. Defrance, F. Brouillard, W. Claeys, and G. Van
+[13] W. E. Wilson, Radiat. Res. 49, 36 (1972).                         Wassenhove, J. Phys. B 14, 103 (1981).
+[14] Y.-K. Kim, Phys. Rev. A B, 666 (1972).                       [28] C. Achenbach, A. Miiller, E. Salzborn, and R. Becker, J.
+[15] H. A. Bethe and E.E. Salpeter, Quantum Mechanics       of        Phys. B 17, 1405 (1984).
+50                            BINARY-ENCOUNTER-DIPOLE             MODEL FOR ELECTRON-. . .                                 3967
+
+
+[29] K. Tinschert, A. Miiller, G. HofFmann, K. Hubert, R.              4601 (1992).
+     Becker, D.C. Gregory, and E. Salxborn, J. Phys. 8 22,        [41] T.W. Shyn, W. E. Sharp, and Y.-K. Kim, Phys. Rev. A
+     531 (1989).                                                       24, 79 (1981).
+[30] J. Miller and R.L. Platzman, Proc. Phys. Soc. London A       [42] R.D. DuBois and M. E. Rudd, Phys. Rev. A 17, 843
+     70, 299 (1957).                                                   (1978).
+[31] Y.-K. Kim, in The Physics of ELectronic and Ionic Col        [43] R.C. Wetzel, F.A. Baiocchi, R.R. Hayes, and R.S. Fre-
+     lisions, edited by J.S. Risley and R. Geballe (Univerisity        und, Phys. Rev. A 35, 559 (1987).
+     of Washington Press, Seattle, 1976), p. 741.                 [44] K.W. Hollman, G.W. Kerby III, M. E. Rudd, J.H. Miller,
+[32] T.W. Shyn, Phys. Rev. A 45, 2951 (1992).                          and S.T. Manson, Phys. Rev. A 38, 3299 (1988).
+[33] K. Omidvar, Phys. Rev. 140, A26 (1965).                      [45] W. C. Lineberger, J.W. Hooper, and E.W. McDaniel,
+[34] S.M. Younger, J. /nant. Spectrosc R.adiat. Transfer 26,          Phys. Rev. 141, 151 (1966).
+     329 (1981).                                                  [46] D.H. Crandall, R.A. Phaneuf, and P.O. Taylor, Phys.
+[35] M. B. Shah, D. S. Elliot, P. McCallion, and H. B. Gilbody,        Rev. A 18, 1911 (1978).
+     J. Phys. B 21, 2751 (1988).                                  [47] D.H. Crandall, R.A. Phaneuf, B.E. Hasselquist, and D.C.
+[36] R.G. Montague, M. F.A. Harrison, and A. C.H. Smith, J.            Gregory, J. Phys. B 12, L249 (1979).
+     Phys. B 17, 3295 (1984).                                     [48] N. Lj. Duric, I.M. Cadez, and M. V. Kurepa, Int. J. Mass
+[37] C.B. Opal, E.E. Beaty, and W. K. Peterson, At. Data 4,            Spectrom. Ion Proc. 83, R7 (1988).
+     209 (1972).                                                  [49] M. A. Bolorizadeh and M. E. Rudd, Phys. Rev. A 33, 882
+[38] R.R. Goruganthu and R.A. Bonham, Phys. Rev. A 34,                (1986).
+     103 (1986).                                                  [50] J. Schutten,   F.J. DeHeer, H. R. Moustafa, A. J.H. Boer-
+[39] D. Rapp and P. Englander-Golden, J. Chem. Phys. 43,               boom, and      J. Kistemaker, J. Chem. Phys. 44, 3924
+     1464 (1965).                                                     (1966).
+[40] D.R. Schultz, L. Meng, and R.E. Olson, J. Phys. B 25,
+

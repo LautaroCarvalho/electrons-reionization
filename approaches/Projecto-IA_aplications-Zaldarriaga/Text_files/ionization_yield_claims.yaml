@@ -1,0 +1,13 @@
+# Claims for ionization_yield.tex.
+# The gate resolves <manuscript>_claims.yaml first and falls back to
+# provenance/claims.yaml, which ionization_yield.py writes for the figure IT
+# produces (ionization_yield_fig).  But this manuscript shows the _igm figure,
+# produced by ionization_yield_igm.py, so the fallback could never cover it.
+# Entry copied verbatim from photon_vs_electron_claims.yaml.
+figures:
+- file: ionization_yield_fig_igm.png
+  produced_by: ionization_yield_igm.py::main
+  shows: 'HI ion pairs per primary at z = 10 on the igm_losses prescription (models
+    D and E), with the seven-channel loss branching below.
+
+    '

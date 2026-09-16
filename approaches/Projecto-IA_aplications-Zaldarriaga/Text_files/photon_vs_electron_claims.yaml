@@ -1,0 +1,164 @@
+claims:
+  - id: stellar_uv_dominates
+    statement: >
+      At z = 10, with the JWST-measured UV luminosity density and canonical
+      escape and acceleration parameters, stellar UV photons ionize the IGM
+      3.85 decades faster than cosmic-ray electrons produced by the supernovae
+      of the same stellar population.
+    evidence:
+      - photon_vs_electron.py::zeta_total
+      - Donnan et al. 2024, JWST PRIMER, MNRAS, Table 3
+      - Llerena et al. 2025, A&A 698, A302
+      - Leite et al. 2017, MNRAS 469, 416 (independent agreement)
+    numbers: [zeta_gamma_s, zeta_e_s, zeta_ratio]
+  - id: cr_parity_unreachable
+    statement: >
+      Both channels are exactly linear in their own normalisation, so parity
+      requires eps_CR x f_e = 7.02 at f_esc = 0.1. That exceeds unity: more
+      energy in cosmic-ray electrons than the supernova releases. CR electrons
+      therefore cannot reach parity at any physical acceleration efficiency.
+    evidence:
+      - photon_vs_electron.py::run_checks (linearity check, exact to 1e-10)
+    numbers: [eps_cr_fe_crossover]
+  - id: reionization_pace_unforced
+    statement: >
+      The stellar channel gives zeta_gamma x t_H = 0.1008 ionizations per
+      hydrogen atom per Hubble time at z = 10, the right pace for reionization
+      to complete near z = 6. Nothing was tuned to produce this.
+    evidence:
+      - photon_vs_electron.py::run_checks
+    numbers: [zeta_gamma_tH]
+figures:
+  - file: photon_vs_electron_fig1.png
+    produced_by: photon_vs_electron.py::make_figures
+    shows: panels (a), (b) and the competition map together
+  - file: photon_vs_electron_fig2a.png
+    produced_by: photon_vs_electron.py::make_figures
+    shows: panels (a) and (b) alone at fiducial parameters
+  - file: photon_vs_electron_fig2b.png
+    produced_by: photon_vs_electron.py::make_figures
+    shows: the parameter exploration and the competition map
+  - file: photon_vs_electron_fig3.png
+    produced_by: photon_vs_electron.py::make_figures
+    shows: >
+      the competition map alone at z = 10. It carries no absolute
+      emissivity, because rho_SFR cancels from the ratio.
+  - file: ionization_yield_fig_igm.png
+    produced_by: ionization_yield_igm.py::main
+    shows: >
+      HI ion pairs per primary at z = 10 on the igm_losses
+      prescription (models D and E), with the seven-channel loss
+      branching below.
+  - file: yield_comparison_fig.png
+    produced_by: yield_comparison.py::make_figure
+    shows: >
+      the deposition-fit route (A/B/C) and the loss-based route (D/E)
+      on the same axes at z = 10; the curves overlap pairwise.
+  - file: ionization_yield_fig_igm_z20.png
+    produced_by: ionization_yield_igm.py::main via run_redshift_suite.py
+    shows: the same yield figure recomputed at z = 20
+  - file: yield_comparison_fig_z20.png
+    produced_by: yield_comparison.py::make_figure via run_redshift_suite.py
+    shows: the two-route cross-check recomputed at z = 20
+  - file: photon_vs_electron_fig1_z20.png
+    produced_by: photon_vs_electron.py::make_figures via run_redshift_suite.py
+    shows: >
+      panels (a), (b) and the competition map at z = 20; the absolute
+      panels carry the rho_SFR ignorance band, the map does not need one
+  - file: photon_vs_electron_fig2a_z20.png
+    produced_by: photon_vs_electron.py::make_figures via run_redshift_suite.py
+    shows: panels (a) and (b) alone at z = 20, with the ignorance band
+  - file: photon_vs_electron_fig2b_z20.png
+    produced_by: photon_vs_electron.py::make_figures via run_redshift_suite.py
+    shows: the parameter exploration and the competition map at z = 20
+  - file: photon_vs_electron_fig3_z20.png
+    produced_by: photon_vs_electron.py::make_figures via run_redshift_suite.py
+    shows: >
+      the competition map alone at z = 20 -- the only figure in the
+      z = 20 section with nothing extrapolated in it
+  - file: imf_comparison_fig.png
+    produced_by: imf_comparison.py::main
+    shows: >
+      Fig. 3 recomputed for a Salpeter and a top-heavy Pop II IMF. One
+      stellar curve (xi_ion and rho_UV are measured, so the photon
+      channel is IMF-independent) and two CR curves, which overlap.
+    from_scratch: all curves
+    from_library: matplotlib for rendering only
+    choices:
+      - 'the Salpeter K_UV anchor is this work own 1.15e-28; only the
+         RATIO between the two IMFs is taken from Jeong+25, so the
+         Salpeter curve is identical to the one in Fig. 3'
+      - 'xi_ion held fixed, since it is a measured line-to-continuum
+         ratio and already carries whatever IMF nature used'
+      - 'the cancellation is stated on the figure, because the overlap
+         is the result and would otherwise read as a plotting error'
+    note: >
+      The top-heavy eta_UV is borrowed by Jeong+25 from an extreme
+      Pop III-like IMF in Zackrisson+11, not from their own alpha=1.3
+      law; they say so and the figure footer repeats it.
+
+  - file: source_budget_plane.png
+    produced_by: source_map.py::make_figure_A
+    shows: >
+      The budget plane for comoving POPULATIONS at z = 10: zeta_e t_H against
+      zeta_gamma t_H, so luminosity and spectrum are both inside the
+      coordinates. Distance from the diagonal reads which channel wins;
+      the green anti-diagonals x + y = N_req read whether either matters.
+    from_scratch: the phi field is analytic; both channels are linear in their
+      own normalisation, which check S2 tests rather than assumes
+    choices:
+      - 'AGN L_ion from the 17-33% LyC budget band (Asthana+24; Jiang+25
+         upper bound), measured at z ~ 7.5 and carried to z = 10'
+      - 'jet electron fraction scanned 1e-3 to 1: the proton content of
+         jets is not observationally constrained'
+    note: >
+      No class reaches ANY N_req line. AGN is the only box that crosses
+      parity, and only at the strongly leptonic end of the scan.
+
+  - file: source_budget_objects.png
+    produced_by: source_map.py::make_figure_A_objects
+    shows: >
+      The same plane for SINGLE objects, so a point means one such object per
+      cMpc^3 and the anti-diagonals relabel as the comoving number density
+      that class would need to close the budget.
+    from_scratch: U37126 follows entirely from M_UV through the chain already
+      in the manuscript, so it needs no new source
+    choices:
+      - 'M_BH = 5-30 Msun for the BH-HMXB box: OUR choice, position
+         scales linearly with it'
+      - 'SS 433 / S26, single SNe and AGN are reported UNPLOTTED, each
+         with the one number that is missing, rather than estimated'
+    note: >
+      U37126 needs n_req = 6.94e-3 cMpc^-3 while rho_UV implies only
+      2.77e-4 cMpc^-3 of its equivalents: the same factor 25 shortfall the
+      population figure finds, reached by an independent route.
+
+  - file: source_spectral_index.png
+    produced_by: source_map.py::make_figure_D
+    shows: >
+      phi at unit luminosity ratio, i.e. W_gamma/W_e, against the spectral
+      index of each channel, with every source class marked at its OWN index
+      and band top.
+    from_scratch: all curves
+    choices:
+      - 'classes are markers, not bands on the index axis: they differ in
+         band top as much as in index, so shading the index alone merged
+         four classes into one meaningless wash'
+    note: >
+      The BHB hard-state index is second-hand (status C) and it is the class
+      showing the largest effect.
+
+  - file: xcomp_map.png
+    produced_by: make_xcomp_definitions.py::make_figure_X
+    shows: >
+      X_comp = W_e(alpha_e)/W_gamma(alpha_gamma) at L_gamma = L_e over the two
+      spectral indices, in three panels differing only in E_min,e.
+    from_scratch: all three panels; X_comp is separable, so each needs two
+      1-D sweeps rather than a 2-D loop
+    choices:
+      - 'photon band top DERIVED as tau_IGM = 1 (1218 eV), not adopted'
+      - 'panel (c) uses the DSA injection momentum of Park+15, the LOWEST
+         floor in the sourced range and so the most generous to electrons'
+    note: >
+      X_comp > 1 everywhere plotted. Replacing the unsourced 1 keV electron
+      floor with the DSA constraint moves X_comp from 2.07 to 3.69.

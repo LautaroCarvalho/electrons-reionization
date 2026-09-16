@@ -1,0 +1,1214 @@
+Draft version July 12, 2024
+Typeset using LATEX twocolumn style in AASTeX631
+
+The Predicament of Absorption-dominated Reionization II:
+Observational Estimate of the Clumping Factor at the End of Reionization
+Frederick B. Davies,1 Sarah E. I. Bosman,2, 1 and Steven R. Furlanetto3
+1 Max-Planck-Institut für Astronomie, Königstuhl 17, D-69117 Heidelberg, Germany
+2 Institute for Theoretical Physics, Heidelberg University, Philosophenweg 12, D–69120, Heidelberg, Germany
+
+arXiv:2406.18186v2 [astro-ph.CO] 11 Jul 2024
+
+3 Department of Physics & Astronomy, University of California, Los Angeles, CA 90095, USA
+
+ABSTRACT
+The history of reionization reflects the cumulative injection of ionizing photons by sources and the
+absorption of ionizing photons by sinks. The latter process is traditionally described in terms of a
+“clumping factor” which encodes the average quadratic increase in the recombination rate of dense gas
+within the cosmic web. The recent measurement of a short mean free path of ionizing photons from
+stacked quasar spectra at z ≃ 6 has placed the importance of sinks under increased scrutiny, but its
+connection to the recombination rate is not immediately obvious. Here we present analytic arguments
+to connect the clumping factor to the mean free path by invoking ionization equilibrium within the
+ionized phase of the intergalactic medium at the end of (and after) reionization. We find that the
+latest mean free path and hydrogen photoionization rate measurements at z = 5–6 imply a global
+clumping factor C ≈ 12, much higher than previous determinations from radiation-hydrodynamic
+simulations of the reionization process. Similar values of C are also derived when applying the same
+procedure to observations at 2 < z < 5. Compared to the traditional assumption of C = 3, highredshift galaxies must produce roughly twice as many ionizing photons (≈ 3 photons per baryon) to
+reionize the universe by z ∼ 6. This additional requirement on the ionizing photon budget may help to
+reconcile the reionization history with JWST observations that suggest a far greater output of ionizing
+photons by the most distant galaxy populations.
+
+Keywords: Intergalactic medium(813), Reionization(1383)
+1. INTRODUCTION
+
+After the formation of baryons during the Big Bang,
+and their subsequent (re-)combination into atoms and
+the release of the cosmic microwave background (CMB),
+the hydrogen and helium in the Universe persisted in
+a predominantly neutral state. After the formation of
+the first stars and galaxies, the ionizing photons emitted by massive stars began to carve ionized bubbles into
+the surrounding intergalactic medium (IGM), beginning
+the epoch of reionization. The ionized bubbles from individual galaxies eventually merged (Furlanetto et al.
+2004), filling more and more of the cosmic volume until, by z ∼ 5.3 (Bosman et al. 2022), the IGM was fully
+reionized.
+The most straightforward quantitative description of
+reionization was put forward by Madau et al. (1999),
+whose “one-zone” model for the process provides valuable intuition:
+dQ
+ṅion
+Q
+=
+−
+,
+dt
+⟨nH ⟩ trec
+
+(1)
+
+where Q is the ionized fraction of the IGM, and the
+first and second terms on the right-hand side represent
+the source and sink terms, respectively. The sources are
+represented by ṅion , the emissivity of ionizing photons,
+while the sinks are represented by trec , the recombination timescale of the ionized gas. In this work, as in
+Madau et al. (1999), we will assume that Q represents
+the volume-averaged ionized fraction. While the insideout nature of reionization implies that a mass-averaged
+approach may be more appropriate, in which case an
+additional factor of Q arises in the sink term (e.g. Chen
+et al. 2020), equation (1) is approximately correct in
+a two-phase approximation (cf. Wu et al. 2021) where
+the IGM is either fully ionized (xHII = 1) or neutral
+(xHII = 0). That is, Q represents the volume of the IGM
+within the ionized phase rather than a physical ionized
+fraction, and so it does not asymptote to a finite residual
+neutral fraction after reionization is complete (although
+see Madau 2017 for a solution to this).
+
+2
+Considerable effort has been undertaken to determine
+ṅion at early cosmic time. Such determinations typically involve a measurement of the UV luminosity function (LF) of galaxies at high redshifts (z > 6), but the
+connection between the UV LF and the ionizing output
+of galaxies is still uncertain. This connection is usually
+parameterized as
+ṅion = ρUV ξion fesc ,
+
+(2)
+
+where ρUV is the integral over the UV LF down to
+some magnitude limit, ξion is the “ionizing efficiency”
+which represents the average (intrinsic) spectral shape
+of the stellar populations between the ionizing and nonionizing UV continuum, and fesc is the escape fraction of
+ionizing photons from the galaxies into the IGM. While
+observations of galaxy nebular emission lines can constrain their ξion (e.g. Ning et al. 2023; Prieto-Lyon et al.
+2023; Simmonds et al. 2023, 2024; Atek et al. 2024), direct measurements of fesc (i.e., direct detections of ionizing photons) are hindered by the high opacity of the
+Lyman-series forests, and thus are only possible at redshifts z ≲ 4 (e.g. Izotov et al. 2016; Vanzella et al. 2018;
+Ji et al. 2020; Pahl et al. 2021).
+The role of sinks has been a subject of considerable
+debate over the years. As mentioned above, sinks of
+ionizing photons enter the Madau et al. (1999) formalism
+via trec , the average recombination time of a proton in
+the IGM, which can be written as
+trec =
+
+1
+,
+C⟨nH ⟩αHII (T )
+
+(3)
+
+where αHII is the hydrogen recombination rate, and ⟨nH ⟩
+is the mean cosmic hydrogen density. Crucially, as recombination is a collisional process, the rate depends
+on the squared density of ionized gas. It is common to
+summarize this dependence with the so-called “clumping factor,”
+C ≡ ⟨n2 ⟩/⟨n⟩2 ,
+(4)
+such that trec = tuniform
+/C. As there is no analytic
+rec
+shortcut to fully determine C from first principles, the
+assumed value is typically derived from cosmological
+simulations.
+Early cosmological hydrodynamical simulations suggested C ∼ 30 (e.g. Gnedin & Ostriker 1997), implying
+a dominant role of recombinations in determining the
+reionization history. However, this high value considered
+all gas particles in the simulation volume. In practice,
+recombinations occurring inside of galaxies are already
+accounted for by the fesc parameter, so care must be
+taken to avoid double-counting. Later works by Iliev
+et al. (2005, 2007) and Raičević & Theuns (2011) took
+
+this exclusion into account and found values closer to
+C ∼ 10, albeit using dark-matter-only N-body simulations. But the baryons are also subject to gas pressure,
+which smooths their distribution relative to the dark
+matter field. Following several works employing radiation hydrodynamic simulations of reionization (Pawlik
+et al. 2009; Shull et al. 2012; Finlator et al. 2012, see
+also McQuinn et al. 2011), a value of C ∼ 2–3 is now
+a typical assumption in analytic reionization models in
+the literature. That said, more recent simulations suggest a value of C higher by a factor of ∼ 2 (e.g. Chen
+et al. 2020; Kannan et al. 2022).
+The impact of sinks is now being revisited after the
+measurement of a short mean free path of ionizing photons at z = 6 by Becker et al. (2021), and further
+confirmed by Zhu et al. (2023, see also Bosman 2021;
+Satyavolu et al. 2023), which suggests the presence of
+substantially more small-scale structure in the IGM than
+present in traditional reionization simulations. A short
+mean free path can dramatically increase the number
+of ionizing photons required to ionize the IGM, as photons must travel long distances from ionizing sources to
+large-scale voids (Davies et al. 2021, henceforth Paper I,
+see also Cain et al. 2021). However, the quantitative
+connection between the short mean free path and the
+clumping factor is not immediately obvious (e.g. Cain
+et al. 2023), which has limited the extent to which the
+short mean free path has been taken into account by the
+larger reionization community.
+In this work, we aim to build a stronger connection between the mean free path and clumping factor at high
+redshift, in an attempt to unify the description of ionizing photon sinks during the reionization epoch. We
+first show that the clumping factor at a given redshift
+can be estimated from the ionizing background intensity
+and mean free path. We then apply this methodology
+to measurements of these quantities across cosmic time,
+finding a nearly constant value of C which is several
+times higher than typically assumed.
+We assume a Planck ΛCDM cosmology (Planck Collaboration et al. 2020) with h = 0.68, Ωm = 0.31, and
+Ωb = 0.049.
+2. THE CLUMPING FACTOR AND THE MEAN
+
+FREE PATH
+In this section, we will investigate the connection between the clumping factor and the mean free path of
+ionizing photons. But first, we must define what we
+mean by “clumping factor,” as its exact definition varies
+considerably between different works. Here we define
+the clumping factor to be the relevant clumping factor for solving equation (1) – i.e. the clumping factor
+
+3
+that provides the correct globally averaged recombination rate, but where effects inside of galaxies that give
+rise to the escape fraction in the definition of ṅion are
+ignored. Specifically, we assume that C is the constant
+of proportionality between the true global (external) recombination rate ṅrec = ⟨ne nHII αHII ⟩ and the recombination rate at the cosmic mean density,
+C≡
+
+⟨ne nHII αHII ⟩
+⟨ne ⟩⟨nHII ⟩⟨αHII ⟩
+
+(5)
+
+where we assume that the fiducial recombination coefficient in the denominator is equal to the Case B reB
+combination rate for 10, 000 K gas1 , ⟨αHII ⟩ = αHII
+(T =
+10, 000 K).
+The most straightforward way to connect the clumping factor to the mean free path starts with the assumption of photoionization equilibrium, which should generally hold in the ionized IGM,
+nHI ΓHI = ⟨ne nHII αHII ⟩ = Cχe (1 − xHI )2 n2H αHII ,
+
+(6)
+
+where ΓHI is the photoionization rate of hydrogen and
+χe ≈ 1.08 is the enhancement in the number of free
+electrons due to ionized helium2 . Solving for C, we have
+C=
+
+xHI nH ΓHI
+.
+χe (1 − xHI )2 n2H αHII
+
+(7)
+
+The two unknowns in this expression are ΓHI and xHI .
+While the former can be derived from observations of
+the Lyα forest, and is most sensitive to low-density
+gas which is unambiguously resolved in simulations, the
+residual neutral fraction is not so simple to derive, as
+it is sensitive to self-shielding and geometrical effects in
+dense gas (e.g. McQuinn et al. 2011; Erkal 2015).
+To proceed, one can make the simplifying assumption
+that the neutral fraction is connected to the mean free
+path of ionizing photons via λmfp = (nHI σHI )−1 . In this
+case, similar to the “effective” clumping factor in Cain
+et al. (2023), we have:
+C=
+
+σHI ΓHI
+,
+λmfp χe (1 − xHI )2 n2H αHII
+
+(8)
+
+where we note that both the mean free path and
+photoionization cross section terms implicitly represent frequency-averaged values. This expression for the
+1 We note that αB (T
+HII
+
+= 10, 000 K) ≃ αA
+HII (T = 20, 000 K), another common assumption in previous works.
+2 We assume that helium is singly-ionized at the same time as
+hydrogen, and that the (second) reionization of helium has not
+yet begun. While this assumption will become incorrect at z ≲ 4
+(e.g. Worseck et al. 2019), the additional 8% boost to the electron
+density from the second ionization of helium is small compared
+to the uncertainties in the observed quantities we employ in § 3.2.
+
+mean free path, however, makes the crucial assumption that neutral hydrogen is uniformly distributed in
+space. In reality, the dense self-shielded gas that gives
+rise to optically-thick absorption should be inhomogeneous, distributed in clumps and/or in the filaments of
+the cosmic web (e.g. McQuinn et al. 2011).
+Another way to associate the clumping factor with the
+mean free path was suggested by Emberson et al. (2013),
+who connected the attenuation of ionizing photon flux
+to the recombination rate. In this model, one considers
+the attenuation of ionizing photon flux dF inside a slab
+of material with area dA and proper width ds compared
+to the recombinations inside said slab,
+−dF dA = Cne nHII αHII dA ds,
+
+(9)
+
+where the flux inside the slab is attenuated following
+dF
+= −F (1 + z)/λmfp ,
+ds
+
+(10)
+
+where the (1 + z) term converts λmfp from comoving
+to proper units. The following expression can then be
+derived after solving for C,
+C=
+
+F (1 + z)
+,
+λmfp χe (1 − xHI )2 n2H αHII
+
+(11)
+
+where we note again that the F and λmfp terms represent values integrated over the spectrum of the ionizing
+background. While this expression improves upon the
+previous one by removing the explicit connection between the mean free path and the neutral fraction, the
+geometrical assumption in its derivation (i.e. the slab)
+introduces additional ambiguity.
+We suggest a third way to conceptualize (and quantify) the connection between the mean free path and
+the clumping factor. A typical ionizing photon passing through the IGM will travel one mean free path
+before being absorbed, i.e. before ionizing a hydrogen
+atom. Thus a “photon photo-ionization rate,” the rate
+at which a given ionizing photon will ionize a hydrogen
+atom, can be written as Γγ = c/λmfp . The space density of photoionizations is then nγ Γγ = nγ × c/λmfp ,
+where nγ is the number density of ionizing photons. In
+ionization equilibrium, this rate will balance the recombination rate, i.e.
+nγ c
+= CαHII χe (1 − xHI )2 n2H ,
+(12)
+λmfp
+Solving for C as above, we find
+nγ c
+C=
+,
+λmfp αHII χe (1 − xHI )2 n2H
+
+(13)
+
+where again the nγ and λmfp terms represent frequencyaveraged quantities.
+
+4
+In all three cases, the inferred clumping factor is proportional to the strength of the ionizing background (in
+various forms) divided by the mean free path of ionizing
+photons, e.g. C ∝ ΓHI /λmfp . All three methods result
+in quantitatively similar values for C; in this work, we
+adopt the third method to compute C (i.e. equation 13),
+as it appears to have the fewest explicit assumptions on
+the nature of the distribution of neutral gas.
+We have so far ignored the dependence on photon frequency of various quantities in the expressions for C
+above for the sake of clarity, but due to the steep frequency dependence of the photoionization cross-section
+(Verner et al. 1996), such terms could matter at the
+level of a factor of a few. We write the specific number
+density of ionizing photons nν as
+nν =
+
+uν
+4π Jν
+=
+,
+hν
+c hν
+
+(14)
+
+where uν is the specific energy density and Jν is the
+specific angle-averaged mean intensity of the ionizing
+background. We then proceed to estimate C using the
+following expression:
+ Z 4 νHI
+
+Jν
+1
+C = 4π
+, (15)
+dν ×
+hνλ
+α
+χ
+(1
+−
+xHI )2 n2H
+ν
+HII e
+νHI
+where νHI is the frequency of the hydrogen ionizing edge.
+In the following, we make the assumption that the neutral fraction is small enough that the (1 − xHI ) term
+can be approximated as unity – that is, we compute
+the clumping factor relative to a fully ionized IGM. We
+further approximate the frequency dependencies of the
+mean free path and ionizing background intensity as
+power laws with λν ∝ ν αλ and Jν ∝ ν −αb , leading to
+an analytic simplification to equation (15) as long as
+αb + αλ ̸= 0,
+
+
+4πJHI
+1 − 4−(αb +αλ )
+1
+C=
+, (16)
+×
+hνHI λmfp
+αb + αλ
+αHII χe n2H
+where JHI and λmfp are Jν (νHI ) and λν (νHI ), respectively.
+The frequency dependence assumptions are largely encapsulated by the term in brackets, which is a function
+of αb + αλ , equal to 2 with our assumed power-law indices3 . In practice, as described below in § 3.2, we will
+3 We note that at z ≳ 5, where the mean free path is short rela-
+
+tive to the Hubble distance (the “absorption-limited” regime), we
+can write Jν ∝ ϵν λν where ϵν is the average ionizing emissivity
+(Meiksin & White 2003). The implied scaling of the emissivity
+is ϵν ∝ ν −(αb +αλ ) , suggesting that our choice of αb + αλ = 2
+is reasonable (e.g. Becker & Bolton 2013). Even harder ionizing
+spectra are also plausible for young, metal-poor stellar populations (e.g. D’Aloisio et al. 2019) which would increase our C
+estimates.
+
+convert observational constraints on ΓHI to JHI , which
+introduces an additional factor dependent on αb alone.
+Lower (higher) values of C would be derived if the ionizing background is softer (harder), or if the mean free
+path is a stronger (weaker) function of frequency. We
+discuss the behavior of the frequency dependence term
+further in Appendix A, and note that even in the most
+extreme case (corresponding to αλ ≈ 3) our assumptions
+could only overestimate C by a factor of two.
+As measurements of the ionizing background require
+non-zero transmission through the highly sensitive Lyα
+forest (Gunn & Peterson 1965), application of this
+method will only become possible at the very end of
+the reionization process. Thus the clumping factor during the majority of reionization cannot be constrained
+directly. At these earlier times, the inside-out nature
+of reionization should lead to higher densities in the
+ionized regions, and thus a higher recombination rate
+relative to the mean IGM (e.g. Chen et al. 2020, see
+also So et al. 2014). We ignore this effect for simplicity
+in our analytic calculations, but note that this would
+likely increase the effective clumping factor significantly
+at low ionized fractions as in Chen et al. (2020).
+3. ESTIMATING THE CLUMPING FACTOR FROM
+
+IGM OBSERVATIONS
+In this section, we use observational properties of the
+IGM to constrain the clumping factor as defined in the
+previous section. Here we stress that our clumping factor is an effective quantity corresponding to the entire
+volume of the IGM, and not a “local” clumping factor
+that can be applied to the density field in simulations
+a posteriori (see, e.g., Raičević & Theuns 2011; Kaurov & Gnedin 2015). In particular, our definition of
+the clumping factor is specifically designed for use in
+analytic reionization calculations like equation (1) that
+consider the IGM as a whole (Madau et al. 1999).
+3.1. Observations of ΓHI and λmfp
+Estimating the clumping factor using the method
+above requires an estimate of the ionizing background
+intensity as well as the mean free path of ionizing photons. While most studies of the clumping factor have
+focused on its behavior during the reionization epoch,
+our formalism applies to any cosmic time where both of
+these quantities have been measured.
+For the mean free path, at z < 5 we use the power-law
+fit to the direct measurements of quasar spectra stacked
+beyond the Lyman limit from Worseck et al. (2014) and
+references therein. At z > 5, we use the measurements
+from Zhu et al. (2023), who (following Becker et al. 2021)
+use a similar stacking method to Worseck et al. (2014)
+
+5
+30
+
+z > 5 (Davies et al. 2024 + Zhu et al. 2023)
+z < 5 (Becker & Bolton 2013 + Worseck et al. 2014)
+
+25
+
+C
+
+20
+15
+10
+5
+0
+2
+
+3
+
+4
+
+5
+
+6
+
+z
+Figure 1. Clumping factor estimates applying equation (16)
+to constraints on the hydrogen photoionization rate ΓHI (via
+equation 17) and ionizing photon mean free path λmfp . The
+grey points at z < 5 use ΓHI from Becker & Bolton (2013)
+and λmfp from Worseck et al. (2014), while the black points
+at z > 5 use the corresponding constraints from Davies et al.
+(2024) and Zhu et al. (2023), respectively.
+
+but additionally account for the bias due to the intense
+local ionizing flux from the background quasars. At all
+redshifts we assume a power-law frequency dependence
+of the mean free path of λν ∝ νλα , with αλ = 1. This
+power-law dependence approximately corresponds to a
+H I column density distribution function proportional to
+N −4/3 . This distribution shape is somewhat flatter than
+the distribution of lower density Lyα forest absorbers,
+but consistent with some measurements and models at
+z = 2–6 (Faucher-Giguère et al. 2009; Songaila & Cowie
+2010). We note that this connection to the column density distribution is only an approximation, as the shape
+is likely much more complicated in the relevant range
+of H I column densities (e.g. Haardt & Madau 2012;
+O’Meara et al. 2013; Prochaska et al. 2014).
+For the ionizing background, at z < 5 we adopt the
+measurements of ΓHI from Becker & Bolton (2013), who
+calibrated a suite of hydrodynamical simulations to the
+mean transmitted flux of Lyα derived from a stacking analysis of SDSS quasars (Becker et al. 2013), and
+comprehensively accounted for various sources of systematic uncertainty. At z > 5, we use the constraints
+on ΓHI from Davies et al. (2024), who fit a fluctuating
+ionizing background model (Davies & Furlanetto 2016)
+to the Lyα forest opacity distributions from Bosman
+et al. (2022). To determine the specific intensity at the
+hydrogen-ionizing edge JHI required by equation (16),
+we assume that the spectrum of the hydrogen-ionizing
+
+background (i.e. νHI < ν < 4 νHI ) is described by a
+power-law shape Jν ∝ ν −αb with αb = 1.0. This spectral shape is consistent with an intrinsic ionizing emissivity proportional to ν −2 (cf. Becker & Bolton 2013;
+D’Aloisio et al. 2019) filtered through the absorber distribution giving rise to λν ∝ ν 1 as assumed above. We
+then determine the corresponding JHI by requiring that
+the observed ΓHI is reproduced by
+Z 4 νHI
+JHI (ν/νHI )−αb
+ΓHI = 4π
+σHI (ν)dν,
+(17)
+hν
+νHI
+where σHI (ν) is the hydrogen photoionization crosssection from Verner et al. (1996).
+We note that the mean free path measurements from
+Zhu et al. (2023) are derived assuming specific values of
+the hydrogen photoionization rate (and its uncertainty)
+from Gaikwad et al. (2023). To ensure self-consistency,
+we recompute the mean free path and corresponding uncertainties using the Davies et al. (2024) constraints on
+ΓHI (z), but note that this does not make a substantial
+difference to our results.
+3.2. Estimates of the effective clumping factor
+With the ionizing background strength and mean free
+path in hand, we can now proceed to compute the
+clumping factor following Section 2. Specifically, we
+evaluate equation (16) using the mean free path measured by Worseck et al. (2014) (i.e. the power-law fit
+from z = 2–5) and Zhu et al. (2023), and the ionizing background intensity implied by the photoionization rate measurements of Becker & Bolton (2013) and
+Davies et al. (2024), with assumed frequency dependencies λν ∝ ν and Jν ∝ ν −1 .
+We show the resulting estimates of C from z = 2–
+6 in Figure 1. The error bars at z < 5 include only
+the uncertainty in ΓHI from Becker & Bolton (2013),
+while at z > 5 they include both the uncertainty in ΓHI
+from Davies et al. (2024) and in λmfp from Zhu et al.
+(2023). We find a remarkably constant value of C ∼
+10–15 across the entire redshift range, with an average
+value of C ≈ 12 at z = 5–6, well above the simulationcalibrated prescriptions often used in the literature (C ∼
+3). While the short mean free path at z = 6 suggests a
+rather high value C ∼ 17, its corresponding uncertainty
+is large enough to be consistent with all lower redshifts.
+We note that at z ≲ 4 we expect that our assumption of local photoionization equilibrium becomes increasingly incorrect. The mean free path at this time
+is long enough that the local source approximation is no
+longer valid (see, e.g., the discussion in Becker & Bolton
+2013), so the photons being absorbed at a given epoch
+were emitted at a substantially earlier time. In addition,
+
+6
+100
+
+Pawlik et al. (2009) [C100 ]
+
+Kaurov & Gnedin (2015) [C –C ]
+
+Shull et al. (2012) [CRR ]
+
+Chen et al. (2020) [Crec (xHII = 1), ∆ < 50–200]
+
+Finlator et al. (2012) [CHII,104 K ]
+
+Kannan et al. (2022) [C100 ]
+
+Emberson et al. (2013) [ΓHI,−12 = 0.3]
+
+This work [ΓHI + λmfp ]
+
+C
+
+Mao et al. (2020) [inhomog. clumping]
+
+10
+
+C = 12
+
+C=3
+
+1
+3
+
+4
+
+5
+
+6
+
+7
+
+8
+
+9
+
+z
+Figure 2. Comparison between the C estimates from this work (black points) and from various cosmological simulations. The
+solid curves show fits to the simulations from Pawlik et al. (2009) in brown, Shull et al. (2012) in light blue, and Finlator et al.
+(2012) in pink. The shaded regions show ranges in C estimates from Kaurov & Gnedin (2015) in green and Chen et al. (2020)
+in purple, where for the latter we have set the ionized fraction to unity to mimic our assumptions. The dashed curves show
+simulations without photoionization heating, with the small-box adiabatic hydrodynamical simulation from Emberson et al.
+(2013) in blue and the N-body simulations from Mao et al. (2020) in orange.
+
+as the mean free path increases an increasing fraction of
+ionizing photons will redshift below νHI before encountering a hydrogen atom. Neglecting these effects is likely
+the cause for the upturn in our C estimates at z < 3 visible in Figure 1.
+3.3. Comparison to simulations
+In Figure 2, we compare our estimates of C to various determinations of C-like quantities in the literature. The solid curves from Pawlik et al. (2009), Shull
+et al. (2012), and Finlator et al. (2012) represent the
+basis behind the commonly-assumed values of C = 2–3,
+with the ranges of estimates from more recent simulations by Kaurov & Gnedin (2015), Chen et al. (2020),
+and Kannan et al. (2022) shown as shaded regions with
+moderately higher values up to C ∼ 5 at z = 5–6. All
+of these works compute the clumping factor in different
+ways, but in principle they are all designed to fulfill the
+same role: to quantify the effect of the sink term on the
+progression of reionization in equation (1).
+The dashed curves in Figure 2 show clumping factors measured from simulations without any contribution from photoionization heating, with Emberson et al.
+(2013) employing small-volume adiabatic hydrodynamical simulations and Mao et al. (2020, see also Bianco
+et al. 2021) using a combination of small and large N-
+
+body simulations. These curves can be considered to be
+theoretical “maximum” values for C, and our estimates
+lie comfortably below them.
+Why, then, do we recover such a large value for C
+compared to the commonly-accepted value from simulations? In the absence of an unforeseen source of bias in
+our approach, it is possible that the C measured in simulations is not directly comparable to our value of C due
+to a difference in definition. Simulations are careful to
+compute C without including dense gas inside of halos,
+to avoid double-counting this gas which could be responsible for the galactic escape fraction. This is typically
+implemented as a density threshold, e.g. C100 from Pawlik et al. (2009) is measured from gas with overdensity
+∆ < 100. Other works include cuts on the temperature
+and ionization state of the gas (e.g. Finlator et al. 2012;
+Kaurov & Gnedin 2015).
+But this dense gas masking ignores the crucial possibility that dense halo gas can also be illuminated from
+the outside by the UV background, and potentially make
+up a substantial fraction of the opacity to ionizing photons streaming through the IGM. The mean free path
+measured in stacked quasar spectra (e.g. Prochaska et al.
+2009; Worseck et al. 2014; Becker et al. 2021; Zhu et al.
+2023) or from the H I column density distribution (Rudie
+et al. 2013; Prochaska et al. 2014), includes encounters
+
+7
+1.0
+
+1.0
+
+0.8
+
+hxHI i
+
+0.8
+
+B21 ρUV
+FB22 ρUV
+
+0.6
+
+hxHI i
+
+0.6
+
+0.4
+B21 ρUV , C = 3, log fesc ξion = 24.51
+B21 ρUV , C = 12, log fesc ξion = 24.81
+
+0.2
+
+0.4
+
+Photons per baryon
+
+0.0
+
+0.2
+
+FB22 ρUV , C = 3, log fesc ξion = 24.57
+FB22 ρUV , C = 12, log fesc ξion = 24.88
+
+4
+
+log fesc ξion = 24.8
+C=1
+C=3
+C = 12
+
+0.0
+5
+
+6
+
+7
+
+8
+
+9
+
+10
+
+11
+
+12
+
+z
+2
+
+0
+
+5
+
+6
+
+7
+
+8
+
+9
+
+10
+
+11
+
+z
+Figure 3. Reionization histories (upper panel) computed
+using equation (1) with C = 3 (purple) and C = 12 (black)
+and the cumulative number of ionizing photons per baryon
+(lower panel). We integrate the UV LFs from Bouwens et al.
+(2021, solid) and Finkelstein & Bagley (2022, dot-dashed)
+down to MUV = −13 to compute the UV luminosity density,
+and multiply by fixed values of fesc ξion given in the legend
+to calibrate ṅion to reach Q = 0.9 at z = 5.9, which then
+finishes reionization at z ≈ 5.7 (vertical dashed line). While
+our estimate of C = 12 does not affect the reionization history compared to the classical assumption of C = 3 in this
+scenario, it requires a factor ∼ 2 higher total photon output
+from galaxies to finish reionization.
+
+of ionizing photons with all gas without any regard for
+whether it is associated with a galaxy.
+Recent simulations by Cain et al. (2023) which take
+into account the effect of IGM small-scale (∼ kpc) structure and its relaxation dynamics after reionization heating (Park et al. 2016; D’Aloisio et al. 2020; Chan et al.
+2024), have found that applying a clumping factor C = 5
+to their coarse 1 Mpc-resolution simulation provides a
+decent match to their more sophisticated sink modeling.
+On the surface, this value is substantially lower than
+our estimates, but recall that our C is defined globally –
+this distinction is important, because the locally-defined
+C can be much smaller than the global one (Raičević
+& Theuns 2011). In fact, the scale-dependence of the
+clumping factor found by Kaurov & Gnedin (2015) suggests that the global C is ∼ 2 times larger than the local
+C on ∼ 1 Mpc scales, implying that our estimate for the
+(global) C is reasonably consistent with the model from
+Cain et al. (2023).
+4. IMPLICATIONS FOR REIONIZATION
+
+Fundamentally, the purpose of estimating this particular definition of the clumping factor is to explore
+
+Figure 4. Similar to the upper panel of Figure 3 but keeping
+fesc ξion fixed to 1024.8 erg/Hz, and including the case of a
+uniform IGM (C = 1, grey).
+
+what implications the short mean free path of ionizing
+photons at z = 6 has for the reionization history, and
+particularly, for the requirements on the number of ionizing photons that must have been emitted to complete
+the process. The semi-numerical simulations in Paper I
+examined this in the context of the way a short mean
+free path inhibits the ionization of the last remaining
+voids; here, instead, we consider solely the effect of the
+additional recombinations inside of ionized gas from the
+large clumping factor implied by IGM observations at
+z = 5–6 as shown above. While analytically convenient,
+this choice comes at the expense of neglecting the effect of the spatial offset between ionizing sources and
+the last patches of neutral gas at the end of reionization
+(Paper I; Davies & Furlanetto 2022); we leave a closer
+look at that effect to future work. In this section we
+will consider the impact of our high value of C = 12 on
+reionization calculations involving equation (1).
+We must first consider our model for the sources,
+i.e. ṅion (equation 2). We compute ρUV (z) from the
+evolving UV LF parameterizations by Bouwens et al.
+(2021) and Finkelstein & Bagley (2022), extrapolating
+up to z = 15, and integrating down to a fiducial limiting
+UV magnitude of MUV = −13. The redshift evolution of
+the Finkelstein & Bagley (2022) LF includes a strongly
+evolving suppression at the faint end leading to a rapid
+decline in the UV luminosity density at the upper end
+of (and beyond) their fitting range at z ≳ 9. We thus
+extrapolate to higher redshift with a double-power-law
+fit to the evolution at 5 < z < 8.5, although we note
+that this makes little difference to our main results.
+We can now explore the consequences for the reionization history, integrating equation (1) across cosmic time.
+We adopt clumping factors of C = 3, representing the
+traditional approach, and C = 12, as determined in this
+work. We then tune the product of the ionizing escape
+
+ρUV (< MUV ) [erg/s/Hz/Mpc3]
+
+8
+
+z=6
+
+z=7
+
+z=8
+
+1026
+
+C = 12, log fesc ξion = 24.8
+ṅion,crit (100%)
+
+1025
+−22
+
+−20
+
+−18
+
+−16
+
+MUV
+
+ṅion,crit (50%)
+
+Bouwens et al. (2021)
+
+ṅion,crit (25%)
+
+Finkelstein & Bagley (2022)
+
+−14
+
+−12 −22
+
+−20
+
+−18
+
+−16
+
+MUV
+
+−14
+
+−12 −22
+
+−20
+
+−18
+
+−16
+
+MUV
+
+−14
+
+−12
+
+Figure 5. Required UV luminosity density from galaxies in order to maintain the Universe fully, 50%, and 25% ionized (thick
+to thin dashed lines). Assuming an effective ionization production fesc ξion = 1024.8 erg/Hz and a clumping factor C = 12, the
+integrated light from galaxies down to MUV = −13 is capable of maintaining a fully ionized the Universe at z = 6, but only
+< 50% at z = 8. The results depend only weakly on the choice of UV LF, Bouwens et al. (2021) (solid) or Finkelstein & Bagley
+(2022) (long-dashed).
+
+fraction and ionizing efficiency fesc ξion in each case to
+reach a neutral fraction of 10% at z = 5.9, consistent
+with the Lyα forest dark pixel constraint from McGreer
+et al. (2015) and with the model from Paper I, leading
+to a late end to reionization consistent with the most
+recent constraints from the Lyα forest (Zhu et al. 2021,
+2022, 2024; Bosman et al. 2022; Spina et al. 2024).
+The resulting reionization histories are shown in the
+top panel of Figure 3. At this fixed endpoint of reionization, and with our particular models for ṅion (z), increasing the clumping factor from C = 3 to C = 12 has
+a negligible effect on the reionization history at earlier
+times. In the lower panel of Figure 3, we show the corresponding integrated number of ionizing photons per
+baryon. Assuming C = 3 requires 1.3–1.5 photons per
+baryon to complete reionization, while with C = 12 the
+number doubles to 2.5–3.0 photons per baryon. This elevated photon budget is nevertheless still slightly below
+the nominal range from Paper I, but it is very similar
+to the dynamic sink radiative transfer models of Cain
+et al. (2021). This number is also consistent with the
+total number of recombinations at the end of reionization (i.e. the number of emitted photons per baryon
+minus one) in the CROC radiation hydrodynamical simulations (Gnedin 2022, 2024).
+More generally, if we remove the restriction on the
+endpoint of reionization, we can explore how different
+values of C change the reionization history at fixed
+ṅion (z). In Figure 4, we show reionization histories similar to Figure 3 but with a fixed fesc ξion = 1024.8 erg/Hz,
+corresponding to e.g. a model with ξion = 1025.8 erg/Hz,
+consistent with a recent determination for UV-faint
+galaxies with JWST (Atek et al. 2024), and fesc = 0.1,
+
+consistent with direct measurements of Lyman continuum photons from Lyman-break galaxies at z ∼ 3 (Pahl
+et al. 2021). While the conventional assumption of
+C = 3 only modestly postpones the end of reionization
+by ∆z ∼ 0.3 relative to a uniform IGM (C = 1), our
+fiducial C = 12 delays its completion by ∆z ≳ 1.
+Next, we examine the commonly-used criterion for
+reionization to remain complete, defined by setting Q =
+1 and dQ/dt = 0 in equation (1):
+ṅion,crit ≥ C⟨nH ⟩2 αHII .
+
+(18)
+
+We note that this expression can be re-stated as a criterion that reionization progresses at a given value of the
+ionized fraction (e.g. Cullen et al. 2024),
+ṅion,crit (Q) ≥ QC⟨nH ⟩2 αHII = Q × ṅion,crit .
+
+(19)
+
+i.e. for the ionized fraction to increase with time, the
+number of new ionizations must be larger than the number of recombinations within the ionized phase of the
+IGM.
+In Figure 5, we compare the critical values of ionizing photon emissivity for ionized fractions of 25%–100%
+at z = 6–8 with the corresponding emissivity calculated from the UV LFs versus the UV magnitude integration limit. As in Figure 4, we assume fesc ξion =
+1024.8 erg/Hz. Under this assumption, galaxies at z = 6
+can maintain reionization provided that ionizing photons escape from galaxies as faint as MUV ∼ −14, while
+at z = 7 and z = 8 this would only be sufficient to continue reionizing the universe at ionized fractions of 50%
+and 25%, respectively.
+
+9
+5. SUMMARY & CONCLUSION
+
+In this work, we have explored the implications of
+the short mean free path of ionizing photons at z ≈ 6
+(Becker et al. 2021; Zhu et al. 2023) for the recombination rate in the intergalactic medium as a whole, quantified by the clumping factor C. We first build an analytic
+connection between the mean free path and the recombination rate with minimal assumptions. The number
+density of ionizing photons in the optically-thin IGM
+can be derived from the hydrogen photoionization rate
+ΓHI measured from the Lyα forest, and the rate at which
+these photons perform an ionization can be derived from
+the photon lifetime implied by the typical distance they
+travel before being absorbed, i.e. the mean free path.
+A global value for C can then be estimated by comparing this rate to the recombination rate expected for a
+uniform IGM at the cosmic mean density.
+We find a characteristic value of C ≈ 12 at z = 5–6
+that is well in excess of the C = 3 assumption commonly made in the literature based on cosmological
+radiation-hydrodynamics simulations. Surprisingly, this
+elevated value persists to later times, consistent with
+non-evolution down to z ∼ 2.5. We tentatively attribute
+our higher value of C to the way in which simulation
+analyses explicitly neglect dense gas within galaxy halos. While such an exclusion appears necessary to avoid
+double-counting the gas responsible for the galactic escape fraction, it ignores the fact that this dense gas
+can still absorb external photons streaming through the
+IGM, and thus play an important role in determining
+the total budget of recombinations.
+Compared to the typical assumption of C = 3, we
+find that late-ending reionization histories with C = 12
+
+require roughly twice as many ionizing photons to complete the process at z ≲ 6. However, recent observations
+of the ionizing efficiency of z > 6 galaxies from JWST
+(e.g. Simmonds et al. 2024) and scaling relations for the
+ionizing escape fraction from low-redshift Lyman continuum leakers (e.g. Chisholm et al. 2022) imply a tremendous excess in the ionizing photon budget (Muñoz et al.
+2024). Due to the difference in our assumed recombination coefficient, the recombination rate in our fiducial
+model with C = 12 is comparable to that of the C = 20
+model explored by Muñoz et al. (2024) in which reionization still ends quite early at z ∼ 7.5.
+We note also that the clumping factor may not provide
+a complete picture of the number of photons required to
+complete the reionization process. As shown in Paper I,
+the fact that the ionizing sources and neutral islands
+are physically offset from one another implies a large
+degree of attenuation, requiring ∼ 6 photons per baryon
+to reach a neutral fraction of xHI ∼ 10% at z ∼ 6; about
+a factor of two higher than our fiducial model here with
+C = 12. It is possible that both a large recombination rate and a consideration of the physical offset are
+required to reconcile the copious ionizing photon production of the first galaxies with current constraints on
+the reionization history.
+The manuscript was completed following productive discussions with Girish Kulkarni, Laura Keating, Anson
+D’Aloisio, and Christopher Cain at the NORDITA workshop programme “Cosmic Dawn at High Latitudes”.
+SEIB is supported by the Deutsche Forschungsgemeinschaft (DFG) under Emmy Noether grant number BO
+5771/1-1.
+
+APPENDIX
+A. SYSTEMATIC VARIATION WITH FREQUENCY DEPENDENCE ASSUMPTIONS
+
+The derivation of the effective global clumping factor in § 2 relies on two assumptions of frequency dependence:
+the spectral index of the UV background intensity (Jν ∝ ν −αb ) and the mean free path (λν ∝ ν αλ ). These two
+indices are not completely independent – at higher redshifts, the connection can be described via the absorptionlimited approximation Jν ∝ ϵν λν (Meiksin & White 2003), where ϵν ∝ ν −αϵ is the specific ionizing emissivity of the
+sources. There is a further frequency dependence in our conversion from the constraints on ΓHI from the Lyα forest
+to JHI , which involves an integral over the hydrogen photoionization cross-section (equation 17). Approximating the
+cross-section as σHI ∝ ν −3 , the combined frequency dependent term can be written as
+C(αb , αλ ) ∝
+
+αb + 3 1 − 4αb +αλ
+,
+1 − 4αb +3 αb + αλ
+
+(A1)
+
+although in practice we integrate over the full form of the photoionization cross-section from Verner et al. (1996).
+In Figure 6, we show the full frequency dependence of the clumping factor calculation as a function of αb for different
+values of αλ , taking into account the frequency dependencies in equation (15) and equation (17). Constant values of
+αϵ = αb + αλ are indicated, showing the interplay between these three quantities and the estimated clumping factor.
+
+10
+2.5
+αλ = 1
+αλ = 0–3
+
+α = 0
+
+C(αb, αλ)/C(1, 1)
+
+2.0
+
+α = 1
+1.5
+
+α = 2
+1.0
+0.5
+
+α = 3
+
+0.0
+−1
+
+0
+
+α = 4
+1
+
+2
+
+3
+
+αb
+
+Figure 6. Effect of different frequency dependence assumptions on the estimated clumping factor relative to our fiducial choice
+of αb = 1 and αλ = 1 (red cross). The thick curve shows the variation with αb at fixed αλ = 1, with thin curves showing
+αλ = 0–3 (top to bottom) in steps of 0.5. The dashed colored lines show fixed values of αϵ = αb + αλ , where our fiducial choice
+corresponds to αϵ = 2.
+
+Values of C as low as half of our fiducial estimates are possible only if the mean free path increases sharply with
+frequency.
+We note that the column density distribution assumed in modern cosmological radiative transfer calculations is not
+a single power-law, but instead described by a piecewise series of power-laws surrounding the most relevant H I column
+densities within ±2 dex of the NLLS = 1017.2 cm−2 (Haardt & Madau 2012; Puchwein et al. 2019; Faucher-Giguère
+2020). In these models, the slope of the distribution at NLLS can be very steep; for example, Puchwein et al. (2019)
+adopt f (N ) ∝ N −1.95 in the range 1016 –1018 cm−2 . Analytically, this should result in an extremely steep dependence of
+the mean free path with frequency, with αλ ∼ 3. Instead, we find that the (no longer power-law) frequency dependence
+arising from integrating over their column density distribution model at z = 6 is better approximated by αλ ∼ 1.6 close
+to νHI , turning over to αλ < 1 above 2νHI . Self-consistently adopting this parameterization for λν in our estimation
+of the clumping factor in equation (15), including the resulting non-power-law shape of Jν , would reduce our C from
+12 to 10. However, a modest hardening of the source spectrum to αϵ = 1.2 would return C to 12.
+REFERENCES
+Atek, H., Labbé, I., Furtak, L. J., et al. 2024, Nature, 626,
+975, doi: 10.1038/s41586-024-07043-6
+Becker, G. D., & Bolton, J. S. 2013, MNRAS, 436, 1023,
+doi: 10.1093/mnras/stt1610
+Becker, G. D., D’Aloisio, A., Christenson, H. M., et al.
+2021, MNRAS, 508, 1853, doi: 10.1093/mnras/stab2696
+Becker, G. D., Hewett, P. C., Worseck, G., & Prochaska,
+J. X. 2013, MNRAS, 430, 2067,
+doi: 10.1093/mnras/stt031
+Bianco, M., Iliev, I. T., Ahn, K., et al. 2021, MNRAS, 504,
+2443, doi: 10.1093/mnras/stab787
+Bosman, S. E. I. 2021, arXiv e-prints, arXiv:2108.12446.
+https://arxiv.org/abs/2108.12446
+Bosman, S. E. I., Davies, F. B., Becker, G. D., et al. 2022,
+MNRAS, 514, 55, doi: 10.1093/mnras/stac1046
+
+Bouwens, R. J., Oesch, P. A., Stefanon, M., et al. 2021, AJ,
+162, 47, doi: 10.3847/1538-3881/abf83e
+Cain, C., D’Aloisio, A., Gangolli, N., & Becker, G. D. 2021,
+ApJL, 917, L37, doi: 10.3847/2041-8213/ac1ace
+Cain, C., D’Aloisio, A., Gangolli, N., & McQuinn, M. 2023,
+MNRAS, 522, 2047, doi: 10.1093/mnras/stad1057
+Chan, T. K., Benı́tez-Llambay, A., Theuns, T., Frenk, C.,
+& Bower, R. 2024, MNRAS, 528, 1296,
+doi: 10.1093/mnras/stae114
+Chen, N., Doussot, A., Trac, H., & Cen, R. 2020, ApJ, 905,
+132, doi: 10.3847/1538-4357/abc890
+Chisholm, J., Saldana-Lopez, A., Flury, S., et al. 2022,
+MNRAS, 517, 5104, doi: 10.1093/mnras/stac2874
+Cullen, F., McLeod, D. J., McLure, R. J., et al. 2024,
+MNRAS, 531, 997, doi: 10.1093/mnras/stae1211
+
+11
+D’Aloisio, A., McQuinn, M., Maupin, O., et al. 2019, ApJ,
+874, 154, doi: 10.3847/1538-4357/ab0d83
+
+Kaurov, A. A., & Gnedin, N. Y. 2015, ApJ, 810, 154,
+doi: 10.1088/0004-637X/810/2/154
+
+D’Aloisio, A., McQuinn, M., Trac, H., Cain, C., &
+Mesinger, A. 2020, ApJ, 898, 149,
+doi: 10.3847/1538-4357/ab9f2f
+
+Madau, P. 2017, ApJ, 851, 50,
+doi: 10.3847/1538-4357/aa9715
+
+Davies, F. B., Bosman, S. E. I., Furlanetto, S. R., Becker,
+G. D., & D’Aloisio, A. 2021, ApJL, 918, L35,
+doi: 10.3847/2041-8213/ac1ffb
+
+Madau, P., Haardt, F., & Rees, M. J. 1999, ApJ, 514, 648,
+doi: 10.1086/306975
+Mao, Y., Koda, J., Shapiro, P. R., et al. 2020, MNRAS,
+491, 1600, doi: 10.1093/mnras/stz2986
+
+Davies, F. B., & Furlanetto, S. R. 2016, MNRAS, 460,
+1328, doi: 10.1093/mnras/stw931
+
+McGreer, I. D., Mesinger, A., & D’Odorico, V. 2015,
+MNRAS, 447, 499, doi: 10.1093/mnras/stu2449
+
+—. 2022, MNRAS, 514, 1302, doi: 10.1093/mnras/stac1005
+
+McQuinn, M., Oh, S. P., & Faucher-Giguère, C.-A. 2011,
+ApJ, 743, 82, doi: 10.1088/0004-637X/743/1/82
+
+Davies, F. B., Bosman, S. E. I., Gaikwad, P., et al. 2024,
+ApJ, 965, 134, doi: 10.3847/1538-4357/ad1d5d
+Emberson, J. D., Thomas, R. M., & Alvarez, M. A. 2013,
+ApJ, 763, 146, doi: 10.1088/0004-637X/763/2/146
+
+Meiksin, A., & White, M. 2003, MNRAS, 342, 1205,
+doi: 10.1046/j.1365-8711.2003.06624.x
+
+Erkal, D. 2015, MNRAS, 451, 904,
+doi: 10.1093/mnras/stv980
+
+Muñoz, J. B., Mirocha, J., Chisholm, J., Furlanetto, S. R.,
+& Mason, C. 2024, arXiv e-prints, arXiv:2404.07250,
+doi: 10.48550/arXiv.2404.07250
+
+Faucher-Giguère, C.-A. 2020, MNRAS, 493, 1614,
+doi: 10.1093/mnras/staa302
+
+Ning, Y., Cai, Z., Jiang, L., et al. 2023, ApJL, 944, L1,
+doi: 10.3847/2041-8213/acb26b
+
+Faucher-Giguère, C.-A., Lidz, A., Zaldarriaga, M., &
+Hernquist, L. 2009, ApJ, 703, 1416,
+doi: 10.1088/0004-637X/703/2/1416
+
+O’Meara, J. M., Prochaska, J. X., Worseck, G., Chen,
+H.-W., & Madau, P. 2013, ApJ, 765, 137,
+doi: 10.1088/0004-637X/765/2/137
+
+Finkelstein, S. L., & Bagley, M. B. 2022, ApJ, 938, 25,
+doi: 10.3847/1538-4357/ac89eb
+
+Pahl, A. J., Shapley, A., Steidel, C. C., Chen, Y., & Reddy,
+N. A. 2021, MNRAS, 505, 2447,
+doi: 10.1093/mnras/stab1374
+
+Finlator, K., Oh, S. P., Özel, F., & Davé, R. 2012, MNRAS,
+427, 2464, doi: 10.1111/j.1365-2966.2012.22114.x
+Furlanetto, S. R., Zaldarriaga, M., & Hernquist, L. 2004,
+ApJ, 613, 1, doi: 10.1086/423025
+
+Park, H., Shapiro, P. R., Choi, J.-h., et al. 2016, ApJ, 831,
+86, doi: 10.3847/0004-637X/831/1/86
+
+Gaikwad, P., Haehnelt, M. G., Davies, F. B., et al. 2023,
+MNRAS, 525, 4093, doi: 10.1093/mnras/stad2566
+
+Pawlik, A. H., Schaye, J., & van Scherpenzeel, E. 2009,
+MNRAS, 394, 1812,
+doi: 10.1111/j.1365-2966.2009.14486.x
+
+Gnedin, N. Y. 2022, ApJ, 937, 17,
+doi: 10.3847/1538-4357/ac8d0a
+
+Planck Collaboration, Aghanim, N., Akrami, Y., et al.
+2020, A&A, 641, A6, doi: 10.1051/0004-6361/201833910
+
+—. 2024, ApJ, 963, 150, doi: 10.3847/1538-4357/ad298e
+
+Prieto-Lyon, G., Strait, V., Mason, C. A., et al. 2023,
+A&A, 672, A186, doi: 10.1051/0004-6361/202245532
+
+Gnedin, N. Y., & Ostriker, J. P. 1997, ApJ, 486, 581,
+doi: 10.1086/304548
+Gunn, J. E., & Peterson, B. A. 1965, ApJ, 142, 1633,
+doi: 10.1086/148444
+Haardt, F., & Madau, P. 2012, ApJ, 746, 125,
+doi: 10.1088/0004-637X/746/2/125
+Iliev, I. T., Mellema, G., Shapiro, P. R., & Pen, U.-L. 2007,
+MNRAS, 376, 534, doi: 10.1111/j.1365-2966.2007.11482.x
+Iliev, I. T., Scannapieco, E., & Shapiro, P. R. 2005, ApJ,
+624, 491, doi: 10.1086/429083
+Izotov, Y. I., Schaerer, D., Thuan, T. X., et al. 2016,
+MNRAS, 461, 3683, doi: 10.1093/mnras/stw1205
+
+Prochaska, J. X., Madau, P., O’Meara, J. M., & Fumagalli,
+M. 2014, MNRAS, 438, 476, doi: 10.1093/mnras/stt2218
+Prochaska, J. X., Worseck, G., & O’Meara, J. M. 2009,
+ApJL, 705, L113, doi: 10.1088/0004-637X/705/2/L113
+Puchwein, E., Haardt, F., Haehnelt, M. G., & Madau, P.
+2019, MNRAS, 485, 47, doi: 10.1093/mnras/stz222
+Raičević, M., & Theuns, T. 2011, MNRAS, 412, L16,
+doi: 10.1111/j.1745-3933.2010.00993.x
+Rudie, G. C., Steidel, C. C., Shapley, A. E., & Pettini, M.
+2013, ApJ, 769, 146, doi: 10.1088/0004-637X/769/2/146
+
+Ji, Z., Giavalisco, M., Vanzella, E., et al. 2020, ApJ, 888,
+109, doi: 10.3847/1538-4357/ab5fdc
+
+Satyavolu, S., Kulkarni, G., Keating, L. C., & Haehnelt,
+M. G. 2023, MNRAS, 521, 3108,
+doi: 10.1093/mnras/stad729
+
+Kannan, R., Garaldi, E., Smith, A., et al. 2022, MNRAS,
+511, 4005, doi: 10.1093/mnras/stab3710
+
+Shull, J. M., Harness, A., Trenti, M., & Smith, B. D. 2012,
+ApJ, 747, 100, doi: 10.1088/0004-637X/747/2/100
+
+12
+Simmonds, C., Tacchella, S., Maseda, M., et al. 2023,
+MNRAS, 523, 5468, doi: 10.1093/mnras/stad1749
+Simmonds, C., Tacchella, S., Hainline, K., et al. 2024,
+MNRAS, 527, 6139, doi: 10.1093/mnras/stad3605
+So, G. C., Norman, M. L., Reynolds, D. R., & Wise, J. H.
+2014, ApJ, 789, 149, doi: 10.1088/0004-637X/789/2/149
+Songaila, A., & Cowie, L. L. 2010, ApJ, 721, 1448,
+doi: 10.1088/0004-637X/721/2/1448
+Spina, B., Bosman, S. E. I., Davies, F. B., Gaikwad, P., &
+Zhu, Y. 2024, arXiv e-prints, arXiv:2405.12273,
+doi: 10.48550/arXiv.2405.12273
+Vanzella, E., Nonino, M., Cupani, G., et al. 2018, MNRAS,
+476, L15, doi: 10.1093/mnrasl/sly023
+
+Verner, D. A., Ferland, G. J., Korista, K. T., & Yakovlev,
+D. G. 1996, ApJ, 465, 487
+Worseck, G., Davies, F. B., Hennawi, J. F., & Prochaska,
+J. X. 2019, ApJ, 875, 111, doi: 10.3847/1538-4357/ab0fa1
+Worseck, G., Prochaska, J. X., O’Meara, J. M., et al. 2014,
+MNRAS, 445, 1745, doi: 10.1093/mnras/stu1827
+Wu, X., McQuinn, M., Eisenstein, D., & Iršič, V. 2021,
+MNRAS, 508, 2784, doi: 10.1093/mnras/stab2815
+Zhu, Y., Becker, G. D., Bosman, S. E. I., et al. 2021, ApJ,
+923, 223, doi: 10.3847/1538-4357/ac26c2
+—. 2022, ApJ, 932, 76, doi: 10.3847/1538-4357/ac6e60
+Zhu, Y., Becker, G. D., Christenson, H. M., et al. 2023,
+ApJ, 955, 115, doi: 10.3847/1538-4357/aceef4
+Zhu, Y., Becker, G. D., Bosman, S. E. I., et al. 2024,
+MNRAS, doi: 10.1093/mnrasl/slae061
+
+

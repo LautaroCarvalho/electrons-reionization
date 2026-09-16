@@ -1,0 +1,591 @@
+Mon. Not. R. Astron. Soc. 000, 000–000 (0000)
+
+Printed 14 August 2018
+
+(MN LATEX style file v2.2)
+
+arXiv:1804.05843v3 [astro-ph.HE] 13 Aug 2018
+
+Astrophysical radio background cannot explain the EDGES
+21-cm signal: constraints from cooling of non-thermal
+electrons
+Prateek
+Sharma1?
+1
+
+Joint Astronomy Programme and Department of Physics, Indian Institute of Science, Bangalore 560012, India
+
+14 August 2018
+
+ABSTRACT
+
+Recently the EDGES experiment has claimed the detection of an absorption feature
+centered at 78 MHz. When interpreted as a signature of cosmic dawn, this feature
+appears at the correct wavelength (corresponding to a redshift range of z ≈ 15 − 20) but
+is larger by at least a factor of two in amplitude compared to the standard 21-cm models.
+One way to explain the excess radio absorption is by the enhancement of the diffuse radio
+background at ν = 1.42 GHz (λ = 21 cm) in the rest frame of the absorbing neutral
+hydrogen. Astrophysical scenarios, based on the acceleration of relativistic electrons by
+accretion on to supermassive black holes (SMBHs) and by supernovae (SN) from first
+stars, have been proposed to produce the enhanced radio background via synchrotron
+emission. In this Letter we show that either the synchrotron or the inverse-Compton
+(IC) cooling time for such electrons is at least three orders of magnitude shorter than
+the duration of the EDGES signal centered at z ≈ 17, irrespective of the magnetic field
+strength. The synchrotron radio emission at 1.42 GHz due to rapidly cooling electrons
+is ∼ 103 times smaller than the non-cooling estimate. Thus astrophysical scenarios for
+excess radio background proposed to explain the EDGES signal appear very unlikely.
+Key words: galaxies: high-redshift – intergalactic medium – dark ages, reionization,
+first stars – diffuse radiation – radiation mechanisms: non-thermal.
+
+1
+
+INTRODUCTION
+
+Very recently the EDGES (Experiment to Detect the Global
+Epoch of Reionization Signature) experiment has detected a
+broad (∆ν/ν ≈ 1/4) absorption feature in the residual sky
+brightness temperature centered at ν ≈ 78 MHz (Bowman
+et al. 2018). Interpreting this dip in the brightness temperature as 21-cm absorption by the diffuse neutral intergalactic
+medium (IGM) at z = 1.42 GHz/78 MHz − 1 ≈ 17 whose
+spin temperature is coupled to the gas temperature via the
+Wouthuysen-Field effect (Wouthuysen 1952; Field 1959; for a
+review see Pritchard & Loeb 2012), the absorption frequency
+range is consistent with the standard models for the reionization of the IGM. However, the amplitude of the absorption
+feature is at least a factor of two larger than predicted by
+such models.
+
+?
+
+E-mail: prateek@iisc.ac.in
+
+c 0000 RAS
+
+The global brightness temperature corresponding to the
+emission/absorption of 21-cm photons for a background radiation characterized by a brightness temperature (Tbg =
+TR + TCMB ; TR and TCMB are the brightness temperatures
+of a diffuse radio background and the CMB) at the redshift
+of absorption z is given by (Eq. 1 in Barkana 2018)
+−1/2 
+
+1/2 
+
+Tbg
+1−
+TS
+(1)
+in mK, where xHI is the mass fraction of neutral hydrogen, Ωb
+and Ωm are the cosmic mean densities of baryons and matter
+respectively, h is the Hubble parameter in units of 100 km
+s−1 Mpc−1 , and TS is the spin temperature characterizing the
+level populations of the two hyperfine transition states. The
+spin temperature is expected to lie between the gas kinetic
+temperature (TK ) and the background radiation temperature
+(Tbg ).
+In the standard IGM evolution scenario all the back
+
+T21 = 36xHI
+
+Ωb h
+0.0327
+
+
+
+Ωm
+0.307
+
+1+z
+18
+
+2
+
+Sharma
+
+ground radiation at the relevant frequencies is due to the
+CMB. The CMB temperature at the relevant redshift is
+
+
+1+z
+TCMB ≈ 49
+K
+(2)
+18
+and the lowest possible gas kinetic temperature in the standard scenario is 7 K (as mentioned in Barkana 2018).
+Thus the minimum brightness temperature for the absorption trough at 78 MHz, according to Eq. 1, is -216 mK. The
+brightness temperature measured by EDGES is −500+200
+−500 mK
+(errors correspond to 99% [3σ] confidence intervals; Bowman
+et al. 2018). Thus, even the maximum value of the observationally inferred T21 (-300 mK) is lower than the minimum
+according to the standard scenario (-216 mK). From Eq. 1,
+the only way to lower T21 is to either raise Tbg (e.g., see EwallWice et al. 2018; Mirocha & Furlanetto 2018; Fraser et al.
+2018; Pospelov et al. 2018) or to lower TS (Muñoz & Loeb
+2018; Barkana et al. 2018; Berlin et al. 2018). In this Letter
+we investigate a subset of the former scenarios.
+The presence of an additional radio background at 21cm in the rest frame of the absorbing IGM (characterized by
+brightness temperature TR ) will increase the 21-cm absorption signal by an enhancement factor of
+E=
+
+TR /TCMB
+TR
++1≈
++ 1,
+1 − TS /TCMB
+TCMB
+
+(3)
+
+since TS /TCMB ≈ TK /TCMB ∼ 1/7  1. Indeed there is an
+excess radio background measured at frequencies below 10
+GHz, most recently highlighted by the ARCADE 2 experiment (Absolute Radiometer for Cosmology, Astrophysics and
+Diffuse Emission; Fixsen et al. 2011; see the recent conference
+summary on this by Singal et al. 2018). While this excess radio background cannot be accounted for by extragalactic radio point sources, most of it may be of Galactic origin (Subrahmanyan & Cowsik 2013). The brightness temperature of
+the excess radio background measured at 78 MHz is ∼ 600
+K (see Fig. 1 in Singal et al. 2018). We can explain the excess EDGES absorption if only a few K of this (comparable
+to the CMB brightness temperature at z = 0; see Eq. 3) is
+contributed by processes happening earlier than z ∼ 17 (Feng
+& Holder 2018).
+Astrophysical sources such as accreting supermassive
+black holes (SMBHs; Biermann et al. 2014; Ewall-Wice et
+al. 2018) and supernovae (SN) from the first stars (Mirocha
+& Furlanetto 2018) at z & 17 can give the required excess radio background. This option, however, requires these sources
+to be ∼ 3 orders of magnitude more efficient radio emitters
+compared to their low redshift counterparts.
+In this Letter we show that the astrophysical mechanisms
+that require synchrotron emission from relativistic electrons
+to enhance the radio background at z ≈ 17 are severely constrained because the cooling time (due to inverse-Compton
+and synchrotron losses) of these electrons is at least three orders of magnitude shorter than the duration of the EDGES
+absorption trough. This implies that the models that do not
+explicitly account for cooling of non-thermal electrons grossly
+overestimate the radio synchrotron background. Although the
+
+importance of IC cooling at high redshifts and its contribution to the X-ray background is recognized (e.g., see Oh 2001;
+Ghisellini et al. 2014), here we focus on the cooling argument
+in the context of the recent EDGES result.
+Unless stated otherwise, all quantities are expressed in
+physical units in the rest frame of the absorbing gas.
+
+2
+
+SYNCHROTRON RADIO BACKGROUND
+
+In astrophysical scenarios, involving both SMBHs and SN,
+the excess radio background is produced by incoherent synchrotron emission due to relativistic electrons gyrating around
+magnetic field lines. In this Letter we do not model the radio emissivity due to accreting SMBHs and star formation
+at z ∼ 17. In absence of observational constrains, the spectral/redshift variation of emission from these sources is highly
+uncertain. The radio emissivity models are based on extrapolations from low redshifts (e.g., see Eqs. 4, 5 in Ewall-Wice
+et al. 2018 [hereafter EW18]; Eq. 5 in Mirocha & Furlanetto
+2018 [hereafter MF18]). Here we assume that these models
+for black hole accretion and star formation at z ∼ 17, which
+ignore cooling losses, can be tuned to raise the radio background at 21-cm. In this Letter the radio source evolution is
+modeled by the source term Sγ in the one-zone model (Eq.
+13), but we explicitly account for cooling losses which are
+very important at high redshifts. We show that the cooling of
+non-thermal electrons can suppress the radio background by
+∼ 103 relative to the non-cooling estimate.
+The synchrotron emission at a frequency ν is related to
+the cyclotron frequency (νcyc = eB/2πme c; e is the charge of
+an electron, B is magnetic field strength, me is electron mass
+and c is the universal speed of light) by ν ∼ γ 2 νcyc , where γ is
+the Lorentz factor of electrons with an isotropic momentum
+distribution. The Lorentz factor of electrons responsible for
+synchrotron emission at a frequency ν = 1.42 GHz is given
+by
+
+−1/2
+B
+γsyn ∼ 730
+.
+(4)
+10−3 G
+The magnetic field strength in our equations refers to the
+regions in which electrons are confined to produce the excess
+radio background, and not to the strength of a global diffuse
+magnetic field. The synchrotron photons from a number of
+such sources are expected to result in an almost uniform largescale radio background that may explain the global 21-cm
+absorption amplitude.
+
+2.1
+
+Synchrotron cooling time
+
+The synchrotron cooling time tsyn ∼ γme c2 /γ 2 uB σT c (uB ≡
+B 2 /8π is magnetic energy density and σT is the Thomson
+scattering cross-section). Expressed in terms of B,
+
+−3/2
+B
+tsyn ∼ 0.05Myr
+.
+(5)
+10−3 G
+c 0000 RAS, MNRAS 000, 000–000
+
+EDGES, radio excess and electron cooling
+
+3
+
+crossover at z = 17 occurs at B ∼ 10−3 G. Also note that the
+maximum value of the cooling time (tcool ≈ min[tsyn , tIC ]; see
+Eq. 14) at z = 17 is about four orders of magnitude shorter
+than at z = 0, implying that the cooling losses are much more
+important at higher redshifts than now.
+3.2
+
+Soft X-ray background
+
+Let us, for now, assume that synchrotron radio emission indeed produces the requisite radio background at z ∼ 17. The
+same electrons are expected to upscatter the CMB photons
+and produce a uniform background at a frequency (see Eq. 4)
+
+−1 
+
+B
+1+z
+2
+νIC ∼ γsyn
+νbg ∼ 1.5 × 1018 Hz
+, (8)
+10−3 G
+18
+
+Figure 1. Important timescales for the relativistic electrons producing the excess radio synchrotron background as a function of
+the magnetic field strength: the duration of the EDGES signal
+(∆tEDGES ; Eq. 12), the synchrotron cooling time (tsyn ; Eq. 5), the
+IC cooling time (tIC at z = 0, 17; Eq. 7), and the cooling time tcool
+(Eq. 14) at z = 17. The relativistic electrons will cool at the shorter
+of the synchrotron and IC cooling timescales, which at z = 17 is
+at least ∼ 103 shorter than the duration of the EDGES absorption
+for all B. Magnetic field strength lower than ∼ 10−4 G (indicated
+by the blue shaded region) is ruled out from the soft X-ray background constraint (see section 3.2). An important timescale, the
+electron replenishment timescale in AGN/SN, is highly uncertain
+and not shown here but discussed in section 4.1.
+
+3
+
+INVERSE-COMPTON CONSIDERATIONS
+
+Typically, the relativistic electrons producing synchrotron
+emission in radio also emit at much higher frequencies due
+to the Compton upscattering of the background radiation (in
+our case dominated by the CMB).
+3.1
+
+IC cooling time
+
+The IC cooling time for relativistic electrons is tIC =
+γme c2 /γ 2 ubg σT c (ubg is the energy density of the background
+photons). The ratio of the IC cooling time to the synchrotron
+cooling time for the electrons producing the excess radio background is
+
+2 
+−4
+uB
+B
+1+z
+tIC
+∼
+∼ 0.91
+,
+(6)
+tsyn
+ubg
+10−3 G
+18
+4
+where we have assumed ubg = uCMB = aTCMB
+(a is the radiation constant). Thus the IC cooling time for these electrons
+(combining Eq. 6 with Eq. 5) is
+
+1/2 
+−4
+1+z
+B
+tIC ∼ 0.046Myr
+.
+(7)
+10−3 G
+18
+
+Figure 1 shows the synchrotron and IC cooling timescales
+as a function of the magnetic field strength at z = 17 and
+z = 0. Note that at z = 0 the IC and synchrotron cooling
+times cross at the field strength of B ≈ 3 µG. The same
+c 0000 RAS, MNRAS 000, 000–000
+
+which corresponds to 6.4 keV for the fiducial parameters. This
+IC background will be redshifted to soft X-rays (∼ 0.36 keV,
+or equivalently, ν ∼ 8 × 1016 Hz) at z = 0.
+The synchrotron emissivity of relativistic electrons is
+given by
+
+
+dn dγ
+2
+,
+(9)
+ν,syn ∼ γsyn uB σT c
+dγ dν ν=γ 2 νcyc
+syn
+
+−p
+
+where dn/dγ ∝ γ
+is a power-law distribution of the relativistic electrons. The IC emissivity produced by the upscattering of the CMB by the same electrons is related to
+it by ν,IC /ν,syn ∼ uCMB νcyc /uB νCMB (a consequence of
+νsyn/IC ∼ γ 2 νcyc/CMB ). Therefore the ratio of IC and synchrotron emissivities per logarithmic interval in frequency is
+given by
+
+−2 
+4
+(νν )IC
+uCMB
+B
+1+z
+=
+∼ 1.1
+.
+(10)
+(νν )syn
+uB
+10−3 G
+18
+Now if this IC emission in X-rays travels to z = 0 without
+getting absorbed, for our fiducial B we expect a soft X-ray
+background (SXB) with νFν comparable to the radio background at ν ∼ 78 MHz measured at z = 0. Thus the spectral
+energy surface brightness density (νIν ) at ∼ 8 × 1016 Hz (0.36
+keV) contributed by the synchrotron radio emitting electrons
+due to IC upscattering of the CMB is ∼ 3 × 10−4 nW m−2
+Sr−1 , a few % of the observed SXB (e.g., see Fig. 2 in Singal
+et al. 2018 and compare the backgrounds at 108 Hz and 1017
+Hz). The constraint of not overproducing the SXB implies
+that B & 10−4 G in the sources responsible for synchrotron
+radio emission (the blue shaded region in Fig. 1 marks the
+field strengths ruled out by this constraint).
+Moreover, such an SXB will have implications on the Xray heating of the IGM, the evolution of the spin temperature,
+and the appearance of the 21-cm feature (see Eq. 1). We do
+not explore these issues in this Letter (for a discussion, see
+EW18; MF18).
+
+4
+
+COOLING CONSTRAINT
+
+The age of the Universe at the redshift of the EDGES absorption trough (z ∼ 17), assuming a flat matter-only Universe (a
+
+4
+
+Sharma
+4.1
+
+A one-zone model
+
+The standard one-zone model for the evolution of nγ ≡ dn/dγ
+is given by (e.g., see Eq. 14 in Oh 2001; see also Sarazin 1999)
+∂
+nγ
+∂nγ
++
+(γ̇nγ ) = Sγ −
+,
+∂t
+∂γ
+tesc
+
+(13)
+
+where γ̇ = −γ/tcool ,
+tcool =
+
+Figure 2. The average spectral energy distribution (SED) of the
+radio synchrotron sources at 18.25 Myr (< ∆tEDGES ; corresponding to the cooling time of γ = 1 electrons) under different scenarios of electron cooling: (i) no cooling; (ii) continuous injection of
+electrons with cooling; and (iii) only cooling (and no continuous
+injection) of the initially relativistic electrons. For (ii) the spectral
+index (d ln Fν /d ln ν) becomes steeper by 0.5 beyond the cooling
+break; for (iii) there is no emission at frequencies higher than the
+cooling cut-off. Since the minimum value of ∆tEDGES /tcool > 103
+for all field strengths (see Fig. 1), the cooling break at ∼ ∆tEDGES
+occurs at a very low frequency, and the flux at 1.42 GHz for (ii) is
+∼ 103 lower than (i).
+
+good assumption at those redshifts), is
+
+tage ∼ 180Myr
+
+1+z
+18
+
+−3/2
+.
+
+(11)
+
+The EDGES absorption trough is centered at z ≈ 17 and
+has a duration ∆z/z ≈ 1/4. For a flat matter-only Universe
+∆t/t = −3∆z/2(1 + z), and therefore the time duration of
+the EDGES signal is
+
+
+−3/2
+
+∆z/z
+.
+1/4
+(12)
+Now if an enhanced radio background has to explain the
+EDGES absorption amplitude, it must be present for at least
+the duration of ∆tEDGES . If the relativistic electrons are accelerated only at the beginning of the absorption feature at
+z ≈ 20 but are not replenished, they will cool off in . 0.025
+Myr irrespective of B (see Fig. 1) and therefore the required
+radio background cannot be sustained for ∆tEDGES . This implies that we need continuous injection of relativistic electrons
+to replenish cooling losses. But even with the continuous injection of electrons, cooling is expected to steepen the radio
+spectrum at the relevant frequencies, as we show next.
+∆tEDGES =
+
+3
+∆z
+tage
+≈ 67.5 Myr
+2
+1+z
+
+1+z
+18
+
+1
+−1
+t−1
+syn + tIC
+
+(14)
+
+is the cooling time due to synchrotron and IC cooling (we ignore adiabatic cooling), Sγ is the source term for relativistic
+electrons, and tesc is the escape timescale of relativistic electrons. The spectral index αν ≡ d ln Fν /d ln ν and the electron
+power-law index (p; nγ ∝ γ −p ) are related as αν = −(p−1)/2
+(e.g., see Rybicki & Lightman 1986).
+If there is no injection (i.e., Sγ = 0) but only cooling of
+an initial population of relativistic electrons, a cooling cutoff occurs at γ (the corresponding ν = γ 2 νcyc ) for which the
+cooling time equals the age of electrons; there are no electrons
+with a higher γ. The SED for this case is shown by the green
+dot-dashed line in Fig. 2.
+Steady solution with injection and no cooling: In absence
+of cooling, the source term needed to produce an electron
+number density sufficient to produce the required radio background (nγ ∝ ν,syn ; see Eq. 9) is given by Sγ = nγ /tesc .
+Thus, in steady state the electron replenishment time equals
+the escape time (tesc ). Extrapolating from z ∼ 0, EW18 and
+MF18 use a shallow spectral index (αν = −0.6, − 0.7 respectively) for the radio emission from their z ≈ 17 sources. The
+corresponding electron indices are p =2.2, 2.4, consistent with
+diffusive shock acceleration. These works do not account for
+cooling losses of the relativistic electrons, which are clearly
+very important at z ∼ 17 as compared to z ∼ 0 (see Fig. 1).
+Now we consider the effects of cooling.
+Solution with injection and cooling: In presence of cooling, a cooling break appears for the solution of Eq. 13 at a γ
+for which the cooling time equals the age of electrons (t). For
+γs smaller than the cooling break nγ = Sγ tesc , the same as in
+the no-cooling case. However, for γs larger than the cooling
+break ∂/∂γ(γ̇nγ ) ≈ Sγ . Since Sγ is assumed to be a powerlaw (with p = 2.2) and γ̇ ∝ −γ 2 (true for both synchrotron
+and IC losses), the slope of nγ steepens by unity beyond the
+cooling break and the slope of the SED steepens by 0.5.
+Figure 2 shows the radio SEDs for models based on Eq.
+13 (synchrotron emissivity and nγ are related by Eq. 9) without injection (green dot-dashed line), with injection but no
+cooling (blue dashed line), and with injection and cooling
+(orange solid line). The dashed line shows the SED assumed
+by EW18 with a large enough Sγ (Sγ ∝ γ −2.2 , equivalently
+Sν ∝ ν −0.6 ), corresponding to their PopIII scenario (see their
+Fig. 1) that produces sufficient radio background. The solid
+line shows the SED with the same Sγ but affected by cooling (assuming B = 10−3 G corresponding to the longest
+tcool ≈ tsyn /2 ≈ tIC /2 ≈ 0.025 Myr; see Fig. 1) after a duration of 0.025 × 730 ≈ 18.25 Myr (< ∆tEDGES = 67.5 Myr; Eq.
+c 0000 RAS, MNRAS 000, 000–000
+
+EDGES, radio excess and electron cooling
+12), the time at which the cooling break for electrons reaches
+γ = 1 (ν = νcyc ≈ 2500 Hz).1
+The cooling time for non-relativistic electrons emitting
+cyclotron photons becomes independent of energy and the
+tcool ∝ γ −1 scaling breaks down, but the SED at ∼ ∆tEDGES
+will definitely be below the orange solid line in Figure 2. Thus
+reading off the values at 1.42 GHz for the orange and blue
+lines in Figure 2, we conclude that ignoring cooling losses
+overestimates the radio synchrotron flux by & 103 . Therefore, the source radio emissivities (equivalently Sγ ) need to
+be boosted by ∼ 103 to reproduce the EDGES absorption in
+presence of realistic cooling. This essentially rules out synchrotron radio background as a solution to the enhanced 21cm absorption seen by EDGES because the models are already fine tuned to produce ∼ 103 larger radio emission compared to z ∼ 0 observations.
+
+5
+
+CONCLUSIONS
+
+We conclude that astrophysical particle accelerators (first
+stars and supermassive black holes), with reasonable extrapolation from z ∼ 0, cannot produce the radio synchrotron
+background at 1.42 GHz comparable to the CMB brightness
+temperature. Such a radio background is invoked by some
+models (e.g., EW18; MF18) to explain the excess 21-cm absorption signature claimed by the EDGES experiment. The
+principal difficulty is that the cooling time (shorter of the
+synchrotron and inverse-Compton cooling times) of the relevant relativistic electrons is at least three orders of magnitude
+shorter than the duration of the EDGES signal (see Fig. 1).
+To get the required radio background, various astrophysical
+scenarios have to enhance the radio emissivity by ∼ 103 compared to the z ∼ 0 models. In the presence of non-thermal
+cooling losses considered in this Letter the required enhancement is expected to be & 106 , which seems almost impossible.
+Of course, there is the additional constraint from the soft Xray background (see section 3.2).
+We note that the constraints in this Letter do not apply to scenarios in which the excess radio background is not
+produced by relativistic electrons (e.g., Fraser et al. 2018;
+Pospelov et al. 2018). With stringent constraints on dark matter cooling (Muñoz & Loeb 2018; Barkana et al. 2018; Berlin
+et al. 2018) and on astrophysical models based on excess radio background, it is imperative that the EDGES signal be
+confirmed with other experiments. Thankfully there are several such ongoing experiments (e.g., see Bernardi et al. 2016;
+Voytek et al. 2014; Singh et al. 2017).
+We end by noting that the arguments in this Letter can
+be used to put tight constraints on the background radiation at high redshifts, independent of the fate of the EDGES
+signal.
+
+1
+
+Synchrotron self absorption will become important at such low
+frequencies but the SED at 1.42 GHz (in the optically thin regime)
+will be unaffected.
+c 0000 RAS, MNRAS 000, 000–000
+
+5
+
+ACKNOWLEDGEMENTS
+We thank Siddhartha Gupta and Biman Nath for helpful discussions and encouragement. We also thank Rohini Godbole
+and Nirupam Roy for organizing a discussion on the EDGES
+result. We are grateful to Aaron Ewall-Wice and an anonymous referee for useful comments. We acknowledge an IndiaIsrael joint research grant (6-10/2014[IC]).
+
+REFERENCES
+Barkana, R. 2018 Nature, 555, 71
+Barkana, R., Outmezguine, N. J., Redigolo, D., Volansky, T.
+2018 arXiv e-print, arXiv:1803.03091
+Berlin, A., Hooper, D., Krnjaic, G., McDermott, S. D. 2018
+arXiv-eprint, arXiv:1803.02804
+Bernardi, G., Zwart, J. T. L., Price, D.; Greenhill, L. J.,
+Mesinger, A., Dowell, J., Eftekhari, T., Ellingson, S. W.,
+Kocz, J., & Schinzel, F. 2016 MNRAS, 461, 2847
+Biermann, P. L., Nath, B. B., Caramete, L. I., Harms, B.
+C., Stanev, T., & Becker Tjus, J. 2014 MNRAS, 441, 1147
+Bowman, J. D., Rogers, A. E. E., Monsalve, R. A., Mozdzen,
+T. J., & Mahesh, N. 2018 Nature, 555, 67
+Ewall-Wice, A., Chang, T.-C., Lazio, J., Doré, O., Seiffert,
+M., & Monsalve, R. A. 2018 arXiv e-print, arXiv1803.01815
+Feng, C. & Holder, G. 2018 arXiv e-print, arXiv:1802.07432
+Field, G. B. 1959 ApJ, 129, 536
+Fixsen, D. J., Kogut, A., Levin, S., Limon, M., Lubin, P.,
+Mirel, P., Seiffert, M., Singal, J., Wollack, E., Villela, T.,
+& Wuensche, C. A. 2011 ApJ, 734, 5
+Fraser, S. et al.2018 arXiv e-print, arXiv:1803.03245
+Ghisellini, G., Celotti, A., Tavecchio, F., & Haardt, F. 2014
+MNRAS, 438,2694
+Mirocha, J. & Furlanetto, S. R. 2018 arXiv e-print,
+arXiv:1803.03272
+Muñoz, J. & Loeb, A. 2018 arXiv e-print, arXiv:1802.10094
+Oh, S. P. 2001 ApJ, 553, 499
+Pospelov, M., Pradler, J., Ruderman, J. T., Urbano, A. 2018
+arXiv e-print, arXiv1803.07048
+Pritchard, J. R. & Loeb, A. 2012 Reports on Progress in
+Physics, 75, 086901
+Rybicki, G. B. & Lightman, A. P. 1986 Radiative Processes
+in Astrophysics; Wiley-VCH, 1986
+Saran, C. L. 1999 ApJ, 520, 529
+Singal, J. et al. 2018 PASP, 130, 036001
+Singh, S. et al. 2017 ApJL, 845, L12
+Subrahmanyan, R. & Cowsik, R. 2013 ApJ, 776, 42
+Voytek, T. C., Natarajan, A., Jáuregui Garcı́a, J. M., Peterson, J. B.; López-Cruz, O. 2014 ApJL, 782, L9
+Wouthuysen, S. A. 1952 AJ, 57, 31
+
+

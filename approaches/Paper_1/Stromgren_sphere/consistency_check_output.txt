@@ -1,0 +1,45 @@
+========================================================================
+1. Analytic solution of the classical I-front equation
+========================================================================
+  residual of R(t)=R_S(1-e^{-t/t_rec})^{1/3} : 0  -> OK
+  t_rec identified as 1/(alpha_B C n)  [Shapiro+2006 eq. w = t/t_rec = t C aB nH]
+========================================================================
+2. Numerical Stromgren radius (Galactic H II region)
+========================================================================
+  Ndot=1e+49 s^-1, nH=100 cm^-3 -> R_S =    3.154 pc,  t_rec =    1.223 kyr
+  Ndot=1e+49 s^-1, nH=1 cm^-3 -> R_S =   67.949 pc,  t_rec =  122.339 kyr
+  Ndot=1e+50 s^-1, nH=100 cm^-3 -> R_S =    6.795 pc,  t_rec =    1.223 kyr
+========================================================================
+3. Stromgren (1939): 200 pc diameter for an O star
+========================================================================
+  Ndot=1e49 s^-1, nH=1 cm^-3 -> D = 2R_S = 136 pc  (Stromgren 1939 quotes ~200 pc)
+========================================================================
+4. Spitzer D-type solution solves the Raga-I equation at early times
+========================================================================
+  d(R_Sp)/dt/c_i - (R_St/R_Sp)^{3/4} = 0
+========================================================================
+5. Stagnation radius (Bisbas+2015 eq.14) vs their quoted numbers
+========================================================================
+  c_i(T=1e4 K, mu=0.5) = 12.85 km/s   c_o(T=1e3 K, mu=1) = 2.87 km/s (paper: 12.85, 2.87)
+  R_stag = (c_i/c_o)^(4/3) R_St = 2.31 pc for R_St=0.314 pc (paper: 2.31 pc)
+========================================================================
+6. Cosmological photon-counting radius vs Mesinger & Haiman (2004) scaling
+========================================================================
+  n_H(z=6.28) = 7.306e-05 cm^-3
+  R = [3 Ndot t /(4 pi n_H x_HI)]^(1/3) = 7.70 proper Mpc   (Mesinger&Haiman quote 7.7 Mpc)
+  comoving = 56.0 cMpc ; their best fit R_S = 44 cMpc -> 6.04 pMpc (abstract: 6.0+-0.2)
+========================================================================
+7. Recombination time in the IGM vs the Hubble time at z=7
+========================================================================
+  z= 6.0: t_rec(C=1) =   1.74 Gyr ; 1/H(z) = 1.425 Gyr ; ratio =   1.2
+  z= 8.0: t_rec(C=1) =   0.82 Gyr ; 1/H(z) = 0.980 Gyr ; ratio =   0.8
+  z=10.0: t_rec(C=1) =   0.45 Gyr ; 1/H(z) = 0.726 Gyr ; ratio =   0.6
+========================================================================
+8. Luminosity scaling of proximity zones
+========================================================================
+  naive photon-counting: R ∝ L^(1/3) = L^0.333
+  Onorato+ fit: R_p ∝ 10^(-0.4 M1450)/2.87 -> R_p ∝ L^0.348
+========================================================================
+9. I-front speed regimes
+========================================================================
+  3000 km/s = 3e+08 cm/s (Zhu+2025 plateau) ; Zeng&Hirata equilibrium limit 1e9 cm/s = 10000 km/s

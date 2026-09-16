@@ -1,0 +1,1665 @@
+Astronomy & Astrophysics manuscript no. aa_example
+July 28, 2026
+
+©ESO 2026
+
+Reionization driven by the few: the ionizing budget of galaxies at
+z=5-10 from JWST/NIRSpec
+Emma Giovinazzo1⋆ , Pascal A. Oesch1, 2, 3 , Anne Verhamme1 , Romain A. Meyer1 , Callum Witten1 , John Chisholm4 ,
+Rui Marques-Chaves1 , and Charlotte Simmonds5
+1
+
+Department of Astronomy, University of Geneva, Chemin Pegasi 51, 1290 Versoix, Switzerland
+Cosmic Dawn Center (DAWN), Niels Bohr Institute, University of Copenhagen, Jagtvej 128, København N, DK-2200, Denmark
+3
+Niels Bohr Institute, University of Copenhagen, Jagtvej 128, Copenhagen, Denmark
+4
+Department of Astronomy, The University of Texas at Austin, Austin, TX 78712, USA
+5
+Departamento de Astronomía, Universidad de Chile, Camino El Observatorio 1515, Las Condes, Santiago
+2
+
+Received XXX
+
+arXiv:2607.22834v1 [astro-ph.GA] 24 Jul 2026
+
+ABSTRACT
+
+The sources responsible for the Epoch of Reionization (EoR), the last major phase transition of the Universe, remain highly elusive.
+While JWST has begun to illuminate the properties of early galaxies, the direct detection of their ionizing photons is virtually impossible due to the neutral inter-galactic medium (IGM) at z ≳ 6. A direct estimate of the escape fraction of ionizing photons fesc is
+thus not possible. However, the escape fraction is encoded in spectral features that trace a low opacity to ionizing photons, namely the
+reduction of nebular emission with increasing fesc . Here, we exploit the large archive of JWST/NIRSpec spectra at 5 < zspec < 10 from
+the DAWN JWST Archive to provide new constraints on the ionizing emissivity of EoR galaxies and on the timeline of reionization.
+Through detailed spectral fitting of 1428 galaxies with a picket-fence model for the escape of ionizing photons, we derive posteriors
+of fesc together with the effective ionizing output. This approach yields the escaping ionizing output of each galaxy while bypassing the usual decomposition into the ionizing photon production efficiency (ξion ) and fesc . Combining these measurements with UV
+luminosity functions (LFs), we derive the hydrogen ionizing LFs, resulting in an observationally-derived ionizing photon budget at
+5 < z < 15, integrated down to MUV = −13. Under standard assumptions, our budget yields an evolution of the IGM neutral fraction
+consistent with independent probes, with reionization ending at z ∼ 5.8. Given the evolving shape of the ionizing LF, bright sources
+(MUV ∼ −20) dominate the cosmic ionizing emissivity ṅion at lower redshift (z = 5 − 6), whereas at z > 6 faint galaxies (MUV > −18)
+contribute roughly equally. Remarkably, a mere ∼20% of sources, those with fesc > 10%, produce ∼ 87% of the ionizing photons.
+Overall, our results support a picture in which a few strongly leaking galaxies drive most of reionization.
+Key words. galaxies: high-redshift – cosmology: dark ages, reionization, first stars – early Universe
+
+1. Introduction
+The epoch of reionization (EoR) is the last major phase transition of the Universe, when the hydrogen in the intergalactic medium (IGM) transitioned from completely neutral to
+completely ionized (Becker et al. 2015; Dayal & Ferrara 2018;
+Robertson 2022; Fan et al. 2023; Ellis 2025; Stark et al. 2026,
+for some recent reviews), finally allowing Lyman Continuum (LyC) photons (λrest < 912 Å) to travel through it
+mostly unimpeded. This process started with the formation
+of the first luminous objects (Barkana & Loeb 2001) and was
+likely driven by star-forming galaxies (e.g. Bouwens et al. 2015;
+Robertson et al. 2015; Dayal et al. 2025). However, there is
+still debate about whether faint (Atek et al. 2024) or bright
+(Naidu et al. 2020) galaxies dominate this transition. Active
+Galactic Nuclei (AGNs) have also been suggested as important contributors to this process (Giallongo et al. 2015;
+Madau & Haardt 2015; Grazian et al. 2024; Madau et al. 2024),
+although studies on their luminosity function in the EoR suggest
+that their contribution is likely minor, compared to that of galaxies (Mitra et al. 2018; Hassan et al. 2018; Kulkarni et al. 2019;
+Jiang et al. 2022; Matsuoka et al. 2023).
+⋆
+
+E-mail: emma.giovinazzo@unige.ch
+
+In this context, the process of reionization is expected to be
+very patchy (e.g., D’Aloisio et al. 2015; Jamieson et al. 2025),
+with bubbles of ionized gas forming and growing around the objects that leak the most ionizing photons. This is seen directly
+in observations of the Gunn-Peterson trough, which show fieldto-field variations towards the end of the EoR (Bosman et al.
+2018; Eilers et al. 2018; Yang et al. 2020; Bosman et al. 2022;
+Meyer et al. 2025). Although inhomogeneous, the global evolution of reionization can be summarized with the volume
+filling fraction of ionized hydrogen QHII (z) and its counterpart, the fraction of neutral hydrogen xHI . There have been
+significant efforts to constrain xHI and its redshift evolution,
+both from single bright objects that can probe the GunnPeterson trough, such as quasars, and from the redshift evolution of galaxy populations. Constraints on xHI have been
+placed from observations of the Lyman-α and Lyman-β absorption in the spectra of quasars (Eilers et al. 2018; Kulkarni et al.
+2019; Yang et al. 2020; Bosman et al. 2022; Qin et al. 2025) and
+galaxies (Meyer et al. 2025), the clustering of Lyman-α emitters
+(Sobacchi & Mesinger 2015; Ouchi et al. 2018), the Lyman-α
+equivalent width and luminosity function evolution (Ouchi et al.
+2010; Konno et al. 2014, 2018; Zheng et al. 2017; Inoue et al.
+2018; Mason et al. 2018, 2019a; Hoag et al. 2019; Whitler et al.
+2020; Goto et al. 2021; Morales et al. 2021; Bolan et al. 2022;
+Article number, page 1
+
+A&A proofs: manuscript no. aa_example
+
+Ning et al. 2022; Bruton et al. 2023; Morishita et al. 2023;
+Nakane et al. 2024; Tang et al. 2024; Kageura et al. 2025) as
+well as the damping wing of either Lyman-break galaxies
+(Hsiao et al. 2024; Umeda et al. 2024; Mason et al. 2026) or
+quasars (Schroeder et al. 2013; Davies et al. 2018; Wang et al.
+2020; Greig et al. 2019, 2024). All these different estimates
+place the end of the reionization process at z ∼ 5.3 − 6.
+In its most basic form, the redshift evolution of the fraction
+of neutral hydrogen is calculated as the balance between the recombination time scale and the rate of ionization (Madau et al.
+1999). The number of ionizing photons that reach the IGM per
+unit time and unit volume, the cosmic ionizing emissivity, is described as
+ṅion = ρUV fesc ξion .
+
+(1)
+
+Here ρUV is the UV luminosity density (in units
+erg s−1 Hz−1 Mpc−3 ), derived from the UV luminosity function,
+fesc is the average escape fraction of ionizing photons of the
+general galaxy population and ξion is the average ionizing
+photon production efficiency (in units Hz erg−1 ), measuring
+the amount of ionizing photons created per 1500 Å luminosity
+density.
+Since the launch of the James Webb Space Telescope
+(JWST, Gardner et al. 2023) we have gained an unprecedented view of the rest-frame optical properties of galaxies
+in the EoR, both thanks to the Near-Infrared Camera (NIRCam, Rieke et al. 2023) and the Near-Infrared Spectrograph
+(NIRSpec Jakobsen et al. 2022). In particular, many studies
+have focused on separately measuring the three parameters
+that make up our understanding of the ionizing photon output of the Universe, ρUV (Bouwens et al. 2023; Donnan et al.
+2024; Harikane et al. 2025; Whitler et al. 2025; Atek et al. 2026;
+Chemerynska et al. 2026; Kreilgaard et al. 2026; Weibel et al.
+2026), ξion (Simmonds et al. 2024a,b; Llerena et al. 2025;
+Pahl et al. 2026), and fesc (Witten et al. 2023; Mascia et al.
+2024b; Saxena et al. 2024; Giovinazzo et al. 2026; Stoffers et al.
+2026; Jecmen et al. 2026). However, considering each component individually does not account for possible correlations
+between the parameters, which can have significant implications on the estimated ionizing budget (Muñoz et al. 2024;
+Bosman & Davies 2024). In particular fesc is an exceedingly
+challenging quantity to measure as effectively all ionizing photons are absorbed by the IGM in the EoR, making direct measurements impossible. A complete analysis where all the parameters are modeled together, self-consistently, is therefore necessary to fully understand the reionization process.
+Giovinazzo et al. (2026) estimated fesc for a sample of
+sources with NIRSpec/PRISM spectroscopy in the EoR, from
+Spectral Energy Distribution (SED) fitting. In this work, we will
+expand on this analysis to estimate the rate of ionizing photon production (Ṅion,int ) for the same sample, again using SEDmodelling. As a result of the fesc prescription already implemented by Giovinazzo et al. (2026), we can infer posterior distributions for the ionizing photon emission rate (Ṅion,esc ). Similar efforts in estimating the ionizing emissivity from SED fitting
+have also been undertaken by Simmonds et al. (2024b), with a
+mass complete sample, although without accounting for fesc . By
+estimating the ionizing photon emission rate directly through integration of the ionizing part of the spectral SED fits, we avoid
+having to disentangle the separate contributions of the production efficiency and the escape fraction, along with their associated uncertainties, to Ṅion . This yields a self-consistent estimate
+of the rate at which ionizing photons reach the IGM from a given
+Article number, page 2
+
+galaxy, a quantity necessary to constrain the reionization process.
+In this paper, we will determine the evolution of the ionizing emissivity function of the general galaxy population as well
+as the cosmic ionizing emissivity. We will then calculate the redshift evolution of the neutral hydrogen fraction with cosmic time,
+as well as the contribution of strong leakers, here defined as fesc
+> 10%. We will test which population of galaxies contributes
+most to the ionizing emissivity, whether the few highly leaking
+galaxies or the majority of weakly leaking sources. We will also
+determine whether any galaxy population, i.e. at faint, intermediate or bright luminosities, is a dominant contributor of ionizing
+photons to the IGM.
+In Sec. 2 we introduce the sources included in our sample,
+present the method that we used to calculate Ṅion and compare it
+to the method typically used in the literature. In Sec. 3 we present
+the ionizing properties of the sources in our sample and their redshift and magnitude evolution. In Sec. 4 we present the ionizing
+emissivity function, quantifying the number of sources in a unit
+volume with a given rate of ionizing photon output. In Sec. 5 we
+present the evolution of the fraction of neutral hydrogen. Finally,
+in Sec. 6 and Sec. 7 we present our caveats and conclusions.
+Throughout this work, we assume a flat ΛCDM cosmology
+with H0 = 70 km s−1 Mpc−1 , Ωm = 0.3, and ΩΛ = 0.7. Magnitudes are given in the AB system (Oke & Gunn 1983).
+
+2. Ionizing output calculation
+2.1. Spectroscopic data
+
+For this study, we used the data set previously presented in
+Giovinazzo et al. (2026). This consists of 1428 sources with
+JWST NIRSpec/PRISM observations at 5 < zspec < 10 taken
+from the DAWN JWST Archive (DJA1 ) (Heintz et al. 2025;
+Brammer & Valentino 2025), an online repository containing
+spectroscopic data from public JWST programs, all uniformly
+extracted and reduced with the same pipeline based on grizli2
+and MSAexp3 . Further details on the data reduction and processing can be found in de Graaff et al. (2025); Heintz et al. (2025);
+Valentino et al. (2025); Pollock et al. (2025). The database query
+was performed on the 7th of February 2025 and includes all
+sources in the redshift range of interest with grade=3 (i.e., with
+robust redshift), MUV < −18 and excludes known Little Red
+Dots (LRDs) as reported by Kocevski et al. (2025). This selection includes spectra from RUBIES (GO 4233, de Graaff et al.
+2025) JADES (GTO-1180, 1181, 1210, 1286, 1287; GO3215 Eisenstein et al. 2023) GTO WIDE (GTO-1211, 1212,
+1213, 1214, 1215; Maseda et al. 2024), CEERS (ERS-1345;
+Finkelstein et al. 2023), UNCOVER (GO-2561, Bezanson et al.
+2024), CAPERS (GO-6368; Donnan et al. 2025), GO-1433
+(Hsiao et al. 2024), GO-2198 (Barrufet et al. 2025), GO-2565
+(Nanayakkara et al. 2025), DD 2750 (Arrabal Haro et al. 2023),
+GO-3073 (Castellano et al. 2024), DD-2756 (Mascia et al.
+2024b), DD-6541 (DeCoursey et al. 2025), DD-6585 (PI: Coulter) and GO-4106 (PI: Nelson).
+2.2. Spectral SED fitting
+
+For each source we perform spectral SED fitting to the NIRSpec/prism data to recover the physical properties, as described
+1
+
+https://dawn-cph.github.io/dja/
+https://github.com/gbrammer/grizli
+3
+https://github.com/gbrammer/msaexp
+2
+
+Emma Giovinazzo et al.: Ionizing emissivity in the EoR
+
+in Giovinazzo et al. (2026). These fits were performed with
+bagpipes (Carnall et al. 2018, 2019; Lange 2023) including
+a picket-fence model (Heckman et al. 2001; Zackrisson et al.
+2013) to model the escape fractions. This formalism for fesc
+was first introduced as a custom version of bagpipes in
+Giovinazzo et al. (2026), but has since been included in the standard release, from version 1.3.3.
+We modeled the star formation history with the continuity
+prior (Leja et al. 2019), a non-parametric prior, allowing for
+greater flexibility than parametric models. We modeled the star
+formation rate (SFR) in seven bins –with 5, 10, 50, 100, 200,
+400 and 800 Myr– unless the age of the Universe at the source’s
+redshift was less than 800 Myr. In that case, the last bin ended
+at the age of the Universe. With the continuity prior, bagpipes
+fits for the ∆SFR between adjacent bins, which therefore adds
+a number of free parameters equal to the number of bins minus
+one. We used a Student-t prior with ∆SFR ∈ [−3, 3] and adopted
+ν = 2 and σ = 0.3 following Leja et al. (2019). For fesc we opted
+for a logarithmic prior with range 0.001 < fesc < 1. This prior
+was chosen since observations (Kreilgaard et al. 2024) as well
+as simulations (Choustikov et al. 2024; Yeh et al. 2023) suggest
+that most sources have little-to-no leakage. This was confirmed
+in Giovinazzo et al. (2026). We used the BPASS v2.2.1 stellarpopulation models (Stanway & Eldridge 2018) with the default
+broken-power-law initial mass function (IMF), with slopes of
+α1 = −1.30 for the 0.1 − 0.5M⊙ mass range and α2 = −2.35
+for the 0.5 − 300M⊙ mass range, based on Kroupa et al. (1993).
+Metallicity was modeled with a logarithmic prior, in the range
+0.01 < Z/Z⊙ < 0.5. The stellar and nebular attenuation were
+modeled with the Calzetti dust law (Calzetti et al. 2000), with a
+linear prior, allowing for a maximum AV = 0.5 mag as we were
+mainly interested in blue sources. We note that for our picketfence model dust is not applied to the free channels. For more
+details on the SED fits we refer the reader to Giovinazzo et al.
+(2026).
+The SED fits are used to calculate the ionizing photon production for each source, as discussed in Sec. 2.4. This is then
+compared to the more standard approach, presented in Sec. 2.3,
+of measuring the ionizing photon production from the Hα line.
+2.3. Ṅion estimation from Hα
+
+In the standard approach used in the literature, the production
+rate of ionizing photons in the EoR is estimated from the luminosity of the Hα line (e.g. Bouwens et al. 2016; Llerena et al.
+2025; Pahl et al. 2026). As a recombination line, the Hα luminosity directly depends on the amount of reprocessed ionizing
+photons and therefore effectively counts the number of ionizing photons that do not escape. For all the sources in our sample with Hα coverage in the PRISM wavelength range, the Hα
+fluxes are extracted following Covelo-Paz et al. (2026), i.e. by
+fitting a Gaussian directly to the spectrum. The luminosities are
+then corrected for dust attenuation following the Calzetti et al.
+(2000) dust model with attenuation AV derived from SED fitting, as LHα,int = LHα,obs × 100.4AHα .
+The relation between the intrinsic Balmer line luminosity
+and the total Lyman Continuum luminosity was derived from
+stellar models by Leitherer & Heckman (1995). For Hα it can be
+expressed as
+L(Hα)[erg s−1 ] = 1.36 × 10−12 N(H0 )[s−1 ]
+
+(2)
+
+where N(H0 ) is the production rate of ionizing photons assuming
+fesc = 0, and L(Hα) is the intrinsic Hα luminosity, which is thus
+
+dust-corrected. This effectively assumes that all the ionizing photons are reprocessed in the Hα line and none escape. Hence, the
+ionizing photon production that we find from this method must
+be corrected for the escape fraction. As seen in Giovinazzo et al.
+(2026), most sources have very low escape fraction, making this
+a good approximation. There is, however, a small fraction of
+sources with very high escape fraction, as the fesc distribution
+approximates an exponential with a mean of 10%. The ionizing
+photon production rate is then given by
+Ṅion,int =
+
+N(H0 )
+.
+1 − fesc
+
+(3)
+
+For the escape fraction measurements we use those already presented in Giovinazzo et al. (2026), which are based on spectral
+SED fitting returning the full posterior distributions.
+2.4. Ṅion estimation from SEDs
+
+Alternatively, the ionizing photon production rate can also be
+calculated as the integral of the spectrum, Lν , below the Lyman
+limit (λ < 912 Å):
+Z ∞
+Ṅion =
+Lν (hν)−1 dν ,
+(4)
+ν912
+
+as is done for simulated galaxies (e.g. Naidu et al. 2020;
+Seeyave et al. 2023). We can apply this to calculate both the intrinsic ionizing photon flux, when integrating the intrinsic SED,
+and the escaping ionizing photon flux, when integrating the observed SED without IGM attenuation. In contrast to what is done
+with Hα, this method simply counts the photons that escape the
+galaxy.
+Using the full posterior distribution of physical parameters
+for each source in the sample, we compute the posterior of
+both the escaping (Ṅion,esc ) and the intrinsic ionizing photon flux
+(Ṅion,int ) for each galaxy. Their respective uncertainties are also
+computed from the posterior distribution. In a first step, we create rest-frame SEDs, to remove the effect of IGM transmission,
+which still include both the dust and escape fractions to compute Ṅion,esc . Then, in a second step, we compute the intrinsic
+ionizing photon production of the stellar population (Ṅion,int ) by
+removing dust obscuration, the effects of IGM transmission and
+setting fesc = 1, to create an intrinsic SED. This results in a posterior distribution of both Ṅion,esc and Ṅion,int for each galaxy.
+2.5. Comparison of ionizing fluxes
+
+The two methods described before are complementary in how
+they count the amount of ionizing photons, as the Hα method
+counts the rate of photons that are reprocessed into nebular continuum, while the SED integration directly counts the rate at
+which ionizing photons escape. Because of this, the only way
+to consistently compare these two methods is by using Ṅion,int ,
+the intrinsic rate of ionizing photons production.
+In Fig. 1 we compare the intrinsic ionizing photon production rate as estimated from the two methods. We use this comparison to ensure that our method is consistent with that primarily
+used in the literature (e.g., Bouwens et al. 2016; Llerena et al.
+2025; Pahl et al. 2026). We find the Hα estimates to be consistently lower, with a median difference between the estimates of ∆ = 0.05 dex, with only few sources lying significantly above or below the 1:1 line. This small discrepancy is
+likely due to the assumptions in the N(H0 ) conversion to L(Hα)
+Article number, page 3
+
+Fig. 1: Comparison between intrinsic ionizing photon production
+rates estimated with Hα and from the SED fit, color coded by
+fesc . The grey dashed line shows the 1:1 relation. We find a broad
+agreements, with small offset between the methods (∆ = 0.05
+dex), as well as some scatter, with only a few sources lying significantly off the 1:1 line. This agreement with a method widely
+used in literature (e.g. Bouwens et al. 2016; Llerena et al. 2025;
+Pahl et al. 2026) validates our SED fitting estimates.
+of Leitherer & Heckman (1995) that do not completely match
+those of our bagpipes models. Under the assumption of case
+B recombination, different gas temperatures and densities between the bagpipes and the Leitherer & Heckman (1995) models could be the source of this discrepancy. Moreover, the two
+models differ in their IMF. While the high mass slope is the
+same (α = −2.35), the mass range of Leitherer & Heckman
+(1995) only extends to 100 M⊙ , unlike the IMF used in BPASS
+that extends to 300 M⊙ . Young and massive stars are those expected to produce the most ionizing photons, and it has been
+shown by Schaerer et al. (2025) that Very Massive Stars (VMS;
+M > 100M⊙ ) contribute significantly to the Lyman continuum
+emission of young stellar populations. In general, the stellar population synthesis code in Leitherer & Heckman (1995) is different than that of BPASS, especially in their lack of binaries, which
+also produce more ionizing photons than single stars. These factors may explain why Ṅion,int as calculated from Hα is underestimated when compared to that calculated from our SED fits. This
+suggests that estimates done with Eq. 2 may not be fully comparable to those that assume a different stellar population synthesis
+and spectral synthesis codes.
+In Fig. 1 we also find some scatter with Ṅion,int from Hα occasionally being overestimated as compared to estimates from the
+SED. Visual inspection of these outliers shows that most have
+a broad Hα line, hinting at the possible presence of AGNs or
+LRDs in these sources. We do not use an AGN template in our
+fits and therefore find a poor fit to the Hα line for these sources.
+Overall, we find good agreement between the two methods,
+indicating a good agreement between our SED fitting results,
+where fesc is properly accounted for on a source-by-source basis and the method previously used in literature. This validates
+our model, which we will use for the remainder of the analysis
+to have access to the ionizing photon production rate also for
+sources where Hα is not covered. In this work, we will mostly
+use Ṅion,esc as we are interested in the rate at which ionizing photons reach the IGM.
+Article number, page 4
+
+56
+
+Best fit: Nion, int = (0.10±0.01)z + (53.40±0.06)
+Simmonds+24 spec only
+Simmonds+24 mass complete
+
+0.25
+
+55
+
+0.50
+
+54
+53
+565
+55
+
+0.75
+8
+9
+10
+Best 6fit: Nion, esc[fesc7< 0.1] = (0.05±0.02)z
++ (51.85±0.10)
+Best fit: Nion, esc[fesc > 0.1] = (0.09±0.02)z + (53.14±0.15)
+
+54
+
+1.00
+1.25
+1.50
+
+53
+
+1.75
+
+52
+51
+5
+
+log10(fesc)
+
+log10(Nion, int[s 1])
+
+57
+
+log10(Nion, esc [s 1])
+
+55.5
+0.8
+55.0
+54.5
+0.6
+54.0
+0.4
+53.5
+53.0
+0.2
+52.5
+52.0 53.0 53.5 54.0 54.5 55.0 55.5
+log(Nion, int SED [s 1])
+
+fesc
+
+log(Nion, int H [s 1])
+
+A&A proofs: manuscript no. aa_example
+
+6
+
+7
+
+Redshift
+
+8
+
+9
+
+10
+
+2.00
+
+Fig. 2: Top panel: Redshift evolution of Ṅion,int . The black
+line shows the best fit for the redshift evolution, with the intrinsic scatter in the gray shaded area. The squares show the
+binned means. This evolution is consistent with the results from
+the spectroscopic only dataset from Simmonds et al. (2024b),
+shown as the solid blue line, but higher than the one from a
+mass complete sample, shown in the dashed blue line, also from
+Simmonds et al. (2024b). Bottom panel: Redshift evolution of
+Ṅion,esc , color coded by log( fesc ). The pink line with the pink
+shaded area represents the fit to the fesc < 0.1 sources and the
+red line with the red shaded area represents the same for sources
+with fesc > 0.1. The two fits sit about 1.5 dex apart, with the high
+fesc fit being much closer to the intrinsic Ṅion,int , as expected. The
+squares show the binned means, with the same color coding as
+for the linear fits.
+
+3. Ionizing properties
+3.1. Redshift evolution
+
+Simmonds et al. (2024b) have shown that Ṅion evolves with redshift when considering a spectroscopic-only sample, with higher
+ionizing emissivity at higher redshift. However, they have also
+demonstrated that this redshift evolution disappears when using
+a mass complete sample. This suggests a bias of the spectroscopic sample toward star forming galaxies rather than a real
+change in the ionizing emissivity with redshift for the global
+galaxy population. An important caveat of this previous analysis
+is the lack of a prescription for fesc and therefore the assumption
+of fesc = 0 for the calculation of Ṅion . We investigate the possibility of a redshift evolution of Ṅion , both intrinsic and escaped,
+in our sample, which includes a prescription for fesc .
+We find that the intrinsic ionizing photon production rate
+Ṅion,int shows a shallow evolution with redshift, as seen in the
+top panel of Fig. 2. This trend may be due to a selection bias,
+as discussed by Simmonds et al. (2024b). It may also be due to
+a redshift evolution of MUV or fesc which would translate to a
+redshift evolution in Ṅion , the latter of which would have been
+missed in previous studies. In Giovinazzo et al. (2026), we do in
+fact see a shallow trend between redshift and fesc for our sources,
+as also shown in Ferrara et al. (2025).
+
+Emma Giovinazzo et al.: Ionizing emissivity in the EoR
+
+53
+52
+51
+18
+
+19
+
+20 21
+MUV
+
+22
+
+25.5
+log10( ionfesc) [Hz erg 1]
+
+54
+
+0.25
+0.50
+0.75
+1.00
+1.25
+1.50
+1.75
+23 2.00
+
+log10(fesc)
+
+log10(Nion, esc [s 1])
+
+55
+
+25.0
+24.5
+24.0
+23.5
+23.018
+
+19
+
+20
+MUV
+
+21
+
+22
+
+Fig. 3: Distribution of Ṅion,esc as a function of UV magnitude
+color coded by fesc . At the same magnitude, sources with increased fesc also show higher Ṅion,esc , indicating that these are
+the sources that emit most ionizing photons into the IGM.
+
+Fig. 4: Kernel density estimation of log(ξion fesc ) as a function
+of MUV . The distribution shows negligible evolution as a function of MUV . Moreover, it also shows two clouds. The main one,
+with the majority of our data, includes all the weak leakers, corresponding to the pink points in Fig. 3. The secondary cloud,
+above the main one, includes the sources with high fesc , so the
+strong leakers.
+
+In the bottom panel of Fig. 2, we show the rate of escape
+of ionizing photons Ṅion,esc against redshift. Here we also colorcode the points by log10 ( fesc ) and see that the data seems to be
+split in two populations, one clustered around log(Ṅion,esc /s−1 ) ∼
+52, with consistently low fesc and another one with fesc ≳ 10%
+which spans the range 53 < log(Ṅion,esc /s−1 ) < 55. It should
+be noted that the points in the lower cloud, with low fesc , may
+be more accurately interpreted as upper limits on Ṅion,esc as the
+lowest possible value in the fit is fesc = 10−3 , therefore not allowing for a true fesc = 0. Moreover, as shown in Giovinazzo et al.
+(2026), with our spectral SED fitting method it is challenging to
+confidently constrain escape fractions below fesc ∼ 20% even
+for high signal to noise values, with fesc usually being underestimated in this case. These uncertainties are properly captured by
+the posterior distributions, making the uncertainties on Ṅion,esc
+for sources with low fesc significant. The distribution may therefore not truly be bimodal, as it initially appears.
+
+3.2. UV magnitude dependence
+
+We additionally explore the redshift evolution of Ṅion,esc , as
+previously performed for the intrinsic value. We choose to use
+two linear fits to distinguish the population of strong-leakers
+( fesc > 10%) from that of weak-leakers ( fesc < 10%). We choose
+to split the sample at fesc = 10% as this is the mean fesc of
+the entire sample, as shown in Giovinazzo et al. (2026). While
+both populations show a shallow redshift evolution, it is stronger
+for the high fesc population, although the evolution is consistent
+within the uncertainties. This redshift evolution is closer to that
+of the intrinsic production rate, with a slope of 0.09 ± 0.02, as
+most ionizing photons that are created are also emitted in the
+case of high fesc . Instead, the low fesc population shows a shallower distribution, with a slope of 0.05 ± 0.02, about 1.5 dex
+below the strong leakers. As mentioned for Ṅion,intr this redshift
+evolution could be due to a selection bias, or to a redshift evolution of MUV or fesc (e.g. Mascia et al. 2024a; Cain et al. 2025a;
+Ferrara et al. 2025). This would need to be studied further with
+mass-complete samples in the future. As described below, we
+will ignore any redshift evolution for the further analysis.
+
+In Fig. 3 we investigate the relation between Ṅion,esc and UV
+magnitude. The ionizing photon production rate is proportional,
+to first order, to the rate of non-ionizing UV photon production. Hence, we expect Ṅion,int to be proportional to the intrinsic UV luminosity. Indeed, it is immediately visible that Ṅion,esc
+increases towards brighter MUV . This allows us to investigate
+the impact of the escape mechanism on this relation. We color
+code the sample by fesc , highlighting the same behavior already
+seen in Fig. 2. All of the low fesc sources are clustered around
+log(Ṅion,esc /s−1 ) ∼ 52, while the fesc ≳ 10% sources span the
+range 53 ≲ log(Ṅion,esc /s−1 ) ≲ 55, on average about 1.5 dex
+above the cloud of low fesc sources. As mentioned above, however, the Ṅion values are artificially limited in our fitting because
+of the limit on fesc .
+Overall, from Fig. 3 it remains clear that galaxies with the
+highest escape fractions also emit the most ionizing photons into
+the IGM, in absolute number. Indeed, above log(Ṅion,esc [s−1 ]) >
+53 only 8% of sources have an fesc < 10%. While faint galaxies
+with fesc ∼ 50% may emit as many ionizing photons as bright
+galaxies with only fesc ∼ 10%, this result shows that fesc is the
+key quantity to determine the sources of reionization, as it is the
+main factor controlling which sources leak a significant amount
+of ionizing photons. Indeed, even for very UV-bright sources that
+intrinsically produce a lot of ionizing photons, a very low escape
+fraction means that a negligible amount of them reach the IGM,
+even compared to fainter sources with an increased fesc .
+
+4. Ionizing emissivity function
+We can remove the direct MUV dependence by dividing Ṅion,esc
+by the intrinsic UV luminosity of each galaxy, leaving us with
+Fig. 4, where we show log(ξion fesc ) against MUV . Here we do no
+longer see the MUV dependence, but we still see the difference
+between the strong and weak leakers.
+In order to determine which sources contribute the most to
+reionization we must understand which sub-population of galaxArticle number, page 5
+
+ies dominates the cosmic ionizing emissivity. To this goal, we
+construct a luminosity function of Ṅion,esc , i.e., the ionizing emissivity function. This function underpins the rest of our analysis:
+integrating it yields the cosmic emissivity ṅion , from which we
+derive the redshift evolution of the neutral fraction xHI in Sect. 5.
+A similar approach has already been used by Mason et al.
+(2019b) to estimate the contribution to ṅion from quasars, albeit
+with a constant and unconstrained fesc . We instead apply it to
+the general galaxy population and measure the escaping emissivity of each galaxy directly, so that fesc need not be modeled
+separately.
+Since our spectroscopic galaxy sample is assembled from
+various surveys, it is extremely complicated to derive a selection function. Hence, we derive the ionizing LF based on the UV
+LFs at these redshifts, convolved with our measurements of the
+log(ξion fesc ) distribution. This is given by:
+dn(Ṅion,esc , z)
+d Ṅion,esc
+Z ∞
+=
+dMUV ϕ(MUV , z) p(Ṅion,esc | MUV )
+
+ϕ(Ṅion,esc , z) =
+
+(5)
+
+0
+
+Here, p(Ṅion,esc = LUV ξion fesc | MUV ) represents the distribution function of ξion fesc (shown in Fig. 4) multiplied by the UV
+luminosity at a given MUV .
+We adopt this distribution at all redshifts: we cannot establish whether the mild redshift evolution of Ṅion seen in Fig. 2
+is intrinsic or a selection effect. Simmonds et al. (2024b) find
+no redshift evolution in either Ṅion or ξion,0 for a mass-complete
+sample, hence assuming no evolution for the general population
+is justified.
+The second key ingredient for this calculation is thus an accurate measure of the UV LF across redshift. Of particular importance are the range z = 5 to z = 15, over which the process of
+reionization essentially completes (Bosman et al. 2022).
+For the UV LF, we adopt the measurements from the
+GLIMPSE survey (Chemerynska et al. 2026; Atek et al. 2026)
+at z > 7. As these are based on a deep lensing-cluster field,
+they constrain the faint end far better than blank-field surveys,
+which is essential here: assessing the contribution of the faintest
+galaxies requires integrating down to the faintest magnitudes.
+We adopt a faint-end cutoff of MUV = −13, the faintest bin reliably measured at these redshifts to date.
+The GLIMPSE LFs of Chemerynska et al. (2026) are centered at z = 9, 10, 11 and 13 and include photometric candidates up to z ∼ 15. They are fit with a double power law
+(DPL) rather than a Schechter function, since the latter underestimates the abundance of bright galaxies in the early Universe (Adams et al. 2024; Donnan et al. 2024; Harikane et al.
+2024; Chemerynska et al. 2026). The lower-redshift GLIMPSE
+LF (Atek et al. 2026) is centered at z = 7, covering 6 < z < 9,
+and is fit with a Schechter function. At z = 5 and 6 we use
+Bowler et al. (2020), who adopt a DPL. For consistency across
+our full redshift range, we refit the z = 7 LF points of (Atek et al.
+2026) with a DPL. The two parameterizations differ only in the
+brightest bins, so we expect this to have a negligible effect on
+our results.
+The parameters of a UV LF are strongly correlated (e.g.,
+Bouwens et al. 2021; Atek et al. 2026), so treating their uncertainties as independent would overestimate the true uncertainty
+on the LF. To propagate the uncertainties correctly into the ionizing emissivity function, we refit every LF with a DPL using the
+binned data points from Atek et al. (2026), Chemerynska et al.
+(2026), and references therein, which gives us access to the full
+Article number, page 6
+
+log10 ( )[Mpc 3dex 1]
+
+A&A proofs: manuscript no. aa_example
+
+2
+3
+4
+5
+6
+
+z=7
+z=9
+z=10
+z=11
+z=13
+
+7 52.0 52.5 53.0 53.5 54.0 54.5 55.0
+log10 (Nion, esc) [s 1]
+Fig. 5: Ionizing emissivity function for five redshift ranges between 7 < z < 13, derived from the UV luminosity function, in
+combination with our escaping ionizing emissivity on a galaxyper-galaxy basis. The ionizing emissivity function decreases as
+redshift increases, in agreement with the evolution of the UV luminosity function.
+parameter chains. Because we ultimately evaluate ṅion at every
+integer redshift for a smooth interpolation, we also require the
+UV LF at every integer redshift. We obtain these by fitting a
+redshift-evolution function to each DPL parameter. The uncertainties are then calculated from the posterior distribution of the
+parameters. We report the DPL parameters and their uncertainties in Table A.1.
+We now have all the ingredients to construct the ionizing
+emissivity function, which we do as follows:
+1. we sample galaxies from the UV LF at a given redshift between MUV = −13 and −23, a range chosen to be comparable with other literature estimates (Bouwens et al. 2015;
+Mason et al. 2018);
+2. we assign each MUV a value of ξion fesc drawn from the distribution in Fig. 4, which we apply at all magnitudes since our
+sample does not extend faintward of MUV = −18;
+3. we multiply the two to obtain Ṅion,esc for each source;
+4. we repeat steps (i)–(iii) 103 times, drawing the UV LF parameters from the refitted chains to propagate the LF uncertainties.
+The resulting functions are shown in Fig. 5 for the redshifts
+with a GLIMPSE UV LF (Chemerynska et al. 2026; Atek et al.
+2026); although we derive them at every integer redshift in
+5 < z < 15. The ionizing emissivity function increases towards
+lower redshift, mirroring the evolution of the UV LF and indicating that more ionizing photons reach the IGM per unit time
+at later epochs. This is expected, since Ṅion,esc scales with UV
+luminosity and we hold the distribution of log(ξion fesc ) fixed with
+redshift by construction.
+We now quantify the contribution of strong leakers ( fesc
+> 10%) to the ionizing emissivity function, to test whether the
+few sources that leak most of their ionizing photons indeed dominate it. This is not obvious a priori: although strong leakers release a large fraction of the photons they produce, they are in a
+minority, and the far more abundant weak leakers might collectively contribute more, despite their low fesc of a few percent or
+less.
+
+Emma Giovinazzo et al.: Ionizing emissivity in the EoR
+
+2
+
+UV × fesc × ion
+Bo+15
+Q+25
+This work (MUV<-13)
+
+log(fesc × ion) < 24.5
+log(fesc × ion) > 24.5
+z=9
+
+3
+
+51.5
+
+4
+
+51.0
+
+5
+6
+7 52.0 52.5 53.0 53.5 54.0 54.5 55.0
+51.5
+log10 (Nion, esc) [s 1]
+
+Fig. 6: Ionizing emissivity function for redshift z=9, split by
+log( fesc ξion ) values. The gray dashed line is the total ionizing
+emissivity function, as seen also in Fig. 5 while the two solid
+lines are the two partial emissivity functions, the red one being for log( fesc ξion /Hz erg−1 ) > 24.5 and the pink one being for
+log( fesc ξion /Hz erg−1 ) < 24.5
+Fig. 6 shows the same ionizing output luminosity function as
+in Fig. 5 for redshift z = 9, but split at log( fesc ξion /Hz erg−1 ) =
+24.5, which corresponds to fesc ∼ 10% and thus separates strong
+leakers from weak leakers. The total emissivity is dominated by
+the high- fesc sources above this threshold, while the contribution of the rest is negligible, especially at the highest values of
+log(Ṅion,esc ). We therefore confirm that, despite being far more
+numerous, sources with fesc < 10% contribute negligibly to the
+rate of ionizing photons reaching the IGM. These strong leakers
+make up only ∼ 20% of our sample.
+
+5. Neutral gas fraction
+The most commonly used probes of the global timeline of reionization are the volume-filling fraction of ionized gas, QHII (z), and
+its counterpart, the fraction of neutral hydrogen (xHI = 1 − QHII ).
+To determine the fraction of neutral hydrogen and its evolution
+during the EoR we need to know the contribution of ionizing
+photons to the IGM by the entire population of galaxies, ṅion .
+This quantifies the rate of ionizing photon escape from galaxies
+per unit time and unit volume and is usually defined as Eq. 1.
+Again we do not attempt to disentangle the contributions of
+fesc and ξion to avoid adding unnecessary sources of uncertainty.
+We simply calculate ṅion by integrating the entire ionizing emissivity function as
+Z
+ṅion =
+Ṅion ϕ(Ṅion )d Ṅion
+(6)
+which by construction of our MUV sampling, is analogous to integrating down to MUV = −13. This limit is chosen as it has been
+already used in the literature (Bouwens et al. 2015) to include
+the faintest sources while avoiding a possible turnover in the UV
+LF. In Fig. 7 we show the evolution of our inferred cosmic rate
+of ionizing photon emission as a function of redshift. At low redshift we find ourselves largely in agreement with the uncertainties of observational constraints on ṅion from quasar Lyman-α
+forests (Becker & Bolton 2013; Becker et al. 2021; Davies et al.
+2024), although at z = 6 we are in slight tension (∼ 1σ) with
+
+log10 (nion/s 1 Mpc 3)
+
+log10 ( )[Mpc 3dex 1]
+
+1
+
+Be+13
+D+24
+G+23
+
+Be+21
+S24 (fesc = 10%)
+S24 (fesc = C22)
+
+50.5
+50.0
+49.5
+49.0
+
+6
+
+8
+
+10
+Redshift
+
+12
+
+14
+
+Fig. 7: Cosmic rate of ionizing photons emission per
+unit time and unit volume. We compare our results from
+other observational constraints using quasars Lyman-α forest (Becker & Bolton 2013; Becker et al. 2021; Gaikwad et al.
+2023; Davies et al. 2024; Qin et al. 2025) and UV luminosity
+functions (Bouwens et al. 2015; Simmonds et al. 2024b), assuming a clumping factor CHII = 3. The dashed grey line is derived by treating ρUV , fesc , ξion independently. This assumes
+the luminosity density from the GLIMPSE UV LFs and the
+means of the parameters we find in this study ( fesc = 10% and
+log(ξion /Hz erg−1 ) = 25.45)
+
+the observational constraints of Gaikwad et al. (2023), possibly
+due to their assumptions on mean free path and photo-ionization
+rate. At intermediate redshifts we are also in agreement with
+the results of Simmonds et al. (2024b). These are obtained from
+the Bouwens et al. (2021) UV LF and two different models for
+fesc , one assuming a constant 10% and one assuming the relation from Chisholm et al. (2022). Above z > 6 we are entirely
+in agreement with the estimates from Bouwens et al. (2015),
+who assume a clumping factor CHII = 3, as we do. At z > 8
+we find a broad agreement with the models based on XQR-30
+data from Qin et al. (2025). In the same figure we also show the
+evolution of ṅion we would get by treating the three factors independently (i.e. using Eq. 1). For this calculation we use the
+mean parameters we find from our SED fitting ( fesc = 10%
+and log(ξion /Hz erg−1 ) = 25.45). We find these results to be
+more in agreement with those from Simmonds et al. (2024b) and
+the Lyman-α forest (Becker & Bolton 2013; Becker et al. 2021;
+Davies et al. 2024), while not being consistent with results from
+Bouwens et al. (2015) and Qin et al. (2025). This shows that it is
+necessary to account for the correlation of the parameters in this
+calculations as it significantly affects the inferred cosmic rate of
+ionizing photons emission.
+From ṅion it is relatively straightforward to compute the
+volume-filling fraction of ionized gas by solving the differential
+equation
+Q̇HII =
+
+QHII
+ṅion
+−
+⟨nH ⟩
+trec
+
+(7)
+Article number, page 7
+
+A&A proofs: manuscript no. aa_example
+
+where ⟨nH ⟩ is the average hydrogen number density and trec is
+the recombination time. trec is defined as
+trec = [CHII αB (T )(1 + Y p /4X p )⟨nH ⟩(1 + z)3 ]−1 .
+
+(8)
+
+For this calculation we assume a recombination coefficient for a
+temperature of T = 104 K of αB (T ) = 2.6 × 10−13 cm3 s−1 from
+Osterbrock & Ferland (2006), primordial abundances of hydrogen and helium such that 1+Yp /4Xp = 1.08 and a clumping factor CHII = 3, motivated by results from simulation (Finlator et al.
+2012; Shull et al. 2012). It should be noted that other studies have shown that the clumping factor may be higher than
+CHII = 3. Austin et al. (2025) have shown that, to reionize the
+Universe by z = 6, the clumping factor may be 6.2 or even as
+high as 8.8, depending on the model used for fesc . It has also
+been shown from models and simulations that CHII is likely to
+evolve, increasing from ∼ 1 to ∼ 8 as reionization proceeds
+(Pawlik et al. 2015; Qin et al. 2025). An increase of clumping
+factor would affect our xHI calculations by postponing the end of
+reionization by ∆z = 0.4 for CHII = 6.
+Solving Eq. 7 we find the evolution of QHII and therefore of xHI with redshift. Our results are presented in Fig. 8.
+Here we compare them with other literature values for a
+variety of probes of the ionization state of the IGM such
+as the Lyman-α emitters clustering (Sobacchi & Mesinger
+2015; Ouchi et al. 2018), Lyman-break galaxies damping wing
+(Hsiao et al. 2024; Umeda et al. 2024; Mason et al. 2026),
+the Lyman-α equivalent width evolution (Mason et al. 2018,
+2019a; Hoag et al. 2019; Whitler et al. 2020; Bolan et al.
+2022; Bruton et al. 2023; Morishita et al. 2023; Nakane et al.
+2024; Tang et al. 2024; Kageura et al. 2025), Lyman-α luminosity functions (Ouchi et al. 2010; Konno et al. 2014,
+2018; Zheng et al. 2017; Inoue et al. 2018; Goto et al. 2021;
+Morales et al. 2021; Ning et al. 2022), Lyman-α forest dark pixel
+fraction (Jin et al. 2023), quasar damping wings (Schroeder et al.
+2013; Davies et al. 2018; Wang et al. 2020; Greig et al. 2019,
+2024) and the Lyman-α forest (Qin et al. 2025). Overall we find
+our results to be broadly consistent with these estimates. We find
+an end to reionization at z ∼ 5.8, also in agreement with recent
+estimates from quasar spectra such as Bosman et al. (2022), who
+find an end to reionization at z ∼ 5.3 but xHI ∼ 6×10−5 at z ∼ 5.8.
+Surprisingly, we find that the largest source of uncertainty
+in the calculation of the neutral hydrogen fraction in this framework is not the uncertainty on fesc and ξion , but that on the UV
+luminosity density; in particular, the uncertainty on the faint end
+slope of the LF. In Fig. 8 we show three shaded regions, each representing a different uncertainty. The smallest shaded area represents the uncertainty which does not consider any uncertainty
+in the UV LF, using only the best fit parameters. The second
+shaded area shows the uncertainty in the estimation of xHI when
+we also consider the uncertainty in the GLIMPSE LF. Lastly, we
+use the same method detailed in the previous section with the LF
+parameters from Donnan et al. (2024). These LFs are much less
+constrained at the faint end. This is due to the lack of very faint
+sources, as their data does not include very deep and lensed fields
+such as the GLIMPSE field. In this case, the uncertainty on xHI
+significantly increases, showing that constraining the faint end
+of the LF at high redshift is necessary to determine the timeline
+and evolution of reionization. The values of xHI with the associated uncertainties for both GLIMPSE and Donnan et al. (2024)
+are tabulated for all integer redshifts in Tab. B.1.
+We also compare the redshift evolution of the neutral fraction to the standard estimate that only uses average values rather
+than the actual distribution functions, i.e., ṅion = ρUV fesc ξion . For
+Article number, page 8
+
+the UV luminosity density we again integrate the GLIMPSE LF,
+while for other quantities we use the mean values for our samples of fesc = 0.1 and log(ξion /Hz erg−1 ) = 25.45. As already
+discussed, treating these parameters independently significantly
+affects the reionization calculations. This is also seen here, where
+we find a delayed progress of reionization ending at z ∼ 5.4. As
+all the quantities in the calculation are derived from the same information in the spectrum, the line fluxes and the UV slope, they
+must not be treated independently, to avoid underestimating the
+ionizing ṅion and to accurately describe reionization.
+It is also possible to compare this reionization history with
+cosmological constraints by measuring the optical depth of electron scattering as measured from the CMB τCMB . It is defined as
+(Robertson 2022):
+τ(z) = c⟨nH ⟩σT
+
+Z z
+
+fe QHII (z′ )H −1 (z′ )(1 + z′ )2 dz′
+
+(9)
+
+0
+
+where c is the speed of light, ⟨nH ⟩ is the comoving average hydrogen number density, σT is the Thomson cross-section, H(z)
+is the redshift dependent Hubble parameter and fe the number
+of free electrons per hydrogen atom, which depends on the ionization state of hydrogen and helium. We find a value of τCMB
+consistent with results from Planck Collaboration et al. (2020)
+but much lower than a recent value suggested by (Sailer et al.
+2026), based on DESI data, which would solve the neutrino mass
+tension. This value of τ is itself in a ∼ 2σ tension with other estimates (Cain et al. 2025b).
+5.1. Contributions to the neutral gas fraction
+
+One of the biggest open questions in the study of the EoR is understanding which kind of sources contribute most to the reionization process. We try to answer this question by quantifying the
+contribution of strong leakers to the evolution of the neutral hydrogen fraction over the history of the Universe. This will tell us
+whether it is the few highly leaking sources or the many weakly
+leaking sources that drive the bulk of the reionization process.
+Similarly to what was already done in Fig. 6 we split our sampling between sources with log(ξion fesc /Hz erg−1 ) < 24.5 and
+those above that value and calculate what the evolution of the
+neutral hydrogen fraction for each sample (see Fig 9). We find
+that reionization is almost entirely driven by the few sources with
+a high escape fraction. These sources alone can ionize the universe in agreement with the observational constraints. The majority of sources, those with fesc ≲ 0.1, do not have a significant contribution to the ionization of neutral gas in the universe.
+This shows that it is in fact the few sources with very high escape fraction, ∼ 20% of the total sample, that perform the bulk
+of reionization, producing ∼ 87% of all ionizing photons in the
+EoR, instead of the majority of sources with low escape fraction. This is broadly in agreement with recent results from the
+PRISMS survey, who also find that a minority of sources with
+very high fesc should be responsible for the majority of the reionization process (Marques-Chaves et al. 2026). It should be noted
+that high fesc is likely a temporal event. Simulations in fact show
+that fesc can drastically change in galaxies as a function of time,
+usually following star formation events (Trebitsch et al. 2017).
+It would therefore not be the same 20% of sources driving all of
+the reionization process but nonetheless, at any given time, we
+expect that only a minority of sources strongly contribute to this
+process.
+
+Emma Giovinazzo et al.: Ionizing emissivity in the EoR
+
+CMB( < z)
+
+0.075
+0.050
+
+DESI (Sailer+26)
+Planck Collaboration (2020)
+
+0.025
+0.000
+1.0
+0.8
+
+XHI
+
+0.6
+0.4
+0.2
+0.0
+
+6
+
+8
+
+10
+Redshift
+
+This work (MUV<-13)
+UV × fesc × ion
+Qin+25
+LAE clustering
+LBG damping wing
+Ly EW
+Ly LF
+Ly forest dark pixel fraction
+QSO damping wing
+
+12
+
+14
+
+Fig. 8: Top panel: Evolution of the optical depth of electron scattering as a function of redshift. Our results agree with constraints
+from Planck Collaboration et al. (2020), in the pink shaded area, but are much lower than recent values hypothesized by Sailer et al.
+(2026), based on DESI data, to solve the neutrino mass tension, shown in grey. Bottom panel: Neutral hydrogen fraction as a
+function of redshift, compared to literature points. Our results, down to an integration limit of MUV = −13 are shown with the
+red line, where the dashed section represents the redshift range in which we have extrapolated our results. The lightest shaded area
+represents the uncertainty when using the UV LF from Donnan et al. (2024). The middle shaded area represents the uncertainty using
+the GLIMPSE LFs (Chemerynska et al. 2026; Atek et al. 2026). The smallest and darkest shaded area represents the uncertainty if
+we assume no uncertainty on the UV LF, indicating that the this is in fact the largest source of uncertainty in this calculation. The
+gray dashed line shows the evolution estimated with just average values, i.e. ρUV from the UV LF, fesc = 10% and ξion = 25.45, the
+means of the parameters as found from the SED fitting. The gray points show literature estimates of xHI from various probes (see
+main text for references). The dotted black line shows the neutral hydrogen fraction derived in (Qin et al. 2025).
+5.2. Do faint or bright galaxies drive reionization?
+
+It is still unclear at what magnitude range galaxies contribute
+the most to the reionization, whether it is faint (Atek et al. 2024)
+or bright galaxies (Naidu et al. 2020). Recent work targeting the
+faintest galaxies finds that those do not have the highest escape
+fractions and that the largest contribution of ionizing photons
+comes from galaxies with MUV ∼ −16 (Jecmen et al. 2026). In
+Fig. 10 we investigate which sources contribute the most to the
+reionization process. First, in the left panel, we show the cumulative distribution of ṅion as a function of MUV for nine integer
+redshifts between 5 < z < 13. Overall we see that the amount
+of ionizing photons emitted into the IGM increases as redshift
+decreases, as we already saw in Fig. 5. We also see that in general very bright galaxies do not contribute strongly to the total
+amount of ionizing photons in a unit volume. Moreover, we find
+
+that the cumulative distribution flattens at different magnitudes
+for the different redshift. We note that as we have assumed no
+dependence of ξion fesc on MUV these results would be the same
+for non ionizing UV radiation. This indicates that at higher redshifts faint galaxies have a larger contribution than at the end
+of reionization, where we find the distribution already flattening at MUV ∼ −18. In Fig. 10, we also show the normalized
+fractional contribution of sources in bins of 0.5 MUV to the total
+ṅion . Here we can again see that the fractional contribution varies
+with redshift, with bright sources being more important at lower
+(z ≤ 6) redshifts. Indeed, for the case of z = 5 we find that the
+largest contribution to the total ṅion comes from galaxies with
+MUV ∼ −20. This is also true for z = 6 although the contribution
+of fainter sources is more significant than at the lowest redshift.
+Above z > 6 we find that bright galaxies do not strongly conArticle number, page 9
+
+A&A proofs: manuscript no. aa_example
+
+1.0
+0.8
+XHI
+
+0.6
+0.4
+0.2
+0.0
+
+6
+
+8
+
+log(fesc × ion) > 24.5
+log(fesc × ion) < 24.5
+LAE clustering
+LBG damping wing
+Ly EW
+Ly LF
+Ly forest dark fraction
+QSO damping wing
+
+10
+Redshift
+
+12
+
+14
+
+Fig. 9: Neutral hydrogen fraction as a function of redshift split
+at log( fesc ξion /Hz erg−1 ) = 24.5. The red line only includes the
+sources with log( fesc ξion ) above this value while the blue line
+only includes sources below this value. This shows that strong
+leakers ( fesc ≳ 0.1) alone do the majority of the reionization
+process, while the contribution of the remaining sources is not
+significant.
+tribute to the total ṅion while fainter sources, with MUV > −19
+equally contribute. This trend is consistent with the constant
+fesc = 14% from Jecmen et al. (2026). While their fiducial distribution shows a peak at MUV = −16, which ours doesn’t, they
+also find that sources with MUV between -18 and -14 drive reionization, which is consistent with our results, within the limits of
+extrapolation. It is also in agreement with recent results from the
+THESAN-ZOOM simulation, which show that brighter galaxies
+contribute more at lower redshifts (Summerfield et al. 2026).
+Overall, this tells us that faint galaxies contribute more at
+high redshifts while at lower redshifts their contribution decreases in favor of brighter galaxies. It is important to note that
+we do not assume any magnitude evolution for log(ξion fesc ), effectively assuming that faint galaxies are as efficient in emitting
+ionizing photons as bright galaxies. The reason why they dominate the contribution of ionizing photons to the IGM is that,
+although they individually produce less ionizing photons, they
+are much more numerous, especially at high redshift, where
+very bright sources are increasingly rarer. This trend is therefore highly dependent on the faint end slope of the luminosity function. Indeed, if we compare our results to those based
+on [OIII]+Hβ luminosity function we find that they are inconsistent. Both Korber et al. (2026) and Meyer et al. (2024) find
+that, when deriving ṅion from the [OIII]+Hβ luminosity function,
+bright galaxies contribute more at higher redshifts. This discrepancy is due to the faint end of the [OIII]+Hβ and UV luminosity functions diverging at high redshift, with the UV LF having
+a steeper slope, increasing the contribution of faint sources in
+our model. This discrepancy reinforces the need for better constraints on the faint end slope of UV LFs at high redshift.
+
+6. Caveats
+Here we would like to discuss the main assumptions and caveats
+of this work.
+Article number, page 10
+
+First of all we would like to once again note, as already discussed in Giovinazzo et al. (2026), the degeneracy between star
+formation history and escape fraction, as this would affect our
+estimates of Ṅion,esc . However, we had already found that this uncertainty is less important for very high fesc sources, which often
+have spectra that cannot be reproduced with fesc = 0. Therefore,
+as we have found that the sources with fesc > 10% are the main
+drivers of reionization, we do not think that this degeneracy will
+have a strong impact on our results. Moreover, there is a category of sources, remnant leakers (Katz et al. 2023), for which
+this degeneracy is not important, as they are quenched sources
+with nonetheless high fesc . These sources would have still young
+stellar populations but little ISM, making them efficient leakers.
+We would also like to note that since our method to calculate Ṅion,esc relies on SED fitting, it includes assumptions on the
+stellar populations, initial mass functions (IMFs) and dust attenuation laws. We assume a BPASS v2.2.1 stellar population
+(Stanway & Eldridge 2018) with the default broken power law
+IMF, so if these assumptions were to not be accurate it could
+affect our results. In this context, our quantitative conclusions
+should be interpreted within our modeling framework, although
+we do not believe that our qualitative conclusions on the sources
+of reionization would be affected.
+Possibly the biggest caveat of the analysis presented in this
+work is the assumption of a lack of magnitude evolution for
+log(ξion fesc ). This assumption allows us to expand the analysis
+to magnitudes not covered by our initial sample and investigate
+the impact of the faintest galaxies to reionization. However, just
+because we find no evidence of a trend between log(ξion fesc ) and
+MUV in our sample it does not necessarily mean that this will be
+true at all magnitudes. Overcoming this would require an analysis of the ionizing output of sources covering the fainter end of
+the magnitude distribution that we are lacking here. Moreover,
+due to our choice to use only spectra with a confident redshift
+estimate, we might be biasing our sample to only strong line
+emitters, which would also bias our log(ξion fesc ) distribution.
+Lastly, we would like to mention the issue of cosmic variance. As we have seen that the estimate of the neutral hydrogen fraction is very sensitive to the UV luminosity function uncertainty, especially in the faint end slope, we have chosen to
+use the luminosity function from GLIMPSE (Chemerynska et al.
+2026; Atek et al. 2026). However, GLIMPSE is only one NIRCam pointing of a lensed cluster, which significantly reduces the
+effective volume. It could therefore be highly affected by cosmic variance, although this effect is less problematic for very
+faint sources. Alleviating this issue would require many more
+extremely deep field observations with JWST or the upcoming
+Extremely Large Telescope (ELT).
+
+7. Conclusion
+In this work we leverage JWST/NIRSpec spectra from a variety
+of public observations in the redshift range 5 < z < 10, retrieved
+from the DJA, to compile a sample of 1428 sources. Using the
+SED fits already performed in Giovinazzo et al. (2026) we investigate the ionizing photon production of galaxies in the Epoch of
+Reionization. We estimate the ionizing photon output of individual galaxies, accounting for their intrinsic ionizing photon production and their escape fraction. Starting from the GLIMPSE
+UV luminosity functions (Chemerynska et al. 2026; Atek et al.
+2026), as a way to account for the incompleteness of our sample,
+we also compute the ionizing emissivity function. This quantifies
+the amount of sources emitting a given rate of ionizing photons
+in the IGM per unit time per unit volume. We also determine the
+
+Emma Giovinazzo et al.: Ionizing emissivity in the EoR
+
+z=6
+
+z=7
+
+z=8
+
+z=9
+
+51.0
+50.5
+50.0
+49.5
+49.0
+
+z=10
+
+0.175
+0.150
+0.125
+0.100
+0.075
+0.050
+0.025
+0.000
+
+z=11
+
+z=12
+
+z=13
+
+fractional contribution to nion
+
+cumulative log10 (nion)[s 1 Mpc 3]
+
+z=5
+
+22
+
+20
+
+18
+MUV
+
+16
+
+14
+
+22
+
+20
+
+18
+MUV
+
+16
+
+14
+
+Fig. 10: Left panel: cumulative distribution of ṅion as a function of MUV for nine integer redshift in the range 5 < z < 13. For all
+the lines, the dashed section represents the magnitude range in which we have extrapolated our results, as our initial sample only
+includes sources with MUV < −18. Overall, the amount of ionizing photons emitted per unit time and unit volume increases at lower
+redshift. Also, the contribution of fainter sources at lower redshift becomes less important compared to bright sources. Right panel:
+fractional contribution to the total ṅion at each magnitude for the same redshifts, in bins of ∆MUV = 0.5. The dashed sections once
+again represent the range in which our results are extrapolated. While at high redshift, faint sources ( MUV ≳ −18) contribute the
+most to the total ṅion , at low redshift bright sources contribute the most.
+importance that high fesc sources ( fesc > 0.1) have for the reionization process and whether, although not very numerous, they
+drive it. Our main findings are summarized below.
+– From our SED fits we calculate the amount of ionizing photon produced by each galaxy, as well as the amount of ionizing photons emitted into the IGM, when the escape fraction
+is taken into account. We find that the intrinsic production
+shows a slight evolution towards higher values at higher redshifts. This is consistent with the results of Simmonds et al.
+(2024b), who also use a spectroscopic only sample, possibly
+indicating that this trend is due to the incompleteness and selection function of the sample. We find a similar trend for the
+escaped rate of ionizing photons, which also increases as a
+function of redshift, although at a different rate for fesc < 0.1
+and fesc > 0.1. Indeed we find a stronger evolution, more
+consistent with the intrinsic, for strong leakers, while weak
+leakers show an almost flat trend.
+– We find that in general the sources with higher fesc are in
+fact those that emit the most ionizing photons into the IGM,
+which is an expected although not obvious result. At a constant UV magnitude we find a cloud of low fesc sources about
+∼ 1.5 dex below the leakers. This translates into the presence
+of two clouds, one of strong leakers and one of weak leakers
+also in log10 (ξion fesc ).
+– The ionizing emissivity function decreases with increasing
+redshift, following the behavior of the UV luminosity function. We study the behavior of this function when splitting
+the sample at log10 (ξion fesc ) = 24.5, roughly corresponding
+to fesc ∼ 0.1 split and the mean of the sample. In this case we
+find that the main contribution to the rate of ionizing photons
+emitted into the IGM per unit volume comes almost entirely
+from sources above these values. Only at low Ṅion values low
+fesc sources start contributing.
+– Based on the ionizing emissivity function we estimate the
+evolution of the fraction of neutral hydrogen with redshift.
+
+We find its evolution to be consistent with literature estimates and that the uncertainty on the UV luminosity function is the lead cause of uncertainties in our estimates, especially the uncertainty in the faint end slope. We compare
+this evolution to that found when assuming fesc = 0.1 and
+log(ξion / Hz erg−1 ) = 25.45 as motivated from our results.
+We find them to be in broad agreement with the latter being
+faster. We also estimate τCMB and find it in agreement with
+the results from Planck Collaboration et al. (2020).
+– We determine the contribution to the ionized hydrogen fraction by strong leakers by performing again the same analysis over two samples split at log(ξion fesc / Hz erg−1 ) = 24.5.
+We find that the strong leakers ( fesc > 0.1) alone are almost
+able to match the reionization history that we find for all the
+sources. This shows that the few strongly leaking sources,
+∼20% of the total sources in the universe, are able to entirely
+drive the reionization process, producing ∼ 87% of all ionizing photons that reach the IGM. This indicates that it is necessary to identify highly leaking galaxies to find the drivers
+of reionization.
+– Lastly, we study the contribution to the total ṅion from
+sources of different magnitudes. We find that at high redshift sources with MUV > −18 all seem to contribute equally,
+while at low redshift bright sources (MUV ∼ −20) contribute
+most.
+With this work we have presented a framework to calculate
+the ionizing photon emission of individual galaxies, as well as
+the rate of ionizing photons being emitted in a unit volume. Our
+results are consistent with observational constraints and show
+that 20% of galaxies with high fesc are almost entirely responsible for reionization, rather than the majority of low ionizing output galaxies. The relative contributions of faint and bright galaxies vary with redshift, with bright sources dominating at the end
+of reionization and faint sources at its onset. Pinning down the
+drivers of reionization will ultimately require pushing fesc measurements to the faint, abundant galaxies that our spectroscopic
+Article number, page 11
+
+A&A proofs: manuscript no. aa_example
+
+sample cannot yet reach, a regime that deep lensed-field spectroscopy with JWST, and eventually the ELT, is poised to study
+in the future.
+Acknowledgements. This work is based on observations made with the
+NASA/ESA/CSA James Webb Space Telescope. The raw data were obtained
+from the Mikulski Archive for Space Telescopes at the Space Telescope Science
+Institute, which is operated by the Association of Universities for Research in
+Astronomy, Inc., under NASA contract NAS 5-03127 for JWST. Some of the
+data products presented herein were retrieved from the Dawn JWST Archive
+(DJA). DJA is an initiative of the Cosmic Dawn Center, which is funded by
+the Danish National Research Foundation under grant No. 140 (DNRF140).
+This work has received funding from the Swiss State Secretariat for Education,
+Research and Innovation (SERI) under contract number MB22.00072, as well
+as from the Swiss National Science Foundation (SNSF) through project grants
+200020_207349 and 2000-1-243073.
+
+References
+Adams, N. J., Conselice, C. J., Austin, D., et al. 2024, ApJ, 965, 169
+Arrabal Haro, P., Dickinson, M., Finkelstein, S. L., et al. 2023, Nature, 622, 707
+Atek, H., Chemerynska, I., Furtak, L. J., et al. 2026, arXiv e-prints,
+arXiv:2604.23823
+Atek, H., Labbé, I., Furtak, L. J., et al. 2024, Nature, 626, 975
+Austin, D., Harvey, T., Conselice, C. J., et al. 2025, arXiv e-prints,
+arXiv:2512.10839
+Barkana, R. & Loeb, A. 2001, Phys. Rep., 349, 125
+Barrufet, L., Oesch, P. A., Marques-Chaves, R., et al. 2025, MNRAS, 537, 3453
+Becker, G. D. & Bolton, J. S. 2013, MNRAS, 436, 1023
+Becker, G. D., Bolton, J. S., & Lidz, A. 2015, PASA, 32, e045
+Becker, G. D., D’Aloisio, A., Christenson, H. M., et al. 2021, MNRAS, 508,
+1853
+Bezanson, R., Labbe, I., Whitaker, K. E., et al. 2024, ApJ, 974, 92
+Bolan, P., Lemaux, B. C., Mason, C., et al. 2022, MNRAS, 517, 3263
+Bosman, S. E. I. & Davies, F. B. 2024, A&A, 690, A391
+Bosman, S. E. I., Davies, F. B., Becker, G. D., et al. 2022, MNRAS, 514, 55
+Bosman, S. E. I., Fan, X., Jiang, L., et al. 2018, MNRAS, 479, 1055
+Bouwens, R. J., Illingworth, G. D., Oesch, P. A., et al. 2015, ApJ, 811, 140
+Bouwens, R. J., Oesch, P. A., Stefanon, M., et al. 2021, AJ, 162, 47
+Bouwens, R. J., Smit, R., Labbé, I., et al. 2016, ApJ, 831, 176
+Bouwens, R. J., Stefanon, M., Brammer, G., et al. 2023, MNRAS, 523, 1036
+Bowler, R. A. A., Jarvis, M. J., Dunlop, J. S., et al. 2020, MNRAS, 493, 2059
+Brammer, G. & Valentino, F. 2025, The DAWN JWST Archive: Compilation of
+Public NIRSpec Spectra
+Bruton, S., Lin, Y.-H., Scarlata, C., & Hayes, M. J. 2023, ApJ, 949, L40
+Cain, C., D’Aloisio, A., & Muñoz, J. 2025a, PASA, 42, e107
+Cain, C., Van Engelen, A., Croker, K. S., et al. 2025b, ApJ, 987, L29
+Calzetti, D., Armus, L., Bohlin, R. C., et al. 2000, ApJ, 533, 682
+Carnall, A. C., McLure, R. J., Dunlop, J. S., et al. 2019, MNRAS, 490, 417
+Carnall, A. C., McLure, R. J., Dunlop, J. S., & Davé, R. 2018, MNRAS, 480,
+4379
+Castellano, M., Napolitano, L., Fontana, A., et al. 2024, ApJ, 972, 143
+Chemerynska, I., Atek, H., Furtak, L. J., et al. 2026, MNRAS, 546, staf2267
+Chisholm, J., Saldana-Lopez, A., Flury, S., et al. 2022, MNRAS, 517, 5104
+Choustikov, N., Katz, H., Saxena, A., et al. 2024, MNRAS, 529, 3751
+Covelo-Paz, A., Meuwly, C., Oesch, P. A., et al. 2026, A&A, 705, A155
+D’Aloisio, A., McQuinn, M., & Trac, H. 2015, ApJ, 813, L38
+Davies, F. B., Bosman, S. E. I., Gaikwad, P., et al. 2024, ApJ, 965, 134
+Davies, F. B., Hennawi, J. F., Bañados, E., et al. 2018, ApJ, 864, 142
+Dayal, P. & Ferrara, A. 2018, Phys. Rep., 780, 1
+Dayal, P., Volonteri, M., Greene, J. E., et al. 2025, A&A, 697, A211
+de Graaff, A., Brammer, G., Weibel, A., et al. 2025, A&A, 697, A189
+DeCoursey, C., Egami, E., Pierel, J. D. R., et al. 2025, ApJ, 979, 250
+Donnan, C. T., Dickinson, M., Taylor, A. J., et al. 2025, ApJ, 993, 224
+Donnan, C. T., McLure, R. J., Dunlop, J. S., et al. 2024, MNRAS, 533, 3222
+Eilers, A.-C., Davies, F. B., & Hennawi, J. F. 2018, ApJ, 864, 53
+Eisenstein, D. J., Willott, C., Alberts, S., et al. 2023, arXiv e-prints,
+arXiv:2306.02465
+Ellis, R. S. 2025, arXiv e-prints, arXiv:2508.16948
+Fan, X., Bañados, E., & Simcoe, R. A. 2023, ARA&A, 61, 373
+Ferrara, A., Giavalisco, M., Pentericci, L., et al. 2025, The Open Journal of Astrophysics, 8, 125
+Finkelstein, S. L., Bagley, M. B., Ferguson, H. C., et al. 2023, ApJ, 946, L13
+Finlator, K., Oh, S. P., Özel, F., & Davé, R. 2012, MNRAS, 427, 2464
+Gaikwad, P., Haehnelt, M. G., Davies, F. B., et al. 2023, MNRAS, 525, 4093
+Gardner, J. P., Mather, J. C., Abbott, R., et al. 2023, PASP, 135, 068001
+Giallongo, E., Grazian, A., Fiore, F., et al. 2015, A&A, 578, A83
+Giovinazzo, E., Oesch, P. A., Weibel, A., et al. 2026, A&A, 707, A352
+
+Article number, page 12
+
+Goto, H., Shimasaku, K., Yamanaka, S., et al. 2021, ApJ, 923, 229
+Grazian, A., Giallongo, E., Boutsia, K., et al. 2024, ApJ, 974, 84
+Greig, B., Mesinger, A., & Bañados, E. 2019, MNRAS, 484, 5094
+Greig, B., Mesinger, A., Bañados, E., et al. 2024, MNRAS, 530, 3208
+Harikane, Y., Inoue, A. K., Ellis, R. S., et al. 2025, ApJ, 980, 138
+Harikane, Y., Nakajima, K., Ouchi, M., et al. 2024, ApJ, 960, 56
+Hassan, S., Davé, R., Mitra, S., et al. 2018, MNRAS, 473, 227
+Heckman, T. M., Sembach, K. R., Meurer, G. R., et al. 2001, ApJ, 558, 56
+Heintz, K. E., Brammer, G. B., Watson, D., et al. 2025, A&A, 693, A60
+Hoag, A., Bradač, M., Huang, K., et al. 2019, ApJ, 878, 12
+Hsiao, T. Y.-Y., Abdurro’uf, Coe, D., et al. 2024, ApJ, 973, 8
+Inoue, A. K., Hasegawa, K., Ishiyama, T., et al. 2018, PASJ, 70, 55
+Jakobsen, P., Ferruit, P., Alves de Oliveira, C., et al. 2022, A&A, 661, A80
+Jamieson, N., Smith, A., Neyer, M., et al. 2025, MNRAS, 541, 1088
+Jecmen, M. C., Chisholm, J., Atek, H., et al. 2026, ApJ, 1001, 234
+Jiang, L., Ning, Y., Fan, X., et al. 2022, Nature Astronomy, 6, 850
+Jin, X., Yang, J., Fan, X., et al. 2023, ApJ, 942, 59
+Kageura, Y., Ouchi, M., Nakane, M., et al. 2025, ApJS, 278, 33
+Katz, H., Saxena, A., Rosdahl, J., et al. 2023, MNRAS, 518, 270
+Kocevski, D. D., Finkelstein, S. L., Barro, G., et al. 2025, ApJ, 986, 126
+Konno, A., Ouchi, M., Ono, Y., et al. 2014, ApJ, 797, 16
+Konno, A., Ouchi, M., Shibuya, T., et al. 2018, PASJ, 70, S16
+Korber, D., Schaerer, D., Marques-Chaves, R., et al. 2026, arXiv e-prints,
+arXiv:2601.19989
+Kreilgaard, K. C., Mason, C. A., Cullen, F., Begley, R., & McLure, R. J. 2024,
+A&A, 692, A57
+Kreilgaard, K. C., Mason, C. A., Morishita, T., et al. 2026, arXiv e-prints,
+arXiv:2604.17963
+Kroupa, P., Tout, C. A., & Gilmore, G. 1993, MNRAS, 262, 545
+Kulkarni, G., Keating, L. C., Haehnelt, M. G., et al. 2019, MNRAS, 485, L24
+Lange, J. U. 2023, Monthly Notices of the Royal Astronomical Society, 525,
+3181
+Leitherer, C. & Heckman, T. M. 1995, ApJS, 96, 9
+Leja, J., Carnall, A. C., Johnson, B. D., Conroy, C., & Speagle, J. S. 2019, ApJ,
+876, 3
+Llerena, M., Pentericci, L., Napolitano, L., et al. 2025, A&A, 698, A302
+Madau, P., Giallongo, E., Grazian, A., & Haardt, F. 2024, ApJ, 971, 75
+Madau, P. & Haardt, F. 2015, ApJ, 813, L8
+Madau, P., Haardt, F., & Rees, M. J. 1999, ApJ, 514, 648
+Marques-Chaves, R., Álvarez-Márquez, J., Colina, L., et al. 2026, arXiv e-prints,
+arXiv:2602.02322
+Mascia, S., Pentericci, L., Calabrò, A., et al. 2024a, A&A, 685, A3
+Mascia, S., Roberts-Borsani, G., Treu, T., et al. 2024b, A&A, 690, A2
+Maseda, M. V., de Graaff, A., Franx, M., et al. 2024, A&A, 689, A73
+Mason, C. A., Chen, Z., Stark, D. P., et al. 2026, A&A, 705, A114
+Mason, C. A., Fontana, A., Treu, T., et al. 2019a, MNRAS, 485, 3947
+Mason, C. A., Naidu, R. P., Tacchella, S., & Leja, J. 2019b, MNRAS, 489, 2669
+Mason, C. A., Treu, T., Dijkstra, M., et al. 2018, ApJ, 856, 2
+Matsuoka, Y., Onoue, M., Iwasawa, K., et al. 2023, ApJ, 949, L42
+Meyer, R. A., Oesch, P. A., Giovinazzo, E., et al. 2024, MNRAS, 535, 1067
+Meyer, R. A., Roberts-Borsani, G., Oesch, P. A., & Ellis, R. S. 2025, MNRAS,
+542, 1952
+Mitra, S., Choudhury, T. R., & Ferrara, A. 2018, MNRAS, 473, 1416
+Morales, A. M., Mason, C. A., Bruton, S., et al. 2021, ApJ, 919, 120
+Morishita, T., Roberts-Borsani, G., Treu, T., et al. 2023, ApJ, 947, L24
+Muñoz, J. B., Mirocha, J., Chisholm, J., Furlanetto, S. R., & Mason, C. 2024,
+MNRAS, 535, L37
+Naidu, R. P., Tacchella, S., Mason, C. A., et al. 2020, ApJ, 892, 109
+Nakane, M., Ouchi, M., Nakajima, K., et al. 2024, ApJ, 967, 28
+Nanayakkara, T., Glazebrook, K., Schreiber, C., et al. 2025, ApJ, 981, 78
+Ning, Y., Jiang, L., Zheng, Z.-Y., & Wu, J. 2022, ApJ, 926, 230
+Oke, J. B. & Gunn, J. E. 1983, ApJ, 266, 713
+Osterbrock, D. E. & Ferland, G. J. 2006, Astrophysics of gaseous nebulae and
+active galactic nuclei
+Ouchi, M., Harikane, Y., Shibuya, T., et al. 2018, PASJ, 70, S13
+Ouchi, M., Shimasaku, K., Furusawa, H., et al. 2010, ApJ, 723, 869
+Pahl, A. J., Shapley, A., Reddy, N. A., et al. 2026, ApJ, 996, 37
+Pawlik, A. H., Schaye, J., & Dalla Vecchia, C. 2015, MNRAS, 451, 1586
+Planck Collaboration, Aghanim, N., Akrami, Y., et al. 2020, A&A, 641, A6
+Pollock, C. L., Gottumukkala, R., Heintz, K. E., et al. 2025, arXiv e-prints,
+arXiv:2506.15779
+Qin, Y., Mesinger, A., Prelogović, D., et al. 2025, PASA, 42, e049
+Rieke, M. J., Kelly, D. M., Misselt, K., et al. 2023, PASP, 135, 028001
+Robertson, B. E. 2022, ARA&A, 60, 121
+Robertson, B. E., Ellis, R. S., Furlanetto, S. R., & Dunlop, J. S. 2015, ApJ, 802,
+L19
+Sailer, N., Farren, G. S., Ferraro, S., & White, M. 2026, Phys. Rev. Lett., 136,
+081002
+Saxena, A., Bunker, A. J., Jones, G. C., et al. 2024, A&A, 684, A84
+
+Emma Giovinazzo et al.: Ionizing emissivity in the EoR
+Schaerer, D., Guibert, J., Marques-Chaves, R., & Martins, F. 2025, A&A, 693,
+A271
+Schroeder, J., Mesinger, A., & Haiman, Z. 2013, MNRAS, 428, 3058
+Seeyave, L. T. C., Wilkins, S. M., Kuusisto, J. K., et al. 2023, MNRAS, 525,
+2422
+Shull, J. M., Harness, A., Trenti, M., & Smith, B. D. 2012, ApJ, 747, 100
+Simmonds, C., Tacchella, S., Hainline, K., et al. 2024a, MNRAS, 527, 6139
+Simmonds, C., Tacchella, S., Hainline, K., et al. 2024b, MNRAS, 535, 2998
+Sobacchi, E. & Mesinger, A. 2015, MNRAS, 453, 1843
+Stanway, E. R. & Eldridge, J. J. 2018, MNRAS, 479, 75
+Stark, D. P., Topping, M. W., Endsley, R., & Tang, M. 2026, in Encyclopedia of
+Astrophysics, Volume 4, Vol. 4, 453–499
+Stoffers, A., Tacchella, S., Simmonds, C., Johnson, B. D., & Maiolino, R. 2026,
+MNRAS[arXiv:2511.02908]
+Summerfield, Z., McClymont, W., Tacchella, S., et al. 2026, From THESANZOOM to JWST: Predicting ionizing photon escape and the rise of UV-bright
+reionization sources
+Tang, M., Stark, D. P., Topping, M. W., Mason, C., & Ellis, R. S. 2024, ApJ, 975,
+208
+Trebitsch, M., Blaizot, J., Rosdahl, J., Devriendt, J., & Slyz, A. 2017, MNRAS,
+470, 224
+Umeda, H., Ouchi, M., Nakajima, K., et al. 2024, ApJ, 971, 124
+Valentino, F., Heintz, K. E., Brammer, G., et al. 2025, arXiv e-prints,
+arXiv:2503.01990
+Wang, F., Davies, F. B., Yang, J., et al. 2020, ApJ, 896, 23
+Weibel, A., Oesch, P. A., Williams, C. C., et al. 2026, ApJ, 1002, 136
+Whitler, L., Stark, D. P., Topping, M. W., et al. 2025, ApJ, 992, 63
+Whitler, L. R., Mason, C. A., Ren, K., et al. 2020, MNRAS, 495, 3602
+Witten, C. E. C., Laporte, N., & Katz, H. 2023, ApJ, 944, 61
+Yang, J., Wang, F., Fan, X., et al. 2020, ApJ, 904, 26
+Yeh, J. Y.-C., Smith, A., Kannan, R., et al. 2023, MNRAS, 520, 2757
+Zackrisson, E., Inoue, A. K., & Jensen, H. 2013, ApJ, 777, 39
+Zheng, Z.-Y., Wang, J., Rhoads, J., et al. 2017, ApJ, 842, L22
+
+Article number, page 13
+
+A&A proofs: manuscript no. aa_example
+
+Appendix A: UV LF parameters
+In Table A.1 we compile the parameters and related uncertainties of the double power law parameters used in the analysis.
+Table A.1: DPL parameters and uncertainties
+Redshift
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+
+M⋆
+-21.52+0.39
+−0.37
+-21.03+0.39
+−0.37
+-20.39+0.39
+−0.37
+-20.42+0.39
+−0.37
+-20.45+0.25
+−0.28
+-20.49+0.31
+−0.37
+-20.52+0.39
+−0.30
+-20.55+0.40
+−0.42
+-20.58+0.40
+−0.42
+-20.61+0.40
+−0.42
+-20.65+0.40
+−0.42
+
+log10 (ϕ⋆ )
+-3.52+0.25
+−0.25
+-3.52+0.25
+−0.25
+-3.48+0.25
+−0.25
+-3.70+0.25
+−0.25
+-3.93+0.18
+−0.18
+-4.15+0.23
+−0.27
+-4.38+0.29
+−0.29
+-4.61+0.30
+−0.31
+-4.83+0.30
+−0.31
+-5.06+0.30
+−0.31
+-5.29+0.30
+−0.31
+
+α
+-1.90+0.08
+−0.08
+-1.99+0.08
+−0.08
+-2.01+0.08
+−0.08
+-2.02+0.08
+−0.08
+-2.04+0.08
+−0.07
+-2.06+0.15
+−0.14
+-2.07+0.15
+−0.14
+-2.09+0.22
+−0.21
+-2.10+0.22
+−0.21
+-2.12+0.22
+−0.21
+-2.14+0.22
+−0.21
+
+β
+-5.37+0.32
+−0.38
+-4.92+0.32
+−0.38
+-3.89+0.32
+−0.38
+-3.96+0.32
+−0.38
+-4.03+0.53
+−0.49
+-4.10+0.48
+−0.48
+-4.17+0.46
+−0.48
+-4.24+0.47
+−0.48
+-4.31+0.47
+−0.48
+-4.38+0.47
+−0.48
+-4.45+0.47
+−0.48
+
+Appendix B: Neutral gas fraction
+Table B.1: xHI and log(ṅion ) evaluated at integer redshifts with uncertainties
+z
+15
+14
+13
+12
+11
+10
+9
+8
+7
+6
+5
+
+log(ṅion /s−1 Mpc−3 )
+49.3+0.35
+−0.29
+49.41+0.34
+−0.28
+49.70+0.33
+−0.27
+49.88+0.32
+−0.27
+50.10+0.20
+−0.18
+50.27+0.17
+−0.17
+50.47+0.09
+−0.10
+50.64+0.09
+−0.09
+50.83+0.09
+−0.09
+51.05+0.09
+−0.09
+51.12+0.09
+−0.09
+
+xHI
+1.00
+0.99
+0.99
+0.98
+0.97
+0.94
+0.88
+0.76
+0.51
+0.00
+0.00
+
+GLIMPSE
+± 0.00
+± 0.01
+± 0.01
+
+D24
+± 0.00
+± 0.01
+
++0.01
+−0.02
++0.02
+−0.03
++0.03
+−0.04
++0.04
+−0.06
++0.06
+−0.08
++0.10
+−0.12
++0.14
+−0.00
+
++0.01
+−0.02
++0.01
+−0.02
++0.01
+−0.04
++0.02
+−0.09
++0.02
+−0.18
++0.04
+−0.38
++0.09
+−0.51
++0.26
+−0.00
+
+±0
+
+± 0.00
+
+Notes. The evolution of xHI and log(ṅion ) evaluated at integer redshift. For xHI we also show the uncertainties both for the case of the GLIMPSE
+LF and for the case of the Donnan et al. (2024) (D24) LF, as also seen in Fig. 8.
+
+Article number, page 14
+
+

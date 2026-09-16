@@ -1,0 +1,2081 @@
+Draft version June 7, 2022
+Typeset using LATEX twocolumn style in AASTeX62
+
+Inferring the Thermal History of the Intergalactic Medium from the Properties of the Hydrogen and Helium
+Lyman-α Forest
+Bruno Villasenor,1 Brant Robertson,1 Piero Madau,1 and Evan Schneider2
+1 Department of Astronomy and Astrophysics, University of California, Santa Cruz, 1156 High Street, Santa Cruz, CA 95064 USA
+2 Department of Physics and Astronomy & Pittsburgh Particle Physics, Astrophysics, and Cosmology Center (PITT PACC), University of
+
+arXiv:2111.00019v3 [astro-ph.CO] 5 Jun 2022
+
+Pittsburgh, Pittsburgh, PA 15260, USA
+
+ABSTRACT
+The filamentary network of intergalactic medium (IGM) gas that gives origin to the Lyman-α forest
+in the spectra of distant quasars encodes information on the physics of structure formation and the
+early thermodynamics of diffuse baryonic material. Here, we use a massive suite of more than 400 highresolution cosmological hydrodynamical simulations run with the Graphics Processing Unit-accelerated
+code Cholla to study the IGM at high spatial resolution maintained over the entire computational
+volume. The simulations capture a wide range of possible IGM thermal histories by varying the
+photoheating and photoionizing background produced by star-forming galaxies and active galactic
+nuclei. A statistical comparison of synthetic spectra with the observed 1D flux power spectra of
+hydrogen at redshifts 2.2 ≤ z ≤ 5.0 and with the helium Lyman-α opacity at redshifts 2.4 < z <
+2.9 tightly constrains the photoionization and photoheating history of the IGM. By leveraging the
+constraining power of the available Lyman-α forest data to break model degeneracies, we find that
+the IGM experienced two main reheating events over 1.2 Gyr of cosmic time. For our best-fit model,
+hydrogen reionization completes by zR ≈ 6.0 with a first IGM temperature peak T0 ' 1.3 × 104 K, and
+is followed by the reionization of He II that completes by zR ≈ 3.0 and yields a second temperature
+peak of T0 ' 1.4 × 104 K. We discuss how our results can be used to obtain information on the timing
+and the sources of hydrogen and helium reionization.
+Keywords: hydrodynamical simulations (767) – large-scale structure of the universe (902) – Lyman-α
+forest (980) – computational methods (1965)
+1. INTRODUCTION
+
+The neutral hydrogen and singly-ionized helium components of gas near the cosmic mean density trace the
+distribution of matter in between galaxies and produce
+a “forest” of detectable Lyman-α absorption features
+in the spectra of distant quasars (e.g., Hernquist et al.
+1996; Croft et al. 1998; Meiksin 2009; Slosar et al. 2011;
+McQuinn 2016; Worseck et al. 2019). The depth, shape,
+and location of absorption lines in the Lyman-α forest
+depend on the ionization degree and thermal state of
+this intergalactic medium (IGM), which are controlled
+by the uncertain UV radiation background produced by
+star-forming galaxies and active galactic nuclei (AGNs)
+(e.g., Haardt & Madau 2012; Robertson et al. 2015;
+Madau & Haardt 2015; Faucher-Giguère 2020), and on
+Corresponding author: Bruno Villasenor.
+brvillas@ucsc.edu
+
+its density and peculiar velocity fields shaped by gravity
+(Cen et al. 1994). Dark matter provides the backbone
+of large-scale structure in the Universe, a web-like pattern present in embryonic form in the overdensity motif
+of the initial fluctuation field and sharpened by nonlinear gravitational dynamics (Bond et al. 1996). The
+Lyman-α forest traces this underlying “cosmic web” on
+scales and at redshifts that cannot be probed by any
+other observable. Because of its long cooling time, lowdensity gas at z ∼ 2–5 that traces the underlying matter
+distribution retains some memory of when and how it
+was reheated and reionized at z & 6 (Miralda-Escudé &
+Rees 1994). The physics that governs the properties of
+the IGM throughout these epochs remain similar, as the
+evolving cosmic UV emissivity and the transfer of that
+radiation through a medium made clumpy by gravity
+determine both the details of the reionization process
+and the thermodynamics of the forest.
+
+2
+
+Villasenor et al.
+
+Understanding how reionization occurred, the nature
+of the early sources that drove it, the thermal history
+and fine-grained properties of hydrogen gas in the cosmic web, and how to extract crucial information on the
+cosmological model from observations of Lyman-α absorption are among the most important open questions
+in cosmology and key science drivers for numerous major new instruments and facilities. The promise of the
+Lyman-α forest for constraining cosmological physics including the nature of dark matter and dark energy has
+motivated in part the construction of the Dark Energy
+Spectroscopic Instrument (DESI Collaboration et al.
+2016), which measures absorption line spectra backlit
+by nearly a million quasars at z > 2, and the WEAVE
+survey (Pieri et al. 2016) which will observe more than
+400,000 high-redshift quasars at z > 2. Interpreting
+such observations requires detailed cosmological hydrodynamical simulations that cover an extensive range
+of uncertain photoionization and photoheating histories
+and consistently maintain high resolution throughout a
+statistically representative sub-volume of the Universe.
+This paper extends research efforts directly focused
+on advancing the state-of-the-art in modeling the IGM
+physical structure in cosmological simulations while still
+achieving high computational efficiency, thereby providing higher fidelity physical models for interpreting
+Lyman-α forest data. In Villasenor et al. (2021) we
+introduced the Cholla IGM Photoheating Simulations
+(CHIPS) to investigate how different photoheating histories and cosmological parameters impact the structure
+of the forest. Here, we use a massive suite of more than
+400 CHIPS simulations to study the IGM at a resolution
+of 49h−1 ckpc maintained over (50h−1 cMpc)3 volumes.
+Performed with the GPU-native MPI-parallelized code
+Cholla (Schneider & Robertson 2015), these simulations
+span different amplitudes and peak redshifts of the H I
+and He II photoionization and photoheating rates.
+To anticipate the results of our likelihood analysis constrained by the 1D flux power spectra P (k) measured in
+eBOSS, Keck, and VLT data and the observed He II
+Lyman-α forest, we find that scenarios where hydrogen
+in the cosmic web was fully reionized by star-forming
+galaxies by redshift zR ≈ 6.0 and the double reionization of helium was completed by quasar sources about
+1.2 billion years later are strongly favored by the data.
+Models that reionize hydrogen or helium at earlier or
+later cosmic times produce too much or too little cold
+gas, and appear to be inconsistent with the observed
+P (k) and He II Lyman-α opacity. Our approach differs
+from previous work in this field in the following aspects:
+1. The simulation grid captures a wide range of possible thermal histories via a four-parameter scal-
+
+ing of the amplitude and timing of the (spatially
+uniform) metagalactic UVB responsible for determining the ionization states and temperatures of
+the IGM (cf. Nasir et al. 2016; Oñorbe et al.
+2017). We use the physically-motivated model of
+Puchwein et al. (2019) as a template, and vary
+the strength and redshift-timing of their ionization
+and heating rates.
+2. We do not modify, in post-processing, the mean
+transmitted flux hF i in the forest by recalibrating
+the Lyman-α optical depth, nor do we assume or
+rescale an instantaneous gas temperature-density
+relation (cf. Viel et al. 2013a; Iršič et al. 2017a;
+Boera et al. 2019; Walther et al. 2021). Indeed,
+we find from our simulations that the often assumed perfect power-law relationship between the
+temperature and density of the IGM does not provide a good approximation over the relevant density and redshift intervals.
+3. Our likelihood analysis evaluates the performance
+of a given model in matching the observations over
+the complete self-consistently evolved reionization
+and thermal history of the IGM, i.e. over the full
+redshift range 2.2 ≤ z ≤ 5.0 for the observed 1D
+flux power spectrum of hydrogen and over the redshift range 2.4 < z < 2.9 for the Lyman-α opacity
+of He II. Since the properties of the gas at one redshift cannot be disentangled from its properties
+at previous epochs and the thermal and ionization structure of the IGM evolve with cosmic time
+along continuous trajectories, the marginalization
+over the parameter posterior distributions should
+not be performed independently at each redshift
+(cf. Bolton et al. 2014; Nasir et al. 2016; Hiss
+et al. 2018; Boera et al. 2019; Walther et al. 2019;
+Gaikwad et al. 2020a).
+This paper aims to find the optimal photoionization
+and photoheating rates that reproduce the observed
+properties of the hydrogen and helium Lyman-α forest. In Section 2 we describe the simulations used for
+this work, how we apply transformations to the UV
+background (UVB) model from Puchwein et al. 2019 to
+generate our range of photoionization and photoheating rates, and the impact of the different UVB models
+on the statistics of the forest and the properties of the
+IGM. We follow by presenting the observational data
+and the methodology for the Bayesian Markov Chain
+Monte Carlo (MCMC) inference used to constrain the
+model. Section 3 presents our result for the best-fit
+model and the comparison of the resulting properties of
+
+The Thermal History of the IGM from the H I and He II Lyman-α Forest
+the forest and the thermal evolution of the IGM to the
+observational determinations and previous inferences.
+We summarize our results and conclusions in §4. In Appendix A we discuss resolution effects on the Lyman-α
+power spectrum P (k) from our simulations. A quantitative study of the impact on P (k) from rescaling the
+effective optical of the skewer sample is presented in Appendix B. In Appendix C we show the variation in the
+covariance matrix of the Lyman-α power spectrum from
+our simulations. We discuss in Appendix D how possible alterations to our model can modify the predicted
+temperature history of the IGM. Finally, Appendix E
+analyzes the accuracy of assuming a power-law relation
+for the density-temperature distribution of the gas in
+our simulations.
+2. METHODOLOGY
+
+For the study presented here, we compare the observed statistics of the Lyman-α forest to simulations
+that apply different models for the metagalactic UVB.
+In this section we briefly describe our simulation code
+and the method to extract Lyman-α spectra from the
+simulations. We then describe our simulation grid and
+the effects that the different UVB models have on the
+properties of the IGM. Finally we present the observational measurements and the inference method used to
+constrain our model for the UVB photoionization and
+photoheating rates.
+2.1. Simulations
+The simulations used for this work were run with the
+cosmological hydrodynamics code Cholla (Schneider &
+Robertson 2015; Villasenor et al. 2021). Cholla evolves
+the equations of hydrodynamics on a uniform Cartesian
+grid using a finite volume approach with a second-order
+Godunov scheme (Colella & Woodward 1984). The simulations track the ionization states of hydrogen and helium given by the photoionization from the UVB, recombination with free electrons and collisional ionization. The non-equilibrium H+He chemical network is
+evolved simultaneously with the hydrodynamics using
+the GRACKLE library (Smith et al. 2017). We assume
+a spatially uniform, time-dependent UVB in the form of
+redshift-dependent photoionization rates per ion Γ and
+photoheating rates per ion H for neutral hydrogen H I,
+neutral helium He I, and singly ionized helium He II.
+For a detailed description of the simulation code we refer the reader to the methodology section presented in
+Villasenor et al. (2021).
+The initial conditions for our simulations were generated using the MUSIC code (Hahn & Abel 2011) for a
+flat ΛCDM cosmology with parameters H0 = 67.66 km
+
+3
+
+s−1 , Ωm = 0.3111, ΩΛ = 0.6889, Ωb = 0.0497, σ8 =
+0.8102, and ns = 0.9665, consistent with the constraints
+from Planck Collaboration et al. (2020). In future work,
+we plan to extend our analysis and include variation of
+the cosmological parameters (Bird et al. 2019; Ho et al.
+2022). Unless otherwise stated the volume and numerical size of our simulations correspond to L = 50 h−1 Mpc
+and N = 2×10243 cells and particles. The initial conditions for all runs were generated from identical random
+number seeds to preserve the same amplitude and phase
+for all initial Fourier modes across the simulation suite.
+2.2. Synthetic Lyman-α Spectra
+The Lyman-α forest sensitively probes the state of the
+baryons in the IGM, and absorption lines from the forest
+reflect the H I content and the temperature of the gas in
+the medium. To compare the properties of the IGM in
+our simulations directly to observations, we extract synthetic hydrogen Lyman-α forest spectra from the simulated boxes by measuring the H I density, temperature,
+and peculiar velocity of the gas along 12,228 skewers
+through the simulation volume, using 4096 skewers along
+each axis of the box. The optical depth τ as a function
+of velocity u along each skewer is computed by integrating the product of the Lyman-α scattering cross section
+and the number density of neutral hydrogen along the
+line of sight as described in Villasenor et al. (2021).
+The transmitted flux F is computed from the optical
+depth τ along the skewers according to F = exp(−τ ).
+The power spectrum of the transmitted flux P (k) is calculated as the average amplitude of the one-dimensional
+Fourier transform of the flux fluctuations δF (u),
+δF (u) ≡
+
+F (u) − hF i
+,
+hF i
+
+(1)
+
+where hF i is the average transmitted flux over the
+skewer sample at a given redshift (see §5.4 from Villasenor et al. 2021 for a detailed description). Similarly,
+we extract the flux FHeII transmitted through the He II
+Lyman-α forest from the simulations, and compute the
+He II effective optical depth as τeff,HeII = − ln hFHeII i.
+Figure 1 (top) shows the gas density distribution
+at redshift z = 2 from a section taken from one of
+our highest-resolution (L=50 h−1 Mpc, N = 2×20483
+cells and particles) simulations, where several skewers
+crossing the simulated box are shown as yellow lines.
+The bottom panels show the gas density surrounding
+a selected line of sight and the transmitted hydrogen
+Lyman-α flux along the skewer. The absorption lines
+in the forest probe the H I column density, the peculiar
+velocity, and the temperature of the gas along the line
+of sight.
+
+4
+
+Villasenor et al.
+
+Figure 1. Large-scale distribution of gas density (top) from one of our highest-resolution cosmological simulations (L=50
+h−1 Mpc, N =2×20483 cells and particles) at redshift z=2 and a set of skewers crossing the simulated box (yellow lines). The
+bottom panels show the density of the gas surrounding a selected line of sight and the Lyman-α transmitted flux along the
+skewer. Absorption lines in the forest probe the H I column density, the peculiar velocity, and the temperature of the gas along
+the line of sight.
+
+2.3. Photoionization and Photoheating Rates
+The ionization and thermal evolution of the IGM is
+primarily determined by the radiation emitted by starforming galaxies and AGNs over cosmic history (McQuinn 2016; Upton Sanderbeck et al. 2016; Oñorbe
+et al. 2017). The photoionization and photoheating
+rates adopted in our simulations are computed from
+the intensity of the background radiation field, which
+
+is in turn determined by the emissivity of the radiating
+sources and the opacity of the IGM to ionizing photons. Recent models of the UVB (Puchwein et al. 2019;
+Khaire & Srianand 2019; Faucher-Giguère 2020), when
+applied to cosmological simulations, result in a hydrogen reionization era that completes by z ∼ 6–8 in agreement with observational constraints (Davies et al. 2018;
+Planck Collaboration et al. 2020).
+
+The Thermal History of the IGM from the H I and He II Lyman-α Forest
+
+5
+
+Figure 2. Photoionization (Γ, top) and photoheating (H, bottom) rates for neutral hydrogen (H I, left), neutral helium (He I,
+center) and singly ionized helium (He II, right) from the reference P19 model (Puchwein et al. 2019) (red line) along with the
+photoionization and photoheating rates (blue lines) used for the 400 simulations of the CHIPS grid. The modified rates are
+generated by rescaling and shifting the reference P19 model as described in §2.4.
+
+The updated model for the photoheating and photoionizing background presented in Puchwein et al.
+(2019, hereafter P19) adopts an improved treatment of
+the IGM opacity to ionizing radiation that consistently
+captures the transition from a neutral to an ionized
+IGM. To compute the intensity of the background radiation, the P19 model employs recent determinations of
+the ionizing emissivity due to stars and AGNs and of the
+H I absorber column density distribution, and assumes
+an evolving escape fraction of ionizing radiation from
+galaxies into the IGM that reaches 18%. When the P19
+model is applied in cosmological simulations, hydrogen
+reionization completes at z ∼ 6 consistently with recent
+measurements (Becker et al. 2001; Bosman et al. 2018;
+Becker et al. 2021; Qin et al. 2021). However, the subsequent evolution of the Lyman-α forest spectra measured
+in simulations that use the P19 model fail to reproduce
+the observed properties of the forest (Villasenor et al.
+2021) and, in particular, do not agree with the observed
+power spectrum of the Lyman-α transmitted flux over
+the redshift range 2.2 ≤ z ≤ 5.0. This work aims to
+present a new model photoionization and photoheating
+rates that result in an evolution of the IGM consistent
+with the observational measurements of the Lymanα flux power spectrum and the He II effective optical
+depth.
+
+2.4. Simulation Grid
+To determine ionization and heating histories that result in properties of the IGM consistent with the observed Lyman-α flux power spectrum and He II effective
+opacity, we perform an unprecedented grid consisting of
+400 cosmological simulations as a direct extension of the
+Cholla IGM Photoheating Simulations (CHIPS) suite
+originally presented in Villasenor et al. (2021). Each
+simulation in the CHIPS grid applies different photoionization and photoheating rates to model a variety of
+reionization and thermal histories, and thereby produce
+different statistical properties for the Lyman-α forest.
+To generate different representations of the UVB, we
+modify the reference model from Puchwein et al. (2019)
+by rescaling the photoionization and photoheating rates
+(Γ and H respectively) by a constant factor β and shifting the redshift dependence of the rates by an offset ∆z.
+The two transformations are expressed as
+Γ(z) → β ΓP19 (z − ∆z),
+H(z) → β HP19 (z − ∆z).
+
+(2)
+
+Since the photoionization and photoheating rates for
+both H I and He I are dominated by the same sources,
+namely star-forming galaxies at z & 5 and AGNs at
+lower redshifts, and the radiation that ionizes both
+
+6
+
+Villasenor et al.
+
+species is absorbed by intergalactic hydrogen, we modify
+the H I and He I photoionization and photoheating rates
+jointly by applying the transformations described by
+Eqs. (2), scaling and shifting by the parameters βH and
+∆zH respectively. He II is reionized later in cosmic history primarily by the extreme UV radiation emitted by
+AGNs, and we rescale and redshift-offset the photoionization and photoheating rates associated with He II by
+a second set of parameters βHe and ∆zHe . Hence, each
+modified UVB model is characterized by the parameter vector θ = {βH , ∆zH , βHe , ∆zHe }. The different
+photoionization and photoheating histories span all the
+combinations of the parameter values presented in Table
+1.
+The rescaling parameters βH and βHe control the intensity of the background radiation, determine the efficiency with which H I and He II become ionized, and
+govern energy input into the IGM in the form of photoheating during the epochs of non-equilibrium reionization for hydrogen and helium. After reionization completes and the gas reaches photoionization equilibrium,
+the balance between ionizations from the background
+radiation and recombinations with free electrons determines the ionization state of H I and He II. At equilibrium, the ionized fraction of H I and He II is proportional to the photoionization rates ΓHI and ΓHeII respectively, and inversely proportional to the temperaturedependent radiative recombination rates αHII (T ) and
+αHeIII (T ). Therefore, by rescaling the photoionization
+and photoheating rates, we modify the evolution of the
+temperature and the ionization state of the gas in the
+IGM during and after H I and He II reionization.
+The parameters ∆zH and ∆zHe shift the redshift dependence of the photoionization and photoheating rates
+by a constant offset, affecting the timing of H I and
+He II reionization. In general, an offset of ∆zH > 0 or
+∆zHe > 0 moves H I or He II reionization to higher redshift and earlier cosmic time relative to the reference P19
+model. Negative values of ∆zH or ∆zHe shift reionization to lower redshift and later cosmic times. The offset
+in redshift of the models also affect the properties of the
+IGM after H I and He II reionization complete, as the
+photoheating and photoionization rates at a given redshift are generally modified when ∆zH 6= 0 or ∆zHe 6= 0.
+Figure 2 shows the photoionization and photoheating
+rates from the reference model by Puchwein et al. (2019)
+together with the modified rates adopted in the 400 simulations of the CHIPS grid. In Villasenor et al. (2021),
+we presented a comparison of the statistical properties of
+the Lyman-α forest and the thermal history of the IGM
+that result from a high-resolution simulation using the
+UVB model from Puchwein et al. (2019). We concluded
+
+Table 1. CHIPS Simulation Grid
+Parameter
+
+Parameter Values
+
+βH
+∆zH
+βHe
+∆zHe
+
+0.60, 0.73, 0.86, 1.00
+-0.6, -0.4, -0.2, 0.0, 0.2
+0.10, 0.30, 0.53, 0.76, 1.00
+-0.1, 0.2, 0.5, 0.8
+
+Note—The parameters βH and ∆zH determine the amplitude and redshift offset
+of the H I and He I photoionization and
+photoheating rates, while βHe and ∆zHe
+rescale and offset the He II rates.
+
+that, in general, the gas in the simulation was too highly
+ionized after hydrogen reionization and possibly too hot
+during the epoch of helium reionization to be compatible with the observed statistics of the forest and other
+inferences of the thermal state of the IGM. We therefore
+do not include values of βH > 1 or βHe > 1 in our grid,
+as such models would result in overall higher ionization
+fractions and temperatures of the IGM compared with
+the P19 case.
+The simulations were run on the Summit system (Oak
+Ridge Leadership Computing Facility at the Oak Ridge
+National Laboratory). Each simulation was performed
+on 128 GPUs and completed in less than two wall clock
+hours. The cost of the entire grid of computations was
+only ∼16,000 node hours. This work demonstrates that
+by taking advantage of an efficient code like Cholla and
+a capable system like Summit, future studies of the
+IGM using thousands of cosmological simulations are
+now possible.
+2.5. Effects of UVB Models on the IGM Properties
+The different photoionization and photoheating histories adopted in our simulations affect the ionization
+state of hydrogen and helium and the temperature of the
+IGM. Figure 3 shows the redshift evolution of the global
+properties of the IGM for each of the simulated histories.
+The top panels show the temperature of gas at mean
+density T0 (left) and the index γ (right) of the power-law
+density-temperature relation T (∆) = T0 ∆γ−1 , where
+∆ = ρgas /ρ̄. The bottom panels show the volume
+weighted average fraction of neutral hydrogen xHI (left)
+and singly ionized helium xHeII (right).
+As hydrogen becomes ionized at z & 5.5 the gas in
+the IGM experiences a monotonic increase of T0 while
+showing a close to isothermal distribution γ ∼ 1. After hydrogen reionization ends at z ∼ 5.5–6.5, the gas
+cools primarily through the adiabatic expansion of the
+Universe. During this period the low-density gas cools
+
+The Thermal History of the IGM from the H I and He II Lyman-α Forest
+
+7
+
+Figure 3. Evolution of global properties of the IGM computed form the 400 CHIPS simulations. The simulations evolve
+under different photoionization and photoheating rates resulting in a large variety of ionization and thermal histories of the
+IGM. The top panels show the the temperature, T0 , of intergalactic gas at the mean density (left) and the index γ from the
+power-law density-temperature relation T (∆) = T0 ∆γ−1 (right). The bottom panels show the volume-weighted average of the
+neutral hydrogen fraction xHI (left) and the singly ionized helium fraction xHeII (right). The amplitude and timing of the rates
+impact the thermal state of the IGM during H I and He II reionization. Simulations with higher values of βHe result in a higher
+temperature peak during He II reionization (2.5 . z . 3.8) and for simulations with ∆zHe > 0 the epoch of He II reionization is
+shifted to earlier epochs. Analogously, negative values of ∆zH move the timing of H I reionization to later epochs and simulations
+with different βH show a different temperature peak during H I reionization at z ∼ 5.6 − 6.3.
+
+faster and γ increases. This first epoch of cooling ends
+with the onset of helium (He II) reionization from the
+extreme UV radiation emitted by AGNs at z . 4 − 5
+which reheats the IGM, increasing T0 and decreasing γ.
+After the double reionization of helium completes (z ∼
+2.5–3.5) the IGM cools monotonically by adiabatic expansion increasing γ for a second time. Because of these
+two distinct photoheating epochs, the thermal state of
+the IGM in our simulations is more sensitive to variations in the hydrogen photoheating/photoionization parameters βH and ∆zH at z & 5, and more sensitive to
+the parameters βHe and ∆zHe at z . 5 during the epoch
+of helium reionization.
+
+For simulations with ∆zH < 0 the temperature peak
+from hydrogen reionization is shifted to later times
+(lower redshift) and the amplitude of the temperature
+peak depends on the value of βH . Analogously, the parameters βHe and ∆zHe determine the amplitude and
+timing of the second peak in T0 caused by helium reionization. Positive values of ∆zHe move helium reionization to higher redshifts compared with the reference P19
+model, and higher values of βHe produce a higher peak
+in T0 during the epoch 2.5 . z . 3.8.
+Variation in the timing of H and He reionization
+changes the cooling periods during which the power-law
+index γ increases. The different tracks of γ in our simu-
+
+8
+
+Villasenor et al.
+
+Figure 4. Gas temperature from a slice through the IGM at z = 3.6 in a subset of 20 simulations with different He II
+reionization scenarios. An increase in the parameters βHe and ∆zHe corresponds to higher He II photoheating and a shift of the
+He II reionization epoch to earlier cosmic times (closer to z ∼ 3.6) respectively. Either effect increases the temperature of the
+IGM at z ∼ 3.6.
+
+lation grid then arise primarily from the different values
+of ∆zH and ∆zHe adopted. In future work we plan to
+expand the flexibility of our simulations to sample the
+thermal state of the IGM by introducing density dependent photoheating rates which will allow for larger
+variation in the evolution of γ.
+The effects on the temperature of the IGM from the
+different helium reionization scenarios in our simulations
+are illustrated in Figure 4. The image displays the gas
+temperature of a slice through the IGM at z = 3.6 generated from a subset of 20 simulations that vary the pa-
+
+rameters βHe and ∆zHe controlling the He II photoionization and photoheating rates. Increases in βHe and
+∆zHe correspond to a larger extreme UV background
+from AGNs and to a shift of the epoch of helium reionization to earlier cosmic times, respectively. Either effect causes the temperature of the IGM to increase at
+z ∼ 3.6. Decreasing the He II photoheating rates or
+shifting helium reionization to later cosmic times (toward z ∼ 2.8) decreases the temperature of IGM gas at
+z ∼ 3.6.
+
+The Thermal History of the IGM from the H I and He II Lyman-α Forest
+
+9
+
+Figure 5. Sensitivity of the Lyman-α flux power spectrum P (k) to independent variations of the parameters θ =
+{βH , ∆zH , βHe , ∆zHe } for redshifts z = 3 (top) and z = 4 (bottom). Independent changes of each parameter have different effects on the redshift-dependent P (k). After hydrogen reionization completes, differences in the power spectrum at z . 5.5
+arise from changes in the ionization state and temperature of the IGM. Variation of the parameters βH and ∆zH mostly affect the
+ionization state of hydrogen and therefore the overall normalization of P (k). Changes in the parameters βHe and ∆zHe impact
+P (k) through their effect on the temperature of the gas during and after helium reionization, as variations in the thermal state
+of the IGM control the ionization fraction of hydrogen by its effect on the recombination rate αHII (T ), and lead to the Doppler
+broadening of absorption lines and the smoothing of density fluctuations that suppress small-scale power (k & 0.02 s km−1 ).
+
+2.6. Effects of UVB Models on the Lyman-α Forest
+Power Spectrum
+The statistical properties of the Lyman-α forest provide insight into the state of the baryons in the IGM.
+The effective optical of the forest τeff,H = − ln hF i provides a global measurement of the overall H I content
+of the gas in the IGM, probes the hydrogen ionization fraction, and allows for estimates of the intensity
+of the ionizing background radiation. The power spectrum P (k) of the flux transmitted through the forest
+contains more information encoded across different spatial scales. On scales larger than a few Mpc the P (k)
+is sensitive to the ionization fraction of hydrogen in the
+IGM and provides information similar to τeff,H . This
+connection makes P (k) and τeff,H a dependent pair of
+measurements, and §B presents a detailed analysis about
+
+the effects that variations in τeff,H induce in P (k). On
+scales smaller than a few comoving Mpc, structure in
+the forest is suppressed by pressure smoothing of the
+gas density fluctuations as well as Doppler broadening
+of the absorption lines. These effects cause a cutoff in
+the dimensionless power spectrum ∆2 (k) = π −1 kP (k)
+for k & 0.02 s km−1 , making the flux power spectrum at
+intermediate and small scales a sensitive probe of the
+thermal state of IGM gas.
+The different ionization and thermal histories produced by the range of photoionization and photoheating
+rates adopted in our simulations manifest as variations
+in the flux power spectrum of the Lyman-α forest. The
+effects on P (k) from changing each of the four parameters βH , ∆zH , βHe , or ∆zHe independently is shown in
+Figure 5 for redshifts z = 3 (top) and z = 4 (bottom).
+The variation in P (k) measured from our simulation grid
+
+10
+
+Villasenor et al.
+
+Figure 6. The transmitted flux power spectrum P (k) from observations by eBOSS (Chabanier et al. 2019), Keck Observatory
+and the Very Large Telescope (Iršič et al. 2017b; Boera et al. 2019) used to constrain models of the cosmic photoionization
+and photoheating history. The best-fit evolution of P (k) marginalized over the posterior distribution of the parameters θ =
+{βH , ∆zH , βHe , ∆zHe } is shown with black curves, along with 95% confidence intervals (shaded bands). The fractional differences
+from the observations and the best-fit model are shown in the bottom part of each panel. Overall, the best-fit P (k) is in good
+agreement with the large-scale power spectrum from eBOSS for 2.4 ≤ z ≤ 4.2, and with the intermediate scales data from Iršič
+et al. (2017b) at 3.0 ≤ z ≤ 4.2. Our best-fit results also agree with the measurements from Boera et al. (2019) at 4.2 ≤ z ≤ 5.0,
+showing 10–30% differences mostly on the smallest scales (0.1 − 0.2 s km−1 ) and suggesting that the temperature of the IGM
+at this epoch could be slightly overestimated by the model. We also show the P (k) determinations by Walther et al. (2018)
+for comparison. Owing to discrepancies with the eBOSS results on large scales, we have not included the Walther et al. (2018)
+data points in our MCMC analysis.
+
+The Thermal History of the IGM from the H I and He II Lyman-α Forest
+
+Figure 7. Evolution of the singly ionized helium (He II) effective optical depth τeff,HeII from our simulation grid (blue
+lines), along with the best-fit model (black line) and the 95%
+confidence interval (gray area) obtained from our MCMC
+marginalization. The orange points show the observational
+measurements of τeff,HeII (Worseck et al. 2019). While only
+data in the redshift range 2.4 . z . 2.9 were used as constraints for our statistical analysis, the observed lower limits
+at z > 3 are consistent with the model results.
+
+over the redshift range 2 . z . 5 can be attributed
+mainly to three physical effects. First, since hydrogen
+is in photoionization equilibrium after H I reionization,
+changes to the photoionization rate ΓHI from rescaling
+by βH or applying a shift ∆zH alter the ionization fraction of hydrogen. This alteration globally affects the hydrogen effective optical depth τeff,H and, as a result, the
+overall normalization of P (k) changes. Second, changes
+in the temperature of the IGM from the different hydrogen and helium reionization scenarios alter the recombination coefficient αHII (T ) in the IGM. In turn, changes
+to the recombination rate adjust the ionization fraction
+of hydrogen in the IGM and thereby the normalization of
+P (k). Third, the different thermal histories of the IGM
+affect P (k) on small scales through Doppler broadening of the absorption lines and the pressure smoothing
+of the density fluctuations. As shown in Figure 5, the
+parameters βH and ∆zH mainly influence the normalization of P (k) by changing the overall ionization fraction
+in the IGM, while the parameters βHe and ∆zHe change
+the temperature of the IGM and thereby affect both the
+normalization and small-scale shape of P (k).
+2.7. Observational Data
+For comparison with our simulations, we use the observational determinations of the flux power spectrum
+measured by the extended Baryon Oscillation Spectroscopy Survey (eBOSS; Chabanier et al. 2019) and
+separate measurements with the Keck Observatory and
+
+11
+
+the Very Large Telescope (Iršič et al. 2017b; Boera et al.
+2019). The power spectrum estimates from Chabanier
+et al. (2019) probe mostly large scales (0.001 . k .
+0.02 s km−1 ) in the redshift range 2.2 < z < 4.6. The
+determinations from Iršič et al. (2017b) overlap with
+the eBOSS measurements on the large scales, albeit
+with lower precision, and extend to intermediate scales
+(0.003 . k . 0.06 s km−1 ) for redshifts 3.0 < z < 4.2.
+The data from Boera et al. (2019) cover intermediate to
+small scales (0.006 . k . 0.2 s km−1 ) over the redshift
+range 4.2 < z < 5.0. The combined data set spans a
+large redshift range from z = 2.2 to z = 5.0 and a wide
+range of scales, and is shown along with our best-fit
+model P (k) in Figure 6.
+Figure 6 also shows the observational measurements
+of P (k) presented by Walther et al. (2018, purple empty
+points) for the redshift range 3.0 ≤ z ≤ 3.4. We find
+that, in the overlapping range of scales (0.003 . k .
+0.02 s km−1 ) and redshift (2.2 . z . 3.4), the estimates from Walther et al. (2018) show significant differences with those from eBOSS (Chabanier et al. 2019).
+The normalization and, in some cases, the shape of the
+large-scale P (k) appear to be inconsistent between the
+two datasets. For several redshift bins (e.g. z = 2.4
+and z = 3.2), a simple renormalization applied to the
+Walther et al. (2018) power spectrum would not be
+sufficient to match the large-scale measurements from
+eBOSS. Because of this discrepancy, we have not included the Walther et al. (2018) P (k) determinations in
+our MCMC analysis, and we show them in Figure 6 only
+for comparison with our modeling and other data sets.
+To obtain a better determination of the He II photoionization and photoheating rates, we complement
+the power spectrum comparison with observational
+measurements of the helium effective optical depth
+τeff,HeII (Worseck et al. 2019) over the redshift range
+2.4 . z . 2.9 as additional constraints on our model.
+The data are shown in Figure 7 along with the corresponding evolution of τeff,HeII from our simulation grid
+and the best-fit model from our analysis. We do not
+include the observational lower limits at z > 3 as constraints in our MCMC analysis, but our best-fit model
+is consistent with those limits.
+2.8. Systematic Uncertainties
+When comparing models to observations, we include
+systematic uncertainties owing to cosmological parameter variations and possible resolution limitations of the
+simulations. In Villasenor et al. (2021), we performed a
+study of the changes in the Lyman-α flux power spectrum P (k) induced by small variations of the cosmological parameters within the constraints from Planck
+
+12
+
+Villasenor et al.
+
+Collaboration et al. (2020). Our results suggested that
+uncertainties in the cosmological parameters could cause
+a fractional change of . 5% on the hydrogen effective
+optical depth in the redshift range 2 . z . 5 and a similar . 5% effect in P (k) for scales 0.002 . k . 0.2 s km−1
+and redshifts 2 . z . 5. For this reason, we include here
+an additional systematic uncertainty σcosmo of 5% to
+the observational determinations of the Lyman-α power
+spectrum. For the He II effective optical depth, we estimate similar variations of ∼ 5% at 2 . z . 3 from
+differences in the mean baryonic density of different cosmologies. We therefore include a σcosmo = 5% to the
+measurements of τeff,HeII as well.
+In Appendix A we present a resolution convergence
+study where we compare the forest flux power spectrum
+from three simulations performed with the same cosmological parameters and photoionization and photoheating histories. The initial conditions used for the
+runs were generated to preserve the large-scale modes
+in common to each simulation, such that the properties
+of the simulations could be compared directly on shared
+spatial scales. The three simulations model a box of
+size L = 50h−1 Mpc and N = 5123 , N = 10243 , or
+N = 20483 cells and particles. The corresponding spatial resolutions are ∆x ' 98 h−1 Mpc, ∆x ' 49 h−1 Mpc,
+and ∆x ' 24 h−1 Mpc, respectively. In comparing the
+moderate resolution (∆x ' 49 h−1 Mpc) and high resolution (∆x ' 24 h−1 Mpc) simulations, we measure
+small fractional differences ∆P (z, k)/P (z, k) of . 5%
+for the large scales k . 0.02 s km−1 . On small scales,
+0.02 . k . 0.2 s km−1 , the fractional differences are
+slightly larger (. 12%).
+To approximate resolution effects from the grid of
+simulations used for our analysis (N = 10243 , ∆x '
+49 h−1 Mpc), we add an additional systematic uncertainty σres to the observational determinations of the
+flux power spectrum and the He II effective optical
+depth. For P (k), the additional uncertainty σres (z, k) =
+∆P (z, k) is set equal to the difference between P (k) from
+the N = 10243 and N = 20483 reference simulations
+used for our resolution study. For the He II effective optical depth the impact of resolution is a small increase
+of . 3% from the N = 10243 box to the N = 20483 run
+at z < 3; we then add an uncertainty of σres (z) = 3% to
+the estimate of τeff,HeII . We note that the systematic errors added to τeff,HeII are significantly smaller than the
+observational uncertainties σobs ∼ 12 − 45% of Worseck
+et al. (2019).
+
+The total uncertainty applied to the observational determinations of P (k) and τeff,HeII is finally given by the
+quadrature sum of the errors as
+σtotal =
+
+q
+2 + σ2
+2
+σobs
+cosmo + σres
+
+(3)
+
+where σobs is the reported observational uncertainty in
+the flux power spectrum or helium opacity respectively.
+In their study, Wolfson et al. (2021) showed the importance of using the covariance matrix when inferring
+the temperature of the IGM from measurements of the
+Lyman-α power spectrum and wavelet statistics. For
+our MCMC analysis we use the covariance matrices of
+P (k) in the likelihood calculation (see §2.9). To reflect
+the increased uncertainty from Eq. 3, we rescale the
+elements of the covariance matrices according to
+C[i, j] = Cobs [i, j]
+
+σtotal,i σtotal,j
+,
+σobs,i σobs,j
+
+(4)
+
+where Cobs is the reported covariance matrix of P (k)
+taken from the published observational datasets used
+for our analysis.
+2.9. Inference of the UVB Model
+To find the photoionization and photoheating rates
+that best reproduce the properties of the IGM encoded
+in the flux power spectrum of the Lyman-α forest P (k)
+and the helium effective optical depth τeff,HeII , we apply an MCMC sampler to compare the simulated P (k)
+and τeff,HeII to the observational measurements over the
+redshift and frequency range where data are available.
+The likelihood function for the model given by the parameters θ = {βH , ∆zH , βHe , ∆zHe } is evaluated as:
+"
+#
+2
+
+1X
+τobs (z) − τ (z|θ)
+ln L(θ) = −
++ ln 2πστ (z)2
+2 z
+στ (z)
+
+1 X X  T −1
+∆ C ∆ + ln det(C) + N ln 2π ,
+−
+2
+datasets z
+(5)
+where the first term compares the He II effective optical depth measured from our simulations τ (z|θ) for
+a given photoionization and photoheating model represented by the vector θ to the observational measurement τobs (z) from Worseck et al. (2019) with total (observational + systematic) uncertainty στ (z). The second term compares the Lyman-α power spectrum, with
+∆ denoting the difference vector between the observations and the model ∆ = Pobs (z, k) − P (z, k|θ). Here,
+C corresponds to the covariance matrix of size N × N
+associated with the observational determination, where
+N is the number of points of each measurement. To
+
+The Thermal History of the IGM from the H I and He II Lyman-α Forest
+
+13
+
+Figure 8. Results from the Bayesian inference procedure, showing one- and two-dimensional projections of the posterior
+distributions for the parameters θ = {βH , ∆zH , βHe , ∆zHe }. The parameter constraints were obtained by fitting the observed
+flux power spectrum of the Lyman-α forest and the He II effective optical depth (Chabanier et al. 2019; Boera et al. 2019;
+Worseck et al. 2019; Iršič et al. 2017b) with a grid of CHIPS simulations. The posterior distribution shows a clear global
+maximum, and while other local maxima are present their peak likelihoods are significantly lower than the global maximum.
+The resulting best-fit parameters and their 95% confidence intervals are shown in the top right corner.
+
+14
+
+Villasenor et al.
+
+compute P (z, k|θ) and τ (z|θ) for arbitrary values of the
+parameters θ not directly simulated by our grid, we perform a four-dimensional linear interpolation of the sixteen neighboring simulations in parameter space.
+As described in §2.7, we employ the datasets from
+Chabanier et al. (2019) (2.2 ≤ z ≤ 4.6), Iršič et al.
+(2017b) (3.0 ≤ z ≤ 4.2), and Boera et al. (2019)
+(4.2 ≤ z ≤ 5.0) for the observational measurements of
+the power spectrum used in our analysis. While there
+is some overlap in the measurements from the datasets,
+in general their determinations are consistent with each
+other. For this reason we include all the data points from
+each dataset for the likelihood calculation. The only significant discrepancy is at z = 4.6 where P (k) from Chabanier et al. (2019) is lower to the determination from
+Boera et al. (2019). We repeated our the analysis excluding the z = 4.6 measurement from Chabanier et al.
+(2019) and obtained similar posterior distributions. We
+conclude that this difference does not impact our result.
+The contribution from each redshift bin to the total
+log likelihood ln L (Eq. 5) from P (k) and τeff,HeII in
+our analysis is presented in Table 2.9. The quantity
+∆ ln L is evaluated as the first and second terms of Eq. 5
+for τeff,HeII and P (k), respectively, for each redshift bin.
+The power spectrum mostly strongly influences the log
+likelihood, with data from redshifts z = 2.4 and z = 4.2
+inducing the largest fractional changes in the likelihood.
+Table 2. Redshift bin contribution to the Likelihood
+Type
+
+z
+
+−∆ ln L
+
+Type
+
+z
+
+−∆ ln L
+
+P (k)
+P (k)
+P (k)
+P (k)
+P (k)
+P (k)
+P (k)
+P (k)
+P (k)
+P (k)
+
+2.2
+2.4
+2.6
+2.8
+3.0
+3.2
+3.4
+3.6
+3.8
+4.0
+
+330.6
+363.3
+229.2
+297.0
+215.1
+134.4
+113.8
+84.1
+137.1
+180.3
+
+P (k)
+P (k)
+P (k)
+P (k)
+
+4.2
+4.4
+4.6
+5.0
+2.30
+2.54
+2.66
+2.74
+2.82
+
+489.2
+135.7
+190.2
+40.0
+0.5
+0.2
+0.3
+1.0
+2.3
+
+τeff,HeII
+τeff,HeII
+τeff,HeII
+τeff,HeII
+τeff,HeII
+
+The covariance matrices of P (k) are taken from the
+published observations. We note that Iršič et al. (2017b)
+provides the complete covariance of P (k) across the
+seven redshift bins of their measurement. For this
+dataset we employ the reported full covariance and the
+residual vector ∆ consists of the P (k) difference from
+the model and observation concatenated over the seven
+redshift bins.
+
+While our likelihood analysis uses the reported covariance matrices from the observations, in Appendix C we
+present the covariance of P (k) measured from a subset
+of our simulations to quantify the differences induced by
+variation of our four model parameters. We show that
+the structure of the covariance is mantained across our
+simulations and we measure relatively small variations
+between the different models.
+We emphasize that our approach differs from previous
+studies of the thermal history of the IGM (e.g., Bolton
+et al. 2014; Nasir et al. 2016; Hiss et al. 2018; Boera
+et al. 2019; Walther et al. 2019; Gaikwad et al. 2020a)
+in an important aspect. Typically, the method adopted
+to infer the thermal state of the IGM from observations
+of the Lyman-α forest involves marginalizing over the
+thermal parameters T0 and γ in the approximate powerlaw density-temperature relation (Hui & Gnedin 1997)
+T (∆) = T0 ∆γ−1 , where ∆ = ρgas /ρ̄ is the gas overdensity. This marginalization is often performed independently for each redshift. Instead, our approach to
+find the optimal photoionization and photoheating rates
+that best reproduce the observational measurements is
+to compare the simulated P (k) and τeff,HeII to the observations over the full redshift range where data is available, namely 2.2 ≤ z ≤ 5.0 for P (k) and 2.2 < z < 3.0
+for τeff,HeII .
+In our approach, the performance for a given UVB
+model to match the observations is evaluated over the
+complete self-consistently evolved reionization and thermal history of the IGM that results from that model.
+Since the properties of the gas at one redshift cannot be
+disentangled from its properties at previous epochs, the
+thermal and ionization structure of the forest depends
+on the time-dependent photoheating and photoionization rate. Both T0 and γ evolve along continuous trajectories with redshift, and we therefore marginalize over
+the full simulated histories of IGM properties.
+Our simulations span a wide range of reionization histories for hydrogen in the IGM. Instead of following
+the common practice of rescaling the optical depth of
+the simulated skewers in post-processing to match the
+observed mean transmission of the forest, our method
+self-consistently follows the ionization evolution of hydrogen and the effective optical depth τeff,H encoded in
+the redshift-dependent power spectrum of the transmitted flux. Furthermore, during our inference procedure,
+we do not assume a power-law approximation for the
+density-temperature distribution of IGM gas or apply a
+post-processing procedure that artificially modifies the
+temperature of the gas in the simulations. Instead, our
+synthetic Lyman-α spectra reflect the real ρgas −T distribution from the simulations. This improvement proves
+
+The Thermal History of the IGM from the H I and He II Lyman-α Forest
+relevant, as we find that a single power law is not a good
+fit over the full range of gas densities responsible for the
+bulk of the Lyman-α absorption signal (see Appendix
+E).
+The posterior distribution for our parameters θ =
+{βH , ∆zH , βHe , ∆zHe } resulting from the Bayesian inference procedure is shown in Figure 8. A clear global
+maximum of the posterior distribution is observed, and
+while the posterior shows other local maxima their likelihoods are significantly lower than the global peak. The
+four model parameters are well constrained and show
+only small correlations that arise from the weak degeneracies in the resulting ionization and thermal histories
+produced by the different photoionization and photoheating rates. Our best-fit parameters and their 95%
+confidence limits are
++0.04
+βH = 0.81−0.03
+
++0.14
+∆zH = −0.09−0.24
+
++0.13
+βHe = 0.47−0.09
+
+∆zHe = 0.25+0.09
+−0.07 .
+
+(6)
+
+To measure the properties of the IGM that result from
+our best-fit distribution, we sample P (k), τeff,H , and
+τeff,HeII , together with the thermal parameters T0 and γ,
+over the posterior distribution of the parameter vector
+θ, resulting in determinations of the highest-likelihood
+and 95% confidence interval for the forest statistics and
+thermal history. When necessary, we interpolate results
+for values of θ not directly simulated by our grid.
+3. RESULTS AND DISCUSSION
+
+By comparing the flux power spectrum and the He II
+effective opacity in our CHIPS simulation grid to observational determinations, we can infer a set of photoionization and photoheating histories that, when input in
+cosmological hydrodynamical simulations, result in statistical properties of the Lyman-α forest that are consistent with observations. In this section, we present the
+best-fit rates obtained from our inference procedure, as
+well as the Lyman-α forest statistics and thermal evolution of the IGM produced by our best-fit UVB model.
+We compare our results to previous work and finalize our
+discussion by describing the limitations of our method.
+3.1. Best-Fit Photoionization and Photoheating Rates
+Figure 9 shows our best-fit model for the photoionization and photoheating rates along with the corresponding 95% confidence interval that results from our MCMC
+marginalization of the UVB rates over the posterior distribution of the model parameters obtained from our
+MCMC analysis. We note that the transformations applied in this work to generate new photoionization and
+photoheating rates from the reference model (Puchwein
+
+15
+
+et al. 2019) are relatively simple and preserve the functional form of the P19 model. While we allow for orders
+of magnitude variations in the rates, the flexibility of the
+ionization and thermal histories sampled here is limited
+by the fixed shape of the UVB model employed in our
+simulation grid. A study that allows for more flexibility
+in the photoionization and photoheating rates of hydrogen and helium will be the scope of future work.
+3.2. P (k) Model Comparison with the Data
+Figure 6 shows the evolution of the best-fit flux power
+spectrum and 95% confidence intervals over the redshift
+range 2.2 ≤ z ≤ 5.0 that result from marginalizing
+P (k) over the posterior distribution of model parameters θ = {βH , ∆zH , βHe , ∆zHe }. Our best-fit synthetic
+power spectrum shows good agreement with the large
+scale P (k) measured by the eBOSS experiment (Chabanier et al. 2019) in the range 2.4 . z . 4.2, suggesting that the mean transmission hF i of the forest
+inferred by our analysis is consistent with the measurements by Chabanier et al. (2019). Only for z = 2.2 and
+z = 4.4 − 4.6 do our results show significant differences
+with the eBOSS data set. At z = 2.2, the P (k) from
+eBOSS is higher than our results by ∼ 8 − 20% on scales
+0.008 . k . 0.02 s km−1 . This modest tension may suggest that the hydrogen opacity τeff,H is underestimated
+by ∼ 10% in our modeling relative to eBOSS. At z = 4.4
+and z = 4.6 the opposite is true, and our best-fit P (k) on
+large scales is ∼ 15% and ∼ 25% higher than the eBOSS
+measurements, respectively. These small discrepancies
+could be alleviated, e.g., by a small 15% decrease of the
+H I photoionization rate at z = 2.2 and by a comparable
+small increase in the same quantity at z = 4.4 − 4.6 by
+∼ 10 − 20%.
+Our results also agree on large and intermediate
+scales (0.003 . k . 0.06 s km−1 ) with the estimates
+of Iršič et al. (2017b). The best-fit model reproduces
+the turnover in the observed dimensionless power spectrum ∆2 (k) = π −1 kP (k) at k ∼ 0.02 − 0.03 s km−1 , and
+generally lies within the observational uncertainties at
+intermediate scales 0.01 . k . 0.06 s km−1 . Only at
+redshift z = 3.4 and z = 3.8 the P (k) measurements
+show some differences relative to the model. At z = 3.4
+the data are higher than the model by ∼ 5 − 20%. A
+similar discrepancy is observed when comparing Iršič
+et al. (2017b) with the determinations by eBOSS at the
+same redshift, suggestive of a slightly higher H I opacity
+τeff,H in the former sample. Differences with the model
+are more significant at z = 3.8, where on intermediate
+scales (k & 0.2 s km−1 ) the measurements of Iršič et al.
+(2017b) are lower than the model by ∼ 10 − 20%, while
+on large scales (k . 0.2 s km−1 ) their estimates are
+
+16
+
+Villasenor et al.
+
+Figure 9. Best-Fit (black lines) and 95% confidence intervals (grey bands) for the photoionization (Γ, top) and photoheating
+(H, bottom) rates for neutral hydrogen (H I, left), neutral helium (He I, center), and singly ionized helium (He II, right) obtained
+from our MCMC analysis. The modified H I and He I photoionization and photoheating rates (dashed blue lines) are identical to
+the reference best-fit model except for the redshift range 4.8 ≤ z ≤ 6.1 where they have been modified to produce an evolution
+of the hydrogen effective optical depth consistent with the observational determinations of Bosman et al. (2018) for z > 5 (see
+§3.4 and §3.5 for details). For reference, we also show the models from Puchwein et al. (2019) (red) and Haardt & Madau (2012)
+(cyan).
+
+Figure 10. Redshift evolution of the gas temperature from a high-resolution simulation (L = 50 h−1 Mpc, N = 20483 cells and
+particles) that employed our best-fit model for the photoheating and photoionization rates. The image displays the monotonic
+increase in the temperature of the IGM due to hydrogen reionization for z & 6.0 followed by an epoch of cooling of the IGM
+due to cosmic expansion. The onset of helium reionization (z ∼ 4.5) initiates a second epoch of heating of the IGM that ends
+at z ∼ 3 when He II reionization completes. A second epoch of cooling due to cosmic expansion then follows. The temperature
+increase of gas collapsing into the filamentary cosmic web as large-scale structure develops is also visible in the image.
+
+The Thermal History of the IGM from the H I and He II Lyman-α Forest
+higher than both the model and the determinations by
+eBOSS by ∼ 5 − 30%.
+Our model is in good agreement with the high-redshift
+measurements of P (k) by Boera et al. (2019), with minor differences that could be addressed by small modifications to the early photoheating history. At z = 4.2,
+z = 4.6, and z = 5.0, our best-fit P (k) is consistent with
+their data points on large scales k . 0.02 s km−1 , suggesting that our inferred IGM H I opacity matches that
+measured by Boera et al. (2019). The model also reproduces the cutoff in ∆2 (k) at k ∼ 0.02 − 0.03 s km−1 and
+the consistency with the observations extends to small
+scales k . 0.1 s km−1 . Discrepancies appear only on the
+smallest scales 0.1 . k . 0.2 s km−1 where the model
+has less power (∼ 10 − 30%) than Boera et al. (2019).
+This may suggest that the temperature of the IGM has
+been overestimated by the model in the redshift range
+4 . z . 5 (see §3.3 for a discussion of this issue).
+3.3. Evolution of the IGM Temperature
+The flux power spectrum and helium opacity tightly
+constrain the time-dependent photoionization and photoheating rates, which in turn determine the IGM ionization and thermal history. The redshift evolution of
+the gas temperature is illustrated in Figure 10 which is
+generated from a slice through a high-resolution simulation (L = 50 h−1 Mpc, N = 20483 cells and particles) using our best-fit photoionization and photoheating rates.
+The figure shows the monotonic increase in the temperature of the IGM during hydrogen reionization at z & 6.
+After hydrogen reionization completes by z ∼ 6, the input of energy into the IGM falls dramatically, and the
+gas then cools primarily through adiabatic expansion.
+This first epoch of IGM cooling lasts until the onset of
+helium reionization (z ∼ 4.5) when extreme UV radiation from AGNs ionizes He II atoms and drives a second
+epoch of reheating that completes by z ∼ 3 and is followed by a second epoch of adiabatic cooling.
+The thermal state of diffuse IGM gas is often modeled with the power-law relation (Hui & Gnedin 1997;
+Puchwein et al. 2015; McQuinn 2016)
+T (∆) = T0 ∆γ−1 .
+
+(7)
+
+We fit the power law relation to the gas densitytemperature distribution in each of the simulations from
+the CHIPS grid and at multiple epochs, 2 ≤ z ≤ 9,
+following the procedure presented in Villasenor et al.
+(2021). We restrict the fit to the overdensity range
+0 ≤ log10 ∆ ≤ 1, as we find that in our simulations a
+single power law does not accurately describe the wider
+range −1 ≤ log10 ∆ ≤ 1 (see Appendix E).
+
+17
+
+Figure 11 shows the redshift evolution of the parameters T0 and γ from our best-fit model and the 95% confidence interval that results from our MCMC marginalization over the posterior distribution of the photoionization and photoheating rates. For comparison, we also
+depict the data points for these parameters inferred from
+the properties of the Lyman-α forest by Bolton et al.
+(2014), Hiss et al. (2018), Boera et al. (2019), Walther
+et al. (2019), Gaikwad et al. (2020b), and Gaikwad et al.
+(2020a).
+The inference from Boera et al. (2019) and Walther
+et al. (2019) follow similar methodologies. They generate flux power spectra from simulations run with different thermal histories, resulting in multiples trajectories
+for the evolution of T0 and γ. For each redshift bin
+they determine the best-fit T0 , γ, and mean transmitted
+flux hF i by performing Bayesian inference and comparing the simulated flux power spectra to observations of
+the Lyman-α forest P (k). Bolton et al. (2014) and Hiss
+et al. (2018) measure a set of values for the Doppler
+parameter b and H I column density NHI directly from
+the forest by decomposing the absorption spectra into
+a collection of Voigt profiles. They infer the parameters T0 and γ by comparing simulations with different
+b−NHI distributions to the observed one. Gaikwad et al.
+(2020b) follow a similar approach by comparing simulated Lyman-α forest spectra to Voigt profiles fitted to
+the observed transmission spikes in the inverse transmitted flux 1 − F at z > 5. Gaikwad et al. (2020a) report
+more precise determinations by inferring T0 and γ from
+the combined constraints obtained through a comparison of simulated Lyman-α forest absorption with the observed flux power spectra, b − NHI distributions, wavelet
+statistics, and curvature statistics.
+As shown in Figure 11, the temperature evolution
+from our best-fit model presents a first peak (T0 '
+1.3×104 K) at the end of hydrogen reionization (z ∼ 6.0)
+followed by an epoch of adiabatic cooling from cosmic
+expansion. Our results agree well with the high redshift
+measurements of T0 and γ at 5.4 ≤ z ≤ 5.8 from Gaikwad et al. (2020b). We note that their estimates also
+suggest a period of cooling at these epochs, and from
+their result it is possible to infer a peak in T0 from H
+reionization sometime at redshift z & 5.8.
+In our model, the IGM continues to cool until the onset of helium reionization, and the temperature reaches
+a local minimum of T0 (z ∼ 4.5) ' 9.5 × 103 K. Evidence
+of this transition can also be seen in the measurements
+from Boera et al. (2019), where T0 shows little evolution
+from z = 5.0 to z = 4.6 and then a slight increase to
+z = 4.2. Nevertheless, there are significant differences
+between T0 from the model at 4 . z . 5 and the mea-
+
+18
+
+Villasenor et al.
+
+Figure 11. Redshift evolution of the parameters T0 and γ [Eq. (7)] from the best-fit model (black lines) and 95% confidence
+interval (gray band) obtained from our MCMC analysis. The data points show the values of T0 and γ inferred from observations
+of the Lyman-α forest by Bolton et al. (2014); Hiss et al. (2018); Boera et al. (2019); Walther et al. (2019); Gaikwad et al.
+(2020b,a). Our results reveal two peaks in the evolution of T0 due to hydrogen reionization at z ∼ 6 and helium reionization at
+z ∼ 3, and are consistent with previous measurements from Gaikwad et al. (2020b,a).
+
+surements from Boera et al. (2019), as the temperature
+predicted by our model is higher than their inferred values of T0 ∼ 7.4×103 K and T0 ∼ 8.1×103 K at z = 4.6−5
+and z = 4.2, respectively. The higher temperatures in
+our model reflect a suppressed power spectrum of the
+Lyman-α flux on small scales (0.1 . k . 0.2 s km−1 )
+compared to the P (k) measurement from Boera et al.
+(2019) at 4.2 ≤ z ≤ 5.0 (see Figure 6). Decreasing the
+photoheating from the UVB during z & 4 would decrease the temperature of the IGM at this epoch and
+potentially alleviate this discrepancy.
+In Appendix D we present scenarios were the midredshift IGM is set to be colder compared to our model
+by decreasing the best-fit H I and He I photoheating
+rates at 4.2 ≤ z ≤ 6.2. We find that reducing HHI and
+HHeI by ∼ 80% at z ∼ 6 decreases the IGM temperature
+T0 by ∼ 20% making it consistent with the estimates
+from Boera et al. (2019) at 4.2 ≤ z ≤ 5.0 with minimal
+impact in T0 at z . 3.5 (see Figure 21). Nevertheless,
+we find that such colder evolution of T0 is in conflict
+with the z ∼ 5.4 estimate from Gaikwad et al. (2020b)
+(see Figure 21). This conflict indicates some degree of
+tension between the higher T0 = 1.10 ± 0.16 × 104 K
+at z ∼ 5.4 from Gaikwad et al. (2020b) and the low
+3
+T0 = 7.37+1.13
+−1.39 × 10 K at z ∼ 5.0 from Boera et al.
+(2019).
+After z ∼ 4.5, radiation from AGN ionizes He II atoms
+in the Universe and heats the IGM for a second time.
+Our model predicts that T0 increases monotonically until He II reionization completes at z ∼ 3, resulting in a
+
+second peak in the temperature (T0 ' 1.4 × 104 K) followed by a second epoch of cooling due to cosmic expansion. Our results for the evolution of T0 during z . 4.5
+are consistent with the determinations from Gaikwad
+et al. (2020a) and Walther et al. (2019) that show a
+similar T0 history within the uncertainties during and
+after He II reionization, as both show a peak in T0 at
+z ∼ 2.8 − 3.0. Our T0 (z) results are higher yet consistent within the uncertainties from the measurement by
+Bolton et al. (2014) at z = 2.4. The results presented by
+Hiss et al. (2018) also show the effects of He II reionization on the temperature of the IGM in the form a peak
+in the temperature at z ∼ 2.8, but their peak value of
+T0 ∼ 2 × 104 K is significantly higher than our result
+and the measurements from Gaikwad et al. (2020b) and
+Walther et al. (2019).
+The right panel of Figure 11 shows our result for the
+evolution of the density-temperature power-law index
+γ (black line and shaded 95% confidence interval). At
+the end of hydrogen reionization, the gas in the IGM
+is mostly isothermal (γ ∼ 1). As the IGM cools and
+the low-density gas cools more efficiently, the index γ
+increases in the interval 4.5 . z . 6. During the reheating of the IGM from He II reionization, low-density
+gas heats faster and γ decreases until helium reionization completes. After helium reionization cooling from
+cosmic expansion causes an increase on γ for a second
+time.
+The evolution of the power-law index in our model is
+consistent with measurements from Hiss et al. (2018),
+
+The Thermal History of the IGM from the H I and He II Lyman-α Forest
+Boera et al. (2019), Gaikwad et al. (2020b), and Gaikwad et al. (2020a), and shows deviations only for a few
+redshift bins after He II reionization completes. The
+transition in γ after He II reionization in our model is
+not as pronounced as the determinations from Gaikwad
+et al. (2020a) and Hiss et al. (2018).
+The results from Walther et al. (2019) show significantly higher values of γ compared to all the other measurements. We have evaluated the plausibility of a steep
+density-temperature relation (γ > 1.6) by simulating the
+extreme case in which all photoheating and photoionization from the UVB stops after hydrogen reionization
+completes, i.e. Γ = 0 and H = 0 for z > 6. We find that
+in the absence of external heating, as the IGM cools by
+adiabatic expansion, the overdensities cool down at a
+slower rate from compression by gravitational collapse.
+Here γ tends to increase with decreasing redshift at a
+roughly constant rate of ∆γ/|∆z| ∼ 0.18. Starting from
+an isothermal distribution of the gas in the IGM when
+H reionization finishes (γ = 1), it takes a change in redshift |∆z| ∼ 3 − 3.5 for the gas distribution to steepen
+to γ ∼ 1.6. Hence, we can reproduce values of γ > 1.6
+at z ∼ 5 only if hydrogen reionization completes very
+early at z > 8.
+3.4. Evolution of the Hydrogen Effective Optical Depth
+The H I effective optical depth τeff,H = − lnhF i measured from the Lyman-α forest reflects the overall H I
+content of the gas in the IGM. Hence, τeff,H probes the
+ionization state of hydrogen in the medium and can be
+used to constrain the intensity of the ionizing UVB. In
+our work, constraints obtained for the H I photoionization rate ΓHI derive from the power spectrum of the
+Lyman-α transmitted flux itself as we do not include
+the observational determinations of τeff,H as constraints
+in our inference procedure.
+The power spectrum P (k) of the flux fluctuations [Eq.
+(1)] is itself sensitive to the hydrogen effective optical
+depth. Because of the non-linear relation F = exp(−τ ),
+the normalization of P (k) on most scales relevant to this
+work (0.002 . k . 0.1 s km−1 ) is affected by the value of
+τeff,H obtained from the skewer sample used for the measurement. Thus, including the effective optical depth of
+the forest does not provide additional independent information for constraining the model. See Appendix B
+for a discussion on the impact that H I τeff has on the
+Lyman-α flux power spectrum.
+Figure 12 shows the redshift dependence of τeff,H from
+our best-fit determination of the photoheating and photoionization rates (black line) and the corresponding
+95% confidence interval. Data points in the figure show
+the observational measurements of τeff,H reported by
+
+19
+
+Figure 12. Redshift evolution of the hydrogen effective
+optical depth τeff,H from our best-fit determination of the
+photoheating and photoionization rates (black line) and the
+corresponding 95% confidence interval. Data points show
+the observational measurements of τeff from Fan et al. (2006),
+Becker et al. (2013), Bosman et al. (2018), Eilers et al. (2018),
+Boera et al. (2019), and Yang et al. (2020a). The model
+results show consistency with the measurement from Becker
+et al. (2013) (yellow) for 2.5 . z . 4.2 and are in good
+agreement with the determination from Boera et al. (2019)
+(green) for 4.2 . z . 5.0. At high redshift (z > 5) the
+results from Yang et al. (2020a) lie significantly higher than
+those from Eilers et al. (2018) and Bosman et al. (2018)
+by ∼ 10 − 30%. In the redshift range 5 . z . 5.8, the
+model shows lower τeff,H compared with the observations. By
+modifying the best-fit H I photoionization rate ΓHI as shown
+in §3.7, we can obtain a high-z evolution of τeff,H (dashed
+blue) consistent with the measurement from Bosman et al.
+(2018) and Fan et al. (2006).
+
+Fan et al. (2006), Becker et al. (2013), Bosman et al.
+(2018), Eilers et al. (2018), Boera et al. (2019), and Yang
+et al. (2020a). Our results are consistent with the evolution of H I τeff measured by Becker et al. (2013) (yellow
+points) for the redshift range 2.5 . z . 4.2. Our model
+results in a more opaque IGM compared to their measurements at lower redshifts 2.2 . z . 2.5 and higher
+redshifts 4.2 . z . 4.8. Our model agrees well with the
+determination from Boera et al. (2019) (green points)
+during the redshift range 4.2 . z . 5.0.
+At high redshift (z > 5), the measurements of the H I
+effective optical depth from Bosman et al. (2018) (red
+points), Eilers et al. (2018) (cyan points), and Fan et al.
+(2006) (orange points) are similar, with only small differences (< 12%) toward higher τeff,H from Eilers et al.
+(2018) compared with Bosman et al. (2018). The measurements by Yang et al. (2020a) (purple points) suggest
+a more opaque IGM with a τeff,H that is significantly
+
+20
+
+Villasenor et al.
+
+higher (∼ 20 − 30%) compared to the measurements by
+Bosman et al. (2018).
+Shortly after hydrogen reionization completes (5 .
+z . 5.8), our best-fit UVB model significantly underestimates τeff,H compared with the observational measurements, suggesting that the hydrogen in the IGM is overly
+ionized in our model at these redshifts. To address this
+possible discrepancy, we can modify our best-fit result
+for the H I photoionization rate such that ΓHI is reduced
+only in the redshift range 4.8 < z < 5.8 and increased
+for 5.8 < z < 6.1 (see §3.5 and §3.7). As shown in Figure 12, the high redshift evolution (z > 5) of τeff,H from
+the modified model (dashed blue line) is consistent with
+the measurements from Bosman et al. (2018). The subsequent evolution at redshifts z < 4.8 remains virtually unchanged from the best-fit model as hydrogen is
+in photoionization equilibrium at these times and the
+ionization fraction is therefore determined by the instantaneous amplitude of the H I photoionization rate ΓHI .
+We refer the reader to §3.7 for a discussion on the effect
+that the modified UVB model has on the properties of
+the gas in the IGM.
+By providing a simple modification to our best-fit
+UVB model that allows to change the high-redshift evolution of the hydrogen effective optical depth to achieve
+consistency with the observation and with minimal impact on the subsequent evolution of the properties of the
+IGM for z . 5.0, we show that the high-z discrepancy
+of the observed τeff,H and the model is not a significant
+challenge to our results and the conclusions of this work.
+
+3.5. Hydrogen Photoionization Rate
+Our best-fit model results for the hydrogen photoionization rate ΓHI provide several opportunities for comparisons with observations, even though observationally
+inferred ΓHI measurements are not used to constrain
+our model. There are observational determinations of
+ΓHI informed by simulations where the photoionization
+rate is rescaled to match the observational hF i (Becker
+& Bolton 2013; D’Aloisio et al. 2018). Our results can
+also be compared to estimates of ΓHI from the quasar
+proximity effect and the size of the near-zone of high
+Lyman-α transmission around quasars (Calverley et al.
+2011; Wyithe & Bolton 2011). Observations have measured ΓHI by detecting the florescent Lyman-α emission
+produced by the Lyman limit systems (LLS) illuminated
+by background radiation (Gallego et al. 2021). Finally,
+there are ΓHI determinations from combining the PDF
+and power spectrum of the Lyman-α transmitted flux
+from observations with simulations that apply different
+photoionization rates ΓHI (Gaikwad et al. 2017).
+
+Figure 13. Evolution of the hydrogen photoionization rate
+ΓHI from our best-fit determination and the 95% confidence
+interval (black line and shaded region). Data show observationally inferred photoionization rates measured by Calverley et al. (2011), Wyithe & Bolton (2011), Becker & Bolton
+(2013), Gaikwad et al. (2017),D’Aloisio et al. (2018), and
+Gallego et al. (2021). A modified model for ΓHI designed to
+match the observational measurements of τeff,H from Bosman
+et al. (2018, see Figure 12) is shown as the dashed blue line.
+Our models agree well with the observationally-inferred results, except for visible differences with the estimate from
+Becker & Bolton (2013) during 4 . z . 5. These differences
+in ΓHI reflect small differences between our best-fit model
+predictions for τeff,H and the observational τeff,H measurement by Becker et al. (2013) over this redshift range.
+
+Figure 13 shows our result for the HI photoionization rate with the corresponding 95% confidence limits
+(black line and shaded band) along with the observational inferences of ΓHI mentioned above. Our result
+is consistent with the previous observational determinations that show a rapid evolution in ΓHI for z & 5.6,
+followed by a gradual increase during 2 . z . 5.6 and
+a rapid decrease at z < 2. The only visible differences
+with Becker & Bolton (2013) occur in the redshift range
+4 . z . 4.8. Their measurement was obtained by tuning
+the photoionization rate ΓHI in simulations such that the
+Lyα effective optical depth τeff,H was consistent with the
+observational measurement from Becker et al. (2013).
+The higher estimate of ΓHI from their result reflects the
+lower τeff,H from Becker et al. (2013) compared with the
+evolution of τeff,H from our model for the redshift range
+4.2 . z . 4.8, as shown in Figure 12.
+As described in §3.4, shortly after hydrogen reionization completes our best-fit model significantly underestimates the Lyman-α effective optical depth τeff,H compared with the observations in the redshift range 5 .
+z . 5.8. To address this discrepancy, we presented an
+alternative model where the sharp transition in ΓHI at
+
+The Thermal History of the IGM from the H I and He II Lyman-α Forest
+
+Figure 14. Redshift evolution of the volume-weighted neutral fraction of hydrogen for our best-fit model and the corresponding 95% confidence interval (black line and shaded region). Data points show the observational estimates reported
+in Fan et al. (2006), McGreer et al. (2011, 2015), Greig et al.
+(2017, 2019), Mason et al. (2018, 2019), Hoag et al. (2019),
+Jung et al. (2020), Yang et al. (2020b), and Wang et al.
+(2020). For z & 7 the observational estimates show a wide
+range of xHI , from xHI ∼ 0.2 to xHI ∼ 0.8. Our models
+result in a z ∼ 7 − 8 neutral fraction of xHI ∼ 0.4 − 0.5, consistent with the results from Greig et al. (2017), Jung et al.
+(2020), and Yang et al. (2020b). After hydrogen reionization
+completes at z . 6.0, our best-fit model shows an evolution of xHI below the measurement by Fan et al. (2006). By
+modifying our best-fit photoionization rates to better match
+τeff,H (see Figure 12), we can also better match the xHI data
+from Fan et al. (2006) (dashed blue line).
+
+z ∼ 5.6 from the original best-fit model is replaced by
+a softer increase that extends over the redshift range
+4.8 < z < 5.8 (dashed blue line in Figure 13). Decreasing ΓHI during this epoch increases the neutral fraction
+of hydrogen in the IGM in photoionization equilibrium,
+thereby increasing τeff . Our modified model for ΓHI was
+chosen such that the resulting evolution of τeff,H is consistent with the observational measurement presented by
+Bosman et al. (2018)(dashed blue line in Figure 12), and
+the altered transition of ΓHI from our modified model is
+still within the uncertainties of the observational inference by D’Aloisio et al. (2018) in the redshift interval
+4.8 . z . 5.8.
+3.6. Ionization History
+We present the redshift evolution of the volumeweighted neutral fraction of hydrogen xHI resulting from
+our best-fit determination of the UVB model and the
+corresponding 95% confidence limits (black line and
+shaded band) in Figure 14. For comparison we show
+several observational estimates. We show constraints
+
+21
+
+Figure 15. Thomson optical depth from electron-scattering
+of the CMB τe from the best-fit model and the 95% confidence limit (black line and shaded bar) and our modified
+model to match the z > 5 τeff,H (dashed blue line). Also
+shown are the observational measurements from the Planck
+satellite presented in Planck Collaboration et al. (2020) and
+the constraint from de Belsunce et al. (2021). Our model
+results for τe lie within the Planck limits.
+
+from the optical depth of the Lyman-α, Lyman-β, and
+Lyman-γ transitions in the forest (Fan et al. 2006). We
+also show constraints on the IGM neutrality from properties of Lyman-α emission from galaxies at high redshift (Hoag et al. 2019; Mason et al. 2018, 2019) and
+the damping wing absorption in the spectra of z & 7
+quasars (Greig et al. 2017, 2019; Jung et al. 2020; Yang
+et al. 2020b; Wang et al. 2020). Finally, we show constraints from the covering fraction of dark pixels in the
+Lyα/β forest of high-z quasars (McGreer et al. 2011,
+2015).
+Our model results in a prolonged hydrogen reionization history, extending from xHI ∼ 0.9 at z ∼ 11 to
+xHI ∼ 0.1 at z ∼ 6.5. The duration results in part
+from the gradually increasing ionization rate ΓHI <
+1 × 10−15 s−1 at z > 6.5 associated with radiation emitted by early star-forming galaxies.
+For 7 . z . 8, the observational estimates display a
+wide range of xHI , from a highly ionized (xHI ∼ 0.8)
+to a mostly neutral (xHI ∼ 0.2) IGM. Our model lies
+within this range, and at z = 7 our result is in agreement
+with the xHI ∼ 0.4 estimates from Greig et al. (2017)
+and Yang et al. (2020b) as well as with the xHI ∼ 0.5
+estimate from Jung et al. (2020) at z ∼ 7.6.
+The redshift at which hydrogen reionization completes
+zR , defined as the redshift at which xHI ≤ 1 × 10−3 for
+the first time, is z ∼ 6.0 for our best-fit model. After hydrogen reionization completes, our best-fit model
+results in an ionization fraction that falls below the es-
+
+22
+
+Villasenor et al.
+
+timate from Fan et al. (2006) (reflected by the lower
+optical depth τeff in Figure 12). Nevertheless, our modified model (dashed blue line) shows better consistency
+with their estimate.
+Later in cosmic history, high energy radiation emitted
+by AGNs leads to the ionization of singly ionized helium
+(He II). For our best-fit model He II reionization starts
+at z ∼ 5 and completes at z ∼ 3.0 when the He II fraction reaches xHeII ≤ 1 × 10−3 for the first time. As the
+He II effective optical depth from our model is consistent with the observation from Worseck et al. (2019) for
+2.4 . z . 2.9, we argue that the end of He II reionization by z ∼ 2.9 is suggested by their measurement.
+Thomson scattering of the CMB by the free electrons
+in the IGM provides another diagnostic of the reionization history of the IGM. From the evolution of the
+electron density ne given by the ionization state of hydrogen and helium from our models, we can compute
+the electron scattering optical depth τe as
+Z z
+τe (z) =
+0
+
+cσT ne (z)
+dz
+(1 + z)H(z)
+
+(8)
+
+where σT represents the Thomson scattering cross section. Figure 15 shows the electron scattering optical
+depth τe from our best-fit model (black line and shaded
+region shows the 95% confidence limit). Also shown are
+constraints from the Planck satellite (Planck Collaboration et al. 2020) and the recent constraint from de Belsunce et al. (2021). Our result for τe = 0.60 lies within
+the upper limit of the τe = 0.0540 ± 0.0074 constraint
+from Planck Collaboration et al. (2020) and in good
+agreement with the determination of τe = 0.0627+0.0050
+−0.0058
+from de Belsunce et al. (2021).
+3.7. Modified UVB Rates for Matching the Observed
+High-Redshift Hydrogen Effective Optical Depth
+In §3.4 and §3.5 we discuss how the IGM from our
+best-fit model is possibly too highly ionized after hydrogen reionization completes. The hydrogen effective optical depth τeff,H from the model is significantly
+lower compared with observations in the redshift range
+5 . z . 5.8 (see Figure 12). We can address this issue
+by decreasing the H I photoionization rate ΓHI such that
+the sharp transition at z ∼ 5.8 from the best-fit model
+is replaced by a more gradual increase of ΓHI during the
+redshift range 4.8 . z . 6.0 (dashed blue line in Figure
+13). This alternative transition in ΓHI was chosen such
+that the resulting evolution of H I τeff,H is consistent
+with the observations from Bosman et al. (2018).
+Assuming that changes made to the photoionization
+rate ΓHI correspond to a change of the mean-free-path of
+ionizing photons λmfp , then the He Iphotoionization rate
+
+Figure 16. Power spectrum of the Lyman-α transmitted
+flux P (k) at z = 5 from our best-fit model (black) and
+from our alternative model of the UVB (dashed blue) where
+the H I and He I photoionization and photoheating rates are
+modified in the redshift range 4.8 . z . 6.1 such that τeff,H is
+consistent with the observation from Bosman et al. (2018).
+The effect on the power spectrum from the modified model
+is to increase P (k) by a roughly constant factor of ∼ 12%
+compared with the best-fit model due to the ∼ 6% increase
+in the H I opacity at z = 5. Both models are consistent with
+the observation from Boera et al. (2019) for k . 0.1 s km−1 .
+
+ΓHeI should also reflect the modification applied to ΓHI .
+Correspondingly, we rescale the helium photoionization
+rate ΓHeI such that the ratio ΓHI (z)/ΓHeI (z) from the
+modified model matches the best-fit model.
+Changing λmfp would also affect the photoheating
+rates HHI and HHeI . Assuming that the average energy
+of the ionizing photons remains the same in the modified model, we rescale the photoheating rates such that
+the ratios HHI (z)/ΓHI (z) and HHeI (z)/ΓHeI (z) match
+the best-fit model. Results from our modified model
+for photoheating and photoionization rates are shown
+in Figure 9 as dashed blue lines.
+After hydrogen reionization completes at z . 6.0, hydrogen in the IGM is in photoionization equilibrium.
+During this epoch, decreasing the H I and He I photoionization rates effectively increases the the neutral fraction
+of hydrogen and helium. Consequently the opacity of the
+IGM, quantified as the optical depth τeff , also increases
+during redshift range. The temperature of the gas in the
+IGM is not strongly affected by the modified photoionization and photoheating rates, because, in equilibrium,
+
+The Thermal History of the IGM from the H I and He II Lyman-α Forest
+the gas temperature T (z) ∝ H(z)/Γ(z) and this ratio is
+unchanged from the best-fit model.
+The modified model only changes the photoionization
+and photoheating rates during the redshift range 4.8 ≤
+z ≤ 6.1. These changes result in an increase of τeff,H during 4.8 ≤ z ≤ 5.8 and a decrease during 5.8 < z ≤ 6.1
+but do not strongly affect the evolution of the gas temperature. For redshifts z < 4.8, the ionization fraction
+of hydrogen in the IGM in photoionization equilibrium
+is determined by the ratio of the photoionization rate
+to the recombination rate xHII (z) ∝ ΓHI (z)/αHII (z, T ).
+Since the thermal evolution resulting from the modified
+and best-fit models are very similar and the rates Γ and
+H at z < 4.8 are the same. Thereby, the evolution of the
+neutral fraction xHI , the effective optical depth τeff,H ,
+and the Lyman-α power spectrum P (k) resulting from
+the modified model is nearly unchanged from the best-fit
+model at redshifts z < 4.8.
+The increase in the hydrogen effective optical depth
+τeff,H during the redshift range 4.8 ≤ z ≤ 5.8 in the
+modified model influences the Lyman-α power spectrum
+at this epoch. Given the available data, this modification only affects comparisons with the observed P (k)
+at z = 5.0. Figure 16 shows P (k) from the modified
+(dashed blue) and best-fit model (black) at z = 5. Relative to the best-fit model, using the modified model
+results in a small increase (∼ 12%) in P (k) owing to the
+small increase (∼ 6%) in τeff,H . Either model shows
+consistency with the observational P (k) measurement
+from Boera et al. (2019).
+3.8. Limitations of the Model
+For this work, we have modeled the evolution of
+the properties of the IGM using a spatially homogeneous ionizing background. Simulations of a more realistic, spatially inhomogeneous hydrogen reionization
+process show that spatial fluctuations in the temperature–density relation of the post-reionization IGM have
+a minor effect on the flux power spectrum (Keating et al.
+2018) at z ≤ 5 while the inhomogeneous UVB allows
+large islands of neutral hydrogen to persist up to redshift z ≤ 5.5 and can reproduce the observed distribution of Lyman-α opacity (Kulkarni et al. 2019). Similarly, radiative transfers simulations of He II reionization
+show that the fluctuations in the ionization state of helium have a minor effect on observations of the hydrogen
+Lyman-α forest (La Plante et al. 2017; Upton Sanderbeck & Bird 2020). Not including the impact of galactic
+winds or AGN-feedback on the forest is a conservative
+approach for simulations aimed at constraining effects
+that suppress small-scale power. AGN feedback in the
+form of heating or mass redistribution from small to
+
+23
+
+large scales is also expected to suppress the 1D power
+spectrum on large scales, and to have an increased effect
+at low redshifts (Viel et al. 2013b). Ignoring the impact
+of AGN feedback may lead to a few percent bias in the
+determination of cosmological and astrophysical parameters (Chabanier et al. 2020). This model uncertainty is
+comparable to the statistical uncertainties of the eBOSS
+data used in this work.
+Another limitation of our method results from the
+UVB photoionization and photoheating rates used for
+our simulation grid being constructed from simple transformations of a template set of rates. We therefore do
+not probe the full range of ionization and thermal histories that could be allowed by the observations of the
+Lyman-α forest. However, our model produces statistical properties of the Lyman-α forest that agree with
+a wide range of observations and a thermal evolution
+of the IGM consistent with previous inferences. These
+features of our work represent a significant achievement
+enabled by the ability to explore a wide range of models for the UVB from self-consistently evolved simulations. We emphasize that with our computational capabilities, performing a very large number of simulations
+(e.g., thousands) is now a possibility. We therefore defer
+more flexible explorations of models for the heating and
+ionization from the UVB to future work.
+In the approach used for this work, we modify the photoionization and photoheating jointly. This joint variation results in another important limitation of our study.
+The large scales of the power spectrum of the forest are
+sensitive to the ionization state of H I which, in equilibrium, is set by the balance between photoionization
+and recombination. The large-scales of P (k) depend on
+the temperature of the gas through the recombination
+coefficient α(T ) ∝ T −0.72 but are mostly determined
+by the intensity of the photoionization rate ΓHI . Since
+a large fraction of the dataset used for our inference
+probes the large-scale P (k) the best-fit photoheating
+rates are influenced by the determination of the best-fit
+photoionization rates. We have shown that the photoheating from our best-fit model is consistent with other
+estimates of the thermal state of the IGM determined
+independently. Nevertheless, the relatively small uncertainty in the thermal state parameters T0 and γ from
+this work is in part a consequence of the of the wellconstrained determination of the photoionization rate
+from the large-scale P (k). In future work we will explore
+a more flexible approach in which the photoheating has
+some degree of freedom with respect to the photoionization rate, such as using density-dependent UVB rates to
+better model a inhomogeneous reionization.
+
+24
+
+Villasenor et al.
+4. SUMMARY
+
+With the objective of finding a photoionization and
+photoheating history that results in properties of the
+IGM consistent with observations of the hydrogen and
+helium Lyman-α forest, we have used the GPU-native
+Cholla code to perform an unprecedented grid of more
+than 400 cosmological simulations spanning a variety
+of ionization and thermal histories of the IGM. These
+calculations extend our CHIPS suite of hydrodynamical
+simulations initially presented in Villasenor et al. (2021).
+We compare the properties of the Lyman-α forest from
+our simulations to several observational measurements
+to determine via a likelihood analysis the best-fit model
+for the photoionization and photoheating rates. From
+our best-fit model we have inferred the thermal history
+of the IGM, and demonstrate consistency with recent
+estimates obtained from the properties of the Lyman-α
+forest. A summary of the efforts and conclusions from
+this work follows.
+
+any need to rescale the optical depth from the simulations in post-processing to match the observed
+mean transmission of the forest, which is a common shortcoming of previous analyses.
+• Our approach does not require an assumption of
+a power-law relation for the density-temperature
+distribution of the gas, as the Lyman-α spectra
+is constructed from our self-consistently evolved
+simulations. We find that a single power law does
+not accurately describe the ρgas −T distribution of
+the gas in the density range relevant to generating
+the signal of the Lyman-α forest.
+
+• The CHIPS simulations self-consistently evolve a
+wide range of ionization and thermal histories
+of the IGM. We compare the properties of the
+Lyman-α forest in the form of the power spectrum P (k) of the hydrogen Lyman-α transmitted
+flux and the helium (He II) effective optical depth
+τeff,HeII from our simulations to several observational measurements covering the redshift range
+2.2 ≤ z ≤ 5.0 for P (k) (Iršič et al. 2017b; Boera
+et al. 2019; Chabanier et al. 2019) and 2.4 . z .
+2.9 for τeff,HeII (Worseck et al. 2016).
+
+• From our analysis, we infer the evolution of the
+thermal state of the IGM. The temperature history of the IGM shows a first temperature peak
+(T0 ' 1.3 × 104 K) due to hydrogen reionization at
+z ' 6. This peak is followed by an epoch of cooling due to adiabatic expansion of the Universe until the onset of helium reionization from radiation
+emitted by AGNs. The ionization of helium leads
+to a second increase of the temperature until He II
+is fully ionized (z ' 3), resulting in a second peak
+of T0 ' 1.4×104 K. The second peak is followed by
+a second period of cooling from cosmic expansion.
+Our result is consistent with previous estimates
+from Gaikwad et al. (2020b) and Gaikwad et al.
+(2020a). We note that the method employed in
+this work where we modify the UVB photoionization and photoheating rates by rescaling and shifting the model from Puchwein et al. (2019) limits
+the variation on the evolution of the thermal history of the IGM in our simulations. In future work
+we will allow for more flexibility in the photoheating history which will result in a more complete
+sample of the IGM density-temperature distribution. The improved flexibility of the models may
+permit a better inference of the thermal history
+of the IGM, as for now our low-redshift (z < 4)
+constraints are largely informed by the ionization
+state of hydrogen which likely results in a underestimated uncertainty in our T0 − γ evolution.
+
+• We perform a Bayesian MCMC marginalization
+to determine the best-fit UVB model. The performance of each model in reproducing the observations is evaluated over the entire redshift evolution instead of comparing for each redshift bin
+independently. Additionally, our simulation grid
+naturally probes a large range of ionization histories that we match directly to evolution of the
+ionization state of hydrogen encoded in the power
+spectrum of the Lyman-α forest. We thereby avoid
+
+• We compare the evolution of the hydrogen effective optical depth τeff,H from our best-fit model to
+several observational determinations. We find that
+after hydrogen reionization completes (5 . z . 6),
+the H I effective optical depth resulting from the
+model may underestimate the observations. We
+provide a modification to our best-fit model where
+the photoionization and photoheating rates are reduced during this epoch such that the evolution of
+τeff,H is consistent with measurements by Bosman
+
+• We present a direct extension of the CHIPS suite
+(Villasenor et al. 2021) consisting of a grid of 400
+simulations (L = 50 h−1 Mpc, N = 10243 ) that
+vary the spatially-uniform photoionization and
+photoheating rates from the metagalactic UVB.
+The UVB rates applied for our grid use the Puchwein et al. (2019) model as a template, and use
+four parameters that control a rescaling of the amplitude and redshift-timing of the hydrogen and
+helium photoionization and photoheating rates.
+
+The Thermal History of the IGM from the H I and He II Lyman-α Forest
+et al. (2018). Additionally, the neutral fraction of
+hydrogen from the modified model shows consistency with the measurements by Fan et al. (2006)
+during this redshift interval.
+• The model for the photoionization and photoheating rates from the UVB obtained from our analysis shows consistency with the observations of the
+Lyman-α power spectrum and the effective optical
+depth from both hydrogen and helium (He II), the
+optical depth from the CMB probed by Planck
+Collaboration et al. (2020), and previous inferences of the thermal state of the IGM. This model
+can be applied in future cosmological simulations
+that aim to reproduce properties of the IGM consistent with the observed Lyman-α forest.
+Our work shows that an exploration of the IGM properties from hundreds of self-consistently evolved models
+for the astrophysical processes that impact the gas in
+the medium is now possible by exploiting modern computational techniques on the world’s largest supercomputers. Using our efficient GPU-based code Cholla with
+Summit, we are able to run hundreds of cosmological
+simulations in just a few days using a small fraction of
+the system. We anticipate that when combined with
+the exquisite picture of the Lyman-α forest that experiments like DESI Collaboration et al. (2016) will
+provide, this capability will revolutionize future studies of the properties of the IGM. We can leverage nextgeneration exascale systems and simulate large volumes
+
+25
+
+(L ∼ 50h−1Mpc) at high resolution (N = 20483 ) for
+thousands of models describing the various the astrophysical processes that affect the IGM with a range of
+cosmological parameters, and study different models for
+the nature of dark matter and the mass hierarchy of neutrinos based on their impact on the small-scale power
+spectrum of the Lyman-α forest.
+Software: Cholla (Schneider & Robertson 2015,
+https://github.com/cholla-hydro/cholla), Python (van
+Rossum 1995), Numpy (Van Der Walt et al. 2011), Matplotlib (Hunter 2007), MUSIC (Hahn & Abel 2011),
+GRACKLE (Smith et al. 2017).
+This research used resources of the Oak Ridge Leadership Computing Facility at the Oak Ridge National
+Laboratory, which is supported by the Office of Science of the U.S. Department of Energy under Contract DE-AC05-00OR22725, using Summit allocations
+CSC434 and AST169. An award of computer time
+was provided by the INCITE program, via project
+AST175. We acknowledge use of the lux supercomputer at UC Santa Cruz, funded by NSF MRI grant
+AST1828315, and support from NASA TCAN grant
+80NSSC21K0271. B.V. is supported in part by the
+UC MEXUS-CONACyT doctoral fellowship. B.E.R. acknowledges support from NASA contract NNG16PJ25C
+and grants 80NSSC18K0563 and 80NSSC22K0814. We
+acknowledge the comments and suggestions received
+from the anonymous referee which helped improve the
+content and clarity of this work.
+
+APPENDIX
+A. RESOLUTION CONVERGENCE ANALYSIS
+
+To assess the possible impact of the simulation spatial resolution on our results, we compare the Lyman-α transmitted
+flux power spectrum measured from simulations with different resolutions. Each run was performed using the same
+box size (L = 50h−1 cMpc) for identical cosmological parameters (Planck Collaboration et al. 2020) and our best-fit
+determination for the photoionization and photoheating rates, and differ only in their grid resolution. Our comparison
+is made between three runs with resolutions N = 5123 , N = 10243 , and N = 20483 cells and dark matter particles,
+with comoving spatial resolutions of ∆x ' 98, 49, and 24 h−1 kpc, respectively. The initial conditions for the runs
+were generated to preserve common large-scale modes, such that the results from the simulations could be compared
+directly over shared spatial scales.
+Figure 17 shows the power spectrum of the Lyman-α flux measured for our three simulations at redshifts z =2, 3,
+4, and 5. As shown, the structure of the Lyman-α forest becomes better resolved as the number of cells increase.
+The lower panels present the fractional difference ∆P (k)/P (k) of the power spectrum measured from the N = 5123
+and N = 10243 simulations compared with the N = 20483 simulation on overlapping spatial scales. Our comparison
+shows that the effect of the decreased resolution is to increase the power on large scales (k . 0.02 s km−1 ) while the
+small-scale power is suppressed. For the low-resolution simulation (N = 5123 ) the differences are significant, and on
+large scales the power spectrum is overestimated by ∼ 50% at redshift z = 5. As the redshift decreases the differences
+also decrease to ∼ 13% by z = 2. On small scales, the power spectrum is suppressed by 20 − 60%.
+Our fiducial resolution for the CHIPS simulations was N = 10243 . At this resolution we measure only small
+differences in the Lyman-α structure compared with the N = 20483 simulation, as on large spatial scales the power
+
+26
+
+Villasenor et al.
+
+Figure 17. Power spectrum of the Lyman-α transmitted flux P (k) measured from simulations with different comoving spatial
+resolutions of ∆x ' 98, 49, and 24 h−1 kpc. The three simulations model a L = 50h−1Mpc box with the Planck Collaboration
+et al. (2020) cosmology and apply our best-fit determination for the photoionization and photoheating rates. The bottom panels
+show the fractional difference in the power spectrum ∆P (k)/P (k) between the N = 5123 and N = 10243 runs and the N = 20483
+simulation. Low-resolution simulations show increased power on large scales (k . 0.03 s km−1 ) and suppressed structure in the
+small scales relative to higher resolution simulations. For the intermediate-resolution simulation N = 10243 , which corresponds
+to our fiducial CHIPS grid resolution, the differences in P (k) with respect to the N = 20483 simulation are . 7% on the large
+scales and . 10 − 25% on the small scales. We account for this resolution effect during our inference procedure by adding a
+systematic error to the observational measurements of P (k) in the form of σres = ∆P (k, z), where ∆P (k, z) is the redshift- and
+scale-dependent difference in the power spectrum measured from the N = 10243 run compared with the N = 20483 simulation.
+
+The Thermal History of the IGM from the H I and He II Lyman-α Forest
+
+27
+
+Figure 18. Consequences of rescaling the effective optical depth for the power spectrum of the Lyman-α transmitted flux at
+redshifts z =2, 3, 4, and 5. Shown is the fractional difference ∆P (k)/P (k) after rescaling the optical depth along the skewer
+sample from our simulations by a constant factor such that τ]
+eff,H = (1 + α)τeff for α in the range [-3, 3]. Rescaling the optical
+depth along the skewers such that τeff,H increases (decreases) has the effect of increasing (decreasing) P (k). On scales in the
+range 0.002 . k . 0.1 s km−1 the change induced on P (k) is almost uniform, while for the smallest scales k & 0.1 s km−1 the
+effect is redshift- and scale-dependent.
+
+spectrum is overestimated by . 7%, and for small scales (0.03 . k . 0.2 s km−1 ) we measure a suppression on P (k)
+of . 10 − 25%. To account for the effect of resolution on simulations used to constrain the UVB model, we include a
+systematic uncertainty of the form σres = ∆P (k, z), where ∆P (k, z) is the redshift- and scale-dependent difference in
+the power spectrum measured between the N = 10243 and N = 20483 simulations.
+
+B. EFFECT OF RESCALING THE H I EFFECTIVE OPTICAL DEPTH ON THE LYMAN-α FLUX POWER
+
+SPECTRUM
+The power spectrum of the Lyman-α transmitted flux P (k) is computed from flux fluctuations δF = (F − hF i)/hF i.
+The power spectrum is sensitive to changes on the ionization state of hydrogen in the IGM, which in turn changes the
+effective optical depth τeff,H and the mean transmitted flux hF i = exp(−τeff ). To estimate how changes in the overall
+ionization state of the IGM affect the power spectrum of the Lyman-α flux, we can rescale the optical depth of the
+simulated skewers and re-measure P (k). We rescale by a constant factor tuned such that the effective optical depth
+measured from the rescaled skewers follows τ]
+eff,H = (1 + α)τeff,H , where τeff,H is the original effective optical depth
+obtained from the simulated skewers. From the rescaled skewers, we compute the corresponding fluctuations of the
+f
+e
+e
+e
+e
+transmitted flux δf
+F = (F − hF i)/hF i, where hF i = exp(−τ]
+eff,H ). Finally, from δF we compute the mean flux power
+e
+spectrum P (k) for the rescaled sample.
+Figure 18 shows the fractional difference of the flux power spectrum ∆P (k)/P (k) = Pe(k)/P (k)−1 measured between
+the rescaled skewers and the original sample for several values in the range α ∈ [−0.3, 0.3]. Because of the non-linear
+relation between the optical depth τ and the transmitted flux F = exp(−τ ), rescaling the effective optical depth
+τeff,H in the skewer sample to higher values α > 0 has the effect of increasing the overall normalization of P (k) on
+most of the scales relevant for this work, namely 0.002 . k . 0.1 s km−1 . On a similar way, decreasing τeff,H decreases
+the normalization of P (k) at these scales. For smaller scales k > 0.1 s km−1 the effects are redshift dependent and
+
+28
+
+Villasenor et al.
+
+Figure 19.
+Normalized covariance matrix of the Lyman-α transmitted flux power spectrum at z = 4.6 measured from
+simulations that vary the parameters βH (top panels) and ∆zH (bottom panels) independently. The structure of the covariance
+is maintained across the simulations. Decreasing the parameter βH increases the normalization of P (k) and its covariance on
+roughly all scales. We measure small elementwise differences < 0.1 in the normalized covariance across simulations with different
+βH . The effect of changing ∆zH is minimal with elementwise differences < 0.03.
+
+Figure 20.
+Normalized covariance matrix of the Lyman-α transmitted flux power spectrum at z = 3.0 measured from
+simulations that vary the parameters βHe (top panels) and ∆zHe (bottom panels) independently. The structure of the covariance
+is maintained across the simulations. Changes in βHe and ∆zHe cause small variation in the normalized covariance matrix, we
+measure only small elementwise differences < 0.05 over these simulations.
+
+The Thermal History of the IGM from the H I and He II Lyman-α Forest
+
+29
+
+Figure 21. Evolution of the IGM temperature T0 (left panel) from models of the UVB where the H I and He I photoheating
+rates have been reduced in the interval 4.2 ≤ z ≤ 6.2 relative to our best-fit model (center and right panel). The fractional
+differences of T0 and the heating rates HHI and HHeI with respect to the best-fit model are shown in the bottom panels. The
+reduced photoheating rates decrease T0 for z < 6.2 but the change is most significant for 3.5 . z . 6.0. At z . 3.5 the impact
+on T0 is minimal as heating from He II reionization dominates. A reduction of ∼ 80% in the photoheating rates at z ∼ 6.0
+causes a decrease in T0 of ∼ 20% at z ∼ 5.0. For z . 3.5 the reduced photoheating has a minimal impact on T0 of . 5%.
+
+we find that increasing (decreasing) τeff,H tends to also increase (decrease) P (k) for z & 3.5, while it has the opposite
+effect for z . 3.5 as P (k) decreases (increases) when τeff,H is increased (decreased).
+This study shows that the Lyman-α power spectrum itself is sensitive to the hydrogen effective optical depth, and for
+this reason we do not include the observational measurements of τeff,H for our inference of the UVB model presented
+in this work.
+C. COVARIANCE MATRICES OF THE TRANSMITTED FLUX POWER SPECTRUM FROM THE
+
+SIMULATIONS
+In Section 2.9 we present the likelihood function employed for our MCMC analysis (Eq. 5). When comparing the
+power spectrum of the Lyman-α transmitted flux from the simulations to the observational measurements we employ
+the covariance matrices of P (k) reported by the observational works (Chabanier et al. 2019; Iršič et al. 2017b; Boera
+et al. 2019). In this section, we quantify the effect on the covariance of the simulated P (k) from variations in our
+model parameters.
+Figure 19 shows the normalized covariance of P (k) at z = 4.6 for simulations with different values for the parameters
+βH (top panels) and ∆zH (bottom panels). Decreasing the parameter βH increases the Lyman-α opacity of the IGM,
+which increases the normalization of P (k) (see §B). The increase of P (k) also increases its covariance on roughly
+all scales. We measure small elementwise differences < 0.1 in the normalized covariance matrices across simulations
+that vary βH , while for simulations with different ∆zH the impact is minimal and results in only < 0.03 elementwise
+differences. Figure 20 presents the covariance matrix of P (k) at z = 3.0 for simulations that vary the parameters βHe
+(top panels) and ∆zHe (bottom panels). Here we also measure the impact to be small with differences < 0.05.
+D.
+
+COLDER MID-REDSHIFT IGM FROM REDUCED PHOTOHEATING
+
+In §3.3 we discuss how our best-fit model results in a warmer IGM compared to the estimates from Boera et al.
+(2019) during the interval 4.2 . z . 5.0 as the temperature T0 from our model is ∼ 1σ higher compared to their result.
+We explore scenarios where the mid-redshift IGM is cooled relative to our best-fit model by decreasing the H I and
+He I photoheating rates in the redshift range 4.2 . z . 6.2. The modified photoheating rates are shown in Figure 21
+(middle and center panels) along with the fractional differences relative to the best-fit model shown in the respective
+bottom panels. To compute the history of T0 for the reduced photoheating models, we integrate the evolution of the
+temperature of a single-cell at ρgas = ρ̄ following the method from Hui & Gnedin (1997) (see Section 2 of their work
+for a detailed description). The resulting evolution of T0 for the different models is presented in the left panel of Figure
+21. We show that reducing the H I and He I photoheating rates by ∼ 80% at z ∼ 6 results in a colder IGM where T0
+is reduced by ∼ 20% at z ∼ 5 such that T0 ∼ 8 × 103 K for 4.2 . z . 5.0 agrees well with the estimate from Boera
+
+30
+
+Villasenor et al.
+
+et al. (2019). However, we find that for such a scenario T0 at z ∼ 5.4 is lower than the inference from Gaikwad et al.
+(2020b). This conflict exhibits some degree of tension between the estimates at z ∼ 5.0 and z ∼ 5.4 from Boera et al.
+(2019) and Gaikwad et al. (2020b) respectively.
+The photoheating H and the photoionization Γ rate from the UVB are given by the intensity of the background
+radiation J(ν, z) as
+Z ∞
+Z ∞
+4πJ(ν, z)
+4πJ(ν, z)
+Γ(z) =
+σ(ν)dν,
+H(z) =
+(hν − hν0 ) σ(ν)dν
+(D1)
+hν
+hν
+ν0
+ν0
+where ν0 and σ(ν) are the threshold frequency and photoionization cross-section, respectively. Consider power-law
+models for the cross-section and the intensity of the radiation at wavelengths λ > 912 Å, which can be written as
+σ(ν) = σ0 (ν/ν0 )φ and J(ν) = (ν/ν0 )α , with indices φ < 0 and α < 0. Physically, reducing the photoheating
+rate relative to the photoionization rate can be achieved by changing the spectral index of the ionizing radiation
+α. By solving the integrals in Eqs D1 assuming these power-law models and evaluating the fractional change in the
+photoionization ∆Γ/Γ and photoheating ∆H/H for a change in the spectral index ∆α, we find the following relation
+is satisfied
+∆Γ
+− ∆H
+H
+∆α = (1 + α + φ) Γ ∆H
+1+ H
+
+(D2)
+
+Equation D2 relates the change of the spectral index of the radiation necessary to produce some variation of the
+photoionization and photoheating from a given UVB model. By applying Eq. D2, we can modify the photoheating
+relative to the photoionization of a UVB model within a physically-plausible range for the index α. In future work, we
+will explore which variations in the IGM temperature T0 from changes of the photoheating rate match the observed
+hydrogen effective optical depth at z > 5 while using physically-plausible source populations.
+E.
+
+ACCURACY OF THE POWER-LAW FIT TO THE DENSITY-TEMPERATURE DISTRIBUTION OF THE
+GAS IN OUR SIMULATIONS.
+
+A common method to infer the thermal state of the IGM from observations of the Lyman-α forest involves marginalizγ−1
+ing over the thermal properties T0 and γ in the approximate power-law density-temperature relation T = T0 (ρgas /ρ̄)
+(Bolton et al. 2014; Nasir et al. 2016; Hiss et al. 2018; Boera et al. 2019; Walther et al. 2019; Gaikwad et al.
+2020a). The density of the IGM gas that contributes to the majority of the Lyman-α forest signal lies in the
+range −1 ≤ log10 (ρgas /ρ̄) ≤ 1. From our simulations we find that a single power law fails to reproduce the densitytemperature distribution of the gas over this density interval. The left panels of Figure 22 show the density-temperature
+distribution of the gas in one of our simulations and the corresponding power-law fit to the distribution over the density
+range −1 ≤ log10 (ρgas /ρ̄) ≤ 1 at redshift z = 3 (top) and z = 4 (bottom). The deviations of the gas temperature in
+the simulation relative to the power-law fits are presented in the right panels, showing that the fractional differences
+∆T /T from the density-temperature distribution in the simulation with respect to the power-law fit can be as large
+as ∼ 15%.
+REFERENCES
+Becker, G. D., & Bolton, J. S. 2013, MNRAS, 436, 1023
+Becker, G. D., D’Aloisio, A., Christenson, H. M., et al.
+2021, arXiv e-prints, arXiv:2103.16610
+Becker, G. D., Hewett, P. C., Worseck, G., & Prochaska,
+J. X. 2013, MNRAS, 430, 2067
+Becker, R. H., Fan, X., White, R. L., et al. 2001, AJ, 122,
+2850
+Bird, S., Rogers, K. K., Peiris, H. V., et al. 2019, JCAP,
+2019, 050
+Boera, E., Becker, G. D., Bolton, J. S., & Nasir, F. 2019,
+ApJ, 872, 101
+
+Bolton, J. S., Becker, G. D., Haehnelt, M. G., & Viel, M.
+2014, MNRAS, 438, 2499
+Bond, J. R., Kofman, L., & Pogosyan, D. 1996, Nature,
+380, 603
+Bosman, S. E. I., Fan, X., Jiang, L., et al. 2018, MNRAS,
+479, 1055
+Calverley, A. P., Becker, G. D., Haehnelt, M. G., & Bolton,
+J. S. 2011, MNRAS, 412, 2543
+Cen, R., Miralda-Escudé, J., Ostriker, J. P., & Rauch, M.
+1994, ApJL, 437, L9
+
+The Thermal History of the IGM from the H I and He II Lyman-α Forest
+
+31
+
+Figure 22. Density-temperature distribution of the IGM gas (left column) from one of our simulations at redshift z = 3 (top)
+and z = 4 (bottom). A power law fit of the form T = T0 (ρgas /ρ̄)γ−1 over the range −1 ≤ log10 (ρgas /ρ̄) ≤ 1 is shown (black
+dashed lines). The right columns shows deviations of the density-temperature distribution with respect to the power-law fit
+over the fitted range. The blue region corresponds to the 68% highest probability interval for the temperature as function of the
+overdensity ρgas /ρ̄. The differences between the distribution of the gas relative to the power-law fit can be as large as ∼ 15%.
+Chabanier, S., Bournaud, F., Dubois, Y., et al. 2020,
+MNRAS, 495, 1825
+Chabanier, S., Palanque-Delabrouille, N., Yèche, C., et al.
+2019, JCAP, 2019, 017
+
+D’Aloisio, A., McQuinn, M., Davies, F. B., & Furlanetto,
+S. R. 2018, Monthly Notices of the Royal Astronomical
+Society, 473, 560
+Davies, F. B., Hennawi, J. F., Bañados, E., et al. 2018,
+Astrophysical Journal, 864, 142
+
+Colella, P., & Woodward, P. R. 1984, Journal of
+Computational Physics, 54, 174
+Croft, R. A. C., Weinberg, D. H., Katz, N., & Hernquist, L.
+1998, ApJ, 495, 44
+
+de Belsunce, R., Gratton, S., Coulton, W., & Efstathiou, G.
+2021, MNRAS, 507, 1072
+DESI Collaboration, Aghamousa, A., Aguilar, J., et al.
+2016, arXiv e-prints, arXiv:1611.00036
+
+32
+
+Villasenor et al.
+
+Eilers, A.-C., Davies, F. B., & Hennawi, J. F. 2018, ApJ,
+864, 53
+
+McGreer, I. D., Mesinger, A., & Fan, X. 2011, MNRAS,
+415, 3237
+
+Fan, X., Strauss, M. A., Becker, R. H., et al. 2006, AJ, 132,
+117
+
+McQuinn, M. 2016, ARA&A, 54, 313
+
+Faucher-Giguère, C.-A. 2020, MNRAS, 493, 1614
+
+Miralda-Escudé, J., & Rees, M. J. 1994, MNRAS, 266, 343
+
+Gaikwad, P., Khaire, V., Choudhury, T. R., & Srianand, R.
+2017, MNRAS, 466, 838
+
+Nasir, F., Bolton, J. S., & Becker, G. D. 2016, MNRAS,
+463, 2335
+
+Gaikwad, P., Srianand, R., Haehnelt, M. G., & Choudhury,
+T. R. 2020a, arXiv e-prints, arXiv:2009.00016
+
+Oñorbe, J., Hennawi, J. F., & Lukić, Z. 2017, ApJ, 837, 106
+
+Meiksin, A. A. 2009, Reviews of Modern Physics, 81, 1405
+
+Gallego, S. G., Cantalupo, S., Sarpas, S., et al. 2021,
+MNRAS, 504, 16
+
+Pieri, M. M., Bonoli, S., Chaves-Montero, J., et al. 2016, in
+SF2A-2016: Proceedings of the Annual meeting of the
+French Society of Astronomy and Astrophysics, ed.
+C. Reylé, J. Richard, L. Cambrésy, M. Deleuil,
+E. Pécontal, L. Tresse, & I. Vauglin, 259–266
+
+Greig, B., Mesinger, A., & Bañados, E. 2019, MNRAS, 484,
+5094
+
+Planck Collaboration, Aghanim, N., Akrami, Y., et al.
+2020, A&A, 641, A6
+
+Greig, B., Mesinger, A., Haiman, Z., & Simcoe, R. A. 2017,
+MNRAS, 466, 4239
+
+Puchwein, E., Bolton, J. S., Haehnelt, M. G., et al. 2015,
+MNRAS, 450, 4081
+
+Haardt, F., & Madau, P. 2012, ApJ, 746, 125
+Hahn, O., & Abel, T. 2011, MNRAS, 415, 2101
+
+Puchwein, E., Haardt, F., Haehnelt, M. G., & Madau, P.
+2019, MNRAS, 485, 47
+
+Hernquist, L., Katz, N., Weinberg, D. H., &
+Miralda-Escudé, J. 1996, ApJL, 457, L51
+
+Qin, Y., Mesinger, A., Bosman, S. E. I., & Viel, M. 2021,
+MNRAS, 506, 2390
+
+Hiss, H., Walther, M., Hennawi, J. F., et al. 2018, The
+Astrophysical Journal, 865, 42
+
+Robertson, B. E., Ellis, R. S., Furlanetto, S. R., & Dunlop,
+J. S. 2015, ApJL, 802, L19
+
+Ho, M.-F., Bird, S., & Shelton, C. R. 2022, MNRAS, 509,
+2551
+
+Schneider, E. E., & Robertson, B. E. 2015, ApJS, 217, 24
+
+Gaikwad, P., Rauch, M., Haehnelt, M. G., et al. 2020b,
+MNRAS, 494, 5091
+
+Hoag, A., Bradač, M., Huang, K., et al. 2019, ApJ, 878, 12
+Hui, L., & Gnedin, N. Y. 1997, MNRAS, 292, 27
+Hunter, J. D. 2007, Computing in Science & Engineering, 9,
+90
+
+Slosar, A., Font-Ribera, A., Pieri, M. M., et al. 2011,
+JCAP, 2011, 001
+Smith, B. D., Bryan, G. L., Glover, S. C. O., et al. 2017,
+MNRAS, 466, 2217
+Upton Sanderbeck, P., & Bird, S. 2020, MNRAS, 496, 4372
+
+Iršič, V., Viel, M., Haehnelt, M. G., et al. 2017a, PhRvD,
+96, 023522
+
+Upton Sanderbeck, P. R., D’Aloisio, A., & McQuinn, M. J.
+2016, MNRAS, 460, 1885
+
+Iršič, V., Viel, M., Berg, T. A. M., et al. 2017b, MNRAS,
+466, 4332
+
+Van Der Walt, S., Colbert, S. C., & Varoquaux, G. 2011,
+Computing in Science & Engineering, 13, 22
+
+Jung, I., Finkelstein, S. L., Dickinson, M., et al. 2020, ApJ,
+904, 144
+
+van Rossum, G. 1995, Python tutorial, Tech. Rep.
+CS-R9526, Centrum voor Wiskunde en Informatica
+(CWI), Amsterdam
+
+Keating, L. C., Puchwein, E., & Haehnelt, M. G. 2018,
+MNRAS, 477, 5501
+Khaire, V., & Srianand, R. 2019, MNRAS, 484, 4174
+
+Viel, M., Becker, G. D., Bolton, J. S., & Haehnelt, M. G.
+2013a, PhRvD, 88, 043502
+
+Kulkarni, G., Keating, L. C., Haehnelt, M. G., et al. 2019,
+MNRAS, 485, L24
+
+Viel, M., Schaye, J., & Booth, C. M. 2013b, MNRAS, 429,
+1734
+
+La Plante, P., Trac, H., Croft, R., & Cen, R. 2017, ApJ,
+841, 87
+
+Villasenor, B., Robertson, B., Madau, P., & Schneider, E.
+2021, ApJ, 912, 138
+
+Madau, P., & Haardt, F. 2015, ApJL, 813, L8
+
+Walther, M., Armengaud, E., Ravoux, C., et al. 2021,
+JCAP, 2021, 059
+
+Mason, C. A., Treu, T., Dijkstra, M., et al. 2018, ApJ, 856,
+2
+Mason, C. A., Fontana, A., Treu, T., et al. 2019, MNRAS,
+485, 3947
+McGreer, I. D., Mesinger, A., & D’Odorico, V. 2015,
+MNRAS, 447, 499
+
+Walther, M., Hennawi, J. F., Hiss, H., et al. 2018, ApJ,
+852, 22
+Walther, M., Oñorbe, J., Hennawi, J. F., & Lukić, Z. 2019,
+ApJ, 872, 13
+Wang, F., Davies, F. B., Yang, J., et al. 2020, ApJ, 896, 23
+
+The Thermal History of the IGM from the H I and He II Lyman-α Forest
+Wolfson, M., Hennawi, J. F., Davies, F. B., et al. 2021,
+MNRAS, 508, 5493
+Worseck, G., Davies, F. B., Hennawi, J. F., & Prochaska,
+J. X. 2019, ApJ, 875, 111
+
+33
+
+Worseck, G., Prochaska, J. X., Hennawi, J. F., & McQuinn,
+M. 2016, ApJ, 825, 144
+Wyithe, J. S. B., & Bolton, J. S. 2011, MNRAS, 412, 1926
+Yang, J., Wang, F., Fan, X., et al. 2020a, ApJ, 904, 26
+—. 2020b, ApJL, 897, L14
+
+

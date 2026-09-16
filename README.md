@@ -2,6 +2,17 @@
 
 Research project by Lautaro Carvalho.
 
+## Research approaches
+
+Both approaches are stored together on `main`, keeping their original internal layouts:
+
+- [`approaches/Projecto-IA_aplications-Zaldarriaga/`](approaches/Projecto-IA_aplications-Zaldarriaga/): the project from Materias, including its code, manuscripts, figures, papers, and course material.
+- [`approaches/Paper_1/`](approaches/Paper_1/): the project from Doctorado-Trabajo, including its notebooks, manuscripts, figures, and literature collections.
+
+The root folders below remain available for shared material. Work inside the repository copies for future commits; edits to the original Desktop folders do not automatically synchronize here.
+
+The import preserves source files without rewriting them. Some Python scripts in `Paper_1` contain absolute `/home/byaku/` paths and may need path adjustments on another computer. Copy integrity was checked; analyses and LaTeX builds were not rerun. Temporary LaTeX output and Python bytecode/checkpoints are excluded from Git; PDFs, images, bibliography outputs (`.bbl`), and historical source backups are retained. See [the import record](notes/import-record.md) for exact exclusions.
+
 ## Organization
 
 | Folder | Contents |
@@ -22,7 +33,7 @@ Run these commands in this repository's folder after saving your files:
 ```bash
 git status
 git diff
-git add code figures manuscripts references notes README.md .gitignore
+git add approaches code figures manuscripts references notes README.md .gitignore
 git diff --cached --stat
 git commit -m "Describe what changed"
 git push

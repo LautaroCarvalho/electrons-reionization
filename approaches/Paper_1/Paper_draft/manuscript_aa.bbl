@@ -1,0 +1,126 @@
+\begin{thebibliography}{34}
+\expandafter\ifx\csname natexlab\endcsname\relax\def\natexlab#1{#1}\fi
+
+\bibitem[{Aharonian {et~al.}(2019)Aharonian, Yang, \&
+  de~O{\~n}a~Wilhelmi}]{Aharonian2019}
+Aharonian, F., Yang, R., \& de~O{\~n}a~Wilhelmi, E. 2019, Nat. Astron., 3, 561
+
+\bibitem[{{Astropy Collaboration} {et~al.}(2022){Astropy Collaboration},
+  Price-Whelan, {et~al.}}]{Astropy2022}
+{Astropy Collaboration}, Price-Whelan, A.~M., {et~al.} 2022, ApJ, 935, 167
+
+\bibitem[{Bera {et~al.}(2023)Bera, Samui, \& Datta}]{Bera2023}
+Bera, A., Samui, S., \& Datta, K.~K. 2023, MNRAS [\eprint[arXiv]{2202.12308}]
+
+\bibitem[{Blumenthal \& Gould(1970)}]{Blumenthal1970}
+Blumenthal, G.~R. \& Gould, R.~J. 1970, Rev. Mod. Phys., 42, 237
+
+\bibitem[{Bosman {et~al.}(2022)Bosman, Davies, Becker, Keating, Davies, Zhu,
+  Eilers, D'Odorico, {et~al.}}]{Bosman2022}
+Bosman, S. E.~I., Davies, F.~B., Becker, G.~D., {et~al.} 2022, MNRAS, 514, 55
+
+\bibitem[{Bromm(2013)}]{Bromm2013}
+Bromm, V. 2013, Rep. Prog. Phys., 76, 112901
+
+\bibitem[{Bykov {et~al.}(2017)Bykov, Amato, Petrov, Krassilchtchikov, \&
+  Levenfish}]{Bykov2017}
+Bykov, A.~M., Amato, E., Petrov, A.~E., Krassilchtchikov, A.~M., \& Levenfish,
+  K.~P. 2017, Space Sci. Rev., 207, 235
+
+\bibitem[{Furlanetto \& Stoever(2010)}]{Furlanetto2010}
+Furlanetto, S.~R. \& Stoever, S.~J. 2010, MNRAS, 404, 1869
+
+\bibitem[{Gessey-Jones {et~al.}(2023)Gessey-Jones, Fialkov, de~Lera~Acedo,
+  Handley, \& Barkana}]{GesseyJones2023}
+Gessey-Jones, T., Fialkov, A., de~Lera~Acedo, E., Handley, W.~J., \& Barkana,
+  R. 2023, MNRAS, 526, 4262
+
+\bibitem[{Gould(1972)}]{Gould1972}
+Gould, R.~J. 1972, Physica, 60, 145
+
+\bibitem[{{HERA Collaboration} {et~al.}(2023){HERA Collaboration},
+  Abdurashidova, {et~al.}}]{HERA2023}
+{HERA Collaboration}, Abdurashidova, Z., {et~al.} 2023, ApJ, 945, 124
+
+\bibitem[{Jana \& Nath(2018)}]{Jana2018}
+Jana, R. \& Nath, B.~B. 2018, MNRAS, 479, 153
+
+\bibitem[{Karzas \& Latter(1961)}]{Karzas1961}
+Karzas, W.~J. \& Latter, R. 1961, ApJS, 6, 167
+
+\bibitem[{Kaur {et~al.}(2022)Kaur, Qin, Mesinger, Pallottini, Fragos, \&
+  Basu-Zych}]{Kaur2022}
+Kaur, H.~D., Qin, Y., Mesinger, A., {et~al.} 2022, MNRAS, 513, 5097
+
+\bibitem[{Kim \& Rudd(1994)}]{KimRudd1994}
+Kim, Y.-K. \& Rudd, M.~E. 1994, Phys. Rev. A, 50, 3954
+
+\bibitem[{Kim {et~al.}(2000)Kim, Santos, \& Parente}]{Kim2000}
+Kim, Y.-K., Santos, J.~P., \& Parente, F. 2000, Phys. Rev. A, 62, 052710
+
+\bibitem[{Klessen \& Glover(2023)}]{Klessen2023}
+Klessen, R.~S. \& Glover, S. C.~O. 2023, ARA\&A, 61, 65
+
+\bibitem[{Leite {et~al.}(2017)Leite, Evoli, D'Angelo, Ciardi, Sigl, \&
+  Ferrara}]{Leite2017}
+Leite, N., Evoli, C., D'Angelo, M., {et~al.} 2017, MNRAS, 469, 416
+
+\bibitem[{Mertens {et~al.}(2025)Mertens, Mevius, Koopmans, Offringa, Zaroubi,
+  {et~al.}}]{Mertens2025}
+Mertens, F.~G., Mevius, M., Koopmans, L. V.~E., {et~al.} 2025, A\&A, 698, A186
+
+\bibitem[{Mirabel {et~al.}(2011)Mirabel, Dijkstra, Laurent, Loeb, \&
+  Pritchard}]{Mirabel2011}
+Mirabel, I.~F., Dijkstra, M., Laurent, P., Loeb, A., \& Pritchard, J.~R. 2011,
+  A\&A, 528, A149
+
+\bibitem[{Mu{\~n}oz {et~al.}(2024)Mu{\~n}oz, Mirocha, Chisholm, Furlanetto, \&
+  Mason}]{Munoz2024}
+Mu{\~n}oz, J.~B., Mirocha, J., Chisholm, J., Furlanetto, S.~R., \& Mason, C.
+  2024, MNRAS [\eprint[arXiv]{2404.07250}]
+
+\bibitem[{Nath \& Biermann(1993)}]{Nath1993}
+Nath, B.~B. \& Biermann, P.~L. 1993, MNRAS, 265, 241
+
+\bibitem[{Park {et~al.}(2015)Park, Caprioli, \& Spitkovsky}]{Park2015}
+Park, J., Caprioli, D., \& Spitkovsky, A. 2015, Phys. Rev. Lett., 114, 085003
+
+\bibitem[{{Planck Collaboration} {et~al.}(2020){Planck Collaboration}, Aghanim,
+  Akrami, {et~al.}}]{Planck2020}
+{Planck Collaboration}, Aghanim, N., Akrami, Y., {et~al.} 2020, A\&A, 641, A6
+
+\bibitem[{Robertson(2022)}]{Robertson2022}
+Robertson, B.~E. 2022, ARA\&A, 60, 121
+
+\bibitem[{Ruszkowski \& Pfrommer(2023)}]{Ruszkowski2023}
+Ruszkowski, M. \& Pfrommer, C. 2023, A\&A Rev., 31, 4
+
+\bibitem[{Samui {et~al.}(2005)Samui, Subramanian, \& Srianand}]{Samui2005}
+Samui, S., Subramanian, K., \& Srianand, R. 2005, Can Cosmic Rays Heat the
+  Intergalactic Medium?, arXiv preprint
+
+\bibitem[{Sazonov \& Sunyaev(2015)}]{Sazonov2015}
+Sazonov, S. \& Sunyaev, R. 2015, MNRAS, 454, 3464
+
+\bibitem[{Shull \& van Steenberg(1985)}]{Shull1985}
+Shull, J.~M. \& van Steenberg, M.~E. 1985, ApJ, 298, 268
+
+\bibitem[{Slatyer(2016)}]{Slatyer2016}
+Slatyer, T.~R. 2016, Phys. Rev. D, 93, 023521
+
+\bibitem[{Slatyer {et~al.}(2009)Slatyer, Padmanabhan, \&
+  Finkbeiner}]{Slatyer2009}
+Slatyer, T.~R., Padmanabhan, N., \& Finkbeiner, D.~P. 2009, Phys. Rev. D, 80,
+  043526
+
+\bibitem[{Stone {et~al.}(2002)Stone, Kim, \& Desclaux}]{Stone2002}
+Stone, P.~M., Kim, Y.-K., \& Desclaux, J.~P. 2002, Journal of Research of the
+  National Institute of Standards and Technology, 107, 327
+
+\bibitem[{Vald{\'e}s {et~al.}(2010)Vald{\'e}s, Evoli, \& Ferrara}]{Valdes2010}
+Vald{\'e}s, M., Evoli, C., \& Ferrara, A. 2010, MNRAS, 404, 1569
+
+\bibitem[{Zdziarski \& Svensson(1989)}]{Zdziarski1989}
+Zdziarski, A.~A. \& Svensson, R. 1989, ApJ, 344, 551
+
+\end{thebibliography}

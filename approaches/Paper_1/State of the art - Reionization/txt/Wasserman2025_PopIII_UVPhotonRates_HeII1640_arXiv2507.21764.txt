@@ -1,0 +1,2031 @@
+MNRAS 000, 1–12 (2025)
+
+Preprint 3 March 2026
+
+Compiled using MNRAS LATEX style file v3.2
+
+Ultraviolet photon production rates of the first stars: Impact on the He II 𝜆
+1640 Å emission line from primordial star clusters and the 21-cm signal
+from cosmic dawn
+Joel Wasserman,1 Erik Zackrisson,1★ Jiten Dhandha,2 Anastasia Fialkov,2 Leon Noble,3
+Suman Majumdar3
+
+arXiv:2507.21764v2 [astro-ph.GA] 28 Feb 2026
+
+1 Observational Astrophysics, Department of Physics and Astronomy, Uppsala University, Box 516, SE-751 20 Uppsala, Sweden
+2 Institute of Astronomy, University of Cambridge, Madingley Road, Cambridge, CB3 0HA, UK
+3 Department of Astronomy, Astrophysics & Space Engineering, Indian Institute of Technology Indore, Indore 453552, India
+
+Accepted XXX. Received YYY; in original form ZZZ
+
+ABSTRACT
+
+The first stars, the chemically pristine Population III, likely played an important role in heating the intergalactic medium during
+the epoch of cosmic dawn. The very high effective temperatures (∼ 105 K) predicted for the most massive Population III stars
+could also give rise to tell-tale signatures in the emission-line spectra of early star clusters or small galaxies dominated by
+such stars. Important quantities in modelling their observational signatures include their photon production rates at ultraviolet
+energies at which photons are able to ionize hydrogen and helium, dissociate molecular hydrogen and cause Lyman-𝛼 heating.
+Here, we model the spectral energy distributions of Population III stars to explore how these key quantities are affected by the
+initial mass and rotation of Population III stars given a wide range of models for the evolution of these stars. Our results indicate
+that rotating Population III stars that evolve to effective temperatures ∼ 2 × 105 K could potentially give rise to a very strong
+HeII 1640 Å emission line in the spectra from primordial star clusters, without requiring stellar masses of ≳ 100 M⊙ indicated
+by previous models for non-rotating Population III stars. The observable impact on 21-cm signatures from cosmic dawn and the
+epoch of reionization from our set of rotating stars that evolve to ∼ 2 × 105 K is modest, except in case of high Population III
+star formation efficiencies which imprint potentially detectable features in the global 21-cm signal and 21-cm power spectrum.
+Key words: Stars: Population III – stars: rotation – cosmology: dark ages, reionization, first stars – galaxies: high-redshift
+
+1 INTRODUCTION
+The first generation of stars, the chemically pristine Population III
+(hereafter Pop III), is believed to have played an important role in
+heating the early intergalactic medium during the epoch of cosmic
+dawn, in producing the first elements beyond lithium, and in the
+production of early black holes (for a recent review, see Klessen &
+Glover 2023). Such stars probably started forming around redshift 𝑧 ≈
+30, about 100 Myr after the Big Bang, but may have continued to form
+in pockets of primordial gas throughout the reionization epoch and
+well into the post-reionization era (e.g. Johnson 2010; Mebane et al.
+2018; Liu & Bromm 2020). In terms of observational probes, 21-cm
+cosmology may be able to probe the nature of Pop III stars at 𝑧 ≈ 15–
+30 through their impact on the temperature state of the intergalactic
+medium (e.g. Pochinda et al. 2024; Gessey-Jones et al. 2025; Ventura
+et al. 2025). At somewhat lower redshifts (𝑧 ≈ 6–15) one may hope to
+detect Pop III signatures in individual objects, either among samples
+of gravitationally lensed, high-redshift stars (Windhorst et al. 2018;
+Zackrisson et al. 2024), in gravitationally lensed Pop III star clusters
+and galaxies (Zackrisson et al. 2012; Vanzella et al. 2023; Fujimoto
+
+★
+
+E-mail: erik.zackrisson@physics.uu.se
+
+© 2025 The Authors
+
+et al. 2025), or within galaxies where Pop III star formation is able
+to continue alongside metal-enriched star formation (e.g. Sarmento
+et al. 2018; Venditti et al. 2023; Maiolino et al. 2024; Wang et al.
+2024). Other ways of empirically studying the properties of Pop III
+stars include the chemical signatures of Pop III supernovae in gas
+absorption systems (e.g. D’Odorico et al. 2023; Sodini et al. 2024;
+Vanni et al. 2024), in high-redshift quasars (Yoshii et al. 2022) and
+in second-generation stars in the local Universe (e.g. Fraser et al.
+2017; Ishigaki et al. 2018; Jiang et al. 2024; Bonifacio et al. 2025),
+as well as the direct detection of supernovae (e.g. Moriya et al. 2022;
+Venditti et al. 2024), gamma-ray bursts (e.g. Lazar & Bromm 2022),
+and tidal disruption events (Kar Chowdhury et al. 2024) produced by
+Pop III stars.
+Due to their chemically pristine composition, Pop III stars are
+expected to be more massive (e.g. Klessen & Glover 2023), and
+reach higher main-sequence temperatures (e.g. Schaerer 2002)
+than their metal-enriched descendants. This gives rise to higher
+hydrogen- and helium-ionizing photon production rates compared
+to metal-enriched stars, and also differences in the Lyman–Werner
+(LW; H2 -dissociating) and the Lyman-band rates important for the
+Wouthuysen–Field coupling during cosmic dawn. However, the production of photons in these different energy regimes depends not
+
+2
+
+J. Wasserman et al.
+
+only on initial mass but also on stellar rotation (e.g. Yoon et al. 2012;
+Murphy et al. 2021b; Sibony et al. 2022; Liu et al. 2025a,b; Hawcroft
+et al. 2025), and simulations have indicated that at least some Pop III
+may rotate at close to break-up speed (Hirano & Bromm 2018).
+Here, we use the Muspelheim (Zackrisson et al. 2024) models for
+the spectral energy distributions (SEDs) of Pop III stars to explore
+the impact of different sets of stellar evolutionary tracks on the ultraviolet (UV) radiation output of Pop III stars. These models use
+stellar atmosphere SEDs instead of the blackbody SEDs adopted in
+many previous studies (e.g. Yoon et al. 2012; Murphy et al. 2021b;
+Klessen & Glover 2023). In section 2, we present these models and
+in section 3 we report the resulting hydrogen- and helium-ionizing
+photon production rates, the LW and the Ly-band rates, along with a
+comparison to results derived from blackbody SEDs. The impact on
+studies of the UV SEDs of Population III star clusters and galaxies is
+explored in Section 4 and the impact on 21 cm-cosmology is shown
+in Section 5. Various future avenues for improvement of the models
+are discussed in section 6. Section 7 summarises our findings.
+
+2 SED MODELS OF POPULATION III STARS
+The SED models for Pop III stars (Muspelheim v.1) presented by
+Zackrisson et al. (2024) couple sets of stellar evolutionary tracks
+to a grid of stellar atmospheres to produce SEDs as a function of
+Zero Age Main Sequence (ZAMS) mass 𝑀ZAMS and age. Important
+simplifications used in the Muspelheim v.1 models include the use
+of stellar atmospheres for spherical stars without mass loss, and with
+fixed primordial abundances of hydrogen and helium. Hence, these
+models neglect the non-sphericity that come from high rotation rates,
+the effects of winds, and the effects of surface helium enhancement
+and surface self-pollution of metals during the course of evolution.
+These shortcomings are further discussed in Section 6. In this paper,
+we make use of Muspelheim SED models based on selected Pop III
+tracks from Yoon et al. (2012) at 𝑀ZAMS = 10–500 M⊙ , Windhorst
+et al. (2018) at 𝑀ZAMS = 10–100 M⊙ , Murphy et al. (2021a) at
+𝑀ZAMS = 1.7–120 M⊙ , Volpato et al. (2023) at 𝑀ZAMS = 100–1000
+M⊙ and Costa et al. (2025) at 𝑀ZAMS = 6–200 M⊙ . Out of these sets,
+the Yoon et al. (2012) and Murphy et al. (2021a) sets feature models
+both with and without rotation. Although Yoon et al. (2012) present
+stellar evolutionary tracks for several different initial velocities in the
+range 0.0–0.6 𝑣 K (where 𝑣 K is the Keplerian velocity at the equatorial
+surface), we here limit the discussion to the 𝑣 K = 0.0 and 0.4 models,
+for simplicity.
+While many of these tracks are similar close to the ZAMS, they
+differ significantly in their predictions of their low-𝑇eff extension at
+late stages of stellar evolution. While Zackrisson et al. (2024) argue
+that late evolution to 𝑇eff ≲ 15000 K have important consequences
+for the prospects of detecting lensed, individual Pop III stars at high
+redshifts, one could expect that such differences would be minor
+when it comes to the UV photon production rates of Pop III stars,
+since these are dominated by the more long-lived high-𝑇eff stages of
+these stars. However, the Yoon et al. (2012) tracks for rotating stars,
+which also include the effects of magnetic fields, differ from many
+other models of rotating Pop III stars in the literature (e.g. Murphy
+et al. 2021a; Sibony et al. 2022; Martinet et al. 2023; Volpato et al.
+2024; Tsiatsiou et al. 2024) in that some of the stars with high initial
+rotation velocity evolve to very high 𝑇eff (∼ 250000 K) at bolometric
+luminosities an order of magnitude above their ZAMS luminosities
+at the end of their lifetimes (similar effects are, however, seen in the
+rotating Pop III models in the recent paper by Hassan et al. 2025),
+with significant impact on their UV properties.
+MNRAS 000, 1–12 (2025)
+
+In this paper, we explore the UV properties of Pop III stars in terms
+of their production of H-, He- and He+ -ionizing photons, as well as
+their production of LW and Lyman-band photons.
+The instantaneous photon production rates 𝑄, expressed in units
+of photons per second, are defined as:
+∫ 𝜆2
+𝜆𝐿 𝜆
+𝑄𝑖 =
+d𝜆,
+(1)
+ℎ𝑐
+𝜆1
+where 𝐿 𝜆 is the monochromatic luminosity (erg−1 s−1 Å−1 ) at wavelength 𝜆, ℎ is Planck’s constant and 𝑐 the speed of light. The integration limits for the different rates are: 𝜆1 = 0 and 𝜆2 ≈ 912 Å for 𝑄 H ;
+𝜆1 = 0 and 𝜆 2 ≈ 504 Å for 𝑄 He ; 𝜆1 = 0 and 𝜆 2 ≈ 228 Å for 𝑄 He+ ;
+𝜆1 ≈ 912 Å and 𝜆2 = 1107 Å for 𝑄 LW ; 𝜆 1 ≈ 912 Å and 𝜆2 = 1216
+Ly
+Å for 𝑄 Ly . We also present 𝜖b , the Lyman-band photon production
+count per baryon, integrated over the stellar lifetime 𝑡 lifetime , given
+by:
+∫ 𝑡lifetime
+𝑚p
+Ly
+𝜖b =
+𝑄 Ly (𝑡)d𝑡,
+(2)
+𝑀ZAMS 0
+where 𝑚 p is the mass of a proton.
+While the procedure for generating stellar SEDs is the same as in
+Zackrisson et al. (2024), the numerical computation of 𝑄s has been
+improved, and the set of rotating stars presented here is also wider in
+terms of 𝑀ZAMS than that released in connection to the Zackrisson
+et al. (2024) paper.
+
+3 IONIZING AND LYMAN–WERNER FLUXES
+As previously shown by e.g. Bromm et al. (2001), Larkin et al.
+(2023), and Liu et al. (2025a), the SEDs of stellar atmosphere models
+predict UV properties of hot Pop III stars that deviate from those of
+blackbody SEDs scaled to the same effective temperatures 𝑇eff and
+bolometric luminosities 𝐿 bol . We illustrate this in Fig. 1, where we
+compare the SEDs of the TLUSTY stellar atmosphere models used
+in Muspelheim to those of blackbody SEDs for stars at 𝑇eff ≈ 4×104 –
+2 × 105 K. The photon counts per wavelength (𝑄 𝜆 ) differ between
+blackbody and stellar atmosphere SEDs in all the UV bands, albeit
+to different extent and in different directions throughout the range of
+model SEDs shown. It is worth noting, that even though the highest𝑇eff SED shown (≈ 2 × 105 K, a temperature reached only by rotating
+Yoon et al. (2012) 20–150 M⊙ Pop III stars in our set) exhibits the
+most blackbody-like shape (with small continuum breaks only), the
+peak of the stellar-atmosphere SED occurs at shorter wavelengths
+compared to the corresponding blackbody, an effect previously seen
+in the stellar atmosphere SEDs for Pop III stars by Bromm et al.
+(2001) and also for pure hydrogen atmospheres for the very hot
+central stars of planetary nebulae (Rauch 2003).
+The effect on the ionizing- and LW photon production rates can be
+seen in Fig. 2 where we compare results generated from blackbody
+SEDs (dashed lines; in good agreement with the results presented
+by Murphy et al. 2021b) and stellar atmospheres (solid lines) for
+the non-rotating Murphy et al. (2021a) stellar evolutionary tracks
+with initial masses in the range 9–120 M⊙ . The general behaviour
+follows what we would expect from Fig. 1, as the shape1 of the 𝑇eff =
+4.3 × 104 K, 𝑇eff = 5.5 × 104 and 𝑇eff = 9.5 × 104 SEDs in Fig. 1 are
+representative of early evolution along the 9 M⊙ , 15 M⊙ and 120 M⊙
+Murphy et al. (2021a) tracks in Fig. 2. The blackbody SEDs have
+
+1
+
+But not the 𝐿bol scaling, which in Fig. 1 has been chosen to avoid overlap
+of the SEDs in the plot
+
+UV photon production of the first stars
+
+Figure 1. SEDs (in units of photon production rate per unit wavelength) of
+TLUSTY stellar atmosphere models with primordial chemical composition
+for 𝑇eff = 2.05 × 105 K (purple solid line), 𝑇eff = 9.5 × 104 K (blue solid line),
+𝑇eff = 5.5 × 104 K (yellow solid line) and 𝑇eff = 4.3 × 104 K (red solid line),
+contrasted to the corresponding blackbody SEDs (purple, blue, yellow and red
+dashed lines). To avoid overlap, the SEDs are scaled to bolometric luminosities
+log( 𝐿bol /𝐿 ⊙ ) ≈ 6.8, 5.3, 4.3 and 3.3, respectively. The surface gravities of
+the TLUSTY SEDs has been set to log(𝑔) = 6.5 for the 𝑇eff = 2.05 × 105 K
+model and 5.0 in the other cases. The coloured patch indicates the extent of
+the LW band and the arrows the extent of the Lyman band and the H-, He-,
+He+ -ionizing part of the SEDs. Differences between the stellar atmosphere
+SEDs and the blackbody SEDs are seen in all of the different bands, although
+the degree to which blackbody models over- or underpredict the rates depend
+on 𝑇eff . The 𝑇eff = 4.3 × 104 , 5.5 × 104 and 9.5 × 104 K SEDs are considered
+representative of early evolution along the 9 M ⊙ , 15 M ⊙ and 120 M ⊙ Murphy
+et al. (2021a) Pop III tracks for both rotating and non-rotating stars, whereas
+the ≈ 2 × 105 K model is representative only for rotating Yoon et al. (2012)
+20–150 M⊙ stars at the very end of their lifetimes.
+
+consistently higher H-ionizing rates, but lower He-ionizing rates, for
+all the stellar masses plotted, although by no more than ≈ 0.2-0.3
+dex. The behaviour of the He+ -ionizing rates is more complex, as the
+blackbody under-predicts the flux at 85-120 M⊙ by ≈ 0.1-0.3 dex,
+but then severely starts to over-predict the He+ -ionizing flux by up to
+≈ 2 dex at lower masses due to the presence of a strong continuum
+break in the stellar atmosphere SEDs at the He+ edge (seen in the
+𝑇eff = 5.5 × 104 K and 4.3 × 104 K SEDs in Fig. 1). In the case of the
+LW flux, the blackbody SED over-predicts the flux by up to ≈ 0.15
+dex at the highest masses (as seen in the 𝑇eff = 9.5 × 104 K SED),
+becomes nearly identical at 15 M⊙ (as seen in the 𝑇eff = 5.3 × 104 K
+SED) and drops below the stellar atmosphere SED by ≈ 0.1 dex by
+9 M⊙ (as seen in the 𝑇eff = 4.3 × 104 K SED).
+When modelling the impact of Pop III stars on the intergalactic
+medium, the detailed temporal evolution of the UV photon rates
+is often neglected in favour of lifetime-integrated quantities (for a
+counterexample, see Gessey-Jones et al. 2022). This may be reasonable in cases where the lifetimes of the Pop III stars are short
+compared to timescales related to the thermal evolution of the IGM
+or changes in cosmic star formation rate density, as is the case for
+the more massive Pop III stars. In Fig. 3 we present the lifetimeintegrated photon production rates of our Pop III models per solar
+mass, compared to blackbody models from Klessen & Glover (2023)
+and models for rotating stars with homogeneous chemical evolution
+from Liu et al. (2025a, further discussed in section 5). For stellar
+
+3
+
+masses 𝑀 ≳ 10 M⊙ , all models except the Yoon et al. (2012) and
+Liu et al. (2025a) rotating models agree on the H-ionizing and Heionizing rates to within ≈ 0.3 dex. The Yoon et al. (2012) models at
+20 ≲ MZAMS ≲ 200 M⊙ , and all of the Liu et al. (2025a) models, undergo chemically homogeneous evolution which significantly boosts
+the ionizing photon production of these stars. At lower masses, models based on blackbodies are seen to deviate from those based on
+stellar atmosphere SEDs by up to ≈ 3 dex for H and ≈ 5 dex for He.
+In the case of the He+ -ionizing photon production rates, models
+based on blackbody SEDs at 𝑀 ≲ 100 M⊙ consistently produce
+higher values than corresponding models based on stellar atmosphere
+SEDs, as expected from Fig. 2, with an offset that reaches ≈ 6 dex
+at the lowest masses. Models for rotating Yoon et al. (2012) stars at
+20–300 M⊙ produce higher He+ -ionizing rates than all other models
+at comparable masses. This increase of He+ -ionzing photons due to
+rotation was already highlighted by Yoon et al. (2012), although the
+increase compared to non-rotating models becomes much higher in
+models based on stellar atmosphere SEDs (peaking at ≈ 3.8 dex at
+20 M⊙ ) compared to the blackbody SEDs (≲ 1.4 dex) used by Yoon
+et al. (2012), as shown in their fig. 7. Liu et al. (2025a) is not included
+in the He+ panel as their spectra are cut of at 124Å which leaves out
+a significant portion of the He+ -ionizing photons, especially at high
+Teff (Fig. 1).
+For the LW band, models that undergo CHE produce somewhat
+lower rates (≈ 0.2–0.3 dex) than other models at ≳ 50 M⊙ while
+lower masses produce rates on the higher side compared with other
+models. The Klessen & Glover (2023) blackbody models also produce systematically lower rates at low stellar masses (reaching offsets
+of ≈ 0.85 dex at 1.7 M⊙ ) compared to models based on stellar atmosphere SEDs. At high masses, the most notable outliers are the
+models by Schaerer (2002), which at 𝑀 > 5 M⊙ produce much
+higher rates than all other models (up to ≈ 0.7 dex higher). This
+discrepancy is discussed further in Section 6.2.
+The lifetime-average photon production rates corresponding to the
+lifetime-integrated rates in Fig. 3 for our Yoon et al. (2012) and Murphy et al. (2021a) models can be found in Table A1. 𝑄(𝑡) tables and
+both lifetime-integrated and lifetime-average photon production rates
+for all models can be downloaded from the Muspelheim webpage (see
+Section 7).
+
+4 IMPACT ON THE THE HEII𝜆1640 EMISSION LINE
+FROM POPULATION III STAR CLUSTERS
+The very high He+ -ionizing photon production rates of Pop III rotating Yoon et al. (2012) stars are interesting in the context of HeII emission lines from high-redshift galaxies. In particular, the HeII𝜆1640
+emission line has been proposed as a potential Pop III signature, as
+it can become very strong (with rest-frame equivalent widths up to
+EW1640 ∼ 100 Å) in the presence of 𝑇eff ∼ 105 K stars (e.g. Tumlinson & Shull 2000; Schaerer 2002; Raiter et al. 2010; Nakajima
+& Maiolino 2022). For non-rotating stars, effective temperatures required to produce EW1640 ≳ 30 Å are not reached until ∼ 100 M⊙ ,
+which means that a very strong HeII𝜆1640 line from an integrated
+stellar population (Pop III star cluster or Pop III-dominated galaxy)
+could serve as an indicator of a top-heavy Pop III stellar initial mass
+function (IMF). Recently, a system with EW1640 ≳ 30 Å and no
+detectable metal lines, located in the halo of the galaxy GNz-11 at
+𝑧 ≈ 10.6, was found by Maiolino et al. (2024) who interpreted this
+as evidence of a Pop III IMF extending at least up to 500 M⊙ and a
+total mass of ∼ 2 × 105 𝑀⊙ in Pop III stars.
+In Fig. 4, we explore the temporal evolution of the He+ -ionizing
+MNRAS 000, 1–12 (2025)
+
+J. Wasserman et al.
+
+4
+
+50.5
+
+9M
+12 M
+15 M
+
+50.0
+
+20 M
+30 M
+40 M
+
+60 M
+85 M
+120 M
+
+log10(QH)[s 1]
+
+49.0
+48.5
+48.0
+47.5
+47.0
+0.0
+
+2.5
+
+5.0
+
+7.5 10.0 12.5 15.0 17.5 20.0
+Age [Myr]
+9M
+12 M
+15 M
+
+20 M
+30 M
+40 M
+
+60 M
+85 M
+120 M
+
+log10(QHe+)[s 1]
+
+48
+
+20 M
+30 M
+40 M
+
+60 M
+85 M
+120 M
+
+2.5
+
+5.0
+
+50.0
+
+7.5 10.0 12.5 15.0 17.5 20.0
+Age [Myr]
+9M
+12 M
+15 M
+
+49.5
+
+20 M
+30 M
+40 M
+
+60 M
+85 M
+120 M
+
+log10(QLW)[s 1]
+
+49.0
+
+46
+
+48.5
+
+44
+
+48.0
+
+42
+40
+0.0
+
+9M
+12 M
+15 M
+
+log10(QHe)[s 1]
+
+49.5
+
+50.0
+49.5
+49.0
+48.5
+48.0
+47.5
+47.0
+46.5
+46.0
+0.0
+
+47.5
+2.5
+
+5.0
+
+7.5 10.0 12.5 15.0 17.5 20.0
+Age [Myr]
+
+47.0
+0.0
+
+2.5
+
+5.0
+
+7.5 10.0 12.5 15.0 17.5 20.0
+Age [Myr]
+
+Figure 2. Photon productions rates (𝑄𝑖 ) as a function of stellar age for Murphy et al. (2021b) non-rotating models. The top left panel is for H-ionizing photons,
+the top right He-ionizing, the bottom left He+ -ionizing, and the bottom right LW-photons. Solid lines represent predictions based on stellar atmospheres and
+dashed lines the corresponding predictions for black body spectra. The largest difference between photon production rates of black body and atmospheres is
+the over-prediction of He+ -ionizing photons for black bodies, reaching up to ∼ 2.3 dex for the less massive stars. As expected from Fig. 1, the effect becomes
+smaller for the higher-mass stars and even inverses for the most massive, as a result of their high 𝑇eff (≈ 9.5 × 104 K for the 120 M ⊙ model) close to the ZAMS.
+The other photon production rates are less drastically affected.
+
+rates of our Yoon et al. (2012) models, with and without rotation.
+Since rotation in these models shifts the early main sequence to lower
+𝑇eff and slightly lower bolometric luminosities, rotation leads to lower
+He+ rates during early evolution (although this phase is very brief
+in the case of the 500 M⊙ model). However, since the rotating stars
+eventually evolve to become hotter and more luminous than their
+non-rotating counterparts for 𝑀 > 10 M⊙ , the He+ -ionizing photon
+rates of these rotating stars grow by several orders of magnitude at
+high ages. This effect, coupled to the extended lifetimes of these stars
+(due to rotational mixing renewing the fuel in the core), explains the
+boosted time-integrated 𝑄 𝐻𝑒+ rates for rotating Yoon et al. (2012)
+models shown in Fig. 3.
+Since Fig. 4 indicates that the He+ -ionizing rates of these 20–30
+M⊙ rotating models can become comparable, for about ∼ 1 Myr at
+the end of their lifetimes, to the peak He+ -ionizing rates of 100150 M⊙ stars (maintained over a similar timescale, but during early
+evolution), it seems that very strong HeII𝜆1640 emission in principle
+could be produced by rotating Pop III stars without the presence of
+𝑀 ≳ 100 M⊙ stars.
+MNRAS 000, 1–12 (2025)
+
+To explore this, we use the latest version of the photoionization
+code cloudy (v23.01), last described by Chatzikos et al. (2023) and
+Gunasekera et al. (2023), to investigate the effect of gas parameters
+on the line strength and equivalent width of the HeII𝜆1640 emission
+line in gas clouds surrounding single stars from the Yoon et al. (2012)
+set. We assume primordial gas abundances, a plane-parallel nebula,
+and an ionization parameter in the range log 𝑈 = −1 to −4.
+In Fig. 5 we show the resulting equivalent widths of the HeII𝜆1640
+emission line for a subset of Yoon et al. (2012) tracks. Comparing our
+results with HeII𝜆1640 EWs from Schaerer (2003) and Raiter et al.
+(2010) – which both assume fully sampled Pop III IMFs – we are
+able to obtain only slightly higher HeII𝜆1640 equivalent widths than
+the most extreme values seen in their models. However, the major
+difference is that both Schaerer (2003) and Raiter et al. (2010) require
+IMFs dominated by very massive stars to reach the high EWs that we
+are able to obtain for 20 M⊙ stars. We also explore other ionization
+parameters, not shown in the figure, and find that the equivalent
+widths are largely stable at log(U) ≥ -3, but note a significant drop at
+log(U) = -4 in agreement with Raiter et al. (2010).
+
+UV photon production of the first stars
+
+62
+
+62
+
+62.2
+
+59
+
+62.0
+
+58
+
+61.8
+
+57
+
+61.6
+1
+0.5
+1.0
+
+2
+1.5
+2.0
+log10(M) [M ]
+
+3
+2.5
+
+Y12rot
+Y12
+S02
+K23bb
+M21rot
+M21
+V23
+W18
+L25rot
+3.0
+
+1
+log10(Qtot
+He+ /MZAMS) [M ]
+
+60
+55
+61
+
+50
+
+60
+
+45
+40
+
+59
+58
+0.5
+
+2
+3
+1.0
+1.5
+2.0
+2.5
+log10(M) [M ]
+
+Y12rot
+Y12
+S02
+K23bb
+M21rot
+M21
+V23
+W18
+3.0
+
+58
+62.0
+61.5
+61.0
+60.5
+60.0 1
+
+56
+54
+52
+50
+
+62.00
+61.75
+61.50
+61.25
+61.00
+60.75
+60.50
+60.25
+60.00
+
+0.5
+
+1
+log10(Qtot
+LW/MZAMS) [M ]
+
+1
+log10(Qtot
+H /MZAMS) [M ]
+
+60
+
+1
+log10(Qtot
+He /MZAMS) [M ]
+
+60
+
+61
+
+56
+
+5
+
+0.5
+
+1.0
+
+2
+
+3
+
+1.5
+2.0
+log10(M) [M ]
+
+Y12rot
+Y12
+S02
+K23bb
+M21rot
+1.0
+1.5
+2.0
+log10(M) [M ]
+
+2.5
+
+Y12rot
+Y12
+S02
+K23bb
+M21rot
+M21
+V23
+W18
+L25rot
+3.0
+
+M21
+V23
+W18
+L25rot
+2.5
+
+3.0
+
+Figure 3. Lifetime-integrated UV photon productions rates per solar mass from rotating and non-rotating models with tracks from Yoon et al. (2012, black and
+blue; Y12rot and Y12), Murphy et al. (2021b, teal and red; M21rot and M21), Volpato et al. (2023, yellow; V23), Windhorst et al. (2018, green, W18), Klessen
+& Glover (2023, maroon; K23bb ), Schaerer (2002, magenta; S02), and Liu et al. (2025a, purple; L25rot ). The top left gives the values for H-ionizing photons, the
+top right for He-ionizing, the bottom left for He+ -ionizing, and the bottom right for LW photons. The values from Klessen & Glover (2023) are based on tracks
+from Murphy et al. (2021b) and Martinet et al. (2023), using black body spectra which is why they differ from the other models, especially at lower masses. Liu
+et al. (2025a) is omitted from the He+ panel as they only include wavelengths above 124Å. In general, all models based on stellar atmosphere SEDs agree on the
+H-ionzing and He-ionizing fluxes to within ≈ 0.3 dex for non-rotating stars at 𝑀 ≳ 10 M ⊙ and within ≈ 0.7 dex when rotation is included for these masses. The
+use of black body spectra severely overpredict the He+ -ionizing fluxes compared to comparable models based on stellar atmosphere SEDs. However, models
+for rotating Yoon et al. (2012) stars at 20–300 M⊙ produce higher He+ -ionizing fluxes than all other models. In the LW-band, the Schaerer (2002) predictions
+constitute a significant outlier which we discuss further in section 6.2.
+
+Our results indicate that a stellar population of Yoon et al. (2012)
+rotating stars with an IMF peaking at ∼ 20 M⊙ in principle could
+produce equally strong HeII𝜆1640 equivalent widths as what has
+been seen for Pop III models with non-rotating stars and more topheavy IMFs (like the 50-500 𝑀⊙ , Salpeter-slope model, and the
+𝑀𝑐 = 60, 𝜎 = 1, 1–500 M⊙ lognormal model from Raiter et al.
+2010). Invoking rotating Yoon et al. (2012) ∼ 20 M⊙ Pop III stars
+to explain the HeII𝜆1640 emission in the halo of GNz-11 would
+not only remove the requirement of 𝑀 ≳ 100 M⊙ Pop III stars to
+explain the high equivalent width, but also slightly reduce the total
+mass in Pop III stars required to explain the line luminosity. Because
+our rotating ∼ 20 M⊙ stars reach somewhat higher 𝑄 He+ /𝑀ZAMS
+ratio than the models used by Maiolino et al. (2024), we find that
+the total mass in Pop III stars could be reduced by a factor of ∼ 2
+compared to their estimate, although this would happen only in a
+scenario where all Pop III stars within the system are rapidly rotating
+
+∼ 20 M⊙ stars caught right in their hottest phase. An IMF strongly
+peaked around ∼ 20M⊙ is not favoured by current simulations (for
+a review, see Klessen & Glover 2023), but the chemical properties
+of several extremely metal-poor stars in the Milky Way halo and in
+ultrafaint dwarfs can be explained by supernovae in the ≲ 40 𝑀⊙
+mass range, either from faint supernovae with fallback, hypernovae
+or a combination of supernovae and winds from rapidly rotating Pop
+III stars (e.g. Ishigaki et al. 2018; Skúladóttir et al. 2021; Placco et al.
+2021; Jeena et al. 2023). Under the assumption of second-generation
+stars having been enriched by single Pop III supernovae, the exercise
+of fitting models of supernova ejecta to stellar abundance patterns
+can give the appearance of a log-normal Pop III IMF peaked around
+∼ 25 M⊙ Ishigaki et al. (2018), but folding in duo-enrichment and the
+propensity for failed supernovae can also make observed abundance
+patterns consistent with an IMF extending to much lower and higher
+masses (Jiang et al. 2024). Finally, a Pop III IMF peaked around 20
+MNRAS 000, 1–12 (2025)
+
+J. Wasserman et al.
+
+10 M
+20 M
+30 M
+60 M
+100 M
+150 M
+200 M
+300 M
+500 M
+
+50
+log10(QHe+)[s 1]
+
+48
+46
+44
+
+101
+100
+10 1
+
+42
+400
+
+20M , rot
+20M
+200M , rot
+200M
+
+102
+EW HeII 1640 [Å]
+
+6
+
+5
+
+10
+
+15
+Age [Myr]
+
+20
+
+25
+
+Figure 4. Comparison of He+ ionizing fluxes for rotating and non-rotating
+tracks from Yoon et al. (2012). The dashed lines show rotating models with
+initial velocity v = 0.4v 𝑘 and the solid lines show the corresponding nonrotating models. Large differences between rotating and non-rotating stars
+are seen for > 10 M ⊙ due to extended lifetimes for rotating stars and the very
+high temperatures (≈ 2 × 105 K) that 20–150 M⊙ rotating stars evolve to at
+the end of their lifetimes.
+
+𝑀⊙ is also consistent with the Pop III IMF range found by cosmological models of Milky Way formation, which self-consistently follow
+the chemical evolution across cosmic time and constrain the Pop III
+IMF by matching the number and properties of observed ancient
+metal-poor stars (e.g. Koutsouridou et al. 2024).
+It is important to note that since the 𝑇eff ∼ 105 K phase of the 20
+M⊙ rotating Yoon et al. (2012) model is reached only at the very end
+of its ≈ 15 Myr lifetime, a Pop III system that also hosts very massive
+Pop III stars with 𝑀 ∼ 140-–260 𝑀⊙ (and lifetimes as short as ≈ 2
+Myr for the models considered here) will already have experienced
+the explosion of pair-instability supernovae (e.g. Heger & Woosley
+2002). If the hosting halo has low mass, these energetic explosions
+might have cleared away much of the remaining gas from the vicinity
+of the stars, which would lead to very low ionization parameters and
+thus reduced HeII𝜆1640 equivalent widths. For the lowest-mass Pop
+III haloes, a large fraction of the gas may even be removed from
+the halo (e.g. Bromm et al. 2003; Kitayama & Yoshida 2005; Mead
+et al. 2025). This would preclude the detection of any emission lines
+associated with the late evolution of these 20 M⊙ stars, unless the
+gas can quickly recollapse (in the Magg et al. 2022b simulations
+of ∼ 106 𝑀⊙ Pop III haloes, recollapse can happen in as little as
+≈ 10 Myr, although the median recollapse time is 50 Myr). Even
+without supernovae, the initially dense gas around a cluster of Pop
+III stars in ≲ 108 M⊙ haloes may be expelled to large radii and
+low densities in response to the radiation field from the stars, with
+long recombination time-scales and significant leakage of ionizing
+photons into the intergalactic medium as a result (e.g. Sibony et al.
+2022). Detailed simulations would be required to assess whether
+rotating 20 M⊙ stars would realistically be able to produce strong
+HeII emission lines (at the level of the recently detected Maiolino
+et al. 2024 Pop III galaxy candidate) late in the lifetimes of these
+stars, even if evolution were to follow the Yoon et al. (2012) models.
+MNRAS 000, 1–12 (2025)
+
+10 2
+
+0.0
+
+2.5
+
+5.0
+
+7.5 10.0 12.5 15.0
+Time [Myr]
+
+Figure 5. Equivalent widths of the HeII𝜆1640 line as a function of time for
+the Yoon et al. (2012) 20 and 200 M ⊙ rotating and non-rotating stars. The
+parameters used in the cloudy calculations are log U = -2 and n(H) = 102 .
+At three points we show the equivalent widths for hydrogen density n(H)
+= 101 (circles), 103 (triangles), and 104 (squares). The 20 M ⊙ star reaches
+equivalent widths surpassing the maximum of the 200 M ⊙ stars at the end
+of its lifetime. Increasing the hydrogen density in the nebular cloud slightly
+increases the predicted equivalent width.
+
+5 IMPACT ON THE 21 CM SIGNAL FROM COSMIC DAWN
+The impact of Pop III stars on the cosmic 21-cm signal is multifold.
+During the epoch of cosmic dawn, the Lyman-band continuum flux of
+Pop III stars plays an important role through the Wouthuysen–Field
+(WF) effect, wherein Lyman-𝛼 photons scatter off neutral hydrogen
+in the intergalactic medium and act to couple the 21-cm spin temperature to the kinetic temperature of the gas (Wouthuysen 1952;
+Field 1958). The scattering of Lyman-line photons also acts to raise
+the kinetic temperature of the intergalactic medium (e.g. Chuzhoy
+& Shapiro 2007; Reis et al. 2021). At the same time, LW photons
+dissociate H2 molecules, suppressing further Pop III star formation
+in molecular cooling dark matter minihaloes (e.g. Fialkov et al. 2013;
+Visbal et al. 2014; Mirocha et al. 2018). During the epoch of reionization, Pop III stars that are still able to form ionize their surrounding
+gas, leading to a suppression in the 21-cm signal (e.g. Liu et al.
+2025a)
+In Fig. 6, we plot the lifetime-integrated Lyman-band photon proLy
+duction rates per ZAMS stellar baryon 𝜖b of our Pop III models in
+relation to the corresponding predictions presented by Gessey-Jones
+et al. (2022) for non-rotating Pop III stars, and those of Liu et al.
+(2025a) for rotating Pop III stars. Both of these are, like the Muspelheim ones, based on TLUSTY stellar atmosphere SEDs, but employ
+different assumptions concerning stellar evolution. The Gessey-Jones
+et al. (2022) and Liu et al. (2025a) models both trace evolution up
+to the end of main sequence under the assumption of no mass loss,
+whereas our models also include later evolutionary stages and – in
+the case of Yoon et al. (2012) models with rotation – substantial mass
+loss. Whereas the Gessey-Jones et al. (2022) models are based on
+non-rotating stars, the Liu et al. (2025a) models are based on Sibony
+et al. (2022) tracks for polytrope stars subject to chemically homogeneous evolution due to strong internal mixing. While Sibony et al.
+(2022) choose to remain agnostic about the physical reason for what
+
+UV photon production of the first stars
+
+Y12rot
+Y12
+M21rot
+M21
+C25
+
+5
+
+Ly
+4
+b (M)/10
+
+4
+
+V23
+W18
+GJ22
+L25rot
+
+3
+2
+101
+
+102
+Stellar mass [M ]
+
+103
+
+Figure 6. Total Lyman-band emission per stellar baryon as a function of
+ZAMS mass for the various stellar models considered in this work. Results
+from Gessey-Jones et al. (2022, GJ22) are shown in blue for comparison (cf.
+their fig. 5). The rotating models from Murphy et al. (2021a, M21rot ) exhibit a
+clear enhancement in Lyman-band emission, primarily due to their extended
+lifetimes. In contrast, the Yoon et al. (2012, Y12rot and Y12) and Liu et al.
+(2025a, L25rot ) models display a more nuanced behaviour: while rotating
+stars with 𝑀ZAMS ≲ 60 𝑀⊙ emit more than their non-rotating counterparts
+from other studies, their emission falls below that of non-rotating Yoon et al.
+(2012) models for 𝑀ZAMS ≳ 30 𝑀 ⊙ and ≳ 20 𝑀⊙ respectively.
+
+would cause this mixing, fast rotation represents a strong candidate,
+as evident by the rotating Yoon et al. (2012) models, which in many
+cases also undergo chemically homogeneous evolution. For simplicity, we hereafter refer to the Liu et al. (2025a) models as rotating, in
+line with the discussion of these models by Liu et al. (2025a,b).
+Ly
+Differences in 𝜖b between the models at any given mass are within
+about a factor of two, with the rotating stars below 30 M⊙ consistently
+resulting in higher rates compared with their non-rotating counterparts due to their increased lifetimes. Interestingly for our discussion,
+we note a large difference compared to the Gessey-Jones et al. (2022)
+models at a mass of 20 M⊙ , where the Yoon et al. (2012) models for
+rotating stars (which have the potential to boost the HeII𝜆1640 emisLy
+sion line equivalent width; Fig. 5) give rise to an 𝜖b that is higher by
+a factor of ≈ 1.7. Since it is important to establish whether differences
+of this amplitude could have any significant impact on 21-cm signatures from the pre-reionization Universe, we use the semi-numerical
+code 21cmSPACE (e.g. Fialkov et al. 2014; Reis et al. 2021; GesseyJones et al. 2022, 2025)2 to simulate the global 21-cm signal and the
+spherically averaged 21-cm power-spectrum Δ21 (𝑘, 𝑧) at 𝑧 = 6 − 40,
+under the extreme assumption of a single-star IMF where all Pop III
+stars have the same mass (a rough approximation of the case where
+the IMF is strongly peaked at this mass).
+The simulations are performed on a cosmological box size of
+(384 cMpc) 3 , and include effects such as baryon dark-matter streaming velocity (Fialkov et al. 2012), Lyman–Werner feedback (important during the cosmic dawn; Fialkov et al. 2013; Muñoz et al. 2022),
+Lyman-𝛼 heating and scattering (Reis et al. 2021), photoheating feedback (Sobacchi & Mesinger 2013; Cohen et al. 2016), X-ray heating
+(Fialkov et al. 2014; Fialkov & Barkana 2014) and ionization from
+2
+
+https://www.cosmicdawnlab.com/21cmSPACE
+
+7
+
+flexible spectra models (important during the epoch of reionization).
+In particular, for this work, we use the code version described in
+Liu et al. (2025a) where the effect of ionizing photons from Pop III
+stars was introduced. To put the Yoon et al. (2012) Pop III models
+into context, we also run 21cmSPACE with the Pop III models of
+Gessey-Jones et al. (2022) and Liu et al. (2025a).
+We consider two models, with varying Pop III star formation efficiencies 𝑓★,III (i.e. fraction of gas converted in stars): Model 1 where
+Pop II SFR dominates at 𝑧 ≈ 15 with 𝑓★,III = 0.1% and Model 2 where
+Pop III SFR is comparable to Pop II at 𝑧 ≈ 15 with 𝑓★,III = 1%, as
+shown in Figure A1. In both models, we fix the Pop II star-formation
+efficiency to 𝑓★,II = 1% which generally matches observations at UV
+luminosity function observations at 𝑧 ≲ 10 (Tacchella et al. 2018;
+Sipple & Lidz 2024; Dhandha et al. 2025), and an star-formation averaging timescale of 𝑡★,II = 0.2𝐻 (𝑧) −1 . We also fix 𝑡 rec = 100 Myr,
+which is the recovery time for Pop II star formation after the onset
+of Pop III supernovae (Magg et al. 2022a). To pinpoint the role of
+Lyman-band emissivities of Pop III stars in shaping the 21-cm signal,
+we switch off X-ray heating from Pop III stars. For Pop II, we adopt
+an X-ray luminosity 𝐿 X tied to the star formation rate (SFR) of each
+−1 (Fragos et al.
+halo, according to 𝐿 X /SFR = 3×1040 erg s−1 M−1
+⊙ yr
+2013a,b), which is consistent with constraints on the diffuse X-ray
+background, and HERA constraints on the 21-cm power spectrum at
+𝑧 ≲ 10 (Dhandha et al. 2025). Throughout, we assume instantaneous
+emission from Pop III stars, which is a reasonable assumption for
+stellar masses ≳ 10 M⊙ (Gessey-Jones et al. 2022).
+Fig. 7 shows the resulting global 21-cm signal, and the power
+spectrum generated at a scale of 𝑘 = 0.24 cMpc−1 , for six models:
+four models assuming a single-mass IMF of 20 M⊙ for the rotating
+and non-rotating Yoon et al. (2012) model, non-rotating GesseyJones et al. (2022) model, and a rotating Liu et al. (2025a) model,
+as well as two additional models of single-mass IMFs at 200 M⊙
+for rotating and non-rotating Yoon et al. (2012) stars. The 200 M⊙
+non-rotating Yoon et al. (2012) model is included here as an example
+of a type of star that, because of its high 𝑇eff , could produce strong
+HeII𝜆1640 emission despite being non-rotating (Fig. 5).
+In the case of the 21-cm power spectra, we also plot the expected
+5𝜎 detection limit for 1080 hours of tracking-scan observations using
+the Square Kilometre Array (SKA-Low) with 6 hours of observation
+per night for 180 days. The derived detection limit considers both the
+thermal noise and the sample variance. To estimate the uncertainty
+in the power spectrum due to thermal noise, we used the package
+21cmSense3 (Pober et al. 2013, 2014). We only considered the SKALow AA∗ array configuration (Sridhar et al. 2024) within a radius
+of 2 km from the array center and assumed the moderate foreground
+model in 21cmSense. The sample variance is calculated according
+to the equation
+Í
+¯ 2
+𝑛𝑖 (𝑘 𝑖 − 𝑘)
+2
+𝜎sample
+=
+,
+(3)
+𝑁 −1
+where N is the total number of counts and 𝑛𝑖 is the number of counts
+in the 𝑘 𝑖 -bin. The total noise is then estimated as the sum of thermal
+noise and sample variance in quadrature:
+√︃
+2
+2
+𝜎total = 𝜎sample
++ 𝜎thermal
+.
+(4)
+5.1 The global 21-cm signal
+The differences in the global signal between the Pop III stellar models
+can be explained by considering the epochs 𝑧 ∼ 25 where the early
+3
+
+https://github.com/rasg-affiliates/21cmSense/tree/main
+MNRAS 000, 1–12 (2025)
+
+J. Wasserman et al.
+
+0
+
+103
+
+140
+
+20
+
+150 13 14 15
+
+40
+T21 [mK]
+
+Model1
+
+130
+
+2 (k = 0.24 Mpc 1) [mK2]
+21
+
+8
+
+60
+80
+100
+120
+
+20 M
+20 M
+20 M
+20 M
+
+Yoon+12rot
+Liu+25rot
+Gessey-Jones+22
+Yoon+12
+
+200 M Yoon+12
+200 M Yoon+12rot
+5 SKA detection limit
+
+7.5
+
+10.0 12.5 15.0 17.5 20.0 22.5 25.0
+z
+
+102
+101
+100
+
+140
+10
+
+0
+
+120
+
+20
+
+140
+
+40
+T21 [mK]
+
+15
+
+z
+
+25
+
+30
+
+103
+
+17.5
+
+80
+100
+120
+140
+160
+5
+
+10
+
+15
+
+10 15.0
+
+Model2
+
+160 15.0
+
+60
+
+20
+
+2 (k = 0.24 Mpc 1) [mK2]
+21
+
+5
+
+z
+
+20
+
+25
+
+30
+
+102
+101
+20 M Yoon+12rot
+20 M Liu+25rot
+20 M Gessey-Jones+22
+20 M Yoon+12
+200 M Yoon+12
+200 M Yoon+12rot
+5 SKA detection limit
+
+100
+
+10 15.0
+
+7.5
+
+10.0 12.5 15.0 17.5 20.0 22.5 25.0
+z
+
+Figure 7. Simulated 21-cm global signal and power spectrum at k = 0.24cMpc −1 , based on single-mass IMFs (20 M⊙ or 200 M⊙ , as specified in the legend)
+with stellar SEDs from Yoon et al. (2012), Gessey-Jones et al. (2022), and Liu et al. (2025a). Model 1 (upper panels) and Model 2 (lower panels) differ in the
+assumed Pop III star-formation efficiency (0.1% and 1% respectively) as discussed in Section 5. The black line shows the estimated 5𝜎 SKA detection limit
+from a 1080h observation using the array assembly AA* configuration of SKA1-Low within a radius of 2 km from the array center. Differences between the
+different SED models are very small for both the global 21-cm signal and the 21-cm power spectrum in Model 1, but observationally significant in Model 2. In
+Model 2, the 21-cm signatures of the 20 M ⊙ Yoon et al. (2012) rotating model (capable of producing very strong HeII𝜆1640 emission) deviates from those of
+the 200 M ⊙ Yoon et al. (2012) models (also able to produce strong HeII𝜆1640 emission), which indicates that 21-cm observations may be able to help break
+degeneracies between such cases. Similarly, the rotating and non-rotating 200 M ⊙ Yoon et al. (2012) models differ in both models demonstrating the potential
+for the 21-cm signal in differentiating Pop III stellar properties.
+
+onset of the global signal absorption trough is almost entirely dictated
+by the Lyman band emissivities (Fig. 6)4 , while the absorption trough
+at 𝑧 ∼ 15 is also sensitive to the ionizing flux from the stars (Fig. 3).
+During the cosmic dawn (𝑧 ≈ 20 − 30), a higher Lyman-band
+Ly
+flux 𝜖 b leads to a stronger WF effect and more rapid onset of significant 21-cm absorption. This would be strongest for the rotating
+20 M⊙ Yoon et al. (2012) model and weakest for the rotating 200
+M⊙ Yoon et al. (2012) model, which indicates that the 21-cm signal
+observations can have the potential to distinguish the IMF of stellar
+populations (e.g. as also demonstrated in Gessey-Jones et al. 2025).
+The signal also shows differentiating features between the rotating
+and non-rotating 200 M⊙ Yoon et al. (2012) models, and a similar
+(but reversed) trend for the 20 M⊙ Yoon et al. (2012) models. In case
+4
+
+Although Lyman–Werner photons do contribute to suppression of starformation in molecular cooling haloes, and we account for this.
+MNRAS 000, 1–12 (2025)
+
+of the rotating 20 M⊙ Liu et al. (2025a) model, since it exhibits a
+similar Lyman flux to the non-rotating 20 M⊙ Yoon et al. (2012), it
+shows similar behaviour at high redshifts. The difference in the 21cm signal is of order few mK at the onset of the absorption signal up
+to 20 mK (∼ 20 − 30%) when Lyman-coupling is efficient (at 𝑧 ≈ 20
+for Model 1 and 𝑧 ≈ 25 for Model 2).
+During the epoch of heating and reionization (𝑧 ≲ 20), the differences in these models is dominated by the ionization from Pop III
+stars (as explored in Liu et al. 2025a). The case of rotating models
+show convergence since they predict similarly strong ionizing fluxes
+across stellar masses (at ≳ 10 M⊙ ), manifested as a suppressed absorption through in both Model 1 and Model 2. In the latter case,
+the differences are particularly large with a difference also seen in
+the redshift of the absorption signal as ionization becomes efficient.
+Indeed, this is reflected in the neutral hydrogen fraction shown in
+Fig. A2 with a 10 − 20% reduction between the non-rotating and ro-
+
+UV photon production of the first stars
+tating cases (and thus, a proportional suppression of the signal). With
+the non-rotating models, the 20 M⊙ Gessey-Jones et al. (2022) model
+has the least efficient ionization, followed by 20 M⊙ Yoon et al. (2012)
+model (which shows similar absorption amplitude/timing), and lastly
+the 200. M⊙ Yoon et al. (2012) model.
+
+5.2 The 21-cm power spectrum
+The predicted high-redshift (𝑧 ≳ 20) 21-cm power spectra for Model
+1 falls below the 5𝜎 detection limit of the SKA, and close to the limit
+for Model 2. At lower redshifts (𝑧 ≲ 20), where the power spectrum
+is deemed detectable according to our error model, the differences
+between stellar models are marginal in Model 1 (especially if considering degeneracies with other astrophysical parameters that we keep
+fixed here). However, there are more pronounced and detectable differences in Model 2 which come from the ionization signature of
+the rotating Pop III stars, as in the global signal. In these cases, as
+the Universe is rapidly ionized, the ionized bubbles imprint boosted
+fluctuations in the power spectrum at 𝑧 ≈ 12.5. The non-rotating
+cases show a similar trend to the global signals, where the 20 M⊙
+Gessey-Jones et al. (2022) model shows the smallest ionization peak
+of ≈ 100 mK2 , while the 20 M⊙ Yoon et al. (2012) model and 200
+M⊙ Yoon et al. (2012) model show higher peaks by ×2 and ×3.
+Overall, we conclude that the dramatic difference seen between the
+He+ -ionizing rates (Fig. 4) and HeII𝜆1640 equivalent widths (Fig. 5)
+can imprint some detectable 21-cm signatures. The differences are
+modest for low Pop III star-formation efficiency (Model 1), potentially only detectable with high-accuracy global signal experiments
+(noise levels of ∼ 10 mK) at 𝑧 ≈ 20. For high Pop III star-formation
+efficiency (Model 2, which shows early reionization), the differences
+imprinted in the 21-cm power spectrum at 𝑧 ≲ 20 are more dramatic
+and detectable by SKA.
+
+6 DISCUSSION
+6.1 Blackbody versus stellar atmosphere SEDs
+When comparing our results with the models based on blackbody
+spectra presented by Klessen & Glover (2023) in Fig. 3, we find a
+large discrepancy is in the He+ ionizing rates for stars < 80 M⊙ ,
+where blackbody spectra result in rates orders of magnitude higher
+than those based on stellar atmosphere spectra. These differences,
+also echoed in our Murphy et al. (2021a) comparison of momentary
+𝑄 He+ for stellar atmosphere spectra versus blackbody spectra in Fig.
+2, are due to the different shapes of blackbody and stellar atmosphere
+SEDs and the lack of continuum breaks in the former case, as shown
+in Fig. 1. Hence, blackbody spectra should not be used to estimate
+Pop III photon production rates or fluxes in the He+ ionizing energy
+range.
+We also note significant deviations in the other UV bands for stars
+< 9 M⊙ . While Murphy et al. (2021b) did comment on the reliability
+of the blackbody approximation for the Murphy et al. (2021b) tracks
+(through a comparison to the results of Schaerer 2002), this offset
+was not noted since the Murphy et al. (2021b) study of UV photon
+production rates considered only stars of masses ≥ 9 M⊙ from the
+Murphy et al. (2021a) set. The blackbody approximation from their
+lower-mass tracks is adopted by Klessen & Glover (2023) which
+overestimates the ionizing rates for all low mass stars and slightly
+underestimates the LW rates for these same stars. However, as long
+as the Pop III IMF has a characteristic mass ≳ 9 M⊙ – which is often
+argued to be the case (e.g. Hartwig et al. 2024; Liu et al. 2024) – this
+
+9
+
+discrepancy should not be a major source of error, as the ionizing
+photon production in that case would be dominated by the more
+massive stars.
+6.2 The Lyman–Werner emissivities of Pop III stars
+The LW photon production rates of Pop III stars are important for
+establishing the LW radiation background during cosmic dawn and
+for the quenching of subsequent star formation in low-mass haloes.
+When the lifetime-integrated 𝑄 LW is expressed as LW photons per
+stellar baryon, there are two distinct values that are frequently featured in the literature: 4800 and ∼ 105 . Our models do not favour
+either of these, but instead favour values in the intermediate range
+≈ 8 × 103 to 3 × 104 (see Fig. 3; log 𝑄 LW /𝑀ZAMS values in this figure
+can be converted to log LW photons per stellar baryon by subtracting
+≈ 57.08). The lower literature value (4800) stems from Barkana &
+Loeb (2005), based on Pop III spectra from Bromm et al. (2001)
+and an adopted power-law slope of the spectrum, whereas the higher
+value (∼ 105 ) is usually attributed to Schaerer (2002). Indeed, when
+the Schaerer (2002) Table 4 values are converted into these units,
+they peak at ∼ 9 × 104 LW photons per baryon at a Pop III stellar
+mass of 60 M⊙ . However, as shown in Fig. 3, the Schaerer (2002)
+𝑄 LW are higher than ours at 𝑀 ≳ 10 M⊙ by up to a factor ≈ 5 (0.7
+dex). Mas-Ribas et al. (2016) also note difficulties in reproducing the
+Schaerer (2002) LW rates and suggest that the Schaerer (2002) LW
+rates may have been integrated from 11.2 eV (wavelength 1107 Å) to
+infinity, rather than to 13.6 eV (wavelength 912 Å), which would lead
+to boosted rates. Lifetime-integrated LW rates per stellar baryons in
+the ∼ 105 range for Pop III stars are also reported in the recent paper
+by Costa et al. (2025), and in that case the LW rates were indeed
+integrated from 11.2 eV to infinity (Guglielmo Costa, private communication). After correcting the Costa et al. (2025) limit from 11.2
+to 13.6 eV, their values agree with ours. Our values are moreover in
+good agreement with those recently presented by Liu et al. (2025a)
+for the non-rotating Pop III tracks of Gessey-Jones et al. (2022) and
+the rotating Pop III tracks of Sibony et al. (2022). Hence, our recommendation is to use values for the lifetime-integrated LW photon
+counts per stellar baryons of ≈ 8 × 103 to 3 × 104 .
+6.3 Viability of the stellar atmosphere models
+The results in this paper are based on SED models for Pop III stars,
+which at 𝑇eff > 15000 K make use of TLUSTY (Hubeny & Lanz
+1995) stellar atmosphere models for plane-parallel, hydrostatic stars
+with primordial surface composition. While certainly more realistic
+than blackbody SEDs, such stellar atmosphere models may still represent an oversimplification that could impact the emitted ionizing
+photon production rates of Pop III stars. The surface He/H composition of Pop III stars may change over the course of their lifetimes,
+and the surface may also get polluted by metals produced within the
+star, due to either chemically homogeneous evolution for a rapidly
+rotating star (e.g. Yoon et al. 2012; Liu et al. 2025a), but also due to
+dredge-ups for a non-rotating star (e.g. Volpato et al. 2023).
+While Schaerer (2002) notes that the impact of the H/He level on
+the stellar atmosphere spectra is small, this statement likely does not
+apply to models for rotating stars with helium mass fractions close
+to unity (Sibony et al. 2022). Liu et al. (2025a) do take the evolving
+helium abundance into account in their modelling of Pop III stars,
+and while they note that this helps the stellar atmosphere model
+converge, no analysis of the impact of the pure-helium atmosphere
+on the emerging stellar atmosphere spectra was presented in their
+paper.
+MNRAS 000, 1–12 (2025)
+
+10
+
+J. Wasserman et al.
+
+Indeed, as shown in Zackrisson et al. (2024), the set of TLUSTY
+stellar atmosphere models used by Muspelheim (with fixed H/He
+fractions) are – due to convergence problems – sometimes unable
+to reach the low surface gravities of all Pop III stellar evolutionary
+tracks. This is for instance the case of the 𝑇eff ∼ 2 × 105 K state of
+the rotating 20 M⊙ Yoon et al. (2012) stars highlighted in Section
+4 in relation to its potential to produce a very strong HeII𝜆1640
+emission line. These 20 M⊙ rotating stars lie Δ log(𝑔) ≈ 0.25 below
+the last converged grid data point. However, based on how the He+ flux changes with log(𝑔) within the converged grid at these 𝑇eff , this
+is likely to have a very minor effect on 𝑄 He+ .
+Rotational mixing and surface composition can also be affected
+by the presence of a companion Pop III star in a binary system (Song
+et al. 2020). Rapid rotation could furthermore drive a mechanical
+wind, and metals at the surface of Pop III stars may also trigger
+line-driven winds (e.g. Liu et al. 2021; Jeena et al. 2023). The effects
+of winds on the emerging ionizing photon production rates of Pop
+III stars were explored by Schaerer (2002), who concluded that the
+ionizing photon rates would not be substantially affected compared
+to TLUSTY stellar atmosphere spectra in their models, even in their
+high mass-loss case. However, Schaerer (2002) also notes that for sufficiently dense winds, the He+ flux could potentially get substantially
+suppressed (as demonstrated by Chen et al. 2015 for metal-enriched
+stars). It may therefore be interesting to revisit this issue in the future,
+using stellar atmosphere spectra with updated wind models for Pop
+III stars. However, it should be noted that if winds are launched only
+late in the evolution of Pop III stars, this is unlikely to matter for the
+time-integrated emission of ionizing photons into the surrounding
+medium, unless the Pop III stars also exhibit high 𝑇eff in such stages.
+Finally, rapidly rotating stars would not be able to retain spherical shapes, and would exhibit different 𝑇eff and surface gravities at
+their poles compared to their equators, thereby exhibiting anisotropic
+SEDs. While orientations would be randomized in a large population
+of such stars, mechanical mass-loss due to rotation may also preferentially happen in the direction perpendicular to the rotation axis,
+which could introduce a systematic bias in the UV emissivities seen
+by the surrounding interstellar and intergalactic medium, compared
+with the simplified models used here.
+
+6.4 Binary Pop III stars
+In this paper, we have exclusively considered models for single stars,
+even though Pop III stars in simulations often form binary and higherorder systems (e.g. Stacy & Bromm 2013; Sugimura et al. 2020).
+As shown by Tsai et al. (2023), binary interactions can boost the
+UV fluxes of Pop III stars (in the case of lifetime-integrated fluxes
+by up to a factor of ≈ 2 in the LW band, which is the strongest
+effect seen in their models). However, binary interactions are also
+expected to affect stellar rotation rates (e.g. de Mink et al. 2013),
+which by themselves affect stellar evolution and consequently these
+fluxes. Given the many open questions regarding the stellar initial
+mass function, initial rotation rate and binary interactions of Pop
+III stars, models of the UV flux from these stars are likely to suffer
+from significant uncertainties until the arrival of better observational
+constraints. As rotation and binary interactions affect the end states
+of Pop III stars, such constraints may for instance come from the
+study of Pop III supernova yields in second generation stars or gas
+absorption systems, from direct observations of Pop III supernovae or
+gamma-ray bursts (and their afterglows), or from future gravitational
+wave detectors.
+MNRAS 000, 1–12 (2025)
+
+7 CONCLUSIONS
+In this work, we have presented a set of publicly available models
+for the UV photon production rates of single Pop III stars, with and
+without rotation, across a wide range of stellar masses. We have investigated how the photon production rates are affected by the adoption
+of blackbody spectra compared with stellar atmosphere spectra. We
+have also investigated and compared the resulting lifetime-integrated
+emissivities of several different sets of Pop III tracks. Lastly, for selected models, we have explored the potential role of stellar rotation
+on the equivalent width of the HeII𝜆1640 emission line, on the 21cm global signal, and on the the spherically averaged 21-cm power
+spectrum.
+Our conclusions can be summarized as follows:
+(i) The assumption of blackbody spectra generally overestimate
+He+ ionizing rates, in some cases by more than an order of magnitude,
+depending on the 𝑇eff of the star.
+(ii) Based on the stellar evolutionary tracks of Yoon et al. (2012),
+which take rotation and magnetic fields into account and predict
+evolution to 𝑇eff > 105 K at the end stages of evolution, we show
+that rotation significantly increases the total He+ ionizing photon
+production of Pop III stars in the range 20 to 100 M⊙ compared with
+stars without rotation.
+(iii) If gas can be retained with high-redshift Pop III systems
+dominated by rotating ∼ 20 M⊙ stars, then such systems may be
+able to produce very strong HeII𝜆1640 emission with rest-frame
+equivalent widths comparable to or higher than systems dominated
+by ≳ 100 M⊙ Pop III stars.
+(iv) Differences between rotating and non-rotating Pop III stars in
+21-cm observables like the 21-cm global signal and the 21-cm power
+spectrum are modest for sub-per cent level Pop III star-formation
+efficiency, and more pronounced for per cent Pop III star-formation
+efficiency, with potential for detectability with the SKA. The differences are of order ∼ 20 per cent for the global signal (at 𝑧 ≈ 15) and
+a factor of 2 − 3 for the ionization peak in the power spectrum (at
+𝑧 ≈ 12.5) due to the extreme ionizing flux of rotating stars.
+(v) We highlight that two disparate values for the Lyman–Werner
+rates of Pop III stars have been used in the previous literature on
+21-cm cosmology and high-redshift star formation (∼ 5 × 103 vs
+∼ 1 × 105 LW photons per stellar baryon). Our models instead favour
+a value around ∼ 104 LW photons per stellar baryon, in line with
+other recent estimates (e.g. Liu et al. 2025a).
+
+ACKNOWLEDGEMENTS
+This manuscript is based on work initially conducted as part of the
+first author’s Master’s thesis Wasserman (2025). The work has been
+expanded upon and revised in collaboration with the co-authors for
+this publication. EZ acknowledges project grant 2022-03804 from
+the Swedish Research Council (Vetenskapsrådet). This work was
+supported in part by the International Centre for Theoretical Sciences
+(ICTS) for participating in the program - Radio Cosmology and
+Continuum Observations in the SKA Era: A Synergic View. (code:
+ICTS/radiocoscon2025/04). An anonymous referee provided useful
+comments that helped improve the quality of the manuscript.
+
+DATA AVAILABILITY
+Publicly available grids of Muspelheim models (SEDs, 𝑄(𝑡))
+and both lifetime-integrated and lifetime-average photon produc-
+
+UV photon production of the first stars
+tion rates are available from: https://www.astro.uu.se/~ez/
+muspelheim/muspelheim.html
+
+REFERENCES
+Barkana R., Loeb A., 2005, ApJ, 626, 1
+Bonifacio P., Caffau E., François P., Spite M., 2025, A&ARv, 33, 2
+Bromm V., Kudritzki R. P., Loeb A., 2001, ApJ, 552, 464
+Bromm V., Yoshida N., Hernquist L., 2003, ApJ, 596, L135
+Chatzikos M., et al., 2023, Rev. Mex. Astron. Astrofis., 59, 327
+Chen Y., Bressan A., Girardi L., Marigo P., Kong X., Lanza A., 2015, MNRAS, 452, 1068
+Chuzhoy L., Shapiro P. R., 2007, ApJ, 655, 843
+Cohen A., Fialkov A., Barkana R., 2016, MNRAS, 459, L90
+Costa G., et al., 2025, A&A, 694, A193
+D’Odorico V., et al., 2023, arXiv e-prints, p. arXiv:2311.16803
+Dhandha J., et al., 2025, MNRAS, 542, 2292
+Fialkov A., Barkana R., 2014, MNRAS, 445, 213
+Fialkov A., Barkana R., Tseliakhovich D., Hirata C. M., 2012, MNRAS, 424,
+1335
+Fialkov A., Barkana R., Visbal E., Tseliakhovich D., Hirata C. M., 2013,
+MNRAS, 432, 2909
+Fialkov A., Barkana R., Visbal E., 2014, Nature, 506, 197
+Field G. B., 1958, Proceedings of the IRE, 46, 240
+Fragos T., et al., 2013a, ApJ, 764, 41
+Fragos T., Lehmer B. D., Naoz S., Zezas A., Basu-Zych A., 2013b, ApJ, 776,
+L31
+Fraser M., Casey A. R., Gilmore G., Heger A., Chan C., 2017, MNRAS, 468,
+418
+Fujimoto S., et al., 2025, arXiv e-prints, p. arXiv:2501.11678
+Gessey-Jones T., et al., 2022, MNRAS, 516, 841
+Gessey-Jones T., et al., 2025, arXiv e-prints, p. arXiv:2502.18098
+Gunasekera C. M., et al., 2023, Research Notes of the American Astronomical
+Society, 7, 246
+Hartwig T., Lipatova V., Glover S. C. O., Klessen R. S., 2024, MNRAS, 535,
+516
+Hassan J., Perna R., Cantiello M., Parsotan T., Lazzati D., Walker N., 2025,
+arXiv e-prints, p. arXiv:2505.21463
+Hawcroft C., et al., 2025, arXiv e-prints, p. arXiv:2505.24841
+Heger A., Woosley S. E., 2002, ApJ, 567, 532
+Hirano S., Bromm V., 2018, MNRAS, 476, 3964
+Hubeny I., Lanz T., 1995, ApJ, 439, 875
+Ishigaki M. N., Tominaga N., Kobayashi C., Nomoto K., 2018, ApJ, 857, 46
+Jeena S. K., Banerjee P., Chiaki G., Heger A., 2023, MNRAS, 526, 4467
+Jiang R., Zhao G., Li H., Xing Q., 2024, ApJ, 976, 68
+Johnson J. L., 2010, MNRAS, 404, 1425
+Kar Chowdhury R., Chang J. N. Y., Dai L., Natarajan P., 2024, ApJ, 966, L33
+Kitayama T., Yoshida N., 2005, ApJ, 630, 675
+Klessen R. S., Glover S. C. O., 2023, ARA&A, 61, 65
+Koutsouridou I., Salvadori S., Skúladóttir Á., 2024, ApJ, 962, L26
+Larkin M. M., Gerasimov R., Burgasser A. J., 2023, AJ, 165, 2
+Lazar A., Bromm V., 2022, MNRAS, 511, 2505
+Liu B., Bromm V., 2020, MNRAS, 497, 2839
+Liu B., Sibony Y., Meynet G., Bromm V., 2021, MNRAS, 506, 5247
+Liu B., Gurian J., Inayoshi K., Hirano S., Hosokawa T., Bromm V., Yoshida
+N., 2024, MNRAS, 534, 290
+Liu B., et al., 2025a, arXiv e-prints, p. arXiv:2504.00535
+Liu B., Sibony Y., Meynet G., Bromm V., 2025b, ApJ, 980, L30
+Magg M., et al., 2022a, MNRAS, 514, 4433
+Magg M., Schauer A. T. P., Klessen R. S., Glover S. C. O., Tress R. G., Jaura
+O., 2022b, ApJ, 929, 119
+Maiolino R., et al., 2024, A&A, 687, A67
+Martinet S., Meynet G., Ekström S., Georgy C., Hirschi R., 2023, A&A, 679,
+A137
+Mas-Ribas L., Dijkstra M., Forero-Romero J. E., 2016, ApJ, 833, 65
+Mead J., et al., 2025, ApJ, 980, 62
+Mebane R. H., Mirocha J., Furlanetto S. R., 2018, MNRAS, 479, 4544
+
+11
+
+Mirocha J., Mebane R. H., Furlanetto S. R., Singal K., Trinh D., 2018,
+MNRAS, 478, 5591
+Moriya T. J., Quimby R. M., Robertson B. E., 2022, ApJ, 925, 211
+Muñoz J. B., Qin Y., Mesinger A., Murray S. G., Greig B., Mason C., 2022,
+MNRAS, 511, 3657
+Murphy L. J., et al., 2021a, MNRAS, 501, 2745
+Murphy L. J., Groh J. H., Farrell E., Meynet G., Ekström S., Tsiatsiou S.,
+Hackett A., Martinet S., 2021b, MNRAS, 506, 5731
+Nakajima K., Maiolino R., 2022, MNRAS, 513, 5134
+Placco V. M., et al., 2021, ApJ, 912, L32
+Pober J. C., et al., 2013, AJ, 145, 65
+Pober J. C., et al., 2014, ApJ, 782, 66
+Pochinda S., et al., 2024, MNRAS, 531, 1113
+Raiter A., Schaerer D., Fosbury R. A. E., 2010, A&A, 523, A64
+Rauch T., 2003, A&A, 403, 709
+Reis I., Fialkov A., Barkana R., 2021, MNRAS, 506, 5479
+Sarmento R., Scannapieco E., Cohen S., 2018, ApJ, 854, 75
+Schaerer D., 2002, A&A, 382, 28
+Schaerer D., 2003, A&A, 397, 527
+Sibony Y., Liu B., Simmonds C., Meynet G., Bromm V., 2022, A&A, 666,
+A199
+Sipple J., Lidz A., 2024, ApJ, 961, 50
+Skúladóttir Á., et al., 2021, ApJ, 915, L30
+Sobacchi E., Mesinger A., 2013, MNRAS, 432, 3340
+Sodini A., et al., 2024, A&A, 687, A314
+Song H., Meynet G., Li Z., Peng W., Zhang R., Zhan Q., 2020, ApJ, 892, 41
+Sridhar S., Williams W., Breen S., 2024, SKA Low and Mid Subarray Templates
+Stacy A., Bromm V., 2013, MNRAS, 433, 1094
+Sugimura K., Matsumoto T., Hosokawa T., Hirano S., Omukai K., 2020, ApJ,
+892, L14
+Tacchella S., Bose S., Conroy C., Eisenstein D. J., Johnson B. D., 2018, ApJ,
+868, 92
+Tsai S.-H., Chen K.-J., Whalen D., Ou P.-S., Woods T. E., 2023, ApJ, 951, 84
+Tsiatsiou S., et al., 2024, A&A, 687, A307
+Tumlinson J., Shull J. M., 2000, ApJ, 528, L65
+Vanni I., Salvadori S., D’Odorico V., Becker G. D., Cupani G., 2024, ApJ,
+967, L22
+Vanzella E., et al., 2023, A&A, 678, A173
+Venditti A., Graziani L., Schneider R., Pentericci L., Di Cesare C., Maio U.,
+Omukai K., 2023, MNRAS, 522, 3809
+Venditti A., Bromm V., Finkelstein S. L., Graziani L., Schneider R., 2024,
+MNRAS, 527, 5102
+Ventura E. M., Qin Y., Balu S., Wyithe J. S. B., 2025, arXiv e-prints, p.
+arXiv:2502.08971
+Visbal E., Haiman Z., Terrazas B., Bryan G. L., Barkana R., 2014, MNRAS,
+445, 107
+Volpato G., Marigo P., Costa G., Bressan A., Trabucchi M., Girardi L., 2023,
+ApJ, 944, 40
+Volpato G., Marigo P., Costa G., Bressan A., Trabucchi M., Girardi L., Addari
+F., 2024, ApJ, 961, 89
+Wang X., et al., 2024, ApJ, 967, L42
+Wasserman J., 2025, The high-redshift signatures of Population III stars,
+Master’s thesis, Uppsala University, forthcoming
+Windhorst R. A., et al., 2018, ApJS, 234, 41
+Wouthuysen S. A., 1952, AJ, 57, 31
+Yoon S. C., Dierks A., Langer N., 2012, A&A, 542, A113
+Yoshii Y., Sameshima H., Tsujimoto T., Shigeyama T., Beers T. C., Peterson
+B. A., 2022, ApJ, 937, 61
+Zackrisson E., et al., 2012, MNRAS, 427, 2212
+Zackrisson E., et al., 2024, MNRAS, 533, 2727
+de Mink S. E., Langer N., Izzard R. G., Sana H., de Koter A., 2013, ApJ, 764,
+166
+
+MNRAS 000, 1–12 (2025)
+
+12
+
+J. Wasserman et al.
+
+APPENDIX A: EXTRA TABLES AND FIGURES
+Table A1 shows the average lifetime photon production rates for the
+Yoon et al. (2012) and Murphy et al. (2021a) models used in this
+work. Fig. A2 shows the neutral fractions from the 21cmSPACE
+simulations in Fig. 7.
+This paper has been typeset from a TEX/LATEX file prepared by the author.
+
+MNRAS 000, 1–12 (2025)
+
+UV photon production of the first stars
+
+13
+
+Table A1. Average lifetime photon production rates. The first column is the model source, the second gives the initial rotational velocity in fraction of the
+Keplerian velocity for Yoon et al. (2012) and critical velocity for Murphy et al. (2021a). The third column is the ZAMS mass in solar masses, the fourth through
+eighth column is the logarithm of the average lifetime photon production rates [𝑠 −1 ] for the respective energy ranges, and the last column is the lifetimes in years.
+Source
+
+Rotation
+
+Mass
+
+𝑄𝐻
+
+𝑄 𝐻𝑒
+
+𝑄 𝐻𝑒+
+
+𝑄 𝐿𝑊
+
+𝑄 𝐿𝑦
+
+Lifetime
+
+Yoon+12
+Yoon+12
+Yoon+12
+Yoon+12
+Yoon+12
+Yoon+12
+Yoon+12
+Yoon+12
+Yoon+12
+Yoon+12
+Yoon+12
+Yoon+12
+Yoon+12
+Yoon+12
+Yoon+12
+Yoon+12
+Yoon+12
+Yoon+12
+Murphy+21
+Murphy+21
+Murphy+21
+Murphy+21
+Murphy+21
+Murphy+21
+Murphy+21
+Murphy+21
+Murphy+21
+Murphy+21
+Murphy+21
+Murphy+21
+Murphy+21
+Murphy+21
+Murphy+21
+Murphy+21
+Murphy+21
+Murphy+21
+
+0.0
+0.0
+0.0
+0.0
+0.0
+0.0
+0.0
+0.0
+0.0
+0.4
+0.4
+0.4
+0.4
+0.4
+0.4
+0.4
+0.4
+0.4
+0.0
+0.0
+0.0
+0.0
+0.0
+0.0
+0.0
+0.0
+0.0
+0.4
+0.4
+0.4
+0.4
+0.4
+0.4
+0.4
+0.4
+0.4
+
+10
+20
+30
+60
+100
+150
+200
+300
+500
+10
+20
+30
+60
+100
+150
+200
+300
+500
+9
+12
+15
+20
+30
+40
+60
+85
+120
+9
+12
+15
+20
+30
+40
+60
+85
+120
+
+47.71
+48.66
+49.10
+49.68
+50.02
+50.27
+50.40
+50.59
+50.83
+47.56
+48.88
+49.26
+49.79
+50.12
+50.36
+50.52
+50.69
+50.87
+47.68
+48.10
+48.23
+48.84
+49.07
+49.45
+49.81
+50.15
+50.38
+47.57
+47.93
+48.26
+48.64
+49.09
+49.36
+49.70
+49.94
+50.17
+
+47.23
+48.31
+48.77
+49.39
+49.74
+50.00
+50.14
+50.33
+50.57
+46.98
+48.63
+49.03
+49.59
+49.94
+50.18
+50.32
+50.48
+50.62
+47.13
+47.63
+47.90
+48.40
+48.82
+49.16
+49.52
+49.79
+50.02
+47.06
+47.52
+47.89
+48.30
+48.77
+49.05
+49.39
+49.64
+49.89
+
+41.98
+43.79
+44.87
+47.66
+48.54
+48.98
+49.19
+49.45
+49.73
+41.53
+47.48
+48.00
+48.75
+49.21
+49.48
+49.59
+49.68
+49.74
+43.98
+44.86
+45.47
+46.19
+46.95
+47.40
+47.94
+48.37
+48.72
+41.73
+42.42
+43.02
+43.73
+44.77
+45.92
+47.50
+48.20
+48.65
+
+47.57
+48.20
+48.54
+49.00
+49.29
+49.54
+49.66
+49.85
+50.08
+47.57
+48.12
+48.40
+48.82
+49.10
+49.32
+49.54
+49.74
+50.07
+47.30
+47.48
+47.55
+48.07
+47.91
+47.87
+48.34
+49.31
+49.60
+47.47
+47.74
+47.94
+48.18
+48.49
+48.70
+49.01
+49.24
+49.43
+
+47.75
+48.37
+48.70
+49.17
+49.46
+49.71
+49.83
+50.01
+50.25
+47.75
+48.28
+48.56
+48.98
+49.26
+49.47
+49.69
+49.90
+50.25
+47.61
+47.83
+48.01
+48.26
+48.58
+48.81
+49.09
+49.34
+49.54
+47.65
+47.92
+48.11
+48.34
+48.65
+48.86
+49.18
+49.41
+49.59
+
+2.61E+07
+1.02E+07
+6.81E+06
+4.16E+06
+3.27E+06
+2.70E+06
+2.64E+06
+2.40E+06
+2.18E+06
+2.74E+07
+1.52E+07
+9.51E+06
+5.28E+06
+3.93E+06
+3.28E+06
+2.97E+06
+2.55E+06
+2.23E+06
+2.00E+07
+1.93E+07
+1.40E+07
+1.03E+07
+6.64E+06
+5.21E+06
+4.03E+06
+3.40E+06
+3.05E+06
+2.38E+07
+2.25E+07
+1.65E+07
+1.19E+07
+7.60E+06
+5.76E+06
+4.41E+06
+3.60E+06
+3.14E+06
+
+MNRAS 000, 1–12 (2025)
+
+J. Wasserman et al.
+
+Model 1
+
+10 1
+
+M = 20 M Yoon+12rot
+M = 20 M Liu+25rot
+M = 20 M Gessey-Jones+22
+M = 20 M Yoon+12
+M = 200 M Yoon+12rot
+M = 200 M Yoon+12
+Pop III
+Pop II
+
+SFRD [M /yr/Mpc3]
+
+10 2
+10 3
+10 4
+10 5
+10 6
+
+10 2
+
+10 7
+10 8 5
+
+Model 2
+
+10 1
+
+SFRD [M /yr/Mpc3]
+
+14
+
+10 3
+10 4
+10 5
+M = 20 M Yoon+12rot
+M = 20 M Liu+25rot
+M = 20 M Gessey-Jones+22
+M = 20 M Yoon+12
+M = 200 M Yoon+12rot
+M = 200 M Yoon+12
+Pop III
+Pop II
+
+10 6
+10 7
+
+10
+
+15
+
+20
+z
+
+25
+
+30
+
+35
+
+10 8 5
+
+10
+
+15
+
+20
+z
+
+25
+
+30
+
+35
+
+Figure A1. Star formation rate density as a function of redshift for the 21cmSPACE simulations models included in Fig. 7.
+
+1.0
+
+Model1
+
+1.0
+
+0.6
+
+0.6
+
+0.4
+0.2
+
+xHI
+
+0.8
+
+xHI
+
+0.8
+
+Model2
+
+20 M Yoon+12rot
+20 M Liu+25rot
+20 M Gessey-Jones+22
+20 M Yoon+12
+200 M Yoon+12
+200 M Yoon+12rot
+
+0.0
+5.0 7.5 10.0 12.5 15.0 17.5 20.0 22.5 25.0
+z
+
+0.4
+0.2
+
+20 M Yoon+12rot
+20 M Liu+25rot
+20 M Gessey-Jones+22
+20 M Yoon+12
+200 M Yoon+12
+200 M Yoon+12rot
+
+0.0
+5.0 7.5 10.0 12.5 15.0 17.5 20.0 22.5 25.0
+z
+
+Figure A2. Neutral hydrogen fractions as a function of redshift for the 21cmSPACE simulations models included in Fig. 7. For the rotational stellar models in
+scenario 2, the Universe is already ionized to 𝑥HI ≈ 0.8 by 𝑧 ≈ 15.
+
+MNRAS 000, 1–12 (2025)
+
+

@@ -1,0 +1,4372 @@
+MNRAS 000, 1–20 (2024)
+
+Preprint 11 November 2024
+
+Compiled using MNRAS LATEX style file v3.0
+
+arXiv:2409.01286v2 [astro-ph.GA] 8 Nov 2024
+
+Ionising properties of galaxies in JADES for a stellar mass complete
+sample: resolving the cosmic ionising photon budget crisis at the Epoch of
+Reionisation
+C. Simmonds,1,2★ S. Tacchella,1,2 K. Hainline,3 B. D. Johnson,4 D. Puskás,1,2 B. Robertson,5
+W. M. Baker,1,2 R. Bhatawdekar,6 K. Boyett,7,8 A. J. Bunker,9 P. A. Cargile,4 S. Carniani,10
+J. Chevallard,9 M. Curti,11 E. Curtis-Lake,12 Z. Ji,3 G. C. Jones,9 N. Kumari,13 I. Laseter,14
+R. Maiolino,1,2,15 M. V. Maseda,14 P. Rinaldi,3 A. Stoffers,1,2 H. Übler,1,2 N. C. Villanueva,1,2
+C. C. Williams,16 C. Willott,17 J. Witstok,1,2 and Y. Zhu3
+1 The Kavli Institute for Cosmology (KICC), University of Cambridge, Madingley Road, Cambridge, CB3 0HA, UK
+2 Cavendish Laboratory, University of Cambridge, 19 JJ Thomson Avenue, Cambridge, CB3 0HE, UK
+3 Steward Observatory, University of Arizona, 933 N. Cherry Avenue, Tucson, AZ 85721, USA
+4 Center for Astrophysics | Harvard & Smithsonian, 60 Garden St., Cambridge, MA 02138, USA
+5 Department of Astronomy and Astrophysics University of California, Santa Cruz, 1156 High Street, Santa Cruz CA 96054, USA
+6 European Space Agency (ESA), European Space Astronomy Centre (ESAC), Camino Bajo del Castillo s/n, 28692 Villanueva de la Cañada, Madrid, Spain
+7 School of Physics, University of Melbourne, Parkville 3010, VIC, Australia
+8 ARC Centre of Excellence for All Sky Astrophysics in 3 Dimensions (ASTRO 3D), Canberra 2611, Australia
+9 Department of Physics, University of Oxford, Denys Wilkinson Building, Keble Road, Oxford OX1 3RH, UK
+10 Scuola Normale Superiore, Piazza dei Cavalieri 7, I-56126 Pisa, Italy
+11 European Southern Observatory, Karl-Schwarzschild-Strasse 2, 85748 Garching, Germany
+12 Centre for Astrophysics Research, Department of Physics, Astronomy and Mathematics, University of Hertfordshire, Hatfield AL10 9AB, UK
+13 AURA for European Space Agency, Space Telescope Science Institute, 3700 San Martin Drive. Baltimore, MD, 21210
+14 Department of Astronomy, University of Wisconsin-Madison, 475 N. Charter St., Madison, WI 53706 USA
+15 Department of Physics and Astronomy, University College London, Gower Street, London WC1E 6BT, UK
+16 NSF’s National Optical-Infrared Astronomy Research Laboratory, 950 North Cherry Avenue, Tucson, AZ 85719, USA
+17 NRC Herzberg, 5071 West Saanich Rd, Victoria, BC V9E 2E7, Canada
+
+Accepted XXX. Received YYY; in original form ZZZ
+
+ABSTRACT
+
+We use NIRCam imaging from the JWST Advanced Deep Extragalactic Survey (JADES) to study the ionising properties of a
+sample of 14652 galaxies at 3 ≤ 𝑧phot ≤ 9, 90% complete in stellar mass down to log(M★/[M⊙ ])≈ 7.5. Out of the full sample,
+1620 of the galaxies have spectroscopic redshift measurements from the literature. We use the spectral energy distribution
+fitting code Prospector to fit all available photometry and infer galaxy properties. We find a significantly milder evolution
+of the ionising photon production efficiency (𝜉ion ) with redshift and UV magnitude than previously reported. Interestingly, we
+observe two distinct populations in 𝜉ion , distinguished by their burstiness (given by SFR10 /SFR100 ). Both populations show the
+same evolution with 𝑧 and MUV , but have a different 𝜉ion normalisation. We convolve the more representative log(𝜉ion (𝑧, MUV ))
+relations (accounting for ∼ 97% of the sample), with luminosity functions from literature, to place constraints on the cosmic
+ionising photon budget. By combining our results, we find that one of our models can match the observational constraints from
+the Ly𝛼 forest at 𝑧 ≲ 6. We conclude that galaxies with MUV between −16 and −20, adopting a reasonable escape fraction, can
+produce enough ionising photons to ionise the Universe, without exceeding the required ionising photon budget.
+Key words: Galaxies: high-redshift – Galaxies: evolution – Galaxies: general – Cosmology: dark ages, reionization, first stars
+
+1 INTRODUCTION
+The Epoch of Reionisation (EoR) is one of the major phase transitions of the Universe, when it went from being dark and neutral
+to highly ionised, allowing Lyman Continuum (LyC; with energies
+
+★ E-mail: cs2210@cam.ac.uk
+
+© 2024 The Authors
+
+above 13.6 eV) radiation to travel through the intergalactic medium
+(IGM). Observations place the end of this epoch at 𝑧 ∼ 6 (Becker
+et al. 2001; Fan et al. 2006; Yang et al. 2020), with some favouring a
+later reionisation at 𝑧 ∼ 5 (Keating et al. 2020; Bosman et al. 2022;
+Zhu et al. 2024). There is a debate regarding which sources are the
+main responsible agents in ionising the Universe. The community
+widely agrees that young massive stars within galaxies are key, since
+
+2
+
+C. Simmonds et al.
+
+they produce copious amounts of ionising photons, which might be
+able to escape the interstellar medium (ISM), and eventually ionise
+the IGM (Hassan et al. 2018; Rosdahl et al. 2018; Trebitsch et al.
+2020). However, the nature of the galaxies that drive reionisation:
+bright and massive, faint and low-mass, or a combination of them,
+is still uncertain (Finkelstein et al. 2019; Naidu et al. 2020; Robertson 2022; Yeh et al. 2023). Moreover, it is unclear how much active
+galactic nuclei (AGN) contribute to reionisation (Dayal et al. 2020;
+Maiolino et al. 2023; Madau et al. 2024).
+The stellar mass of galaxies has been seen to correlate with how
+efficiently ionising photons are produced (Simmonds et al. 2024a).
+Simulations indicate that it also relates how these ionising photons
+escape (Paardekooper et al. 2015). The latter is measured through
+their Lyman Continuum escape fractions (fesc (LyC)), defined as the
+ratio between the H-ionising radiation that is emitted intrinsically,
+and that which reaches the IGM. In order for galaxies to account for
+the reionisation of the Universe, either a significant average fesc value
+is required (fesc =10-20%; Ouchi et al. 2009; Robertson et al. 2013,
+2015; Finkelstein et al. 2019; Naidu et al. 2020), or a high ionising
+photon production efficiency. These ranges of fesc have been observed
+for individual star-forming galaxies at 𝑧 ≲ 4 (e.g. Borthakur et al.
+2014; Bian et al. 2017; Vanzella et al. 2018; Izotov et al. 2021), but
+not usually in large numbers (Leitet et al. 2013; Leitherer et al. 2016;
+Steidel et al. 2018; Flury et al. 2022). An alternative to high escape
+fractions is a high ionising photon production efficiency (𝜉ion ), given
+by the ratio between the rate of ionising photons being emitted (𝑛¤ ion ),
+and the monochromatic non-ionising ultra-violet (UV) luminosity
+density. Indeed, observational studies up to 𝑧 ∼ 9 have found 𝜉ion to
+increase as a function of redshift (e.g. Endsley et al. 2021; Stefanon
+et al. 2022; Tang et al. 2023; Atek et al. 2023; Simmonds et al. 2023,
+2024a; Harshan et al. 2024; Pahl et al. 2024; Saxena et al. 2024).
+The behaviour of 𝜉ion as a function of redshift has important
+consequences on the cosmic budget of reionisation (e.g. Muñoz
+et al. 2024), defined as the number of ionising photons produced
+per comoving volume unit of the Universe ( 𝑁¤ ion ). Three ingredients
+must be provided in order to study 𝑁¤ ion : (1) a prescription for fesc ,
+(2) a UV luminosity density function, 𝜌UV , describing the number
+of galaxies per unit volume that have a given UV luminosity, as a
+function of redshift (e.g. Bouwens et al. 2021; Adams et al. 2024;
+Donnan et al. 2024; Robertson et al. 2024, Whitler et al. in prep.),
+and (3) constraints on 𝜉ion . In addition, the IGM clumping factor of
+the Universe has to be considered (e.g. Madau et al. 1999; Kaurov
+& Gnedin 2014; So et al. 2014). This factor is a measure of the
+uniformity of the matter distribution in the Universe, and has crucial
+implications on reionisation since it relates to the amount of atomic
+recombinations taking place in the IGM. Briefly, a higher clumping
+factor implies that more ionising photons need to be emitted per unit
+volume at a given redshift in order to sustain hydrogen ionisation.
+Before the launch of the James Webb Space Telescope (JWST;
+Gardner et al. 2023), it was common practice to set fesc and 𝜉ion as
+constants. Fortunately, the JWST has given us an unprecedented view
+of the early Universe at restframe optical wavelengths, which has allowed us to place better constraints on 𝜉ion . In particular, Simmonds
+et al. (2024a) studied a sample of emission-line galaxies (ELGs) at
+𝑧 ∼ 4 − 9 using photometry obtained with the Near Infrared Camera (NIRCam; Rieke et al. 2023), on board the JWST. The mean
+redshift of reionisation is at 𝑧 = 7.68 ± 0.79 (Planck Collaboration
+et al. 2020), meaning that this study (and the many others enabled
+by JWST) probe deep into the EoR. Through H𝛼 and [O iii] emission line fluxes, Simmonds et al. (2024a) estimated 𝜉ion for a sample
+of 677 galaxies. In parallel, they inferred the same quantity by using the spectral energy distribution (SED) fitting code Prospector
+MNRAS 000, 1–20 (2024)
+
+(Johnson et al. 2019, 2021). They find that the 𝜉ion measurements
+estimated by emission line fluxes agree with the values obtained by
+Prospector. Additionally, they conclude that 𝜉ion increases with
+redshift, and that this increase is due to low-mass faint galaxies having more bursty star formation histories (SFHs). Here burstiness is
+quantified by the ratio between recent (averaged over 10 Myr) and
+past (averaged over 100 Myr) star formation rates (SFRs), which is
+associated with low stellar masses (Weisz et al. 2012; Guo et al.
+2016; Looser et al. 2023a), mainly due to the increased importance
+of stellar feedback. At high redshifts, however, burstiness can also be
+explained by the imbalance between gas accretion and supernovae
+(SNe) feedback time scales, which prevent star formation equilibrium
+in the ISM (Faucher-Giguère 2018; Tacchella et al. 2020). We note
+that the SFR10 /SFR100 ratio is a direct measure of the recent SFH,
+and its variance for an ensemble of galaxies measures short-term star
+formation variability (“burstiness”; Caplar & Tacchella 2019).
+The sample constructed in Simmonds et al. (2024a) suffered from
+one main limitation: since emission lines were required, and with
+a sufficient strength so that they were measurable from photometry,
+this sample was biased towards star-forming galaxies with significant H𝛼 and/or [O iii] emission. In fact, Laseter et al. (in prep.)
+demonstrate 𝜉ion is consistently high (log(𝜉ion /[Hz erg −1 ]) ≈ 25.5)
+down to [O iii] equivalent widths of 200Å due to low metallicities
+(𝑍 ≲ 1/10𝑍 ⊙ ), further demonstrating this bias from the past results.
+Given the agreement found between Prospector and the emission
+line measurements of 𝜉ion , in this work, we use Prospector to fit
+the full JWST Advanced Deep Extragalactic Survey (JADES; Eisenstein et al. 2023a; Bunker et al. 2023) photometry set for a sample
+of JADES galaxies in the Great Observatories Origins Deeps Survey South (GOODS-S; Giavalisco et al. 2004). Our sample is 90%
+complete in stellar mass down to masses of log(M★/[M ⊙ ])∼ 7.5,
+providing us a deep statistical view of the ionising properties of
+galaxies.
+The structure of this paper is the following. In § 2 we present the
+data used in this work, along with the sample selection criteria. In § 3
+we present our Prospector fitting method. Some general properties
+of the sample are given in § 4, followed by our constraints on the
+ionising properties of galaxies in § 5. Implications for reionisation
+are discussed in § 6, while the caveats and limitations of our methods
+are discussed in § 7. Finally, brief conclusions are presented in § 8.
+Throughout this work we assume Ω0 = 0.315 and 𝐻0 = 67.4 km s −1
+Mpc −1 , following Planck Collaboration et al. (2020).
+
+2 DATA AND SELECTION CRITERIA
+In this section, we describe the data and selection criteria applied to
+build our sample of galaxies, with the goal to construct a stellar mass
+complete sample between redshifts 3 and 9.
+
+2.1 Data
+We use the full JADES (Eisenstein et al. 2023a; Bunker et al. 2023)
+photometry set in the GOODS-S region, including the publicly available NIRCam Deep imaging (Rieke et al. 2023), and the JADES Origins Field (JOF; Eisenstein et al. 2023b), covering an area of ∼ 45
+arcmin2 with an average exposure time of 130 hours. When available,
+we also use photometry from the JWST Extragalactic Medium-band
+Survey (JEMS; Williams et al. 2023), and from the First Reionisation Epoch Spectroscopic Complete Survey (FRESCO; Oesch et al.
+2023).
+
+Ionising properties of galaxies in JADES
+
+1.0
+
+8
+
+redshift
+
+7
+6
+
+0.4
+
+1
+
+2
+
+obs [ m]
+
+3
+
+4
+
+F480M
+
+F430M
+F444W
+F460M
+
+F410M
+
+F356W
+
+F335M
+
+F300M
+
+F277W
+
+F250M
+
+F200W
+F210M
+
+F182M
+
+F150W
+F162M
+
+F115W
+
+F090W
+
+5
+
+0.2
+
+F070W
+
+Throughput
+
+0.6
+
+0.0
+
+4
+
+5
+
+3
+
+100
+80
+60
+40
+20
+
+M
+80
+
+M
+
+F4
+
+60
+
+W
+
+F4
+
+F4
+
+44
+
+M
+30
+
+M
+
+F4
+
+10
+
+W
+
+F4
+
+F3
+
+56
+
+M
+35
+
+M
+
+NIRCam Filters
+
+F3
+
+00
+
+W
+
+F3
+
+77
+
+M
+
+F2
+
+50
+
+M
+
+F2
+
+F2
+
+10
+
+W
+00
+
+M
+
+F2
+
+F1
+
+82
+
+M
+62
+
+W
+
+F1
+
+50
+
+W
+
+F1
+
+15
+
+F1
+
+90
+
+F0
+
+70
+F0
+
+W
+
+0
+
+W
+
+Coverage in sample [%]
+
+9
+
+HST
+JWST NIRCam
+Ly
+[OII]
+[OIII]
+H
+
+0.8
+
+3
+
+Figure 1. Top panel: Throughputs of the HST and NIRCam filters used in the SED fitting in this work for galaxies at 3 ≤ 𝑧phot ≤ 9. It is important to note
+that not all of these filters are available for every galaxy studied in this work. The hatched areas show the HST ACS bands: F435W, F606W, F775W, F814W,
+F850LP, and the HST IR bands: F105W, F125W, F140W, and F160W. While the filled regions are labelled and show the JWST NIRCam bands, from left to
+right: F070W, F090W, F115W, F150W, F162M, F182M, F200W, F210M, F250M, F277W, F300M, F335M, F356W, F410M, F430M, F444W, F460M, and
+F480M. The lines show the observed wavelengths of selected emission lines (Ly𝛼, [O ii], [O iii], and H𝛼) with redshift. Bottom panel: percentage of sources in
+our final, stellar mass-complete sample that are covered by each JWST NIRCam filter. The medium bands are shown as dotted areas.
+
+2.1.1 Photometry
+The photometric catalogue used in this work has been produced in
+the same way as the one used in Simmonds et al. (2024a). In brief, the
+source detection and photometry leverage both the JEMS NIRCam
+medium band and JADES NIRCam broad and medium band imaging.
+Detection was performed using the photutils (Bradley et al. 2022)
+software package, identifying sources with contiguous regions of the
+SNR mosaic with signal > 3𝜎 and five or more contiguous pixels. We
+also use photutils to perform circular aperture photometry with
+filter-dependent aperture corrections based on model point-spreadfunctions following the method of Ji et al. (2023), as described in
+Robertson et al. (2024). In addition to the NIRCam observations,
+HST images from the Hubble Legacy Field programme (Illingworth
+et al. 2016; Whitaker et al. 2019), and the Cosmic Assembly NearInfrared Deep Extragalactic Legacy Survey (CANDELS; Grogin
+et al. 2011; Koekemoer et al. 2011), as well as reductions of GOODSS from Giavalisco et al. (2004), are used. The details of the catalogue
+generation and photometry will be presented in Robertson et al., (in
+prep). In this work, we use a Kron aperture placed on images that
+have been convolved to a common resolution, and impose an error
+floor of 5% in each band. Our photometry does not take include the
+EAzY derived photometric offsets, however, we find that the NIRCam
+photometric offsets are small given the uncertainty of the photometry
+
+(see Appendix A). The throughputs of the filters used in this work
+are shown in Figure 1, as well as emission lines of interest and how
+their observed wavelength evolves with redshift.
+
+2.1.2 Redshifts
+Due to the richness of the photometry set, photometric redshifts
+(𝑧 phot ) can be obtained with great accuracy (Hainline et al. 2023).
+When fitting SEDs in this work, we use the 𝑧 phot inferred by the
+template-fitting code EAzY (Brammer et al. 2008), as described in
+Hainline et al. (2023) and Rieke et al. (2023). Additionally, when
+available, we make use of spectroscopic redshifts (𝑧 spec ) from the
+Near-Infrared Spectrograph (NIRSpec; Jakobsen et al. 2022), as well
+as those reported in literature (Puskás et al. in prep), including the
+JADES NIRSpec redshifts from Bunker et al. (2023) and D’Eugenio
+et al. (2024). In particular, they have been compiled from the Atacama
+Large Millimeter/submillimeter Array (ALMA) Spectroscopic Survey in the Hubble Ultra-Deep Field (ASPECS; Walter et al. 2016),
+CANDELS (Grogin et al. 2011), the 3D-Hubble Space Telescope
+(HST) Survey (Momcheva et al. 2016), the Multi Unit Spectroscopic
+Explorer (MUSE; Bacon et al. 2010) Ultra-Deep Field DR2 (Bacon
+et al. 2022), and a redshift catalogue (F. Sun private communication)
+produced from grism data of the First Reionisation Epoch Spectroscopic Complete Survey (FRESCO; Oesch et al. 2023).
+MNRAS 000, 1–20 (2024)
+
+C. Simmonds et al.
+HST (Kron conv.)
+JWST (Kron conv.)
+Best fit spectra
+= -1.840±0.003
+Model phot.
+
+2
+10 19 JADES-GS+53.10498-27.80234, z = 3.50 (+0.07, -0.10), / = 0.01
+
+1
+
+H
+
+[OII]
+
+10 21
+
+[OIII]
+
+10 20
+Ly
+
+F [cgs]
+
+4
+
+2
+
+3
+
+4
+
+5
+
+= -1.836±0.003
+
+1
+
+H
+
+10 21
+
+[OII]
+
+10 20
+
+[OIII]
+
+10 19
+Ly
+
+F [cgs]
+
+10 18 JADES-GS+53.06045-27.82581, z = 4.50 (+0.04, -0.07), 2/ = 0.01
+
+2
+
+3
+
+4
+
+5
+
+= -2.193±0.002
+
+10 21
+
+10 20
+
+2
+
+5
+
+= -2.158±0.002
+
+10 21
+
+2
+
+3
+
+H
+
+[OIII]
+
+[OII]
+
+10 22
+1
+
+4
+
+5
+
+= -2.282±0.002
+
+JADES-GS+53.03607-27.88058, z = 7.50 (+0.04, -0.09), 2/ = 0.06
+
+[OII]
+
+10 23
+
+1
+
+[OIII]
+
+10 22
+Ly
+
+2
+
+3
+
+4
+
+5
+
+10 20 JADES-GS+53.15425-27.81864, z = 8.53 (+0.05, -0.03), 2/ = 0.13
+10 21
+
+= -2.431±0.002
+
+1
+
+2
+
+3
+
+obs [ m]
+
+4
+
+[OIII]
+
+10 23
+
+Ly
+
+10 22
+[OII]
+
+F [cgs]
+
+4
+
+10 21
+
+10 20
+
+F [cgs]
+
+3
+
+JADES-GS+53.09783-27.78768, z = 6.50 (+0.14, -0.22), 2/ = 0.14
+
+Ly
+
+F [cgs]
+
+1
+
+H
+
+[OII]
+
+10 23
+
+[OIII]
+
+10 22
+Ly
+
+F [cgs]
+
+10 20 JADES-GS+53.15021-27.76554, z = 5.50 (+0.75, -0.20), 2/ = 0.08
+
+5
+
+Figure 2. Representative example SEDs and best-fit spectra for galaxies in our sample, assuming a continuity (i.e. non-parametric) SFH. From top to bottom the
+redshift increases from 𝑧 = 3.5 to 8.5, in steps of 1, the galaxy identifiers, along with their 𝑧phot and reduced 𝜒 2 (for the JWST NIRCam photometry), are shown
+in the top left corner of each panel. The symbols show the photometric points for HST (open squares), JWST NIRCam (open circles), and model photometry
+(orange diamonds), respectively. The grey curves show the best-fit spectra obtained by Prospector, with the spectral region used to estimate UV continuum
+slope (𝛽; 𝜆rest−frame = 1250 − 2500 Å) shaded in purple. The observed wavelengths of Ly𝛼, [O ii], [O iii], and H𝛼 are shown as vertical dotted lines.
+
+We selected galaxies that were matched to JADES NIRCam positions within 0.25 arcsec, and that were flagged as reliable by each
+team. Since galaxies often have multiple 𝑧 spec measurements, we
+defined four categories to collate the several redshift measurements
+into one, which we call 𝑧 best :
+• Category A: Only one redshift labelled as having the highest
+quality. We use this redshift as 𝑧 best .
+• Category B: Multiple redshifts with the same (highest) quality
+that agree when rounded to the second decimal. We use this rounded
+value as 𝑧 best .
+MNRAS 000, 1–20 (2024)
+
+• Category C: Multiple solutions with the same (highest) quality
+that have a non-dramatic disagreement (with a difference smaller
+than 1). We define 𝑧 best as the mean between the solutions and add
+errors reflecting the difference.
+
+• Category D: Multiple solutions with the same (highest) quality
+that have a dramatic disagreement (Δ > 1). In these cases, we keep all
+the highest quality redshifts and follow up with a visual inspection.
+
+Ionising properties of galaxies in JADES
+9
+
+9
+
+N = 25319
+
+Outliers = 2024 (~8%)
+
+8
+
+zphot
+
+zEAzY
+
+6
+5
+
+5
+4
+
+4
+
+1:1
+zEAzY = (0.96±0.01)zProsp + (0.41±0.02)
+|zEAzY zProsp|/(1 + zEAzY) = 0.15
+
+3
+
+4
+
+5
+
+6
+
+zProspector
+
+7
+
+8
+
+0
+3
+
+4
+
+5
+
+6
+
+7
+
+8
+
+3
+
+9
+
+9
+
+Figure 3. Comparison of input and output photometric redshifts. The vertical
+axis shows the photometric redshifts inferred using EAzY. These redshifts
+were used as priors in the SED fitting with Prospector, the medians of
+these posteriors are shown in the horizontal axis. The black point shows the
+redshift median errors, we note that the Prospector-inferred values tend to
+be better constrained, but that they overall follow a one-to-one trend with those
+inferred using EAzY, as can be seen by the best-fit line (dashed black line). The
+points that fall outside of the dotted black lines are considered catastrophic
+outliers, there are 2036 galaxies that fall into this category, corresponding to
+∼ 8%. We note that the outlier fraction is estimated by comparing the median
+values inferred by EAzY and Prospector. The former has considerably larger
+error bars in general.
+
+2.2 Sample selection criteria
+In order to build a sample as complete as possible, we only impose
+two conditions that have to be met: (1) an S/N of at least 3 in the
+F444W band, and (2) redshifts 3 ≤ 𝑧 ≤ 9. Based on the nature of
+the redshift used (photometric or spectroscopic), we construct two
+samples, that we now introduce.
+The photometric sample is initially composed of 37272 galaxies.
+We use the SED fitting code Prospector (Johnson et al. 2019,
+2021) to fit the full sample (see Section 3), yielding a total sample
+of 35442 galaxies. The cases that failed (∼ 5%) were due to either
+poor photometric coverage (< 6 NIRCam photometric points) or to
+them being false detections (e.g. a diffraction spike). In order to have
+reliable inferred galaxy properties, we only use the results which
+have a reduced 𝜒2 ≤ 1, resulting in a final photometric sample with
+25319 galaxies. The completeness in stellar mass and UV magnitude
+is discussed in Section 4. We note that if we extend the limit up to
+𝜒2 = 10, we obtain 29323 galaxies instead. However, the final stellar
+mass complete sample is virtually unchanged from the one discussed
+in this work. The spectroscopic sample is composed of 1620 galaxies,
+all of which are also part of the photometric sample. Their redshift
+classification is as follows: 1234 in Category A, 363 in category B,
+12 in category C, and 11 in category D.
+
+zspec zphot
+1 + zspec
+
+zEAzY zProsp
+1 + zEAzY
+
+Prospectoroutliers = 44 (~3.1%)
+EAzYoutliers = 35 (~2.5%)
+
+7
+
+6
+
+1
+
+N = 1410
+
+8
+
+7
+
+3
+
+5
+
+1:1
+Prospector
+EAzY
+|zspec zphot|/(1 + zspec) = 0.15
+
+3
+
+4
+
+5
+
+3
+
+4
+
+5
+
+6
+
+7
+
+8
+
+9
+
+6
+
+7
+
+8
+
+9
+
+zspec [Cat. A,B]
+
+0
+1
+
+Figure 4. Comparison of photometric and spectroscopic redshifts, when spectroscopic redshifts in category A and/or B are available. Both Prospector
+(larger orange circles) and EAzY (smaller grey circles) inferred values generally follow a one-to-one relation with the spectroscopic redshifts, with some
+exceptions. We conclude that both codes can retrieve 𝑧spec successfully in the
+majority of cases. The points that fall outside of the area delimited by the
+dotted lines are considered catastrophic outliers. There are 44 (35) of such
+objects inferred by Prospector (EAzY), corresponding to ∼ 3.1% (∼ 2.5%)
+of the subsample with spectroscopic redshifts in categories A and B.
+
+3 SED FITTING WITH PROSPECTOR
+As demonstrated in Simmonds et al. (2024a), the ionising properties
+inferred with the SED fitting code Prospector (Johnson et al. 2019,
+2021) are in good agreement with those obtained by emission line
+fluxes, when such fluxes are detected. Therefore, in this work, we
+fit the entirety of our samples with Prospector, without introducing an additional selection bias (i.e. by only selecting emission line
+galaxies).
+Prospector uses photometry and/or spectroscopy as an input in order to infer stellar population parameters, from UV to
+IR wavelengths. We use photometry from the HST ACS bands:
+F435W, F606W, F775W, F814W, F850LP, and from the HST IR
+bands: F105W, F125W, F140W, and F160W. In addition, we use
+the JADES NIRCam photometry from: F090W, F115W, F150W,
+F162M, F200W, F250M, F277W, F300M, F335M, F356W, F410M,
+and F444W. Finally, when available, we include JEMS photometry: F182M, F210M, F430M, F460M, and F480M. The same Kron
+convolved aperture is used to extract the HST, JADES and JEMS
+photometry.
+For the photometric redshift sample, we adopt a clipped normal
+distribution using the EAzY 𝑧 phot as the redshift mean, with the sigma
+given by the 𝑧phot errors. Whereas for the spectroscopic redshift
+sample we fix the redshift to 𝑧 spec for galaxies in Categories A, B,
+and D, and use the same prior as for the photometric sample for
+galaxies in Category C.
+We vary the dust attenuation and stellar population properties
+MNRAS 000, 1–20 (2024)
+
+6
+
+C. Simmonds et al.
+Stellar mass [all]
+Medium [Texp < 25ks]
+Deep [25ks Texp < 65ks]
+Ultra-deep [Texp 65ks]
+
+11
+
+log (M / [M ])
+
+10
+9
+
+10215 6005 5203 3037
+
+651
+
+208
+
+[7031] [3471] [2436] [1311] [342]
+
+8
+
+[61]
+
+7
+6
+
+3
+
+4
+
+5
+
+6
+
+zProspector
+
+7
+
+8
+
+9
+
+where we show a comparison between the modelled and observed
+photometry, as a function of the bands being used.
+Figure 2 shows example SEDs and best-fit spectra for our sample.
+From top to bottom the redshift increases from 3.5 to 8.5, as indicated
+on the top left of each panel. The markers show HST (triangles) and
+JWST NIRCam (circles) photometry with their corresponding errors.
+The purple shaded area corresponds to the rest-frame spectral region
+at 𝜆rest−frame = 1250 − 2500 Å, used to estimate the rest-frame UV
+continuum slope (𝛽; Calzetti et al. 1994), defined as F𝜆 ∝ 𝜆 𝛽 . We
+obtain 𝛽 by fitting a line to the best-fit SED provided by Prospector.
+We stress that there are important limitations to the measurements
+of 𝛽 without spectra (for a full review, see Austin et al. 2024) .
+Finally, the vertical dashed lines show the observed wavelength of
+Ly𝛼, [O ii], [O iii], and H𝛼. We note that not all galaxies have
+obvious emission lines detected in their photometry, illustrating the
+advantage of our sample selection (see for example, the second panel:
+JADES-GS+53.06045-27.82581).
+
+4 SAMPLE GENERAL PROPERTIES
+Figure 5. Stellar mass completeness of the sample, divided into three fields
+depending on exposure time (Texp ). The larger grey circles show the stellar
+mass of each galaxy as a function of redshift, while the smaller coloured
+circles show the limiting mass for the faintest 20%. The solid curves denote
+the 90% completeness at each redshift and for each depth, as indicated in the
+legend, following the prescription of Pozzetti et al. (2010). We find our sample
+is stellar mass complete down to log(M★ /[M ⊙ ]) ≈ 7.5, with small variations
+depending on the depth of the field. The dotted vertical lines mark the redshift
+bins used in the mass completeness estimation, while the numbers provided
+in each bin indicate the total number of galaxies in the bin (top row, bold
+faced), and the galaxies above the limiting mass (bottom row, in brackets).
+
+following Tacchella et al. (2022a). In summary, we use a two component dust model described in Charlot & Fall (2000) and Conroy
+et al. (2009). This model accounts for the differential effect of dust on
+young stars (< 10 Myr) and nebular emission lines, through different
+optical depths and a variable dust index (Kriek & Conroy 2013). We
+adopt a Chabrier (Chabrier 2003) initial mass function (IMF), with
+mass cutoffs of 0.1 and 100 M ⊙ , respectively, allowing the stellar
+metallicity to explore a range between 0.01 - 1 Z ⊙ , and include nebular emission. The continuum and emission properties of the SEDs are
+provided by the Flexible Stellar Population Synthesis (FSPS) code
+(Byler et al. 2017), based on Cloudy models (v.13.03; Ferland et al.
+2013) using MESA Isochrones & Stellar Tracks (MIST; Choi et al.
+2016; Dotter 2016), and the MILES stellar library (Vazdekis et al.
+2015). We note that he UV extension of the MILES library is based
+on the Basel Stellar Library (BaSeL; Lastennet et al. 2002). These
+Cloudy grids introduce an upper limit on the permitted ionisation
+parameters (log⟨𝑈⟩ max = −1.0). We briefly remark here that this
+upper limit might not be appropriate for high-redshift galaxies (see
+e.g, Cameron et al. 2023b). Due to the stochastic nature of the IGM
+absorption, we set a flexible IGM model based on a scaling of the
+Madau model (Madau 1995), with the scaling left as a free parameter
+with a clipped normal prior (𝜇 = 1.0, 𝜎 = 0.3, in a range [0.0, 2.0]).
+Last but not least, we use a non-parametric SFH (continuity SFH;
+Leja et al. 2019). This model describes the SFH as eight different
+SFR bins, the ratios and amplitudes between them are in turn, controlled by the bursty-continuity prior (Tacchella et al. 2022b). For a
+general view of the goodness of fits of our stellar mass complete sample (described in Section 4.2), we direct the reader to Appendix A,
+MNRAS 000, 1–20 (2024)
+
+In this section we discuss some of the general properties of our samples. We first compare the photometric redshifts inferred by EAzY to
+those obtained with Prospector, and to the spectroscopic redshifts
+(when available). We then describe the stellar mass completeness of
+our sample.
+4.1 Redshift comparisons
+As previously mentioned, we use EAzY-inferred redshifts as priors
+when fitting the photometric sample. The redshifts obtained by this
+template-fitting tool have proven to be reliable when using the full
+JADES NIRCam photometry set (see Figure 13 of Rieke et al. 2023).
+In Figure 3, we compare the EAzY and the Prospector redshifts
+for the photometric sample. The Prospector redshifts are better
+constrained, as seen by the median error bars (black point). This is
+not surprising since Prospector is already using the EAzY results
+as a prior on the redshift. We note that Prospector is more flexible
+than EAzY, since the latter uses a fixed set of templates. Although,
+we note that the linear combination of templates used by EAzY might
+be outside of the Prospector parameter space, or disfavoured by
+the SFH or other Prospector priors. It can also be seen that a
+lower-redshift solution is preferred for several sources. However,
+the distribution overall follows a one-to-one relation with a best
+fit slope of 0.96 ± 0.01 (black dashed line), demonstrating that both
+methods are in general agreement. We note that the number of sources
+decreases significantly as a function of photometric redshift: 10215
+at 3 ≤ 𝑧 < 4, 6005 at 4 ≤ 5, 5203 at 5 < 𝑧 ≤ 6, 3037 at 6 < 𝑧 ≤ 7,
+651 at 7 < 𝑧 ≤ 8, and, 208 at 8 < 𝑧 ≤ 9.
+In order to test how well the 𝑧 phot retrieve real (𝑧 spec ) redshifts,
+in Figure 4 we compare the photometric redshifts (from both EAzY
+and Prospector) to the spectroscopic sample in Categories A and
+B. The spectroscopic sample is biased towards brighter galaxies with
+stronger emission lines, compared to the full photometric sample, so
+we would expect more accurate 𝑧 phot estimations. We find a good
+agreement between 𝑧 phot and 𝑧 spec (i.e. |𝑧 spec − 𝑧 phot | < 0.15), with
+only a small fraction of outliers. Specifically, 44 (35) for Prospector
+(EAzY) derived redshifts, corresponding to ∼ 3.1% (∼ 2.5%) of the
+subsample, where photometry alone makes it hard to distinguish a
+spectral break from another. From this comparison, we cannot say if
+one code performs better than the other, but we can conclude that both
+retrieve the correct redshift in the majority of the cases. We highlight
+
+Ionising properties of galaxies in JADES
+
+12
+
+3 z 4 [N = 7031]
+
+10
+9
+Duncan+2014
+Song+2016
+best-fit
+Tacchella+2018
+
+8
+7
+26
+
+24
+
+12
+
+22
+
+20
+
+18
+
+16
+
+14
+
+9
+8
+
+12
+
+26
+
+24
+
+22
+
+20
+
+18
+
+16
+
+14
+
+MUV, obs [AB mag]
+7 < z 8 [N = 342]
+
+8
+7
+24
+
+22
+
+20
+
+18
+
+MUV, obs [AB mag]
+
+16
+
+14
+
+12
+
+0.0
+
+8
+26
+
+24
+
+22
+
+20
+
+18
+
+16
+
+MUV, obs [AB mag]
+8 < z 9 [N = 61]
+
+14
+
+12
+
+0.5
+
+11
+
+10
+9
+8
+7
+
+26
+
+0.5
+
+9
+
+12
+
+log (M* / [M ])
+
+log (M* / [M ])
+
+9
+
+10
+
+12
+
+11
+
+10
+
+1.0
+
+7
+
+12
+
+11
+
+log (M* / [M ])
+
+10
+
+7
+
+MUV, obs [AB mag]
+6 < z 7 [N = 1311]
+
+5 < z 6 [N = 2436]
+
+11
+
+log (M* / [M ])
+
+11
+
+log (M* / [M ])
+
+log (M* / [M ])
+
+11
+
+12
+
+4 < z 5 [N = 3471]
+
+1.0
+
+10
+
+1.5
+
+9
+8
+
+2.0
+
+7
+26
+
+24
+
+22
+
+20
+
+18
+
+MUV, obs [AB mag]
+
+16
+
+14
+
+12
+
+log(SFR10/SFR100)
+
+12
+
+7
+
+26
+
+24
+
+22
+
+20
+
+18
+
+MUV, obs [AB mag]
+
+16
+
+14
+
+12
+
+log ion, 0 [Hz erg 1]
+
+Figure 6. Stellar mass as a function of (observed) MUV for our stellar mass complete sample, divided into redshift bins, and colour-coded by the burstiness of
+their SFHs (i.e. ratio between star formation in the past 10 Myr and the one averaged over the last 100 Myr). For comparison, we overlay the log(M★ )-MUV
+mass-to-light relations from Duncan et al. (2014), Song et al. (2016), and Tacchella et al. (2018). The best-fit relation, using forward modelling to take account
+for the completeness of the sample, is shown as a purple solid curve and shaded area (see Table 1). The black vertical lines in the bottom right panel show the
+limits of three MUV bins delimited by MUV = −24, −20, −18, and −16, which are used later in Figure 16. As expected, brighter galaxies tend to have higher
+stellar masses, however, there is a considerable scatter in MUV for a fixed stellar mass.
+
+27.0
+26.5
+26.0
+25.5
+25.0
+24.5
+24.0
+23.5
+23.0
+22.5
+
+Stefanon+2022
+Kumari+2024 (LAEs)
+Kumari+2024 (non-LAEs)
+Ning+2023
+Prieto-Lyon+2023
+Rinaldi+2023 [HAEs]
+Simmonds+2023 [LAEs]
+Simmonds+2024 [ELGs]
+This work
+
+3
+
+4
+
+5
+
+6
+
+z
+
+7
+
+8
+
+9
+
+Figure 7. Compilation of 𝜉ion,0 from literature, in comparison to our stellar mass complete sample (this work, pentagons). The best-fit line from Stefanon et al.
+(2022), with a slope of dlog( 𝜉ion,0 )/dz = 0.09 ± 0.01, is shown as a black dashed line and shaded area. In order of increasing redshift, the markers in grey scale
+represent: UV-faint galaxies at 𝑧 ∼ 3 − 7 from Prieto-Lyon et al. (2023) (squares), Ly𝛼 emitters from Ning et al. (2023) (triangles) and Simmonds et al. (2023)
+(stars), the H𝛼 emitters from Rinaldi et al. (2024) (thin diamonds), and finally, the ELGs from Simmonds et al. (2024a), which have a slope of dlog( 𝜉ion,0 )/dz
+= 0.07 ± 0.02. The thick diamonds show the stacked results from Kumari et al. (2024), for galaxies above and below 𝑧 = 6.3. Due to observational limitations and
+the emission line methods used to estimate 𝜉ion,0 (i.e. through H𝛼 and/or [O iii] emission) the previous samples were biased towards star-forming galaxies. Our
+stellar mass complete sample reveals a population of galaxies with low ionising photon production efficiency (log( 𝜉ion,0 /[Hz erg −1 ])≲ 24.5), and a considerably
+less significant evolution with redshift (dlog( 𝜉ion,0 )/dz ∼ 0.01, see Figure 8).
+
+MNRAS 000, 1–20 (2024)
+
+C. Simmonds et al.
+
+58
+57
+56
+55
+54
+53
+52
+51
+50
+
+best-fit [zphot]: log ( ion, 0 / [Hz erg 1]) = (-0.001±0.004)z + (25.294±0.017)
+best-fit [zspec]: log ( ion, 0 / [Hz erg 1]) = (0.041±0.014)z + (25.143±0.068)
+MUV = -18
+
+1.0
+
+0.5
+
+0.0
+3
+
+4
+
+5
+
+6
+
+7
+
+redshift
+
+8
+
+9
+
+best-fit [zphot]: log (nion / [s 1]) = (0.032±0.016)z + (53.106±0.079)
+best-fit [zspec]: log (nion / [s 1]) = (0.067±0.036)z + (53.507±0.163)
+MUV = -18
+
+log(SFR10/SFR100)
+
+27.0
+26.5
+26.0
+25.5
+25.0
+24.5
+24.0
+23.5
+23.0
+
+log (nion / [s 1])
+
+log ( ion, 0 / [Hz erg 1])
+
+8
+
+0.5
+
+1.0
+
+1.5
+
+2.0
+3
+
+4
+
+5
+
+6
+
+redshift
+
+7
+
+8
+
+9
+
+Figure 8. 𝜉ion,0 (top) and 𝑛¤ ion (bottom) inferred through SED fitting with Prospector, as a function of redshift, colour-coded by a measure of burstiness
+(defined here as the ratio between the star formation sustained in the past 10 Myr and the one averaged over the past 100 Myr), for the stellar mass complete
+sample (log(M★ /[M ⊙ ])> 7.5). The circles with black edges show the spectroscopic sample, while the circles without edges show the photometric sample. Within
+the latter, the galaxies with zero recent star formation (SFR10 = 0 M ⊙ yr −1 ) are shown as crosses. The best-fit relations to both samples are shown in the top left
+corner of each panel. The best fit to the spectroscopic data (blue-filled line) yields a more positive slope than the one derived for the entire photometric sample
+(black dashed line). Particularly, the fit to 𝜉ion,0 in the spectroscopic sample (dlog( 𝜉ion,0 )/dz ∼ 0.05 ± 0.02) is closer to the 𝜉ion,0 versus redshift relations
+from the literature (within errors of the findings of Simmonds et al. 2024a). This is because the spectroscopic sample likely suffers from the same biases as
+previous studies (i.e. biased towards star-forming galaxies with detectable emission lines). Finally, the pink squares with error bars show the best-fit relations
+per redshift bin shown in Figures 9 and 10, for a fixed MUV of -18. When the full stellar mass complete sample is considered, both 𝜉ion,0 and 𝑛¤ ion show only a
+slight evolution with redshift, 𝜉ion,0 shows a strong correlation with burstiness, while 𝑛¤ ion does not.
+
+that the SED modelling uncertainties and redshift variations are selfconsistent.
+Given the agreement between 𝑧 phot and 𝑧 spec , in the remainder of
+this work, we use the photometric sample unless explicitly stated.
+
+Pozzetti et al. (2010). In summary, for every redshift we define a minimum mass (Mmin ), above which all types of galaxies can potentially
+be observed. To obtain Mmin , we first need to calculate the limiting
+stellar mass (Mlim ) for each galaxy, given by:
+log(Mlim ) = log(M★) + 0.4(m − mlim ),
+
+(1)
+
+4.2 Completeness of sample
+To estimate the stellar mass completeness of our sample, we use
+the redshifts and stellar masses inferred with Prospector, noting
+that the spectroscopic sample overlaps with the photometric one, and
+that the redshifts are in tight agreement. A corner plot showing the
+mean shape of the posteriors for these parameters can be found in
+Appendix B.
+To assess the 90% stellar mass completeness limit of our photometric sample, we follow the procedure described in Section 5.2 of
+MNRAS 000, 1–20 (2024)
+
+where M★ is stellar mass in units of solar masses. Mlim represents the
+mass a galaxy would have if its apparent magnitude (m) were equal
+to the limiting magnitude of the survey (mlim ) in the F444W band.
+This band was chosen since it has the longest effective wavelength,
+and thus, is the tracer of stellar mass. We divide our data into three
+depths depending on the exposure time: medium (Texp < 25 ks),
+deep (25 ks ≤ Texp < 65 ks), and ultra-deep (Texp > 65 ks), with
+5𝜎 flux depths of 6 nJy, 4.5 nJy, and 2.65 nJy, respectively. Once
+Mlim has been calculated for every galaxy, we compute Mmin for
+
+Ionising properties of galaxies in JADES
+
+23
+
+log ion, 0 (-0.01±0.00) MUV + (25.20± 0.07)
+log ion, 0 (-0.06±0.06) MUV + (23.23± 1.04)
+26 24 22 20 18 16 14 12
+
+MUV, obs [AB mag]
+6 < z 7 [N = 1269 (42)]
+
+26
+25
+24
+23
+22
+
+25
+24
+23
+22
+
+log ion, 0 (-0.02±0.01) MUV + (24.89± 0.11)
+log ion, 0 (-0.02±0.04) MUV + (23.95± 0.76)
+26 24 22 20 18 16 14 12
+
+MUV, obs [AB mag]
+7 < z 8 [N = 339 (3)]
+
+27
+
+log ( ion, 0 / [Hz erg 1])
+
+27
+
+26
+
+log ion, 0 (-0.03±0.02) MUV + (24.88± 0.27)
+log ion, 0 (0.01±0.04) MUV + (24.51± 0.77)
+26 24 22 20 18 16 14 12
+
+MUV, obs [AB mag]
+
+25
+24
+
+22
+
+log ion, 0
+26
+
+24
+
+(-0.05±0.02) MUV + (24.51± 0.32)
+22
+
+20
+
+18
+
+MUV, obs [AB mag]
+
+16
+
+14
+
+12
+
+1.0
+0.5
+
+25
+24
+23
+22
+
+log ion, 0 (-0.05±0.01) MUV + (24.32± 0.12)
+log ion, 0 (0.03±0.04) MUV + (24.74± 0.67)
+26 24 22 20 18 16 14 12
+
+MUV, obs [AB mag]
+8 < z 9 [N = 60 (1)]
+
+27
+
+26
+
+23
+
+5 < z 6 [N = 2323 (112)]
+
+26
+
+0.0
+
+log(SFR10/SFR100)
+
+24
+
+log ( ion, 0 / [Hz erg 1])
+
+25
+
+27
+
+4 < z 5 [N = 3368 (103)]
+
+log ( ion, 0 / [Hz erg 1])
+
+26
+
+22
+
+log ( ion, 0 / [Hz erg 1])
+
+27
+
+3 z 4 [N = 6941 (89)]
+log ( ion, 0 / [Hz erg 1])
+
+log ( ion, 0 / [Hz erg 1])
+
+27
+
+9
+
+0.5
+1.0
+
+26
+25
+
+1.5
+
+24
+23
+22
+
+log ion, 0
+26
+
+24
+
+(-0.12±0.05) MUV + (23.28± 0.94)
+22
+
+20
+
+18
+
+MUV, obs [AB mag]
+
+16
+
+14
+
+2.0
+12
+
+Figure 9. Dependence of 𝜉ion,0 on UV magnitude, separated in redshift bins, and colour-coded by the burstiness of their SFHs. The individual error bars are
+shown in grey. The top left of each panel shows the redshift range and the amount of galaxies it contains. The number in parenthesis corresponds to a small
+secondary population of galaxies with log(SFR10 /SFR100 ) < −1, that lie systematically below the general 𝜉ion,0 trends with MUV and redshift. If these two
+populations of galaxies are fit separately (when possible), the slope of 𝜉ion,0 with MUV is consistent between them, however, their 𝜉ion,0 intercept is different.
+The values for both fits are shown at the bottom of each panel, the darker coloured shaded area and text correspond to the population with no (or very little)
+recent star formation. We note that this population accounts for only < 3% of the total sample.
+
+50
+48
+
+log nion
+log nion
+26
+
+58
+
+24
+
+(-0.38±0.01) MUV + (46.67± 0.16)
+(-0.47±0.08) MUV + (43.83± 1.38)
+22
+
+20
+
+18
+
+MUV, obs [AB mag]
+
+16
+
+14
+
+log (nion / [s 1])
+
+50
+
+26
+
+24
+
+(-0.40±0.02) MUV + (46.17± 0.31)
+(-0.39±0.04) MUV + (45.13± 0.83)
+22
+
+20
+
+18
+
+MUV, obs [AB mag]
+
+16
+
+26
+
+14
+
+22
+
+20
+
+18
+
+MUV, obs [AB mag]
+
+16
+
+14
+
+50
+
+26
+
+24
+
+48
+12
+
+(-0.40±0.02) MUV + (46.29± 0.43)
+22
+
+20
+
+18
+
+MUV, obs [AB mag]
+
+50
+log nion
+log nion
+26
+
+16
+
+14
+
+22
+
+20
+
+18
+
+MUV, obs [AB mag]
+
+16
+
+14
+
+12
+
+0.5
+1.0
+
+54
+
+1.5
+
+52
+50
+48
+
+12
+
+24
+
+0.0
+
+(-0.43±0.01) MUV + (45.54± 0.21)
+(-0.40±0.03) MUV + (44.97± 0.61)
+
+8 < z 9 [N = 60 (1)]
+
+56
+
+52
+log nion
+
+0.5
+
+52
+
+58
+
+54
+
+48
+12
+
+24
+
+(-0.40±0.01) MUV + (46.24± 0.20)
+(-0.41±0.06) MUV + (44.78± 1.02)
+
+7 < z 8 [N = 339 (3)]
+
+56
+
+52
+
+48
+
+48
+
+log nion
+log nion
+
+58
+
+54
+
+log nion
+log nion
+
+50
+
+12
+
+6 < z 7 [N = 1269 (42)]
+
+56
+
+52
+
+54
+
+log(SFR10/SFR100)
+
+52
+
+54
+
+1.0
+
+5 < z 6 [N = 2323 (112)]
+
+56
+
+log (nion / [s 1])
+
+54
+
+58
+
+4 < z 5 [N = 3368 (103)]
+
+56
+
+log (nion / [s 1])
+
+log (nion / [s 1])
+
+56
+
+log (nion / [s 1])
+
+58
+
+3 z 4 [N = 6941 (89)]
+
+log (nion / [s 1])
+
+58
+
+log nion
+26
+
+24
+
+(-0.45±0.09) MUV + (45.32± 1.71)
+22
+
+20
+
+18
+
+MUV, obs [AB mag]
+
+16
+
+14
+
+2.0
+12
+
+Figure 10. Same as Figure 9 but for 𝑛¤ ion instead. Contrary to the case of 𝜉ion,0 , 𝑛¤ ion has a stronger dependence on MUV , where the faintest (brightest) galaxies
+produce less (more) ionising photons.
+
+MNRAS 000, 1–20 (2024)
+
+10
+
+C. Simmonds et al.
+
+each field by selecting the faintest 20% of the galaxies with a given
+Texp , and finding the limit above which 90% of the selected Mlim
+values lie. Figure 5 shows the stellar mass of our sample as a function
+of redshift (grey circles), the coloured small circles show the Mlim
+of the faintest 20% of galaxies for each field, and the filled lines
+denote the 90% completeness as a function of redshift. We find that,
+in general, our photometric sample is stellar mass complete down to
+log(M★/[M ⊙ ])≈7.5, with slight variations depending on the depth of
+the observations (within ∼ 0.2 dex).
+In the remainder of this study, we focus only on sources that have
+a Prospector-derived stellar mass with a median above the mass
+completeness limit (log(M★/[M ⊙ ])≈7.5), yielding a sample of 14652
+galaxies, which are UV complete down to MUV ≈ −16.
+4.3 MUV -M★ relation
+Figure 6 shows the stellar mass of our stellar mass complete sample
+as a function of MUV , divided by redshift bins. The numbers on
+the top of each panel indicate the number of galaxies in any given
+bin. We fit the observational data in the MUV -M★ plane taking into
+account the completeness limits discussed in the previous section.
+Specifically, we fit the following relation
+log(M★) = 𝛼(MUV + 19.5) + log(M★,0 ),
+
+(2)
+
+where M★ is stellar mass in units of solar masses, 𝛼 is the slope
+of the MUV -M★ relation and log(𝑀★,0 ) is its normalisation (stellar
+mass at 𝑀UV = −19.5 AB mag). In addition to these two parameters,
+we also fit for the scatter 𝜎MUV −M★ in MUV at fixed M★. We then
+fit these three parameters to the observed distribution using the dynamic nested sampling code dynesty (Speagle 2020). In each model
+call, we sample the MUV -M★ relation (with scatter) with 1 million
+galaxies assuming an MUV that follows the UV luminosity function
+(Bouwens et al. 2021), bin this drawn galaxy sample in the MUV -M★
+plane taking into account the completeness limits, and compare the
+normalised histogram with the observed one. The best-fit parameters
+can be found in Table 1, for the highest redshift bin (8 < 𝑧 ≤ 9) we
+adopt the best-fit results from the previous redshift bin (7 < 𝑧 ≤ 8).
+From the nearly linear relation between log(M★) and log(SFR)
+(i.e. star-forming main sequence; Brinchmann et al. 2004; Daddi
+et al. 2007; Salim et al. 2007), we would expect a slope 𝛼 of the
+MUV -M★ relation close to −0.4, assuming a simple, linear conversion
+between the UV luminosity and SFR (Kennicutt 1998; Madau et al.
+1998; Salim et al. 2007). Our steeper slope of ≈ −0.6 is consistent
+with having a higher mass-to-light ratio (𝑀★/𝐿 UV ) for more massive
+systems, in agreement with the findings of González et al. (2011).
+We further find that log(𝑀★,0 ) decreases with increasing redshift
+(𝑀★,0 ∝ (1 + 𝑧) −2.7 ), i.e. at fixed MUV = −19.5 the typical stellar
+mass of the galaxies is lower at earlier cosmic times. This implies
+a lower 𝑀★/𝐿 UV toward higher redshifts, consistent with younger
+stellar populations toward earlier times. A combination of less dust
+attenuation and higher specific SFR toward higher redshifts and at
+fixed stellar mass could lead to this outcome. Finally, the scatter of
+the MUV -M★ relation is substantial with 0.6 − 0.7 dex. This scatter
+includes both the intrinsic scatter of the MUV -M★ relation and the
+observational uncertainty, though the latter is only of the order of 0.2
+dex.
+As comparison, we show the log(M★)-MUV mass-to-light relations
+from Duncan et al. (2014), Song et al. (2016), and Tacchella et al.
+(2018). The Duncan et al. (2014) and Song et al. (2016) relations are
+derived from a combination of observations (i.e. Spitzer/IRAC and
+HST) and SED fitting, while the one from Tacchella et al. (2018) is
+based on an empirical model that links star formation in galaxies to
+MNRAS 000, 1–20 (2024)
+
+Table 1. Best-fit parameters for log(M★ )-MUV relation as parameterised by
+Eq. 2. Column 1: redshift bin. Column 2: slope of the relation. Column 3:
+stellar mass normalisation (log(M★ ) at MUV = −19.5. Column 4: scatter in
+log(M★ ) at fixed MUV .
+Redshift
+
+𝛼
+
+log(M★,0 /[M ⊙ ])
+
+𝜎
+[dex]
+
+3≤𝑧≤4
+4<𝑧≤5
+5<𝑧≤6
+6<𝑧≤7
+7<𝑧≤8
+
+−0.60+0.27
+−0.33
+−0.69+0.26
+−0.28
+−0.55+0.20
+−0.32
+−0.65+0.21
+−0.30
+−0.68+0.25
+−0.28
+
+9.25+0.77
+−0.71
+9.06+0.62
+−0.63
+8.78+0.71
+−0.60
+8.63+0.51
+−0.46
++0.57
+8.55 −0.57
+
+0.66+0.31
+−0.28
+0.69+0.29
+−0.28
+0.57+0.37
+−0.22
+0.56+0.37
+−0.21
+0.72+0.26
+−0.26
+
+the accretion rate of dark matter halos. With our stellar mass complete
+sample, we find a somewhat steeper slope than previous observational
+studies (but mostly < 1𝜎 discrepant; ∼ −0.6 instead of ∼ −0.4 to
+−0.5). This effect is partly a consequence of our sample including a
+larger population of fainter sources (with lower stellar masses) than
+the mentioned studies, but also because we consider explicitly the
+mass completeness of our sample. Specifically, we forward model
+the completeness when fitting the relation; if we do not do that, we
+find a shallower relation of ∼ −0.4. Additionally, the stellar masses
+in these previous studies were estimated assuming parametric SFHs,
+which cannot fully describe the complexities of galaxies (Lower et al.
+2020), while we assume more flexible SFHs.
+
+5 CONSTRAINTS ON THE IONISING PROPERTIES OF
+GALAXIES
+In this section, we provide a brief overview of the methods traditionally used to infer ionising properties of galaxies. Followed by the
+trends of 𝜉ion and 𝑛¤ ion with redshift and UV magnitude, including a
+comparison with values from the literature. Finally, we discuss the
+emergence of a secondary (previously unseen) sample of galaxies,
+that are tentatively leaking LyC. An excerpt of the properties used in
+this section is given in Table 2.
+5.1 Measuring 𝜉ion from emission line fluxes
+The ionising photon production efficiency, 𝜉ion , can be measured
+through H𝛼 and/or [O iii] emission line fluxes. In order to use H𝛼
+as a proxy for ionising photon production efficiency (𝜉ion ), one must
+first correct the H𝛼 line flux for dust (for example, using an SMC
+attenuation curve; Gordon et al. 2003). If Case B recombination
+is assumed, along with the assumption of no LyC fesc , and that
+dust has a negligible effect on LyC photons, the dust corrected H𝛼
+luminosity relates directly to the rate of ionising photons (𝑛¤ ion , in
+units of s −1 ) that are being emitted (𝑛¤ ion = 7.28 × 1011 L(H𝛼);
+Osterbrock & Ferland 2006). 𝜉ion is then the ratio between 𝑛¤ ion and
+the observed monochromatic UV luminosity density (measured at
+rest-frame 𝜆 = 1500 Å). This method suffers from a number of
+of assumptions that need to be made: it has a great dependence
+on the chosen attenuation curve, and Case B recombination cannot
+always be assumed (McClymont et al. 2024; Scarlata et al. 2024).
+If [O iii]𝜆5007 is available instead, its equivalent width can give a
+measure of the ionisation field of the galaxy as shown in Chevallard
+et al. (2018), and later in Tang et al. (2019). This method also depends
+on the shape of the attenuation curve assumed, as well as on the gasphase metallicity and nebular conditions.
+
+Ionising properties of galaxies in JADES
+
+11
+
+Table 2. Table excerpt of general properties for a selection of galaxies studied in this work. Column 1: JADES identifier, composed of the coordinates of the
+centroid rounded to the fifth decimal place, in units of degrees. Column 2: photometric redshift inferred using the SED fitting code Prospector. Column 3:
+logarithm of stellar mass. Column 4: logarithm of the ionising photon production efficiency. Column 5: logarithm of the rate of ionising photons being emitted.
+Column 6: logarithm of the burstiness of SFH, defined as the ratio between recent star formation (<10 Myr) and the one averaged over the past 100 Myr (using
+the median values of SFR10 and SFR100 ). Column 7: observed UV magnitude.
+Name
+
+𝑧
+
+log(M)
+[M ⊙ ]
+
+log( 𝜉ion,0 )
+[Hz erg −1 ]
+
+log(𝑛¤ ion )
+[s −1 ]
+
+log(SFR10 /SFR100 )
+
+MUV,obs
+[AB]
+
+JADES-GS+53.14866-27.77800
+JADES-GS+53.12095-27.87018
+JADES-GS+53.11867-27.78184
+JADES-GS+53.08300-27.72764
+JADES-GS+53.04080-27.92276
+JADES-GS+53.09258-27.82776
+JADES-GS+53.12590-27.74766
+JADES-GS+53.13889-27.88894
+JADES-GS+53.22062-27.80017
+JADES-GS+53.10416-27.76468
+JADES-GS+53.10666-27.85285
+JADES-GS+53.14954-27.83692
+JADES-GS+53.13434-27.87952
+JADES-GS+53.07363-27.80199
+JADES-GS+53.11274-27.86907
+JADES-GS+53.06192-27.71806
+JADES-GS+53.11460-27.77632
+JADES-GS+53.12350-27.89819
+JADES-GS+53.11707-27.76709
+JADES-GS+53.09145-27.91365
+
+3.31+0.19
+−0.07
+3.33+0.10
+−0.07
+3.74+0.02
+−0.12
+3.13+0.20
+−0.24
+3.22+0.21
+−0.38
++0.05
+3.10 −0.03
+3.99+1.71
+−0.10
+3.36+0.06
+−0.15
+3.51+0.19
+−0.39
+3.22+0.43
+−0.55
++0.06
+3.70 −0.01
+3.47+0.18
+−0.20
+3.63+0.06
+−0.10
++0.16
+3.79 −0.09
+3.57+0.20
+−0.55
+3.09+0.04
+−0.02
+3.70+2.91
+−0.27
+3.06+0.10
+−0.25
++0.03
+3.09 −0.02
+3.51+0.14
+−0.18
+
+7.85+0.07
+−0.14
+8.08+0.09
+−0.14
+7.93+0.13
+−0.19
+8.23+0.16
+−0.23
+8.30+0.11
+−0.17
++0.11
+9.01 −0.17
+7.76+0.28
+−0.22
+7.61+0.18
+−0.28
+8.13+0.18
+−0.35
+7.91+0.15
+−0.25
++0.25
+8.69 −0.05
+8.44+0.07
+−0.17
+9.23+0.08
+−0.55
++0.13
+8.21 −0.16
+7.77+0.15
+−0.25
+8.01+0.04
+−0.07
+7.87+0.10
+−0.28
+8.51+0.14
+−0.20
++0.15
+7.79 −0.38
+8.26+0.17
+−0.29
+
+25.23+0.25
+−0.10
+25.37+0.13
+−0.08
+25.27+0.21
+−0.21
+25.28+0.18
+−0.24
+25.30+0.17
+−0.25
++0.07
+25.35 −0.10
+25.36+0.10
+−0.16
+25.57+0.08
+−0.04
+25.32+0.19
+−0.31
+25.16+0.29
+−0.62
++0.12
+25.34 −0.18
+24.71+0.38
+−0.62
+25.20+0.17
+−0.20
++0.29
+25.06 −0.39
+25.27+0.20
+−0.34
+25.45+0.16
+−0.02
+25.54+0.12
+−0.19
+25.24+0.15
+−0.52
++0.08
+25.49 −0.08
+25.24+0.14
+−0.27
+
+53.03+0.19
+−0.30
+53.43+0.19
+−0.21
+53.07+0.27
+−0.16
+52.93+0.19
+−0.19
+52.95+0.19
+−0.25
++0.18
+53.90 −0.17
+52.91+0.46
+−0.19
+53.43+0.13
+−0.24
+53.00+0.33
+−0.56
+52.18+0.60
+−0.93
++0.11
+54.11 −0.05
+52.42+0.39
+−0.59
+54.20+0.13
+−0.23
++0.38
+52.51 −0.43
+52.46+0.34
+−0.46
+53.76+0.09
+−0.14
+53.18+0.98
+−0.39
+53.22+0.25
+−0.46
++0.34
+53.02 −0.24
+52.95+0.24
+−0.29
+
+0.04
+-0.13
+0.05
+-0.07
+-0.02
+0.30
+0.11
+0.46
+0.02
+-0.15
+0.23
+-0.69
+0.06
+-0.30
+-0.15
+0.50
+0.26
+-0.09
+0.33
+-0.10
+
+-14.65+0.88
+−0.54
+-17.39+0.25
+−0.11
+-17.51+0.08
+−0.08
+-16.60+0.36
+−0.30
+-16.89+0.49
+−0.30
++0.14
+-18.25 −0.11
+-16.76+0.34
+−0.72
+-16.04+0.40
+−0.25
+-16.61+0.77
+−0.44
+-14.52+1.45
+−0.99
++0.05
+-19.37 −0.05
+-17.37+0.25
+−0.16
+-19.42+0.06
+−0.07
++0.29
+-16.48 −0.24
+-15.69+0.59
+−0.46
+-16.01+0.57
+−0.12
+-15.97+0.82
+−1.26
+-18.00+0.19
+−0.13
++0.50
+-15.56 −0.25
+-17.28+0.18
+−0.19
+
+In Simmonds et al. (2024a), the ionising properties of a sample
+of 677 emission line galaxies at 𝑧 ∼ 4 − 9 were analysed. These
+galaxies had signatures of either H𝛼 and/or [O iii] emission in their
+NIRCam photometry, specifically with a 5𝜎 detection in the filter
+pairs F335M-F356W and F410M-F444W. Both methods mentioned
+above were used to estimate 𝜉ion , while in parallel, Prospector was
+used to fit their full NIRCam photometry (assuming fesc = 0). A tight
+agreement was found between the values measured by emission line
+fluxes and those inferred by Prospector. Therefore, in this work
+we rely on this SED fitting code to extract the ionising properties
+of a stellar mass complete sample, allowing us to potentially study
+all types of galaxies, not only those with detectable emission lines.
+Since our Prospector fitting routine assumes an escape fraction of
+zero, our estimated ionising photon production efficiencies (𝜉ion,0 )
+include a correcting factor of 1−fesc , such that:
+
+2021; Atek et al. 2022; Naidu et al. 2022). This extensive compilation
+allowed them to estimate the rate of change of 𝜉ion,0 with redshift,
+finding it to have a slope of dlog(𝜉ion,0 )/d𝑧 = 0.09 ± 0.01 (black
+dashed line). The markers show the UV-faint galaxies at 𝑧 ∼ 3 − 7
+from Prieto-Lyon et al. (2023), the Lyman-𝛼 emitters (LAEs) from
+Ning et al. (2023) and Simmonds et al. (2023), the H𝛼 emitters from
+Rinaldi et al. (2024), and the ELGs from Simmonds et al. (2024a).
+The latter show a slightly less steep evolution of 𝜉ion,0 with redshift
+than the compilation of Stefanon et al. (2022), but consistent within
+errors (given by dlog(𝜉ion,0 )/dz= 0.07 ± 0.02). Finally, the stellar
+mass complete sample of this work is shown as grey pentagons.
+There is an overlap with previous measurements, however, there is a
+population of previously unseen galaxies with log(𝜉ion /[Hz erg −1 ])
+≲ 24.5. The inclusion of these galaxies has the result of flattening of
+the increase of 𝜉ion,0 with redshift.
+
+𝜉ion,0 = 𝜉ion × (1 − fesc ).
+
+Figure 8 shows 𝜉ion,0 and 𝑛¤ ion as a function of redshift, for our
+photometric (no edges) and spectroscopic (black edges) sample,
+colour-coded by the burstiness of their SFH (which correlates the
+most with 𝜉ion,0 ; Simmonds et al. 2024a). The crosses represent
+the galaxies with no recent star formation (SFR10 = 0 M ⊙ yr −1 ).
+As a reminder, both samples overlap and the Prospector-inferred
+redshifts agree with the 𝑧 spec ones, for a great majority of the overlapping galaxies. We present both samples fit separately to highlight
+that the increase in 𝜉ion,0 observed previously is mostly due to a selection effect (by selecting predominantly star-forming galaxies with
+emission lines). Indeed, the best fit to 𝜉ion,0 for the spectroscopic
+sample has a slope of dlog(𝜉ion,0 )/dz∼ 0.04 ± 0.02, within errors of
+the findings of Simmonds et al. (2024a). Importantly, when the full
+photometric sample is taken into account, the slope is considerably
+flatter (dlog(𝜉ion,0 )/dz∼ −0.02 ± 0.00). The same effect can be seen
+in the best-fit lines to 𝑛¤ ion .
+
+(3)
+
+Appendix C shows how well Prospector can constrain stellar
+masses and ionising photon production efficiencies, as a function
+of flux in F444W.
+5.2 Trends of ionising properties with redshift
+We first compare our results to those from the literature, in particular,
+for the evolution of 𝜉ion,0 with redshift. Figure 7 encodes most results
+to date. Stefanon et al. (2022) compiled 𝜉ion,0 measurements up to
+𝑧 ∼ 8 (containing data from Stark et al. 2015, 2017; MármolQueraltó et al. 2016; Nakajima et al. 2016; Bouwens et al. 2016;
+Matthee et al. 2017; Harikane et al. 2018; Shivaei et al. 2018; De
+Barros et al. 2019; Lam et al. 2019; Faisst et al. 2019; Tang et al.
+2019; Nanayakkara et al. 2020; Emami et al. 2020; Endsley et al.
+
+MNRAS 000, 1–20 (2024)
+
+12
+
+C. Simmonds et al.
+
+5.3 Trends of ionising properties with UV magnitude
+
+for the star-forming sample. Likewise, the 𝑛¤ ion -𝑧 relation shown in
+the bottom panel of Figure 8, for the star-forming sample becomes:
+
+et al. 2023): at higher redshifts, galaxies are bursty and undergo
+quenching attempts, but the replenishment time of gas within galaxies is so short that the mini-quenching phase is not observable (i.e.
+less than a few Myr). Supporting this scenario, recent work by Witten
+et al. (2024) shows a 𝑧 ∼ 7.9 galaxy with a bursty SFH, with evidence
+of a mini-quenched episode lasting ∼ 20 Myr followed by a rejuvenation event. Towards lower redshifts, the mini-quenching phase might
+have a longer duration or SFHs are less bursty, leading to fewer miniquenched systems. On the other hand, at 𝑧 ∼ 5 − 7, the UV part of the
+spectrum is shifted into the NIRCam F090W filter, which covers our
+entire stellar mass complete sample (see Figure 1). The deep NIRCam observations allow for stronger constraints on the SED shape,
+and could explain the increased detection of mini-quenched galaxies
+at these redshifts. Finally, at higher redshifts (𝑧 > 7), it becomes
+increasingly difficult to detect these almost featureless galaxies with
+photometry alone (and with a S/N > 3).
+"Mini-quenched galaxies" have low 𝜉ion,0 , well below the observed
+𝜉ion,0 relations (i.e. with redshift and MUV ), and are likely only
+minor players in the reionisation of the Universe. Their photometry
+show little-to-no evidence of emission lines, which explains why
+they have been neglected in previous studies of this nature. These
+galaxies are possibly analogues to the galaxies studied in Looser
+et al. (2023a); Strait et al. (2023) and Looser et al. (2023b), which
+are temporarily quenched due to their extremely bursty SFHs (Dome
+et al. 2023). Interestingly, using simulations, Dome et al. (2023)
+predict the number of mini-quenched galaxies increases with cosmic
+time, reaching ∼ 2 − 4% at 𝑧 = 4, in broad agreement with our
+preliminary findings. A spectroscopic follow-up study is needed to
+confirm this hypothesis.
+If we adopt the 𝛽-fesc (LyC) relation from Chisholm et al. (2022),
+given by:
+
+log( 𝑛¤ ion (z)) = (0.032 ± 0.016)𝑧 + (53.106 ± 0.079).
+
+fesc (LyC) = (1.3 ± 0.6) × 10 −4 × 10 (−1.22±0.1) 𝛽 ,
+
+𝜉ion depends on several galaxy properties, such as metallicity, age,
+and dust content (Shivaei et al. 2018). Moreover, fainter galaxies
+have been shown to be more efficient in producing ionising radiation (e.g. Duncan & Conselice 2015; Maseda et al. 2020; Simmonds et al. 2024a; Endsley et al. 2024). Figure 9 shows 𝜉ion,0
+as a function of MUV for our data, per redshift bin. We first
+note that as redshift increases, there are less galaxies per bin,
+and they tend to be fainter. We find that by dividing the sample
+into "star-forming" (log(SFR10 /SFR100 ) ≥ -1) and "mini-quenched"
+(log(SFR10 /SFR100 ) < -1), we distinguish two populations of galaxies that have consistent 𝜉ion,0 slopes with MUV , but populate a different 𝜉ion,0 range. The star-forming sample lies above log(𝜉ion,0 /[Hz
+erg −1 ])∼ 24.5, while the mini-quenched (see e.g. Looser et al.
+2023a,b) sample mostly lies below. The number of galaxies in each
+bin is shown in the top of the panels, with format N = XX (YY), where
+XX is the number of star-forming galaxies and YY is the number of
+mini-quenched galaxies. The best fit to both datasets (when enough
+points to fit a line reliably) are shown in the bottom of each panel.
+We find that in general, there is a slight increase of 𝜉ion,0 towards the
+fainter galaxies (slope of ∼ 0.01 − 0.04), but this increase is lower
+than the slope of ∼ 0.1 found in Simmonds et al. (2024a). This is
+unsurprising given the nature of our sample (i.e. containing potentially all types of galaxies). When taking these two populations in
+mind, the 𝜉ion,0 -𝑧 relation shown in the top panel of Figure 8 (for the
+photometric sample) becomes:
+log(𝜉ion,0 (z)) = (−0.001 ± 0.004)𝑧 + (25.294 ± 0.017)
+
+(4)
+
+(5)
+
+As with 𝜉ion,0 , the mini-quenched galaxies also appear to populate
+a distinct region in the 𝑛¤ ion versus UV magnitude plane. Contrary
+to 𝜉ion,0 , however, 𝑛¤ ion has a steeper dependence with MUV (with a
+slope of ∼ −0.4), as shown in Figure 10 1 . In summary, as galaxies
+become fainter, 𝜉ion,0 marginally increases, but 𝑛¤ ion significantly
+decreases. This is an effect that derives naturally from the definition
+of 𝜉ion,0 : the ratio between the ionising photons being produced
+(𝑛¤ ion ) and the non-ionising UV continuum luminosity. The former
+is dominated by the contribution of young hot stars, while the latter
+also includes the contribution of older stellar populations.
+Finally, we combine our redshift and UV magnitude relations to
+perform a 2-dimensional fit and find a joint relation for the starforming sample, given by:
+log(𝜉ion (𝑧, MUV )) =
+(0.003 ± 0.003)𝑧 + (−0.018 ± 0.003)MUV + (25.984 ± 0.053)
+5.4 Unveiling the silent population
+We find a total of 350 mini-quenched galaxy candidates, corresponding to ∼ 2.4% of our total sample. Their number increases with redshift up to 𝑧 = 7 and then decreases significantly. There are a few
+possible explanations for this behaviour that most likely are working
+together. On one hand, the preference of mini-quenched galaxies in
+the redshift window of 𝑧 = 4 − 6 could have a physical origin (Dome
+1
+
+Appendix D contains the relations shown in Figures 9 and 10 in table
+format.
+MNRAS 000, 1–20 (2024)
+
+(6)
+
+we find that a significant number of the mini-quenched galaxy candidates [51 (141)] indicate leakage of ionising radiation [fesc (LyC)
+> 10% (5%)]. Corresponding to ∼ 16% (40%) of the mini-quenched
+sample. By comparison, the star-forming sample only has ∼4% (32%)
+of galaxies that obey the same criteria. Figure 11 shows 𝜉ion,0 as
+a function of 𝛽 for all galaxies with fesc (LyC) > 10%. The miniquenched candidates populate a different parameter space in 𝜉ion,0
+and 𝛽 than the star-forming galaxies, with the mini-quenched galaxies having on average bluer UV continuum slopes and lower 𝜉ion,0
+values. We now focus on the strongest leaker candidates within the
+mini-quenched sample (fesc > 10%).
+Observing LyC leakage directly is impossible at high redshift, the
+average IGM transmission of hydrogen ionising photons emitted at
+𝜆 rest−frame ∼ 900 Å, at 𝑧 ∼ 6, is virtually zero (Inoue et al. 2014). It is
+even more complicated to observe hydrogen ionising photons emitted
+at shorter wavelengths, for example at ∼ 700 Å, where the nebular
+contribution does not contaminate fesc estimations (Simmonds et al.
+2024b). Therefore, indirect methods are required to understand how
+ionising photons escape in the early Universe. In order to confirm
+if these galaxies are indeed leaking, we run Prospector on this
+subsample, with a modified approach that includes LyC leakage in
+the fitting routing (Stoffers et al. in prep). This is work in progress
+and is in the process of being calibrated. Promisingly, Prospector
+finds signs of leakage for these LyC leaking candidates (finding fesc
+> 20% for all of them).
+Figure 12 shows 𝜉ion,0 versus fesc (LyC), colour-coded by burstiness. The shaded region shows the area where fesc > 10%,
+and log(SFR10 /SFR100 ) < −1 (the latter roughly coincides with
+log(𝜉ion,0 /[Hz erg −1 ]) < 24.5). This parameter space is analogous
+
+2.7
+
+2.6
+
+2.5
+
+26.0
+
+log ion, 0 [Hz erg 1]
+
+0.5
+
+2.4
+
+25.5
+
+25.5
+
+25.0
+
+25.0
+
+24.5
+
+24.5
+
+24.0
+23.5
+
+25.5
+
+26.0
+
+2.7
+
+2.6
+
+2.5
+
+2.4
+
+0.5
+
+25.0
+
+1.0
+
+24.5
+
+1.5
+
+24.0
+
+2.0
+
+RL candidates
+(Katz+2023)
+
+23.5
+
+24.0
+SF: log(SFR10 / SFR100) -1
+MQ: log(SFR10 / SFR100) < -1
+
+0.0
+
+log SFR10/SFR100
+
+100
+
+13
+1.0
+
+26.0
+
+SF
+MQ
+
+log ( ion, 0 / [Hz erg 1])
+
+102
+
+23.5
+100 102
+
+23.0
+
+2.5
+3.0
+
+0.00
+
+0.05
+
+0.10
+
+0.15
+
+0.20
+
+fesc(LyC) [Chisholm+2022]
+
+0.25
+
+0.30
+
+N
+
+Figure 11. 𝜉ion,0 versus 𝛽 for the galaxies with fesc (LyC) > 10%, adopting the
+relation from Chisholm et al. (2022). The two colours represent star-forming
+("SF"; smaller grey circles) and mini-quenched ("MQ": purple larger circles)
+populations, as shown in the legend. The 𝜉ion,0 and 𝛽 medians of each subsample are shown as filled (mini-quenched) and dotted (star-forming) lines.
+Although, by definition, every galaxy with fesc (LyC) > 10% has a blue UV
+continuum slope, the mini-quenched candidates have on average bluer 𝛽 and
+lower 𝜉ion,0 values than the star-forming galaxies.
+
+to the one presented in Katz et al. (2023) for "remnant leakers". In
+short, Katz et al. (2023) propose two modes of LyC leakage (fesc
+> 20%), based on galaxies from the SPHINX suite of cosmological simulations (Rosdahl et al. 2018, 2022). "Bursty leakers" are
+galaxies with a recent burst of star formation (within the last 10
+Myr, SFR10 >SFR100 ), akin to an ionisation bounded HII region with
+holes. While "remnant leakers" had a strong burst of star formation in
+the past, but not recently (SFR100 >SFR10 ). Making remnant leakers
+similar to density bounded HII regions, where the ISM was disrupted
+enough to halt star formation.
+Figure 13 shows the stacked SFHs of the 51 remnant leaker candidates found in this work, which indicates the presence of a burst in
+star formation occurring in the past (within the last ∼ 50 Myr), but
+no recent star formation (within the last 10 Myr), in agreement with
+the SPHINX remnant leakers from Katz et al. (2023). As expected,
+the photometry for these candidates suggests little-to-no presence of
+emission lines, which could support a high fesc scenario (Zackrisson
+et al. 2017). The evidence of these galaxies being in a remnant leaker
+mode is compelling. An in depth study of these sources will be performed in the future and is beyond the scope of this work. However,
+given the small amount of galaxies we find to fall into the miniquenched category (< 3% of the total sample), and their low 𝜉ion,0 ,
+we conclude that they are not dominant agents in the reionisation of
+the Universe.
+
+Figure 12. 𝜉ion,0 versus LyC escape fractions, estimated using the 𝛽 relation
+from Chisholm et al. (2022), and colour-coded by burstiness. The vertical
+dashed line shows the mean fesc of the star-forming sample. As in previous figures, the crosses show the galaxies with zero recent star formation
+(SFR10 = 0 M ⊙ yr −1 ). The dark shaded area highlights the region where
+log(SFR10 /SFR100 ) < -1, and fesc (LyC) > 10%, which broadly coincides with
+the region where log( 𝜉ion,0 /[Hz erg −1 ]) is below 24.5. This parameter space
+is analogue to the one populated by the "remnant leakers" (RL) presented in
+Katz et al. (2023). Following this criteria, we find 51 remnant leaker candidates.
+
+Individual [N = 51]
+Mean stack
+
+1.0
+0.8
+
+SFR / SFRmax
+
+N
+
+Ionising properties of galaxies in JADES
+
+Criteria:
+log(SFR10/SFR100) < -1
+fesc(LyC) > 10%
+
+0.6
+0.4
+0.2
+0.0
+
+0
+
+20
+
+40
+
+60
+
+80
+
+lookback time [Myr]
+
+100
+
+120
+
+Figure 13. Stacked SFHs of the 51 galaxies populating the "remnant leakers"
+parameter space shown in Figure 12. The SFHs have been normalised to their
+maximum, the individual SFHs are shown as thin coloured curves, and the
+stack as a purple thick curve. The shape of the mean SFH of these galaxies
+indicates a burst of star formation in their recent past (<50 Myr), but not
+within their immediate past (<10 Myr).
+
+6 IMPLICATIONS FOR THE REIONISATION OF THE
+UNIVERSE
+Recent works based on JWST observations have arrived to the conclusion that there is an overestimation of ionising photons at the EoR,
+leading to a so called "crisis" in the ionising photon budget (see e.g.,
+MNRAS 000, 1–20 (2024)
+
+C. Simmonds et al.
+
+50
+49
+48
+
+log ( ion/[Hz erg 1]) = 25.2 (fixed)
+
+23
+log (Nion / [s 1 Mpc 3])
+
+log (Nion / [s 1 Mpc 3])
+
+fesc(fixed) [10%]
+
+51
+
+22
+
+21
+
+20
+
+19
+
+MUV [AB mag]
+
+18
+
+17
+
+fesc(MUV) [Anderson+2017]
+
+50
+
+3 z
+4<z
+5<z
+6<z
+7<z
+8<z
+
+48
+46
+23
+
+22
+
+21
+
+20
+
+19
+
+MUV [AB mag]
+
+18
+
+17
+
+4
+5
+6
+7
+8
+9
+
+16
+
+fesc(fixed) [20%]
+
+51
+50
+49
+48
+
+16
+
+23
+log (Nion / [s 1 Mpc 3])
+
+log (Nion / [s 1 Mpc 3])
+
+14
+
+22
+
+21
+
+20
+
+19
+
+MUV [AB mag]
+
+18
+
+17
+
+16
+
+fesc( ) [Chisholm+2022]
+
+50
+48
+
+z = 3.8
+z = 5.0
+z = 5.9
+z = 7.0
+z = 8.0
+
+46
+23
+
+22
+
+21
+
+20
+
+19
+
+MUV [AB mag]
+
+18
+
+17
+
+16
+
+Figure 14. 𝑁¤ ion as a function of MUV , separated by redshift bins and assuming a fesc as indicated in each panel. The 𝜉ion,0 relations with MUV shown in
+Figure 9 are adopted (using the relations given for galaxies with log(SFR10 /SFR100 ) ≥ -1, which are representative of the general population). The variable fesc
+prescriptions come from Anderson et al. (2017) and Chisholm et al. (2022), and the luminosity functions are taken from Bouwens et al. (2021). In the top panel,
+we show for comparison the results adopting a fixed log( 𝜉ion,0 /[Hz erg −1 ]) = 25.2 (grey shaded area and dotted lines).
+
+Trebitsch et al. 2022; Chakraborty & Choudhury 2024; Muñoz et al.
+2024). In the following sections, we discuss the implications of our
+𝜉ion,0 estimations for a stellar mass complete sample on the cosmic
+ionising budget.
+
+6.1 Constraints on the cosmic ionising budget
+As in Simmonds et al. (2024a), we now study the implications of our
+findings on the ionising cosmic budget through 𝑁¤ ion , which represents the number of ionising photons produced per volume unit. We
+first analyse the contributions of different MUV and redshift bins to
+𝑁¤ ion , by adopting the UV luminosity functions from Bouwens et al.
+(2021) and some simple prescriptions for fesc : constant of 10 and
+20% (Ouchi et al. 2009; Robertson et al. 2013, 2015), and varying
+according to MUV (Anderson et al. 2017). The latter was constructed
+using the uniform volume simulation Vulcan, and states the dependence: log(fesc ) = (0.51 ± 0.4)MUV + 7.3 ± 0.08. For 𝜉ion we use
+the 𝜉ion,0 relations presented in Figure 9 for the star-forming sample
+(i.e. log(SFR10 /SFR100 ) ≥ -1). This sample was chosen because it
+is representative of most galaxies in this study, accounting for >97%
+of the total sample. We remind the reader that our Prospectorinferred ionising photon production efficiencies assume fesc =0, such
+that 𝜉ion,0 = 𝜉ion ×(1-fesc ). For simplicity, in the following calculations we adopt 𝜉ion =𝜉ion,0 , therefore, the resulting 𝑁¤ ion values
+should be taken as lower limits. For reference, the mean fesc for the
+star-forming sample is ∼ 3% (see Figure 12), which would result in
+a difference in 𝑁¤ ion of <0.1 dex.
+The resulting 𝑁¤ ion curves as a function of MUV are shown in
+Figure 14, each panel displaying a different fesc as indicated in the
+MNRAS 000, 1–20 (2024)
+
+top left corner. As expected, the curves with fixed fesc are flatter
+than those derived in Simmonds et al. (2024a), a consequence of
+now having a stellar mass complete sample that leads to a milder
+𝜉ion evolution with MUV . Once all types of galaxies are potentially
+included, the importance of faint galaxies in the ionising cosmic
+budget is reduced. We note that our exclusion of mini-quenched
+galaxies does not change this conclusion, since they only account for
+≲ 4% of the sample. In the case of the variable fesc , the curves are
+still steep, due to the nature of their fesc prescriptions. On the one
+hand, Anderson et al. (2017) states that ionising photons can escape
+much more easily from faint galaxies. On the other hand, Chisholm
+et al. (2022) propose that galaxies with bluer UV continuum slopes
+(𝛽) are likely more efficient LyC leakers. The 𝛽 in Equation 6 can be
+expressed as a function of MUV as:
+𝛽 = 𝑏 + 𝑎 × (MUV + 19.5)
+
+(7)
+
+As described in Chisholm et al. (2022), the coefficients 𝑎 and 𝑏
+connect MUV to the UV continuum slope, 𝛽, through the 𝛽-MUV
+relations provided in Bouwens et al. (2014) for selected redshifts.
+On the top left panel, we also include the results if we adopt a
+constant log(𝜉ion /[Hz erg −1 ]) = 25.2 (based on stellar populations,
+as in Robertson et al. 2013). We find that the shapes of the 𝑁¤ ion
+curves with fixed 𝜉ion are similar to the ones found in this work,
+albeit slightly offset towards lower 𝑁¤ ion .
+Using the 𝑁¤ ion curves estimated above, in Figure 15 we investigate
+how the ionising cosmic budget evolves with redshift, given by:
+𝑁¤ ion =
+
+M∫
+UV,max
+
+𝜌UV (MUV , 𝑧) × fesc (MUV , 𝑧) × 𝜉ion (MUV , 𝑧)dMUV ,
+MUV,min
+
+log (Nion / [s 1 Mpc 3])
+
+Ionising properties of galaxies in JADES
+
+51.5
+
+C = 10
+
+51.0
+
+C=3
+
+50.5
+
+C=1
+
+50.0
+
+15
+
+fesc = 20% (B21)
+fesc = 10% (B21)
+fesc = Anderson+2017 (B21)
+fesc = Chisholm+2022 (B21)
+Mason+2019, MUV < 15
+Madau+1999
+Simmonds+24, ELGs
+Gaikwad+2023
+fesc = Naidu+2020 (W24)
+fesc = 20%, S16
+fesc = 10%, S16
+Rinaldi+2023, HAEs
+Davies+2024
+Becker & Bolton, 2013
+
+49.5
+2
+
+3
+
+4
+
+5
+
+6
+
+z
+
+7
+
+8
+
+9
+
+10
+
+Figure 15. Cosmic rate of ionising photons emitted per second and per unit volume ( 𝑁¤ ion ), as a function of redshift. The error bars in our estimations have
+been omitted for readability, and are on average ∼ 0.3 dex. The same fesc prescriptions assumed in Figure 14 are adopted, as indicated in the legend. The results
+obtained by adopting the UV luminosity density from Sun & Furlanetto (2016) are shown as filled circles ("S16"), and those obtained by integrating the UV
+luminosity density curves from Bouwens et al. (2021) down to MUV = −16 are shown as triangles ("B21", curves shown in Figure 14). The stars have been
+obtained by convolving the stellar mass functions from Weibel et al. (2024) instead ("W24"). We include the curve from Mason et al. (2015) assuming constant
+𝜉ion and fesc , integrated down to a MUV of -15 (as in Mason et al. 2019), as well as the 𝑁¤ ion reported in Rinaldi et al. (2024) for H𝛼 emitters at 𝑧 ∼ 7 − 8 (black
+square). We also include the estimated 𝑁¤ ion needed to maintain Hydrogen ionisation in the IGM (Madau et al. 1999), adopting clumping factors of 1, 3 and 10.
+Finally, as comparison, we show the results from Simmonds et al. (2024a), as a shaded hatched area. These were calculated under the assumption that the ELGs
+studied in that work were representative of the general galaxy population, with low faint low-mass bursty galaxies creating a turnover in 𝑁¤ ion at 𝑧 > 8. Finally,
+we include observational constraints obtained by observing the Ly𝛼 forest from Becker & Bolton (2013), Gaikwad et al. (2023), and Davies et al. (2024). With
+our stellar mass complete sample, we find that galaxies produce enough ionising radiation to ionise the Universe by 𝑧 ≈ 5 − 6, without producing an excess in
+the cosmic ionising photon budget. Importantly, the points estimated adopting the Chisholm et al. (2022) fesc prescription, flatten at 𝑧 ≲ 6, in general agreement
+with the Ly𝛼 forest constraints.
+
+(8)
+where 𝑁¤ ion is in units of s −1 Mpc −3 , 𝜉ion is in units of Hz erg −1 ,
+and 𝜌UV in units of erg s −1 Hz −1 Mpc −3 , and the escape fraction
+is dimensionless. We assume that the scatter is negligible and that
+there is an interdependence of variables (e.g. 𝜉ion -MUV relation).
+In this figure we integrate the curves shown in Figure 14 down to
+MUV = −16 (open triangles), estimated by adopting the luminosity
+functions from Bouwens et al. (2021). We remind the reader that
+our sample is UV complete down to MUV ∼ −16, and thus, our
+derived relations are valid in the integrated range. We also include
+the luminosity densities from Sun & Furlanetto (2016), who fit a
+power law to the low-mass end. To estimate 𝜉ion we use the best-fit
+relation to our data, as shown in Figure 9. For consistency, we use
+only the star-forming galaxies (accounting for ∼ 94% of the total
+sample).
+When adopting the Sun & Furlanetto (2016) luminosity functions,
+we only assume fixed escape fractions of 10 and 20% (filled circles),
+motivated by the canonical average fesc needed for galaxies to ionise
+the Universe (Ouchi et al. 2009; Robertson et al. 2013, 2015). As
+comparison, we add curves indicating the 𝑁¤ ion needed to maintain
+ionisation of hydrogen, according to the models of Madau et al.
+(1999), for clumping factors of 1, 3 and 10 (although see So et al.
+2014, for a discussion of the validity of this approach at the EoR).
+A clumping factor of unity represents a uniform IGM, while larger
+clumping factors imply a higher number of recombinations taking
+place in the IGM, and thus, more ionising photons need to be emitted
+in order to sustain ionisation. Finally, the values found in Simmonds
+et al. (2024a) for ELGs, are shown as a shaded hatched area. These
+were provided as upper limits, since they were estimated based on one
+
+important assumption: that the sample of ELGs was representative
+of the entire galaxy population. Indeed, in a recent work by Muñoz
+et al. (2024), an excess of ionising photons inferred from JWST
+observations is identified in the cosmic ionising budget. With our
+updated stellar mass complete sample, we are now able to provide
+more realistic results. We find that the estimations made with our
+star-forming sample are consistent with those from literature (e.g.
+Bouwens et al. 2015; Mason et al. 2015, 2019; Naidu et al. 2020;
+Rinaldi et al. 2024).
+In addition to the measurements described above, we include those
+found through the stellar mass function (instead of 𝜌UV ). In particular, we use results from Weibel et al. (2024), which are particularly
+relevant to this work since they were constructed from NIRCam observations of galaxies at 𝑧 ∼ 4 − 9. In this scenario, 𝑁¤ ion can be
+rewritten as:
+𝑁¤ ion =
+
+M
+∫ max
+
+Φ(M, 𝑧) × fesc (M, SFR(M), R(M)) × 𝑛¤ ion (M, 𝑧)dM, (9)
+Mmin
+
+where Φ is in units of Mpc −3 , fesc is dimensionless and depends on
+stellar mass, SFR, and size of the galaxy (through the SFR surface
+density, ΣSFR ), and 𝑛¤ ion is in units of s −1 . In this case, we adopt the
+fesc prescription from Naidu et al. (2020) due to its dependence on
+ΣSFR , such that:
+
+ 0.4+0.1 
+
+ΣSFR
+−0.1
++0.3
+(10)
+fesc = 𝑚𝑖𝑛 1, 1.6 −0.3 ×
+−2
+−1
+1000M ⊙ yr kpc
+In order to obtain ΣSFR , we first follow the size-mass relation and coefficients (for the full sample) presented in Table 3 of Morishita et al.
+(2024). We then combine the derived sizes with SFR10 (averaged
+MNRAS 000, 1–20 (2024)
+
+C. Simmonds et al.
+
+Nion [Madau+1999; C10]
+
+Nion [Madau+1999; C3]
+
+Nion [Madau+1999; C1]
+
+16
+
+100
+80
+60
+40
+20
+0
+100
+80
+60
+40
+20
+0
+
+100
+80
+60
+40
+20
+0
+
+fesc(fixed) = 10%
+
+5
+
+5
+
+5
+
+6
+
+7
+
+8
+
+z = 10%
+fesc(fixed)
+
+6
+
+7
+
+8
+
+fesc(fixed)z = 10%
+
+6
+
+7
+
+z
+
+8
+
+9
+
+9
+
+9
+
+100
+80
+60
+40
+20
+0
+100
+80
+60
+40
+20
+0
+100
+80
+60
+40
+20
+0
+
+fesc(fixed) = 20%
+
+5
+
+5
+
+5
+
+6
+
+7
+
+8
+
+z = 20%
+fesc(fixed)
+
+6
+
+7
+
+8
+
+fesc(fixed)z = 20%
+
+6
+
+7
+
+z
+
+8
+
+f (MUV) [Anderson+2017] 100 fesc( ) [Chisholm+2022] 100 fesc( SFR) [Naidu+2020]
+
+100 esc
+80
+60
+40
+20
+0
+9
+5
+
+6
+
+7
+
+8
+
+9
+
+80
+60
+40
+20
+0
+
+5
+
+6
+
+7
+
+8
+
+9
+
+80
+60
+40
+20
+0
+
+5
+
+6
+
+7
+
+8
+
+9
+
+5
+
+6
+
+7
+
+8
+
+9
+
+z
+z
+z
+f (M ) [Anderson+2017]
+f ( ) [Naidu+2020]
+f ( ) [Chisholm+2022]
+100 esc UV
+100 esc
+100 esc SFR
+
+9
+
+9
+
+80
+60
+40
+20
+0
+
+5
+
+6
+
+7
+
+8
+
+9
+
+80
+60
+40
+20
+0
+
+5
+
+6
+
+7
+
+8
+
+9
+
+80
+60
+40
+20
+0
+
+z
+z
+z
+f (M ) [Anderson+2017]
+f ( ) [Naidu+2020]
+f ( ) [Chisholm+2022]
+100 esc UV
+100 esc
+100 esc SFR
+80
+60
+40
+20
+0
+
+5
+
+6
+
+7
+
+z
+
+8
+
+9
+
+80
+60
+40
+20
+0
+
+-18 < MUV -16
+-20 MUV -18
+-24 MUV < -20
+
+5
+
+6
+
+7
+
+z
+
+8
+
+9
+
+80
+60
+40
+20
+0
+
+7.5 log(M * ) < 8.5
+8.5 log(M * ) < 9.5
+log(M * ) > 9.5
+
+5
+
+6
+
+7
+
+z
+
+8
+
+9
+
+Figure 16. Percentage of cosmic rate of ionising photons being emitted per second and per unit volume, as a function of MUV (four leftmost columns, coloured)
+and stellar mass (rightmost column, black and white). Three bins are shown per redshift in each panel, as indicated in the legends. The three MUV bins correspond
+to those shown in Figure 6, where brighter galaxies tend to have higher stellar masses. Each row is normalised to the Madau et al. (1999) models shown in
+Figure 15, where the 𝑁¤ ion needed to maintain hydrogen ionisation at every redshift bin is set to 100%: from top to bottom, C=1, C =3 and C=10. The columns
+show the different fesc prescriptions adopted earlier: constant (10 and 20%), and varying as a function of: MUV following Anderson et al. (2017), 𝛽 as proposed
+in Chisholm et al. (2022), and ΣSFR from Naidu et al. (2020). It can be seen that as the clumping factors increase, it becomes more difficult for galaxies to
+produce enough ionising photons by the end of the EoR (𝑧 ∼ 5 − 6). Importantly, for the calculations made convolving 𝜌UV (four leftmost columns), the
+faintest galaxies (fainter than MUV = −20) dominate the ionising photon budget for every fesc prescription and clumping factor. Analogously, the models on the
+rightmost column indicate that the intermediate and low mass bins dominate the budget, with a significant contribution from the galaxies in the lowest mass
+bin (log(M★ /[M ⊙ ])<8.5). Therefore, despite the uncertainties in the clumping factor, we confirm that faint galaxies with low stellar masses are key agents of
+reionisation.
+
+SFR/2
+
+(Shibuya et al. 2019).
+over the past 10 Myr), such that ΣSFR =
+𝜋R2
+After estimating ΣSFR , we compute fesc ×𝑛¤ ion for our stellar masscomplete sample, for each redshift bin. By combining the best-fit
+relations with Φ, and integrating them down to log(M★/[M ⊙ ])=7.5,
+we finally find 𝑁¤ ion as a function of redshift. The values are shown
+as stars in Figure 15, and are in general agreement with the other
+variable fesc prescriptions (i.e. Anderson et al. 2017; Chisholm et al.
+2022).
+Although the values of 𝑁¤ ion are highly uncertain in the early
+Universe, strong constraints on 𝑁¤ ion have been placed by observations
+of the Ly𝛼 forest at lower redshifts (e.g. Becker & Bolton 2013;
+Gaikwad et al. 2023; Davies et al. 2024, included in Figure 15).
+The Ly𝛼 forest refers to a series of absorption lines at wavelengths
+redder than Ly𝛼 (𝜆rest−frame ∼ 1216 Å) observed in the spectra
+of high redshift quasars, produced by the intervening neutral IGM.
+Interestingly, 𝑁¤ ion has been observed to flatten once reionisation has
+been completed (with log( 𝑁¤ ion /[s −1 Mpc −3 ])∼ 50.8 at 𝑧 ≲ 5 − 6).
+We find that, out of all the prescriptions adopted in this work, the fesc
+relations from Chisholm et al. (2022) can match the shape of the Ly𝛼
+forest constraints. We remind the reader that in order to construct
+a stellar mass-complete sample, we have ignored all galaxies below
+the completeness limit (log(M★/[M ⊙ ])∼ 7.5). Therefore, our points
+represent lower limits to the cosmic ionising budget.
+MNRAS 000, 1–20 (2024)
+
+6.2 Which galaxies reionised the Universe?
+In order to determine which galaxies dominate the budget of reionisation, we use the same fesc prescriptions as before, but integrate their contributions in three MUV bins: −24 ≤ MUV < −20,
+−20 ≤ MUV ≤ −18, and −18 < MUV ≤ −16. Figure 6 shows that
+MUV and stellar mass are correlated (albeit with a large scatter),
+where brighter galaxies are more massive (and vice-versa), such that
+each UV luminosity bin also loosely describes a mass bin in our
+sample. In the four leftmost columns of Figure 16 we adopt these
+MUV luminosity bins and show the relative contribution these bins
+have in 𝑁¤ ion for each redshift bin above 5 (where observational studies agree the EoR has ended, e.g. Keating et al. 2020; Yang et al.
+2020; Zhu et al. 2024). In the rightmost column we show the contributions of different stellar mass bins to the ionising budget, by
+adopting the stellar mass functions of Weibel et al. (2024) and the
+fesc prescription from Naidu et al. (2020) (stars in Figure 15). Each
+row has been normalised to a different clumping factor using the
+models from (Madau et al. 1999). We find that if the IGM is uniform
+(C=1), then galaxies produce enough ionising radiation in order to
+sustain hydrogen ionisation, independent of the fesc prescription. As
+the clumping factor increases, it becomes more difficult for galaxies
+to ionise the Universe by redshift 5. However, most importantly, we
+discover that for every clumping factor, fesc assumption, and redshift
+bin, the fainter galaxies (with MUV >= −20), and galaxies with low
+
+Ionising properties of galaxies in JADES
+and intermediate stellar masses (log(M★/[M ⊙ ])<9.5) dominate the
+cosmic ionising budget. In agreement with the results presented in
+Seeyave et al. (2023), based the First Light and Reionization Epoch
+Simulations (FLARES; Lovell et al. 2021; Vĳayan et al. 2021), and
+the conclusions reached by forward modelling JWST analogues from
+the SPHINX simulation, presented in Choustikov et al. (2024).
+Therefore, in this work, we confirm that faint low-mass galaxies
+with bursty star formation have in general enhanced 𝜉ion compared
+to massive galaxies and/or galaxies without recent star formation, in
+agreement with Simmonds et al. (2024a). However, when taking into
+account the full galaxy population, their contribution is less extreme
+as might have been thought previously, resolving any potential crisis
+in the ionising photon budget of the Universe (e.g., Pahl et al. 2024;
+Trebitsch et al. 2022; Chakraborty & Choudhury 2024). Finally, by
+adopting the relations from Chisholm et al. (2022), we are able to
+reconcile our results with the constraints provided by observations
+of the Ly𝛼 forest, especially in the flattening of 𝑁¤ ion that has been
+observed at lower redshifts (𝑧 ≲ 6). In summary, we have shown that
+galaxies produce enough ionising photons to ionise the Universe by
+𝑧 ≈ 5 − 6, without creating a nonphysical excess of ionising photons
+in the cosmic budget.
+
+7 CAVEATS AND LIMITATIONS
+There are a few important limitations to our method, which we now
+describe. Firstly, since our method relies on SED fitting, and includes
+the assumption of certain stellar populations, we are incapable of
+detecting and appropriately fitting extreme populations. In particular,
+we assumed a Chabrier IMF, with a maximum stellar mass of 100
+M ⊙ . This choice was motivated by the size of the sample, in an effort
+to chose a representative IMF and stellar populations. However, if
+there are extreme objects in our sample, we might be missing them.
+For example, Cameron et al. (2023a) have found tentative evidence
+for a top heavy IMF at 𝑧 ∼ 6 although, Tacchella et al. (2024) find an
+alternative explanation that does not require to invoke exotic stellar
+populations. If the IMF evolves with redshift, then our choice of a
+Chabrier IMF would affect our results (including the derived stellar
+masses). We circumvent this issue to some extent by selecting only
+the galaxies that were fit with a reduced 𝜒2 < 1, but we note that
+by doing so, might have lost information on sources that cannot be
+reproduced by our models.
+In the same vein, our modelling does not include a prescription for
+AGN. JWST has recently unveiled a hidden population of AGN at
+high redshifts (Juodžbalis et al. 2023; Madau et al. 2024; Maiolino
+et al. 2024; Übler et al. 2024). Underestimating the AGN contribution
+can lead to a systematic overestimation of stellar mass and SFRs by
+SED fitting codes (Buchner et al. 2024). Unfortunately, accurately
+identifying which galaxies in our sample host AGN is not trivial,
+as demonstrated by Wasleske & Baldassare (2024), who compare
+different techniques used to select AGN in dwarf galaxies (M∗ ≤
+109.5 M ⊙ ). They find that any single diagnostic can retrieve at most
+half of the AGN sample, and most importantly for this work, the
+AGN identification is least effective when considering photometry
+alon. Therefore, quantifying the contribution of AGN to our sample
+is far from the scope of this work. As such, we report our results
+and caution that our sample might contain some AGN that can be
+mimicked by stellar emission.
+Another important point is that our work relies heavily on
+photometric redshift measurements. Specifically, our Prospectorinferred redshifts use EAzY redshifts as priors. The latter has been
+proven to provide accurate results for large samples using JADES
+
+17
+
+NIRCam photometry in GOODS-S (Rieke et al. 2023). Moreover,
+in this work we compare them (when possible) to spectroscopic redshifts compiled from literature. We find a good –but not perfectagreement, suggesting that our results are in general accurate but
+likely contain a few outliers where the 𝑧 phot is unreliable. We stress
+that these outliers would be of the order of at most a few percent. As
+with the stellar populations, our selection of galaxies (fitted with a
+reduced 𝜒2 ≤ 1) ensures that the photometry is well represented by
+the best fit models. Moreover, the addition of HST observations aids
+in constraining the photometric redshifts. Finally, we do not expect
+cosmic variance to play an important factor in our results, but plan
+in the future to perform a similar study in GOODS-N.
+In summary, whereas there are intrinsic limitations to our methods,
+our results are –as much as possible– accurate and representative of
+the galaxy population in GOODS-S (at 3 ≤ 𝑧 ≤ 9).
+
+8 CONCLUSIONS
+We use JWST NIRCam photometry to build a sample of 14652
+galaxies at 3 ≤ 𝑧 ≤ 9, 1640 of them with spectroscopic redshifts
+from literature. We infer their properties using the SED fitting code
+Prospector, finding two distinct populations of galaxies which can
+be separated by their burstiness (delimited by log(SFR10 /SFR100 )
+= -1). We call these populations star forming and mini-quenched,
+and note that the mini-quenched galaxies only account for < 3%
+of the total sample. Within the mini-quenched population, we find
+an interesting subsample with tentative evidence of LyC leakage
+(through the UV continuum slope 𝛽). These galaxies populate a similar parameter space as the remnant leakers from Katz et al. (2023).
+Future spectroscopic follow-ups will be necessary to confirm or refute this hypothesis. Our main findings can be summarised as follows.
+We find that 𝜉ion,0 increases for fainter galaxies with burstier SFHs,
+in agreement with previous studies, albeit with a milder evolution
+with redshift. The latter is explained by the nature of our sample,
+and that previous studies were biased towards galaxies with strong
+emission lines and/or LAEs. The evolution of 𝜉ion,0 with 𝑧 for the
+more representative star-forming sample is:
+log(𝜉ion,0 (z)) = (−0.001 ± 0.004)𝑧 + (25.294 ± 0.017)
+The 2-dimensional fit that accounts for the change of 𝜉ion with MUV
+and redshift, for the same sample is given by:
+log(𝜉ion,0 (𝑧, MUV )) =
+(0.003 ± 0.003)𝑧 + (−0.018 ± 0.003)MUV + (25.984 ± 0.053)
+To study the contribution of the galaxies in this study to reionisation, we convolve the star-forming relations (which represent > 97%
+of the total sample), with luminosity functions from literature. We
+find that galaxies, which are detected with JWST, can ionise the Universe by the end of the EoR, if we assume the AGN contribution
+is minor. In particular, assuming a fixed escape fraction, we find
+that galaxies fainter than MUV = −20 contribute similar amounts
+of ionising photons (see Figure 14), and that galaxies in the range
+of MUV = −20 to −16 dominate the budget of reionisation at every
+redshift bin studied in this work (see Figure 16). With our stellar
+mass complete sample, our predictions do not overestimate 𝑁¤ ion for
+galaxies at 𝑧 > 8 (see Muñoz et al. 2024). We note that if we extrapolate our trends to fainter magnitudes (to MUV of -14 or -12), the
+Universe can be reionised with lower escape fractions. Promisingly,
+by adopting the relation of fesc with MUV presented in Chisholm
+et al. (2022), we can conciliate our results regarding the ionising
+MNRAS 000, 1–20 (2024)
+
+18
+
+C. Simmonds et al.
+
+cosmic budget with the constraints obtained through observations of
+the Ly𝛼 forest.
+
+ACKNOWLEDGEMENTS
+The JADES Collaboration thanks the Instrument Development
+Teams and the instrument teams at the European Space Agency
+and the Space Telescope Science Institute for the support that made
+this program possible. We also thank our program coordinators at
+STScI for their help in planning complicated parallel observations.
+We would like to acknowledge the FRESCO team, lead by Pascal
+Oesch, for developing their observing program with a zero-exclusiveaccess period.
+CS thanks Sarah Bosman, Frederick Davies, James Leftley, and
+Arjen van der Wel for the insightful discussions. CS, W.B., RM, & JW
+acknowledge support by the Science and Technology Facilities Council (STFC) and by the ERC through Advanced Grant number 695671
+‘QUENCH’, and by the UKRI Frontier Research grant RISEandFALL. RM also acknowledges funding from a research professorship
+from the Royal Society. ST acknowledges support by the Royal Society Research Grant G125142. BER, BDJ, PAC & YZ acknowledge
+support from the NIRCam Science Team contract to the University of
+Arizona, NAS5-02015. BER also acknowledges support by the JWST
+Program 3215. DP acknowledges support by the Huo Family Foundation through a P.C. Ho PhD Studentship. This research is supported
+in part by the Australian Research Council Centre of Excellence for
+All Sky Astrophysics in 3 Dimensions (ASTRO 3D), through project
+number CE170100013. AJB, JC & GCJ acknowledge funding from
+the "FirstGalaxies" Advanced Grant from the European Research
+Council (ERC) under the European Union’s Horizon 2020 research
+and innovation programme (Grant agreement No. 789056). SC acknowledges support by European Union’s HE ERC Starting Grant
+No. 101040227 - WINGS. ECL acknowledges support of an STFC
+Webb Fellowship (ST/W001438/1). IL is supported by the National
+Science Foundation Graduate Research Fellowship under Grant No.
+2137424. HÜ gratefully acknowledges support by the Isaac Newton
+Trust and by the Kavli Foundation through a Newton-Kavli Junior
+Fellowship. NCV acknowledges support from the Charles and Julia
+Henry Fund through the Henry Fellowship. The research of CCW
+is supported by NOIRLab, which is managed by the Association of
+Universities for Research in Astronomy (AURA) under a cooperative
+agreement with the National Science Foundation.
+
+DATA AVAILABILITY
+The data underlying this article will be shared on reasonable request
+to the corresponding author.
+
+REFERENCES
+Adams N. J., et al., 2024, ApJ, 965, 169
+Anderson L., Governato F., Karcher M., Quinn T., Wadsley J., 2017, MNRAS,
+468, 4077
+Atek H., Furtak L. J., Oesch P., van Dokkum P., Reddy N., Contini T.,
+Illingworth G., Wilkins S., 2022, MNRAS, 511, 4464
+Atek H., et al., 2023, arXiv e-prints, p. arXiv:2308.08540
+Austin D., et al., 2024, arXiv e-prints, p. arXiv:2404.10751
+Bacon R., et al., 2010, in McLean I. S., Ramsay S. K., Takami H., eds, Society
+of Photo-Optical Instrumentation Engineers (SPIE) Conference Series
+Vol. 7735, Ground-based and Airborne Instrumentation for Astronomy
+III. p. 773508, doi:10.1117/12.856027
+MNRAS 000, 1–20 (2024)
+
+Bacon R., et al., 2022, arXiv e-prints, p. arXiv:2211.08493
+Becker G. D., Bolton J. S., 2013, MNRAS, 436, 1023
+Becker R. H., et al., 2001, AJ, 122, 2850
+Bian F., Fan X., McGreer I., Cai Z., Jiang L., 2017, ApJ, 837, L12
+Borthakur S., Heckman T. M., Leitherer C., Overzier R. A., 2014, Science,
+346, 216
+Bosman S. E. I., et al., 2022, MNRAS, 514, 55
+Bouwens R. J., et al., 2014, ApJ, 793, 115
+Bouwens R. J., et al., 2015, ApJ, 803, 34
+Bouwens R. J., Smit R., Labbé I., Franx M., Caruana J., Oesch P., Stefanon
+M., Rasappu N., 2016, ApJ, 831, 176
+Bouwens R. J., et al., 2021, AJ, 162, 47
+Bradley
+L.,
+et
+al.,
+2022,
+astropy/photutils:
+1.5.0,
+doi:10.5281/zenodo.6825092, https://doi.org/10.5281/zenodo.
+6825092
+Brammer G. B., van Dokkum P. G., Coppi P., 2008, ApJ, 686, 1503
+Brinchmann J., Charlot S., White S. D. M., Tremonti C., Kauffmann G.,
+Heckman T., Brinkmann J., 2004, MNRAS, 351, 1151
+Buchner J., et al., 2024, arXiv e-prints, p. arXiv:2405.19297
+Bunker A. J., et al., 2023, arXiv e-prints, p. arXiv:2306.02467
+Byler N., Dalcanton J. J., Conroy C., Johnson B. D., 2017, ApJ, 840, 44
+Calzetti D., Kinney A. L., Storchi-Bergmann T., 1994, ApJ, 429, 582
+Cameron A. J., Katz H., Witten C., Saxena A., Laporte N., Bunker A. J.,
+2023a, arXiv e-prints, p. arXiv:2311.02051
+Cameron A. J., et al., 2023b, A&A, 677, A115
+Caplar N., Tacchella S., 2019, MNRAS, 487, 3845
+Chabrier G., 2003, PASP, 115, 763
+Chakraborty A., Choudhury T. R., 2024, J. Cosmology Astropart. Phys., 2024,
+078
+Charlot S., Fall S. M., 2000, ApJ, 539, 718
+Chevallard J., et al., 2018, MNRAS, 479, 3264
+Chisholm J., et al., 2022, MNRAS, 517, 5104
+Choi J., Dotter A., Conroy C., Cantiello M., Paxton B., Johnson B. D., 2016,
+ApJ, 823, 102
+Choustikov N., Stiskalek R., Saxena A., Katz H., Devrient J., Slyz A., 2024,
+arXiv e-prints, p. arXiv:2405.09720
+Conroy C., Gunn J. E., White M., 2009, ApJ, 699, 486
+D’Eugenio F., et al., 2024, arXiv e-prints, p. arXiv:2404.06531
+Daddi E., et al., 2007, ApJ, 670, 156
+Davies F. B., et al., 2024, ApJ, 965, 134
+Dayal P., et al., 2020, MNRAS, 495, 3065
+De Barros S., Oesch P. A., Labbé I., Stefanon M., González V., Smit R.,
+Bouwens R. J., Illingworth G. D., 2019, MNRAS, 489, 2355
+Dome T., Tacchella S., Fialkov A., Dekel A., Ginzburg O., Lapiner S., Looser
+T. J., 2023, arXiv e-prints, p. arXiv:2305.07066
+Donnan C. T., et al., 2024, arXiv e-prints, p. arXiv:2403.03171
+Dotter A., 2016, ApJS, 222, 8
+Duncan K., Conselice C. J., 2015, MNRAS, 451, 2030
+Duncan K., et al., 2014, MNRAS, 444, 2960
+Eisenstein D. J., et al., 2023a, arXiv e-prints, p. arXiv:2306.02465
+Eisenstein D. J., et al., 2023b, arXiv e-prints, p. arXiv:2310.12340
+Emami N., Siana B., Alavi A., Gburek T., Freeman W. R., Richard J., Weisz
+D. R., Stark D. P., 2020, ApJ, 895, 116
+Endsley R., Stark D. P., Chevallard J., Charlot S., 2021, MNRAS, 500, 5229
+Endsley R., et al., 2024, MNRAS, 533, 1111
+Faisst A. L., Capak P. L., Emami N., Tacchella S., Larson K. L., 2019, ApJ,
+884, 133
+Fan X., et al., 2006, AJ, 131, 1203
+Faucher-Giguère C.-A., 2018, MNRAS, 473, 3717
+Ferland G. J., et al., 2013, Rev. Mex. Astron. Astrofis., 49, 137
+Finkelstein S. L., et al., 2019, ApJ, 879, 36
+Flury S. R., et al., 2022, ApJS, 260, 1
+Gaikwad P., et al., 2023, MNRAS, 525, 4093
+Gardner J. P., et al., 2023, PASP, 135, 068001
+Giavalisco M., et al., 2004, ApJ, 600, L93
+González V., Labbé I., Bouwens R. J., Illingworth G., Franx M., Kriek M.,
+2011, ApJ, 735, L34
+
+Ionising properties of galaxies in JADES
+Gordon K. D., Clayton G. C., Misselt K. A., Landolt A. U., Wolff M. J., 2003,
+ApJ, 594, 279
+Grogin N. A., et al., 2011, ApJS, 197, 35
+Guo Y., et al., 2016, ApJ, 833, 37
+Hainline K. N., et al., 2023, arXiv e-prints, p. arXiv:2306.02468
+Harikane Y., et al., 2018, ApJ, 859, 84
+Harshan A., et al., 2024, MNRAS, 532, 1112
+Hassan S., Davé R., Mitra S., Finlator K., Ciardi B., Santos M. G., 2018,
+MNRAS, 473, 227
+Illingworth G., et al., 2016, arXiv e-prints, p. arXiv:1606.00841
+Inoue A. K., Shimizu I., Iwata I., Tanaka M., 2014, MNRAS, 442, 1805
+Izotov Y. I., Worseck G., Schaerer D., Guseva N. G., Chisholm J., Thuan
+T. X., Fricke K. J., Verhamme A., 2021, MNRAS, 503, 1734
+Jakobsen P., et al., 2022, A&A, 661, A80
+Ji Z., et al., 2023, arXiv e-prints, p. arXiv:2305.18518
+Johnson B. D., Leja J. L., Conroy C., Speagle J. S., 2019, Prospector: Stellar
+population inference from spectra and SEDs, Astrophysics Source Code
+Library, record ascl:1905.025 (ascl:1905.025)
+Johnson B. D., Leja J., Conroy C., Speagle J. S., 2021, ApJS, 254, 22
+Juodžbalis I., et al., 2023, MNRAS, 525, 1353
+Katz H., et al., 2023, MNRAS, 518, 270
+Kaurov A. A., Gnedin N. Y., 2014, ApJ, 787, 146
+Keating L. C., Weinberger L. H., Kulkarni G., Haehnelt M. G., Chardin J.,
+Aubert D., 2020, MNRAS, 491, 1736
+Kennicutt Robert C. J., 1998, ApJ, 498, 541
+Koekemoer A. M., et al., 2011, ApJS, 197, 36
+Kriek M., Conroy C., 2013, ApJ, 775, L16
+Kumari N., et al., 2024, arXiv e-prints, p. arXiv:2406.11997
+Lam D., et al., 2019, A&A, 627, A164
+Lastennet E., Lejeune T., Oblak E., Westera P., Buser R., 2002, Ap&SS, 280,
+83
+Leitet E., Bergvall N., Hayes M., Linné S., Zackrisson E., 2013, A&A, 553,
+A106
+Leitherer C., Hernandez S., Lee J. C., Oey M. S., 2016, ApJ, 823, 64
+Leja J., Carnall A. C., Johnson B. D., Conroy C., Speagle J. S., 2019, ApJ,
+876, 3
+Looser T. J., et al., 2023a, arXiv e-prints, p. arXiv:2302.14155
+Looser T. J., et al., 2023b, arXiv e-prints, p. arXiv:2306.02470
+Lovell C. C., Vĳayan A. P., Thomas P. A., Wilkins S. M., Barnes D. J.,
+Irodotou D., Roper W., 2021, MNRAS, 500, 2127
+Lower S., Narayanan D., Leja J., Johnson B. D., Conroy C., Davé R., 2020,
+ApJ, 904, 33
+Madau P., 1995, ApJ, 441, 18
+Madau P., Pozzetti L., Dickinson M., 1998, ApJ, 498, 106
+Madau P., Haardt F., Rees M. J., 1999, ApJ, 514, 648
+Madau P., Giallongo E., Grazian A., Haardt F., 2024, arXiv e-prints, p.
+arXiv:2406.18697
+Maiolino R., et al., 2023, arXiv e-prints, p. arXiv:2308.01230
+Maiolino R., et al., 2024, arXiv e-prints, p. arXiv:2405.00504
+Mármol-Queraltó E., McLure R. J., Cullen F., Dunlop J. S., Fontana A.,
+McLeod D. J., 2016, MNRAS, 460, 3587
+Maseda M. V., et al., 2020, MNRAS, 493, 5120
+Mason C. A., Trenti M., Treu T., 2015, ApJ, 813, 21
+Mason C. A., Naidu R. P., Tacchella S., Leja J., 2019, MNRAS, 489, 2669
+Matthee J., Sobral D., Darvish B., Santos S., Mobasher B., Paulino-Afonso
+A., Röttgering H., Alegre L., 2017, MNRAS, 472, 772
+McClymont W., et al., 2024, arXiv e-prints, p. arXiv:2405.15859
+Momcheva I. G., et al., 2016, ApJS, 225, 27
+Morishita T., et al., 2024, ApJ, 963, 9
+Muñoz J. B., Mirocha J., Chisholm J., Furlanetto S. R., Mason C., 2024,
+arXiv e-prints, p. arXiv:2404.07250
+Naidu R. P., Tacchella S., Mason C. A., Bose S., Oesch P. A., Conroy C.,
+2020, ApJ, 892, 109
+Naidu R. P., et al., 2022, MNRAS, 510, 4582
+Nakajima K., Ellis R. S., Iwata I., Inoue A. K., Kusakabe H., Ouchi M.,
+Robertson B. E., 2016, ApJ, 831, L9
+Nanayakkara T., et al., 2020, ApJ, 889, 180
+Ning Y., Cai Z., Jiang L., Lin X., Fu S., Spinoso D., 2023, ApJ, 944, L1
+
+19
+
+Oesch P. A., et al., 2023, arXiv e-prints, p. arXiv:2304.02026
+Osterbrock D. E., Ferland G. J., 2006, Astrophysics of gaseous nebulae and
+active galactic nuclei. University Science Books
+Ouchi M., et al., 2009, ApJ, 706, 1136
+Paardekooper J.-P., Khochfar S., Dalla Vecchia C., 2015, MNRAS, 451, 2544
+Pahl A. J., et al., 2024, arXiv e-prints, p. arXiv:2407.03399
+Planck Collaboration et al., 2020, A&A, 641, A6
+Pozzetti L., et al., 2010, A&A, 523, A13
+Prieto-Lyon G., et al., 2023, A&A, 672, A186
+Rieke M. J., et al., 2023, arXiv e-prints, p. arXiv:2306.02466
+Rinaldi P., et al., 2024, ApJ, 969, 12
+Robertson B. E., 2022, ARA&A, 60, 121
+Robertson B. E., et al., 2013, ApJ, 768, 71
+Robertson B. E., Ellis R. S., Furlanetto S. R., Dunlop J. S., 2015, ApJ, 802,
+L19
+Robertson B., et al., 2024, ApJ, 970, 31
+Rosdahl J., et al., 2018, MNRAS, 479, 994
+Rosdahl J., et al., 2022, arXiv e-prints, p. arXiv:2207.03232
+Salim S., et al., 2007, ApJS, 173, 267
+Saxena A., et al., 2024, A&A, 684, A84
+Scarlata C., Hayes M., Panagia N., Mehta V., Haardt F., Bagley M., 2024,
+arXiv e-prints, p. arXiv:2404.09015
+Seeyave L. T. C., et al., 2023, MNRAS, 525, 2422
+Shibuya T., Ouchi M., Harikane Y., Nakajima K., 2019, ApJ, 871, 164
+Shivaei I., et al., 2018, ApJ, 855, 42
+Simmonds C., Buchner J., Salvato M., Hsu L. T., Bauer F. E., 2018, A&A,
+618, A66
+Simmonds C., et al., 2023, MNRAS, 523, 5468
+Simmonds C., et al., 2024a, MNRAS, 527, 6139
+Simmonds C., Verhamme A., Inoue A. K., Katz H., Garel T., De Barros S.,
+2024b, MNRAS, 530, 2133
+So G. C., Norman M. L., Reynolds D. R., Wise J. H., 2014, ApJ, 789, 149
+Song M., et al., 2016, ApJ, 825, 5
+Speagle J. S., 2020, MNRAS, 493, 3132
+Stark D. P., et al., 2015, MNRAS, 454, 1393
+Stark D. P., et al., 2017, MNRAS, 464, 469
+Stefanon M., Bouwens R. J., Illingworth G. D., Labbé I., Oesch P. A., Gonzalez V., 2022, ApJ, 935, 94
+Steidel C. C., Bogosavljević M., Shapley A. E., Reddy N. A., Rudie G. C.,
+Pettini M., Trainor R. F., Strom A. L., 2018, The Astrophysical Journal,
+869, 123
+Strait V., et al., 2023, ApJ, 949, L23
+Sun G., Furlanetto S. R., 2016, MNRAS, 460, 417
+Tacchella S., Bose S., Conroy C., Eisenstein D. J., Johnson B. D., 2018, ApJ,
+868, 92
+Tacchella S., Forbes J. C., Caplar N., 2020, MNRAS, 497, 698
+Tacchella S., et al., 2022a, MNRAS, 513, 2904
+Tacchella S., et al., 2022b, ApJ, 927, 170
+Tacchella S., et al., 2024, arXiv e-prints, p. arXiv:2404.02194
+Tang M., Stark D. P., Chevallard J., Charlot S., 2019, MNRAS, 489, 2572
+Tang M., et al., 2023, arXiv e-prints, p. arXiv:2301.07072
+Trebitsch M., Volonteri M., Dubois Y., 2020, MNRAS, 494, 3453
+Trebitsch M., et al., 2022, arXiv e-prints, p. arXiv:2212.06177
+Übler H., et al., 2024, MNRAS, 531, 355
+Vanzella E., et al., 2018, MNRAS, 476, L15
+Vazdekis A., et al., 2015, MNRAS, 449, 1177
+Vĳayan A. P., Lovell C. C., Wilkins S. M., Thomas P. A., Barnes D. J.,
+Irodotou D., Kuusisto J., Roper W. J., 2021, MNRAS, 501, 3289
+Walter F., et al., 2016, ApJ, 833, 67
+Wasleske E. J., Baldassare V. F., 2024, arXiv e-prints, p. arXiv:2405.20312
+Weibel A., et al., 2024, arXiv e-prints, p. arXiv:2403.08872
+Weisz D. R., et al., 2012, ApJ, 744, 44
+Whitaker K. E., et al., 2019, ApJS, 244, 16
+Williams C. C., et al., 2023, arXiv e-prints, p. arXiv:2301.09780
+Witten C., et al., 2024, arXiv e-prints, p. arXiv:2407.07937
+Yang J., et al., 2020, ApJ, 904, 26
+Yeh J. Y. C., et al., 2023, MNRAS, 520, 2757
+Zackrisson E., et al., 2017, ApJ, 836, 78
+MNRAS 000, 1–20 (2024)
+
+20
+
+C. Simmonds et al.
+
+Table A1. Photometric offsets defined as the ratio between the observed and
+modelled photometry. Column 1: name of filter. Colum 2: median offset and
+errors, given by the 16th and 84th percentiles.
+Band
+
+Offset
+
+F435W
+F606W
+F775W
+F814W
+F850LP
+F105W
+F125W
+F140W
+F160W
+F070W
+F090W
+F115W
+F150W
+F162M
+F182M
+F200W
+F210M
+F250M
+F277W
+F300M
+F335M
+F356W
+F410M
+F430M
+F444W
+F460M
+F480M
+
+2.8 (+86.92, -2.54)
+2.0 (+50.04, -1.81)
+1.50 (+16.86, -1.32)
+1.34 (+12.06, -1.17)
+1.44 (+9.22, -1.25)
+1.17 (+7.21, -1.01)
+1.08 (+6.71, -0.93)
+1.96 (+10.73, -1.70)
+1.20 (+7.16, -1.04)
+1.69 (+17.41, -1.47)
+1.51 (+9.14, -1.27)
+1.44 (+7.47, -1.19)
+1.40 (+7.09, -1.16)
+1.63 (+8.89, -1.36)
+1.48 (+8.50, -1.25)
+1.36 (+7.77, -1.14)
+1.45 (+9.20, -1.24)
+1.68 (+9.11, -1.42)
+1.39 (+7.18, -1.16)
+1.73 (+10.06, -1.44)
+1.60 (+8.50, -1.35)
+1.43 (+7.37, -1.19)
+1.53 (+8.08, -1.30)
+1.50 (+8.14, -1.30)
+1.50 (+7.35, -1.25)
+1.42 (+8.04, -1.22)
+1.22 (+6.89, -1.04)
+
+Zhu Y., et al., 2024, arXiv e-prints, p. arXiv:2405.12275
+
+APPENDIX A: GOODNESS OF FITS
+Here we present a comparison between the modelled and observed
+photometry, defined as the difference between them, divided by the
+error in the modelled points. The median and errors are shown in Figure A1, where we exclude the HST bands F435W, F606W, F775W,
+F814W and F850LP. The observations in these filters are highly uncertain for our sample, yielding 𝜒 values well outside of the bounds
+of the figures. 𝜒 scatters around zero, with error bars that are mostly
+symmetric. As expected, the deep NIRCam photometric set is, in
+general, better represented by the Prospector best-fit models. Figure A2 shows the same comparison but at rest-frame wavelengths
+(where the Prospector photometric redshift has been adopted).
+The measurements have been binned into wavelength bins of width
+100Å, and the median values and errors are shown as white circles
+and error bars. The latter scatter around zero, and most importantly,
+do not show indication of emission line fluxes being either over or
+underestimated by Prospector. The photometric offsets for each
+band, defined as the ratio between the observed and modelled fluxes,
+are given in Table A1.
+
+APPENDIX B: SHAPE OF REDSHIFT AND STELLAR
+MASS DISTRIBUTIONS
+Figure B1 shows the mean shape of the main properties used to estimate the stellar mass completeness in Section 4.2. The redshift and
+MNRAS 000, 1–20 (2024)
+
+stellar masses have been divided by the 50th percentile value for each
+galaxy. We find no significant signs of asymmetry in the posteriors
+for our sample, and the values are in general well constrained by the
+fitting routine.
+
+APPENDIX C: INFORMATION GAINED AFTER
+SED-FITTING
+In order to measure how well Prospector can constrain stellar
+masses and ionising photon production efficiencies in our sample, we
+use the Kullback-Leibler definition of information gain (IG), given
+by:
+∫
+Posterior( 𝑝)
+IG =
+Posterior( 𝑝) × log2
+d𝑝[bits],
+(C1)
+Prior( 𝑝)
+where 𝑝 represents the parameter of choice: either log M★ or log 𝜉ion .
+IG is a way of measuring the difference between the prior and posterior, in units of bits: an IG = 0 means the prior is equal to the
+posterior and no information was gained, whereas a higher value of
+IG indicates a larger amount of information was gained in the fitting
+routine. Following the criteria from Simmonds et al. (2018):
+• IG < 1: little-to-no information was gained
+• 1 ≤ IG ≤ 2: some information was gained
+• IG > 2: parameter is constrained
+Figures C1 and C2 show the IG for stellar mass and 𝜉ion,0 , respectively, for our stellar mass complete sample. They are shown as a
+function of the flux in the F444W filter, colour-coded by stellar mass
+(left) and by burstiness (right). As expected, IG(stellar mass) is highest for brighter massive galaxies, and is lowest for fainter lower-mass
+galaxies. Importantly, all values are above 1 (the majority lie above
+2) and the information gained in stellar mass does not depend on
+the existence of recent star formation, or strong emission lines. In
+the case of 𝜉ion,0 , we find a trend of increasing IG with burstiness,
+but emphasise that all measurements are highly constrained (with IG
+≫ 2). Promisingly, most mini-quenched galaxies discussed in this
+work have a large IG. This is due to the richness of the photometric
+dataset, which allows to constrain SED shapes even in cases with no
+obvious emission lines.
+
+APPENDIX D: BEST-FIT PARAMETERS FOR RELATIONS
+OF IONISING PROPERTIES WITH OBSERVED UV
+MAGNITUDE
+For readability, the relations of 𝜉ion,0 and 𝑛¤ ion , as a function of
+MUV , presented in Figures 9 and 10, are given in Table D1 and D2,
+respectively.
+This paper has been typeset from a TEX/LATEX file prepared by the author.
+
+Ionising properties of galaxies in JADES
+
+21
+
+1
+0
+1
+
+F4
+
+M
+
+M
+
+60
+
+80
+F4
+
+M
+30
+
+44
+
+M
+
+F4
+
+10
+
+W
+
+F3
+
+F4
+
+M
+35
+
+56
+
+M
+
+F3
+
+00
+
+W
+
+F2
+
+F3
+
+M
+50
+
+77
+
+M
+
+Filters
+
+F2
+
+10
+
+W
+
+F2
+
+F2
+
+M
+82
+
+00
+
+M
+
+F1
+
+62
+
+W
+50
+
+F1
+
+W
+15
+
+F1
+
+W
+90
+
+F1
+
+W
+70
+
+F0
+
+W
+60
+
+F0
+
+W
+40
+
+F1
+
+W
+
+F1
+
+W
+
+25
+F1
+
+F1
+
+05
+
+3
+
+W
+
+HST
+JWST NIRCam
+
+2
+
+F4
+
+= (photProsp-photobs)/errProsp
+
+2
+
+H
+
+H
+[OIII]
+
+[OII]
+
+0.20
+0.15
+0.10
+0.05
+0.00
+0.05
+0.10
+0.15
+0.20
+
+Ly
+
+= (photProsp-photobs)/errProsp
+
+Figure A1. Comparison between the modelled and observed HST (squares) and JWST NIRCam (circles) photometry for our stellar mass complete sample. 𝜒
+scatters around zero with mostly symmetric error bars.
+
+Individual measurements
+Median
+2000
+
+4000
+
+6000
+
+8000
+
+rest frame [Å]
+
+10000
+
+12000
+
+Figure A2. Same as Figure A1 but at rest-frame wavelengths. The grey dots show the individual measurements, while the white circles and error bars show the
+median and errors when adopting bins of width 100Å. For comparison, the Ly𝛼, [O ii], H𝛽, [O iii], and H𝛼 emission wavelengths are shown as vertical dashed
+lines. It can be seen that the median values scatter around 𝜒 = 0, with symmetrical error bars. Moreover, we find no evidence of emission line fluxes being over
+(or under) estimated by Prospector.
+
+Table D1. Best-fit parameters for log( 𝜉ion,0 )-MUV relations, with form log( 𝜉ion,0 )= 𝛼MUV +log( 𝜉ion ,int ) shown in Figure 9, where 𝜉ion ,int is the intercept of the
+relation. Column 1: redshift bin. Column 2,3: slope and 𝜉ion,0 normalisation for the star-forming (SF) sample. Column 4,5: slope and 𝜉ion,0 normalisation for
+the mini-quenched (MQ) sample. For 𝑧 ≥ 7 we only provide relations for the star-forming sample, since there are not enough mini-quenched galaxies to obtain
+a reliable fit.
+Redshift
+
+𝛼
+[SF]
+
+log( 𝜉ion ,0 / [Hz erg −1 ])
+[SF]
+
+𝛼
+[MQ]
+
+log( 𝜉ion ,0 / [Hz erg −1 ])
+[MQ]
+
+3≤𝑧≤4
+4<𝑧≤5
+5<𝑧≤6
+6<𝑧≤7
+7<𝑧≤8
+8<𝑧≤9
+
+−0.01 ± 0.00
+−0.02 ± 0.01
+−0.05 ± 0.01
+−0.03 ± 0.02
+−0.05 ± 0.02
+−0.12 ± 0.05
+
+25.20 ± 0.07
+24.89 ± 0.11
+24.32 ± 0.12
+24.88 ± 0.27
+24.51 ± 0.32
+23.28 ± 0.94
+
+−0.06 ± 0.06
+−0.02 ± 0.04
+0.03 ± 0.04
+0.01 ± 0.04
+-
+
+23.23 ± 1.04
+23.95 ± 0.76
+24.74 ± 0.67
+24.51 ± 0.77
+-
+
+MNRAS 000, 1–20 (2024)
+
+22
+
+C. Simmonds et al.
+
+Table D2. Best-fit parameters for log(𝑛¤ ion )-MUV relations, with form log(𝑛¤ ion )= 𝛼MUV +log(𝑛¤ ion ,0 ) shown in Figure 10. Column 1: redshift bin. Column 2,3:
+slope and 𝑛¤ ion normalisation for the star-forming (SF) sample. Column 4,5: slope and 𝑛¤ ion normalisation for the mini-quenched (MQ) sample. For 𝑧 ≥ 7 we
+only provide relations for the star-forming sample, since there are not enough mini-quenched galaxies to obtain a reliable fit.
+
+MNRAS 000, 1–20 (2024)
+
+Redshift
+
+𝛼
+[SF]
+
+log(𝑛¤ ion ,0 / [s −1 ])
+[SF]
+
+𝛼
+[MQ]
+
+log(𝑛¤ ion ,0 / [s −1 ])
+[MQ]
+
+3≤𝑧≤4
+4<𝑧≤5
+5<𝑧≤6
+6<𝑧≤7
+7<𝑧≤8
+8<𝑧≤9
+
+−0.38 ± 0.01
+−0.40 ± 0.01
+−0.43 ± 0.01
+−0.40 ± 0.02
+−0.40 ± 0.02
+−0.45 ± 0.09
+
+46.67 ± 0.16
+46.24 ± 0.20
+45.54 ± 0.21
+46.17 ± 0.31
+46.29 ± 0.43
+45.32 ± 1.71
+
+−0.47 ± 0.08
+−0.41 ± 0.06
+−0.40 ± 0.03
+−0.39 ± 0.04
+-
+
+43.83 ± 1.38
+44.78 ± 1.02
+44.97 ± 0.61
+45.13 ± 0.83
+-
+
+23
+
+8
+
+6
+
+00
+
+01
+
+1.0
+
+2
+99
+
+0
+
+4
+98
+0.9
+
+1.0
+
+5
+01
+
+1.0
+
+00
+
+0
+00
+
+1.0
+
+1.0
+
+5
+98
+
+0.9
+
+z/zpeak
+
+0.9
+
+0
+97
+0.9
+
+0.9
+
+98
+
+4
+
+0.9
+
+M/Mpeak
+1.0 1.0 1.0
+99 00 00 01
+2
+0
+8
+6
+
+Ionising properties of galaxies in JADES
+
+M/Mpeak
+
+Figure B1. Corner plot showing the main properties of interest in the stellar
+mass completeness estimation: redshift and stellar mass. The values have
+been normalised to the 50th percentile (dashed vertical lines) for each galaxy,
+in order to understand the general shape of the posteriors in our sample. The
+grey areas show the 16th and 84th ranges. We find no significant signatures
+of asymmetry.
+
+MNRAS 000, 1–20 (2024)
+
+C. Simmonds et al.
+6
+
+6
+
+IG
+
+2 [N = 13717]
+
+4
+
+9.5
+9.0
+
+3
+
+8.5
+8.0
+
+2
+
+IG < 2 [N = 935]
+0
+
+1
+
+2
+
+3
+
+log(FF444W / [nJy])
+
+0.5
+0.0
+
+4
+
+0.5
+
+3
+
+1.0
+
+2
+
+1.5
+
+7.5
+
+IG < 2 [N = 935]
+1
+
+7.0
+
+4
+
+2 [N = 13717]
+
+5
+
+IG (stellar mass) [bits]
+
+10.0
+
+log(M * / [M ])
+
+IG (stellar mass) [bits]
+
+IG
+
+10.5
+
+5
+
+1
+
+1.0
+
+11.0
+
+log(SFR10 / SFR100)
+
+24
+
+0
+
+1
+
+2
+
+3
+
+2.0
+
+4
+
+log(FF444W / [nJy])
+
+Figure C1. Kullback-Leibler information gain as a function of flux in the F444W band. A higher flux leads in general to a higher IG. However, all of the galaxies
+in our sample have IG > 1, with ∼ 94% above IG = 2. Left panel: colour-coded by stellar mass. Right panel: colour-coded by burstiness of their SFH, defined as
+SFR10 /SFR100 . The crosses show galaxies with no recent star formation (SFR10 = 0).
+
+1.0
+
+11.0
+10.5
+
+0.5
+
+103
+
+9.0
+8.5
+
+101
+
+8.0
+
+IG ( ion) [bits]
+
+9.5
+
+102
+
+log(M * / [M ])
+
+IG ( ion) [bits]
+
+10.0
+
+0.0
+
+102
+
+log(SFR10 / SFR100)
+
+103
+
+0.5
+1.0
+
+101
+1.5
+
+7.5
+
+0
+
+1
+
+2
+
+3
+
+log(FF444W / [nJy])
+
+4
+
+0
+
+1
+
+2
+
+3
+
+log(FF444W / [nJy])
+
+4
+
+2.0
+
+Figure C2. Same as Figure C1 but for the ionising photon production efficiency, 𝜉ion,0 . The information gain tends to increase towards galaxies with burstier
+SFHs, however, we note that all galaxies in our stellar mass complete sample have a high information gain (well above IG = 2, shown as a dashed horizontal
+line).
+
+MNRAS 000, 1–20 (2024)
+
+

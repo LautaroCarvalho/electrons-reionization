@@ -1,0 +1,17 @@
+We are gonna craft a new figure color map for the same fiducial cosmological scenario of z = 10, with the HI and CMB prescriptions we have been using (Planck collaboration), following this guidelines and restrictions:
+
+Facts:
+
+1) The x-axis is the spectral index alpha of the photon spectrum
+2) The range of the photon spectrum that we are interested in goes from the HI ionization potential (E_min_ph ~ 13.6 eV) to the free streaming regime (E_max_ph ~keV)
+3) The y-axis is the spectral index of the cosmic ray electrons
+4) The range of the electron spectrum we are interested in goes from E_min_e = 1 keV to E_max_e = 1 TeV
+5) The color map is gonna represent a parameter called X_comp. 
+6) X_comp is the ratio between two integrals, one for photons and one for electrons. The integrals are of the form int{S(E_i;alpha_i;E_min_i;E_max_i)*N_ion_i(E)/<E_ion_i>}dE. Where the subindex i = \gamma for photons and i = e for electrons, S(E) is the spectral distribution power law of index alpha_i, N_ion_i(E) is the number of ionizations per primary particle that we calculated previously, and <E_ion> is the average energy spent per ionization.
+7) Assume both luminosities are at parity L_gamma = L_e, so we can focus on the influence of spectral indexes.
+
+Tasks:
+
+1) Check the physical consistency of the construction of parameter x_comp, and state It's interpretation on what it represents.
+2) Make a pdf file stating explicitly the definition of each quantity and it's dependancies so i can check it and asses if we have everything we need to perform the calculations.
+

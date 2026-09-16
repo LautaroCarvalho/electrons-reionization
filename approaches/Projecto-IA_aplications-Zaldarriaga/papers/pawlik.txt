@@ -1,0 +1,1030 @@
+                                           Mon. Not. R. Astron. Soc. 000, 1–15 ()     Printed 31 October 2018         (MN LATEX style file v2.2)
+
+
+
+
+                                           Keeping the Universe ionised: Photo-heating and the
+                                           clumping factor of the high-redshift intergalactic medium
+
+                                           Andreas H. Pawlik1⋆ , Joop Schaye1† and Eveline van Scherpenzeel1
+arXiv:0807.3963v2 [astro-ph] 10 Jan 2009
+
+
+
+
+                                           1   Leiden Observatory, Leiden University, P.O. Box 9513, 2300RA Leiden, The Netherlands
+
+
+
+                                           Accepted; Received; in original form
+
+
+
+                                                                              ABSTRACT
+                                                                              The critical star formation rate density required to keep the intergalactic hydrogen
+                                                                              ionised depends crucially on the average rate of recombinations in the intergalactic
+                                                                              medium (IGM). This rate is proportional to the clumping factor C ≡ hρ2b iIGM /hρb i2 ,
+                                                                              where ρb and hρb i are the local and cosmic mean baryon density, respectively and the
+                                                                              brackets hiIGM indicate spatial averaging over the recombining gas in the IGM. We
+                                                                              perform a suite of cosmological smoothed particle hydrodynamics simulations that in-
+                                                                              clude radiative cooling to calculate the volume-weighted clumping factor of the IGM at
+                                                                              redshifts z > 6. We focus on the effect of photo-ionisation heating by a uniform ultra-
+                                                                              violet background and find that photo-heating strongly reduces the clumping factor
+                                                                              because the increased pressure support smoothes out small-scale density fluctuations.
+                                                                              Photo-ionisation heating is often said to provide a negative feedback on the reionisa-
+                                                                              tion of the IGM because it suppresses the cosmic star formation rate by boiling the
+                                                                              gas out of low-mass halos. However, because of the reduction of the clumping factor
+                                                                              it also makes it easier to keep the IGM ionised. Photo-heating therefore also provides
+                                                                              a positive feedback which, while known to exist, has received much less attention.
+                                                                              We demonstrate that this positive feedback is in fact very strong. Using conservative
+                                                                              assumptions, we find that if the IGM was reheated at z & 9, the observed population
+                                                                              of star-forming galaxies at z ≈ 6 may be sufficient to keep the IGM ionised, provided
+                                                                              that the fraction of ionising photons that escape the star-forming regions to ionise the
+                                                                              IGM is larger than ∼ 0.2.
+                                                                              Key words: cosmology: theory - methods: numerical - hydrodynamics - radiative
+                                                                              transfer - intergalactic medium - galaxies: formation
+
+
+
+                                           1     INTRODUCTION                                                   Stiavelli, Fall, & Panagia 2004; Malhotra et al. 2005;
+                                                                                                                Panagia et al. 2005). Taken at face value, these low SFR
+                                           The absence of a Gunn-Peterson trough in the majority
+                                                                                                                densities pose a severe challenge to commonly employed
+                                           of the observed absorption spectra towards high-redshift
+                                                                                                                theoretical models in which the observed population of
+                                           quasars suggests that the reionisation of intergalac-
+                                                                                                                star-forming galaxies is the only source of ionising radiation
+                                           tic hydrogen was completed at a redshift z & 6 (see
+                                                                                                                in the high-redshift Universe.
+                                           Fan, Carilli,& Keating 2006 for a recent review) and that
+                                                                                                                     There are, however, large uncertainties associated with
+                                           it remained highly ionised ever since. Current observational
+                                                                                                                both the observationally inferred (see, e.g., the comprehen-
+                                           estimates of the ultra-violet (UV) luminosity density at
+                                                                                                                sive analysis of Bouwens et al. 2007) and the critical SFR
+                                           redshifts z . 6 (e.g. Stanway, Bunker, & McMahon 2003;
+                                                                                                                densities. The critical SFR density,
+                                           Lehnert & Bremer 2003; Bunker et al. 2004; Bouwens et al.
+                                           2004; Yan & Windhorst 2004; Sawicki & Thompson 2006;                 ρ̇∗     ≈    0.027 M⊙ yr−1 Mpc−3
+                                           Bouwens et al. 2006; Mannucci et al. 2007; Oesch et al.                                    „ «„
+                                                                                                                                       C    1+z
+                                                                                                                                                «3 „
+                                                                                                                                                     Ωb h270
+                                                                                                                                                             «2
+                                                                                                                                   −1
+                                           2008; Bouwens et al. 2008), on the other hand, may                                ×fesc                              ,         (1)
+                                                                                                                                       30    7       0.0465
+                                           imply star formation rate (SFR) densities several times
+                                           lower than the critical SFR density required to keep                 here rescaled to match the most recent WMAP estimate for
+                                           the intergalactic medium (IGM) ionised (but see, e.g.,               the cosmic baryon density (Komatsu et al. 2008), has been
+                                                                                                                derived by Madau, Haardt, & Rees (1999) using an early
+                                                                                                                version of the Bruzual & Charlot (2003) population synthe-
+                                           ⋆ E-mail: pawlik@strw.leidenuniv.nl                                  sis code, assuming a Salpeter initial stellar mass function
+                                           † E-mail: schaye@strw.leidenuniv.nl                                  (IMF) and solar metallicity. It results from simply equat-
+2     Pawlik, Schaye & van Scherpenzeel
+ing the spatially averaged rate at which ionising photons            1999; Miralda-Escudé, Haehnelt, & Rees 2000; Gnedin
+are emitted into the IGM to the spatially averaged rate at           2000a; Haiman, Abel, & Madau 2001; Benson et al.
+which the intergalactic gas recombines. Eq. 1 is therefore           2001; Chiu, Fan, & Ostriker 2003; Iliev et al. 2007;
+incapable of addressing a number of potentially important            Srbinovsky & Wyithe 2007; Kohler, Gnedin, & Hamilton
+physical effects. Some ionising photons will, for instance,          2007;    Bolton & Haehnelt       2007;    Maio et al.    2007;
+redshift below the ionisation threshold before ionising and          Furlanetto, Haiman, & Oh        2008)    significantly   lower
+some ionising photons will have been emitted longer than a           clumping factors were derived. On the other hand, it is
+recombination time ago upon impact with a neutral atom,              sometimes emphasised that simulations underestimate the
+so that equating instantaneous rates is not appropriate and          clumping factor, due to a lack of resolution (see, e.g.,
+one even may have to take source evolution into account. It          Madau, Haardt, & Rees 1999). In this work we perform
+is therefore important to keep in mind that Eq. 1 is likely          a set of cosmological Smoothed Particle Hydrodynamics
+only accurate within factors of a few.                               (SPH) simulations that include radiative cooling and photo-
+     The critical SFR is inversely proportional to the escape        ionisation by a uniform UV background in the optically
+fraction fesc , i.e. the fraction of ionising photons produced       thin limit to study the clumping factor of the IGM.
+by star-forming galaxies that escape the interstellar medium              We focus on the effect of photo-ionisation heating on
+(ISM) to ionise the IGM, and proportional to the average             the evolution of the clumping factor. Previous investiga-
+recombination rate in the IGM. The latter is parametrised            tions of the impact of photo-heating on the reionisation
+using the dimensionless clumping factor C ≡ hρ2b iIGM /hρb i2 ,      of the IGM have almost exclusively come to the conclu-
+where ρb is the baryon density, hρb i is the mean baryon             sion that it acts as to provide a negative feedback. Photo-
+density of the Universe and the brackets hiIGM indicate              heating boils the gas out of the potential wells of dark
+spatial averaging over the gas constituting the recombining          matter (DM) halos with virial temperatures Tvir . 104 K
+IGM. Under the assumption of a uniformly ionised IGM, the            (e.g. Thoul & Weinberg 1996; Navarro & Steinmetz 1997;
+clumping factor expresses the spatially averaged number of           Barkana & Loeb 1999; Kitayama & Ikeuchi 2000; Gnedin
+recombinations occurring per unit time and unit volume in            2000b; Dijkstra et al. 2004; Shapiro, Iliev, & Raga 2004;
+the ionised IGM, relative to that in gas at the cosmic mean          Hoeft et al. 2006; Crain et al. 2007; Mesinger & Dijkstra
+density hρb i. A larger escape fraction implies a smaller crit-      2008; Okamoto, Gao, & Theuns 2008; Pawlik & Schaye
+ical SFR density, as more photons are available to ionise the        2008). This inhibits the formation of stars in these low-mass
+IGM. On the other hand, a larger clumping factor implies a           halos and thus decreases the ionising emissivity, which makes
+larger critical SFR density since more ionising photons are          it more difficult to reionise the Universe. The same mecha-
+required to compensate for the increased number of recom-            nism that reduces the number of ionising photons that are
+binations.                                                           emitted into the IGM does, however, also affect the evolution
+     Most observational studies that compare1 the SFR                of the clumping factor (e.g. Haiman, Abel, & Madau 2001;
+density derived from estimates of the UV luminosity den-             Oh & Haiman 2003; Kuhlen & Madau 2005; Wise & Abel
+sity at redshift z ≈ 6 to the critical SFR density as-               2005; Furlanetto, Oh, & Briggs 2006; Ciardi & Salvaterra
+sume an escape fraction fesc . 0.5 and a clumping fac-               2007).
+tor C = 30. While a variety of both observational and                     In this paper we demonstrate that photo-heating sig-
+theoretical studies (e.g. Inoue, Iwata, & Deharveng 2006             nificantly lowers the clumping factor and hence the average
+and references therein; Razoumov & Sommer-Larsen 2006;               recombination rate in the IGM. While photo-ionisation heat-
+Gnedin, Kravtsov, & Chen 2008a) have ruled out larger es-            ing undoubtedly impedes the production of ionising photons,
+cape fractions, the estimate for the clumping factor comes           our results imply that it also makes it much easier to keep
+from a single cosmological simulation performed more than            the IGM ionised.
+10 years ago (Gnedin & Ostriker 1997). It is on the basis of              The paper is structured as follows. In Section 2 we give
+these values for the escape fraction and the clumping factor         a detailed description of our set of simulations. In Section 3
+that the observed population of galaxies has been found to           we use our simulations to compute the clumping factor of
+be incapable of keeping the intergalactic hydrogen ionised,          the IGM. Finally, in Section 4, we discuss our results and
+forming massive stars at a rate which is up to an order of           their implications for the value of the critical SFR density.
+magnitude lower than required by Eq. 1.
+     It has been pointed out that this discrepancy
+between the inferred and critical SFR densities
+could be resolved if the employed clumping fac-                      2   SIMULATIONS
+tor were too high (e.g. Sawicki & Thompson 2006;                     We use a modified version of the N-body/TreePM/SPH code
+see also the discussion in Bouwens et al. 2007). In-                 gadget-2 (Springel 2005) to perform a suite of cosmological
+deed, in most (but not all) of the more recent                       SPH simulations including radiative cooling.
+theoretical theoretical studies (e.g. Valageas & Silk                     The initial particle positions and velocities are obtained
+                                                                     from glass-like initial conditions using cmbfast (version 4.1;
+1
+                                                                     Seljak & Zaldarriaga 1996) and employing the Zeldovich ap-
+   Note that although the critical SFR density is sensitive to the
+                                                                     proximation to linearly evolve the particles down to redshift
+IMF, this comparison is insensitive to the IMF provided the
+same IMF is used to compute the critical and observationally         z = 127. We assume a flat ΛCDM universe and employ the
+derived SFR densities. This is because the UV luminosity den-        set of cosmological parameters [Ωm , Ωb , ΩΛ , σ8 , ns , h]
+sity is dominated by the same massive stars that are responsi-       given    by     [0.258, 0.0441, 0.742, 0.796, 0.963, 0.719], in
+ble for the emission of ionising photons with energies > 13.6 eV     agreement with the WMAP 5-year observations
+(Madau, Haardt, & Rees 1999).                                        (Komatsu et al. 2008). For comparison, we also per-
+                                                                                               Keeping the Universe ionised              3
+
+Table 1. Simulation parameters: comoving size of the simulation box, Lbox (default value: 6.25 h−1 Mpc); number of DM particles, Ndm
+(default value: 2563 ); mass of dark matter particles, mdm (default value: 8.6 × 105 h−1 M⊙ ); additional reheating energy per proton, ǫr
+(default value: 2 eV); reheating redshift, zr (default value: 9); kinetic feedback from supernova winds, winds (default: no); cosmological
+parameters, WMAP (default: 5-year). The number of SPH particles initially equals Ndm (it decreases during the simulation due to star
+formation). Bold font indicates our default simulation.
+
+
+       Simulation                Lbox              Ndm          mdm              ǫr                  zr                  winds   WMAP
+                         [ h−1 comoving Mpc]               [105 h−1 M⊙ ]       [ eV]                                              year
+
+       r9L6N256                  6.25             2563           8.6            2                     9                   no       5
+         L6N256                  6.25             2563            8.6            0                    0                   no       5
+      r[zr ]L6N256               6.25             2563            8.6            2     [7.5, 10.5, 12, 13.5, 15, 19.5]    no       5
+    r9L6N256highT                6.25             2563            8.6           20                    9                   no       5
+    r9L6N256lowT                 6.25             2563            8.6            0                    9                   no       5
+    r9L6N256winds                6.25             2563            8.6            2                    9                   yes      5
+     r9L6N256W1                  6.25             2563            8.3            2                    9                   no       1
+     r9L6N256W3                  6.25             2563            7.9            2                    9                   no       3
+       r9L12N256                 12.5             2563           69.1            2                    9                   no       5
+        r9L6N128                 6.25             1283           69.1            2                    9                   no       5
+        r9L6N064                 6.25              643          552.8            2                    9                   no       5
+        r9L3N064                 3.125             643           69.1            2                    9                   no       5
+
+
+
+                                                                           and star-forming (Schaye 2004). We therefore impose an ef-
+                                                                           fective equation of state (EoS) with pressure P ∝ ργeff for
+                                                                           densities nH > n∗H , where n∗H ≡ 10−1 cm−3 , normalised
+                                                                           to P/k = 103 cm−3 K at the critical density n∗H . We use
+                                                                           γeff = 4/3 for which both the Jeans mass and the ratio of
+                                                                           the Jeans length and the SPH kernel are independent of
+                                                                           the density, thus preventing spurious fragmentation due to
+                                                                           a lack of numerical resolution. Gas on the effective EoS is
+                                                                           allowed to form stars using a pressure-dependent rate that
+                                                                           reproduces the observed Kennicutt-Schmidt law (Kennicutt
+                                                                           1998), renormalised by a factor2 of 1/1.65 to account for the
+                                                                           fact that it assumes a Salpeter IMF whereas we are using a
+                                                                           Chabrier IMF.
+                                                                                The gas is of primordial composition, with a hydro-
+                                                                           gen mass fraction X = 0.752 and a helium mass fraction
+                                                                           Y = 1 − X. Radiative cooling and heating are included as-
+                                                                           suming ionisation equilibrium, using tables generated with
+Figure 1. Thermal evolution of gas with overdensity ∆ = 1 for              the publicly available package cloudy (version 05.07 of the
+characteristic choices of the reheating parameters zr and ǫr , which
+                                                                           code last described by Ferland et al. 1998), as described in
+are listed in Table 1 for the simulations indicated in the legend.
+Note that even in the absence of an additional energy input at
+                                                                           Wiersma, Schaye & Smith (2008). The gas is allowed to cool
+redshift z = zr , i.e. for ǫr = 0, as it is the case for simulation        by collisional ionisation and excitation, emission of free-free
+r9L6N256lowT, the gas is quickly heated by the UV background               and recombination radiation and Compton cooling off the
+to a temperature T ∼ 104 K.                                                cosmic microwave background.
+                                                                                We perform a set of simulations including photo-
+                                                                           ionisation by a uniform UV background in the optically
+form some simulations employing the set of cosmological                    thin limit at redshifts below the reheating redshift zr . These
+parameters       [0.238, 0.0418, 0.762, 0.74, 0.951, 0.73] and             simulations are denoted with the prefix r (see Table 1).
+[0.25, 0.045, 0.75, 0.9, 1, 0.73], consistent with WMAP 3-year             To study the effect of reionisation reheating, we compare
+(Spergel et al. 2007) and WMAP 1-year (Spergel et al.                      these simulations to a simulation that does not include
+2003) observations, respectively. Data is generated at 50                  photo-ionisation (L6N256 ). Note that the photo-ionisation
+equally spaced redshifts between z = 20 and z = 6. The                     changes the density of free electrons and the ionic abun-
+parameters of the simulations employed for the present                     dances. Both the cooling and heating rates are therefore af-
+work are summarised in Table 1.                                            fected by the inclusion of a UV background (e.g. Efstathiou
+     The gravitational forces are softened over a length of                1992; Wiersma, Schaye & Smith 2008).
+1/25 of the mean dark matter inter-particle distance. We
+employ the star formation recipe of Schaye & Dalla Vecchia
+(2008), to which we refer the reader for details. Briefly, gas             2 This conversion factor between SFRs has been computed us-
+with densities exceeding the critical density for the onset of             ing the Bruzual & Charlot (2003) population synthesis code for
+the thermo-gravitational instability (hydrogen number den-                 model galaxies of age > 107 yr forming stars at a constant rate
+sities nH = 10−2 − 10−1 cm−3 ) is expected to be multiphase                and is insensitive to the assumed metallicity.
+4     Pawlik, Schaye & van Scherpenzeel
+
+
+
+
+Figure 2. Slices (of thickness 1.25 h−1 comoving Mpc) through the centre of the simulation box, showing the SPH overdensity field
+in the simulations L6N256 and r9L6N256 at redshifts z = 9.08 (left-hand panel; where they are identical) and z = 6 (middle panel:
+L6N256, right-hand panel: r9L6N256 ). The inclusion of photo-heating in r9L6N256 leads to a strong smoothing of the density field
+(right-hand panel).
+
+
+     The properties of the UV background depend on the             estimate the temperature of the IGM during reionisation
+redshift of reheating. If zr 6 9, we employ the evolving           (e.g. Abel & Haehnelt 1999). We therefore inject an addi-
+UV background from quasars and galaxies tabulated by               tional thermal energy ǫr per proton at z = zr (see, e.g.,
+Haardt & Madau (2001) for z 6 zr . If zr > 9, we use the           Thoul & Weinberg 1996). By varying the parameter ǫr , we
+z = 9 Haardt & Madau (2001) UV background for all red-             will investigate the sensitivity of our results to the temper-
+shifts 9 < z 6 zr , and employ the evolving Haardt & Madau         ature of the reheated IGM. Our default simulation employs
+(2001) UV background for redshifts z 6 9. This is necessary        ǫr = 2 eV. Fig. 1 shows the thermal evolution of gas at
+because Haardt & Madau (2001) only tabulate up to z = 9.           the cosmic mean baryon density hρb i, i.e. of gas with over-
+For z > zr , we employ the z = 9 Haardt & Madau (2001)             density ∆ ≡ ρb /hρb i = 1, for different values of ǫr and zr .
+UV background but with its intensity at energies equal to          At z = zr , the gas is heated to Tr ≈ 104 K for ǫr = 2 eV,
+and larger than 13.6 eV set to zero. Molecular hydrogen and        whereas the gas temperature is about an order of magnitude
+deuterium and their catalysts are kept photo-dissociated by        higher (lower) for ǫr = 20 eV (ǫr = 0 eV). After reheating
+this soft UV background at all redshifts and therefore never       the gas quickly looses memory of its initial temperature and
+contribute to the cooling rate. Our approach is motivated in       by z = 6 the gas temperature is T ≈ 104 K in all cases.
+the context of reionisation because the weak UV background              In one of our simulations (r9L6N256winds) we in-
+established by the very first ionising sources is already suf-     clude kinetic feedback from star formation. We employ the
+ficient to efficiently suppress the formation of molecular         prescription of Dalla Vecchia & Schaye (2008), which is a
+hydrogen (e.g. Haiman, Rees, & Loeb 1997 and references            variation of the Springel & Hernquist (2003) recipe for ki-
+therein; Glover 2007; Chuzhoy, Kuhlen, & Shapiro 2007).            netic feedback. In this prescription, core-collapse super-
+     The reheating redshift zr is a parameter in our sim-          novae locally inject kinetic energy and kick gas particles
+ulations. The most recent determination of the Thomson             into winds. The feedback is specified by two parameters,
+optical depth towards reionisation from the WMAP (5-year)          the mass loading η ≡ Ṁw /Ṁ∗ , which describes the ini-
+experiment implies a reionisation redshift zreion = 11.0±1.4,      tial wind mass loading Ṁw in units of the cosmic SFR
+assuming that the transition from the neutral to the fully         Ṁ∗ , and the initial wind velocity vw . We use η = 2 and
+ionised Universe was instantaneous (Komatsu et al. 2008).          vw = 600 km s−1 , consistent with observations of local
+The Thomson optical depth towards reionisation provides,           (e.g. Veilleux, Cecil, & Bland-Hawthorn 2005) and redshift
+however, only an integral constraint on the Epoch of               z ≈ 3 (Shapley et al. 2003) starburst galaxies. Note that
+Reionisation. The reionisation history may therefore have          wind particles are not hydrodynamically decoupled and that
+been considerably more intricate. An early population              they are launched local to the star formation event, different
+of X-ray sources, for example, could reheat the IGM                from the Springel & Hernquist (2003) recipe.
+to temperatures ∼ 104 K already at much higher red-
+shifts (e.g. Collin-Souffrin 1991; Madau & Efstathiou
+1999; Oh 2001; Venkatesan, Giroux, & Shull 2001;
+Machacek, Bryan, & Abel        2003;   Madau et al.     2004;      3   RESULTS
+Ricotti & Ostriker 2004). We therefore study a range               In this section we employ the set of simulations described
+of thermal histories, performing simulations using                 in Section 2 and summarised in Table 1 to calculate the
+zr = 7.5, 9, 10.5, 12, 13.5, 15 and 19.5. To be conserva-          clumping factor of the IGM. We start in Section 3.1 with
+tive, we use the relatively low reheating redshift zr = 9 as       analysing the distribution of the gas in our default simu-
+our default value.                                                 lation r9L6N256 and in the simulation L6N256, which is
+    In our simulations we compute the photo-heating rates          identical to our default simulation except for the fact that it
+in the optically thin limit, which means that we under-            does not include a photo-ionising background. In Section 3.2
+                                                                                   Keeping the Universe ionised                5
+we discuss the definition of the clumping factor and com-         The shape of the PDF is determined by the effective EoS
+pare the clumping factors derived from our default simula-        once the gas reaches the critical density for the onset of star
+tion r9L6N256 to that derived from simulation L6N256. We          formation (n∗H ≡ 10−1 cm−3 , see Section 2; indicated by the
+discuss the convergence of our results with respect to varia-     vertical lines).
+tions in the mass resolution and in the size of the simulation         At redshifts z < zr , the shape of the PDF strongly de-
+box in Section 3.2.1. In Section 3.2.2 we vary the redshift at    pends on whether photo-heating by the ionising background
+which the ionising UV background is turned on and in Sec-         is included or not. In the absence of such a background
+tion 3.2.3 we demonstrate that our conclusions are robust         (L6N256, blue dashed histogram), gravitational collapse
+with respect to our choice for the temperature to which the       proceeds unimpeded, increasing the PDF at log10 ∆ & 1.
+IGM is photo-heated. In Section 3.2.4 we discuss how kinetic      Since the gas that accretes onto DM halos must originate
+feedback from supernova winds affects our results and quote       from the reservoir at log10 ∆ . 1 (the diffuse IGM), the
+the clumping factors obtained from the simulations employ-        PDF decreases over this range of overdensities. As a result,
+ing WMAP 3-year and 1-year cosmological parameters. We            the maximum of the PDF shifts to lower overdensities. At
+conclude with a brief comparison to previous work.                the same time, the gravitational amplification of large-scale
+                                                                  underdense regions leads to an increase in the PDF around
+                                                                  overdensities log10 ∆ ∼ −1.
+3.1   The gas density distribution                                     Photo-heating in the presence of the ionising back-
+Here we compare the gas distributions in our default sim-         ground photo-evaporates the gas in DM halos, as described
+ulation r9L6N256 (in which the UV background is turned            above. The bump in the PDF around 1 . log10 ∆ . 2
+on at redshift zr = 9) and in the simulation L6N256 (which        therefore disappears (red dot-dashed histogram). Note that
+does not include photo-ionisation heating).                       the redistribution of the baryons due to photo-heating also
+     Figure 2 shows the overdensities at redshifts z = 9.08       slightly increases the minimum overdensity that is present
+and z = 6 in a slice through the simulation box for these         in the simulation. In Appendix A2 we compare the PDF
+simulations. Heating by the photo-ionising background al-         obtained from our default simulation to the fit provided
+most instantaneously increases the gas temperatures to            by Miralda-Escudé, Haehnelt, & Rees (2000), which is of-
+Tr ∼ 104 K (see Fig. 1) and accordingly raises the cos-           ten employed to compute the clumping factor in (semi-
+mological Jeans mass. Gas that had already settled into           )analytical studies of the epoch of reionisation.
+the potential wells of DM halos with virial temperature
+Tvir . Tr is driven back into the diffuse IGM by the in-
+                                                                  3.2   The clumping factor
+creased pressure gradient forces (e.g. Barkana & Loeb 1999;
+Shapiro, Iliev, & Raga 2004). The large cosmological Jeans        In this section we demonstrate how the clumping factor,
+mass prevents any re-accretion of gas or infall of previ-         C ≡ hρ2b iIGM /hρb i2 , depends on the definition of the IGM
+ously unbound gaseous material into these low-mass halos          and compute it for our default simulation r9L6N256 and for
+and keeps the IGM diffuse. Comparing the middle panel             the simulation L6N256. This allows us to investigate how
+with the right-hand panel of Fig. 2, this Jeans filtering         the clumping factor is affected by the inclusion of a photo-
+(e.g. Shapiro, Giroux, & Babul 1994; Gnedin & Hui 1998;           ionising background.
+Gnedin 2000b; Okamoto, Gao, & Theuns 2008) in the pres-                 Our main motivation for computing the clumping fac-
+ence of photo-heating leads to a strong smoothing of the          tor of the IGM is to evaluate the critical SFR density re-
+small-scale density fluctuations by z = 6.                        quired to keep the IGM ionised. The critical SFR density
+     A detailed analysis of the overdensity distribution in       describes the balance between the number of ionising pho-
+the simulations can be obtained by studying PV (∆), the           tons escaping into the IGM (parametrised by the escape
+volume-weighted probability density function (PDF) for ∆.         fraction) and the number of ionising photons that are re-
+We showR ∞the PDF (per unit log10 ∆ and normalised accord-        moved from the IGM due to photo-ionisations of recombin-
+ing to 0 d∆ PV (∆) = 1) in the left-hand panel of Fig. 3. It      ing hydrogen ions (parametrised by the clumping factor).
+is important to be aware of the fact that the finite numerical    When the ratio of photon escape rate to recombination rate
+resolution of our simulations implies an unavoidable intrinsic    is larger than unity, the rate at which galaxies form stars ex-
+smoothing of the gas density distribution on the scale of the     ceeds the critical SFR density and is thus sufficient to keep
+SPH kernel or the scale over which the gravitational forces       the IGM ionised.
+are softened, whichever is larger. A numerical smoothing on             It is important to realise that only recombinations lead-
+scales larger than the Jeans filtering scale (below which the     ing to the removal of ionising photons which escaped the
+gas density distribution is physically smoothed) would pre-       ISM of the star-forming regions contribute to the balance
+vent us from obtaining converged results. We will discuss the     that gives rise to the definition of the critical SFR den-
+convergence of our simulations with respect to resolution in      sity. To separate the gas in the ISM from the gas in the
+Section 3.2.1.                                                    IGM, a simple threshold density criterion is often employed
+     At redshift z = 9.08 (black solid histogram), the gravi-     (e.g. Miralda-Escudé, Haehnelt, & Rees 2000; see also the
+tational amplification of the overdensities present in the ini-   discussion in Miralda-Escudé 2003). Ionising photons are
+tial conditions has produced a significant deviation of the       counted as escaped once they enter regions with gas densities
+PDF from its primordial Gaussian shape. The flattening of         ρb < ρthr . Consequently, only gas with densities ρb < ρthr ,
+the slope of the PDF for overdensities 1 . log10 ∆ . 2 can        or equivalently, gas with overdensities ∆ < ∆thr ≡ ρthr /hρb i
+be attributed to the shock-heating of gas falling into the po-    should be considered in the evaluation of the clumping fac-
+tential wells of dark matter halos, most of which have virial     tor.
+temperatures . 104 K, which we refer to as low-mass halos.              The threshold density ρthr depends on which gas is con-
+6     Pawlik, Schaye & van Scherpenzeel
+
+
+
+
+Figure 3. Left-hand panel: Volume-weighted PDF of the baryon overdensity ∆ per unit log10 ∆ for simulations r9L6N256 and L6N256
+at redshifts z = 9.08 and z = 6, as indicated in the legend. Photo-heating destroys the bump around overdensities 1 . log10 ∆ . 2, which
+mark the gas that accretes onto DM halos. The vertical lines (which match the colour and style of the corresponding PDFs) indicate
+the overdensities corresponding to the onset of star formation. Right-hand panel: Clumping factor C(< ∆thr ) of gas with overdensity
+∆ < ∆thr for the simulations shown in the left-hand panel. The inclusion of photo-heating in r9L6N256 leads to a clumping factor
+that is substantially smaller than that obtained from L6N256, for threshold overdensities ∆thr > 10. Note that the maximum threshold
+overdensities we consider for the calculation of the clumping factor are given by the critical density n∗H ≡ 10−1 cm−3 for the onset of
+star-formation (the vertical lines shown in the left-hand panel).
+
+
+
+sidered to be part of the ISM, and which gas is considered             Eq. 1 is likely to be lower (see, e.g., the discussion in Gnedin
+to be part of the IGM. As long as the definition of the es-            2008b).
+cape fraction and that of the clumping factor refer to the
+same decomposition of the gas into IGM and ISM, its value                   In the right-hand panel of Fig. 3 we show C(< ∆thr ) for
+can be chosen arbitrarily. We therefore treat the threshold            the simulations r9L6N256 and L6N256 at redshifts shortly
+density as a parameter and compute the clumping factor as              before (at z = 9.08, when r9L6N256 and L6N256 are iden-
+a function of ∆thr (cp. Miralda-Escudé, Haehnelt, & Rees              tical) and well after (at z = 6, when they differ by the pres-
+2000),                                                                 ence and absence of an ionising background, respectively)
+                                                                       the reheating redshift zr = 9. In agreement with our dis-
+               Z ∆thr                                                  cussion above, the clumping factor increases monotonically
+C(< ∆thr ) ≡            d∆ ∆2 PV (∆),                        (2)       with the threshold density. Its dependence on redshift can
+                0
+                                                                       be understood by looking at the evolution of the shape of
+                                       R∆
+where PV (∆) is normalised according to 0 thr d∆ PV (∆) =              the PDF, which we discussed in the previous section.
+1. In practice, we calculate C(< ∆thr ) by performing a                     For L6N256, i.e. in the absence of photo-heating, the
+volume-weighted summation over all SPH particles with                  clumping factor for threshold overdensities log10 ∆thr > 1
+overdensities ∆i < ∆thr , i.e
+                                                                       is larger at z = 6 than at z = 9.08, due mainly to the
+                                                                       growth of the bump present in the PDF for overdensities
+                           h3i ∆2i
+               P
+                ∆i <∆thr                                               1 . log10 ∆ . 2. For log10 ∆thr ∼ 0, on the other hand, the
+C(< ∆thr ) =    P             3
+                                     ,                       (3)
+                    ∆i <∆thr hi                                        clumping factor is slightly smaller at z = 6 than at z = 9.08,
+                                                                       which is caused by the depletion of the diffuse IGM through
+where hi is the radius of the SPH smoothing kernel associ-             accretion onto DM halos. Note that at z = 6 the clumping
+ated with SPH particle i. We verified that replacing h3i with          factor reaches a maximum value of C ≈ 20, which is signifi-
+mi /ρi as an estimate for the volume occupied by SPH par-              cantly smaller than the value quoted by Gnedin & Ostriker
+ticle i (with mass mi ) gives nearly indistinguishable results.        (1997), which is commonly employed in observational stud-
+     By definition, C(< ∆thr ) increases monotonically with            ies. This is probably because Gnedin & Ostriker (1997) com-
+the threshold density ρthr . Here, we set an upper limit               puted the clumping factor including gas of any density, i.e.
+to ∆thr , corresponding to the threshold density n∗H ≡                 using a density threshold implicitly set by the maximum
+10−1 cm−3 for the onset of star formation that we employ               overdensity resolved in their simulation.
+in our simulations. Since we impose an effective EoS for gas
+with densities larger than n∗H (Section 2), its PDF is not                  The evolution of the clumping factor in r9L6N256, i.e.
+expected to reflect the PDF of real star-forming regions,              in the presence of the ionising background, is very different.
+motivating our choice for the maximum threshold density.               At z = 6 it is close to that at z = 9.08 for all threshold over-
+The choice is conservative, leading to an overestimate rather          densities. Compared to L6N256, the difference between the
+than an underestimate of the critical SFR density, since the           clumping factors for z = 6 and z = 9.08 is greatly reduced
+threshold density marking the escape of ionising photons               and the clumping factor at redshift z = 6 never reaches
+and hence the clumping factor of the IGM to be used in                 values larger than C ≈ 6.
+                                                                                      Keeping the Universe ionised                 7
+                                                                     reheating redshift zr , i.e. when sufficient time has passed to
+                                                                     accomplish the photo-evaporation of halos and to allow the
+                                                                     gas to respond hydrodynamically to the jump in the Jeans
+                                                                     mass (i.e. to Jeans-filter the IGM), the observed convergence
+                                                                     with respect to mass resolution is therefore expected4 .
+                                                                          Since the clumping factor has already converged for the
+                                                                     spatial resolution used in simulation r9L6N128, we can em-
+                                                                     ploy this simulation to verify whether the size of the box
+                                                                     of our default simulation r9L6N256 is sufficiently large to
+                                                                     enable an unbiased estimate of the clumping factor (right-
+                                                                     hand panel). Overall, increasing the box size (at fixed res-
+                                                                     olution) from 6.25 h−1 comoving Mpc by a factor of two
+                                                                     to 12.5 h−1 comoving Mpc leaves the clumping factor al-
+Figure 4. Clumping factor C(< ∆thr ) of gas with overdensities       most unaffected. For threshold densities log10 ∆thr & 2 the
+∆ < ∆thr and its dependence on resolution (at fixed box size,        clumping factor may, however, not yet have fully converged,
+left-hand panel) and on box size (at fixed resolution, right-hand
+                                                                     indicating that even larger simulation boxes than that con-
+panel). The clumping factor obtained from our default simulation
+r9L6N256 is converged with respect to the employed resolution        sidered here may be required for its computation (see also
+for all threshold overdensities shown. With respect to the size      the discussion in Barkana & Loeb 2004).
+of the simulation box, it is converged for threshold overdensities
+log10 ∆thr . 2. For larger threshold overdensities, full conver-
+gence may require the use of simulation boxes even larger than       3.2.2   Varying the reheating redshift
+12.5 h−1 comoving Mpc, the size of the largest box employed
+                                                                     To study the effect of photo-heating on the evolution of the
+here.
+                                                                     clumping factor in more detail, we make use of the clumping
+                                                                     factors
+3.2.1   Convergence tests                                            C−1 ≡ C(< 10−1 cm−3 mH /(Xhρb i))                           (4)
+In this section we check whether our results are converged.          and
+Generally, one expects the clumping factor to increase with
+both the spatial resolution and the size of the simulation           C100 ≡ C(< min(100, 10−1 cm−3 mH /(Xhρb i))).               (5)
+box. The spatial resolution determines the smallest scale
+                                                                     C−1 is the clumping factor for gas with densities below
+on which fluctuations in the density field may be identi-
+                                                                     nH = n∗H ≡ 10−1 cm−3 , the maximum threshold density
+fied, whereas the size of the simulation box sets a cut-off
+                                                                     we consider. For redshifts z < 16.3, C100 fixes the thresh-
+to the largest scale on which the overdensity field can be
+                                                                     old overdensity to a value between the mean overdensity
+non-zero. Moreover, the size of the simulation box limits the
+                                                                     of spherical top-hat DM halos, (≈ 18π 2 ; e.g. Padmanabhan
+mass of the largest halo present in the simulation. Fig. 4
+                                                                     1993) and the overdensity at the virial radius of an isother-
+demonstrates that our default simulation (r9L6N256 ) is of
+                                                                     mal DM halo (≈ 60; Lacey & Cole 1994) and closely agrees
+sufficiently high resolution and employs a sufficiently large
+                                                                     with the threshold densities commonly employed in the lit-
+box to allow a faithful computation of the clumping factor of
+                                                                     erature to calculate the clumping factor of the IGM. For
+the reheated IGM at z = 6. In the left-hand panel we show
+                                                                     larger redshifts, the threshold overdensity ∆thr = 100 corre-
+the clumping factor in three simulations that use the same
+                                                                     sponds to a density nH > n∗H ≡ 10−1 cm−3 , which is larger
+box size, but have mass resolutions that differ by multiples
+                                                                     than the critical density for the onset of star formation in
+of 23 , whereas in the right-hand panel we show the clumping
+                                                                     our simulations. The definition Eq. 5 ensures that the maxi-
+factor in three simulations that employ the same resolution,
+                                                                     mum density that we consider for the computation of C100 is
+but have box sizes that differ by multiples of 2.
+                                                                     always smaller than n∗H . Note that C−1 refers to the clump-
+     When compared to our default simulation r9L6N256,
+                                                                     ing factor of gas with densities below a fixed proper density,
+decreasing the mass resolution by factors of 8 (r9L6N128 )
+                                                                     while C100 refers to the clumping factor of gas with densi-
+and 64 (r9L6N064 ) only leads to insignificant and unsys-
+                                                                     ties below a fixed overdensity for redshifts z < 16.3 and is
+tematic3 changes in the clumping factor (left-hand panel).
+                                                                     identical to C−1 for larger redshifts.
+This can be understood by noting that the virial mass of
+                                                                          The evolution of C−1 and C100 is shown, respectively,
+halos corresponding to a virial temperature Tvir = Tr is re-
+                                                                     in the left-hand and right-hand panels of Fig. 5 for the sim-
+solved with & 100 particles for redshifts z < 9. Any fur-
+                                                                     ulations r9L6N256 (i.e. reheating at redshift zr = 9) and
+ther increase in resolution would therefore mostly affect the
+                                                                     L6N256 (i.e. no reheating). In the same figure we also in-
+abundance of DM halos with Tvir ≪ Tr . In the presence
+                                                                     clude the evolution of C−1 and C100 obtained from the set
+of the UV background the gas in these halos is, however,
+                                                                     of simulations r[zr ]L6N256, where zr = 7.5, 10.5, 12, 13.5, 15
+quickly photo-evaporated (if formed at z > zr ) or prevented
+                                                                     and 19.5. While the simulations are identical for z > zr , the
+from accreting by the large Jeans mass associated with the
+                                                                     ionising background strongly affects the evolution of C−1 (z)
+photo-heated gas (for z < zr ). At redshifts well below the
+
+                                                                     4 We note that in the absence of a photo-ionising background,
+3 Note that the clumping factor is even slightly larger in           convergence may be more difficult to achieve, requiring a higher
+r9L6N128 than in r9L6N256, although the latter has an 8 times        mass resolution than employed here. Convergence will be easier
+higher mass resolution.                                              to achieve for lower threshold densities.
+8     Pawlik, Schaye & van Scherpenzeel
+
+
+
+
+Figure 5. Evolution of the clumping factors C−1 (left-hand panel) and C100 (right-hand panel) for different reheating redshifts zr , as
+indicated in the legends. Note that C−1 (z) and C100 (z) in all reheating simulations evolve towards the clumping factors obtained in
+the simulation with reheating at zr = 19.5 (bottom black solid curves). At z = 6, the clumping factors are therefore insensitive to the
+reheating redshift provided that zr & 9, with C−1 (z = 6) ≈ 6 and C100 (z = 6) ≈ 3. Fits to the evolution of the clumping factors are
+given in Appendix A1.
+
+
+and C100 (z) for z < zr . Whereas in L6N256 the clumping              dynamical simulations of higher resolution5 , it is clear that
+factors reach C−1 ≈ 20 and C100 ≈ 8 at z = 6, they only               models that do not account for this positive feedback will
+reach C−1 ≈ 6 and C100 ≈ 3 in r9L6N256, which are smaller             underestimate the efficiency with which star-forming galax-
+than in L6N256 by roughly a factor of three. Note that be-            ies are able to reionise the IGM.
+cause the clumping factor obtained from simulation L6N256
+is likely to be not fully converged with respect to resolu-
+tion (see footnote 4), we may even have underestimated the            3.2.3   Dependence on the reheating temperature
+magnitude of the decrease in the clumping factor due to               In this section we investigate the robustness of our results
+photo-heating.                                                        with respect to our simplified treatment of photo-ionisation
+                                                                      heating.
+     Interestingly, the clumping factor at z = 6 is insensitive            We have considered photo-heating by a uniform ionising
+to the redshift zr at which the UV background is turned on,           background in the optically thin limit. In reality, the reion-
+as long as zr & 9. This is because, after an initial transitory       isation process is likely to be driven by inhomogeneously
+phase, the evolution of the clumping factor obtained for re-          distributed sources in an initially optically thick medium.
+heating at redshift zr approaches that obtained for reheating         The temperature to which the IGM is reheated will then
+at zr = 19.5. Note that the difference between the clump-             not only depend on the spectrum of the ionising sources,
+ing factors obtained from r[zr ]L6N256 and r19.5L6N256                but also on the amount of spectral hardening due to the
+becomes smaller with increasing reheating redshift zr . In            preferential absorption of the less energetic ionising pho-
+particular, the clumping factors obtained for reheating at            tons (e.g. Abel & Haehnelt 1999; Bolton, Meiksin, & White
+zr = 15 are nearly identical to those obtained for reheating          2004). Moreover, the speed at which a particular patch of
+at zr = 19.5 at all redshifts. The evolution of the clumping          the IGM is reionised determines the duration during which
+factors obtained from r19.5L6N256 can therefore be consid-            its gas can cool efficiently, as the cooling is dominated by in-
+ered to reflect the evolution of the clumping factor in the           elastic collisions between free electrons and neutral atoms.
+limit of reheating at very high redshift, zr ≫ 19.5.                  Different reionisation histories may therefore result in differ-
+                                                                      ent IGM temperatures (e.g. Miralda-Escudé & Rees 1994;
+     In Appendix A1 we provide fits to the evolution of the           Theuns et al. 2002; Hui & Haiman 2003; Tittley & Meiksin
+clumping factor over the redshift range 6 6 z 6 20 for a              2007).
+range of (over-)density thresholds and reheating redshifts.                To bracket possible scenarios, we have performed two
+These fits (Eqs. A1 and A2) may be employed in (semi-
+)analytic models of the epoch of reionisation. Many such
+                                                                      5  At z = 6, the cosmic SFR density (the stellar mass) in
+models assume that reionisation heating provides only a neg-
+ative feedback on the reionisation process, reducing the star         r9L6N256 is smaller than that in L6N256 by a factor 1.26 (1.17).
+formation rate due to the photo-evaporation of gas in low-            In our simulations, photo-heating thus decreases the SFR density
+                                                                      less strongly than it reduces the clumping factor, which would
+mass halos. However, as we have shown here, photo-heating
+                                                                      imply that the positive feedback is more important. The SFR
+decreases the clumping factor, and hence the average recom-           densities in both r9L6N256 and L6N256 are, however, not fully
+bination rate. Since this makes it easier to keep the IGM             converged with respect to resolution and box size. A final as-
+ionised, reionisation heating also provides a positive feed-          sessment as to whether the negative or the positive feedback is
+back on the process of reionisation. Although the relative            stronger must therefore be deferred to future studies using simu-
+importance of both can only be assessed using larger hydro-           lations with higher resolution and larger box sizes.
+                                                                                         Keeping the Universe ionised                 9
+                                                                             Finally, we quote the clumping factors obtained from
+                                                                        the simulations r9L6N 256W 3 and r9L6N 256W 1, which
+                                                                        employed cosmological parameters consistent with the
+                                                                        WMAP 3-year and 1-year observations, respectively. We find
+                                                                        that at redshift z = 6, the clumping factors C−1 and C100
+                                                                        are larger in r9L6N 256 than in r9L6N 256W 3 by factors of
+                                                                        1.31 and 1.16, respectively. They are smaller in r9L6N 256
+                                                                        than in r9L6N 256W 1 by factors of 0.74 and 0.84. In sum-
+                                                                        mary, with respect to r9L6N 256, the clumping factors are
+                                                                        larger in r9L6N 256W 1 and smaller in r9L6N 256W 3, as ex-
+                                                                        pected from the corresponding values of σ8 , which set the
+                                                                        average absolute amplitude of the overdensity fluctuations.
+
+
+                                                                        3.2.5   Comparison with previous work
+                                                                        We conclude our study of the clumping factor with a brief
+Figure 6. The dependence of C−1 (upper set of curves) and C100          comparison with previous work, shown in Fig. 7. The evolu-
+(lower set of curves) on the value for the reheating energy ǫr . Both   tion of the clumping factors in our simulations L6N256 and
+r9L6N256highT (ǫr = 20 eV) and r9L6N256lowT (ǫr = 0 eV)                 r9L6N256 is shown by the black solid and red dashed curves,
+give results very similar to that obtained from the default run,
+                                                                        respectively, where the upper (lower) set of curves shows C−1
+r9L6N256 (ǫr = 2 eV), which demonstrates the robustness of our
+conclusions with respect to changes in the reheating temperature.
+                                                                        (C100 ). We compare it to the evolution of the clumping fac-
+                                                                        tor presented in Miralda-Escudé, Haehnelt, & Rees (2000)
+                                                                        and Iliev et al. (2007), which are amongst the most com-
+additional simulations in which we varied the amount of en-             monly employed works on the clumping factor and make
+ergy transferred to the baryons during the photo-ionisation             use of sufficiently different techniques to bracket a range of
+process, r9L6N256highT and r9L6N256lowT. Whereas in                     possible cases. We caution the reader that such a direct com-
+the former we employ an additional energy input that is                 parison is difficult and of limited validity because of the very
+ten times larger than our default value (ǫr = 20 eV), in the            different assumptions underlying the individual works.
+latter no additional energy is injected (ǫr = 0 eV). We show                 Miralda-Escudé, Haehnelt, & Rees          (2000)      used
+in Fig. 6 that the evolution of C−1 and C100 obtained from              the L10 hydrodynamical simulation presented in
+these two simulations is very similar to that obtained from             Miralda-Escudé et al. (1996) to obtain the PDF of the
+our default run, r9L6N256. The dependence on the reheat-                gas density at redshifts z = 2, 3 and 4. The simulation
+ing temperature Tr > 104 K is weak, because halos with                  was performed using the TVD hydrodynamical scheme
+virial temperatures Tvir . 104 K are already efficiently de-            described in Ryu et al. (1993). It used a box of size
+stroyed for Tr ≈ 104 K. A further increase in the reheating             10 h−1 comoving Mpc, 1443 dark matter particles and 2883
+temperature mostly affects the fraction of mass in halos with           gas cells and employed cosmological parameters consistent
+larger virial temperatures, which is small. Moreover, Fig. 1            with the first-year COBE normalization. The simulation
+shows that the gas in the simulations r9L6N256highT and                 included photo-heating from a uniform UV background,
+r9L6N256lowT quickly loses memory of its thermal state at               computed from the emissivities of the sources in the simu-
+some higher redshift, which is another reason for the simi-             lation. We refer the reader to Miralda-Escudé et al. (1996)
+larity in the results obtained using different values for the           for more details. Miralda-Escudé, Haehnelt, & Rees (2000)
+reheating energy ǫr .                                                   also provided fits to the gas density PDF and presented
+                                                                        a prescription for its extrapolation to redshifts z > 4. We
+                                                                        employed this prescription to compute the clumping factor
+                                                                        evolution using Eq. 2.
+3.2.4   Effect of kinetic supernova feedback and dependence
+                                                                             The evolution of the clumping factors C−1 and C100 ob-
+        on cosmological parameters
+                                                                        tained from the Miralda-Escudé, Haehnelt, & Rees (2000)
+The inclusion of kinetic feedback from supernovae in                    PDFs is shown, respectively, by the top and bottom blue
+r9L6N256winds only weakly affects the evolution of the                  long-dashed curves. For redshifts z & 9, it closely agrees
+clumping factors. At redshift z = 6, C−1 and C100                       with the corresponding evolution obtained from our sim-
+are slightly larger (by factors 1.1 and 1.18, resp.) in                 ulation r9L6N256. For lower redshifts the agreement is
+r9L6N256winds than in our default simulation, r9L6N256,                 less good, although the clumping factors never differ by
+which does not include kinetic feedback. The reason for the             more than factors ∼ 2. The differences between their and
+slight increase in the clumping factors is that winds move              our results are probably due to the use of different hy-
+gas from regions of densities larger than the critical density          drodynamical schemes, different cosmological parameters
+for the onset of star formation to regions of lower density             and different prescriptions for the UV background. The
+that contribute to the calculation of the clumping factors.             change in the slope of the clumping factor growth that
+We note that the inclusion of kinetic feedback does, on the             can be seen at redhift z ≈ 9 is likely due to the inclu-
+other hand, strongly affect the cosmic SFR. At z = 6, the               sion of photo-heating. That this change is much less pro-
+cosmic SFR (the stellar mass) is lower in the simulation that           nounced than in our simulation r9L6N256 may be due to
+includes kinetic feedback (r9L6N256winds) than in our de-               a more gradual build-up of the ionising background in the
+fault simulation (r9L6N256 ) by a factor of 6.1 (3.4).                  Miralda-Escudé, Haehnelt, & Rees (2000) simulation.
+10     Pawlik, Schaye & van Scherpenzeel
+     Iliev et al. (2007) computed the clumping factor from
+a pure dark matter simulation. The simulation employed
+a box of size 3.5 h−1 comoving Mpc and 16243 particles
+and was initialized with cosmological parameters consistent
+with the WMAP 3-year results6 . The clumping factor was
+computed by averaging over all dark matter densities, and
+hence only implicitly makes use of an overdensity threshold
+(determined by the maximum overdensity present in their
+simulation). We refer the reader to the original description
+in Iliev et al. (2007) for more details.
+     Iliev et al. (2007) provided the following fit to the evo-
+lution of the clumping factor in their simulation,
+CIliev07 (z) = 26.2917 exp(−0.1822z + 0.003505z 2 ),         (6)
+which is valid over the range 6 < z < 30. It is shown by the
+green dotted curve. Since it was derived from a pure dark
+matter simulation, Eq. 6 does not capture the hydrodynam-           Figure 7. Clumping factor evolution: comparison with previ-
+ical response due to reionisation heating. It should therefore      ous work. The black solid and red dashed curves are the clump-
+be compared to the evolution of the clumping factor ob-             ing factors C−1 (upper set of curves) and C100 (lower set of
+tained from our simulation L6N256, which did not include            curves) obtained from our simulations L6N256 and r9L6N256.
+                                                                    The blue dashed curves show the evolution of the clumping fac-
+photo-heating. A direct interpretation of such a comparison
+                                                                    tors C−1 (upper curve) and C100 (lower curve) derived from the
+is, however, difficult, because Eq. 6 does not explicitly refer     gas density PDFs presented in Miralda-Escudé, Haehnelt, & Rees
+to an overdensity threshold.                                        (2000), which implicitly incorporate the effects of photo-heating.
+     Our comparison clearly illustrates that there is a con-        The green dotted curve shows the evolution of the clumping factor
+siderable spread in the clumping factor values quoted in the        (defined without explicitly referring to a (over-)density threshold;
+literature. The interpretation of many studies is complicated       instead, the overdensity threshold was set by the numerical res-
+by the fact that they do not refer to a density threshold,          olution) the dark matter simulation of Iliev et al. (2007), which
+which means that the result is determined by the numerical          does not include the effects of photo-heating. In both cases a di-
+resolution of their simulations.                                    rect comparison is difficult, because of the different assumptions
+                                                                    underlying the individual works.
+
+
+4    DISCUSSION
+                                                                    tor of the IGM depends critically on the definition of
+Several observational studies have claimed that the star for-       which gas is considered to be part of the IGM. Following
+mation rate (SFR) density at redshift z ≈ 6 is smaller than         Miralda-Escudé, Haehnelt, & Rees (2000), we assumed that
+the critical SFR density required to keep the intergalactic         all gas with densities below a threshold density constitutes
+medium (IGM) ionised. In the absence of a large popula-             the IGM and computed the clumping factor as a function of
+tion of unseen sources of ionising radiation, this discrepancy      this threshold density. In addition, we introduced two physi-
+between the two SFR densities would be in direct conflict           cally well-motivated definitions, C100 , the clumping factor of
+with the high degree of ionisation inferred from the non-           gas with overdensities ∆ < 100 and C−1 , the clumping factor
+detection of a Gunn-Peterson trough in the majority of the          of gas with proper densities below nH = n∗H ≡ 10−1 cm−3 ,
+line-of-sight spectra towards z . 6 quasars.                        our threshold density for the onset of star formation.
+     The critical SFR density is inversely proportional to the           By comparing simulations that include photo-ionisation
+spatially averaged fraction of ionising photons that escape         by a uniform UV background to one that does not, we
+into the IGM per unit time and proportional to the clumping         showed that photo-heating strongly influences the evolution
+factor C ≡ hρ2b iIGM /hρb i2 , a measure for the average recom-     of the clumping factor of the IGM. Photo-ionisation heat-
+bination rate in the IGM. One may therefore ask whether             ing expels the gas from within halos of virial temperatures
+the discrepancy between the observed and critical SFR den-          Tvir . 104 K and prevents its further accretion by raising
+sities could be resolved by changing the assumptions about          the Jeans mass in the IGM. By suppressing the formation of
+the values of either of these two quantities. In this work we       stars in these low-mass halos, photo-heating from reionisa-
+considered the hypothesis that most observational studies           tion decreases the rate at which ionising photons are emit-
+overestimate the critical SFR density because they employ           ted into the IGM and is therefore correctly said to exert
+a clumping factor that is too large.                                a negative feedback on the reionisation process. The fact
+     We re-evaluated the clumping factor, analysing the             that photo-heating also leads to a decrease in the clump-
+gas density distributions in a set of cosmological smoothed         ing factor and hence provides a strong positive feedback by
+particle hydrodynamics simulations that include radia-              making it easier to keep the IGM ionised, is however of-
+tive cooling and photo-ionisation by a uniform UV back-             ten overlooked (but see, e.g., Haiman, Abel, & Madau 2001;
+ground in the optically thin limit. The clumping fac-               Oh & Haiman 2003; Kuhlen & Madau 2005; Wise & Abel
+                                                                    2005; Furlanetto, Oh, & Briggs 2006; Ciardi & Salvaterra
+6  We note that they also computed the clumping factor in a sim-    2007).
+ilar simulation that was initialized with cosmological parameters        At redshift z = 6, we find that C−1 ≈ 6 and C100 ≈ 3
+consistent with the WMAP 1-year results.                            and that these values are insensitive to the redshift zr
+                                                                                 Keeping the Universe ionised               11
+at which the UV background is turned on, as long as              in space. It neglects effects like the cosmological redshifting
+zr & 9. These values for C−1 and C100 are at least three         of photons below the ionisation threshold energy and evo-
+times smaller than they would be in the absence of photo-        lution of the ionising sources during a recombination time.
+heating. We demonstrated that our default simulation is          Because the cross-section σHI ∼ ν −3 for absorption of ionis-
+converged at z = 6 with respect to the employed res-             ing photons by neutral hydrogen decreases with increasing
+olution. It is converged with respect to changes in the          photon frequency ν, these effects may become important for
+box size for threshold overdensities log10 ∆thr . 2. In Ap-      photons whose mean free path is comparable to the cosmic
+pendix A we provide fits to the evolution of the clumping        horizon. Our limit on the escape fraction required to keep
+factor for various (over-)density thresholds and reheating       the Universe at z ≈ 6 ionised may therefore only be accurate
+redshifts. There we also compare the probability density         within a factor of a few.
+function (PDF) of the gas densities at z = 6 obtained from            Our simulations         demonstrate      that   radiation-
+our default simulation to the widely used fit provided by        hydrodynamical feedback due to photo-ionisation heating
+Miralda-Escudé, Haehnelt, & Rees (2000). We update their        plays a key role in shaping the properties of the IGM at red-
+fitting parameters to best fit the PDF from our default sim-     shifts z & 6. We have studied the impact of photo-ionisation
+ulation. Finally, we compared our results for the clumping       heating on the clumping factor of the IGM assuming a
+factor of the IGM to those obtained in previous works.           uniform ionising UV background in the optically thin
+      Since even our most conservative estimate for the          limit. In reality the reionisation process will, however, be
+clumping factor (C−1 ≈ 6) is five times smaller than             more complex. We have demonstrated the robustness of our
+the clumping factor that is usually employed to determine        conclusions with respect to uncertainties in the temperature
+the capacity of star-forming galaxies to keep the z = 6          of the IGM resulting from our simplified treatment of the
+IGM ionised, our results may have important implications         reionisation heating, but there are other factors whose
+for the understanding of the reionisation process. Setting       importance is more difficult to assess.
+C = 6 in Eq. 1, the critical SFR density becomes ρ̇∗ =                Our use of the optically thin approximation neglects
+         −1
+0.005 fesc   M⊙ yr−1 Mpc−3 . This is smaller than recent         self-shielding, a radiative transfer effect due to which ha-
+observational estimates for the SFR density at z ≈ 6,            los that would otherwise be completely photo-evaporated
+ρ̇∗ = 0.022 ± 0.004 M⊙ yr−1 Mpc−3 (integrated to the             could keep some of their gas (e.g., Kitayama & Ikeuchi 2000;
+observed z ≈ 6 faint-end limit L > 0.04 L∗z=3 and dust-          Susa & Umemura 2004; Dijkstra et al. 2004). Since the self-
+corrected; Bouwens et al. 2007), provided that fesc & 0.2.       shielded gas remains neutral, it should be excluded when
+      Our study thus suggests that the observed popula-          computing the clumping factor. Self-shielding becomes im-
+tion of star-forming galaxies may be capable of keeping          portant for NHI & 1018 cm−2 , which for self-gravitating
+the IGM ionised, relaxing the tension between observation-       gas clouds corresponds to densities (Schaye 2001) nH &
+ally inferred and critical SFR density in view of the ob-        10−2 cm−3 (Γ/10−12 s−1 )−1 , where Γ is the HI photo-
+servation of a highly ionised IGM at redshifts z . 6. We         ionisation rate. In our discussion of the critical SFR we have
+note that at z ≈ 7, the SFR density is estimated to be           conservatively adopted the clumping factor C−1 , defined us-
+ρ̇∗ = 0.004 ± 0.002 M⊙ yr−1 Mpc−3 (integrated to the             ing a threshold density nH = 10−1 cm−3 , which is an order of
+observed z ≈ 7 faint-end limit L > 0.2 L∗z=3 and dust-           magnitude larger than the critical density for self-shielding.
+corrected; Bouwens et al. 2008), whereas the critical SFR             Self-shielding might affect our results because it may
+                         −1
+density is ρ̇∗ = 0.008 fesc  M⊙ yr−1 Mpc−3 (using C = 6).        lower the speed with which halos are photo-evaporated.
+The observed population of star-forming galaxies at z ≈ 7        The work by Iliev, Shapiro, & Raga (2005b) (in combina-
+is therefore not able to keep the IGM ionised. If the Uni-       tion with the work by Shapiro, Iliev, & Raga 2004) shows
+verse were ionised by this redshift, then the sources that       that photo-evaporation times obtained in simulations that
+were responsible remain to be discovered.                        employ an optically thin UV background may differ by fac-
+      We caution the reader that the comparison of the crit-     tors of a few from those obtained in detailed radiation-
+ical and observed SFRs is subject to considerable uncer-         hydrodynamical simulations. However, if any halos would
+tainty. First, the SFR inferred from UV galaxy counts prob-      resist photo-evaporation much longer than predicted by our
+ably underestimates the true SFR, because these counts miss      approximate treatment of photo-heating, then the clumping
+UV galaxies fainter than the faint-end limit implied by their    factor of the IGM would be even lower, because self-shielding
+sensitivities. These galaxies may, however, significantly con-   locks the gas that would otherwise contribute to the clump-
+tribute to the UV luminosity density if the faint-end slope      ing factor of the IGM in its neutral state.
+of the UV luminosity function is sufficiently steep. Comple-          If absorption by optically thick (self-shielded) clouds
+mentary estimates of the high-redshift star formation rate       becomes important, then the mean free path of ionising
+based on measurements of the high-redshift (z = 4 − 7)           photons may be set by the mean distance between these
+gamma ray burst rate (Yüksel et al. 2008) and measure-          clouds (Zuo & Phinney 1993) instead of by the opacity
+ments of the Lyman-alpha forest opacity at redshifts z ∼ 3       of the diffuse IGM. In this case it might be appropri-
+(Faucher-Giguère et al. 2008) indeed suggest z ∼ 6 SFRs         ate to supplement the Miralda-Escudé, Haehnelt, & Rees
+that exceed those inferred from UV galaxy counts by fac-         2000 model for the computation of the average recombi-
+tors of a few.                                                   nation rate with a more direct account for these clouds
+      Second, the expression for the critical SFR (Eq. 1) is     as discrete photon sinks (e.g., Iliev, Scannapieco, & Shapiro
+only approximate. As already mentioned in the introduction,      2005a; Ciardi et al. 2006). The effect of absorption by op-
+this expression is based on equating the rate at which ionis-    tically thick clouds is, however, largely degenerate with the
+ing photons escape into the intergalactic medium to the rate     ionising efficiency of the population of star-forming galaxies,
+at which the intergalactic gas is recombining, both averaged     as explained in Iliev et al. (2007). If, on the one hand, these
+12     Pawlik, Schaye & van Scherpenzeel
+clouds are ionising sources themselves, then their contribu-       ACKNOWLEDGMENTS
+tion to the average recombination rate can be described by
+                                                                   We thank Rychard Bouwens, Steven Furlanetto and Jordi
+their escape fractions. If, on the other hand, these clouds do
+                                                                   Miralda-Escudé for valuable communications. We thank the
+not host ionising sources, then their contribution to the aver-
+                                                                   anonymous referee for his/her constructive contribution that
+age recombination can be accommodated by changes in the
+                                                                   greatly improved the discussion of our results. We are grate-
+ionising efficiency of star-forming galaxies because of their
+                                                                   ful to Claudio Dalla Vecchia for help with running the sim-
+biased clustering around these galaxies. The effects of opti-
+                                                                   ulations, Rob Wiersma for useful discussions on the cooling
+cally thick clouds can therefore approximately be accounted
+                                                                   tables and Marcel Haas and Freeke van de Voort for a thor-
+for by adjusting the properties of the ionising sources.
+                                                                   ough reading of the draft. The simulations presented here
+     Self-shielding is only one example of the physical ef-
+                                                                   were run on the Cosmology Machine at the Institute for
+fects that we are ignoring. The inclusion of metals and
+                                                                   Computational Cosmology in Durham as part of the Virgo
+molecules, for instance, would increase the ability of the gas
+                                                                   Consortium research programme and on Stella, the LOFAR
+to cool, which may lead to an increase in the clumping factor
+                                                                   BlueGene/L system in Groningen. This work was supported
+(e.g. Maio et al. 2007). In the presence of photo-heating and
+                                                                   by Marie Curie Excellence Grant MEXT-CT-2004-014112.
+for the threshold densities we employ to compute the clump-
+ing factors we however expect this effect to be very small. A
+more efficient cooling due to metals and molecules may also
+enable star formation and associated kinetic feedback in low-
+                                                                   REFERENCES
+mass haloes with virial temperatures Tvir < 104 K. Both are
+processes that we have ignored but which are likely to affect       Abel T., Haehnelt M. G., 1999, ApJ, 520, L13
+the clumping factor evolution (e.g. Wise & Abel 2008).              Barkana R., Loeb A., 1999, ApJ, 523, 54
+     The evolution of the clumping factor will also depend on       Barkana R., Loeb A., 2001, PhR, 349, 125
+the morphology of the reionisation transition. Our treatment        Barkana R., Loeb A., 2004, ApJ, 609, 474
+implicitly assumed that all gas with overdensities smaller          Benson A. J., Nusser A., Sugiyama N., Lacey C. G., 2001,
+than a threshold overdensity is uniformly ionised, while             MNRAS, 320, 153
+all gas with larger overdensities is fully neutral. This pic-       Bolton J., Meiksin A., White M., 2004, MNRAS, 348, L43
+ture probably only applies to the late stages of reionisa-          Bolton J. S., Haehnelt M. G., 2007, MNRAS, 382, 325
+tion, when individual ionised regions start to overlap and          Bouwens R. J., et al., 2004, ApJ, 606, L25
+the only neutral gas that remains to be ionised is locked           Bouwens R. J., Illingworth G. D., Blakeslee J. P., Franx
+up in regions of high gas overdensities. Before overlap,             M., 2006, ApJ, 653, 53
+other reionisation models may be more useful for the de-            Bouwens R. J., Illingworth G. D., Franx M., Ford H., 2007,
+scription of the clumping factor evolution. For example,             ApJ, 670, 928
+Furlanetto & Oh (2005) point out that if the large-scale            Bouwens R. J., Illingworth G. D., Franx M., Ford H., 2008,
+dense regions are ionised first, the clumping factor may be          preprint (arXiv:0803.0548)
+somewhat larger than one would otherwise expect, because            Bruzual G., Charlot S., 2003, MNRAS, 344, 1000
+the photons are initially confined to these dense regions.          Bunker A. J., Stanway E. R., Ellis R. S., McMahon R. G.,
+Moreover, Furlanetto, Haiman, & Oh (2008) show that in               2004, MNRAS, 355, 374
+fossil ionised regions, that is, regions in which the gas freely    Chabrier G., 2003, PASP, 115, 763
+recombines, the clumping factor will generally be smaller           Chiu W. A., Fan X., Ostriker J. P., 2003, ApJ, 599, 759
+than for regions in photo-ionisation equilibrium, because the       Ciardi B., Scannapieco E., Stoehr F., Ferrara A., Iliev I. T.,
+densest gas which contributes most to the clumping factor            Shapiro P. R., 2006, MNRAS, 366, 689
+becomes neutral first.                                              Ciardi B., Salvaterra R., 2007, MNRAS, 381, 1137
+     The clumping factor is an important ingredient of (semi-       Collin-Souffrin S., 1991, A&A, 243, 5
+)analytic treatments of reionisation. It would therefore be         Chuzhoy L., Kuhlen M., Shapiro P. R., 2007, ApJ, 665, L85
+highly desirable to evaluate the approximations we have em-         Crain R. A., Eke V. R., Frenk C. S., Jenkins A., McCarthy
+ployed in our simplified treatment of the photo-heating pro-         I. G., Navarro J. F., Pearce F. R., 2007, MNRAS, 377, 41
+cess using large high-resolution radiation-hydrodynamical           Dalla Vecchia C., Schaye J., 2008, MNRAS, 387, 1431
+simulations of reionisation that include cooling by metals          Dijkstra M., Haiman Z., Rees M. J., Weinberg D. H., 2004,
+and molecules and feedback from star formation. At the mo-           ApJ, 601, 666
+ment such simulations are, however, not yet feasible.               Efstathiou G., 1992, MNRAS, 256, 43P
+     In fact, current state-of-the-art radiative transfer simu-     Fan X., Carilli C. L., Keating B., 2006, ARA&A, 44, 415
+lations typically make use of clumping factors in their “sub-       Faucher-Giguère C.-A., Lidz A., Hernquist L., Zaldarriaga
+grid” modules because they lack the resolution to resolve the        M., 2008, ApJ, 688, 85
+clumpiness of the gas directly. In addition, they typically do      Ferland G. J., Korista K. T., Verner D. A., Ferguson J. W.,
+not include the effect of photo-heating. In fact, many radia-        Kingdon J. B., Verner E. M., 1998, PASP, 110, 761
+tive transfer simulations ignore hydrodynamics altogether           Furlanetto S. R., Oh S. P., 2005, MNRAS, 363, 1031
+and assume the gas to trace the dark matter.                        Furlanetto S. R., Oh S. P., Briggs F. H., 2006, PhR, 433,
+     With this work we hope to have presented a con-                 181
+servative assessment of the clumping factor of the post-            Furlanetto S. R., Haiman Z., Oh S. P., 2008, ApJ, 686, 25
+reionisation IGM that may provide a useful input to future          Glover S. C. O., Brand P. W. J. L., 2003, MNRAS, 340,
+(semi-)analytic models and simulations of the reionisation           210
+process.                                                            Glover S. C. O., 2007, MNRAS, 379, 1352
+                                                                              Keeping the Universe ionised               13
+Gnedin N. Y., Ostriker J. P., 1997, ApJ, 486, 581               Razoumov A. O., Sommer-Larsen J., 2006, ApJ, 651, L89
+Gnedin N. Y., Hui L., 1998, MNRAS, 296, 44                      Ricotti M., Ostriker J. P., 2004, MNRAS, 352, 547
+Gnedin N. Y., 2000a, ApJ, 535, 530                              Ryu D., Ostriker J. P., Kang H., Cen R., 1993, ApJ, 414,
+Gnedin N. Y., 2000b, ApJ, 542, 535                               1
+Gnedin N. Y., Kravtsov A. V., Chen H.-W., 2008, ApJ,            Sawicki M., Thompson D., 2006, ApJ, 648, 299
+  672, 765                                                      Schaye J., 2001, ApJ, 559, 507
+Gnedin N. Y., 2008, ApJ, 673, L1                                Schaye J., 2004, ApJ, 609, 667
+Haardt F., Madau P., 2001, in the proceedings of XXXVI          Schaye J., Dalla Vecchia C., 2008, MNRAS, 383, 1210
+  Rencontres de Moriond, preprint (astroph/0106018)             Seljak U., Zaldarriaga M., 1996, ApJ, 469, 437
+Haiman Z., Rees M. J., Loeb A., 1997, ApJ, 476, 458             Shapiro P. R., Giroux M. L., Babul A., 1994, ApJ, 427, 25
+Haiman Z., Abel T., Madau P., 2001, ApJ, 551, 599               Shapiro P. R., Iliev I. T., Raga A. C., 2004, MNRAS, 348,
+Hoeft M., Yepes G., Gottlöber S., Springel V., 2006, MN-        753
+  RAS, 371, 401                                                 Shapley A. E., Steidel C. C., Pettini M., Adelberger K. L.,
+Hui L., Haiman Z., 2003, ApJ, 596, 9                             2003, ApJ, 588, 65
+Iliev I. T., Scannapieco E., Shapiro P. R., 2005a, ApJ, 624,    Spergel D. N., et al., 2007, ApJS, 170, 377
+  491                                                           Spergel D. N., et al., 2003, ApJS, 148, 175
+Iliev I. T., Shapiro P. R., Raga A. C., 2005b, MNRAS, 361,      Springel V., Hernquist L., 2003, MNRAS, 339, 289
+  405                                                           Springel V., 2005, MNRAS, 364, 1105
+Iliev I. T., Mellema G., Shapiro P. R., Pen U.-L., 2007,        Srbinovsky J. A., Wyithe J. S. B., 2007, MNRAS, 374, 627
+  MNRAS, 376, 534                                               Stanway E. R., Bunker A. J., McMahon R. G., 2003, MN-
+Inoue A. K., Iwata I., Deharveng J.-M., 2006, MNRAS,             RAS, 342, 439
+  371, L1                                                       Stiavelli M., Fall S. M., Panagia N., 2004, ApJ, 610, L1
+Kennicutt R. C., Jr., 1998, ApJ, 498, 541                       Susa H., Umemura M., 2004, ApJ, 600, 1
+Kitayama T., Ikeuchi S., 2000, ApJ, 529, 615                    Theuns T., Schaye J., Zaroubi S., Kim T.-S., Tzanavaris
+Kohler K., Gnedin N. Y., Hamilton A. J. S., 2007, ApJ,           P., Carswell B., 2002, ApJ, 567, L103
+  657, 15                                                       Thoul A. A., Weinberg D. H., 1996, ApJ, 465, 608
+Komatsu E., et al., 2008, preprint (arXiv:0803.0547)            Tittley E. R., Meiksin A., 2007, MNRAS, 380, 1369
+Kuhlen M., Madau P., 2005, MNRAS, 363, 1069                     Valageas P., Silk J., 1999, A&A, 347, 1
+Lacey C., Cole S., 1994, MNRAS, 271, 676                        Veilleux S., Cecil G., Bland-Hawthorn J., 2005, ARA&A,
+Lehnert M. D., Bremer M., 2003, ApJ, 593, 630                    43, 769
+Machacek M. E., Bryan G. L., Abel T., 2003, MNRAS, 338,         Venkatesan A., Giroux M. L., Shull J. M., 2001, ApJ, 563,
+  273                                                            1
+Madau P., Efstathiou G., 1999, ApJ, 517, L9                     Wiersma R. P. C., Schaye J., Smith B. D., 2008, MNRAS,
+Madau P., Haardt F., Rees M. J., 1999, ApJ, 514, 648             in press, preprint (arXiv:0807.3748)
+Madau P., 2000, RSPTA, 358, 2021                                Wise J. H., Abel T., 2005, ApJ, 629, 615
+Madau P., Rees M. J., Volonteri M., Haardt F., Oh S. P.,        Wise J. H., Abel T., 2008, ApJ, 684, 1
+  2004, ApJ, 604, 484                                           Yan H., Windhorst R. A., 2004, ApJ, 600, L1
+Maio U., Dolag K., Ciardi B., Tornatore L., 2007, MNRAS,        Yüksel H., Kistler M. D., Beacom J. F., Hopkins A. M.,
+  379, 963                                                       2008, ApJ, 683, L5
+Malhotra S., et al., 2005, ApJ, 626, 666                        Zuo L., Phinney E. S., 1993, ApJ, 418, 28
+Mannucci F., Buttery H., Maiolino R., Marconi A.,
+  Pozzetti L., 2007, A&A, 461, 423
+Mesinger A., Dijkstra M., 2008, preprint (arXiv:0806.3090)
+                                                               APPENDIX A: FITTING FORMULAS
+Miralda-Escudé J., Rees M. J., 1994, MNRAS, 266, 343
+Miralda-Escudé J., Cen R., Ostriker J. P., Rauch M., 1996,    Here we provide fits to the evolution of the clumping fac-
+  ApJ, 471, 582                                                tor for a range of overdensity thresholds and all reheat-
+Miralda-Escudé J., Haehnelt M., Rees M. J., 2000, ApJ,        ing redshifts considered for use with (semi-)analytical mod-
+  530, 1                                                       els of reionisation. We also compare the probability den-
+Miralda-Escudé J., 2003, ApJ, 597, 66                         sity function of the gas densities at redshift z = 6 ob-
+Navarro J. F., Steinmetz M., 1997, ApJ, 478, 13                tained from our default simulation to the fit provided by
+Oesch P. A., et al., 2008, preprint (arXiv:0804.4874)          Miralda-Escudé, Haehnelt, & Rees (2000).
+Oh S. P., 2001, ApJ, 553, 499
+Oh S. P., Haiman Z., 2003, MNRAS, 346, 456
+                                                               A1    Clumping factor
+Okamoto T., Gao L., Theuns T., 2008, preprint
+  (arXiv:0806.0378)                                            In this section we fit the evolution of the clumping factors
+Padmanabhan T., Structure Formation in the Universe,           C−1 and C100 over the redshift range 6 6 z 6 20, based on
+  Cambridge University Press (1993)                            the data presented in Fig. 5. In addition, we give fits to the
+Panagia N., Fall S. M., Mobasher B., Dickinson M., Fer-        evolution of the clumping factors C−2 and C1000 , C500 , C200
+  guson H. C., Giavalisco M., Stern D., Wiklind T., 2005,      and C50 , where C−2 ≡ C(< 10−2 cm−3 mH /(Xhρb i)) and
+  ApJ, 633, L1                                                 C1000 ≡ C(< min(1000, 10−1 cm−3 mH /(Xhρb i))) and sim-
+Pawlik A. H., Schaye J., 2008, submitted, preprint             ilar for C500 , C200 and C50 . We first give fits to the evo-
+  (arXiv:0812.2913)                                            lution of the clumping factors for the simulations L6N256
+14       Pawlik, Schaye & van Scherpenzeel
+
+Table A1. Parameter values α, β, γ and δ to be used in Eq. A1       Table A2. Parameter values α, β, γ and δ to be used in
+in order to fit the evolution of the clumping factors C−1 and C−2   Eq. A1 in order to fit the evolution of the clumping factors
+obtained from the simulations L6N256 and r19.5L6N256 (see           C1000 , C500 , C200 , C100 and C50 obtained from the simulations
+also Fig. 5).                                                       L6N256 and r19.5L6N256 (see also Fig. 5).
+
+
+                      L6N256     r19.5L6N256                                               L6N256           r19.5L6N256
+
+               α−1      1.29         1.21                                        α1000      1.00                1.00
+               β−1      0.00         −3.66                                       β1000      −1.00              −2.89
+               γ−1      0.47         0.00                                        γ1000      0.28                0.00
+               δ−1      5.76         8.25                                        δ1000      6.29                6.76
+
+               α−2      1.29         1.16                                         α500         1.00             1.00
+               β−2      0.00         −2.47                                        β500         0.00            −2.44
+               γ−2      0.44         0.00                                         γ500         0.34             0.00
+               δ−2      4.68         5.16                                         δ500         4.60             5.68
+
+                                                                                  α200         1.00             1.00
+                                                                                  β200         0.00            −1.99
+and r19.5L6N256, i.e. the simulations without reheating                           γ200         0.30             0.00
+and with reheating at the highest redshift we considered.                         δ200         4.04             4.49
+These fits are then used to obtain fits to the evolution of the                   α100         1.00             1.00
+clumping factors for reheating at the intermediate redshifts                      β100         0.00            −1.71
+zr = 7.5, 9.0, 10.5, 12, 13.5 and 15.0 by interpolation.                          γ100         0.28             0.00
+     We approximate the evolution of the clumping factors                         δ100         3.59             3.76
+for the simulations L6N256 and r19.5L6N256 by
+                                                                                   α50         1.00             1.00
+C(z)     =   z β e−γz+δ + α,                               (A1)                    β50         0.00            −1.47
+                                                                                   γ50         0.23             0.00
+where C is either C−1 , C−2 , C1000 , C500 , C200 , C100 or C50                    δ50         2.92             3.08
+and similar for α, β, γ, δ. The values for the parame-
+ters α, β, γ, δ are listed in Tables A1 and A2. The fit
+(Eq. A1) is accurate to within . 10%. We emphasize that
+it is only strictly valid over the fitting range 6 6 z 6 20.        Table A3. Parameter values ζ zr and τ zr to be used in Eq. A2 in
+For C1000 , C500 , C200 , C100 and C50 , i.e. for the clumping      order to fit the evolution of the clumping factors C−1 and C−2
+factors that are defined using an overdensity threshold, we         obtained from the simulations r[zr ]L6N256 (see also Fig. 5).
+forced, however, the fits to approach the correct high-z
+limit, i.e. C → 1, by fixing α = 1 during the fitting pro-                        zr      zr
+                                                                                         ζ−1           zr
+                                                                                                      τ−1      zr
+                                                                                                              ζ−2       zr
+                                                                                                                       τ−2
+cedure. Note that the threshold densities used with C−1
+and C−2 correspond to threshold overdensities ∆thr < 1                           7.5      6.83    0.83       6.61      0.80
+                                                                                 9.0      8.10    1.25       7.78      1.26
+for redshifts z > 79.4 and z > 36.3, respectively and that
+                                                                                10.5      9.41    1.71       8.92      1.65
+C1000 , C500 , C200 , C100 and C50 become identical to C−1 for
+                                                                                12.0     10.77    2.16       10.02     1.96
+redshifts z > 7.0, 9.1, 12.7, 16.3 and 20.8, respectively.                      13.5     12.10    2.45       11.09     2.24
+     The values of C for reheating at redshifts zr =                            15.0     13.27    2.43       12.20     2.48
+7.5, 9.0, 10.5, 12, 13.5 and 15.0 (hereafter C zr ) are fitted by
+interpolating between the fits (Eq. A1) to the evolution of
+the clumping factors obtained from L6N256 (hereafter C 0 )
+and r19.5L6N256 (hereafter C 19.5 ). That is, we write              ity density function (PDF) of the gas density at redshifts
+ zr              0                   19.5                           z = 2, 3 and 4 obtained from the L10 hydrodynamical sim-
+C (z) = w(z)C (z) + [1 − w(z)]C             (z),           (A2)
+                                                                    ulation described in Miralda-Escudé et al. (1996). In addi-
+where                                                               tion, they provided a prescription for extrapolating this fit
+         1
+           » „
+                z − ζ zr
+                         «    –                                     to higher redshifts. Here we compare the volume-weighted
+w(z) =      erf            + 1  ,                          (A3)     PDF obtained from our default simulation (r9L6N256 ) at
+         2        τ zr
+                                                                    z = 6 to their fit. Because we find that their set of fitting pa-
+and erf is the error function,                                      rameters provides a somewhat poor description of this PDF,
+           2
+              Z z                                                   we also provide an updated set of parameters that yields a fit
+                  dz̃ exp −z̃ 2 .
+                         `     ´
+erf(z) = √                                                 (A4)     which more accurately describes the one-point distribution
+            π 0
+                                                                    of gas densities at z = 6 in our default simulation.
+The constants ζ zr and τ zr are listed in Tables A3 and A4.              In Fig. A1 we show the volume-weighted PDF of the
+Eq. A2 fits the data to within . 10%.                               gas density per unit log 10 ∆. We have investigated the con-
+                                                                    vergence of this PDF with respect to the resolution and the
+                                                                    size of the simulation box, using the same set of simulations
+A2      Probability density function
+                                                                    that we employed to study the convergence of the clumping
+Miralda-Escudé, Haehnelt, & Rees (2000) provided a con-            factor in Section 3.2.1. We find that the PDF is converged
+venient four-parameter fit to the volume-weighted probabil-         with respect to changes in the resolution. It is converged
+                                                                                            Keeping the Universe ionised                     15
+
+Table A4. Parameter values ζ zr and τ zr to be used in Eq. A2 in order to fit the evolution of the clumping factors C1000 , C500 , C200 , C100
+and C50 obtained from the simulations r[zr ]L6N256 (see also Fig. 5).
+
+                                  zr      zr        zr      zr      zr       zr       zr      zr       zr       zr
+                          zr     ζ1000   τ1000     ζ500    τ500    ζ200     τ200     ζ100    τ100     ζ50      τ50
+
+                          7.5     6.71    0.68     6.74    0.76     6.71    0.83     6.60    0.75    6.53     0.85
+                          9.0     7.98    1.29     7.96    1.22     7.93    1.32     7.75    1.72    7.67     1.37
+                         10.5     9.49    2.00     9.50    2.12     9.33    2.03     8.99    1.71    8.94     2.03
+                         12.0    11.10    2.58    11.33    3.05    10.98    2.90    10.39    2.38    10.40    2.84
+                         13.5    12.36    2.35    13.12    3.63    12.75    3.72    11.93    3.07    12.02    3.69
+                         15.0    13.27    1.77    14.36    3.26    14.64    4.49    13.66    3.75    13.86    4.60
+
+
+
+with respect to changes in the size of the simulation box for
+overdensities log 10 ∆ . 2. For larger overdensities, the val-
+ues of the PDF obtained from our default simulation may
+not yet be fully converged. We note that at z = 6 the PDFs
+obtained from the simulations r[zr ]L6N256z that employ a
+reheating redshift zr > 9 are almost undistinguishable from
+that obtained from our default simulation.
+    We compare the PDF to the fit given by
+Miralda-Escudé, Haehnelt, & Rees (2000),
+                       (∆−2/3 − C0 )2
+                     »                –
+PV (∆)d∆ = A exp −                      ∆−β d∆,          (A5)
+                          2(2δ0 /3)2
+using their values for the parameters7 A = 0.375, δ0 =
+1.09, β = 2.50 and C0 = 0.880. As can be seen from
+Fig. A1, for overdensities 1 . log10 ∆ . 2 the PDF obtained
+from our default simulation is significantly steeper than pre-
+dicted by the fit. Using the simulations r9L6N256W3 and
+                                                                           Figure A1. Top panel: Volume-weighted PDF of the baryon
+r9L6N256W1, we verified that the steepness of the slope                    overdensity ∆ (per unit log10 ∆) at z = 6 obtained from
+of the PDF over this range of overdensities is sensitive to                our default simulation r9L6N256 (black solid histogram). For
+the cosmological parameters employed. Note that the PDF                    comparison, the red solid line shows the four-parameter fit
+does also not asymptote to PV (∆) ∝ ∆−β , as predicted by                  given by Eq. A5, with the parameter values taken from
+Eq. A5. For overdensities larger than the overdensity for the              Miralda-Escudé, Haehnelt, & Rees (2000). The blue dashed line
+onset of star formation, the PDF is instead governed by the                shows our best fit of Eq. A5 to the PDF. Bottom panel: Abso-
+effective equation of state characteristic for the multi-phase             lute value of the relative differences of the fits with respect to the
+star-forming gas.                                                          PDF. In both panels, the vertical line indicates the overdensity
+                                                                           corresponding to the onset of star formation.
+     We fitted Eq. A5 to our PDF over the range −1 6
+log10 ∆ 6 2, constraining the parameters A and C0 by the
+requirement that the total integral over the volume- and
+mass-weighted PDF must be normalized to unity. This yields
+values A = 3.038, δ0 = 1.477, β = 3.380 and C0 = −0.932.
+Note that the fit based on these parameter values still does
+not provide a good description of the PDF for overdensities
+log10 ∆ & 2.
+
+This paper has been typeset from a TEX/ LATEX file prepared
+by the author.
+
+
+
+
+7 Note       that   the     value   for    A    given    in
+Miralda-Escudé, Haehnelt, & Rees (2000) is too large by a
+factor of ln 10.
+

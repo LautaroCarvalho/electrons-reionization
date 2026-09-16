@@ -1,0 +1,4311 @@
+MNRAS 000, 1–31 (2015)
+
+Preprint 1 April 2020
+
+Compiled using MNRAS LATEX style file v3.0
+
+arXiv:2001.10018v2 [astro-ph.CO] 31 Mar 2020
+
+Probing the thermal state of the intergalactic medium at
+z > 5 with the transmission spikes in high-resolution Lyα
+forest spectra
+Prakash Gaikwad1 ? , Michael Rauch2 , Martin G. Haehnelt1 , Ewald Puchwein3 ,
+James S. Bolton4 , Laura C. Keating5 , Girish Kulkarni6 , Vid Iršič1 ,
+Eduardo Bañados7 , George D. Becker8 , Elisa Boera8,9,10,11 ,Fakhri S. Zahedy2 ,
+Hsiao-Wen
+Chen12 , Robert F. Carswell1 , Jonathan Chardin13 and Alberto Rorai1
+1
+Institute of Astronomy and Kavli Institute for Cosmology, Cambridge University, Madingley Road, Cambridge CB30HA, UK
+
+2 Carnegie Observatories, 813 Santa Barbara Street, Pasadena, CA 91101, USA
+3 Leibniz-Institut für Astrophysik Potsdam (AIP), An der Sternwarte 16, 14482 Potsdam, Germany
+4 School of Physics and Astronomy, University of Nottingham, University Park, Nottingham, NG7 2RD, UK
+5 Canadian Institute for Theoretical Astrophysics, 60 St. George Street, University of Toronto, ON M5S 3H8, Canada
+6 Department of Theoretical Physics, Tata Institute of Fundamental Research, Homi Bhabha Road, Mumbai 400005, India
+7 Max Planck Institut für Astronomie, Königstuhl 17, D-69117, Heidelberg, Germany
+8 Department of Physics & Astronomy, University of California, Riverside, CA, 92521, USA
+9 SISSA, Via Bonomea 265, 34136 Trieste, Italy
+10 INAF-Osservatorio Astronomico di Trieste, Via Tiepolo 11, I-34143 Trieste, Italy
+11 IFPU, Institute for Fundamental Physics of the Universe, Via Beirut 2, 34014 Trieste, Italy
+12 Department of Astronomy & Astrophysics, The University of Chicago, Chicago, IL 60637, USA
+13 Observatoire Astronomique de Strasbourg, Universit é de Strasbourg, CNRS UMR 7550, 11 rue de l’Universit é, F-67000 Strasbourg, France
+
+ABSTRACT
+
+We compare a sample of five high-resolution, high S/N Lyα forest spectra of bright
+6 < z <∼ 6.5 QSOs aimed at spectrally resolving the last remaining transmission
+spikes at z > 5 with those obtained from mock absorption spectra from the Sherwood and Sherwood-Relics suites of hydrodynamical simulations of the intergalactic
+medium (IGM). We use a profile fitting procedure for the inverted transmitted flux,
+1−F , similar to the widely used Voigt profile fitting of the transmitted flux F at lower
+redshifts, to characterise the transmission spikes that probe predominately underdense
+regions of the IGM. We are able to reproduce the width and height distributions of
+the transmission spikes, both with optically thin simulations of the post-reionization
+Universe using a homogeneous UV background and full radiative transfer simulations
+of a late reionization model. We find that the width of the fitted components of
+the simulated transmission spikes is very sensitive to the instantaneous temperature
+of the reionized IGM. The internal structures of the spikes are more prominent in
+low temperature models of the IGM. The width distribution of the observed transmission spikes, which require high spectral resolution (≤ 8 km s−1 ) to be resolved,
+is reproduced for optically thin simulations with a temperature at mean density of
+T0 = (11000 ± 1600, 10500 ± 2100, 12000 ± 2200) K at z = (5.4, 5.6, 5.8). This is weakly
+dependent on the slope of the temperature-density relation, which is favored to be
+moderately steeper than isothermal. In the inhomogeneous, late reionization, full radiative transfer simulations where islands of neutral hydrogen persist to z ∼ 5.3, the
+width distribution of the observed transmission spikes is consistent with the range of
+T0 caused by spatial fluctuations in the temperature-density relation.
+Key words: cosmology: large-scale structure of Universe - methods: numerical galaxies: intergalactic medium - QSOs: absorption lines
+
+?
+
+E-mail: pgaikwad@ast.cam.ac.uk
+
+c 2015 The Authors
+
+1 INTRODUCTION
+The reionization of intergalactic H i and He i by ultraviolet photons from stars and black holes in the first galaxies
+
+2
+
+Gaikwad et.al
+
+is one of the major phase transitions of the universe (Fan
+et al. 2001, 2006; Robertson et al. 2010; Bolton et al. 2011;
+Planck Collaboration et al. 2014, 2018). Photo-heating during the reionization increases the temperature of the intergalactic medium (IGM) (Hui & Gnedin 1997; Trac et al.
+2008; McQuinn et al. 2009; McQuinn & Upton Sanderbeck
+2016). The thermal and ionization histories of the Universe
+are thus interlinked, and can be used in tandem to understand the process of reionization and the nature of ionizing sources (Haehnelt & Steinmetz 1998; Furlanetto & Oh
+2009; McQuinn et al. 2011; Becker et al. 2015; Chardin et al.
+2017; Davies et al. 2018; Keating et al. 2018; Kulkarni et al.
+2019b).
+The H i Lyα forest observed along sightlines towards
+bright QSOs is frequently used to constrain the thermal
+and ionization state of the IGM at z < 5. For underdense
+or moderately overdense regions, the thermal state of the
+IGM is often approximated as a power law, parameterized
+as the temperature at mean density and the slope of the
+power law (T0 and γ Lidz et al. 2010; Becker et al. 2011;
+Rudie et al. 2012; Garzilli et al. 2012; Bolton et al. 2014;
+Boera et al. 2014; Hiss et al. 2018; Telikova et al. 2018, 2019;
+Walther et al. 2019; Boera et al. 2019). Other relevant parameters are the H i photo-ionization rate (ΓHI Rauch et al.
+1997; Bolton & Haehnelt 2007; Faucher-Giguère et al. 2008;
+Calverley et al. 2011; Becker & Bolton 2013; Gaikwad et al.
+2017a,b; Viel et al. 2017; Khaire et al. 2019) and the pressure smoothing scale (Gnedin & Hui 1998; Peeples et al.
+2010; Kulkarni et al. 2015; Lukić et al. 2015; Rorai et al.
+2017a). Due to the rapid increase of the Lyα opacity with
+redshift, the transmitted Lyα flux at z > 5 is close to zero,
+with the occurrence of a few transmission spikes indicating that the reionization process is inhomogeneous (Becker
+et al. 2015; Bosman et al. 2018; Eilers et al. 2018). Analysis of the transmission spikes towards ULAS J1120+0641
+QSO (zem = 7.084, Becker et al. 2015; Barnett et al. 2017)
+with numerical simulations suggests that these spikes correspond to underdense, highly ionized regions of gas (Gnedin
+et al. 2017; Chardin et al. 2018; Kakiichi et al. 2018; Garaldi
+et al. 2019; Nasir & D’Aloisio 2019). These studies find that
+the number and height of the spikes are sensitive to the
+ionization fraction ( xHII ) of the IGM, which in turn depends on the photo-ionization rate and the temperature of
+the gas in the ionized regions. Perhaps somewhat surprisingly, however, Garaldi et al. (2019) found that the spike
+shape (especially the widths of the spikes) appeared to be
+only weakly correlated with the temperature of the IGM.
+We revisit this question here with a larger sample of higher
+resolution, higher quality Lyα forest spectra which we compare to high-resolution hydrodynamical simulations of the
+IGM using the Sherwood and Sherwood-Relics simulation
+suites. These incorporate simulations with a homogeneous
+UV background as well as full radiative transfer simulations
+of inhomogeneous reionization (Bolton et al. 2017; Kulkarni et al. 2019b, Puchwein et.al. 2020 in prep). Note that in
+the main analysis we used the Sherwood-Relics simulation
+suite, but complemented these with simulations from the
+Sherwood simulation suite for additional tests performed in
+the Appendices.
+There are several difficulties in probing the effect of
+the thermal state of the IGM on Lyα transmission spikes.
+High-redshift QSOs, while intrinsically luminous, are nev-
+
+ertheless faint and observed spectra are normally taken at
+moderate resolution as e.g. offered by VLT/X-Shooter, i.e.
+with 35 km s−1 or worse. As a result most spectra of highredshift transmission spikes are of rather modest quality and
+the number of well observed transmission spikes is necessarily still small due to the rarity and faintness of high-z
+background QSOs (Kulkarni et al. 2019a). We improve this
+situation here and present a sample of 5 high resolution
+(FWHM ∼ 6 km s−1 ) and high S/N (∼ 10) QSO absorption spectra obtained using the Magellan Inamori Kyocera
+Echelle (MIKE) spectrograph on the Magellan II telescope
+(Bernstein et al. 2003), and the High-Resolution Echelle
+Spectrograph (HIRES) on the Keck I telescope (Vogt et al.
+1994).
+Similarly, simulated transmission spikes may be drawn
+from simulations with moderate mass or spatial resolution
+that is only sufficient to produce mock spectra mimicking moderate resolution spectrographs like X-Shooter (35
+km s−1 , but see Garaldi et al. 2019). The thermal smoothing
+scale of the Lyα transmitted flux due to the IGM temperature (T ∼ 104 K, b ∼ 13 km s−1 ) is, however, significantly
+smaller than this. As discussed in detail by Bolton & Becker
+(2009), rather high mass or spatial resolution is required to
+resolve the small scale structure in the underdense regions of
+the IGM probed by Lyα forest spectra at high redshift. Previous theoretical work has focused on analyzing the spikes in
+radiative transfer simulations (Gnedin et al. 2017; Chardin
+et al. 2018; Garaldi et al. 2019). While these simulations are
+physically well motivated, they are computationally expensive and it is hard to disentangle the effect of the thermal
+state of the IGM on the transmission spikes from the reionization history and numerical limitations.
+We have thus chosen to analyze the transmission spikes
+first in very high resolution, high dynamic range optically
+thin simulations with different thermal and reionization histories where a single parameter is varied at a time while
+keeping other parameters fixed. We therefore use simulations
+from the Sherwood and Sherwood-Relics simulation suite
+(Bolton et al. 2017, Puchwein et.al. 2020 in prep) to show
+how spike properties depend on the IGM thermal state, the
+H i photo-ionization rate ΓHI , and (in the appendices) the
+pressure smoothing scale, as well as the mass resolution and
+box size of the simulations. Once we have established this we
+investigate the effect of inhomogeneous reionization in more
+physically motivated, spatially inhomogeneous H i reionization simulations including radiative transfer (see Kulkarni
+et al. 2019b; Keating et al. 2019).
+Another problem when comparing simulated and observed Lyα forest spectra is the accurate characterisation
+of the transmission spike properties. Transmission spikes
+are often asymmetric and transmission features appear
+“blended”. The often used simple definition of height and
+width of spikes based on the maximum and FWHM of the
+transmitted flux will thus not capture the detailed information contained in the complex spike shapes, and could
+be the reason that the analyses performed so far show little or no correlations with astrophysical parameters (see
+e.g. the width vs temperature correlation in Garaldi et al.
+2019). Characterizing the shape of transmission spikes becomes even more crucial for high S/N, high resolution QSO
+absorption spectra. In practice the problem is very similar to that of the characterisation of Lyα absorption lines
+MNRAS 000, 1–31 (2015)
+
+Transmission spikes in the Lyα forest
+at lower redshift. To utilise the practical experience gained
+in this area with existing software packages (e.g. Gaikwad
+et al. 2017b) we characterize the transmission spikes by fitting Voigt profiles to the “inverted” transmitted flux, 1 − F .
+We will later show that the fitted parameters obtained in
+this way are well correlated with physical properties (e.g.
+the density and temperature) of the gas associated with the
+transmission spikes. We will also study how the statistics of
+the fitted parameters depend on the astrophysical parameters ΓHI , T0 and γ. Unlike for absorption lines, there is no
+direct physical motivation for fitting Voigt profiles to 1-F, so
+this should be considered as a purely heuristic approach to
+comparing simulated and observed spectra. However, as we
+will see this does not mean that the fit parameters obtained
+do not correlate with physical properties.
+The main goal of this paper is to constrain the
+thermal state of the IGM at 5.3 ≤ z ≤ 5.9. The paper is
+organized as follows: In §2 we present the high resolution
+spectra of 5 z > 6 QSOs and discuss qualitatively the
+physical origin of Lyα transmission spikes. We present
+the properties of transmission spikes in optically thin
+simulations in §3 and §4. We demonstrate the sensitivity
+of spike statistics to the IGM thermal state in §5. The
+main results of the paper are presented in §5.3 and §6
+by comparing the observed spike statistics with those
+from optically thin and radiative transfer simulations.
+We summarize our findings in §7. We assume a flat
+ΛCDM cosmological model (ΩΛ , Ωm , Ωb , σ8 , ns , h, Y ) ≡
+(0.692, 0.308, 0.0482, 0.829, 0.961, 0.678, 0.24)
+consistent
+with Planck Collaboration et al. (2014, 2018). All distances
+are given in comoving units unless specified. ΓHI expressed
+in units of 10−12 s−1 is denoted by Γ12 .
+
+2
+
+2.1
+
+TRANSMISSION SPIKES IN
+HIGH-RESOLUTION, HIGH-REDSHIFT Lyα
+FOREST SPECTRA
+Observations: high-resolution spectra of
+transmission spikes
+
+The data consist of the high resolution echelle spectra of five
+recently discovered z > 6 QSOs. The objects were chosen for
+their brightness, and individual targets were further selected
+to maximize the exposure time during a given observing run.
+Table 1 gives the name of each object, the emission redshift
+zem , the J AB band magnitude (from the compilation of Ross
+& Cross 2019), the total on-source exposure time T in hours,
+and a typical signal-to-noise ratio per pixel. The objects were
+observed under mostly photometric conditions in sub-arcsec
+seeing. The first four objects were observed with the MIKE
+instrument (Bernstein et al. 2003) on the Magellan II telescope at Las Campanas Observatory. A 0.5” wide slit gave
+a measured spectral resolution of 5 km s−1 (FWHM). The
+spectra were binned onto 2 km s−1 wide pixels. The spectrum of SDSSJ010013.02+280225.8 was obtained with the
+HIRES instrument (Vogt et al. 1994) on the Keck I telescope, and a 0.861” wide slit, giving a resolution of 6.1 km
+s−1 (FWHM), sampled by 2.5 km s−1 wide bins. The data
+were reduced with a custom pipeline (Becker et al. 2012).
+Optimal sky-subtraction on the individual, un-rectified exposures was performed according to the prescription by Kelson (2003).
+MNRAS 000, 1–31 (2015)
+
+3
+
+For the continuum model, a power law was assumed. As
+the high resolution echelle spectra only had limited coverage
+of the unabsorbed region redward of the Lyα emission, the
+continuum was derived from flux-calibrated, low resolution
+spectra of the same QSOs which extended further to the red.
+For objects 1-3 (in table 1), the continua were determined
+from the discovery spectra, using fits to regions redward of
+Lyα avoiding broad emission lines, whereas the power law
+slopes for objects 4 and 5 were taken from the literature
+cited. The continuum was then scaled uniformly to match
+the flux-calibrated high resolution spectrum in the overlap
+region with the low-resolution spectrum redward of Lyα, and
+divided into the spectrum. To correct for the rapidly variable
+region of the spectrum near the Lyα emission line, the emission line region was fitted with a higher order polynomial in
+the previously continuum divided spectrum, which then was
+multiplied into the previous continuum fit. The final continuum thus obtained was divided into the data. As we show
+later, the width of the fitted components of the transmission
+spikes are relatively robust to continuum fitting uncertainty.
+During data reduction a certain degree of smoothing is
+introduced into the data that appears as a discrepancy between the RMS fluctuations in the final data and the propagated error array, and generally results in an underestimate
+of the reduced χ2ν when fitting line profiles. To counteract
+this problem, a correction factor (generally a number close
+to unity varying slowly with wavelength) was derived from
+the observed ratio between the RMS fluctuations and the
+error array, as determined from wavelength windows in the
+spectrum with zero flux. A linear fit to the correction factor
+as a function of wavelength was divided into the error array
+to obtain a reduced χ2ν ∼ 1 during profile fitting.
+2.2
+
+Characterising width and height of individual
+components
+
+Fig. 1 compares transmission spikes in a high-resolution Lyα
+forest observation of the QSO J043947.08+163415.7 with
+the MIKE spectrograph with simulated spikes drawn from
+the Sherwood-Relics simulation suite (see Section 3.1, Puchwein et.al. 2020 in prep), for cold and hot models with a spatially uniform UV background. The transmission spikes have
+complex shapes composed of many asymmetric and blended
+features. Even isolated transmission spikes are often highly
+asymmetric and consist of two or more “components”. In order to facilitate a more quantitative discussion of the transmission spikes, we focus on two properties, namely the height
+and width of individually identifiable components. We quantify these (see §4) by fitting the “inverted” transmitted flux,
+1 − F , with multi-component Voigt profiles, similar to the
+fitting of Voigt profiles of the transmitted flux, F , often employed at lower redshift to characterise absorption lines.
+The best fits to observed and simulated spectra are
+shown in Fig. 1 by the red curve. The location of individual
+identified components are marked by black vertical lines.
+Fig. 1 show simulated spectra for the hot and cold model
+and illustrate the sensitivity of spike features to the thermal state of the IGM. The main effect of increase in IGM
+temperature is to reduce the internal structure of the spikes
+(i.e., more blending). As a result, fewer and broader components are required to fit the transmission spikes in the
+hot model. In general, the spikes in the hot model are (i)
+
+4
+
+Gaikwad et.al
+
+Table 1. Properties of the QSO spectra analysed in this work (see text for further details).
+ID
+
+Name
+
+zem
+
+J
+
+T[h]
+
+(S/N)/pixel
+
+Reference
+
+Instrument
+
+1
+2
+3
+4
+5
+
+ATLASJ158.6938-14.4211
+PSOJ239.7124-07.4026
+ATLASJ025.6821-33.4627
+J043947.08+163415.7
+SDSSJ010013.02+280225.8
+
+6.07
+6.11
+6.34
+6.51
+6.30
+
+19.27
+19.37
+19.10
+17.47
+17.60
+
+11.8
+10.0
+6.7
+10.0
+5.0
+
+7.7
+6.5
+12.0
+30.3
+20.0
+
+Chehade et al. (2018)
+Bañados et al. (2016)
+Carnall et al. (2015)
+Fan et al. (2019)
+Wu et al. (2015)
+
+MIKE
+MIKE
+MIKE
+MIKE
+HIRES
+
+OBSERVATION: J0439+1634
+
+A1
+
+1.0
+
+SIMULATION: L40N2048_COLD
+
+Dates of the observations
+March and April, 2018
+March, April and June, 2018
+October and December, 2018
+October and December, 2018
+November 2017
+
+SIMULATION: L40N2048_HOT
+
+B1
+
+C1
+
+F
+
+0.8
+0.6
+0.4
+
+R
+
+0.2
+0.0
+0.2
+0.1
+0.0
+0.1
+0.2
+
+A2
+
+8000
+
+8005
+
+8010 8015
+λ ( Å)
+
+8020
+
+B2
+
+8000
+
+8005
+
+8010 8015
+λ ( Å)
+
+8020
+
+C2
+
+8000
+
+8005
+
+8010 8015
+λ ( Å)
+
+8020
+
+Figure 1. Examples of transmission spikes from observed spectra (panel A1) and simulated spectra from cold (panel B1) and hot (panel
+C1) optically thin simulations drawn from the Sherwood-Relics simulation suite at z ∼ 5.59. The widths and heights of the spikes are
+sensitive to the thermal and ionization state of the IGM. The shape and number of spikes in the observed spectra are similar to the
+simulated spectra from the hot model. The resolution and noise properties of the simulated spectra are chosen to match the observed
+spectra. As described in the main text we fit the “inverted” transmitted flux, 1 − F , with multi-component Voigt profiles using the
+software package viper described in detail in Gaikwad et al. (2017b). In viper, the number of components to be fitted in given region
+is decided automatically by minimizing the Akaike information criteria with correction (see Gaikwad et al. 2017b, for details). The top
+panels show the input spectra (F , blue solid curve) and fitted spectra (F ,in red solid curve). The black solid lines mark the location of
+the centres of Voigt components identified and fitted by viper. The bottom panels show that the residuals between the input and fitted
+spectra are random and less than 11 per cent. The number of components identified in the cold model is larger than in the hot model
+due to the smoother transmitted flux distribution.
+
+broader, (ii) larger in height, (iii) more asymmetric and (iv)
+more blended (hence fewer in number) than those in the
+corresponding cold model. It is interesting to note that the
+number and shape of the spikes in the hot model are qualitatively very similar to those in the observed spectra. We
+will analyse this more quantitatively below.
+
+2.3
+
+The origins of transmission spikes
+
+The complex shapes of the transmission spikes shown in the
+last section will be a superposition of features in the line-ofsight distribution of density, temperature, photo-ionization
+rate and peculiar velocity. To get a better feel for this in
+Fig. 2 we show mock spectra where we isolate the effect of
+varying these parameters, one at a time. Fig. 2 illustrates
+how the variation in any of these physical quantities along a
+sightline can lead to regions of smaller H i optical depth and
+hence transmission spikes. Panels A1-A6, B1-B6 and C1-C6
+show the effect of underdensity, enhanced ΓHI and enhanced
+temperature along a sightline, respectively. All these effects
+can result in a smaller number density of neutral hydrogen,
+nHI , along the sightline. Panels D1-D6 show that a diverging
+peculiar velocity field along the sightline can also produce
+
+transmission spikes. Hot, ionized underdense regions subjected to high photo-ionization rates and diverging peculiar
+velocities will thus produce the most prominent transmission spikes in high−z QSO absorption spectra (Gnedin et al.
+2017; Chardin et al. 2018; Garaldi et al. 2019). The transmission spikes shown in Fig. 2 are by construction isolated,
+symmetric and simple. As discussed in the previous section,
+transmission spikes in both observed spectra and spectra
+drawn from cosmological hydrodynamical simulations have
+complicated shapes, as generally more than one of the above
+effects contribute.
+
+3
+3.1
+
+TRANSMISSION SPIKES IN OPTICALLY
+THIN SIMULATIONS
+The Sherwood and Sherwood-Relics
+simulation suites
+
+We use cosmological hydrodynamical simulations from the
+Sherwood-Relics simulation suite to investigate transmission spikes in the high-redshift Lyα forest; see Table 2 for
+an overview. The simulations were performed with a modified version of the p-gadget-3 code (itself an updated
+MNRAS 000, 1–31 (2015)
+
+Transmission spikes in the Lyα forest
+Effect of Underdensity
+
+Effect of Enhanced Γ12
+
+Effect of Enhanced T
+
+Effect of Peculiar Velocity
+
+(A1)
+
+(B1)
+
+(C1)
+
+(D1)
+
+5
+
+∆
+
+10 0
+
+z
+
+log nHI
+
+10
+0
+10
+
+F
+
+(B4)
+
+5.600
+
+z
+
+(B5)
+
+5.600
+
+z
+
+(D5)
+
+z
+(B6)
+
+5.599
+
+z
+(C5)
+
+z
+5.601
+
+(D4)
+
+z
+
+(A6)
+
+5.599
+
+z
+(C4)
+
+z
+(A5)
+
+0.25
+
+(D3)
+
+z
+
+(A4)
+
+z
+
+z
+(C3)
+
+z
+
+z
+
+(D2)
+
+z
+(B3)
+
+z
+
+z
+(C2)
+
+z
+(A3)
+
+0.50
+0.00
+
+z
+(B2)
+
+z
+
+4
+
+9.0
+9.4
+9.8
+
+z
+(A2)
+
+5
+
+v km s −1
+
+log T
+
+Γ 12
+
+7
+4
+1
+
+5.601
+
+z
+(C6)
+
+5.599
+
+5.600
+
+z
+
+5.601
+
+(D6)
+
+5.599
+
+5.600
+
+z
+
+5.601
+
+Figure 2. Illustration of the origin of transmission spikes due to the variation of individual physical parameters. Each row displays the
+variations in line of sight density (∆), H i photo-ionization rate (Γ12 ), temperature (T ), H i number density ( nHI ), peculiar velocity (v)
+and transmitted Lyα flux, F . The black dashed lines show the default values. In each column, a different physical parameter is varied. In
+the first three columns (i.e. for varying ∆, Γ12 and T ) the occurrence of spikes is due to a change in nHI . Panels D1-D6 instead shows the
+formation of a transmission spike due to a diverging velocity flow along the sightline while nHI remains constant. Realistic transmission
+spikes (see Fig. 4), have more complicated shapes and will be due to a combination of these effects.
+
+version of the gadget-2 code presented in Springel 2005).
+The code uses a tree-particle mesh gravity solver for following cosmic structure formation and a manifestly energy
+and entropy-conserving smoothed particle hydrodynamics
+scheme (Springel & Hernquist 2002) for following the hydrodynamics. The Sherwood-Relics simulations build upon
+the original Sherwood simulation suite (which is used in Appendix C to study numerical convergence) in that the initial
+conditions were generated in the same way, and much of the
+modeling of the IGM and Lyα forest is based on similar
+methods (Bolton et al. 2017)1 .
+Our main production runs follow 2 × 20483 particles
+in a (40 h−1 cMpc)3 volume, corresponding to a gas mass
+resolution of 9.97 × 104 h−1 M . For the gravitational softening we adopt 0.78 h−1 ckpc. Star formation is treated with
+a rather simplistic but numerically efficient scheme in which
+all gas particles with densities larger than 1000 times the
+mean cosmic baryon density and temperatures smaller than
+105 K are converted to collisionless star particles. While this
+does not produce realistic galaxies, it allows robust predic-
+
+1
+
+https://www.nottingham.ac.uk/astronomy/sherwood/
+
+MNRAS 000, 1–31 (2015)
+
+tions of the properties of the IGM (Viel et al. 2004a). Photoheating and photo-ionization are followed based on external
+UV background models. In a departure from the Sherwood
+simulations, we use a non-equilibrium ionization and cooling/heating solver (Puchwein et al. 2015; Gaikwad et al.
+2019) for following the thermochemistry of hydrogen and helium. This ensures that no artificial delay between the reionization of gas and its photo-heating is present. We have also
+replaced the slightly modified Haardt & Madau (2012) UV
+background used in Sherwood with the fiducial UV background model from Puchwein et al. (2019) in our default run.
+This results in a more realistic reionization history with hydrogen reionization finishing at z ≈ 6.2. The cold /hot models were obtained by decreasing/increasing the H i and He i
+photo-heating rates in the fiducial UV background model
+by a factor of 2 and the He ii photo-heating rate by a factor
+of 1.7, while keeping all photo-ionization rates fixed. Mock
+Lyα forest spectra were extracted from all simulations as described in Bolton et al. (2017) (see also Gaikwad et al. 2018,
+2019). Through out this work, we use simulations from the
+Sherwood-Relics simulation suite for the main analysis. Ad-
+
+6
+
+Gaikwad et.al
+
+ditional simulations from the Sherwood simulation suite are
+used for convergence tests as described in Appendix C.
+
+3.2
+
+The temperature density relation (TDR) in
+optically thin simulations
+
+Fig. 3 shows the TDR in the hot and cold models of the
+Sherwood-Relics simulation suite. We shall compare the hot
+and cold models to study the effect of temperature on transmission spikes. Note that the hot model is not only hotter
+than the cold and the default model but also has a flatter
+temperature density relation, and that the ionization state
+of the gas is also different in the models. This is because
+the recombination coefficient is temperature dependent. For
+the same photo-ionization rate the H i fraction is therefore
+smaller in the hot model. The models aton and patchy incorporate the effect of inhomogeneous UV background that
+we describe in 6.
+
+3.3
+
+Examples of transmission spikes in the hot
+and cold optically thin simulations
+
+Fig. 4 shows the relevant physical properties along the two
+sightlines in the hot and cold models. As expected, the hot
+model shows (i) a smoother density (∆) field in real space,
+(ii) a smaller H i fraction ( xHI ), (iii) a larger temperature
+(T ) and (iv) a smoother velocity (v) field compared to the
+corresponding cold model. The smoothing of the real-space
+density field and the velocity field can be attributed to the
+increased effect of pressure smoothing in the hot model. The
+resultant Lyα optical depth and transmitted flux calculated
+from the ∆, xHI , T and v fields are shown in panels A6-B6
+and panels A7-B7, respectively. Note that the location of
+spikes in the green and yellow shaded regions in redshift
+space differs in real space due to the effect of peculiar velocities. The transmission spikes in the hot and cold models
+have complicated shapes, qualitatively similar to that in the
+observed spectra (Fig. 1). The smoother transmission features in the simulated spectra of the hot model are more
+similar to those in the observed spectra than those in the
+more “spiky” spectra in the cold model.
+In both models, the transmission spikes correspond to
+regions of low H i optical depth ( τHI ≤ 4, black dashed line).
+The peaks in transmission are well correlated with those in
+the optical depth weighted overdensities ( ∆τ < 0.8).2 It
+is clear from Fig. 4 that the spikes in the hot model are
+smoother, broader and more prominent than in the cold
+model. Furthermore the number of individual transmission
+components is significantly smaller in the hot model than in
+the cold model due to the “thermal blending” of transmission features. The shape and number of transmission spikes
+in our simulated spectra are clearly sensitive to the thermal
+and ionization state of the IGM in a manner that we will
+quantitatively discuss below.
+Table 2 shows the physical effects responsible for the occurrence of transmission spikes in the optically thin hot and
+
+cold simulations. Most of the spikes (∼ 89 percent) in the
+hot and cold models occur in underdense regions. Around
+15 percent of spikes show a diverging velocity field along the
+sightline. The effect of enhanced temperature on the occurrence of transmission spikes is marginal in both hot and cold
+optically thin simulations.
+In summary, Fig. 4 and Table 2 show that underdense
+( ∆τ < 0.8), more highly ionized (minimum in xHI ) and hotter regions along a sightline produce more prominent spikes.
+This motivates us to quantify the shape of spikes and to
+introduce statistics that are sensitive to the thermal and
+ionization parameters of the IGM.
+
+4
+
+CHARACTERISING THE PROPERTIES OF
+TRANSMISSION SPIKES IN OPTICALLY
+THIN SIMULATIONS
+
+4.1
+
+Voigt profile fitting of the inverted flux 1 − F
+
+The shape of absorption features is usually characterized by
+Voigt profiles defined by three parameters: (i) the centre of
+absorption lines (λc ), (ii) the H i column density (NHI ) and
+(iii) the width of the absorption (b) features. Most of the
+absorption features in the high-z (z ∼ 6) Lyα forest are
+saturated (F ∼ 0) and strongly blended. It is well known
+that Voigt profile decompositions are highly degenerate for
+saturated lines and very sensitive to systematic errors due to
+continuum fitting and treatment of noise properties (Webb
+& Carswell 1991; Fernández-Soto et al. 1996). The inverted
+transmitted flux, 1−F , however, becomes similar in appearance to the absorption features in the Lyα forest at lower
+redshift, where Voigt profile fitting is much less problematic.
+For convenience, we have thus fitted Voigt profiles to 1 − F ,
+building on existing experience with Voigt profile decomposition of complex blended spectral profiles. At the redshift
+we consider here the transmission spikes are observed to be
+unsaturated, so effectively we use our VoIgt profile Parameter Estimation Routine (viper, Gaikwad et al. 2017b) to fit
+multi-component Voigt profiles to the transmission profiles.
+Similar to absorption lines, a simple, isolated and symmetric spike is fitted by 3 parameters: (i) a spike centre (λc ),
+(ii) the logarithm of the pseudo-column density (denoted by
+e HI ) and (iii) a spike width (b). The pseudo-column denlog N
+sity is thereby a measure of the deficiency of H i along the
+sightline where the spike occurs. For example, a larger value
+e HI means a large H i deficit hence a more prominent
+of log N
+e HI are sensitive to the H i photospike. Our measured log N
+ionization rate ΓHI . The interpretation of the other two parameters i.e., λc and width of the spikes remains unchanged
+when we fit 1 − F . As we show below, the distribution of
+spike widths is sensitive to the thermal state of the IGM
+and can be used to constrain the temperature of the IGM.3
+Our main aim is to use the distribution of spike widths
+to constrain the thermal state of the IGM. As we will show
+later, these are much less sensitive to IGM ionization state
+and continuum fitting uncertainties than the heights of the
+spikes. Note that we rescale the optical depth in different
+
+2
+
+∆τ accounts for the redshift space effect of peculiar velocity on
+∆. To assign a single overdensity/temperature to each transmission spike, we calculate flux weighted overdensity/temperature
+(also see Garaldi et al. 2019).
+
+3
+
+Unlike for absorption lines, there is no direct relation between
+temperature of thepabsorbing gas and the width of the spikes,
+such that bspike 6= 2kB T /m.
+MNRAS 000, 1–31 (2015)
+
+Transmission spikes in the Lyα forest
+L40N2048_HOT
+
+L40N2048_ATON
+
+L40N2048_PATCHY
+
+T0 = 7413 K, γ = 1. 22
+
+T0 = 14191 K, γ = 1. 02
+
+T0 = 7500 K, γ = 1. 50
+T0 = 17500 K, γ = 0. 95
+
+T0 = 7500 K, γ = 1. 50
+T0 = 17500 K, γ = 0. 95
+
+7
+6
+5
+4
+3
+2
+1
+0
+
+log T
+
+log N
+
+6.0
+5.5
+5.0
+4.5
+4.0
+
+L40N2048_COLD
+
+7
+
+1
+
+0
+
+1
+
+log ∆
+
+2
+
+A
+
+3
+
+1
+
+0
+
+1
+
+log ∆
+
+2
+
+B
+
+3
+
+1
+
+0
+
+1
+
+log ∆
+
+2
+
+C
+
+3
+
+1 0
+
+1
+
+log ∆
+
+2
+
+D
+
+3
+
+Figure 3. Comparison of the temperature-density relation (TDR) in the cold (panel A), hot (panel B), aton (panel C) and patchy
+(panel D) simulations at z = 5.8. The cold and hot models correspond to the optically thin Sherwood-Relics simulations. The aton
+simulation is post-processed with the radiative transfer code ATON, while the patchy simulation includes the effect of pressure/Jeans
+smoothing as well as the shock heating of the gas. For optically thin simulations the TDR in underdense and moderately overdense
+regions can be approximated as a power-law relation (T = T0 ∆γ−1 ) at ∆ ≤ 10. The best-fitting relation in the cold and hot models is
+shown by the black dashed lines. By construction, the temperature of the gas with ∆ ≤ 10 in the hot model is consistently larger than
+that in the cold model. As a result, the heights and widths of the components to be fitted to the transmission features are expected to
+be different in the hot and cold models. Unlike the optically thin simulations, the radiative transfer simulations (aton and patchy) do
+not exhibit a single power-law TDR at ∆ ≤ 10. For visual purposes, we show two power-laws that cover the range in temperature for
+the radiative transfer runs (panel C and D). The absence of gas with T > 30000 K in aton is because the shock heating is not captured
+self-consistently in the aton runs. We plot mass weighted (SPH particle) temperature and density in panel A, B and D, while we plot
+volume weighted temperature and density (calculated on grids) for the aton model (panel C). As a result, the number of gas elements
+(at ∆ ≤ 10) between the two straight power law TDR lines is larger in the aton simulations than in the patchy simulations. Note that
+gas with ∆ > 103 and T < 105 K has been converted into stars in all these simulations (Viel et al. 2004a). We discuss the TDR for
+optically thin and radiative transfer simulations in §3.2 and §6.2, respectively.
+
+Table 2. Origin of transmission spikes due to variation in physical parameters in our simulations at 5.5 < z < 5.7 (as shown in Fig. 2).
+Fraction of spikes (in per cent) showing the effect of
+Simulation
+L40N2048 DEFAULT [e]
+L40N2048 COLD [e]
+L40N2048 HOT [e]
+L40N2048 ATON
+L40N2048 PATCHY
+
+Underdensity[a] Enhanced ΓHI [b]
+89.1
+89.3
+89.8
+84.4
+79.2
+
+−
+−
+−
+56.8
+54.7
+
+Enhanced T [c]
+
+Peculiar velocity[d]
+
+5.7
+4.9
+5.5
+50.1
+40.3
+
+18.8
+14.8
+19.9
+19.5
+18.4
+
+a Fraction of all spikes with
+
+∆τ ≤ 1.
+HI ≥ ΓHI,median where ΓHI,median is the optical depth weighted median ΓHI
+calculated from all the sightlines (i.e., regions with and without spikes).
+c Fraction of all spikes with T ≥ T
+τ
+τ,median where Tτ,median is the optical depth weighted median temperature
+calculated from all the sightlines (i.e., regions with and without spikes).
+d Fraction of all spikes with ∆v ≥ 6 km s−1 where ∆v is difference between mean velocity on redward and
+blueward side of spike center. For diverging velocity flow ∆v > 0, whereas for converging velocity flow ∆v < 0.
+The limit of ∆v = 6 km s−1 corresponds to the spectral resolution of the instrument.
+e L40N2048 DEFAULT L40N2048 COLD and L40N2048 HOT are optically thin simulations that do not
+include fluctuations in ΓHI .
+b Fraction of all spikes with Γ
+
+models to match observations as to account for the uncertainty in ΓHI at 5.3 < z < 5.9 (rescaling is not applied in
+Fig. 4). We show such rescaling does not significantly affect
+the widths of the line in Appendix A.
+
+4.2
+
+The physical properties of the gas probed by
+transmission spikes
+
+4.2.1
+
+The dependence of spike height on density: ∆τ vs
+e HI
+log N
+
+We now turn to connecting the observed spike shapes to
+optical depth weighted physical properties of the IGM in
+the optically thin simulations (see Eq. 12 in Gaikwad et al.
+2017a). In Fig. 5, we show the optical depth weighted overdensity against spike height as measured by (pseudo) column
+e HI for the cold and hot models. In both moddensity log N
+MNRAS 000, 1–31 (2015)
+
+8
+
+Gaikwad et.al
+L40N2048_COLD
+
+A1
+
+B1
+
+∆
+
+10 0
+
+∆
+
+10 0
+
+L40N2048_HOT
+
+10 -1
+10 -4
+
+10 -5
+
+10 -5
+
+A3
+
+∆τ
+
+A6
+
+10 1
+
+10 0
+
+F
+
+τ
+
+10 1
+
+1.0 A7
+0.5
+0.0
+8000
+
+10 0
+
+10 -1
+
+τ
+
+10 -1
+
+50
+
+A5
+
+8005
+
+8010
+λ (Å)
+
+8015
+
+8020
+
+B5
+
+B6
+
+10 0
+
+F
+
+∆τ
+
+150
+
+B3
+
+150 B4
+50
+
+v (km s −1 )
+
+v (km s −1 )
+
+50 A4
+50
+
+10 0
+
+10 4
+
+T (K)
+
+T (K)
+
+10 4
+
+B2
+
+xHI
+
+A2
+
+xHI
+
+10 -1
+10 -4
+
+1.0 B7
+0.5
+0.0
+8000
+
+8005
+
+8010
+λ (Å)
+
+8015
+
+8020
+
+Figure 4. Examples of transmission spikes in optically thin simulations showing the complex structure of the spikes and the dependence
+on the thermal state of IGM. The figure shows a line of sight comparison of overdensity (∆, panel A1), H i fraction ( xHI , A2), temperature
+(T , A3), peculiar velocity (v, A4), optical depth weighted overdensity (∆τ , A5), H i Lyα optical depth (τ , A6) and transmitted Lyα
+flux (F , A7) for the cold (red dot-dashed curve) and the hot (blue dotted curve) optically thin simulations. Panel B1-B7 are the same
+as panel A1-A7 along a different line of sight. The shaded region in panels A7 and B7 show the complex shapes of the spikes in regions
+where the optical depth is lowest (τHI ≤ 4, black dashed line in panels A6 and B6). The shapes of the spikes are smoother in the hot
+model due to the larger temperature (Panel A3 and B3) and smoother density field (panel A1 and B1) than those in the cold model.
+As a result, the number of components identified by viper is smaller in the hot model. The transmission spikes also reach larger fluxes
+in the hot model due to the dependence of the H i fraction (panel A2 and B2) on temperature (via the recombination rate). The shift
+of the shaded region in panels A1-A4 (B1-B4) as compared A5-A7 shows the effect of peculiar velocity on the transmission spikes. The
+spikes in the simulated spectra occur due to a combination of the effects of underdensity, temperature enhancement and peculiar velocity
+as shown in Fig. 2 (Γ12 is uniform in the optically thin simulations). The mean transmitted flux has not been rescaled for hot and cold
+model in the above examples.
+
+els the corresponding overdensity of spikes is ∆τ < 1 i.e.,
+most of the spikes occur in underdense regions. Note that
+applying a rescaling of optical depth to correct for the uncertain amplitude of the UV background results in a systematic
+e HI . However, the overdensities
+increase or decrease of log N
+corresponding to spikes are relatively robust. This is also
+evident from Fig. 4, where the spikes in the hot and cold
+models correspond to similar overdensities (rescaling is not
+applied in Fig. 4).
+e HI and ∆τ are antiFig. 5 also illustrates that log N
+correlated i.e. a larger spike height and higher H i pseudo-
+
+column density corresponds to smaller overdensity ∆τ . We
+quantify the degree of anti-correlation by fitting a straight
+e HI / 1012.8 ]β . The normalisation
+line of the form ∆τ = ∆0 [N
+(∆0 =0.24 for cold and 0.26 for hot) and slope (β = −0.23
+for cold and −0.20 for hot) of the correlation in the two
+models are in good agreement with each other. This suggests
+that the thermal state of the gas does not have a strong
+e HI correlation when optical depths
+effect on the ∆τ − log N
+are rescaled to match observations. Note, however, that the
+e HI (e.g., at log N
+e HI ∼ 12.6)
+scatter in ∆τ for a given log N
+
+MNRAS 000, 1–31 (2015)
+
+Transmission spikes in the Lyα forest
+
+9
+
+0.4
+L40N2048_COLD
+L40N2048_HOT
+L40N2048_ATON
+L40N2048_PATCHY
+0.2
+12
+.
+8
+12
+.
+8
+12
+.
+8
+0
+.
+23
+0
+.
+20
+0
+.
+18
+∆ τ = 0. 24 [ N HI / 10 ]
+∆ τ = 0. 26 [ N HI / 10 ]
+∆ τ = 0. 33 [ N HI / 10 ]
+∆ τ = 0. 33 [ N HI / 10 12. 8 ] 0. 19
+0.0
+0.2
+0.4
+0.6
+0.8
+A
+B
+C
+D
+1.0 12.2 12.6 13.0 13.4 13.8 12.2 12.6 13.0 13.4 13.8 12.2 12.6 13.0 13.4 13.8 12.2 12.6 13.0 13.4 13.8
+
+2.5
+
+−
+
+log (NfHI /cm −2 )
+
+f
+
+−
+
+f
+
+log (NfHI /cm −2 )
+
+−
+
+log (NfHI /cm −2 )
+
+f
+
+−
+
+2.0
+1.5
+
+log N
+
+log ∆ τ
+
+f
+
+1.0
+0.5
+0.0
+
+log (NfHI /cm −2 )
+
+Figure 5. Panels A, B, C and D show the correlation of optical depth weighted overdensity ( ∆τ ) with the pseudo-column density
+e HI ) of transmission spikes in, respectively, the cold, hot, aton and patchy models at 5.5 < z < 5.7. Irrespective of the model, the
+( log N
+e HI = 12.8 in the optically thin simulations and ∆ ∼ 0.33 for log N
+e HI = 12.8 in
+spikes correspond to underdensities i.e., ∆ ∼ 0.25 for log N
+the radiative transfer simulations. The correlation can be fitted with a straight line (cyan dotted line) and shows good agreement between
+the various models. The transmission spikes in the radiative transfer simulations are produced by regions with slightly larger densities
+(∆ ∼ 0.33) than those in the optically thin simulations (∆ ∼ 0.25). This is due to the spatial fluctuations in the photo-ionization rate
+e HI correlation for the optically thin
+and temperature that are present in the radiative transfer simulations. We discuss the ∆τ vs log N
+and radiative transfer simulations in §4.2.1 and §6.2.1, respectively.
+
+correlation is smaller in the hot model. This is because the
+spikes are smoother and hence there is less variation in ∆τ .
+
+4.2.2
+
+The dependence of spike width on temperature: Tτ
+vs log b
+
+The widths of the components fitted to the spikes are sensitive to the instantaneous temperature along the sightline
+(see Fig. 1 and Fig. 4). Fig. 6 shows the correlation of optical
+depth weighted temperature ( Tτ ) with spike width (b) for
+the cold and hot model. The range in temperature associated with spikes is small for both models. This is expected
+as the slope of the TDR (Fig. 3) for both models is relatively
+flat and the temperature associated with ∆ < 1 is relatively
+constant.
+Fig. 6 illustrates that the spike widths are well correlated with temperature. The spike widths are systematically
+larger in the hot model (log b ∼ 1.3) compared to the cold
+model (log b ∼ 1.05). Even though the range in temperature
+is small (δ log Tτ ∼ 0.1) for both models, the scatter in log b
+is relatively large (δ log b ∼ 0.5). In §5.4 we will use the spike
+width distribution to constrain the temperature of the IGM.
+
+4.2.3
+
+The correlation of spike width and height: log b vs
+e HI
+log N
+
+The relation of absorption line widths with column density
+and its relation with the thermal state of the gas at z < 4 has
+been widely discussed in the literature (Schaye et al. 1999;
+Bolton et al. 2014; Gaikwad et al. 2017b; Rorai et al. 2017b,
+2018; Hiss et al. 2018, 2019). The equivalent relation for the
+Voigt profile parameters of the transmission spikes in our
+simulated spectra is compared in Fig. 7 to the observed spectra (white crosses). Fig. 7 shows a strong positive correlation
+e HI for both models. We fit this correbetween log b and log N
+e HI / 1012.8 ]α
+lation with a straight line of the form b = b0 [N
+−1
+with b0 = (16.65, 10.93) km s ) and α = (0.32, 0.41)) for
+the hot and cold model, respectively. The hot model is in significantly better agreement with the observations than the
+MNRAS 000, 1–31 (2015)
+
+cold model. The somewhat flatter slope in the hot model
+is likely due the flatter TDR in the hot simulation. Note
+e HI is slightly larger in the
+further that the scatter in log N
+hot model. This is because the spikes are more blended and
+hence less distinctive (Fig. 1 and Fig. 4). The scatter in log b
+is similar.
+In summary, we find strong correlations of the Voigt
+profile parameters with physical quantities in the optically
+thin simulations, where : (i) the gas probed by the transmission spikes is typically underdense (∆ ∼ 0.3) and (ii) the
+spike widths (heights) are strongly (anti-) correlated with
+temperature (density).
+
+5
+
+COMPARING TRANSMISSION SPIKE
+PROPERTIES IN OBSERVATIONS AND
+SIMULATIONS
+
+5.1
+
+Characterising the flux distribution in
+transmission spikes
+
+Constraints on cosmological and astrophysical parameters
+from Lyα forest data have been obtained typically by using
+either a variety of statistical measures of the Lyα transmitted flux and/or Voigt profile decomposition (StorrieLombardi et al. 1996; Penton et al. 2000; McDonald et al.
+2000, 2005; Viel et al. 2004b, 2009; Becker et al. 2011; Shull
+et al. 2012). Here we briefly consider both approaches before
+focusing on constraints on the thermal state of the IGM from
+the width distribution of transmission spikes. The transmitted flux based statistics (such as the probability distribution
+function and power spectrum) are straightforward to derive
+from simulations and observations. For the Voigt profile parameter based statistics, we have fitted Voigt profiles to the
+inverted transmitted flux, 1 − F , using viper4 .
+The simulated spectra mimic the observed spectra in
+terms of S/N and instrumental resolution. viper accounts
+4
+
+Note that as the transmission spikes are generally not “saturated” in 1-F, we are effectively fitting Gaussian profiles.
+
+10
+
+L40N2048_COLD
+
+L40N2048_HOT
+
+L40N2048_ATON
+
+2.5
+
+L40N2048_PATCHY
+
+2.0
+
+log T τ (K)
+
+4.2
+
+Gaikwad et.al
+
+1.5
+
+log N
+
+4.0
+
+1.0
+
+3.8
+3.6
+
+A
+
+B
+
+C
+
+D
+
+0.8 1.0 1.2 1.4 1.6 1.8 0.8 1.0 1.2 1.4 1.6 1.8 0.8 1.0 1.2 1.4 1.6 1.8 0.8 1.0 1.2 1.4 1.6 1.8
+
+log b (km s −1 )
+
+log b (km s −1 )
+
+log b (km s −1 )
+
+0.5
+0.0
+
+log b (km s −1 )
+
+Figure 6. Panels A, B, C and D show the correlation of optical depth weighted temperature ( Tτ ) with the line-width parameter (log b)
+of spikes in, respectively, the cold, hot, aton and patchy models at 5.5 < z < 5.7. The b parameter and Tτ are systematically larger
+in the hot model compared to the cold model. As shown in Fig. 3, Tτ is larger in the aton model compared to the patchy model due
+to the presence of more gas at ∆ < 1 and T < 30000 K in the aton model. The scatter in temperature in the RT simulation is much
+larger than that in optically thin simulations due to the presence of UV background and temperature fluctuations. We discuss the Tτ
+vs (log b) correlation for optically thin and radiative transfer simulations in §4.2.2 and §6.2.2 respectively.
+
+L40N2048_COLD
+
+L40N2048_HOT
+
+L40N2048_ATON
+
+L40N2048_PATCHY
+
+1.6
+
+b = 10. 93 [ NfHI / 10 12. 8 ] 0. 41
+
+b = 16. 65 [ NfHI / 10 12. 8 ] 0. 32
+
+b = 14. 96 [ NfHI / 10 12. 8 ] 0. 32
+
+b = 12. 95 [ NfHI / 10 12. 8 ] 0. 34
+
+1.4
+
+2.5
+2.0
+1.5
+
+log N
+
+log b (km s −1 )
+
+1.8
+
+1.2
+
+1.0
+
+1.0
+
+A
+
+0.8
+
+B
+
+C
+
+D
+
+12.2 12.6 13.0 13.4 13.8 12.2 12.6 13.0 13.4 13.8 12.2 12.6 13.0 13.4 13.8 12.2 12.6 13.0 13.4 13.8
+−2
+
+log (N HI /cm )
+f
+
+−2
+
+log (N HI /cm )
+f
+
+−2
+
+log (N HI /cm )
+f
+
+0.5
+0.0
+
+−2
+
+log (N HI /cm )
+f
+
+e HI ) of
+Figure 7. Panels A, B, C and D show the correlation of the line-width parameter (log b) with the pseudo-column density ( log N
+the transmission spikes in, respectively, the cold, hot, aton and patchy models at 5.5 < z < 5.7. The correlation is fitted with a straight
+e HI is systematically larger in the hot model (b ∼ 16.65 km s−1 at log N
+e HI
+line (cyan dotted line). The log b parameter at fixed log N
+e HI = 12.8). The slope of the correlation is steeper for the cold (∼ 0.41)
+= 12.8) compared to the cold model (b ∼ 10.93 km s−1 at log N
+e HI = 12.8) are systematically
+model compared to the hot model (∼ 0.32). The b parameters in the aton model (b ∼ 14.96 km s−1 at log N
+e HI = 12.8). This is because temperatures in the aton model are larger than
+larger than in the patchy model (b ∼ 12.95 km s−1 at log N
+e HI in the observed spectra. We discuss
+in the patchy models for ∆ < 1 (see Fig. 6). The white crosses show the scatter in log b and log N
+e HI correlation for optically thin and radiative transfer simulations in §4.2.3 and §6.2.3 respectively.
+the (log b) vs log N
+
+for these effects when determining the best fit parameters,
+the 1σ statistical uncertainty on best fit parameters and a
+significance level for each Voigt component. For deriving the
+spike statistics, we chose only those Voigt components with
+relative error on parameters ≤ 0.5 and with a significance
+level ≥ 3. We consider three statistics of the flux distribution
+in the transmission spikes that are sensitive to astrophysical
+parameters i.e., ΓHI , T0 and γ (for a given cosmology) which
+are discussed below.
+
+penheimer & Davé 2009; Muzahid et al. 2012; Viel et al.
+2017; Gaikwad et al. 2017a; Nasir et al. 2017). By contrast, the width of the individual spikes is not a direct
+measure p
+of the temperature of the low density gas (i.e.,
+bspike 6= 2kB T /m). Nevertheless we find that the widths
+of transmission spike components is systematically larger if
+the temperature of the IGM is larger. 5
+
+5.2
+
+Statistics of the flux distribution in
+transmission spikes
+
+Similar to the H i column density distribution function
+(CDDF) at low redshift, we define the pseudo-CDDF
+
+5.2.1
+
+Spike width (b-parameter) distribution function
+
+5.2.2
+
+Pseudo Column Density Distribution Function
+(pCDDF)
+
+5
+
+For absorption features the line width distribution is frequently used as a diagnostic for the gas temperature, turbulence, and the impact of stellar and AGN feedback on the
+IGM at z < 5 (Rauch et al. 1996; Tripp et al. 2008; Op-
+
+Since spikes trace cosmic voids, the spike width distribution
+could in principle also be sensitive to cosmological parameters
+e.g., h, ΩΛ , σ8 and ns . In this work we used the spike width
+distribution to constrain the thermal state of IGM for a given
+cosmology.
+MNRAS 000, 1–31 (2015)
+
+Transmission spikes in the Lyα forest
+(pCDDF) as the number of spikes with a pseudo column dene HI to δ log N
+e HI in the redshift interval
+sity in the range log N
+z to z+δz (Schaye et al. 2000; Shull et al. 2012). We calculate
+e HI bins centered at 12.7, 13.1, · · · , 13.9
+the pCDDF in 7 log N
+e HI = 0.2. This choice of bins is motivated by the
+with dlog N
+S/N and resolution of the observed spectra. The pCDDF
+characterizes the height and number of spikes in a given
+redshift bin, and is sensitive to the thermal and ionization
+parameters of the IGM.
+
+5.2.3
+
+Transmitted flux power spectrum (FPS)
+
+The transmitted flux power spectrum (FPS) is frequently
+used to constrain cosmological (McDonald et al. 2000;
+Meiksin & White 2004; Viel et al. 2004b) and astrophysical parameters (especially parameters describing the thermal state; Walther et al. 2019; Boera et al. 2019). The FPS
+is a measure of the clustering of the pixels in transmission
+spikes. One can also study the two point correlation of spikes
+(see e.g., Maitra et al. 2019). However, due to the limited
+number of observed QSOs and the smaller number of spikes
+detected per sightline, the two point correlation function of
+spikes is rather noisy. It is important to note that, unlike the
+pCDDF or the spike width distribution, the FPS is a transmitted flux based statistic that does not require us to fit the
+spikes. The FPS can, however, only be reliably estimated
+for a limited range of scales because of finite length of the
+spectra and other systematic effects. The smallest k (larger
+scales) modes are limited by the length of the simulation box
+and continuum fitting uncertainties of the observed spectra.
+The largest k modes (smallest scales) on the other hand are
+limited by the resolution of the instrument and the noise
+properties (S/N and noise correlation scale if non-Gaussian)
+of the observed spectra. To account for this, we calculate the
+FPS in the range 0.01 ≤ k (s km−1 ) ≤ 0.237 with bin width
+δ log k = 0.125 (Kim et al. 2004)6 .
+
+5.2.4
+
+Error estimation
+
+We estimate the error for the spike and flux statistics from
+the simulation using an approach similar to that in Rollinde
+et al. (2013) and Gaikwad et al. (2018). For this, we generate samples of 5 simulated Lyα forest spectra corresponding to 5 observed QSO spectra with the same observational
+property i.e., redshift path length, noise property, number
+of pixels etc. A collection of 5 spectra constitutes a single
+mock sample. We generate 80 such mock sample and compute the covariance matrix for each statistics. We find that
+the covariance matrix is converged and dominated by diagonal terms for all the statistics.
+We have also estimated the covariance matrix from observations using a bootstrap method. Here we find that the
+off-diagonal terms of the covariance matrix estimated with
+the bootstrap method are not converged. The bootstrap
+method (diagonal terms) underestimates the error by ∼ 15
+percent as compared to those estimated from the simulations. Throughout this work, we use bootstrap errors increased by a corresponding factor for each statistics.
+
+6
+
+The smallest k mode corresponds to a scale of ∼ 10h−1 cMpc.
+
+MNRAS 000, 1–31 (2015)
+
+5.3
+
+11
+
+Transmission spike statistics: optically thin
+simulations vs observations
+
+Fig. 8 compares the spike width distribution, pCDDF and
+FPS from observations with that of the optically thin simulations for three different redshift bins centered at z =
+(5.4, 5.6, 5.8).7 The corresponding residuals suggest a good
+level of agreement between the default model and observations for all three statistics. The residuals for the hot model
+with T0 ∼ 11000 K and γ ∼ 1.2 are somewhat larger. Overall the three statistics for the default and hot model are in
+noticeably better agreement than those for the cold model,
+with differences in the Doppler parameter distribution being
+most pronounced where agreement with the default model
+is significant better than with both the hot and cold model.
+The cold model also predicts more power on small scales, as
+e HI than
+well as a larger number of spikes with small log N
+observed, and is clearly the model that is least consistent
+with the observations. We further quantify the degree of
+agreement between models and observation in appendix D.
+
+5.4
+
+Constraining thermal parameters with
+optically thin simulations
+
+In the optically thin simulations there is a well defined TDR
+in underdense and moderately overdense regions. It is thus
+common practice to study the effect of the thermal state on
+flux statistics by imposing different TDRs by rescaling temperatures (Hui & Gnedin 1997; Rorai et al. 2017b, 2018). In
+Appendix B we use such rescaling to show how the three flux
+statistics we consider here depend on thermal parameters T0
+and γ and the photo-ionization rate, and demonstrate that
+it is the width distribution of the transmission spikes which
+is most sensitive to the thermal state of the gas. We further
+show that, for the reionization and thermal history models
+we consider in this work, the spike statistics are only very
+weakly affected by pressure (Jeans) smoothing at the typical
+gas densities probed by the Lyα transmission spikes (Gnedin
+& Hui 1998; Theuns et al. 2000; Peeples et al. 2010; Kulkarni et al. 2015; Lukić et al. 2015; Nasir et al. 2016; Maitra
+et al. 2019; Wu et al. 2019).
+We use the spike width distribution to obtain an estimate of the best fit values and uncertainty for the thermal
+parameters 8 . We vary T0 and γ by assuming a TDR of
+the form T = T0 ∆γ−1 for ∆ < 10 and T = T0 10γ−1 for
+∆ ≥ 10. We use the ∆ and v fields from the optically thin
+default model, which falls in between the cold and hot models. We vary T0 between 6000 K to 20000 K in steps of 500 K
+and γ between 0.4 to 2.0 in steps of 0.05. For each model
+we (i) compute the Lyα transmitted flux, (ii) post-process
+the transmitted flux to match observations, (iii) fit the inverted transmitted flux with Voigt profiles and (iv) compute
+spike statistics. We use 2000 sightlines for each model. Fig.
+
+7
+
+The mean transmitted flux in hot, cold and default models is
+matched to that in the observed spectra to account for the uncertainty in the continuum placement and UV background amplitude, see appendix A.
+8 We find that the FPS and pCDDF statistics are sensitive to
+continuum fitting uncertainty and ΓHI , whereas the spike width
+distribution is less sensitive to continuum placement and ΓHI (see
+Appendix A)
+
+Gaikwad et.al
+
+Observation
+5.3 < z < 5.5
+
+L40N2048_COLD
+A1
+
+A2
+
+10 2
+
+f(NfHI , z)
+
+dP/dlog b
+
+2
+
+L40N2048_DEFAULT
+
+10 3
+
+1
+
+10 1
+
+L40N2048_HOT
+5.3 < z < 5.5
+
+10 1
+
+k P F ( k) / π
+
+12
+
+A3
+
+10 0
+
+5.3 < z < 5.5
+
+A4
+
+5.5 < z < 5.7
+
+B1
+
+2
+
+1.0
+0.5
+0.0
+0.5
+1.0
+
+A5
+R
+
+1.0
+0.5
+0.0
+0.5
+1.0
+
+10 3
+
+B2
+
+1
+
+0
+
+10 0
+
+10 1
+
+1.0
+0.5
+0.0
+0.5
+1.0
+
+A6
+
+5.5 < z < 5.7
+
+10 1
+
+k P F ( k) / π
+
+10 2
+
+f(NfHI , z)
+
+dP/dlog b
+
+10 -1
+
+10 0
+
+R
+
+R
+
+0
+
+B3
+
+10 0
+
+B4
+
+5.7 < z < 5.9
+
+C1
+
+1.0
+0.5
+0.0
+0.5
+1.0
+
+B5
+
+10 3
+
+C2
+
+1
+
+0
+
+10 0
+
+10 1
+
+1.0
+0.5
+0.0
+0.5
+1.0
+
+B6
+
+5.7 < z < 5.9
+
+10 1
+
+k P F ( k) / π
+
+10 2
+
+f(NfHI , z)
+
+dP/dlog b
+
+2
+
+10 -1
+
+R
+
+1.0
+0.5
+0.0
+0.5
+1.0
+
+R
+
+R
+
+5.5 < z < 5.7
+
+C3
+
+10 0
+
+C4
+
+0.5
+
+1.0
+
+1.5
+
+log b (km s −1 )
+
+2.0
+
+1.0
+0.5
+0.0
+0.5
+1.0
+
+10 -1
+
+C5
+R
+
+1.0
+0.5
+0.0
+0.5
+1.0
+
+R
+
+R
+
+5.7 < z < 5.9
+
+12.7
+
+13.1
+
+13.5
+
+log (NfHI /cm −2 )
+
+13.9
+
+1.0
+0.5
+0.0
+0.5
+1.0
+
+C6
+
+10 -2
+
+10 -1
+
+k (km −1 s)
+
+10 0
+
+Figure 8. Panels A1, A2 and A3 show a comparison of spike width distribution, pCDDF and FPS from observations (black circles)
+with those from cold (red stars), default (orange triangles) and hot (blue squares) optically thin simulations at 5.3 < z < 5.5. The
+1σ uncertainties are estimated from the simulated spectra and are shown by the grey shaded regions. Panels A4, A5 and A6 show the
+corresponding residuals between the models and observations. The gray shaded region in panels A4-A6 corresponds to the gray shaded
+region in panels A1-A3. Panels B1-B6 and C1-C6 are similar to panels A1-A6 except for the different redshift range, 5.5 < z < 5.7 and
+5.7 < z < 5.9, respectively. Note that the hot and default models are in better agreement with observations than the cold model at all
+redshifts. The agreement between model and observed data is discussed quantitatively in appendix D. The spike statistics in the default
+model are very close to those of the best fit model obtained by varying T0 and γ in §5.4.
+MNRAS 000, 1–31 (2015)
+
+Transmission spikes in the Lyα forest
+9 shows the 1σ constraints on T0 − γ in three redshift bins.9
+Fig. 9 also shows the marginal distributions of T0 and γ.
+Table 3 summarizes the best fit values and uncertainty on
+T0 and γ values under the assumption that the IGM is optically thin. The uncertainty on the T0 and γ measurement
+accounts for the uncertainty due to continuum fitting, mean
+flux and Jeans smoothing effects (see Appendix A and B).
+The best fit values and uncertainty on T0 and γ are consistent with each other within 1σ for the three redshift bins. As
+the spikes are probing predominantly gas at densities lower
+than the mean, the inferred values for T0 and γ are strongly
+correlated. We will come back to this in Appendix B.
+Fig. 10 compares the evolution of T0 and γ from
+this work with a variety of measurements in the literature
+(Becker et al. 2011; Bolton et al. 2012, 2014; Boera et al.
+2014; Rorai et al. 2017b; Hiss et al. 2018; Walther et al. 2019;
+Boera et al. 2019). 10 Theoretical models for the evolution of
+T0 and γ from Puchwein et al. (2019) and Haardt & Madau
+(2012) are shown by the dashed and dotted curves, respectively11 . The T0 and γ evolution in these models is obtained
+for a uniform but time evolving UVB and assuming nonequilibrium ionization evolution. Our T0 and γ constraints
+in the redshift range 5.3 < z < 5.9 are consistent with the
+corresponding evolution of the default model in Puchwein
+et al. (2019) within 1σ.
+Fig. 10 also shows that the T0 evolution in the hot
+(cold ) model is systematically larger (smaller) than in the
+corresponding default model. The errors on T0 and γ account for the statistical and systematic uncertainty (mainly
+due to continuum fitting). It is interesting to note that the
+uncertainty on our T0 measurement is smaller than the T0
+evolution spanned by the hot and cold models. Our T0 (γ)
+measurements are higher (lower) than the measurement of
+Walther et al. (2019). Note, however, that the T0 and γ
+constraints in Walther et al. (2019) are obtained using the
+FPS whereas we obtained the T0 and γ constraints from the
+spike width distribution that is less sensitive to continuum
+placement and ΓHI uncertainty (see Appendix A). Further
+note that the best fit T0 and γ values obtained for the three
+redshift bins are close to those in the default optically thin
+simulation.
+Fig. 8 also shows that the FPS and pCDDF statistics
+of the default model are consistent with the observations
+within 1.5 σ. The best fit model obtained by matching the
+spike width distribution with observations should therefore
+also have FPS and pCDDF statistics in good agreement with
+observations. Our γ constraints (γ ∼ 1.2) correspond to a
+TDR that is moderately steeper than isothermal. However,
+as we show later, there is no single power law TDR at the
+redshift of our analysis since the reionization is a patchy
+inhomogeneous process with different regions reionising at
+different times. At 5.3 < z < 5.9, γ is therefore not well
+
+9
+
+To a good approximation, the likelihood function is Gaussian
+distributed on T0 − γ grids. See Appendix C for details.
+10 Bolton et al. (2012) measure T in QSO proximity regions at
+0
+z ∼ 6. Their T0 constraint including (excluding) a model for the
+He ii photo-heating by the QSOs is shown by green circles (blue
+squares) in Fig. 10.
+11 The T and γ evolution in Khaire & Srianand (2015, 2019) and
+0
+Faucher-Giguere & -A. (2019) are similar to that in the Haardt
+& Madau (2012) UVB model at z > 5.
+MNRAS 000, 1–31 (2015)
+
+13
+
+Table 3. Constraints on T0 − γ from optically thin simulations
+Redshift
+
+T0 ± δT0
+
+γ ± δγ
+
+5.3 < z < 5.5
+5.5 < z < 5.7
+5.7 < z < 5.9
+
+11000 ± 1600
+10500 ± 2100
+12000 ± 2200
+
+1.20 ± 0.18
+1.28 ± 0.19
+1.04 ± 0.22
+
+defined in our RT simulations (Keating et al. 2018). In summary, the T0 (γ) constraints obtained in this work are larger
+(smaller) than those obtained by (Walther et al. 2019). We
+do not see a significant evolution of T0 and γ in the redshift
+range 5.3 < z < 5.9.
+Transmission spikes in optically thin simulations are
+mainly produced by fluctuations in the density field and the
+effect of peculiar velocities. Furthermore, the temperature is
+strongly and tightly correlated with density in optically thin
+simulations. However, at the redshifts considered here this
+almost is certainly not realistic. One would expect a large
+scatter in temperature for a given density as the reionization process will be inhomogeneous, with different regions
+ionized at different times (Abel & Haehnelt 1999; MiraldaEscudé et al. 2000; Trac et al. 2008; Choudhury et al. 2009).
+The resulting spatial fluctuations in the amplitude of the
+UVB and the TDR are not present in optically thin simulations12 . However, as shown in §2.3, transmission spikes
+can also be produced by fluctuations in the UVB amplitude and/or temperature. Including these radiative transfer
+(RT) effects is therefore particularly relevant if reionization
+ends as late as suggested by the large spatial fluctuations in
+the Lyα forest opacity (Keating et al. 2019; Kulkarni et al.
+2019b).
+
+6
+6.1
+
+FULL RADIATIVE TRANSFER
+SIMULATIONS
+The radiative transfer simulations in the
+Sherwood-Relics simulation suite
+
+In addition to the optically thin simulations discussed
+in §3.1, we have also performed post-processed radiative transfer simulations and hybrid radiative transfer/hydrodynamical simulations as part of the SherwoodRelics simulation suite. The former simulations model
+patchy reionization by performing the radiative transfer in
+post processing on optically thin simulations. This captures
+many aspects of patchy reionization such as large spatial
+fluctuations in the photo-ionization rate and temperature,
+but misses the hydrodynamic response of the IGM to the
+heating and can thus not accurately predict spatial variations in the pressure smoothing or the distribution of shock
+heated gas. The hybrid simulations aim to capture these
+aspects as well.
+The post-processed radiative transfer simulations were
+performed with the GPU-accelerated aton code Aubert &
+
+12
+
+For optically thin simulations, the variation in temperature
+along a sightline is closely coupled to the variation in the density
+field.
+
+14
+
+Gaikwad et.al
+5.3 < z < 5.5
+
+5.5 < z < 5.7
+
+1.6
+
+5.7 < z < 5.9
+
+A
+
+C
+
+1.4
+
+γ
+
+1.2
+1.0
+
+P(T0 )
+
+0.8
+0.6
+0.25
+0.20
+0.15
+0.10
+0.05
+0.00
+
+B
+
+6000
+
+9000
+
+12000
+
+T0 (K)
+
+15000
+
+0.00
+
+0.04
+
+0.08
+
+P( γ)
+
+0.12
+
+lation has exceeded 3 percent. All particles located in such
+regions are assumed to be exposed to an ionizing radiation
+field, which is obtained by interpolating the ΓHI maps produced by aton in redshift and reading out the value of the
+cell containing the particle. This value is then adopted for
+ΓHI in the non-equilibrium thermochemistry solver. The H i
+photo-heating rate is computed from ΓHI assuming the same
+mean ionizing photon energy, 18.6 eV, as in aton. As we do
+not follow He i and He ii ionizing radiation separately, we
+use a few simple assumptions to set their photo-ionization
+and heating rates. For He i we use the same photo-ionization
+rate as for H i, but we adopt a photo-heating rate that is 30
+percent larger than that of H i. For He ii, we use the rates
+of the fiducial UV background model of Puchwein et al.
+(2019). This hybrid method results in ionized regions and
+inhomogeneous photo-heating that closely match those in
+the parent radiative transfer run, while at the same time
+following the hydrodynamics and hence including consistent
+pressure smoothing, as well as shock heating.
+
+18000
+
+Figure 9. Panel A shows 1σ constraints on T0 and γ obtained
+by comparing the transmission spike width distribution from optically thin simulations with observations at 5.3 < z < 5.5 (red
+dashed curve), 5.5 < z < 5.7 (green solid curve) and 5.7 < z < 5.9
+(blue dotted curve). T0 and γ are varied in post-processing assuming a power-law TDR (the effect of Jeans smoothing is small, see
+Fig. B5 in the appendix). Panel B and C shows the marginal distributions for T0 and γ respectively. The best fit T0 and γ for
+5.3 < z < 5.5 are shown by the red square in panel A and red
+dashed lines in panel B and C, respectively. Corresponding best fit
+values for 5.5 < z < 5.7 and 5.7 < z < 5.9 are shown by the green
+star and solid line and blue circle and dotted line, respectively.
+
+Teyssier (2008), which uses a moment based radiative transfer scheme along with the M1 closure relation. The advection
+of the radiation was performed using the full speed of light
+and a single frequency bin for all ionizing photons. Ionizing
+sources were inserted into dark matter halos as in Kulkarni
+et al. (2019b). The (mean) energy of ionizing photons was
+assumed to be 18.6 eV. In the following, we will refer to
+the post-processed radiative transfer simulation performed
+on top of our default optically thin simulation by the term
+aton simulation. It used 20483 cells in the (40 h−1 Mpc)3 box
+and hydrogen reionization completes at z ≈ 5.2, consistent
+with the late reionization history found to be favoured by
+large scale Lyα forest fluctuations (Kulkarni et al. 2019b).
+The hybrid radiative transfer/hydrodynamical simulation, referred to as the patchy simulation, takes the reionization redshift and H i photo-ionization rate maps produced
+in the aton simulation as inputs. These are fed to our modified version of p-gadget-3, where they are used in the nonequilibrium thermochemistry solver instead of an external
+homogeneous UV background model. To obtain consistent
+density and radiation fields, we use the same initial conditions as in the default optically thin simulation on which the
+aton run is based. At each timestep, for each SPH particle
+we check whether it resides in a region in which reionization
+has already begun. This is assumed to be the case if the
+ionized fraction in the corresponding cell of the aton simu-
+
+6.2
+
+The thermal state of the gas in full radiative
+transfer simulations
+
+The main difference in the radiative transfer simulation is
+that there are large spatial variations in the TDR (Trac et al.
+2008; Keating et al. 2018; Kulkarni et al. 2019b). In panels C
+and D of Fig. 3 we can compare the TDRs from the aton and
+patchy RT simulations to the optically thin simulations in
+panels A and B. Unlike the optically thin simulations, the
+TDR in the radiative transfer simulations at ∆ < 10 can
+not be described by a single power law (Bolton et al. 2004).
+The regions that have been ionized most recently have a flat
+TDR while regions that have been ionized earlier have progressively steeper TDRs. In the redshift range considered
+here there are also still significant spatial fluctuations in the
+amplitude of the UVB. As a result, the variations in temperature for a given ∆ < 10 is large. A crucial difference between the aton and patchy simulations is also evident in Fig.
+3. The aton simulation does not account self-consistently for
+shock heating of the gas. There is thus much less gas with
+T > 30000 K in the aton simulation than in the patchy simulation. As a consequence there is less gas with ∆ < 10 in
+the temperature range described by two straight lines (see
+Fig. 3) in the patchy simulation. As we will show later this
+has the effect of producing slightly larger spike widths in the
+aton simulations.
+Table 2 also shows the physical effects responsible for
+the occurrence of spikes in the aton and patchy radiative
+transfer simulations. Similar to the optically thin simulations, most of the spikes (∼ 89 percent) in the aton and
+patchy simulations occur in underdense regions and for ∼ 18
+percent of spikes the gas shows a diverging velocity field
+along the sightline. However, in contrast to optically thin
+simulations, around 50 percent of spikes show an enhancement of ΓHI and temperature. Note here that the recent
+observations of high redshift Lyman alpha emitters and Lyman break galaxies suggests that the transmission spikes
+are spatially correlated with the ionizing radiation escaping
+these galaxies (Meyer et al. 2019). Thus, for the transmission spikes in the full radiative transfer simulations, all the
+physical processes discussed in §2.3 and Fig. 2 contribute to
+the occurrence of spikes.
+MNRAS 000, 1–31 (2015)
+
+Transmission spikes in the Lyα forest
+
+Haardt+2012
+L40N2048_COLD
+L40N2048_HOT
+L40N2048_DEFAULT
+(Puchwein+2019)
+
+Hiss+2018
+Walther+2019
+Becker+2011 (γ = 1. 3)
+Boera+2014 (γ = 1. 3)
+
+Rorai+2017b
+Bolton+2012b
+Bolton+2012b (HeII)
+Boera+2019
+
+15
+
+Bolton+2014
+Telikova+2019
+This Work
+(Gaikwad+2020)
+
+γ
+
+T0 (10 3 K)
+
+20
+15
+10
+5
+
+2.0
+1.8
+1.6
+1.4
+1.2
+1.0
+0.8
+
+2
+
+3
+
+4
+
+z
+
+5
+
+6
+
+7
+
+8
+
+Figure 10. The evolution of thermal parameters T0 and γ from the literature and in this work (red stars with error bars) are shown in
+the top and bottom panels, respectively (Becker et al. 2011; Bolton et al. 2012, 2014; Boera et al. 2014; Rorai et al. 2017b; Hiss et al.
+2018; Walther et al. 2019; Boera et al. 2019; Telikova et al. 2019). Note that the temperature constraints from Becker et al. (2011) and
+Boera et al. (2014) are not measured at the mean density, and have therefore been scaled to a T0 value assuming a TDR with slope
+γ = 1.3. The T0 and γ evolution in the hot, default and cold Sherwood-Relics simulations is shown by the blue dash-dotted, black dashed
+and red dotted curves respectively. The corresponding T0 and γ evolution in the Haardt & Madau (2012) UVB synthesis model is shown
+by a green dotted curve. This T0 and γ evolution is obtained by assuming a uniform UVB and solving for the non-equilibrium ionization
+evolution (Haardt & Madau 2012; Puchwein et al. 2019). Our constraints on T0 and γ are consistent within 1σ with Puchwein et al.
+(2019).
+
+6.2.1
+
+Dependence of spike height on density: ∆τ vs
+e HI
+log N
+
+e HI
+In Fig. 5 we compare the dependence of ∆τ on log N
+for the aton and patchy simulations to the optically thin
+cold and hot simulations. Similar to the optically thin sime HI are anti-correlated. The
+ulations (Fig. 5), ∆τ and log N
+normalization (∆0 ) and slope (β) are similar in both simulations. The ∆0 (β) in the RT simulations are slightly larger
+(smaller) compared to the optically thin simulations. The
+e HI ) in the RT simulations are
+spikes (irrespective of log N
+produced from underdensities somewhat larger than in the
+optically thin simulations. This is expected, as spikes (at a
+e HI ) in the RT simulations are produced by all
+given log N
+four physical effects we discussed previously, i.e., fluctuations in density, peculiar velocity, UVB and temperature.
+e HI )
+Fig. 5 also shows that the scatter in ∆τ (at a given log N
+is larger in the radiative transfer simulations due to fluctuations in UVB, temperature and pressure smoothing effects.
+Note, however, that in all simulations the spikes occur in
+underdense regions with ∆ < 1.
+MNRAS 000, 1–31 (2015)
+
+6.2.2
+
+Dependence of temperature on spike width: Tτ vs b
+
+Fig. 6 compares the dependence of optical depth weighted
+temperature ( Tτ ) on spike widths (b-parameter) for the
+RT simulations with that in the optically thin simulations.
+Unlike the optically thin simulations, the RT simulations
+show a large scatter in temperature for a given spike width
+due to fluctuations in the UVB amplitude and temperature. Furthermore, the temperature in the patchy simulation is smaller than in the corresponding aton simulation.
+This is because (i) the amount of gas with ∆ < 1 and
+T < 30000 K is larger in the patchy simulation and (ii) due
+to the post-processed nature of the aton simulation the (adiabatic) change in the temperature due to changes in density
+(the d∆/dt term) is not accounted. As a result, the spike
+widths are also slightly smaller in the patchy simulations.
+
+6.2.3
+
+e HI
+The relation of spike width and height: b vs log N
+
+e HI correlation for the aton and
+Fig. 7 compares the b− log N
+patchy simulations to that in the optically thin simulations.
+e HI
+Similar to the optically thin simulations, log b and log N
+are strongly anti-correlated in the RT simulations. The nor-
+
+16
+
+Gaikwad et.al
+
+malization of the correlation b0 is smaller in the patchy
+(∼ 12.95 km s−1 ) simulation than in the aton (∼ 14.96
+km s−1 ) simulation due to the smaller temperature of the
+gas probed by the transmission spikes in the latter. The
+slope of the correlation (α = 0.32 for aton and α = 0.34 for
+patchy) and the scatter in the TDR (at ∆ < 1 in Fig. 3)
+is relatively similar for both simulations. It is interesting to
+note here that α in the RT simulations is similar to that in
+the hot optically thin simulation, while b0 in the RT simulations is smaller than in the hot optically thin simulations.
+The smaller value of b0 in the RT simulation is a consequence
+of fluctuations in UVB amplitude and temperature.
+In summary, the RT simulations include the effects of
+fluctuations in the UVB amplitude and temperature which
+are missing in the optically thin simulations. Due to these
+effects: (i) the TDR in RT simulations cannot be described
+by a single power-law, (ii) the typical densities responsible
+for transmission spikes in the RT simulations (∆0 ∼ 0.33)
+is slightly larger than in optically thin simulations (∆0 ∼
+0.25) and (iii) the scatter in temperature and spike width
+are larger.
+
+Fig. 313 ). Fig. 12 shows that the T0 − γ constraints obtained
+here are consistent with the range in the T0 − γ evolution
+seen in the patchy and aton RT simulations.
+Thus, quite remarkably the patchy simulation based
+on the self-consistent reionization model of Kulkarni et al.
+(2019b) that (i) simulates cosmological density and velocity fields, (ii) includes spatial fluctuations in the UV background and TDR, (iii) accounts for the pressure smoothing of gas and (iv) matches the Thomson scattering optical depth (Planck Collaboration et al. 2018), also produces transmission spike properties consistent with those
+in observed high-resolution, high-z QSO absorption spectra. Note, however, that there is still some uncertainty in
+the post-reionization temperatures in RT simulations (see
+D’Aloisio et al. 2019, Puchwein et.al. 2020, in prep). With
+18.6 eV the energy of ionizing photos (and thus the postreionization temperatures) of the simulations used here fall
+between those in Keating et al. (2019) [17.6 eV] and Kulkarni et al. (2019b) [20.1 eV].
+
+7
+6.3
+
+Transmission spike properties: Full radiative
+transfer simulations vs observations
+
+We now compare the three statistics from the RT simulations with observations in Fig. 11. Each panel is similar to
+Fig. 8, except we now use the aton and patchy simulations.
+Similar to the optically thin simulations, the mean transmitted flux in the aton and patchy models is matched to
+that in the observed spectra to account for the uncertainty
+in the continuum placement and UV background amplitude.
+Note that this rescaling has surprisingly little effect on the
+width of the transmission spikes (see appendix A). Comparison of Fig. 11 with Fig. 8 shows that the RT simulations are in perhaps even better agreement with the observations than the optically thin simulations at all redshifts.
+Note, however, that there is still considerable freedom to
+adjust the overall temperature in both the RT and optically
+thin simulation. Unfortunately, we therefore don’t think that
+this (marginally) better agreement should be interpreted as
+(hard) evidence for the spatial variations of the TDR predicted by our RT simulations. The three statistics are furthermore very similar in the aton and patchy simulations at
+all redshifts. The spike widths in the aton simulations are
+somewhat larger than in the patchy simulation and are in
+marginally better agreement with observations than in the
+patchy simulations (see appendix D for a comparison of the
+goodness of fit for the different models). As explained in the
+previous section, this is due to the effect of slightly higher
+gas temperatures in the aton simulations. Note, however,
+also that both RT simulations are mono-frequency and the
+normalisation of the temperature distribution predicted by
+the RT simulations is still somewhat uncertain.
+Fig. 12 shows the comparison of the T0 and γ evolution
+with that from T0 − γ measured assuming a uniform UVB.
+Since there is no single power-law TDR in the RT simulations (see Fig. 3), we show a range in T0 and γ evolution. To
+obtain this range in T0 and γ, we find the 16th and 84th percentile temperature in four ∆ bins. We then fit a power-law
+TDR to the 16th and 84th percentile temperature values (see
+
+CONCLUSIONS
+
+We have explored here for the first time the use of the transmission spikes observed in high-z QSO absorption spectra as
+a tool to probe the physical state of the IGM near the tail
+end of hydrogen reionization. We constrain the thermal state
+of the IGM at 5.3 < z < 5.9 by comparing the properties of
+Lyα transmission spikes from a sample of 5 high resolution
+(vFWHM ∼ 6 km s−1 ) and high S/N (∼ 10) QSO absorption
+spectra with that from state-of-the-art, high resolution optically thin simulations run with gadget-3 (Springel 2005)
+from the Sherwood and Sherwood-Relics suites, as well as
+a simulation post-processed with the radiative transfer code
+aton (Aubert & Teyssier 2008). The main results of this
+work are as follows.
+• In full radiative transfer simulations regions with low
+density, enhancement in the photo-ionization rate ΓHI , enhancement in temperature and a diverging peculiar velocity
+field along the line of sight can all contribute to the occurrence of transmission spikes at high redshift. Most of the
+spikes (∼ 90 per cent) in optically thin and radiative transfer
+simulations occur in regions with density ∆ < 1. Optically
+thin simulations do not account for the effect of enhanced
+temperatures in recently ionized regions and the resulting
+spatial fluctuations in the temperature-density relation. Due
+to the assumed spatially homogeneous UV background amplitude they also do not account for the occurrence of transmission spikes due to enhancements in the photo-ionization
+rate. About 50 per cent of the transmission spikes in our RT
+simulations show the effect of an enhanced ΓHI and enhanced
+temperature. In the RT simulation the transmission spikes
+are often due to either hot, recently ionized, very underdense
+regions with a diverging line of sight peculiar velocity field
+or due to somewhat less underdense and colder regions with
+an enhanced photo-ionization rate.
+• The width of the components fitted to the asymmetric and blended transmission spikes are very sensitive to
+13
+
+The T0 and γ for aton and patchy models in Fig. 3 are calculated using 5th and 95th percentile.
+MNRAS 000, 1–31 (2015)
+
+Transmission spikes in the Lyα forest
+
+Observation
+5.3 < z < 5.5
+
+A1
+
+10 3
+
+L40N2048_PATCHY
+A2
+
+1
+
+10 1
+
+5.3 < z < 5.5
+
+10 1
+
+k P F ( k) / π
+
+10 2
+
+f(NfHI , z)
+
+dP/dlog b
+
+2
+
+L40N2048_ATON
+
+17
+
+A3
+
+10 0
+
+5.3 < z < 5.5
+
+A4
+
+5.5 < z < 5.7
+
+B1
+
+2
+
+1.0
+0.5
+0.0
+0.5
+1.0
+
+A5
+R
+
+1.0
+0.5
+0.0
+0.5
+1.0
+
+10 3
+
+B2
+
+1
+
+10 1
+
+1.0
+0.5
+0.0
+0.5
+1.0
+
+A6
+
+5.5 < z < 5.7
+
+10 1
+
+k P F ( k) / π
+
+10 2
+
+f(NfHI , z)
+
+dP/dlog b
+
+10 -1
+
+10 0
+
+R
+
+R
+
+0
+
+B3
+
+10 0
+
+5.5 < z < 5.7
+
+B4
+
+5.7 < z < 5.9
+
+C1
+
+2
+
+1.0
+0.5
+0.0
+0.5
+1.0
+
+B5
+R
+
+1.0
+0.5
+0.0
+0.5
+1.0
+
+10 3
+
+C2
+
+1
+
+10 1
+
+1.0
+0.5
+0.0
+0.5
+1.0
+
+B6
+
+5.7 < z < 5.9
+
+10 1
+
+k P F ( k) / π
+
+10 2
+
+f(NfHI , z)
+
+dP/dlog b
+
+10 -1
+
+10 0
+
+R
+
+R
+
+0
+
+C3
+
+10 0
+
+5.7 < z < 5.9
+
+C4
+
+0.5
+
+1.0
+
+1.5
+
+log b (km s −1 )
+
+2.0
+
+1.0
+0.5
+0.0
+0.5
+1.0
+
+C5
+R
+
+1.0
+0.5
+0.0
+0.5
+1.0
+
+10 -1
+
+10 0
+
+R
+
+R
+
+0
+
+12.7
+
+13.1
+
+13.5
+−2
+
+log (N HI /cm )
+f
+
+13.9
+
+1.0
+0.5
+0.0
+0.5
+1.0
+
+C6
+
+10 -2
+
+10 -1
+
+−1
+
+k (km s)
+
+10 0
+
+Figure 11. Similar to Fig. 8, except the comparison of spike width distribution, pCDDF and FPS is shown for the aton (blue stars)
+and patchy (red stars) RT simulations. The statistics from the RT simulations are in better agreement with observations compared to
+those from the optically thin simulations (Fig. 8) at all redshifts (see §6.3).
+
+MNRAS 000, 1–31 (2015)
+
+18
+
+Gaikwad et.al
+
+PATCHY (16th Percentile)
+PATCHY (84th Percentile)
+PATCHY (50th Percentile)
+
+Walther+2019
+Becker+2011 (γ = 1. 3)
+L40N2048_DEFAULT
+(Puchwein+2019)
+
+Boera+2019
+Haardt+2012
+This Work
+(Gaikwad+2020)
+
+T0 (10 3 K)
+
+20
+15
+10
+
+γ
+
+5
+2.0
+1.8
+1.6
+1.4
+1.2
+1.0
+0.8
+4.0
+
+4.5
+
+5.0
+
+5.5
+
+6.0
+
+z
+
+6.5
+
+7.0
+
+7.5
+
+8.0
+
+Figure 12. Same as Fig. 10, except the T0 and γ evolution is shown from the patchy RT simulation (shaded region) at 4 ≤ z ≤ 8. Since
+there is no single power-law TDR in the RT simulations (see Fig. 3), the shaded region displays the 16th and 84th percentiles of T0 and
+γ (see §6.3). For comparison, we also show the T0 and γ evolution from RT models (50th percentile, blue solid line), the uniform UVB
+default (red dashed line) and Haardt & Madau (2012) (green dotted line) model. The T0 and γ measured by comparing the observed
+spike width distribution with that from optically thin simulations are in good agreement with the median T0 and γ evolution from RT
+simulations.
+
+the instantaneous temperature of the gas and are significantly broader in the optically thin hot simulation than
+in the corresponding cold simulation. To quantify this, we
+have fitted multi-component Voigt profiles to the inverted
+transmitted flux 1 − F in both simulated and observed spectra with our automated code viper (Gaikwad et al. 2017b).
+We derive the transmitted flux power spectrum, pseudo column density distribution function (pCDDF) and spike width
+(b-parameter) distribution functions for simulated and observed spectra. We show that the spike width distribution
+is the statistic that is sensitive to the thermal state of the
+IGM. The dependence of the shape of the FPS and pCDDF
+on the temperature of the absorbing gas is somewhat weaker
+while their normalisation is more sensitive to the ionization
+state/neutral fraction of the IGM.
+• We associate the observable properties of spikes with
+the physical properties of gas in simulations by studying the
+e HI , Tτ −b and b− log N
+e HI correlations. These cor∆τ − log N
+relations show that the underdensity of gas associated with
+e HI ∼12.8 in both
+spikes is similar i.e., ∆τ ∼ 0.3 at log N
+optically thin and radiative transfer simulations. The spike
+widths in both simulations are sensitive to the temperature
+of the gas (b ∼ 10.9 km s−1 for T0 ∼ 7500 K and b ∼ 16.6
+km s−1 for T0 ∼ 14000 K). However, the temperature scatter
+for a given density is larger in the radiative transfer simula-
+
+tion compared to the optically thin simulation. As a result,
+a significant fraction of spikes in the radiative transfer simulations are due to hotter temperatures in recently ionized
+regions of the Universe.
+• We have compared the three observed flux statistics
+with those derived from our optically thin hot and cold
+simulations in three redshift bins. The statistics for the
+hot and default model are in significantly better agreement
+with those from observations in all the 3 redshift bins. The
+Doppler parameter distribution which is most sensitive to
+the instantaneous temperature of the gas is in significantly
+better agreement for the default model than for both the cold
+and hot model. We constrain thermal parameters by varying
+T0 and γ in post-processed optically thin simulations. The
+best fit values at 5.3 ≤ z ≤ 5.5, 5.5 ≤ z ≤ 5.7, 5.7 < z < 5.9
+are T0 ∼ 11000 ± 1600, 10500 ± 2100, 12000 ± 2200 K and
+γ ∼ 1.20 ± 0.18,1.28 ± 0.19, 1.05 ± 0.22 respectively. We do
+not find significant evolution in T0 and γ over 5.3 < z < 5.9.
+• We have also compared the three statistics in physically
+motivated radiative transfer simulations with those from observations. Unlike optically thin simulations, radiative transfer simulations incorporate spatial fluctuations in the amplitude of the UVB and the TDR. As a result the scatter in
+the TDR is large and a single power-law cannot describe the
+TDR in radiative transfer simulations. The observed spike
+MNRAS 000, 1–31 (2015)
+
+Transmission spikes in the Lyα forest
+statistics in our radiative transfer simulation of late reionization with neutral islands persisting to z ∼ 5.3 are in good
+agreement (see appendix D for details) with observations in
+all three redshift bins .
+Our work shows the potential of transmission spike
+shapes (heights and widths) for constraining the thermal
+history of the IGM near the tail-end of H i reionization,
+complimentary to other transmitted flux based methods. In
+future, a much larger sample of high resolution, high S/N
+and high-z QSO absorption spectra should become available
+thanks to 30–40 m class optical telescopes. These larger data
+sets, complemented by further improved radiative transfer
+simulations, promise to put tight constraints on the nature
+and the exact timing of H i reionization.
+
+ACKNOWLEDGMENT
+We thank the staff of the Las Campanas and Keck observatories for their help with the observations. MR thanks Ian
+Thompson and Steve Shectman for suggestions for installing
+a new bandpass filter in the MIKE slit-viewing camera. Support by ERC Advanced Grant 320596 ‘The Emergence of
+Structure During the Epoch of reionization’ is gratefully acknowledged. JSB acknowledges the support of a Royal Society University Research Fellowship. GDB was supported
+by the National Science Foundation through grants AST1615814 and AST-175140. The Sherwood and SherwoodRelics simulations were performed with supercomputer time
+awarded by the Partnership for Advanced Computing in Europe (PRACE) 8th and 16th calls. We acknowledge PRACE
+for awarding us access to the Curie and Irene supercomputers, based in France at the Trés Grand Centre de Calcul
+(TGCC). This work also used the Cambridge Service for
+Data Driven Discovery (CSD3), part of which is operated
+by the University of Cambridge Research Computing on behalf of the STFC DiRAC HPC Facility (www.dirac.ac.uk).
+The DiRAC component of CSD3 was funded by BEIS capital funding via STFC capital grants ST/P002307/1 and
+ST/R002452/1 and STFC operations grant ST/R00689X/1.
+We also acknowledge the DiRAC Data Intensive service at Leicester, operated by the University of Leicester IT Services. The equipment was funded by BEIS
+capital funding via STFC capital grants ST/K000373/1
+and ST/R002363/1 and STFC DiRAC Operations grant
+ST/R001014/1. We also thank DiRAC@Durham facility
+managed by the Institute for Computational Cosmology on
+behalf of the STFC DiRAC HPC Facility (www.dirac.ac.uk).
+The equipment was funded by BEIS capital funding via
+STFC capital grants ST/P002293/1, ST/R002371/1 and
+ST/S002502/1, Durham University and STFC operations
+grant ST/R000832/1. DiRAC is part of the National eInfrastructure.
+
+REFERENCES
+Abel T., Haehnelt M. G., 1999, ApJ, 520, L13
+Aubert D., Teyssier R., 2008, MNRAS, 387, 295
+Avni Y., 1976, ApJ, 210, 642
+Bañados E., et al., 2016, ApJS, 227, 11
+MNRAS 000, 1–31 (2015)
+
+19
+
+Barnett R., Warren S. J., Becker G. D., Mortlock D. J., Hewett
+P. C., McMahon R. G., Simpson C., Venemans B. P., 2017,
+A&A, 601, A16
+Becker G. D., Bolton J. S., 2013, MNRAS, 436, 1023
+Becker G. D., Bolton J. S., Haehnelt M. G., Sargent W. L. W.,
+2011, MNRAS, 410, 1096
+Becker G. D., Sargent W. L. W., Rauch M., Carswell R. F., 2012,
+ApJ, 744, 91
+Becker G. D., Bolton J. S., Madau P., Pettini M., Ryan-Weber
+E. V., Venemans B. P., 2015, MNRAS, 447, 3402
+Bernstein R., Shectman S. A., Gunnels S. M., Mochnacki S.,
+Athey A. E., 2003, in Iye M., Moorwood A. F. M., eds,
+Proc. SPIEVol. 4841, Instrument Design and Performance
+for Optical/Infrared Ground-based Telescopes. pp 1694–1704,
+doi:10.1117/12.461502
+Boera E., Murphy M. T., Becker G. D., Bolton J. S., 2014, MNRAS, 441, 1916
+Boera E., Becker G. D., Bolton J. S., Nasir F., 2019, ApJ, 872,
+101
+Bolton J. S., Becker G. D., 2009, MNRAS, 398, L26
+Bolton J. S., Haehnelt M. G., 2007, MNRAS, 382, 325
+Bolton J., Meiksin A., White M., 2004, MNRAS, 348, L43
+Bolton J. S., Haehnelt M. G., Warren S. J., Hewett P. C., Mortlock D. J., Venemans B. P., McMahon R. G., Simpson C.,
+2011, MNRAS, 416, L70
+Bolton J. S., Becker G. D., Raskutti S., Wyithe J. S. B., Haehnelt
+M. G., Sargent W. L. W., 2012, MNRAS, 419, 2880
+Bolton J. S., Becker G. D., Haehnelt M. G., Viel M., 2014, MNRAS, 438, 2499
+Bolton J. S., Puchwein E., Sijacki D., Haehnelt M. G., Kim T.-S.,
+Meiksin A., Regan J. A., Viel M., 2017, MNRAS, 464, 897
+Bosman S. E. I., Fan X., Jiang L., Reed S., Matsuoka Y., Becker
+G., Haehnelt M., 2018, MNRAS, 479, 1055
+Calverley A. P., Becker G. D., Haehnelt M. G., Bolton J. S., 2011,
+MNRAS, 412, 2543
+Carnall A. C., et al., 2015, MNRAS, 451, L16
+Chardin J., Puchwein E., Haehnelt M. G., 2017, MNRAS, 465,
+3429
+Chardin J., Haehnelt M. G., Bosman S. E. I., Puchwein E., 2018,
+MNRAS, 473, 765
+Chehade B., et al., 2018, MNRAS, 478, 1649
+Choudhury T. R., Haehnelt M. G., Regan J., 2009, MNRAS, 394,
+960
+D’Aloisio A., McQuinn M., Maupin O., Davies F. B., Trac H.,
+Fuller S., Upton Sanderbeck P. R., 2019, ApJ, 874, 154
+Davies F. B., Hennawi J. F., Eilers A.-C., Lukić Z., 2018, ApJ,
+855, 106
+Eilers A.-C., Davies F. B., Hennawi J. F., 2018, ApJ, 864, 53
+Fan X., et al., 2001, AJ, 122, 2833
+Fan X., et al., 2006, AJ, 132, 117
+Fan X., et al., 2019, ApJ, 870, L11
+Faucher-Giguere -A. C., 2019, arXiv e-prints, p. arXiv:1903.08657
+Faucher-Giguère C.-A., Lidz A., Hernquist L., Zaldarriaga M.,
+2008, ApJ, 682, L9
+Fernández-Soto A., Lanzetta K. M., Barcons X., Carswell R. F.,
+Webb J. K., Yahil A., 1996, ApJ, 460, L85
+Furlanetto S. R., Oh S. P., 2009, ApJ, 701, 94
+Gaikwad P., Khaire V., Choudhury T. R., Srianand R., 2017a,
+MNRAS, 466, 838
+Gaikwad P., Srianand R., Choudhury T. R., Khaire V., 2017b,
+MNRAS, 467, 3172
+Gaikwad P., Choudhury T. R., Srianand R., Khaire V., 2018,
+MNRAS, 474, 2233
+Gaikwad P., Srianand R., Khaire V., Choudhury T. R., 2019,
+MNRAS, 490, 1588
+Garaldi E., Gnedin N. Y., Madau P., 2019, ApJ, 876, 31
+Garzilli A., Bolton J. S., Kim T.-S., Leach S., Viel M., 2012,
+MNRAS, 424, 1723
+
+20
+
+Gaikwad et.al
+
+Gnedin N. Y., Hui L., 1998, MNRAS, 296, 44
+Gnedin N. Y., Becker G. D., Fan X., 2017, ApJ, 841, 26
+Haardt F., Madau P., 2012, ApJ, 746, 125
+Haehnelt M. G., Steinmetz M., 1998, MNRAS, 298, L21
+Hiss H., Walther M., Hennawi J. F., Oñorbe J., O’Meara J. M.,
+Rorai A., Lukić Z., 2018, ApJ, 865, 42
+Hiss H., Walther M., Oñorbe J., Hennawi J. F., 2019, ApJ, 876,
+71
+Hui L., Gnedin N. Y., 1997, MNRAS, 292, 27
+Kakiichi K., et al., 2018, MNRAS, 479, 43
+Keating L. C., Puchwein E., Haehnelt M. G., 2018, MNRAS, 477,
+5501
+Keating L. C., Weinberger L. H., Kulkarni G., Haehnelt M. G.,
+Chardin J., Aubert D., 2019, arXiv e-prints,
+Kelson D. D., 2003, PASP, 115, 688
+Khaire V., Srianand R., 2015, ApJ, 805, 33
+Khaire V., Srianand R., 2019, MNRAS, 484, 4174
+Khaire V., et al., 2019, MNRAS, 486, 769
+Kim T.-S., Viel M., Haehnelt M. G., Carswell R. F., Cristiani S.,
+2004, MNRAS, 347, 355
+Kulkarni G., Hennawi J. F., Oñorbe J., Rorai A., Springel V.,
+2015, ApJ, 812, 30
+Kulkarni G., Worseck G., Hennawi J. F., 2019a, MNRAS,
+Kulkarni G., Keating L. C., Haehnelt M. G., Bosman S. E. I.,
+Puchwein E., Chardin J., Aubert D., 2019b, MNRAS, 485,
+L24
+Lidz A., Faucher-Giguère C.-A., Dall’Aglio A., McQuinn M.,
+Fechner C., Zaldarriaga M., Hernquist L., Dutta S., 2010,
+ApJ, 718, 199
+Lukić Z., Stark C. W., Nugent P., White M., Meiksin A. A.,
+Almgren A., 2015, MNRAS, 446, 3697
+Maitra S., Srianand R., Petitjean P., Rahmani H., Gaikwad P.,
+Choudhury T. R., Pichon C., 2019, MNRAS, 490, 3633
+McDonald P., Miralda-Escudé J., Rauch M., Sargent W. L. W.,
+Barlow T. A., Cen R., Ostriker J. P., 2000, ApJ, 543, 1
+McDonald P., et al., 2005, ApJ, 635, 761
+McQuinn M., Upton Sanderbeck P. R., 2016, MNRAS, 456, 47
+McQuinn M., Lidz A., Zaldarriaga M., Hernquist L., Hopkins
+P. F., Dutta S., Faucher-Giguère C.-A., 2009, ApJ, 694, 842
+McQuinn M., Hernquist L., Lidz A., Zaldarriaga M., 2011, MNRAS, 415, 977
+Meiksin A., White M., 2004, MNRAS, 350, 1107
+Meyer R. A., et al., 2019, arXiv e-prints, p. arXiv:1912.04314
+Miralda-Escudé J., Haehnelt M., Rees M. J., 2000, ApJ, 530, 1
+Muzahid S., Srianand R., Bergeron J., Petitjean P., 2012, MNRAS, 421, 446
+Nasir F., D’Aloisio A., 2019, arXiv e-prints, p. arXiv:1910.03570
+Nasir F., Bolton J. S., Becker G. D., 2016, MNRAS, 463, 2335
+Nasir F., Bolton J. S., Viel M., Kim T.-S., Haehnelt M. G., Puchwein E., Sijacki D., 2017, MNRAS, 471, 1056
+Oppenheimer B. D., Davé R., 2009, MNRAS, 395, 1875
+Peeples M. S., Weinberg D. H., Davé R., Fardal M. A., Katz N.,
+2010, MNRAS, 404, 1281
+Penton S. V., Shull J. M., Stocke J. T., 2000, ApJ, 544, 150
+Planck Collaboration et al., 2014, A&A, 571, A16
+Planck Collaboration et al., 2018, arXiv e-prints, p.
+arXiv:1807.06209
+Press W. H., Teukolsky S. A., Vetterling W. T., Flannery B. P.,
+1992, Numerical recipes in FORTRAN. The art of scientific
+computing
+Puchwein E., Bolton J. S., Haehnelt M. G., Madau P., Becker
+G. D., Haardt F., 2015, MNRAS, 450, 4081
+Puchwein E., Haardt F., Haehnelt M. G., Madau P., 2019, MNRAS, 485, 47
+Rauch M., Sargent W. L. W., Womble D. S., Barlow T. A., 1996,
+ApJ, 467, L5
+Rauch M., et al., 1997, ApJ, 489, 7
+
+Robertson B. E., Ellis R. S., Dunlop J. S., McLure R. J., Stark
+D. P., 2010, Nature, 468, 49
+Rollinde E., Theuns T., Schaye J., Pâris I., Petitjean P., 2013,
+MNRAS, 428, 540
+Rorai A., et al., 2017a, Science, 356, 418
+Rorai A., et al., 2017b, MNRAS, 466, 2690
+Rorai A., Carswell R. F., Haehnelt M. G., Becker G. D., Bolton
+J. S., Murphy M. T., 2018, MNRAS, 474, 2871
+Ross N. P., Cross N. J. G., 2019, arXiv e-prints, p.
+arXiv:1906.06974
+Rudie G. C., Steidel C. C., Pettini M., 2012, ApJ, 757, L30
+Schaye J., Theuns T., Leonard A., Efstathiou G., 1999, MNRAS,
+310, 57
+Schaye J., Theuns T., Rauch M., Efstathiou G., Sargent W. L. W.,
+2000, MNRAS, 318, 817
+Shull J. M., Smith B. D., Danforth C. W., 2012, ApJ, 759, 23
+Springel V., 2005, MNRAS, 364, 1105
+Springel V., Hernquist L., 2002, MNRAS, 333, 649
+Storrie-Lombardi L. J., McMahon R. G., Irwin M. J., 1996, MNRAS, 283, L79
+Telikova K., Balashev S., Shternin P., 2018, arXiv e-prints,
+Telikova K. N., Shternin P. S., Balashev S. A., 2019, ApJ, 887,
+205
+Theuns T., Schaye J., Haehnelt M. G., 2000, MNRAS, 315, 600
+Trac H., Cen R., Loeb A., 2008, ApJ, 689, L81
+Tripp T. M., Sembach K. R., Bowen D. V., Savage B. D., Jenkins
+E. B., Lehner N., Richter P., 2008, ApJS, 177, 39
+Viel M., Haehnelt M. G., Springel V., 2004a, MNRAS, 354, 684
+Viel M., Weller J., Haehnelt M. G., 2004b, MNRAS, 355, L23
+Viel M., Bolton J. S., Haehnelt M. G., 2009, MNRAS, 399, L39
+Viel M., Haehnelt M. G., Bolton J. S., Kim T.-S., Puchwein E.,
+Nasir F., Wakker B. P., 2017, MNRAS, 467, L86
+Vogt S. S., et al., 1994, in Crawford D. L., Craine E. R., eds,
+Proc. SPIEVol. 2198, Instrumentation in Astronomy VIII.
+p. 362, doi:10.1117/12.176725
+Walther M., Oñorbe J., Hennawi J. F., Lukić Z., 2019, ApJ, 872,
+13
+Webb J. K., Carswell R. F., 1991, in Shaver P. A., Wampler E. J.,
+Wolfe A. M., eds, Quasar Absorption Lines. p. 3
+Wu X.-B., et al., 2015, Nature, 518, 512
+Wu X., McQuinn M., Kannan R., D’Aloisio A., Bird S., Marinacci
+F., Davé R., Hernquist L., 2019, MNRAS, 490, 3177
+
+MNRAS 000, 1–31 (2015)
+
+Transmission spikes in the Lyα forest
+APPENDIX A: OBSERVATIONAL
+SYSTEMATICS
+Fig. A1 shows Lyα forest covered by 5 QSO sightlines from
+our observed sample. The observed spectra are subject to
+systematics due to finite resolution, S/N and continuum fitting uncertainties. In this section, we quantify the effect
+of such systematics on spike statistics and illustrate the
+method we use to account for these effects.
+
+A1
+
+Continuum fitting uncertainty
+
+Due to the large opacities towards high redshift QSOs,
+the continuum placement is non-trivial. We explained the
+method of our continuum fitting in §2. The matching of
+the mean flux in observed and simulated spectra in a given
+redshift bin is affected by both the uncertainty in ΓHI and
+the uncertainty in the continuum placement of the QSO.
+Unfortunately, there is significant uncertainty in both ΓHI
+and continuum placement of QSOs at high redshift. Note
+however, that the scaling in flux is different for the two effects. While continuum errors affect the inferred flux level
+linearly, errors in the ΓHI assumed in the simulated spectra
+affect the optical depth linearly, but the flux non-linearly
+due to the non-linear dependence of flux on optical depth
+(F = e−τ ). Matching the observed mean flux by rescaling
+optical depth (ΓHI scaling) or rescaling flux (continuum uncertainty) have thus different effects on the transmission
+spikes. We illustrate the effect of flux scaling (continuum
+fitting uncertainty) on the spike statistics in Fig. A2 for the
+default simulation model. We calculate the three statistics
+by using a low continuum (Fcont −δF cont), a default continuum (δFcont = 0) and a high continuum (Fcont + δF cont).
+The normalization of the FPS and pCDDF is sensitive to
+the continuum placement. Somewhat surprisingly the continuum placement does, however, have very little effect on
+the spike width distribution. Note that the mean flux is different for the three models. We have looked in some detail
+into individual simulated spectra and found that for a lower
+placement of the continuum leading to a linear increase in
+observed flux levels the number of Voigt profile components
+increases. This appears to almost perfectly compensate for
+the expected increase in the width of individual components
+if the number of components stayed fixed for increased flux
+levels. Similarly, the effect of rescaling the optical depth (or
+ΓHI ) is also small for the spike width distribution, but significant for pCDDF and FPS statistics (see Appendix B and
+Fig. B3 for details).
+We illustrate the effect of continuum fitting uncertainty
+on the shape of transmission spikes in our observed spectra in Fig. A3. As already discussed the continuum placement uncertainty (shown by red shaded region in panel A
+and C), leads us to expect significant variation in the height
+of the spikes (panel D). However, the width distribution of
+the Voigt profile components of the fits to the transmission
+spikes is remarkably robust. To quantify the effect of the
+continuum on the observed transmission spikes, we show
+the three statistics in Fig. A4 by using again a low continuum (Fcont − δF cont), a best fit continuum (Fcont ) and
+a high continuum (Fcont + δF cont). Similar to Fig. A2, the
+normalization of the FPS and pCDDF in Fig. A4 is sensitive to the continuum placement. The continuum placement
+MNRAS 000, 1–31 (2015)
+
+21
+
+slightly changes the location of the peak in the spike width
+distribution and the distribution is somewhat broader for
+a low continuum. Note that the observed distributions are
+less well defined than those from our simulated spectra due
+to the small total number of spikes in our observed spectra
+compared to the simulated spectra14 . We further emphasise
+again, that when comparing observed and simulated spectra
+we match the observed mean flux so there is a similar effect
+on the distributions of the simulated spectra. To demonstrate the expected effect of matching the observed mean
+flux, we have rescaled the optical depths inferred from the
+observed spectra (non-linear flux scaling) in the high and low
+continuum model such that the mean flux matches that with
+default continuum model. We call these continuum models
+“corrected” low or high continuum models (as shown by dotted lines in Fig. A4). The distributions for the corrected low
+and high continuum models are in very good agreement with
+that for the best fit continuum. This demonstrates that the
+effect of continuum fitting on spike statistics can indeed be
+minimized by rescaling the simulated optical depth to match
+the mean observed flux as discussed earlier for the simulated
+spectra.
+
+A2
+
+Effect of S/N
+
+In this section we illustrate the effect of finite S/N on the
+detectability of spikes. Since high-z QSOs are usually faint
+and most of the observed pixels are close to F ∼ 0, the noise
+in observed spectra is mostly determined by the sky background. Furthermore, the noise can vary along the wavelength axis. To minimize the effect of finite S/N on spike
+statistics, we degrade the simulated spectra with noise generated from the observed S/N per pixel array. The statistics
+computed from observed and simulated transmitted flux are
+consistent with each other. However, the ability of the Voigt
+fitting procedure crucially depends on the S/N of the spectra. To account for this, we compute a significance level (SL)
+for each Voigt component that accounts for the S/N, pixel
+separation and resolution of the instrument (Gaikwad et al.
+2017b). We select the Voigt components with SL > 3.
+The finite S/N of the observed spectra also sets the
+completeness limit of the sample. However, one needs to account for the incompleteness of the sample for the lines with
+e HI below the completeness limit. We account for the
+log N
+incompleteness of the sample by calculating the sensitivity
+curve as shown in Fig. A5. The plot shows the sensitivity
+curve for three redshift bins. The observed sample is 50 per
+e HI ∼ 12.5. We use the area under
+cent complete for log N
+the curve to calculate the pCDDF and thus account for the
+effect of finite S/N.
+
+APPENDIX B: SENSITIVITY OF SPIKE
+STATISTICS TO ASTROPHYSICAL
+PARAMETERS
+Fig. B1 to Fig. B5 shows the sensitivity of our chosen statistics to the normalization of the TDR (T0 ), the slope of
+14
+
+In Fig. A2, we calculated the statistics from 5 × 80 = 400
+simulated spectra.
+
+22
+
+Gaikwad et.al
+
+J0439+1634, zem = 6. 51, (S/N)/pixel ∼ 30. 3
+
+F
+
+1.5
+1.0
+0.5
+0.0
+
+ATLASJ158-14, zem = 6. 07, (S/N)/pixel ∼ 7. 7
+
+F
+
+1.5
+1.0
+0.5
+0.0
+
+PSOJ239-07, zem = 6. 11, (S/N)/pixel ∼ 6. 5
+
+F
+
+1.5
+1.0
+0.5
+0.0
+
+ATLASJ025-33, zem = 6. 34, (S/N)/pixel ∼ 12. 0
+
+F
+
+1.5
+1.0
+0.5
+0.0
+
+SDSSJ0100+2802, zem = 6. 30, (S/N)/pixel ∼ 20. 0
+
+F
+
+1.5
+1.0
+0.5
+0.0
+7950
+
+8000
+
+λ ( Å)
+
+8050
+
+8100
+
+Figure A1. Examples of observed transmission spikes from the sample of 5 QSO sightlines. The brown vertical ticks in each panel
+mark Voigt profile components identified and fitted using viper.
+
+TDR (γ), the H i photo-ionization rate (ΓHI ) and Jeans
+smoothing, respectively. We vary T0 , γ and ΓHI in the postprocessing step by using a power-law TDR T = T0 ∆γ−1 and
+rescaling the optical depth under the assumption of photoionization equilibrium. This approach allows us to study the
+variation of spike statistics for a given parameter while keeping other parameters fixed.
+Fig. B1 shows that all three transmission spike statistics
+are sensitive to T0 . The spike width distribution (left panel
+in Fig. B1) is most sensitive to T0 i.e., the spike width distribution is systematically shifted to larger b values for hotter
+models. The shape of the pCDDF (middle panel in Fig. B1)
+
+is also sensitive to T0 . This can be understood by examining
+Fig. 4, where we see that spikes in hotter models are usually
+more blended than cold models due to line of sight temperature and density smoothing effects. Due to such blende HI and more
+ing, viper fits fewer components with low log N
+e HI in hotter models. The FPS
+components with high log N
+(right panel) is systematically lower at 0.1 < k (km−1 s) < 1
+for T0 = 25000 K compared to T0 = 10000 K. This is expected as the increase in temperature smoothes the transmitted Lyα flux, reducing the small scale power.
+We illustrate the sensitivity of the three statistics to γ
+in Fig. B2. It is not possible to vary the slope of the TDR
+MNRAS 000, 1–31 (2015)
+
+Transmission spikes in the Lyα forest
+
+Low Continuum
+Low Continuum
+(Unnormalized dP/dlogb)
+5
+
+10 3
+
+High Continuum
+High Continuum
+(Unnormalized dP/dlogb)
+5.5 < z < 5.7
+
+10 1
+
+5.5 < z < 5.7
+
+4
+3
+2
+
+k P F ( k) / π
+
+10 2
+
+f(NfHI , z)
+
+dP/dlog b
+
+Continuum
+Continuum
+(Unnormalized dP/dlogb)
+
+5.5 < z < 5.7
+
+10 1
+
+23
+
+10 0
+
+1
+0
+
+0.5
+
+1.0
+
+1.5
+
+log b (km s −1 )
+
+10 0
+
+2.0
+
+12.7
+
+13.1
+
+13.5
+
+13.9
+
+log (NfHI /cm −2 )
+
+10 -1
+
+10 -2
+
+10 -1
+
+k (km −1 s)
+
+10 0
+
+Figure A2. The effect of continuum fitting uncertainty on the three statistics for simulated spectra: the spike width distribution (left
+panel), pCDDF (middle panel) and FPS (right panel) in default model. The blue, black and red solid curves represent the statistics
+obtained using a low continuum (Fcont − δFcont , δFcont ∼ 0.25Fcont ), the default continuum (δFcont = 0) and a high continuum
+(Fcont + δFcont , δFcont ∼ 0.25Fcont ) respectively. The normalization of the FPS and pCDDF are rather sensitive to the continuum
+placement. The continuum placement has remarkable little effect on the normalized spike width distribution. The unnormalized spike
+width distribution (dotted lines in left panel) are significantly different due to the difference in the number of fitted components (For visual
+purpose, the spike width distribution and pCDDF are estimated using Gaussian kernel density estimation. Note that the number of lines
+is scaled down by a factor of ∼ 8 in the case of unnormalized spike width distribution.). The mean flux inferred for the default continuum
+model is matched to the observed mean flux by rescaling the optical depth to account for the uncertainty in ΓHI at 5.5 ≤ z ≤ 5.7.
+Note that the mean flux for the three continuum models shown above is different. In this work, we only use the normalized spike width
+distribution to constrain T0 and γ as it is much less sensitive to the continuum placement uncertainty than the two other statistics.
+
+Observed Flux (PSOJ239-07)
+Best Fit Continuum
+Continuum Fit Uncertainty
+
+8
+
+Fobs
+
+6
+
+Observed Flux (PSOJ239-07)
+Best Fit Continuum
+Continuum Fit Uncertainty
+
+A
+
+C
+
+4
+2
+0
+Normalize Flux
+Continuum Fit Uncertainty
+
+Fobs / Fcont
+
+1.0
+
+Normalize Flux
+Continuum Fit Uncertainty
+
+B
+
+D
+
+0.5
+
+0.0
+7400
+
+7600
+
+7800
+
+8000
+
+λ (Å)
+
+8200
+
+8400
+
+8600
+
+7540
+
+7560
+
+λ (Å)
+
+7580
+
+Figure A3. Panel A shows the observed flux (Fobs ) towards QSO PSOJ239-07 (black curve). The blue line and red shaded region show
+the best fit continuum (Fcont ) and the associated 1σ uncertainty, respectively. Panel B shows the normalized flux (blue line) obtained
+by Fnorm = Fobs /Fcont . For better visual appearance of this figure, the flux is smoothed using a Gaussian filter to reduce noise (we have
+not applied this Gaussian filter anywhere else). Panels C and D are the same as panels A and B, respectively, except that they show
+a zoomed version of the yellow shaded region in panels A and B. We use these high and low continuum fits to estimate the effect of
+continuum fitting uncertainty on transmission spike properties.
+
+MNRAS 000, 1–31 (2015)
+
+24
+
+Gaikwad et.al
+
+Lower Continuum
+Continuum
+
+Upper Continuum
+Corrected Lower Continuum
+
+Corrected Upper Continuum
+
+10 3
+
+1
+
+10 1
+
+0.5
+
+1.0
+
+1.5
+
+10 0
+
+2.0
+
+log b (km s )
+−1
+
+k P F ( k) / π
+
+10 2
+
+f(NfHI , z)
+
+dP/dlog b
+
+2
+
+0
+
+5.5 < z < 5.7
+
+10 1
+
+5.5 < z < 5.7
+
+5.5 < z < 5.7
+
+12.7
+
+13.1
+
+13.5
+−2
+
+log (N HI /cm )
+f
+
+13.9
+
+10 0
+
+10 -1
+
+10 -2
+
+10 -1
+
+−1
+
+k (km s)
+
+10 0
+
+Figure A4. The effect of continuum fitting uncertainty on the three statistics: the spike width distribution (left panel), pCDDF (middle
+panel) and FPS (right panel). The blue, black and red solid curves represent the observed spike statistics obtained using a low continuum
+(Fcont − δFcont ), the best fit continuum (Fcont ) and a high continuum (Fcont + δFcont ) respectively. The normalization of the FPS and
+pCDDF are sensitive to the observed continuum placement. The continuum placement does not have a strong effect on the peak of
+the spike width distribution. We also show the effect of rescaling the inferred optical depth in the low and high continuum models to
+match mean flux inferred from the best fit continuum model. The “corrected” low and high spike statistics are shown by blue and red
+dotted lines, respectively. The distribution for the corrected low and high continuum model are in good agreement with the distribution
+corresponding to the best fit continuum.
+
+1.0
+
+∆z (log NfHI )
+
+at ∆ = 0.3. As a result it is hard to disentangle the effect
+of variation in T0 from γ. To circumvent this problem, we
+pivot the TDR at the densities where spikes are most sensitive i.e., ∆ = 0.3. Thus we use a power-law TDR of the
+form T = T0.3 [∆/0.3]γ−1 . The left and right panels in Fig.
+B2 show that the spike width distribution and FPS are less
+sensitive to the variation in γ. We see a slight variation in
+the shape of the pCDDF for a variation in γ, such that high
+e HI systems are less frequent for γ = 1.6 than for γ = 1.
+log N
+This is a direct consequence of the lower temperature at
+∆ < 0.3, since the spikes are more sensitive to ∆ < 0.3 than
+∆ > 0.3.
+
+0.5
+
+0.0
+12.0
+
+12.5
+
+13.0
+
+13.5
+
+log (NfHI /cm −2 )
+
+5.3 < z < 5.5
+5.5 < z < 5.7
+5.7 < z < 5.9
+14.0
+14.5
+
+Figure A5. Calculation of sensitivity curve from observational
+sample in the three different redshift bins. The sensitivity curve
+is calculated by summing the total redshift path length in the
+observed spectra which lies below the limiting equivalent width.
+The limiting equivalent width is a theoretically expected equivalent width calculated from the curve of growth. The sensitivity
+curve is shown for a 3σ detection level. The area under the sensitivity curve is used to calculate the H i pseudo-column density
+distribution function.
+
+around the mean density without then varying the temperature at the density where the spikes are most sensitive.
+For example, the spikes in the optically thin simulations
+are most sensitive to ∆ ∼ 0.3 (See Fig. 5). If we vary γ
+with the normalization of the TDR pivoted at ∆ = 1, (i.e.
+the T0 value), we obtain a large variation in temperature
+
+The effect of the photo-ionization rate ΓHI is illustrated
+in Fig. B3. The heights and number of spikes (for a given
+S/N) are sensitive to ΓHI . As a result, the normalization of
+the pCDDF is mostly sensitive to ΓHI while the shape remains relatively unchanged. The normalization of the FPS
+depends on the mean transmitted flux, and since the mean
+transmitted flux varies with ΓHI the normalization of the
+FPS is also different. However, the spike width distribution
+is relatively robust to large variations in ΓHI , allowing one to
+minimize the degeneracy between ΓHI and thermal parameters. Note the effect of continuum placement uncertainty is
+very similar to the variation in ΓHI (see §A).
+We show the recovery of T0 and γ for fiducial hot and
+cold model in Fig. B4. We vary TDR using ∆ field from
+default model for a range of T0 and γ. We use BPDF statistics to recover the T0 and γ from hot and cold model. Fig.
+B4 demonstrate that we can recover T0 and γ within 1σ for
+wide range of T0 and γ.
+We study the effect of pressure (or Jeans) smoothing
+in Fig. B5. We take the density and velocity fields from the
+default, hot and cold optically thin models and rescale the
+instantaneous temperatures and neutral hydrogen fractions
+MNRAS 000, 1–31 (2015)
+
+Transmission spikes in the Lyα forest
+to have the same values. Differences in the spike statistics
+due to pressure smoothing are therefore isolated from the effect of thermal broadening. In all three models reionization
+completes at z ' 6.2, following the UVB synthesis model of
+Puchwein et al. (2019), with a total energy per proton mass
+of u0 = 6.4 eV m−1
+(default), u0 = 12.4 eV m−1
+(hot) and
+p
+p
+u0 = 3.4 eV m−1
+(cold
+) deposited over the redshift interval
+p
+6 < z < 13 (cf. Nasir et al. 2016). For comparison, Boera
+−1
+et al. (2019) have recently inferred u0 = 4.6+1.4
+−1.2 eV mp
+over the redshift interval 6 < z < 13 from new measurements of the Lyα FPS at z = 5, which is consistent
+with our default simulation at ∼ 1.3σ. Interestingly, Fig.
+B5 shows that the spike width distribution is only modestly sensitive to the pressure smoothing, despite the different integrated thermal histories in the models. This is
+in part because, relative to the IGM at z ≤ 5, gas has
+had slightly less time to dynamically respond to changes
+in the pressure following the completion of reionization at
+z = 6.2, and in part because the transmission spikes become rapidly more sensitive to the most highly underdense
+gas as redshift
+p increases (where the dynamical time scales
+as tdyn = π/Gρ ' H(z)−1 ∆−1/2 ). We estimate that systematic uncertainties in the Jeans smoothing will therefore
+impact on the recovery of T0 by at most δT0 ∼ 600 K (see
+Fig. B6). We add this uncertainty in quadrature to the final measurements we present for T0 . We have furthermore
+verified if we take a more extreme model where the IGM
+is ionized rapidly around z = 15, (i.e. the fiducial model in
+the original Sherwood simulation suite), larger differences
+in the spike width distribution due to Jeans smoothing are
+present. We argue here, however, that such an early end to
+reionization is unlikely.
+
+APPENDIX C: NUMERICAL EFFECTS
+We assess the effect of simulation box size and mass resolution on convergence of the spike statistics in Fig. C1 and
+Fig. C2. We use simulations with varying box sizes and gas
+particle masses drawn from the optically thin Sherwood simulation suite (Bolton et al. 2017). All other parameters such
+as cosmology and the UVB evolution are same for the simulations. The spike statistics are well converged for our fiducial box size and mass resolution, which corresponds to the
+L40N2048 model.
+Fig. C3 tests our method of constraining T0 −γ from the
+spike width distribution using a χ2 minimization process by
+2
+evaluating the likelihood L = e−χ /2 . The best fit model
+2
+2
+corresponds to a minimum χ (χmin ), where our 1σ constraints on T0 − γ are contours of constant χ2 = χ2min + ∆χ2
+where we assume ∆χ2 = 2.30 for 2 degrees of freedom (Avni
+1976; Press et al. 1992). To a good approximation, we confirm the χ2 distribution in T0 − γ plane is Gaussian.
+
+APPENDIX D: DETAILED COMPARISON OF
+STATISTICS FROM OBSERVATIONS WITH
+MODELS
+In this section, we first discuss quantitatively how well the
+spike width distribution, pCDDF and FPS statistics from
+MNRAS 000, 1–31 (2015)
+
+25
+
+optically thin and radiative transfer simulations fit the observed distributions. Table D1 shows the goodness of fit (reduced χ2 ) between model and observed statistics in the three
+redshift bins. The goodness of fit between observed spike
+width distribution for the default model is significantly better than that for the hot and cold models in all 3 redshift
+bins. The pCDDF and FPS statistics of the hot model are in
+somewhat better agreement with observations than the corresponding statistics of the default and cold models. Overall
+the default and hot models therefore show a better fit than
+the cold model. All three statistics for the aton model show
+a smaller χ2dof than the patchy models, but the fits are generally reasonably good for both models. An exception to this is
+noticeable in the z = 5.6 redshift bin, where the spike width
+distribution and FPS are marginally better fit by the patchy
+than by the aton model. When we compare the goodness of
+fit between optically thin and radiative transfer simulations
+we find the following. Formally the spike width distribution
+in the aton model is a better fit to observations than the
+default model (except at z = 5.6). The χ2dof of FPS and
+pCDDF statistics for the hot models are overall comparable
+to that from the aton model. However, FPS and pCDDF
+statistics are also sensitive to continuum placement uncertainty as shown in appendix A. Hence in this work, we have
+focused on the spike width distribution for constraining T0
+and γ. As discussed in detail in the main text we consider
+the radiative transfer models aton and patchy as more physical than the default and hot model because they account for
+spatial fluctuations of the UVB and TDR. As discussed in
+the introduction such fluctuations are important for producing the observed τeff,HI scatter and long absorption troughs
+at these redshifts.
+
+26
+
+Gaikwad et.al
+
+Effect of T0 on Spike Statistics :
+
+T0 = 25000 K
+
+T0 = 15000 K
+
+T0 = 10000 K
+
+10 3
+
+1
+
+k P F ( k) / π
+
+γ = 1. 50
+Γ 12 = 0. 362
+
+10 2
+
+f(NfHI , z)
+
+dP/dlog b
+
+2
+
+0
+
+5.5 < z < 5.7
+
+10 1
+
+γ = 1. 50
+Γ 12 = 0. 362
+0.5
+
+1.0
+
+1.5
+
+log b (km s −1 )
+
+5.5 < z < 5.7
+
+10 1
+
+5.5 < z < 5.7
+
+2.0
+
+10 0
+
+12.7
+
+13.1
+
+13.5
+
+log (NfHI /cm −2 )
+
+γ = 1. 50
+Γ 12 = 0. 362
+10 0
+
+10 -1
+
+13.9
+
+10 -2
+
+10 -1
+
+k (km −1 s)
+
+10 0
+
+Figure B1. The effect of varying T0 on spike statistics, showing the spike width distribution (left panel), pCDDF (middle panel) and
+FPS (right panel).
+
+Effect of γ on Spike Statistics :
+
+γ = 1.00
+
+γ = 1.30
+
+γ = 1.60
+
+10 1
+
+5.5 < z < 5.7
+T0. 3 = 10000 K
+
+10 3
+
+5.5 < z < 5.7
+
+1
+
+f(NfHI , z)
+
+dP/dlog b
+
+10 2
+
+0
+
+10 0
+
+k P F ( k) / π
+
+T0. 3 = 10000 K
+Γ 12 = 0. 362
+
+2
+
+5.5 < z < 5.7
+T0. 3 = 10000 K
+
+10 1
+
+Γ 12 = 0. 362
+
+0.5
+
+1.0
+
+1.5
+
+log b (km s −1 )
+
+2.0
+
+12.7
+
+13.1
+
+13.5
+−2
+
+log (N HI /cm )
+f
+
+Γ 12 = 0. 362
+
+10 0
+
+10 -1
+
+13.9
+
+10 -2
+
+10 -1
+
+−1
+
+k (km s)
+
+10 0
+
+Figure B2. As for Fig. B1, except the effect of variation in γ on the spike statistics is illustrated.
+
+Effect of Γ12 on Spike Statistics :
+
+Γ 12 = 0.362
+
+Γ 12 = 0.500
+
+Γ 12 = 0.750
+
+10 3
+
+1
+
+10 2
+
+10 1
+
+k P F ( k) / π
+
+T0 = 10000 K
+γ = 1. 50
+
+f(NfHI , z)
+
+dP/dlog b
+
+2
+
+0
+
+5.5 < z < 5.7
+T0 = 10000 K
+γ = 1. 50
+
+0.5
+
+1.0
+
+1.5
+
+log b (km s )
+−1
+
+5.5 < z < 5.7
+T0 = 10000 K
+
+10 1
+
+5.5 < z < 5.7
+
+2.0
+
+10 0
+
+12.7
+
+13.1
+
+13.5
+−2
+
+log (N HI /cm )
+f
+
+13.9
+
+γ = 1. 50
+
+10 0
+
+10 -1
+
+10 -2
+
+10 -1
+
+−1
+
+k (km s)
+
+10 0
+
+Figure B3. As Fig. B1 except the effect of variation in Γ12 on the spike statistics is illustrated.
+
+MNRAS 000, 1–31 (2015)
+
+Transmission spikes in the Lyα forest
+
+HOT (Recovery)
+
+HOT (True Value)
+
+5.3 < z < 5.5
+
+1.6
+
+COLD (Recovery)
+
+27
+
+COLD (True Value)
+
+5.5 < z < 5.7
+
+5.7 < z < 5.9
+
+1.4
+
+γ
+
+1.2
+1.0
+0.8
+0.6
+
+6000 9000 12000 15000 18000 6000 9000 12000 15000 18000 6000 9000 12000 15000 18000
+
+T0 (K)
+
+T0 (K)
+
+T0 (K)
+
+Figure B4. As for panel A in Fig. 9, except the recovery of T0 and γ from hot and cold model is illustrated. The TDR is varied using
+∆ field from default model for a given value of T0 and γ. We use BPDF statistics to recover the T0 and γ from hot and cold model. We
+can recover T0 and γ within 1σ for wide range of T0 and γ.
+
+DEFAULT (Power Law TDR)
+
+COLD (Power Law TDR)
+
+HOT (Power Law TDR)
+
+10 3
+
+10 2
+
+1
+
+0
+
+10 0
+
+k P F ( k) / π
+
+T0 = 14000 K
+γ = 1. 00
+
+f(NfHI , z)
+
+dP/dlog b
+
+2
+
+5.5 < z < 5.7
+T0 = 14000 K
+
+10 1
+
+γ = 1. 00
+
+0.5
+
+1.0
+
+1.5
+
+log b (km s )
+−1
+
+5.5 < z < 5.7
+T0 = 14000 K
+
+10 1
+
+5.5 < z < 5.7
+
+2.0
+
+12.7
+
+13.1
+
+13.5
+−2
+
+log (N HI /cm )
+f
+
+γ = 1. 00
+
+10 0
+
+10 -1
+
+13.9
+
+10 -2
+
+10 -1
+
+−1
+
+k (km s)
+
+10 0
+
+Figure B5. As for Fig. B1 except the effect of variation in the pressure smoothing scale on the spike statistics is illustrated.
+
+Table D1. Reduced χ2 (i.e., χ2 per degree of freedom) between model and observed statistics
+z = 5.4
+
+z = 5.6
+
+z = 5.8
+
+Simulation
+
+b PDF
+
+pCDDF
+
+FPS
+
+b PDF
+
+pCDDF
+
+FPS
+
+b PDF
+
+pCDDF
+
+FPS
+
+default
+cold
+hot
+aton
+patchy
+
+2.27
+14.69
+5.10
+1.91
+3.60
+
+4.01
+15.24
+1.60
+2.06
+3.11
+
+1.00
+6.69
+0.62
+0.63
+1.52
+
+1.10
+10.08
+5.26
+1.51
+1.17
+
+0.68
+2.82
+0.57
+0.55
+0.74
+
+0.84
+0.79
+1.34
+1.66
+1.59
+
+0.88
+11.40
+1.12
+0.49
+1.44
+
+0.49
+1.47
+0.31
+0.35
+0.92
+
+0.52
+0.89
+0.36
+0.24
+0.39
+
+MNRAS 000, 1–31 (2015)
+
+28
+
+Gaikwad et.al
+
+1.6
+
+DEFAULT (TDR Rescaling)
+
+COLD (TDR Rescaling)
+
+5.3 < z < 5.5
+
+5.5 < z < 5.7
+
+HOT (TDR Rescaling)
+
+5.7 < z < 5.9
+
+1.4
+
+γ
+
+1.2
+1.0
+0.8
+0.6
+
+6000 9000 12000 15000 18000 6000 9000 12000 15000 18000 6000 9000 12000 15000 18000
+
+T0 (K)
+
+T0 (K)
+
+T0 (K)
+
+Figure B6. As for panel A in Fig. 9, except the effect of variation in the pressure smoothing scale on the T0 − γ constraints is quantified
+in 3 redshift bins.
+
+L20N512
+10 3
+
+L40N1024
+
+L80N2048
+
+10 1
+
+1
+0
+
+k P F ( k) / π
+
+10 2
+
+2
+
+5.5 < z < 5.7
+SHERWOOD
+0.5
+
+1.0
+
+1.5
+
+log b (km s −1 )
+
+2.0
+
+5.5 < z < 5.7
+SHERWOOD
+
+10 1
+
+f(NfHI , z)
+
+dP/dlog b
+
+5.5 < z < 5.7
+SHERWOOD
+
+10 0
+
+12.7
+
+13.1
+
+13.5
+
+log (NfHI /cm −2 )
+
+13.9
+
+10 0
+
+10 -1
+
+10 -2
+
+10 -1
+
+k (km −1 s)
+
+10 0
+
+Figure C1. The effect of box size on the spike width distribution (left panel), pCDDF (middle panel) and FPS (right panel) in the
+Sherwood simulation suite at z = 5.6, for box sizes of 20h−1 cMpc (L20N512), 40h−1 cMpc (L40N1024) and 80h−1 cMpc (L80N2048) at
+fixed mass resolution, mgas ∼ 7.97 × 105 M . The results are relatively well converged for the spike width distribution.
+
+MNRAS 000, 1–31 (2015)
+
+Transmission spikes in the Lyα forest
+L40N512
+10 3
+
+L40N1024
+
+L40N2048
+
+0
+
+k P F ( k) / π
+
+10 2
+
+10 1
+
+1
+
+5.5 < z < 5.7
+SHERWOOD
+0.5
+
+1.0
+
+1.5
+
+log b (km s −1 )
+
+2.0
+
+5.5 < z < 5.7
+SHERWOOD
+
+10 1
+
+f(NfHI , z)
+
+dP/dlog b
+
+5.5 < z < 5.7
+SHERWOOD
+2
+
+10 0
+
+12.7
+
+13.1
+
+13.5
+
+log (NfHI /cm −2 )
+
+29
+
+13.9
+
+10 0
+
+10 -1
+
+10 -2
+
+10 -1
+
+k (km −1 s)
+
+10 0
+
+Figure C2. The effect of mass resolution on the spike width distribution (left panel), pCDDF (middle panel) and FPS (right panel) in
+the Sherwood simulation suite at z = 5.6, for a gas particle mass of mgas ∼ 6.38 × 106 M (L40N512), mgas ∼ 7.97 × 105 M (L40N1024)
+and mgas ∼ 9.97 × 104 M (L40N2048) for a fixed box size of 40h−1 cMpc. High mass resolution is important for correctly resolving the
+widths of the transmission spikes.
+
+MNRAS 000, 1–31 (2015)
+
+Gaikwad et.al
+1.6
+
+1.5
+
+1.5
+
+2 = 8. 44
+χmin
+
+1.2
+
+1.4
+
+γ
+
+1.3
+
+0.9
+
+1.2
+0.6
+
+1.1
+1.0
+
+0.3
+
+0.9
+0.8
+
+= e −χ 2 /2 (in 10 −2 )
+
+30
+
+6000
+
+9000
+
+T0 (K)
+
+12000
+
+15000
+
+0.0
+
+2
+
+Figure C3. The likelihood L = e−χ /2 obtained by comparing
+the simulated spike width distribution to observations at 5.3 ≤
+z ≤ 5.5. The best fit model corresponds to model with χ2min =
+8.44 (yellow star). The black dashed line shows the contours of
+χ2min + ∆χ2 = 10.7 where ∆χ2 = 2.30 for 2 degrees of freedom
+(χ2dof ∼ 1.05). The blue dashed line shows 1σ constraints on
+T0 − γ assuming χ2 (and hence L ) is Gaussian distributed. To
+a good approximation, the χ2 distribution in the T0 − γ plane is
+Gaussian. The grid shows the sampling of points in T0 − γ plane
+used to obtain the χ2 field.
+
+MNRAS 000, 1–31 (2015)
+
+Transmission spikes in the Lyα forest
+This paper has been typeset from a TEX/LATEX file prepared by
+the author.
+
+MNRAS 000, 1–31 (2015)
+
+31
+
+

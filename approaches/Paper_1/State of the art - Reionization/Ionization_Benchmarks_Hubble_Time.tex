@@ -1,0 +1,176 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=2.1cm]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{amsmath,amssymb,booktabs,tabularx}
+\usepackage{xcolor}
+\usepackage{microtype}
+\usepackage{fancyhdr}
+\usepackage[colorlinks=true,urlcolor=blue!55!black,linkcolor=blue!55!black,citecolor=blue!55!black]{hyperref}
+\definecolor{ink}{HTML}{163B50}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{6pt}
+\setlength{\headheight}{14pt}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small\textcolor{ink}{Reionization: ionization-rate benchmarks}}
+\fancyhead[R]{\small $z\simeq5.5$}
+\fancyfoot[C]{\small\thepage}
+\newcommand{\Gyr}{\mathrm{Gyr}}
+\newcommand{\HI}{\mathrm{HI}}
+\newcommand{\HII}{\mathrm{HII}}
+\begin{document}
+\thispagestyle{plain}
+{\LARGE\bfseries\textcolor{ink}{Ionization rates near the end\\[3pt] of reionization}}\par
+{\large Global budget per Hubble time and photoionization rate at $z=5.5$}
+
+At $z=5.5$, the observational benchmarks considered here are approximately
+\textbf{5 ionizing photons per hydrogen nucleus per Hubble time} for the
+global photon supply, and $\boldsymbol{\Gamma_{\HI}\simeq
+3.4\times10^{-13}\,\mathrm{s}^{-1}}$ per neutral hydrogen atom.
+The conventional recombination-maintenance requirement is lower.
+These values retain the cited papers' assumptions; they do not select a
+reionization history for the research project.
+
+\section*{1. Global budget per hydrogen nucleus per Hubble time}
+Define the Hubble time at the epoch of interest and the dimensionless
+photon-supply rate as
+\begin{equation}
+ t_H(z)\equiv\frac{1}{H(z)},\qquad
+ \mathcal N_H(z)\equiv
+ \frac{\dot n_{\rm ion}(z)}{\bar n_{\rm H}}\,t_H(z).
+\end{equation}
+Here $\dot n_{\rm ion}$ is the ionizing-photon emissivity escaping into the
+intergalactic medium (IGM), and $\bar n_{\rm H}$ counts \emph{all hydrogen
+nuclei}; both densities use consistent comoving units.
+
+\textbf{Observationally inferred supply.}
+Gaikwad et al.\ \cite{Gaikwad2023}, Table 3, report
+\begin{equation}
+ \dot n_{\rm ion}(5.5)=
+ (0.587^{+0.417}_{-0.149})\times10^{51}
+ \,\mathrm{photons\,s^{-1}\,cMpc^{-3}}.
+\end{equation}
+Using their cosmology ($h=0.678$, $\Omega_m=0.308$,
+$\Omega_\Lambda=0.692$, $\Omega_b=0.0482$, and helium mass fraction
+$Y=0.24$) gives $t_H(5.5)=1.56\,\Gyr$ and
+\begin{equation}
+ \boxed{\mathcal N_H(5.5)=5.2^{+3.7}_{-1.3}
+ \quad\text{photons per H nucleus per Hubble time}.}
+\end{equation}
+The $1\sigma$ uncertainties are propagated from the published emissivity.
+The inference uses an absorption-limited radiation field, source spectral
+index $\alpha_s=2.0\pm0.6$, and absorber-distribution slope
+$\beta_{\HI}=1.3\pm0.05$ \cite[\S6.4]{Gaikwad2023}.
+Converting the escaping photons into actual hydrogen ionizations requires
+accounting for their absorption and any secondary ionizations.
+
+\textbf{Conventional maintenance requirement.}
+A commonly used prescription assumes $C_{\HII}=3$,
+$T=20{,}000\,\mathrm K$, case-B recombination, and an electron contribution
+from singly ionized helium \cite{Robertson2015}. The numerical approximation
+\cite[Eq.\ (3)]{Lovell2018}
+\begin{equation}
+ t_{\rm rec}\simeq0.93\,\Gyr
+ \left(\frac{C_{\HII}}{3}\right)^{-1}
+ \left(\frac{T}{2\times10^4\,\mathrm K}\right)^{0.7}
+ \left(\frac{1+z}{7}\right)^{-3}
+\end{equation}
+gives $t_{\rm rec}(5.5)\simeq1.16\,\Gyr$. Using Robertson et al.'s
+cosmology to evaluate $t_H$ therefore yields
+\begin{equation}
+ \boxed{\mathcal N_{H,\rm crit}(5.5)=\frac{t_H}{t_{\rm rec}}
+ \simeq1.3
+ \quad\text{ionizations per H nucleus per Hubble time}.}
+\end{equation}
+This replaces recombinations in an already ionized IGM. Higher inferred
+clumping factors increase the requirement; Davies et al.\ \cite{Davies2024}
+infer $C\approx12$, normalized using case-B recombination at $10^4\,\mathrm K$.
+
+\textbf{Meaning of the time unit.} ``Per Hubble time'' is an instantaneous
+rate normalization, not a photon count accumulated over a Hubble time of
+evolving emissivity. Here $t_H$ means $1/H(z)$, not the present-day Hubble
+time or the age of the Universe.
+
+\newpage
+\section*{2. Photoionization rate per neutral hydrogen atom}
+At the same redshift, Gaikwad et al.\ \cite[Table 3]{Gaikwad2023} report
+\begin{equation}
+ \boxed{\Gamma_{\HI}(5.5)=
+ \left(3.44^{+2.19}_{-1.30}\right)\times10^{-13}
+ \,\mathrm{s}^{-1}.}
+\end{equation}
+The central value corresponds to a photoionization timescale
+\begin{equation}
+ \Gamma_{\HI}^{-1}\simeq92{,}000\,\mathrm{yr}
+\end{equation}
+for a neutral atom exposed to that background. The rate is inferred from
+Ly$\alpha$-forest observations through the authors' simulation modeling;
+the quoted uncertainties are $1\sigma$.
+
+The normalization differs from the global budget because $\Gamma_{\HI}$
+acts on \textbf{neutral atoms}. Locally, the photoionization-event rate per
+total hydrogen nucleus is $x_{\HI}\Gamma_{\HI}$, where $x_{\HI}$ is the
+neutral fraction. A global value requires the appropriate spatial average;
+one cannot generally replace this average by the product of separately
+averaged quantities.
+
+\section*{What these benchmarks establish}
+\renewcommand{\arraystretch}{1.25}
+\begin{tabularx}{\textwidth}{@{}X l@{}}
+\toprule
+\textbf{Quantity at $z=5.5$} & \textbf{Benchmark} \\
+\midrule
+Inferred escaping-photon supply per H nucleus per $t_H$
+& $5.2^{+3.7}_{-1.3}$ \\
+Conventional maintenance ionizations per H nucleus per $t_H$
+& $\simeq1.3$ \\
+Photoionization rate per neutral H atom
+& $(3.44^{+2.19}_{-1.30})\times10^{-13}\,\mathrm{s}^{-1}$ \\
+\bottomrule
+\end{tabularx}
+
+\textbf{Completion by $z\simeq5.5$ still requires an ionization history.}
+In the conventional photon-budget model \cite{Robertson2015,Davies2024},
+\begin{equation}
+ \frac{dQ_{\HII}}{dt}=
+ \frac{\dot n_{\rm ion}}{\bar n_{\rm H}}-
+ \frac{Q_{\HII}}{t_{\rm rec}}.
+\end{equation}
+The maintenance benchmark follows by setting $Q_{\HII}=1$ and
+$dQ_{\HII}/dt=0$. Reaching that state also depends on the earlier photon
+supply, initial ionized fraction, and recombination history. Neither the
+maintenance benchmark nor the measured $\Gamma_{\HI}$ alone establishes
+that enough earlier ionizations occurred.
+
+\begin{thebibliography}{9}
+\small
+\setlength{\itemsep}{3pt}
+\bibitem{Gaikwad2023}
+P. Gaikwad et al.\ (2023).
+\emph{Measuring the photo-ionization rate, neutral fraction and mean free
+path of HI ionizing photons at $4.9\leq z\leq6.0$ from a large sample of
+XShooter and ESI spectra}. Table 3 and \S6.4.
+\href{https://arxiv.org/abs/2304.02038}{arXiv:2304.02038}.
+
+\bibitem{Robertson2015}
+B. E. Robertson et al.\ (2015).
+\emph{Cosmic Reionization and Early Star-Forming Galaxies:
+A Joint Analysis of New Constraints from Planck and the Hubble Space Telescope}.
+Eq.\ (4) and adopted recombination prescription.
+\href{https://arxiv.org/abs/1502.02024}{arXiv:1502.02024}.
+
+\bibitem{Lovell2018}
+M. R. Lovell et al.\ (2018).
+\emph{ETHOS---an effective theory of structure formation: predictions for
+the high-redshift Universe---abundance of galaxies and reionization}.
+Eq.\ (3).
+\href{https://arxiv.org/abs/1711.10497}{arXiv:1711.10497}.
+
+\bibitem{Davies2024}
+F. B. Davies, S. E. I. Bosman, and S. R. Furlanetto (2024).
+\emph{The Predicament of Absorption-dominated Reionization II:
+Observational Estimate of the Clumping Factor at the End of Reionization}.
+\href{https://arxiv.org/abs/2406.18186}{arXiv:2406.18186}.
+\end{thebibliography}
+\end{document}

@@ -1,0 +1,1937 @@
+Draft version May 10, 2024
+Typeset using LATEX twocolumn style in AASTeX631
+
+A strong He II λ1640 emitter with extremely blue UV spectral slope at z = 8.16: presence of Pop III stars?
+Xin Wang,1, 2, 3 Cheng Cheng,4 Junqiang Ge,3 Xiao-Lei Meng,3 Emanuele Daddi,5 Haojing Yan,6 Zhiyuan Ji,7
+Yifei Jin,8 Tucker Jones,9 Matthew A. Malkan,10 Pablo Arrabal Haro,11 Gabriel Brammer,12, 13
+Masamune Oguri,14, 15 Meicun Hou,16 and Shiwu Zhang17
+
+arXiv:2212.04476v2 [astro-ph.GA] 9 May 2024
+
+1 School of Astronomy and Space Science, University of Chinese Academy of Sciences (UCAS), Beijing 100049, China
+2 Institute for Frontiers in Astronomy and Astrophysics, Beijing Normal University, Beijing 102206, China
+3 National Astronomical Observatories, Chinese Academy of Sciences, Beijing 100101, China
+4 Chinese Academy of Sciences South America Center for Astronomy, National Astronomical Observatories, CAS, Beijing 100101, China
+5 Laboratoire AIM, CEA/DSM-CNRS-Université Paris Diderot, IRFU/Service d’Astrophysique, Bât. 709, CEA Saclay, F-91191
+
+Gif-sur-Yvette Cedex, France
+6 Department of Physics and Astronomy, University of Missouri-Columbia, Columbia, MO 65211, USA
+7 Steward Observatory, University of Arizona, 933 North Cherry Avenue, Tucson, AZ 85721, USA
+8 Institute for Theory and Computation, Harvard-Smithsonian Center for Astrophysics, Cambridge, MA 02138, USA
+9 Department of Physics and Astronomy, University of California Davis, 1 Shields Avenue, Davis, CA 95616, USA
+10 Department of Physics and Astronomy, University of California Los Angeles, 430 Portola Plaza, Los Angeles, CA 90095, USA
+11 NSF’s National Optical-Infrared Astronomy Research Laboratory, 950 N. Cherry Ave., Tucson, AZ 85719, USA
+12 Cosmic Dawn Center (DAWN), Denmark
+13 Niels Bohr Institute, University of Copenhagen, Jagtvej 128, DK-2200 Copenhagen N, Denmark
+14 Center for Frontier Science, Chiba University, 1-33 Yayoi-cho, Inage-ku, Chiba 263-8522, Japan
+15 Department of Physics, Chiba University, 1-33 Yayoi-Cho, Inage-Ku, Chiba 263-8522, Japan
+16 Kavli Institute for Astronomy and Astrophysics, Peking University, Beijing 100871, China
+17 Research Center for Astronomical Computing, Zhejiang Laboratory, Hangzhou 311100, China
+
+Abstract
+Cosmic hydrogen reionization and cosmic production of first metals are major phase transitions of the
+universe occurring during the first billion years after the Big Bang, however these are still underexplored
+observationally. Using the JWST NIRSpec prism spectroscopy, we report the discovery of a sub-L∗
+galaxy at zspec = 8.1623 ± 0.0007, dubbed RXJ2129-z8HeII, via the detection of a series of strong
+rest-frame UV/optical nebular emission lines and the clear Lyman break. RXJ2129-z8HeII shows a
+pronounced UV continuum with an extremely steep (i.e. blue) spectral slope of β = −2.53+0.06
+−0.07 , the
+steepest amongst all spectroscopically confirmed galaxies at zspec ≳ 7, in support of its very hard
+ionizing spectrum that could lead to a significant leakage of its ionizing flux. Therefore, RXJ2129z8HeII is representative of the key galaxy population driving the cosmic reionization. More importantly,
+we detect a strong He ii λ1640 emission line in its spectrum, one of the highest redshifts at which such
+a line is robustly detected. Its high rest-frame equivalent width (EW = 21 ± 4 Å) and extreme
+flux ratios with respect to UV metal and Balmer lines raise the possibility that part of RXJ2129z8HeII ’s stellar populations could be Pop III-like. Through careful photoionization modeling, we show
+that the physically calibrated phenomenological models of the ionizing spectra of Pop III stars with
+strong mass loss can successfully reproduce the emission line flux ratios observed in RXJ2129-z8HeII.
+Assuming the Eddington limit, the total mass of the Pop III stars within this system is estimated to
+be 7.8 ± 1.4 × 105 M⊙ . To date, this galaxy presents the most compelling case in the early universe
+where trace Pop III stars might coexist with metal-enriched populations.
+
+Keywords: High-redshift galaxies; Reionization; Population III stars; Metallicity
+
+Corresponding author: Xin Wang
+xwang@ucas.ac.cn
+
+2
+1. INTRODUCTION
+
+The identification and characterization of the first
+generation of stars (Pop III) are of paramount importance as this quest provides key insights into the stellar
+evolution physics in the early Universe (Bromm 2013).
+The observational signatures expected from early galaxies dominated by these young, metal-free, massive Pop
+III stars are highly associated with very hard ionizing
+flux, given the high effective temperature of Pop III
+stars and a top-heavy initial mass function (Nakajima
+& Maiolino 2022; Zackrisson et al. 2023). This flux can
+ionize the interstellar medium (ISM) and produce strong
+hydrogen and helium emission lines, such as strong Lyα,
+Balmer lines (e.g., Hα, Hβ), He ii λ1640 (:= He ii)
+and He ii λ4686, without the corresponding metal emission lines (Schaerer 2002, 2003; Zackrisson et al. 2011).
+It is believed that Pop III galaxies with stellar mass
+(M∗ ) ∼ 104−5 M⊙ consisting of a pure Pop III stellar
+population and no metal-enriched ones, are extremely
+hard to detect, even with JWST , unless they are substantially magnified by gravitational lensing (Windhorst
+et al. 2018; Vikaeus et al. 2022). More massive Pop
+III galaxies with M∗ ≳ 106 M⊙ can be first photometrically selected due to their blue UV continuum, and spectroscopically confirmed by their high ionization nebular
+emission lines and nebular continuum (Trussler et al.
+2023). Yet they should be really rare, with their characteristic nebular emission features fading within a short
+time scale of ∼10 Myrs at z ∼ 8 − 9 (Katz et al. 2023).
+Recent cosmological hydrodynamic simulations show
+that Pop III stars can continue to form also at later
+epochs, provided that pockets of primordial gas can be
+preserved during cosmic evolution. This is possible either in halos that gain their gas from regions not yet
+polluted by outflows from nearby star-forming galaxies,
+or in halos whose progenitors had a suppression of star
+formation (Ciardi & Ferrara 2005; Venditti et al. 2023).
+This naturally leads to a type of “hybrid” Pop III galaxies, which have better chances to be identified using current facilities. One important clue of such “hybrid” Pop
+III stellar populations is the existence of the strong He ii
+line, with rest-frame equivalent width (EW) as high as
+100-150 Å, powered by the hard ionizing background
+radiation from the Pop III stars.
+At low redshifts, such broad nebular He ii emission is
+very rare and its spectral properties are usually consistent with the ionizing sources of Wolf-Rayet stars,
+stripped stars, X-ray binaries, or active galactic nuclei (see e.g., Berg et al. 2016; Senchyna et al. 2019;
+Nanayakkara et al. 2019; Saxena et al. 2020). In addition, this He ii emission is usually accompanied by
+other prominent high-ionization lines such as N vλ1240,
+
+C ivλλ1548, 1551 (:= C iv), and C iii]λλ1907, 1909 (:=
+C iii]), of similar excitation energy (Sobral et al. 2015;
+Stark et al. 2015). Therefore, a clear path moving
+forward to identify Pop III stars in and beyond the
+epoch of reionization (EoR) is to search for pronounced
+He ii emission without the accompanying rest-frame UV
+metal lines that are often observed in the low-redshift
+universe.
+In this work, we present our detailed analysis of a
+galaxy (dubbed RXJ2129-z8HeII) spectroscopically confirmed at zspec = 8.1623 ± 0.0007, showing strong He ii
+emission and absence of any UV metal lines — an excellent candidate likely having a mixture of Pop II and Pop
+III stars. The overall physical properties of RXJ2129z8HeII are showcased in Table 1. This identification
+benefits from the synergy of the powerful JWST spectroscopy and the lensing magnification boost from foreground massive cluster of galaxies.
+This paper is orchestrated as follows. First in Sect. 2,
+we describe the novel JWST observations analyzed in
+this work. Then in Sect. 3 we briefly explain the lens
+model used to correct for the cluster magnification of
+our source. The details of our analysis methods and
+primary scientific results are given in Sect. 4. Finally,
+We summarize our main findings in Sect. 5. Throughout
+this paper, we adopt the standard concordance ΛCDM
+model with Ωm = 0.3, ΩΛ = 0.7, H0 = 70 km s−1
+Mpc−1 , and the AB magnitude system (Oke & Gunn
+1983).
+2. OBSERVATIONS AND DATA REDUCTION
+
+The JWST observations analyzed in this work were
+acquired by a Director’s Discretionary program (DD2767; PI: P. Kelly), targeting the field of the galaxy
+cluster RXJ2129.7+0005 (henceforth RXJ2129) at z =
+0.234. The primary goal of DD-2767 is to measure the
+light curves and spectra of a strongly lensed supernova
+SN 2022riv at z = 1.52 Kelly et al. (2022a,b) discovered in the RXJ2129 field, by a HST SNAP program
+(GO-16729; PI P. Kelly). These observations consist
+of an imaging component using the Near-Infrared Camera (NIRCam) and a spectroscopic component using the
+Near-Infrared Spectrograph (NIRSpec), which are described in Sect. 2.1 and Sect. 2.2, respectively.
+2.1. JWST/NIRCam data reduction and mosaicing
+The imaging exposures were taken on 6 October
+2022 (UT dates quoted throughout) using the F115W,
+F150W, F200W, F277W, F356W, and F444W filters,
+covering the wavelength range of λobs ∈ [1, 5]µm. The
+exposure times are 4982 seconds for the F150W/F356W
+filters, and are 2061 seconds for the other four NIRCam
+
+3
+
+1”
+
+Figure 1. A color-composite NIRCam image of the RXJ2129 galaxy cluster. We use the F115W+F150W, F200W+F277W,
+and F356W+F444W imaging as the blue, green, and red colors, respectively. The regions of formally infinite magnification at
+z = 8.16 predicted by the up-to-date GLAFIC lens model (Oguri 2010, 2021), are represented by the magenta curves. The
+location of RXJ2129-z8HeII is highlighted by the red circle. It is estimated to have a magnification factor of µ = 2.26 ± 0.14
+(see Sect. 3). The inset shows a zoom-in view (3′′ ×3′′ ) of RXJ2129-z8HeII. Within this inset, we also show the orientation of
+the NIRSpec slit (0.′′ 2 × 1.′′ 4), constructed by three MSA slitlets, through which the prism spectroscopy of RXJ2129-z8HeII is
+taken by the JWST Director’s Discretionary program (DD-2767; PI: P. Kelly).
+
+filters (F115W, F200W, F277W, and F444W), equivalent to a 5-σ limiting depth of ∼29 mag. We reduce these
+NIRCam images using the standard JWST pipeline version 1.9.4 and making use of the jwst 1040.pmap context. We follow the standard three stages of the image
+data reduction pipeline calwebb detector1, calwebb image2 and calwebb image3 to calibrate each
+image and build the mosaic image of each band. Fur-
+
+thermore, we remove the “snowball”1 and the 1/f noise
+using the scripts from https://github.com/chriswillott/
+jwst. The “wisps” features2 are removed using the default wisps templates3 . We produce the imaging mosaics
+1 https://jwst-docs.stsci.edu/data-artifacts-and-features/
+
+snowballs-artifact
+2 https://jwst-docs.stsci.edu/jwst-near-infrared-camera/
+
+nircam-features-and-caveats/nircam-claws-and-wisps
+3 https://stsci.app.box.com/s/1bymvf1lkrqbdn9rnkluzqk30e8o2bne
+
+4
+Parameters
+
+Values
+
+R.A. [deg]
+Decl. [deg]
+zspec
+µ
+
+322.416266
+0.099675
+8.1623+0.0007
+−0.0007
+2.26+0.14
+−0.14
+
+Spectro-photometric analyses (Sect. 4.4)
+log(M∗ /M⊙ )
+7.75+0.06
+−0.06
+S
+AV [mag]
+0.12+0.04
+−0.04
+log(Z∗ /Z⊙ )
+-0.94+0.07
+−0.04
+tage [Myr]
+216.38+68.89
+−96.04
+MUV [mag]
+-19.58+0.03
+−0.02
+β
+-2.53+0.06
+−0.07
+LyC
+fesc
+0.16+0.03
+−0.03
+Emission line analyses (Sect. 4.5)
+EWHe ii [Å]
+21 ± 4
+fHe ii /fC iv
+>2.1 (2-σ)
+fHe ii /fC iii]
+>2.9 (2-σ)
+fHe ii /fHβ
+1.7 ± 0.4
+f[O iii] /f[O ii]
+11.7 ± 4.2
+f[O iii] /fHβ
+5.5 ± 0.8
+12+log(O/H)
+7.63+0.14
+−0.09
+SFR [M⊙ /yr]
+9.56+4.51
+−1.70
+<0.6 (1-σ)
+AN
+V [mag]
+log(ξion [erg−1 Hz])
+25.55+0.05
+−0.06
+Table 1. Physical properties of RXJ2129-z8HeII. The parameter values are given in median posterior constraints followed
+by 1-σ confidence interval (CI). The lensing magnification
+is predicted from the up-to-date GLAFIC lens model (see
+Sect. 3), which is accounted for in the estimates of these
+physical properties when necessary. All reported line flux
+ratios and limits have been corrected for dust extinction.
+
+at the 40 and 20 mas pixel scales, astrometrically aligned
+to the GAIA DR2 astrometry frame.
+In Fig. 1, we show a color-composite image produced
+from these data, where our source of interest (RXJ2129z8HeII) is highlighted in the inset zoom-in panel. Our
+source in fact has two components A and B, with A
+dominating the total flux in all filters in the NIRCam long wavelength channel. Hereafter unless otherwise specified, we use RXJ2129-z8HeII to designate its
+component A, which is targeted by NIRSpec described
+below. We also take advantage of the archival HST
+imaging obtained by the Cluster Lensing and Supernova Survey4 (CLASH, PI: M. Postman, Postman et al.
+2012). CLASH provides the imaging data in 8 filters
+taken with ACS/WFC (F775W, F814W, and F850LP)
+
+and WFC3/IR (F105W, F110W, F125W, F140W, and
+F160W). We compile a photometric catalog combining
+both the new NIRCam imaging and the existing HST
+imaging in a self-consistent manner (see Sect. 4.1). The
+image stamps of our target are displayed in the top row
+of Fig. 2.
+2.2. JWST/NIRSpec MSA spectroscopy and data
+reduction
+The follow-up JWST spectroscopy was carried out
+on 22 October 2022, using the NIRSpec instrument in
+the Multi-Object Spectroscopy (MOS) mode. RXJ2129z8HeII was among the NIRSpec targets that were preselected based on their photometric redshifts (Williams
+et al. 2022). The JWST NIRSpec observation was
+carried out using the prism disperser, which offered a
+very wide, continuous wavelength coverage of λobs ∈
+[0.6, 5.3] µm, with the resolution of R = λ/∆λ ∼
+50 − 400. In the inset of Fig. 1, we show a zoom-in
+view of RXJ2129-z8HeII with the position of the MOS
+slit superposed. The slit is composed of three shutters
+in the micro-shutter array (MSA), resulting in a total
+size of ∼ 0.′′ 2 × 1.′′ 4. The observation adopts the standard 3-point nodding pattern to facilitate background
+subtraction, and the total exposure time of 4464.2 seconds.
+We reduce the NIRSpec MSA spectroscopic data following our customized procedures. Our reduction uses
+the context file jwst 1040.pmap, which contains upto-date reference files for NIRSpec. This version of the
+reference files is considered to be a major update to the
+NIRSpec S flats, F flats, and readnoise files, which have
+been calibrated using in-flight data. First of all, the
+level-1 calwebb detector1 calibration pipeline is employed to reduce the raw exposures (uncal.fits) into
+count rate maps (CRMs, i.e., rate.fits), during which
+the detector artifacts and cosmic rays are flagged and
+removed. The resulting CRMs are visually inspected,
+and any remaining artifacts and bad pixels are manually masked. We then use the custom reduction software msaexp5 to perform the remaining steps of the
+reduction. It first preprocesses the rate images to equalize the pedestal of each exposure, identify and correct
+the “snowball” and 1/f noise features. Then it calls
+some specific modules from the standard level-2 calwebb spec2 calibration pipeline to carry out the bulk of
+the data reduction. These modules include AssignWcs,
+Extract2dStep, FlatFieldStep, PathLossStep,
+PhotomStep, which perform WCS initialization, 2D
+
+4 https://archive.stsci.edu/prepds/clash/
+5 https://github.com/gbrammer/msaexp
+
+5
+
+Hb-OIII
+
+Figure 2. JWST +HST imaging and JWST /NIRSpec spectroscopy of RXJ2129-z8HeII. Top: RXJ2129-z8HeII’s postage stamp
+images in multiple filters, cut from the HST CLASH (PI: M. Postman) and JWST /NIRCam (DD-2767; PI: P. Kelly) imaging
+mosaics. These stamps are oriented such that north is up and east is to the left, which is different from the orientation in Figure 1.
+The strong flux deficit in ACS/F814W and NIRCam/F115W bands, as compared to the other NIRCam filters indicates z ≳ 8.
+The rightmost panel in the top row zooms in on the [O iii]-Hβ line complex taken from the full NIRSpec prism 1D spectrum
+shown in the bottom row. Middle and Bottom: NIRSpec prism spectroscopy of RXJ2129-z8HeII. In the middle trace, we show
+the unsmoothed 2D prism spectra combined from the three individual slit-dithering sequence, using the up-to-date reduction
+software msaexp (see Sect. 2.2). We detect prominent emission features of [O iii] and Hβ at λobs ∼ 4.5 µm, and strong continuum
+break blueward of Lyα at λobs ∼ 1.1 µm. On the bottom row, we show the 1D spectrum optimally extracted from the 2D
+spectral trace in gray histograms with the 1-σ uncertainty in cyan. We mark the locations of multiple rest-frame UV and optical
+emission lines using the magenta dotted lines, and the Lyman break in the blue dashed line. The strong detections of [O iii]
++Hβ and the Lyman break pinpoints a secure spectroscopic redshift of RXJ2129-z8HeII to be zspec = 8.1623 ± 0.0007. Bottom
+inset: a zoom-in view on the 2D spectrum around the rest-frame UV wavelength range, where the location of the He ii line is
+marked by the red circle. The 2D spectrum is shown in unit of signal-to-noise ratio (i.e. fνobs /σνobs ) per spatial pixel, color-coded
+in the range of [-1, 10].
+
+extraction of spectra, slit-level flat-fielding, path-loss
+correction, wavelength and flux calibration of each science exposure. msaexp subsequently subtracts background from each exposure using the two associated exposures at the other dithered positions from the nodding sequence, and drizzles the background-subtracted
+science exposures onto a common wavelength grid via
+inverse-variance weighting, with outlier rejection and
+bad pixel masking. We adopt an oversampling rate of 2
+for the output wavelength grid, to Nyquist-sample the
+line spread function in order to improve the sampling
+of the emission line profiles. Finally msaexp obtains
+the 1D spectrum from the 2D combined spectral traces
+following an optimal extraction methodology (Horne
+
+1986), which uses the actual light profile of our target
+as the optimal aperture for spectral extraction. The object light profile along the cross-dispersion direction is
+modeled as a Gaussian function fit to the collapsed 2D
+spectra (summed along the dispersion direction).
+As a result, we obtain the 2D/1D prism spectra, as
+shown in the middle/bottom panels of Fig. 2, covering an uninterrupted, wide wavelength range of λobs ∈
+[0.6, 5.3] µm. For z ∼ 8 galaxies, this corresponds to
+a contiguous coverage of the rest-frame UV and optical
+spectral energy distribution (SED) at λrest ∈ [700, 6000]
+Å. We detect pronounced emission features of the [O iii]
+doublets and Hβ line complex at λobs ∼ 4.5 µm, and
+a clear continuum break at λobs ∼ 1.1 µm with promi-
+
+6
+nent continuum flux redward of the break. The identification of this continuum break as the Lyman break
+occurring at the Lyα wavelength (λrest = 1216 Å) is in
+excellent agreement with the unambiguous [O iii] +Hβ
+emission feature in the prism spectrum, leading to an
+accurate spectroscopic confirmation of RXJ2129-z8HeII
+at zspec = 8.1623 ± 0.0007, when the Universe is ∼613
+Myr years old. This puts RXJ2129-z8HeII deep in the
+EoR, when the IGM was mostly neutral hydrogen Fan
+et al. (2006); Stark (2016).
+We also perform extensive tests to verify the calibration of NIRSpec prism spectra. On one hand, we crosscheck the flux levels of our extracted spectra and that of
+our broad-band photometry from NIRCam imaging in
+the similar wavelength regime. They show good agreement with each other (within 10%; see Fig. 6). On
+the other hand, we conduct detailed investigation of
+the wavelength calibration by performing line identifications in low-z galaxies showing multiple emission lines
+across their entire prism spectra, observed in the same
+MSA mask and extracted in the same fashion. We find
+that the wavelength offset between the best-fit centroid
+and that expected for the mean redshift shows a scatter
+<0.004 µm in the observer frame, much smaller than the
+instrument resolution. So we conclude that our flux and
+wavelength calibrations are sufficiently accurate.
+3. STRONG LENSING MODELS
+
+We adopt the cluster lens model of RXJ2129 constructed using the GLAFIC software (Oguri 2010, 2021),
+updated from the initial work of Okabe et al. (2020). In
+total, 22 individual images of 7 multiply lensed background galaxies spectroscopically confirmed by Caminha et al. (2019) are used as the strong lensing constraints. The macroscopic mass model consists of one
+cluster-scale dark matter halo in the elliptical NavarroFrenk-White profile (Navarro et al. 1997), combined
+with galaxy-scale halos modeled using the pseudo-Jaffe
+profile according to the scaling relation of the velocity
+dispersion and luminosity of cluster member galaxies
+(Kawamata et al. 2017). The best-fit model is derived
+using the Markov chain Monte Carlo sampling process
+with a χ2 minimization assuming a positional uncertainty of 0.4”. A hundred additional realizations are
+also created to bootstrap the 1-σ statistical uncertainties for magnifications. As a consequence, we obtain
+the best-fit and 1-σ CI of the magnification estimates
+of RXJ2129-z8HeII to be 2.26 and [2.12, 2.40]. We also
+double check with an independent lens model built by
+the Lenstool software (Caminha et al. 2019), and derive
+consistent results.
+4. ANALYSIS AND RESULTS
+
+Imaging Filters
+
+Observed Magnitudes [ABmag]
+Component A Component B
+
+ACS/F775W
+ACS/F814W
+ACS/F850LP
+WFC3/F105W
+WFC3/F110W
+WFC3/F125W
+WFC3/F140W
+WFC3/F160W
+NIRCam/F115W
+NIRCam/F150W
+NIRCam/F200W
+NIRCam/F277W
+NIRCam/F356W
+NIRCam/F444W
+
+<26.32
+<27.57
+<27.13
+<27.57
+27.41 ± 0.26
+26.84 ± 0.28
+26.84 ± 0.27
+26.62 ± 0.20
+27.22 ± 0.31
+26.51 ± 0.12
+27.12 ± 0.20
+26.85 ± 0.13
+26.80 ± 0.11
+26.08 ± 0.11
+
+<27.72
+<27.91
+<28.00
+<28.49
+28.21 ± 0.52
+<27.75
+<27.83
+<27.84
+<28.64
+27.57 ± 0.20
+27.50 ± 0.33
+28.53 ± 0.23
+28.16 ± 0.20
+27.32 ± 0.23
+
+Table 2. Detailed photometry of RXJ2129-z8HeII separating components A and B from HST ACS optical, WFC3
+infrared, and JWST NIRCam infrared imaging. All uncertainties presented here refer to the 1-σ standard deviations.
+Upper limits are at 2-σ confidence levels.
+
+4.1. JWST/NIRCam and HST/ACS-WFC3
+photometry
+For comprehensive photometry of RXJ2129-z8HeII,
+we not only use the 6-band imaging mosaics produced
+from JWST NIRCam data, but also include the publicly released 8-band HST imaging mosaics from CLASH
+(Postman et al. 2012). We first transform the CLASH
+0.065” imaging mosaics to mosaics on 0.04” plate scale,
+and then PSF-match the 8 HST ACS/WFC3 filters
+and 6 JWST /NIRCam filters to the F444W resolution (FWHM = 0.14”). We utilize a window function to remove the high-frequency noise in the Fourier
+domain.
+We modify the rms images in order to
+match the F444W resolution
+q for every other filters us2
+ing RMSF444W,matched = ΣWi,F444W
+∗ RMS2i , where
+RMSF444W,matched and RMSi are the rms after PSFmatching and the original rms in filter i respectively,
+Wi,F444W is the kernel used to match all PSFs to that
+of the F444W filter through PSFF444W,matched = PSFi ∗
+Wi,F444W .
+In the JWST NIRCam F200W image, RXJ2129z8HeII shows two components, “A” and “B”, which are
+marked by the arrows in the F200W stamp shown in
+Fig. 2. The JWST NIRSpec MOS slit falls on component A, which is also predominant in the total flux in
+the long-wavelength NIRCam filters. We use the F200W
+image as the detection image and obtain photometry for
+the two components separately. To maximize the detec-
+
+7
+
+Figure 3. We compare the photometry for both components of RXJ2129-z8HeII, normalized at their individual F200W flux. In
+each filter, the data points are slightly offset in wavelength for clearer visualization. The photometry suggests that component
+B has comparably blue UV continuum, yet possibly with substantially fainter oxygen lines in the rest-frame optical (probed by
+F444W), indicating that component B is more metal poor than A. Also, component B’s SED shape might accommodate He ii
+with similar equivalent width, albeit at lower confidence.
+
+tion SNRs, fluxes in each filter are measured within fixed
+apertures of 2×FWHM of the F444W image (0.28′′ )
+in diameter. Furthermore, the flux is dust corrected
+for galactic extinction through Fi,cor. = Fi × 10(Ai /2.5) ,
+where Ai is the extinction in the i-th band (Cardelli et al.
+1989). The resultant photometric measurements of the
+two components of RXJ2129-z8HeII is presented in Table 2. For filters with no detections, we report the 2-σ
+upper limits. The NIRCam photometry normalized at
+their individual F200W flux is shown in Fig. 3.
+4.2. Photometric redshift estimates
+We use the EAzY software (Brammer et al. 2008)
+to estimate the photometric redshift from the broadband photometry presented in Table 2. All together,
+we use the HST filters ACS/F775W, ACS/F814W,
+ACS/F850LP,
+WFC3/F105W,
+WFC3/F110W,
+WFC3/F125W,
+WFC3/F140W,
+WFC3/F160W,
+as well as the JWST NIRCam filters F115W,
+F150W, F200W, F277W, F356W and F444W. We
+adopt the standard set of galaxy SED templates
+eazy v1.1 lines.spectra.param, which includes
+star-forming galaxies with strong emission lines. The
+resulting photometric redshifts of components A and
+B are zphot = 8.35 ± 0.29 and zphot = 8.93 ± 0.91,
+respectively (see Fig. 4), in good agreement with the
+
+spectroscopic redshift that we derive from the NIRSpec prism spectroscopy.
+As shown in Fig. 4, the
+model and observed photometry for the component A
+of RXJ2129-z8HeII shows high consistency, except in
+filters NIRCam/F150W and WFC3/F160W, indicating
+strong emission features at λobs ∼ 1.5µm. The component B shows similar excess in observed photometry in
+the bluest NIRCam bands.
+4.3. Source morphology
+As shown in the multiple image stamps displayed in
+the upper panels of Fig. 2, the entire RXJ2129-z8HeII
+galaxy consists of two components: A and B, with the
+former dominating the flux in rest-frame optical probed
+by the NIRCam long wavelength channels, and the latter clearly manifesting in the rest-frame UV covered
+by the short wavelength channels, especially F150W.
+Therefore, our morphology analyses are performed in
+two NIRCam bands, namely, F150W and F444W, representing the rest-frame UV and optical light profiles of
+our galaxy, respectively. We use Galfit (Peng et al.
+2002) to model both components in F150W. First, two
+models are chosen to fit component A simultaneously.
+One is a Sérsic profile describing the nucleated emission
+in the center with a Sérsic index (n) of 4, an effective
+radius (Re ) of 0.′′ 048, an axis ratio (b/a) of 0.85 and a po-
+
+8
+
+Figure 4. EAZY fit to the broad-band photometry of RXJ2129-z8HeII, performed on the components A and B separately.
+The red points with error bars correspond to observed magnitudes with 1-σ measurement uncertainties, whereas the triangles
+represents 2-σ upper limits, all given in Table 2. The blue curve in each panel represents the best-fit SED model, with the open
+circles showing the model photometry in respective filters. The inset panel shows the probability distribution function of the
+photometric redshift, i.e., P (z). The photometric redshift constraints of the two components are both in good agreement with
+zspec = 8.1623 determined from the NIRSpec prism spectroscopy of component A. This strongly suggests that component B is
+also part of the galaxy RXJ2129-z8HeII.
+
+sition angle (θ) of -48.8 deg. An exponential disk model
+is adopted to fit the underlying extended structure with
+disk scale-length (Rs ) of 0.′′ 08, b/a of 0.26 and θ of -50.4
+deg. Component B is well reconstructed with a Sérsic
+profile (n = 4, Re = 0.′′ 047, b/a = 0.86, θ = -50.8 deg)
+and an exponential disk model (Rs = 0.′′ 065, b/a = 0.28,
+θ = -48.7 deg). The resulting model residual removing
+both components is shown in the upper right panel of
+Fig. 5.
+The inset of Fig. 1 shows the position of the NIRSpec MOS slit with respect to RXJ2129-z8HeII, which
+primarily covers its component A. As implied by the
+observed prism spectra shown in the upper panel of
+Fig. 2, the broad-band flux of the NIRCam F444W filter
+is likely dominated by the high equivalent width [O iii]
++Hβ nebular emission lines (also see Table 3). Indeed we
+observe a more extended light profile in the rest-frame
+optical than that in the UV. We thus model the image
+of component A in F444W with an exponential disk and
+a Sérsic profile. The diffuse and extended structure is
+well reproduced by an exponential disk model with Rs
+of 0.′′ 12, b/a of 0.3 and θ of -45.8 deg. The nucleated
+structure is modeled by a Sérsic profile (n = 4) with
+Re = 0.′′ 068, b/a = 0.88 and θ = 5.9 deg. Component
+B in F444W is very faint and can be well fitted by an
+exponential disk model with Rs of 0.′′ 04, b/a of 0.35 and
+
+θ of -40.9 deg. The resulting model residual is shown in
+the lower right panel of Fig. 5.
+4.4. Spectro-photometric analyses
+We employ multiple independent methods to conduct
+detailed spectro-photometric analyses of both the broadband photometry and the full NIRSpec spectrum that
+we obtained for RXJ2129-z8HeII. Performing full spectrum fitting is highly critical since it is the only appropriate approach to extract the detailed information of
+stellar population from the low-resolution prism spectroscopy.
+We first employ the BAGPIPES software (Carnall
+et al. 2018) to perform SED fitting of both our spectroscopic and photometric data simultaneously. We
+adopt a widely used, double power law star-formation
+history model to describe the evolution of the cosmic
+star-formation rate (SFR) density (Madau & Dickinson
+2014), which has the flexibility to account for both rising
+and declining star-formation activities:
+" 
+ −b #−1
+a
+t
+t
+SFR(t) ∝
++
+.
+(1)
+τ
+τ
+It has a Jeffery’s prior on the exponents: a, b ∈
+(0.01, 1000) and a flat prior on the peak time of star
+formation: τ ∈ (0, tH ), where tH is the Hubble time at
+the observed redshift. BAGPIPES relies on the BC03
+
+9
+
+3”
+
+N
+E
+Figure 5. The rest-frame UV and optical morphology of the entire RXJ2129-z8HeII galaxy, comprising two components: A
+and B. We use Galfit to perform morphological modeling of both components in JWST NIRcam imaging taken at filters
+F150W (upper panels) and F444W (lower panels). At zspec = 8.16, F150W and F444W correspond to rest-frame UV and
+optical wavelength ranges, respectively. In each row, we show the original observed image, Galfit models of both components,
+residual removing their Galfit models. On the observed images, we overlay the NIRSpec MSA slit represented by the blue box.
+The size of all stamps is 3”×3”, with north up and east to the left. As indicated by the residual panels, we achieve reasonable
+morphological models of the entire galaxy.
+
+(Bruzual & Charlot 2003) stellar population synthesis
+model and the nebular emission model created by the
+Cloudy photoionization code (Ferland et al. 2017). For
+other key assumptions, we choose the Chabrier initial
+mass function (IMF) (Chabrier 2003), the Calzetti dust
+attenuation law (Calzetti et al. 2000) with ASV ∈ (0, 3),
+a stellar metallicity range of Z/Z⊙ ∈ (0, 2), and a conservative Gaussian redshift prior of z ∼ N (8.16, 0.01).
+BAGPIPES utilizes the nested sampling algorithm
+to perform efficient Bayesian inference and obtain posterior distribution of parameters. We take the [16th,
+50th, 84th] percentiles of the parameter posteriors as
+the median and 1-σ CI, and show the 1D posterior
+distributions of some key parameters in Fig. 7. The
+overview of the physical properties of RXJ2129-z8HeII
+is presented in Table 1. After correcting for magnification (µ = 2.26 ± 0.14), we obtain the following physical picture of RXJ2129-z8HeII: it is a very low mass
+(M∗ ∼ 107.8 M⊙ ), young (tage ∼ 216 Myrs) galaxy,
+actively forming stars (SFR ∼ 9.6 M⊙ /yr) with subsolar metallicity (log(Z∗ /Z⊙ ) ∼ −0.9) and little dust
+(AV ∼ 0.1). We recover a fast rising star-formation
+history of RXJ2129-z8HeII, with a predominant young
+
+stellar population of 10-50 Myrs old. The star-formation
+history (SFH) recovered by BAGPIPES is shown in
+Fig. 8, with the red curve and shaded region marking
+the best-fit and 1-σ confidence range, respectively.
+We follow the prescription in Alavi et al. (2014) to
+estimate the absolute UV magnitude,
+MUV = mF140W + µ − 5 log(dL /10 pc) + 2.5 log(1 + z)
+(2)
+where µ is the lensing magnification factor expressed
+in magnitude units. At z = 8.16, the WFC3/F140W
+filter covers the rest-frame λrest ∈ [1300, 1800] Åand
+therefore appropriate to use. The UV absolute magnitude is thus calculated to be MUV ∼ −19.6 mag, which
+places RXJ2129-z8HeII at the level of 40% L∗ at z ≈ 8
+(Bouwens et al. 2015). Importantly, the bulk of the ionizing UV photons that caused the cosmic reionization
+are thought to come from sub-L∗ systems (Yan & Windhorst 2004; Finkelstein et al. 2019).
+RXJ2129-z8HeII shows pronounced detection of the
+far UV continuum. We follow the standard formalism
+to derive its UV spectral slope (β). We fit fλ ∝ λβ in
+the wavelength range of λrest ∈ [1300, 2600] to the model
+
+10
+
+Figure 6. Spectro-photometric and emission line analyses of the full JWST -HST observations of RXJ2129-z8HeII. Top: the
+optimally extracted 1D NIRSpec prism spectrum is shown in blue histograms with 1-σ error spectrum in cyan bands. The broadband photometric results from NIRCam and WFC3+ACS are represented by the red circles and green diamonds, respectively.
+We perform full spectrum analyses and fit Gaussian profiles to nebular emission features to estimate line fluxes and upper limits.
+The resulting best-fit continuum model and emission lines are represented by the red and orange curves. The top inset panel
+zooms in on the He ii line, with significant detection. Bottom: the ratio between the continuum-subtracted fλ flux and the
+measured 1-σ error spectrum. For the wavelength ranges without significant emission line flux contribution, this ratio follows a
+N (0, 1) distribution, implying that the noise properties are well defined. As clearly shown here, the most pronounced emission
+features in the rest-frame UV and optical wavelengths are He ii and [O iii]-Hβ lines, respectively. The gray shaded region marks
+the wavelength range affected by strong attenuation by the highly neutral IGM at z ∼ 8.
+
+Figure 7. The 1D posterior distributions of some key parameters fit from our spectro-photometric analyses: spectroscopic redshift
+(zspec ), stellar mass (M∗ , already corrected for lensing magnification), stellar dust attenuation (ASV ), stellar-phase metallicity
+(Z∗ ), and UV spectral slope (β).
+
+11
+
+Star-formation rate [M /yr]
+
+8.5
+
+9.5
+
+10.5 11.5
+
+Redshift z
+
+13.5 15.5
+
+20.0
+
+Double-pow [BAGPIPES]
+Nonparametric [Prospector]
+Delayed-tau [Prospector]
+
+12
+10
+8
+6
+4
+2
+0
+
+600
+
+500
+
+400
+
+300
+
+200
+
+Age of the Universe [Myr]
+
+100
+
+0
+
+Figure 8. Star-formation history (SFH) of RXJ2129-z8HeII, obtained from three independent methods. The SFH given by
+our default BAGPIPES full spectrum fitting under the assumption of a double-power law model is represented by the red
+curve (best-fit value) with shaded regions (1-σ confidence ranges). The SFH given by the Prospector SED fitting assuming a
+non-parametric and a delayed-τ models are shown in black histograms and blue curves, respectively. All three SFHs returned
+by different assumptions and techniques reach excellent consensus that the SFH of RXJ2129-z8HeII is rapidly rising, in support
+of the existence of a very young stellar component likely associated with the Pop III signatures seen in the JWST /NIRSpec
+spectra.
+
+12
+galaxy SEDs produced by BAGPIPES with all possible
+emission features properly masked. The resulting UV
+slope is measured to be β = −2.53+0.06
+−0.07 . We obtain consistent results if measuring β using smoothed prism spectrum directly observed. This classifies RXJ2129-z8HeII
+among the spectroscopically confirmed galaxies in the
+EoR having the steepest UV continuum slope — a strong
+implication of significant leakage of its ionizing radiation
+to the IGM (Bouwens et al. 2010; Zackrisson et al. 2013).
+The completion of reionization by z ∼ 6 requires that
+the absolute escape fraction of the Lyman continuum
+LyC
+(LyC) photons from galaxies should be fesc
+≳ 10% on
+average (Finkelstein et al. 2012; Robertson et al. 2015).
+In the EoR, a negative correlation between MUV and
+β has been seen from photometric analyses, in support of the dominant role played by the intrinsically
+faint systems in contributing to the IGM-ionizing photon budget (Bouwens et al. 2014; Bhatawdekar & Conselice 2021). Using the HST/COS observations of the
+LyC signals from the Low-redshift Lyman Continuum
+Survey (LzLCS), Chisholm et al. (2022) discovers that
+β and the absolute escape fraction of Lyman continuum
+LyC
+) are strongly correlated:
+(fesc
+LyC
+fesc
+= (1.3 ± 0.6) × 10−4 · 10(−1.22±0.1)·β .
+
+(3)
+
+LyC
+= 0.16 ± 0.03
+We therefore obtain an estimate of fesc
+for RXJ2129-z8HeII.
+Fig. 9 summarizes the currently available measurements of β and MUV of galaxies at z ≳ 7, among
+which the spectroscopically confirmed sources are highlighted in color (Watson et al. 2015; Zitrin et al. 2015;
+Hashimoto et al. 2018; Williams et al. 2022; RobertsBorsani et al. 2022; Morishita et al. 2022; Schaerer et al.
+2022; Curtis-Lake et al. 2022; Bunker et al. 2023), and
+the photometric redshift (photo-z) selected candidates
+are represented in gray (Tacchella et al. 2022; Castellano et al. 2022; Naidu et al. 2022; Finkelstein et al.
+2022; Topping et al. 2022; Cullen et al. 2023). While
+steeper slopes (β ∼ −3) have been reported for photoz and Lyman-break selected galaxies (see also Bouwens
+et al. (2010)), RXJ2129-z8HeII has by far the steepest
+UV spectral slope and thus the largest LyC escape fraction among all the spectroscopically confirmed galaxies at zspec ≥ 7. Note that throughout this work, β
+stands for βobs in the nomenclature used by Chisholm
+et al. (2022) without dust correction. After correcting
+for dust, Chisholm et al. (2022) finds that the intrinsic
+UV spectral slopes (βint ) of the LzLCS galaxies observed
+with HST /COS are clustered in the range of [-2.8, -2.6].
+We also double check the derived stellar-population
+properties of RXJ2129-z8HeII by modeling its broadband photometry and spectra using the Prospector
+
+software (Johnson et al. 2021). Prospector is built
+upon a fully Bayesian framework that makes it possible
+to fit the SED of high-redshift galaxies with complex
+SFH models. Regarding the basic fitting setup, we adopt
+the Flexible Stellar Population Synthesis (FSPS) code
+(Conroy et al. 2009; Conroy & Gunn 2010) using the
+MIST stellar isochrone libraries (Choi et al. 2016; Dotter
+2016) and the MILES stellar spectral libraries FalcónBarroso et al. (2011). During the modeling, we use the
+MCMC sampling code dynesty (Speagle 2020) based on
+the nested sampling technique. We assume the Kroupa
+IMF (Kroupa 2001) for consistency with the IMF used
+in the nebular continuum from Byler et al. (2017) and
+line emission model that we adopt in our SED modeling. We adopt the IGM absorption model from Madau
+(1995). Following Charlot & Fall (2000), we assume a
+two-component dust attenuation model where the dust
+attenuation of nebular emission and young stellar populations, and of old stellar populations, are treated differently.
+We test our results with two different parameterizations of the galaxy’s SFH. First, we assume a piece-wise,
+nonparametric form composed of 6 lookback time bins
+(i.e., the time prior to the time of observation), where
+SFR is fitted as a constant in each bin. Among the 6
+lookback time bins, the first two bins are fixed to be 0-5
+and 5-10 Myr in order to capture recent star formation
+activities; the last bin is assumed to be t(z = 20) − tH
+where tH is the Hubble time at z = 8.1623; and the
+remaining 3 bins are evenly spaced in the logarithmic
+space of 10 Myr - t(z = 20). A similar setup of nonparametric SFH has been used in recent literature about
+high-redshift galaxy SED fittings (Robertson et al. 2022;
+Tacchella et al. 2023). During the nonparmetric SFH fitting, we adopt a continuity prior that has been demonstrated to work well across various galaxy types using
+mock observations from cosmological simulations (Leja
+et al. 2019). The recovered SFH is represented by
+the black histograms shown in Fig. 8 with 1-σ confidence region marked by the dashed histograms. We
+note that the continuity prior is equivalent to a symmetric prior on stellar age and a constant SFH prior
+with SFR(t) = M∗ /tH . The fact that the fitting converges to a monotonically rising SFH suggests that the
+data strongly favor a very young stellar age of RXJ2129z8HeII, hence fully in line with its strong He ii detection.
+Second, we assume a parametric delayed-τ SFH
+model, i.e.,
+SFR(t) ∝ t × e−(t/τ )
+
+(4)
+
+with τ denoting the peak time of star formation sampled
+in the range of τ ∈ (0, tH ). The resulting SFH is shown
+
+13
+
+Figure 9. UV spectral slope (β) as a function of absolute UV magnitude (MUV ). The color-coded circles represent the spectroscopically confirmed galaxies at zspec > 7 with β measurements (Watson et al. 2015; Zitrin et al. 2015; Hashimoto et al. 2018;
+Williams et al. 2022; Morishita et al. 2022; Schaerer et al. 2022; Curtis-Lake et al. 2022; Bunker et al. 2023). Among this cohort,
+RXJ2129-z8HeII (indicated as the star) has the steepest slopes. The gray diamonds show the galaxy candidates with zphot ≳ 8
+(Tacchella et al. 2022; Castellano et al. 2022; Naidu et al. 2022; Finkelstein et al. 2022; Topping et al. 2022; Cullen et al. 2023).
+The dotted and dashed lines denote the population-averaged correlation of MUV and β at z ∼ 7 (Bouwens et al. 2010, 2014) and
+z ∼ 8 (Bhatawdekar & Conselice 2021), respectively. The shaded regions correspond to the parameter space where the escape
+LyC
+fraction of the ionizing radiation (fesc
+) is above 5, 10, and 20 percent, respectively, derived by Chisholm et al. (2022) from the
+LzLCS dataset. This strongly suggests that RXJ2129-z8HeII is hitherto the most promising spectroscopically confirmed galaxy
+that enables significant LyC leakage into the IGM to contribute to the cosmic reionization.
+
+as blue curve and shaded regions in Fig. 8 as well. Using two independent techniques (i.e. BAGPIPES and
+Prospector) under three sets of different SFH assumptions (i.e. double power law, non-parametric, and delayed τ models), we achieve a self-consistent conclusion
+as follows. The SFH of RXJ2129-z8HeII is sharply rising, and there exists a predominant stellar population
+10-50 Myrs old. This young stellar population is highly
+likely responsible for the strong He ii line identified in
+the rest-frame UV spectra of RXJ2129-z8HeII.
+4.5. Emission line fitting and diagnostics
+We utilize the pPXF software (Cappellari 2022) to
+perform accurate emission line analyses, fixing the
+source redshift to z = 8.1623. To be self-consistent,
+we rely on the BC03 stellar population library (Bruzual
+& Charlot 2003), generated using the Chabrier IMF
+(Chabrier 2003) and dust corrected with the Calzetti
+reddening curve (Calzetti et al. 2000). The best-fit continuum model is shown as the red curve in the upper
+panel of Fig. 6. We then fit Gaussian profiles to nebular
+emission features at known wavelength positions, given
+fixed redshift. During the emission line profile fitting,
+the range of their intrinsic width is set to [0, 300] km/s.
+
+The flux ratio of [O iii] λλ4959,5007 doublet is fixed to
+the theoretical value of 0.33. For the weak emission lines
+in the UV bands, we bind their shift of line centers to
+those stronger emission lines (e.g. He ii) to improve the
+fitting robustness. We avoid fitting for any line emission
+blueward of λrest ∼ 1400 Ådue to strong attenuation by
+the highly neutral IGM (Dijkstra 2014).
+The best-fit emission line profiles are demonstrated
+with orange curves in the upper panel of Fig. 6. The resulting emission line fluxes (observed and intrinsic) and
+equivalent widths6 (EWs) are listed in Table 3. Here
+the statistical uncertainties of the line fluxes and EWs
+are obtained from bootstrapping the fitting process to
+50 mock spectra generated using the best-fit model spectrum and flux errors.
+At a signal-to-noise ratio (SNR) threshold of ≳3, we
+detect 6 emission lines: [O iii]λ5008 (:= [O iii]), Hβ, Hγ,
+Hδ, [O ii]λλ3727, 3730 (:= [O ii]), and He ii, amongst
+which [O iii], Hβ, and He ii are detected with a SNR
+of 37, 7, 5, respectively. In addition, we give 2-σ upper
+limits for other lines in Table 3, including He ii λ4686,
+6 EWs are always measured in rest frame throughout this paper.
+
+14
+Table 3. Rest-frame UV and optical emission line properties of RXJ2129-z8HeII.
+Emission Line
+[O III]λ5008
+Hβ
+He IIλ4686
+[O III]λ4363
+Hγ
+Hδ
+[Ne III]λ3869
+[O II]λλ3726,3729
+C III]λ1909
+He IIλ1640
+C IVλ1549
+
+Observed Fluxa
+[10−20 erg s−1 cm−2 ]
+
+Intrinsic Fluxb
+[10
+erg s−1 cm−2 ]
+
+Rest-frame Equivalent Width
+[Å]
+
+779±21
+141±20
+<31
+<32
+94±23
+87±29
+<43
+64±23
+<70
+206±38
+<96
+
+390 ± 10
+71 ± 10
+<16
+<16
+48 ± 12
+45 ± 15
+<22
+33 ± 12
+<41
+120 ± 22
+<57
+
+1015±83
+202±34
+<49
+<80
+203±69
+139±50
+<44
+65±24
+<13
+21±4
+<8
+
+−20
+
+NOTE —
+
+The observed line fluxes and equivalent widths are measured from our emission line analyses of the
+NIRSpec/MSA prism spectrum with the pPXF software (see text for details). We list measurements for ≳ 2σ
+detections, or the 2-σ upper limits. The error bars correspond to 1-σ standard deviations.
+a
+The observed line fluxes and upper limits before the corrections of dust extinction and lensing magnification.
+b
+The intrinsic line fluxes and upper limits after the corrections of dust extinction and lensing magnification
+(µ = 2.26 ± 0.14). We adopt AV = 0.12 ± 0.04 measured from our spectro-photometric analyses to de-redden
+line fluxes since we only achieve upper limit on the nebular dust extinction.
+
+[O iii] λ4363, C iii], and C iv. We do not see any signature of Lyα emission and put a 2-σ upper limit of
+EWLyα < 10 Å. The absence of Lyα line is likely due to
+the damping wing opacity caused by the diffuse neutral
+IGM at z ∼ 8 and/or dense self-shielding H I gas clouds
+inside the large ionized H II bubbles (Dijkstra 2014).
+We apply a well-established Bayesian forwardmodeling inference framework to the measured line
+fluxes summarized in Table 3. We constrain jointly
+three key properties of the interstellar medium (ISM):
+gas-phase metallicity (12 + log(O/H)), nebular dust extinction (AN
+V ), and the instantaneous star-formation rate
+(SFR) converted from the de-reddened Hβ flux (fHβ )
+corrected for the magnification factor of µ = 2.26 ± 0.14.
+Note that 12 + log(O/H) and AN
+V are unaffected by lensing magnification. The likelihood function is defined following Wang et al. (2017, 2019, 2020, 2022a,b) as
+!
+2
+1 X
+(fELi − Ri · fHβ )
+L ∝ exp − ·
+. (5)
+2 i (σELi )2 + (fHβ )2 · (σRi )2
+Here fELi and σELi correspond to the intrinsic line
+([O iii], Hβ, Hγ, Hδ, and [O ii]) flux and uncertainty
+with extinction corrected using the Cardelli dust attenuation law (Cardelli et al. 1989) with RV = 3.1 following
+Valentino et al. (2017). AN
+V ∈ (0, 3) is sampled as a free
+parameter. Ri = fELi /fHβ and σRi represent the expected flux ratio and its intrinsic scatter of each line
+with respect to Hβ, given by the widely used Maiolino
+strong line calibrations (Maiolino et al. 2008) and the
+
+default Balmer decrements assuming case B recombination conditions. Thus the instantaneous SFR can be estimated from the Balmer line luminosity with the Kennicutt calibration (Kennicutt 1998) and the Chabrier IMF
+(Chabrier 2003), assuming case B recombination:
+SFR [M⊙ yr−1 ] = 1.3 × 10−41
+
+L(Hβ) [erg s−1 ]
+.
+µ
+
+(6)
+
+We adopt the Emcee software to perform the Markov
+Chain Monte Carlo Bayesian parameter sampling, with
+100 of walkers each sampling 1000 iterations. After a
+burn-in of 200 for each walker, we have sampled the parameter space 80,000 times. We show the resultant 1D
+and 2D parameter constraints in Fig. 10. The median
+constraints and 1-σ CIs are shown in Table 1. To understand the energy source that powers the photoionization
+of the nebular emission observed in RXJ2129-z8HeII, we
+rely on the mass-excitation diagram (MEx Juneau et al.
+2014; Coil et al. 2015), which is an empirical relation
+between M∗ and the [O iii]/Hβ flux ratio with demarcation schemes separating Hii region and AGN. We confirm non-detection of our galaxy in the archival Chandra data of in total ∼36k sec exposure (ObsID 9370, PI:
+Allen, and ObsID 553, PI Garmire) covering the galaxy
+cluster center field of RXJ2129. Assuming a fiducial
+incident spectrum being an absorbed power law with a
+photon index of 1.7 and an absorption column density of
+1021 cm−2 , we reach a 3-σ upper limit of 1.5×1045 erg/s
+in the energy range of [0.5, 8] keV, lower than the measured X-ray luminosity of X-ray bright AGNs at z > 5
+
+15
+
+Figure 10. Corner plot showing the 1D/2D posterior constraints of the fitting parameters, i.e., gas-phase metallicity (12 + log(O/H)), nebular dust content (AN
+V ), and instantaneous SFR already corrected for lensing magnification
+(µ = 2.26 ± 0.14) of RXJ2129-z8HeII, obtained from our
+Bayesian forward-modeling emission line diagnostic method.
+On top of each 1D posterior panel shown the resulting median with 1-σ uncertainties for each parameter. Yet notice
+that we can only draw a 1-σ upper limit on AN
+V as presented
+in Table 1. The panel in the upper right shows the −χ2 /2
+values for all the 80,000 parameter sampling iterations. They
+clearly reach a global minimum of χ2 , implying a good convergence of our Bayesian inference.
+
+(see e.g. Li et al. 2021). It is likely that RXJ2129-z8HeII
+is a star-forming galaxy with negligible contamination
+from AGN ionization. Although we caution that active
+AGNs need not be X-ray bright and the MEx diagram
+may differ substantially for very low metallicities. The
+definitive exclusion of AGN contamination should come
+from much deeper JWST NIRSpec spectroscopy with
+sufficient wavelength resolution to cast stringent limits
+on the high-ionization emission lines in the rest-frame
+UV and optical.
+Since we only achieve upper limit on nebular dust extinction from our emission line diagnostics (see Fig. 10),
+we utilize AV = 0.12 ± 0.04 given by our spectrophotometric analyses in Sect. 4.4 to derive de-reddened
+line fluxes and uncertainties. After correcting for dust
+attenuation, we obtain a high intrinsic flux ratio of
+[O iii]/[O ii] = 11.7 ± 4.2, further supporting considerable LyC escape (Izotov et al. 2018), consistent with
+our estimate based on β. From our measurements of
+
+EW[O iii] , we estimate the ionizing photon production
+efficiency to be log(ξion [erg−1 Hz]) ∼ 25.55 (Tang et al.
+2019), in agreement with the expectation that at z ≳ 8
+sub-L∗ galaxies are the major sources of reionization
+(Yan & Windhorst 2004; Finkelstein et al. 2019).
+Notably, the He ii emission is the only rest-frame
+UV line clearly detected in RXJ2129-z8HeII. This line
+has intrinsic (corrected for both lensing magnification and dust extinction) flux fHe ii = 120 ± 22 ×
+10−20 erg s−1 cm−2 and EWHe ii = 21 ± 4 Å. This is
+hitherto the highest redshift He ii line potentially powered by star formation7 . The inset in the upper panel of
+Fig. 6 shows a zoom-in view of our fitting result to the
+source spectrum at λrest ∈ [1600, 1700], where He ii and
+the oxygen auroral lines O iii]λλ1661,1666 (:=O iii]) are
+marked in magenta vertical dashed lines. We verify that
+our wavelength calibration of the NIRSpec prism spectroscopy is sufficiently accurate with a 1-σ uncertainty
+being ∼0.004 µm in the observer frame, corresponding
+to ∼4 Å in the rest frame, distinguishing between He ii
+and O iii] at a ∼5-σ CI. On the other hand, if the line
+were indeed O iii], the only possible scenario that could
+power the doublets with such high EW∼20 Å is AGN
+ionization, which would result in much brighter C iv
+and C iii] (Hirschmann et al. 2019). This reinforces our
+conclusion that the detection of the He ii line is robust
+against negligible contamination from the oxygen auroral lines of O iii]. We also perform detailed checks of the
+relative width and profile of the He ii line, in comparison
+to those of [O iii]-Hβ. We do not see any signs of broadening of He ii, and find that the normalized profile and
+the relative width of He ii match reasonably well those
+of Hβ and [O iii] λ5007, strongly indicating that the
+He ii line observed in RXJ2129-z8HeII also originates
+from the nebular HII regions.
+The nebular He ii line requires a hard ionizing background radiation, which is usually attributed to WolfRayet (WR) stars, stripped stars, X-ray binaries, or
+AGN (Nanayakkara et al. 2019; Saxena et al. 2020). The
+location of RXJ2129-z8HeII in the mass-excitation diagram (Juneau et al. 2014; Coil et al. 2015), the lack
+of variability from archival HST imaging, and the nondetection in deep Chandra exposures altogether disfavor a supermassive black hole as the cause. As opposed to He ii, RXJ2129-z8HeII shows absence of the
+7 Recently, a tentative He ii line detection (SNR∼4) was reported
+
+by Bunker et al. (2023) in GN-z11 at z = 10.603. Unlike
+our galaxy, GN-z11 shows a plethora of emission features in its
+UV spectrum, including C iv, C iii], and [Ne iv]λλ2422, 2424,
+clear evidence of active galactic neucli (AGN) photoionization
+(Maiolino et al. 2023).
+
+16
+UV carbon lines, setting it apart from other galaxies at
+various redshifts with He ii detection (Berg et al. 2016;
+Sobral et al. 2018; Senchyna et al. 2019; Nanayakkara
+et al. 2019), as shown in the right panel of Fig. 11. Interestingly, some sources in the MUSE HUDF sample
+at 2 < z < 4 (Nanayakkara et al. 2019) approach our
+measured limits of fHe ii /fC iv and fHe ii /fC iii] . However, their He ii EWs are reported to be less than 10 Å
+not as high as that measured in our galaxy, and their
+He ii emission is likely caused by stellar binarity and
+density-bounded HII regions with sub-solar ISM metallicities (Plat et al. 2019). We do not detect any UV
+metal lines (e.g. C iii], C iv, O iii], N iv]λλ1483,1487,
+N vλ1240) either, inconsistent with the signatures of
+WR and stripped stars that are often seen in local galaxies (Morris et al. 2008; Leitherer 2020). Although we
+caution that the strength of these wind lines for WR and
+stripped stars are metallicity-dependent and is likely to
+be very weak at extremely low metallicities (e.g. much
+lower than one-tenth solar).
+Alternatively, the He ii line could be due to highmass, metal-free population III (Pop III) stars that
+have exceedingly hard ionizing field capable of sufficient He+ ionization. While the ISM of RXJ2129-z8HeII
+is already metal-enriched to roughly one-twelfth solar
+(12 + log(O/H) ∼7.63), its de-reddened flux ratio of
+fHe ii /fHβ = 1.7 ± 0.4 is several orders of magnitude
+larger than that powered by “normal” metal-poor O/B
+stellar populations (see the left panel of Fig. 11). We
+check that the UV and optical photometry of this potential “Pop III” component of our galaxy is consistent
+with the expected colors of Pop III galaxies reported in
+Trussler et al. (2023). In the next section, we investigate in detail the feasibility of reproducing the nebular
+emission observed in this system using Pop III stellar
+evolution and photoionization models.
+4.6. Pop III star photoionization model, formation rate,
+and total mass
+One crucial aspect of this work is to explain the
+flux ratios measured between the strong emission lines
+observed in the rest-frame UV and optical spectra of
+RXJ2129-z8HeII, using state-of-the-art photoinization
+models and reasonable assumptions on the input ionizing spectra from Pop III stellar populations. We carry
+out such analysis with the state-of-the-art MAPPINGS
+V photoionization code (Sutherland & Dopita 1993).
+MAPPINGS V has comprehensive consideration of microphysics in ISM, providing accurate predictions of
+fluxes of over 80,000 cooling and recombination lines. By
+propagating a simple toy model of Pop III star ionizing
+spectra calibrated by Schaerer (2002, 2003) through the
+
+MAPPINGS V photoionization code, we verify that the
+observed line flux ratios can be reproduced under reasonable assumptions of the ionizing spectral hardness
+and spectral shapes that are believed to be typical in
+Pop III stellar populations. We assume the following
+form of broken power laws for this toy model:
+
+C0 · ν −β hν < 13.6 eV,
+(7a)
+
+
+
+ C · ν −1 hν ∈ [13.6, 24.6) eV,
+(7b)
+1
+fν =
+α
+
+C2 · ν
+hν ∈ [24.6, 54.4) eV,
+(7c)
+
+
+
+α
+C3 · ν
+hν ≥ 54.4 eV,
+(7d)
+where β = −2.53 is determined from our full spectrum
+fitting analysis and α represents the power-law index
+in the He0 and He+ ionization energy range. We experiment with two indices of α = −1.8 and α = −2.5
+in constructing this phenomenological model of Pop III
+star EUV spectra, and arrive at a conclusion that α does
+not affect the resulting line ratios as long as the spectral hardness is maintained (see Table 4). The C0 coefficient is computed to match the measured rest-frame
+equivalent width of EWHe ii = 21 Å, assuming that
+observationally the far UV continuum is mostly coming from Pop III stars 8 . The other coefficients (i.e.
+C1,2,3 ) are determined to match the hardness ratios of
+the ionizing spectra reported in Schaerer (2002), given
+by the ratios of the ionizing photon flux (Q(H), Q(He0 ),
+and Q(He+ )). We take the time-averaged Q values calculated from the Pop III stellar evolution tracks with
+Mini = 500M⊙ as specified in Table 4 and 5 of Schaerer
+(2002), to account for the effects of stellar evolution
+which typically decreases the spectral hardness by a factor of 2. Conventionally, Pop III stars with very high
+mass are preferred because of the lack of efficient cooling channels (due to the absence of the CNO elements;
+see reviews by Bromm & Larson (2004); Bromm (2013)).
+Both scenarios with and without mass loss are considered to investigate the effects of mass loss due to stellar winds and core-collapsed supernovae on ratios of the
+emergent rest-frame UV/optical emission lines (Schaerer
+2003). The resulting phenomenological models of Pop
+III star ionizing spectra, calibrated against realistic Pop
+III stellar evolution tracks and atmosphere models are
+represented by the black and green lines in Fig. 12.
+For comparison, we also calculate the empirical ionizing
+8C
+
+0 sets the continuum level of the non-ionizing spectrum (i.e.
+Eq. 7a) at the rest-frame wavelength of 1640 Å, where the He ii
+line resides. Our simple but physically calibrated phenomenological models of the Pop III ionizing spectrum (Eqs. 7b-7d) can
+predict the total line flux of the He ii line. The value of C0
+can therefore be calculated using this line flux and the observed
+equivalent width of He ii in RXJ2129-z8HeII.
+
+17
+
+Figure 11. Emission line flux ratios from observations and models. Left: flux ratios of [O iii]/[O ii] versus He ii/Hβ predicted
+by the MAPPINGS V photoionization models (Sutherland & Dopita 1993) and measured in RXJ2129-z8HeII (as in Table 1)
+represented by the magenta star with 1-σ error bars. The cyan, red, and blue symbols are calculated using the empirical spectra
+of metal-poor stars with atmospheric temperatures of 45kK, 47.5kK, and 55kK, respectively. The diamonds, circles and squares
+correspond to gas-phase metallicity (ZISM ) being half, one tenth, and one thousandth solar, respectively. It is obvious that
+“normal” O/B-type stellar populations cannot produce sufficient He ii emission, in spite of their high [O iii]/[O ii] at low ZISM .
+We construct physically calibrated phenomenological models of Pop III star spectra, with different assumptions of mass loss and
+the power-law index (α) in the Helium-ionizing energy range (see text). Encouragingly, all these models successfully reproduce
+the observed value of He ii/Hβ. The mass loss models are better favored considering the observed value of [O iii]/[O ii]. Crucially,
+we find that high [O iii]/[O ii] alone is not necessary a good indication of the hard ionizing spectra, potentially from Pop III
+stars. Right: UV line ratios measured from galaxies that have reported He ii detections (SNR≳2.5). These measurements are
+color-coded in EWHe ii reported in the respective work. The arrows denote 2-σ lower limits. RXJ2129-z8HeII shows greatly
+elevated He ii/C iii] and He ii/C iv flux ratios, as compared to local galaxies (Berg et al. 2016; Senchyna et al. 2019), galaxies
+at the cosmic noon epoch (Nanayakkara et al. 2019), and CR7 at z = 6.6 (Sobral et al. 2018). We also overlay three sets of
+evolutionary tracks at different stellar metallicities given by the BPASSv2.1 stellar population synthesis models (Xiao et al.
+2018). Among these three tracks, the measured flux ratio lower limits of RXJ2129-z8HeII clearly prefer that with extremely
+low metallicity. The grey diamonds represent the predictions of AGN narrow-line regions calculated using the CLOUDY code
+(Ferland et al. 1998), with larger symbol size corresponding to higher metallicity (i.e. 0.03, 0.1, 0.5 and 1× solar).
+
+spectra of single metal-poor stars using the TLUSTY
+non-LTE plane parallel code modeling massive star atmosphere (Hubeny & Lanz 2011; Hubeny et al. 2021),
+with three characteristic temperatures of 55kK, 47.5kK
+and 45kK, shown as the blue, red, and cyan curves, respectively, in Fig. 12. Their stellar-phase metallicity is
+taken to be [Fe/H]=-3 (one thousandth solar). We assume three conditions of the gas-phase metallicity for
+all input stellar spectra: ZISM /Z⊙ = 0.5, 0.1, 10−3 in
+our photoionization calculations.
+The MAPPINGS V photoionization code takes these
+ionizing spectra as input and produce the emergent restframe UV and optical spectra via self-consistent Monte
+Carlo radiative transfer. We adopt the plane-parallel geometric configuration in radiative transfer calculations,
+since we believe that the main ionizing sources (Pop III
+
+stars) are located ∼1 kpc away (i.e. in component B)
+from the ISM where our NIRSpec slit spectroscopy is
+taken (i.e. in component A). The resulting line flux ratios of [O iii]/Hβ, [O ii]/Hβ, He ii/Hβ and [O iii]/[O ii]
+from these empirical and phenomenological stellar spectral models are given in Table 4. The left panel of
+Fig. 11 shows the model predictions of [O iii]/[O ii] versus He ii/Hβ, compared against our observations. Our
+detailed photoionization modeling clearly suggests that
+normal O/B stellar populations, albeit with high atmospheric temperatures and high [O iii]/[O ii], do not suffice to power prominent high-ionization He ii emission,
+as they would only result in insignificant He ii/Hβ ratio
+lower than our observation by 4-5 orders of magnitude.
+This strongly indicates that although [O iii]/[O ii] is
+widely used as a key diagnostic of the ionization state of
+
+18
+Star Type
+O/B
+O/B
+O/B
+O/B
+O/B
+O/B
+O/B
+O/B
+O/B
+Pop III
+Pop III
+Pop III
+Pop III
+Pop III
+Pop III
+Pop III
+Pop III
+Pop III
+Pop III
+Pop III
+Pop III
+Observation
+
+Spectral Model
+55.0kK, 0.5Z⊙
+55.0kK, 0.1Z⊙
+55.0kK, 0.001Z⊙
+47.5kK, 0.5Z⊙
+47.5kK, 0.1Z⊙
+47.5kK, 0.001Z⊙
+45.0kK, 0.5Z⊙
+45.0kK, 0.1Z⊙
+45.0kK, 0.001Z⊙
+mass loss, α=-1.8, 0.5Z⊙
+mass loss, α=-1.8, 0.1Z⊙
+mass loss, α=-1.8, 0.001Z⊙
+no mass loss, α=-1.8, 0.5Z⊙
+no mass loss, α=-1.8, 0.1Z⊙
+no mass loss, α=-1.8, 0.001Z⊙
+mass loss, α=-2.5, 0.5Z⊙
+mass loss, α=-2.5, 0.1Z⊙
+mass loss, α=-2.5, 0.001Z⊙
+no mass loss, α=-2.5, 0.5Z⊙
+no mass loss, α=-2.5, 0.1Z⊙
+no mass loss, α=-2.5, 0.001Z⊙
+RXJ2129-z8HeII
+
+[O iii]/Hβ
+13
+5.7
+0.073
+11
+5.5
+0.074
+11
+5.4
+0.074
+14
+3.7
+0.039
+15
+5.2
+0.059
+13
+3.7
+0.039
+14
+5.1
+0.058
+5.5±0.8
+
+[O ii]/Hβ
+0.99
+0.29
+0.0031
+0.95
+0.3
+0.0033
+0.94
+0.3
+0.0034
+1.1
+0.26
+0.0025
+1.1
+0.28
+0.0028
+1.1
+0.26
+0.0026
+1.1
+0.29
+0.0029
+0.5±0.2
+
+He ii/Hβ
+0.00011
+0.0001
+9.1e-05
+3.3e-05
+3.2e-05
+2.9e-05
+2.4e-05
+2.3e-05
+2.1e-05
+2.4
+2.1
+1.9
+1.2
+1.1
+0.96
+2.5
+2.2
+2
+1.2
+1.1
+1
+1.7±0.4
+
+[O iii]/[O ii]
+13
+20
+24
+12
+18
+23
+11
+18
+22
+13
+14
+16
+14
+18
+21
+12
+14
+15
+13
+18
+20
+11.7±4.3
+
+Table 4. Emission line flux ratios calculated by our MAPPINGS V photoionization modeling framework, assuming empirical
+and phenomenological stellar spectra of normal O/B and Pop III stars. The last row shows our actual measurements with 1-σ
+uncertainties of these key line ratio diagnostics in RXJ2129-z8HeII using JWST /NIRSpec prism spectroscopy.
+
+the gas in extragalactic H II regions (Kewley et al. 2013),
+it is not necessarily a good proxy by itself for identifying potential Pop III stars in metal-poor systems, due
+to serious contamination from normal O/B stellar populations.
+The Pop III star scenarios, on the other hand, offer sufficient extreme UV ionization field giving rise to
+strong He ii emission and can reproduce the observed
+ratio of He ii/Hβ =1.7 ± 0.4 in RXJ2129-z8HeII. We
+find that both the Pop III ionizing spectra with and
+without mass loss lead to comparable ionizing radiation,
+with the former producing slightly elevated He ii/Hβ ratios, due to increased spectral hardness (Schaerer 2002,
+2003). The observed ratio of [O iii]/[O ii] =11.7 ± 4.2
+better favors the Pop III spectral models with strong
+mass loss. Finally, we also see good agreement between
+the observed [O iii]/Hβ =5.5 ± 0.8 and our calculations
+setting ISM metallicity to one tenth solar (see Table 4
+and circles in the left panel of Fig. 11), which lends support to the constraint on 12 + log(O/H) from our emission line diagnostics shown in Fig. 10.
+To estimate SFR of Pop III star (SFRPopIII ) and compare with the instantaneous SFR converted from the
+de-reddened Hβ line luminosity (SFRO/B = 9.56+4.51
+−1.70
+
+as shown in Table 1), we follow the prescriptions of
+Raiter et al. (2010); Cai et al. (2015). Under the fiducial conditions of case B recombination and ionizationbounded nebula with constant density and temperature,
+the He ii line luminosity generated by Pop III stars can
+be expressed as a function of He+ ionizing photon flux
+(Q(He+ )) and Pop III SFR, i.e.,
+
+
+SFRPopIII
++
+LHe ii = c1640 (1 − fesc )Q(He )
+[M⊙ yr−1 ]
+
+
+SFRPopIII
+= f1640 (1 − fesc )
+,
+(8)
+[M⊙ yr−1 ]
+where f1640 is the theoretical He ii line luminosity for
+constant star formation models normalized to SFR =
+1 M⊙ yr−1 , given in Table 7 of Schaerer (2002) (also
+see Table 5). From our emission line analyses, we
+measured the He ii line flux corrected for both lensing magnification and dust extinction to be fHe ii =
+120 ± 22 × 10−20 erg s−1 cm−2 , corresponding to a He ii
+luminosity of LHe ii = 9.7 ± 1.8 × 1041 erg s−1 . Therefore, we can estimate SFRPopIII under various Pop III
+stellar evolution models as shown in Table 5, from the
+observed LHe ii and the escape fraction of fesc = 16%
+inferred from the UV spectral slope of β = −2.53. We
+
+19
+
+Figure 12. Realistic stellar spectra input to our photoionization modeling framework. The cyan, red, and blue curves correspond
+to the empirical spectra of metal-poor ([Fe/H]=-3) single stars with high atmospheric temperatures of 45kK, 47.5kK, and 55kK,
+respectively, representing the typical populations of low-metallicity O/B stars. These empirical star model atmospheres are
+constructed using the non-LTE plane-parallel code TLUSTY (Hubeny & Lanz 2011; Hubeny et al. 2021). The black and green
+lines show our broken power law models of Pop III stellar spectra, defined in Eq. 7, with different assumptions of mass loss and
+the power-law index α (see text for more details). The ionizing sections of these Pop III spectra are calibrated by the timeaveraged hardness ratios — described by Q(He0 )/Q(H) and Q(He+ )/Q(H) tabulated in Schaerer (2002) — with and without
+mass loss. The non-ionizing sections are determined based upon our actual measurement of the UV spectral slope (β = −2.53)
+and the emission line equivalent widths (i.e. EWHe ii = 21 Å). The three vertical dotted gray lines mark the energy levels of
+13.6, 24.6, and 54.4 eV, corresponding to the ionization of H , He0 , and He+ ions.
+
+caution that there is a large uncertainty attached to the
+conversion from β to fesc , and the escape fractions of
+the ionizing flux in different energy regimes (e.g. fesc
+(>13.6 eV) vs. fesc (>54.4 eV)) can be quite different.
+In fact, the galaxies for which the β-fesc relation has
+been derived empirically (Eq. 3) are not systems that
+host Pop III stars (Chisholm et al. 2022). Applying this
+relation to potential Pop III star host galaxies might be
+expected to under-estimate fesc , since the Pop III stellar models with extremely top-heavy initial mass functions predict relatively red UV slopes due to increased
+nebular continuum (Cameron et al. 2023). Nevertheless,
+with discretion, we estimate the ratio between SFRPopIII
+and SFRO/B calculated using Eq. 6 to be in the range
+of 3–72%. Assuming the Eddington limit and LHe ii
+being ∼1% of the total bolometric luminosity, we can
+also derive the total mass of the Pop III stars to be
+7.8 ± 1.4 × 105 M⊙ , consistent with the predictions based
+on numerical simulations (Venditti et al. 2023).
+
+SFR
+
+)
+It is encouraging to see that the SFR ratio ( SFRPopIII
+O/B
+and the total mass of Pop III stars within this system
+reside in reasonable ranges. Nevertheless we caution the
+readers about the caveat that some assumptions are still
+highly uncertain and demand more work in this fast rising field. First and foremost, the theoretical framework
+of Schaerer (2002, 2003); Raiter et al. (2010) is based
+upon the top-heavy Salpeter (Salpeter 1955) IMF9 . A
+factor of eight difference in the inferred SFR is caused
+by different low mass cutoffs in IMF mass range. Secondly, we see that models incorporating strong mass loss
+decrease SFR by a factor of three. However, the detailed
+physical mechanisms (e.g. rotation, pair-instability supernovae, multiplicity, etc.) driving such high mass
+loss are still under investigation (Ekström et al. 2008).
+9 We
+
+have applied the conversion between the Salpeter and
+Chabrier IMFs when deriving SFRPopIII , presented in Table 5.
+
+20
+Model ID
+
+IMF mass range
+
+in Schaerer (2002)
+B
+C
+D
+E
+
+M/M⊙
+[1,500]
+[50,500]
+[1,500]
+[50,1000]
+
+Mass Loss
+
+f1640
+
+SFRPopIII
+
+No
+No
+Yes
+Yes
+
+[ergs s−1 ]
+9.98 × 1040
+8.38 × 1041
+3.12 × 1041
+2.33 × 1042
+
+[M⊙ yr−1 ]
+6.86
+0.82
+2.19
+0.29
+
+SFRPopIII
+SFRO/B
+
+0.72
+0.08
+0.23
+0.03
+
+Table 5. Pop III Star Formation Rate (SFR) of RXJ2129-z8HeII at z = 8.1623 inferred from Eq. 8. Note that f1640 stands for the
+theoretical He ii luminosity normalized to SFR = 1 M⊙ yr−1 for the four stellar evolution models (Schaerer 2002). The actual
+observed He ii luminosity of RXJ2129-z8HeII is LHe ii = 9.7 ± 1.8 × 1041 erg s−1 . The last column represents the ratio between
+the Pop III SFR (SFRPopIII ) and the instantaneous SFR measured from the intrinsic Hβ luminosity using Eq. 6 (SFRO/B ). Note
+that the Kennicutt calibration (Kennicutt 1998) used here to calculate SFRO/B is generally applicable to galaxies with strong
+recombination lines powered by the ionizing flux predominantly from O/B-type stars who typically have M∗ > 10 M⊙ and life
+times tage < 20 Myr. Here SFRPopIII has been converted to the value compatible with the Chabrier IMF (Chabrier 2003), to
+facilitate a direct comparison with SFRO/B .
+
+Lastly, we caution that the He ii line emission coefficient c1640 = 5.67 × 10−12 erg is computed for case
+B with nebular electron density ne = 100 cm−3 and
+Te = 30 kK, under the assumption that the radiation
+field is optically thick. Realistically, there can exist
+steep density/temperature gradients and significant deviations from the fiducial case B conditions around extremely hot Pop III stars. In particular, the relatively
+LyC
+= 16%) estimated in
+high LyC escape fraction (fesc
+RXJ2129-z8HeII, indicated by its large O32 flux ratio
+(f[O iii] /f[O ii] = 11.7) and blue UV continuum slope
+(β = −2.53), is in favor of the ionization-bounded HII
+regions, rather than the density-bounded ones assumed
+in case B. This density-bounded condition can suppress
+low-ionization emission lines such as Hβ and potentially
+artificially boost ratios between high-ionization and lowionization lines such as He ii/Hβ (Plat et al. 2019).
+Nonetheless, our work presents the critical first step
+forward to apply physically motivated Pop III stellar
+evolution models to JWST high-quality NIRSpec spectroscopy of galaxy candidate revealing Pop III star signatures.
+5. CONCLUSIONS AND DISCUSSION
+
+In this paper, through the comprehensive analysis of
+the novel JWST NIRSpec prism spectroscopy and NIRCam imaging, we present RXJ2129-z8HeII— an intriguing galaxy in the EoR. Fitting simultaneously the entire
+spectroscopic (continuum + lines) and the photometric
+data sets, we confirm RXJ2129-z8HeII as an extreme
+emission line galaxy with strong continuum emission at
+zspec = 8.1623 ± 0.0007. It has a sub-L∗ MUV , high-EW
+rest-frame optical lines, and the steepest UV spectral
+slope (β = −2.53+0.06
+−0.07 ) amongst all spectroscopically
+confirmed galaxies at z ≳ 7 reported to date, implying
+LyC
+that it has a large LyC escape fraction fesc
+∼ 16%, the
+largest among its cohort. Therefore, RXJ2129-z8HeII
+
+is a promising representative of the predominant galaxy
+populations that are capable of producing and leaking
+their extreme UV photons to the IGM, causing the bulk
+of the neutral hydrogen in the IGM ionized. Furthermore, its prominent He ii line and the large flux ratios
+between He ii and UV metal and Balmer lines make it
+the best candidate to date where this very galaxy could
+have a significant Pop III stellar constituent within its
+stellar populations.
+Using the MAPPINGS V photoionization code and a
+series of phenomenological models of Pop III star spectra calibrated against theoretical Pop III stellar evolution models, we can successfully reproduce the measured
+ratios of He ii/Hβ and [O iii]/[O ii], assuming strong
+mass loss and one-tenth ISM metallicity. Crucially, we
+also find that high [O iii]/[O ii] alone is not a good indication of the presence of Pop III stars, providing important guidelines for future JWST surveys with the aim of
+identifying Pop III signatures in metal-poor systems in
+the EoR. All this, together with the large EWHe ii ∼ 21
+Å, suggests that RXJ2129-z8HeII likely has a mixture of
+metal-poor O/B and Pop III stars, the latter of which
+are the energy source of the He ii line emission. With
+the caveat that our fesc estimate based on observed UV
+spectral slope can be an underestimation due to nebular
+continuum, we estimate the ratio between the formation rates of Pop III and O/B stars in the range of [3,
+72]%, and derive the total mass of Pop III stars within
+RXJ2129-z8HeII to be 7.8±1.4×105 M⊙ , consistent with
+the predictions based on numerical simulations.
+The putative Pop III stars could either be spatially
+mixed with the enriched populations or segregated. Indeed, recently cosmological hydrodynamic simulations
+suggest that Pop III stars can continue to form till the
+end of the EoR, triggered by sustained accretion of pristine gas from the cosmic web onto galaxy disks, resulting
+in “hybrid” Pop III galaxies (Venditti et al. 2023). We
+
+21
+note that the prism spectroscopy is taken on component A of RXJ2129-z8HeII only; its component B resides ∼0.′′ 2 (i.e. ∼1 kpc proper) to the South East (see
+Sect. 4.3). We carry out photometry for A and B separately, and find that they have comparable photo-z esA
+B
+timates: zphot
+= 8.35 ± 0.29 and zphot
+= 8.93 ± 0.91,
+both in good agreement with the spectroscopic redshift
+measured for A (see Sect. 4.2). Our photometry for
+component B shows a blue UV continuum comparable
+to A’s, but with a much smaller F444W/F200W flux
+density ratio (see Sect. 4.1). Assuming that the different color is driven by EW[O iii] , we estimate that B’s
+EW[O iii] is a factor of ∼2 lower than A’s, indicating
+that B’s ISM is more chemically pristine. B’s SED shape
+might allow for an He ii line with higher EW, but we
+caution that B’s photo-z carries substantial uncertainties. Simulations predict that Pop III stars can continue to form if there still are clumps of primordial gas
+not yet polluted by metal-enriched outflows from nearby
+star-forming galaxies or metal-loaded stellar winds from
+massive stars closeby (Ciardi & Ferrara 2005; Venditti
+et al. 2023). A deep NIRSpec/IFU observation with
+high spectral resolution covering both components can
+provide a more definitive answer to the origin of this
+prominent He ii emission observed in RXJ2129-z8HeII.
+1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+
+Software:
+BAGPIPES (Carnall et al. 2018),
+CLOUDY (Ferland et al. 1998), Emcee (ForemanMackey et al. 2013), Galfit (Peng et al. 2002),
+the JWST Science Calibration Pipeline (Bushouse
+et al. 2023), MAPPINGS (Sutherland & Dopita 1993),
+msaexp (Brammer 2022), pPXF (Cappellari 2022),
+TLUSTY (Hubeny & Lanz 2011; Hubeny et al. 2021).
+
+We thank the anonymous referee for very constructive
+comments that help improve the quality of this paper.
+XW thanks Jiangtao Li, Themiya Nanayakkara, James
+Trussler, and John Weaver for useful discussion. XW
+is supported by the National Natural Science Foundation of China (grant 12373009), the CAS Project for
+Young Scientists in Basic Research Grant No. YSBR062, the Fundamental Research Funds for the Central
+Universities, the Xiaomi Young Talents Program, and
+the science research grant from the China Manned Space
+Project. This work is based on observations made with
+the NASA/ESA/CSA James Webb Space Telescope, associated with the program JWST-DD-2767. The data
+presented in this article were obtained from the Mikulski Archive for Space Telescopes at the Space Telescope
+Science Institute, which is operated by the Association of Universities for Research in Astronomy, Inc.,
+under NASA contract NAS 5-03127 for JWST. The
+specific observations analyzed in this work can be accessed via DOI:10.17909/2dxj-z303. JG acknowledges
+support from the Youth Innovation Promotion Association of the Chinese Academy of Sciences (No. 2022056).
+MO acknowledges support by JSPS KAKENHI grants
+JP20H00181, JP20H05856, and JP22H01260.
+REFERENCES
+
+22
+Alavi, A., Siana, B., Richard, J., et al. 2014, The
+Astrophysical Journal, 780, 143,
+doi: 10.1088/0004-637x/780/2/143
+Berg, D. A., Skillman, E. D., Henry, R. B. C., Erb, D. K.,
+& Carigi, L. 2016, ApJ, 827, 126,
+doi: 10.3847/0004-637x/827/2/126
+Bhatawdekar, R., & Conselice, C. J. 2021, The
+Astrophysical Journal, 909, 144,
+doi: 10.3847/1538-4357/abdd3f
+Bouwens, R. J., Illingworth, G. D., Oesch, P. A., et al.
+2010, ApJ, 708, L69 , doi: 10.1088/2041-8205/708/2/l69
+Bouwens, R. J., Bradley, L. D., Zitrin, A., et al. 2014, ApJ,
+795, 126, doi: 10.1088/0004-637x/795/2/126
+Bouwens, R. J., Illingworth, G. D., Oesch, P. A., et al.
+2015, ApJ, 803, 34, doi: 10.1088/0004-637x/803/1/34
+Brammer, G. 2022, msaexp: NIRSpec analyis tools, Zenodo,
+doi: 10.5281/ZENODO.7579050
+Brammer, G. B., Dokkum, P. G. v., & Coppi, P. 2008, ApJ,
+686, 1503 , doi: 10.1086/591786
+Bromm, V. 2013, Reports on Progress in Physics, 76,
+112901, doi: 10.1088/0034-4885/76/11/112901
+Bromm, V., & Larson, R. B. 2004, Annual Review of
+Astronomy and Astrophysics, 42, 79,
+doi: 10.1146/annurev.astro.42.053102.134034
+Bruzual, G., & Charlot, S. 2003, MNRAS, 344, 1000 ,
+doi: 10.1046/j.1365-8711.2003.06897.x
+Bunker, A. J., Saxena, A., Cameron, A. J., et al. 2023,
+arXiv e-prints, arXiv:2302.07256,
+doi: 10.48550/arXiv.2302.07256
+Bushouse, H., Eisenhamer, J., Dencheva, N., et al. 2023,
+JWST Calibration Pipeline, Zenodo,
+doi: 10.5281/zenodo.8067394
+Byler, N., Dalcanton, J. J., Conroy, C., & Johnson, B. D.
+2017, ApJ, 840, 44, doi: 10.3847/1538-4357/aa6c66
+Cai, Z., Fan, X., Jiang, L., et al. 2015, The Astrophysical
+Journal, 799, L19, doi: 10.1088/2041-8205/799/2/L19
+Calzetti, D., Armus, L., Bohlin, R. C., et al. 2000, The
+Astrophysical Journal, 533, 682, doi: 10.1086/308692
+Cameron, A. J., Katz, H., Witten, C., et al. 2023, Nebular
+Dominated Galaxies in the Early Universe with
+Top-Heavy Stellar Initial Mass Functions, arXiv,
+doi: 10.48550/arXiv.2311.02051
+Caminha, G. B., Rosati, P., Grillo, C., et al. 2019, arXiv,
+doi: 10.48550/arxiv.1903.05103
+Cappellari, M. 2022, MNRAS submitted,
+doi: 10.48550/arXiv.2208.14974
+Cardelli, J. A., Clayton, G. C., & Mathis, J. S. 1989, AJ,
+345, 245 , doi: 10.1086/167900
+Carnall, A. C., McLure, R. J., Dunlop, J. S., & Davé, R.
+2018, MNRAS, 480, 4379 , doi: 10.1093/mnras/sty2169
+
+Castellano, M., Fontana, A., Treu, T., et al. 2022, The
+Astrophysical Journal Letters, 938, L15,
+doi: 10.3847/2041-8213/ac94d0
+Chabrier, G. 2003, PASP, 115, 763 , doi: 10.1086/376392
+Charlot, S., & Fall, S. M. 2000, The Astrophysical Journal,
+539, 718, doi: 10.1086/309250
+Chisholm, J., Saldana-Lopez, A., Flury, S., et al. 2022,
+Monthly Notices of the Royal Astronomical Society,
+doi: 10.1093/mnras/stac2874
+Choi, J., Dotter, A. L., Conroy, C., et al. 2016, ApJ, 823,
+102, doi: 10.3847/0004-637x/823/2/102
+Ciardi, B., & Ferrara, A. 2005, Space Science Reviews, 116,
+625 , doi: 10.1007/s11214-005-3592-0
+Coil, A. L., Aird, J., Reddy, N. A., et al. 2015, ApJ, 801,
+35, doi: 10.1088/0004-637x/801/1/35
+Conroy, C., & Gunn, J. E. 2010, ApJ, 712, 833 ,
+doi: 10.1088/0004-637x/712/2/833
+Conroy, C., Gunn, J. E., & White, M. 2009, ApJ, 699, 486 ,
+doi: 10.1088/0004-637x/699/1/486
+Cullen, F., McLure, R. J., McLeod, D. J., et al. 2023,
+MNRAS, 520, 14, doi: 10.1093/mnras/stad073
+Curtis-Lake, E., Carniani, S., Cameron, A., et al. 2022,
+arXiv e-prints, arXiv:2212.04568,
+doi: 10.48550/arXiv.2212.04568
+Dijkstra, M. 2014, Publications of the Astronomical Society
+of Australia, 31, 53, doi: 10.1017/pasa.2014.33
+Dotter, A. L. 2016, ApJS, 222, 8,
+doi: 10.3847/0067-0049/222/1/8
+Ekström, S., Meynet, G., Chiappini, C., Hirschi, R., &
+Maeder, A. 2008, Astronomy & Astrophysics, 489, 685,
+doi: 10.1051/0004-6361:200809633
+Falcón-Barroso, J., Sánchez-Blázquez, P., Vazdekis, A.,
+et al. 2011, Astronomy & Astrophysics, 532, A95,
+doi: 10.1051/0004-6361/201116842
+Fan, X., Carilli, C. L., & Keating, B. 2006, ARA&A, 44,
+415 , doi: 10.1146/annurev.astro.44.051905.092514
+Ferland, G. J., Korista, K. T., Verner, D. A., et al. 1998,
+Publications of the Astronomical Society of the Pacific,
+110, 761, doi: 10.1086/316190
+Ferland, G. J., Chatzikos, M., Guzmán, F., et al. 2017, The
+2017 Release of Cloudy, arXiv.
+http://ascl.net/1705.10877
+Finkelstein, S. L., Papovich, C. J., Ryan, R. E. J., et al.
+2012, ApJ, 758, 93, doi: 10.1088/0004-637x/758/2/93
+Finkelstein, S. L., D’Aloisio, A., Paardekooper, J.-P., et al.
+2019, ApJ, 879, 36, doi: 10.3847/1538-4357/ab1ea8
+Finkelstein, S. L., Bagley, M. B., Ferguson, H. C., et al.
+2022, arXiv
+
+23
+Foreman-Mackey, D., Hogg, D. W., Lang, D., & Goodman,
+J. 2013, Publications of the Astronomical Society of the
+Pacific, 125, 306, doi: 10.1086/670067
+Hashimoto, T., Laporte, N., Mawatari, K., et al. 2018,
+Nature, 557, 392 , doi: 10.1038/s41586-018-0117-z
+Hirschmann, M., Charlot, S., Feltre, A., et al. 2019,
+Monthly Notices of the Royal Astronomical Society, 487,
+333, doi: 10.1093/mnras/stz1256
+Horne, K. 1986, PASP, 98, 609 , doi: 10.1086/131801
+Hubeny, I., Allende Prieto, C., Osorio, Y., & Lanz, T. 2021,
+arXiv e-prints, arXiv:2104.02829,
+doi: 10.48550/arXiv.2104.02829
+Hubeny, I., & Lanz, T. 2011, Synspec: General Spectrum
+Synthesis Program, Astrophysics Source Code Library,
+record ascl:1109.022. http://ascl.net/1109.022
+Izotov, Y. I., Thuan, T. X., & Guseva, N. G. 2018, Monthly
+Notices of the Royal Astronomical Society, 483, 5491,
+doi: 10.1093/mnras/sty3472
+Johnson, B. D., Leja, J., Conroy, C., & Speagle, J. S. 2021,
+The Astrophysical Journal Supplement Series, 254, 22,
+doi: 10.3847/1538-4365/abef67
+Juneau, S., Bournaud, F., Charlot, S., et al. 2014, ApJ,
+788, 88, doi: 10.1088/0004-637x/788/1/88
+Katz, H., Kimm, T., Ellis, R. S., Devriendt, J., & Slyz, A.
+2023, Monthly Notices of the Royal Astronomical Society,
+524, 351, doi: 10.1093/mnras/stad1903
+Kawamata, R., Ishigaki, M., Shimasaku, K., et al. 2017,
+eprint arXiv:1710.07301
+Kelly, P., Zitrin, A., Oguri, M., et al. 2022a, Transient
+Name Server AstroNote, 169, 1
+Kelly, P. L., Chen, W., Alfred, A., et al. 2022b, arXiv
+e-prints, arXiv:2211.02670.
+https://arxiv.org/abs/2211.02670
+Kennicutt, R. C. J. 1998, ARA&A, 36, 189 ,
+doi: 10.1146/annurev.astro.36.1.189
+Kewley, L. J., Dopita, M. A., Leitherer, C., et al. 2013,
+ApJ, 774, 100, doi: 10.1088/0004-637x/774/2/100
+Kroupa, P. 2001, 322, 231 ,
+doi: 10.1046/j.1365-8711.2001.04022.x
+Leitherer, C. 2020, Galaxies, 8, 13,
+doi: 10.3390/galaxies8010013
+Leja, J., Carnall, A. C., Johnson, B. D., Conroy, C., &
+Speagle, J. S. 2019, ApJ, 876, 3,
+doi: 10.3847/1538-4357/ab133c
+Li, J.-T., Wang, F., Yang, J., et al. 2021, The Astrophysical
+Journal, 906, 135, doi: 10.3847/1538-4357/abc750
+Madau, P. 1995, ApJ, 441, 18 , doi: 10.1086/175332
+Madau, P., & Dickinson, M. E. 2014, ARA&A, 52, 415 ,
+doi: 10.1146/annurev-astro-081811-125615
+
+Maiolino, R., Nagao, T., Grazian, A., et al. 2008, A&A,
+488, 463 , doi: 10.1051/0004-6361:200809678
+Maiolino, R., Scholtz, J., Witstok, J., et al. 2023, arXiv
+e-prints, arXiv:2305.12492,
+doi: 10.48550/arXiv.2305.12492
+Morishita, T., Roberts-Borsani, G., Treu, T., et al. 2022,
+arXiv e-prints, arXiv:2211.09097.
+https://arxiv.org/abs/2211.09097
+Morris, P. W., Crowther, P. A., & Houck, J. R. 2008, The
+Astrophysical Journal Supplement Series, 154, 413,
+doi: 10.1086/422878
+Naidu, R. P., Oesch, P. A., Dokkum, P. v., et al. 2022, The
+Astrophysical Journal Letters, 940, L14,
+doi: 10.3847/2041-8213/ac9b22
+Nakajima, K., & Maiolino, R. 2022, Monthly Notices of the
+Royal Astronomical Society, 513, 5134,
+doi: 10.1093/mnras/stac1242
+Nanayakkara, T., Brinchmann, J., Boogaard, L. A., et al.
+2019, A&A, 624, A89, doi: 10.1051/0004-6361/201834565
+Navarro, J. F., Frenk, C. S., & White, S. D. M. 1997, ApJ,
+490, 493 , doi: 10.1086/304888
+Oguri, M. 2010, Publications of the Astronomical Society of
+Japan, 62, 1017 , doi: 10.1093/pasj/62.4.1017
+—. 2021, Publications of the Astronomical Society of the
+Pacific, 133, 074504, doi: 10.1088/1538-3873/ac12db
+Okabe, T., Oguri, M., Peirani, S., et al. 2020, Monthly
+Notices of the Royal Astronomical Society, 496, 2591,
+doi: 10.1093/mnras/staa1479
+Oke, J. B., & Gunn, J. E. 1983, Astrophysical Journal, 266,
+713 , doi: 10.1086/160817
+Peng, C. Y., Ho, L. C., Impey, C. D., & Rix, H.-W. 2002,
+AJ, 124, 266, doi: 10.1086/340952
+Plat, A., Charlot, S., Bruzual, G., et al. 2019, Monthly
+Notices of the Royal Astronomical Society, 490, 978,
+doi: 10.1093/mnras/stz2616
+Postman, M., Coe, D., Benı́tez, N., et al. 2012, ApJS, 199,
+25, doi: 10.1088/0067-0049/199/2/25
+Raiter, A., Schaerer, D., & Fosbury, R. A. E. 2010,
+Astronomy & Astrophysics, 523, A64,
+doi: 10.1051/0004-6361/201015236
+Roberts-Borsani, G., Treu, T., Chen, W., et al. 2022, arXiv
+e-prints, arXiv:2210.15639.
+https://arxiv.org/abs/2210.15639
+Robertson, B. E., Ellis, R. S., Furlanetto, S. R., & Dunlop,
+J. S. 2015, The Astrophysical Journal Letters, 802, L19,
+doi: 10.1088/2041-8205/802/2/l19
+Robertson, B. E., Tacchella, S., Johnson, B. D., et al. 2022,
+arXiv e-prints, arXiv:2212.04480,
+doi: 10.48550/arXiv.2212.04480
+Salpeter, E. E. 1955, ApJ, 121, 161, doi: 10.1086/145971
+
+24
+Saxena, A., Pentericci, L., Mirabelli, M., et al. 2020, A&A,
+636, A47, doi: 10.1051/0004-6361/201937170
+Schaerer, D. 2002, Astronomy & Astrophysics, 382, 28,
+doi: 10.1051/0004-6361:20011619
+—. 2003, Astronomy & Astrophysics, 397, 527,
+doi: 10.1051/0004-6361:20021525
+Schaerer, D., Marques-Chaves, R., Barrufet, L., et al. 2022,
+arXiv, doi: 10.48550/arxiv.2207.10034
+Senchyna, P., Stark, D. P., Chevallard, J., et al. 2019,
+MNRAS, 488, 3492 , doi: 10.1093/mnras/stz1907
+Sobral, D., Matthee, J., Darvish, B., et al. 2015, The
+Astrophysical Journal, 808, 139,
+doi: 10.1088/0004-637x/808/2/139
+Sobral, D., Matthee, J., Brammer, G. B., et al. 2018,
+MNRAS, 482, 2422 , doi: 10.1093/mnras/sty2779
+Speagle, J. S. 2020, MNRAS, 493, 3132 ,
+doi: 10.1093/mnras/staa278
+Stark, D. P. 2016, ARA&A, 54, 761 ,
+doi: 10.1146/annurev-astro-081915-023417
+Stark, D. P., Walth, G., Charlot, S., et al. 2015, Monthly
+Notices of the Royal Astronomical Society, 454, 1393,
+doi: 10.1093/mnras/stv1907
+Sutherland, R. S., & Dopita, M. A. 1993, The Astrophysical
+Journal Supplement Series, 88, 253, doi: 10.1086/191823
+Tacchella, S., Finkelstein, S. L., Bagley, M., et al. 2022, The
+Astrophysical Journal, 927, 170,
+doi: 10.3847/1538-4357/ac4cad
+Tacchella, S., Eisenstein, D. J., Hainline, K., et al. 2023,
+arXiv e-prints, arXiv:2302.07234,
+doi: 10.48550/arXiv.2302.07234
+Tang, M., Stark, D. P., Chevallard, J., & Charlot, S. 2019,
+Monthly Notices of the Royal Astronomical Society, 489,
+2572, doi: 10.1093/mnras/stz2236
+Topping, M. W., Stark, D. P., Endsley, R., et al. 2022,
+arXiv, doi: 10.48550/arxiv.2208.01610
+Trussler, J. A. A., Conselice, C. J., Adams, N. J., et al.
+2023, Monthly Notices of the Royal Astronomical Society,
+525, 5328, doi: 10.1093/mnras/stad2553
+Valentino, F. M., Daddi, E., Silverman, J. D., et al. 2017,
+MNRAS, 472, 4878 , doi: 10.1093/mnras/stx2305
+
+Venditti, A., Graziani, L., Schneider, R., et al. 2023, arXiv
+e-prints, arXiv:2301.10259.
+https://arxiv.org/abs/2301.10259
+Vikaeus, A., Zackrisson, E., Schaerer, D., et al. 2022,
+MNRAS, 512, 3030, doi: 10.1093/mnras/stac488
+Wang, X., Jones, T. A., Treu, T. L., et al. 2017, ApJ, 837,
+89, doi: 10.3847/1538-4357/aa603c
+Wang, X., Jones, T. A., Treu, T., et al. 2019, The
+Astrophysical Journal, 882, 94,
+doi: 10.3847/1538-4357/ab3861
+Wang, X., Jones, T. A., Treu, T. L., et al. 2020, ApJ, 900,
+183, doi: 10.3847/1538-4357/abacce
+Wang, X., Li, Z., Cai, Z., et al. 2022a, The Astrophysical
+Journal, 926, 70, doi: 10.3847/1538-4357/ac3974
+Wang, X., Jones, T., Vulcani, B., et al. 2022b, The
+Astrophysical Journal Letters, 938, L16,
+doi: 10.3847/2041-8213/ac959e
+Watson, D., Christensen, L., Knudsen, K. K., et al. 2015,
+Nature, 519, 327 , doi: 10.1038/nature14164
+Williams, H., Kelly, P. L., Chen, W., et al. 2022, arXiv
+e-prints, arXiv:2210.15699.
+https://arxiv.org/abs/2210.15699
+Windhorst, R. A., Timmes, F. X., Wyithe, J. S. B., et al.
+2018, ApJS, 234, 41, doi: 10.3847/1538-4365/aaa760
+Xiao, L., Stanway, E. R., & Eldridge, J. J. 2018, MNRAS,
+477, 904 , doi: 10.1093/mnras/sty646
+Yan, H., & Windhorst, R. A. 2004, The Astrophysical
+Journal Letters, 600, L1, doi: 10.1086/381573
+Zackrisson, E., Inoue, A. K., & Jensen, H. 2013, The
+Astrophysical Journal, 777, 39,
+doi: 10.1088/0004-637x/777/1/39
+Zackrisson, E., Inoue, A. K., Rydberg, C.-E., & Duval, F.
+2011, Monthly Notices of the Royal Astronomical Society:
+Letters, 418, L104, doi: 10.1111/j.1745-3933.2011.01153.x
+Zackrisson, E., Hultquist, A., Kordt, A., et al. 2023.
+http://ascl.net/2312.09289
+Zitrin, A., Labbé, I., Belli, S., et al. 2015, The
+Astrophysical Journal Letters, 810, L12,
+doi: 10.1088/2041-8205/810/1/l12
+
+

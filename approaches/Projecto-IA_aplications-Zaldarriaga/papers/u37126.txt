@@ -1,0 +1,1231 @@
+                                               Astronomy & Astrophysics manuscript no. main                                                                                        ©ESO 2026
+                                               June 23, 2026
+
+
+
+
+                                                    PRISMS. U37126, a very blue, ISM-naked starburst at z = 10.255
+                                                         with nearly 100% Lyman continuum escape fraction
+                                                      R. Marques-Chaves1⋆ , J. Álvarez-Márquez2 , L. Colina2 , S. Kendrew3 , Abdurro’uf4 , C. Blanco-Prieto2, 5 ,
+                                                 L. A. Boogaard6 , M. Castellano7 , K. I. Caputi8 , A. Crespo-Gómez9 , A. Fontana7 , Y. Fudamoto10 , S. Fujimoto11, 12 ,
+                                                       M. García-Marín3 , Y. Harikane13 , S. Harish9 , T. Hashimoto14, 15 , T. Hsiao16 , E. Iani17 , A. K. Inoue18, 19 ,
+                                                 D. Langeroodi20 , R. Lin21 , J. Melinder22 , L. Napolitano7 , G. Östlin22 , P. G. Pérez-González2 , C. Prieto-Jiménez2, 5 ,
+                                                P. Rinaldi23 , B. Rodríguez Del Pino2 , P. Santini7 , Y. Sugahara18, 19 , A. Varo-O’Ferrall2, 5 , G. Wright24 , and J. Zavala21
+arXiv:2602.02322v2 [astro-ph.GA] 19 Jun 2026
+
+
+
+
+                                                                                                 (Affiliations can be found after the references)
+
+                                                                                                              Received ; accepted
+
+                                                                                                                  ABSTRACT
+
+                                               We present very deep (≈ 11 hours on-source) JWST/MIRI low-resolution spectroscopy of the rest-frame optical emission of U37126, a UV-bright
+                                               (MUV ≃ −20), mildly lensed (µ ≃ 2.2) galaxy at z = 10.255. The continuum emission is well detected in both NIRSpec and MIRI spectra, yet
+                                               no nebular recombination or metal emission lines are observed (EW0 (Hβ+[O iii]) ≤ 300 Å and EW0 (Hα) ≤ 400 Å, at 3σ). Combined with the
+                                               exceptionally blue UV continuum slope, βUV ≃ −2.9, and flat Balmer break, these constraints indicate a stellar population dominated by very
+                                               young and massive stars with a strongly suppressed nebular contribution. Comparisons with synthetic stellar population models indicate that
+                                               U37126 requires both a very high ionizing photon production efficiency, log(ξion /Hz erg−1 ) ≃ 25.75, and a nearly unit LyC escape fraction, of
+                                                fesc ≥ 86% (3σ) based on Hα flux limit and fesc = 0.94 ± 0.06 derived independently from SED fitting. The best-fit SED yields a (de-lensed) stellar
+                                               mass of M⋆ ≃ 107.8 M⊙ and a star-formation rate of SFR ≃ 10 M⊙ yr−1 (sSFR ∼ 160 Gyr−1 ), that along with its very compact size, reff ≃ 61 pc,
+                                               yields very high stellar mass and star-formation-rate surface densities, Σ M⋆ ≃ 3 × 103 M⊙ pc−2 and ΣSFR ≃ 400 M⊙ yr−1 kpc−2 . Together with the
+                                               lack of detectable nebular emission, these properties suggest that U37126 is undergoing an “ISM-naked” starburst phase, possibly driven by an
+                                               extremely efficient gas-to-star conversion followed by strong feedback that has cleared the remaining gas from its stellar core, allowing most LyC
+                                               photons to escape. Finally, we show that even a small fraction of galaxies like U37126 (≃ 3%–6%), with extreme LyC production and escape,
+                                               could contribute disproportionately (≃ 50%–100%) to the ionizing photon budget during cosmic reionization.
+                                               Key words. Galaxies: starburst – Galaxies: high-redshift – Galaxies: ISM – Cosmology: dark ages, reionization, first stars
+
+
+
+                                               1. Introduction                                                            slopes (β ≃ −2), and that UV continua become systematically
+                                                                                                                          bluer toward higher redshifts and fainter UV luminosities (e.g.,
+                                               The James Webb Space Telescope (JWST) is fundamentally re-                 Bouwens et al. 2012; Finkelstein et al. 2012; Bouwens et al.
+                                               shaping our understanding of galaxy formation in the early Uni-            2014; Bhatawdekar & Conselice 2021). These trends are gener-
+                                               verse by enabling the detection and detailed characterization of           ally interpreted as reflecting lower dust attenuation and younger
+                                               the first galaxies within the first few hundred million years af-          stellar populations in early galaxies. Recent JWST observations
+                                               ter the Big Bang (e.g., Castellano et al. 2022; Curtis-Lake et al.         have extended these measurements even above z > 10 with
+                                               2023; Harikane et al. 2023; Pérez-González et al. 2023; Carniani           improved precision, revealing an increasing prevalence of very
+                                               et al. 2024; Castellano et al. 2024; Harikane et al. 2024; Naidu           steep UV slopes among the earliest galaxies (e.g., Topping et al.
+                                               et al. 2025; Napolitano et al. 2025; Chemerynska et al. 2026).             2022; Cullen et al. 2023, 2024; Morales et al. 2024; Saxena et al.
+                                               Deep NIRCam imaging and NIRSpec spectroscopy provide un-                   2024; Topping et al. 2024a; Dottorini et al. 2025; Messa et al.
+                                               precedented access to the rest-frame ultraviolet (UV) and optical          2025).
+                                               emission of galaxies at redshifts z ≳ 7, while MIRI extends such               While moderately blue βUV can be readily produced by hot,
+                                               studies to even higher redshifts. Together, JWST observations              massive stars expected in young stellar populations, achieving
+                                               are now robustly constraining the physical properties of the ear-          very steep slopes (β ≲ −2.6) is considerably more challeng-
+                                               liest galaxies that were previously inaccessible, including their          ing and requires additional physical conditions. At the young
+                                               stellar populations, star-formation histories, and nebular emis-           ages (≲ 10 Myr) necessary to generate such intrinsically blue
+                                               sion (e.g., Álvarez-Márquez et al. 2024; Bunker et al. 2023; Fu-           stellar continua, nebular emission powered by ionizing photons
+                                               jimoto et al. 2024; Álvarez-Márquez et al. 2025; Helton et al.             typically contributes significantly to the observed spectrum, act-
+                                               2025; Roberts-Borsani et al. 2025; Tang et al. 2025; Zavala et al.         ing to redden the emergent UV spectrum (e.g., Bouwens et al.
+                                               2025; Donnan et al. 2026).                                                 2010). As a result, stellar population models generally predict
+                                                    The UV continuum slope, βUV ( fλ ∝ λβUV ), is a widely                that UV slopes approaching β ≃ −3 should be rare or unob-
+                                               used spectral diagnostic for the physical conditions in star-              servable in systems where ionizing photons are efficiently repro-
+                                               forming galaxies. Prior to JWST, observations established that             cessed by surrounding gas (e.g., Katz et al. 2025). Extremely
+                                               typical star-forming galaxies at z ≳ 2 exhibit relatively blue UV          blue UV slopes thus point to conditions in which the contribu-
+                                                                                                                          tion of nebular emission to the emergent UV spectrum is strongly
+                                                ⋆
+                                                    Rui.MarquesCoelhoChaves@unige.ch                                      suppressed. This naturally occurs when a significant fraction of
+                                                                                                                                                                     Article number, page 1 of 13
+                                                     A&A proofs: manuscript no. main
+
+Lyman continuum (LyC, with > 13.6 eV) ionizing photons es-              custom steps to optimize background subtraction and artifact re-
+cape from H ii regions before being reprocessed into nebular line       moval. These include wavelength masking, master and residual
+and continuum emission.                                                 background subtraction, and sigma clipping to mitigate detec-
+    Galaxies exhibiting extremely steep UV slopes together with         tor artifacts and cosmic-ray residuals. The final combined 2D
+weak nebular emission thus represent compelling candidates for          spectrum and 1D extracted spectrum were produced using the
+systems with exceptionally high LyC escape fractions and en-            pipeline Stage 3, with the 1D spectrum extracted using a 0′′. 44
+hanced ionizing photon output. This framework was first ex-             aperture and corrected for aperture losses using the standard
+plored by Zackrisson et al. (2013, 2017) who showed that the            JWST reference files (jwst_miri_apcorr_0017.fits). For
+combination of steep UV slopes and weak rest-optical emission           more details, see Álvarez-Márquez et al. (2026).
+lines provides a powerful means of identifying strong LyC emit-              In addition to the MIRI LRS observations, NIRCam imag-
+ters. This not only has the advantage of selecting sources with         ing and NIRSpec spectroscopy of U37126 are publicly available
+very high LyC fesc , but also with exceptionally high ionizing          as part of the UNCOVER project1 . NIRCam photometry, com-
+photon production efficiencies, ξion = QH /LUV , where QH is the        bining medium- and broad-band filters from F070W to F480M,
+hydrogen-ionizing photon production rate and LUV is the UV lu-          is taken from the UNCOVER DR3 SUPER catalog (Suess et al.
+minosity. Such high ξion values are expected in very young stellar      2024; Weaver et al. 2024). NIRSpec Micro-Shutter Assembly
+populations required to reproduce extremely steep UV contin-            (MSA) spectroscopy, obtained with the low-resolution PRISM
+uum slopes.                                                             (R ∼ 100), is taken from the UNCOVER data release 4 (Bezan-
+    Nevertheless, and with a few exceptions (Marques-Chaves             son et al. 2024). We use the fully reduced and calibrated NIR-
+et al. 2022; Kim et al. 2023), confirmed low-redshift LyC emit-         Spec spectrum (≃ 4.4 hours on-source) published by Fujimoto
+ters exhibit only moderately blue βUV (Chisholm et al. 2022)            et al. (2024). Finally, we adopt the updated gravitational magni-
+and generally strong nebular emission lines, with rest-frame Hβ         fication from the UNCOVER DR4, µ = 2.19 ± 0.05 (Furtak et al.
+equivalent widths exceeding > 150 Å (e.g., Izotov et al. 2016,          2023; Price et al. 2025).
+2018; Flury et al. 2022). Only recently, JWST started to reveal              To place all JWST observations of U37126 on a consis-
+a rare, yet non-negligible population of z > 6 sources with both        tent relative flux scale, we first compute synthetic NIRSpec
+extremely blue UV slopes and weak nebular emission lines (Top-          photometry convolving the NIRSpec spectrum with the filter
+ping et al. 2022; Hainline et al. 2024; Donnan et al. 2025; Yanag-      transmission functions of all medium- and broad-band NIR-
+isawa et al. 2025), often with inferred LyC escape fractions well       Cam filters, where the source is significantly detected (≥ 3σ;
+above fesc > 50% (e.g., Giovinazzo et al. 2025).                        F150W–F480M) and compare it to the corresponding NIRCam
+    In this work, we present the discovery of another such sys-         photometry. This yields a scaling factor of ≃ 1.41, which is ap-
+tem, UNCOVER-37126 at z = 10.255 (hereafter U37126),                    plied to the NIRSpec spectrum. For the MIRI LRS spectrum, we
+previously identified by Atek et al. (2023) and spectroscopi-           compute synthetic photometry over the common spectral range
+cally confirmed by Fujimoto et al. (2024). Leveraging ultra-deep        λobs = 4.85 − 5.30 µm, where the continuum is significantly de-
+JWST/MIRI spectroscopy of its rest-frame optical emission,              tected in both NIRSpec and MIRI. We find consistent flux den-
+together with ancillary NIRCam imaging and NIRSpec spec-                sities between the two spectra in this region, and therefore apply
+troscopy, we show that U37126 exhibits an extremely steep UV            no additional scaling to the MIRI LRS spectrum. Figure 1 shows
+continuum slope and a non-detection of nebular emission lines,          the combined NIRSpec and MIRI spectra together with the NIR-
+consistent with LyC escape fraction close to unity. The paper           Cam photometry.
+is organized as follows. Section 2 presents the MIRI, NIRCam,
+and NIRSpec observations. Section 3 describes the observational
+                                                                        3. Results
+results, which are discussed in Section 4. Finally, Section 5 sum-
+marizes our conclusions. Throughout this work, we use a concor-         U37126 was first identified by Atek et al. (2023) as a photo-
+dance cosmology with Ωm = 0.31, and H0 = 67.7 km s−1 Mpc−1              metric redshift candidate at zphot = 10.60+0.21
+                                                                                                                     −0.31 based on NIR-
+(Planck Collaboration et al. 2020).                                     Cam photometry (ID: 39074). A spectroscopic redshift of zspec =
+                                                                        10.255 ± 0.001 was subsequently reported by Fujimoto et al.
+                                                                        (2024), based on the unambiguous detection of the Lyα break.
+2. JWST Observations and data reduction                                 A tentative detection of the N iii] λ1750 emission line was also
+                                                                        discussed in Fujimoto et al. (2024); however, we do not find sig-
+U37126 was observed with the Low Resolution Spectrograph                nificant emission at the reported wavelength, nor evidence for
+(LRS, Kendrew et al. 2015) of the Mid-InfraRed Instrument               any other rest-frame UV or optical emission lines in the NIR-
+(MIRI, Rieke et al. 2015; Wright et al. 2015, 2023) on 7-8              Spec and MIRI spectra (Fig. 1). We therefore adopt the red-
+November 2025 as part of the "PRImordial galaxy Survey with             shift z = 10.255 ± 0.001 inferred from the Lyα break through-
+MIRI Spectroscopy at z ∼ 10" (PRISMS, program ID 8051;                  out this work. Finally, U37126 was recently observed in the far-
+PIs: J. Álvarez-Márquez & L. Colina; Álvarez-Márquez et al.             infrared with ALMA; however, neither dust continuum emission
+2026). These observations provide a spectral coverage between           nor [O,iii] 88 µm line emission was detected, yielding upper lim-
+4.80−14.0 µm wavelength range using a 0′′. 51×4′′. 7 slit, i.e., from   its of log(Mdust /M⊙ ) < 6.06 and L([O III] 88 µm) < 2 × 108 L⊙ ,
+λrest ≃ 0.43 − 1.20 µm in the rest-frame, and a spectral resolution     respectively (Algera et al. 2025).
+of R ∼ 100. The total on-source integration time was 39,696 s
+(≃ 11.0 h), obtained using a customized four-point dither strat-
+egy repeated over 12 dithers. The target acquisition was done           3.1. Spectral properties from NIRSpec, NIRCam, and MIRI
+using the F560W filter on a GAIA DR3 reference star.
+                                                                        The βUV is measured using several independent methods based
+     The data reduction follows Álvarez-Márquez et al. (2026).          on both NIRSpec and NIRCam. We first fit the NIRSpec/PRISM
+Briefly, we use version 1.20.2 of the JWST calibration pipeline         spectrum over a broad and continuous rest-frame window,
+and CRDS context jwst_1464.pmap, following the standard
+                                                                        1
+MIRI LRS procedures (Bushouse et al. 2025) with additional                  https://jwst-uncover.github.io/
+
+Article number, page 2 of 13
+                                                       R. Marques-Chaves et al.: A strong LyC emitter at z ≃ 10
+
+                                                                           Rest wavelength [Å]
+                                   1000       2000             3000                4000                  5000              6000                7000
+
+                             1.4
+                                                     NIRSpec/PRISM            NIRCam-M              H +[OIII]                          H
+                             1.2                     MIRI/LRS                 NIRCam-W
+F [10 20 erg s 1 cm 2 Å 1]
+
+
+
+
+                             1.0
+
+                             0.8
+
+                             0.6
+
+                             0.4
+
+                             0.2
+
+                             0.0
+                                   1      2               3                4               5                      6               7                 8
+                                                                       Observed wavelength [ m]
+
+Fig. 1. NIRSpec/PRISM (black) and MIRI/LRS (red) spectra of U37126 with the 1σ uncertainties shown in grey. The expected locations of the
+main rest-frame optical emission lines, Hβ, [O iii] λλ4960,5008, and Hα, are indicated with red dashed lines. NIRCam photometry from broad-
+and medium-band filters is overplotted in blue and green, respectively.
+
+
+1400 − 3600 Å, thereby excluding regions potentially affected                       7.39 µm, respectively, yet none of them are significantly detected
+by intergalactic medium (IGM) absorption blueward of 1400 Å                         (Fig. 1).2 We estimate their flux upper limits by measuring the
+and by the Balmer break at longer wavelengths. A power-law fit                      root mean square (rms) of the spectrum within a rest-frame win-
+using lmfit (Newville et al. 2025) yields βUV = −2.79 ± 0.07.                       dow of ∆λ = 300 Å centered on the expected position of each
+We then adopt the continuum windows defined by Calzetti et al.                      line (yellow regions in Figure 1), and adopt the MIRI/LRS in-
+(1994), which avoid ISM absorption features, stellar P-Cygni                        strumental resolutions of R ≃ 49 and R ≃ 89 for [O iii] and Hα,
+profiles, and nebular emission lines. To remain consistent with                     respectively (Kendrew et al. 2015), i.e., assuming that the emis-
+the above criteria, we restrict the fit to windows at λrest ≥ 1400 Å,               sion lines are unresolved. We also consider an intrinsic [O iii]
+obtaining βUV = −2.83 ± 0.09. As an alternative spectral diag-                      5008/4960 ratio of 2.98 (Osterbrock & Ferland 2006).
+nostic, we fit a first-order polynomial to the wavelength inter-                        Under these assumptions, we derive 3σ limits
+vals 2180 − 2220 Å and 2780 − 2820 Å following Leitherer et al.                     of F ([OIII] λ5008) ≤ 6.6 × 10−19 erg s−1 cm−2 and
+(1999). This method yields βUV = −3.05 ± 0.16. Finally, we                          F (Hα) ≤ 6.9 × 10−19 erg s−1 cm−2 . The continuum emis-
+use the NIRCam broad-band photometry in F200W and F277W,                            sion is significantly detected in the MIRI/LRS ranges
+which sample the rest-frame range λrest ≃ 1800 − 2500 Å. From                       λobs = 4.8 − 5.6 µm (37.2 ± 4.1 nJy) and 5.85 − 6.73 µm
+this, we obtain βUV = −2.86 ± 0.20. Taken together, these in-                       (26.1 ± 5.3 nJy), while no significant signal is observed at
+dependent diagnostics consistently indicate that U37126 shows                       λobs ≥ 7.0 µm (≤ 28 nJy at 3σ). We estimate the contin-
+a steep UV continuum slope, all with βUV ≲ −2.7. Taking the                         uum emission at the wavelengths of [O iii] λ5008 and Hα
+simple average of these measurements, obtained from different                       from the best-fit SED (Section 3.3), finding continuum flux
+spectral regions and instruments (NIRSpec and NIRCam), and                          densities of ≃ 35.8 nJy and ≃ 27.7 nJy, respectively. These
+adopting their standard deviation as the uncertainty, we derive a                   values imply 3σ rest-frame equivalent-width limits under
+fiducial UV slope of βUV = −2.88 ± 0.10.                                            EW0 ([O III] λ5008) ≤ 174 Å and EW0 (Hα) ≤ 400 Å. For
+                                                                                    Hβ, we assume case-B recombination with an intrinsic line
+     Another key spectral diagnostic is the strength of the Balmer
+                                                                                    ratio of IHα /IHβ = 2.78, assuming T e = 1.5 × 104 K and
+break, which is sensitive to the age of the stellar population and
+to the relative contribution of nebular emission. For consistency                   ne = 103 cm−3 (Luridiana et al. 2015). This yields an upper
+and to facilitate a direct comparison with the stellar population                   limit of F(Hβ) ≤ 2.5 × 10−19 erg s−1 cm−2 and EW0 (Hβ) ≤ 64 Å.
+models discussed next in Section 3.2, we estimate the Balmer                        We emphasize that the Hβ flux and equivalent-width limits are
+break strength of U37126 from the NIRSpec spectrum as the flux                      dependent on the assumed case-B recombination conditions.
+density ratio (in Fν ) between λrest = 4200 Å and λrest = 3400 Å,                   These measurements are summarized in Table 1
+measured within spectral windows of width ∆λrest = 400 Å. We                            Finally, we briefly examine the spectral region around Lyα.
+                                                                                    Figure 2 shows the rest-frame Lyα break of U37126 and, for
+find a ratio of Fν4200Å /Fν3400Å = 0.86 ± 0.21. For comparison, us-                 comparison, that of MACS0647-JD (Heintz et al. 2024), a star-
+ing the observed NIRCam photometry in the F356W and F444W                           forming galaxy at a similar redshift (z = 10.170) and with
+filters, which sample the emission shortward and longward of                        comparable global properties (e.g., stellar mass and star forma-
+the Balmer break, respectively, we derive a consistent flux den-                    tion rate). MACS0647-JD exhibits a strong damped Lyα ab-
+sity ratio of FνF444W /FνF356W = 0.88 ± 0.08. As discussed fur-                     sorption feature, corresponding to a neutral hydrogen column
+ther in Section 3.2, the inferred Balmer break strength rules out                   density of NHI ≃ 2.5 × 1022 cm−2 (Heintz et al. 2024). In con-
+single-burst stellar populations older than ≳ 6 Myr, as well as                     trast, U37126 shows a very sharp Lyα break, suggestive of low
+continuous star formation histories with ages ≳ 16 Myr.                             H i column density along the line of sight. A recent analysis
+     Finally, we analyze the MIRI/LRS spectrum. At the redshift
+of U37126 (z = 10.255), the Hβ, [O iii] λλ 4960,5008, and Hα                         2
+                                                                                       The reduced NIRSpec spectrum (v4) from the Dawn JWST Archive
+emission lines are expected at λobs = 5.47 µm, 5.64 µm, and                         extends up to λobs ≃ 5.5 µm, but Hβ is also not detected.
+
+                                                                                                                           Article number, page 3 of 13
+                                                             A&A proofs: manuscript no. main
+
+                                                                             3.2. Predictions from synthetic stellar models
+                        1.6   Ly 1216Å
+                                                                             We now compare the observed spectral properties derived in
+                                                                             Section 3.1 with predictions from synthetic stellar population
+                                                                             models. We adopt the Binary Population and Spectral Synthe-
+                        1.2
+                                                                             sis models (BPASS v2.2.1; Stanway & Eldridge 2018), using
+  F [arbritary units]
+
+
+
+
+                                                                             their default IMF with slope of −2.35 and an upper mass cutoff
+                                                                             of 300 M⊙ (imf135_300). We assume a metallicity Z = 0.003
+                                                                             (Z/Z⊙ ≃ 0.15 for Z⊙ = 0.02), consistent with values reported
+                        0.8
+                                                                             for galaxies of comparable MUV at similar redshifts (e.g., Sti-
+                                                                             avelli et al. 2023; Boyett et al. 2024; Hsiao et al. 2024; Álvarez-
+                                                                             Márquez et al. 2025; Helton et al. 2025). Predictions for addi-
+                        0.4                                                  tional metallicities, from solar to Z/Z⊙ = 0.5%, are presented in
+                                                                             Appendix A (figures A.1 to A.4, respectively).
+                                                                                   We consider both instantaneous-burst and constant star for-
+                                              U37126 (z=10.255)              mation histories, with ages from 1 to 100 Myr. For each model,
+                        0.0                   MACS0647-JD (z=10.170)         we compute the ionizing photon production rate QH and pre-
+                                                                             dict the associated nebular continuum emission using PyNeb
+                              1000   1200     1400      1600      1800       (Luridiana et al. 2015). We assume nebular conditions with
+                                     Rest wavelength [Å]                     T e = 1.5 × 104 K and ne = 103 cm−3 expected at very high
+Fig. 2. Comparison of the rest-frame Lyα break of U37126 (black) with        redshifts (e.g., Isobe et al. 2023), and include free–free and
+that of MACS0647-JD (z = 10.170) which shows a strong damped Lyα             free–bound emission by H and He, and the two-photon con-
+absorption feature (NHI ≃ 2.5 × 1022 cm−2 , Heintz et al. 2024).             tinuum of H. Hydrogen recombination-line luminosities (e.g.,
+                                                                             Hα) are obtained using the coefficients from Osterbrock & Fer-
+                                                                             land (2006). We additionally include the contribution of the Hγ
+                                                                             and Hδ emission lines, as these are sampled by the spectral re-
+Table 1. Summary of the properties of U37126. Global quantities have
+been corrected for lensing magnification.                                    gions used to infer the Balmer break strength (Fν4200Å /Fν3400Å ,
+                                                                             see next). The total emergent spectrum is then given by Ftotal =
+             Property                           Value       Uncertainty      Fstellar +(1− fesc )× Fnebular , where the factor (1− fesc ) accounts for
+                                                                             the ionizing escape fraction, i.e., LyC photons not reprocessed
+             R.A. [J2000]                    00:14:21.63       0.1′′         into nebular emission. We also assume negligible dust attenua-
+             Dec. [J2000]                   −30:21:35.10       0.1′′         tion, given the extremely steep UV slope.
+             z                                 10.255          0.001               For each model and fesc we measure the UV slope, Balmer-
+             µ                                   2.19          0.05          break strength, and EW0 (Hα) using the same methodology ap-
+             MUV [AB]                          −20.10          0.05          plied to U37126 (Section 3.1). Figure 3 (top) shows the pre-
+             Age [Myr, CSFH]                      6.8           1.6          dicted quantities as a function of age for fesc = 0, 0.5, and
+             SFR [M⊙ yr−1 ]                       9.6           4.6          0.9 (red, green, blue, respectively). Overall, we recover the ex-
+             log(M⋆ /M⊙ )                        7.77          0.06          pected trends already discussed in previous works: increasing
+             E(B-V) [mag.]                       0.01           0.01          fesc suppresses the nebular continuum and line emission, yield-
+             reff [pc]                            61             6           ing steeper UV slopes and lower EW0 (Hα) at fixed age (e.g., Za-
+             sSFR [Gyr−1 ]                       160             80          ckrisson et al. 2013, 2017). UV slopes steeper than βUV < −2.7
+             log(Σ M⋆ / M⊙ pc−2 )                3.40          0.10          necessarily require a substantial escape of ionizing photons, and
+             log(ΣSFR / M⊙ yr−1 kpc−2 )          2.61           0.22         this should hold irrespective of the assumed IMF, metallicity,
+             βUV                                −2.88           0.10         and age of the underlying stellar population (cf. Katz et al. 2025;
+             EW0 ([O iii] λ5008) [Å]            ≤ 174          (3σ)          Schaerer et al. 2025), and more broadly, for any ionizing source.
+             EW0 (Hβ) [Å]                       ≤ 64           (3σ)                The Balmer break, traced here by the flux density ratio
+             EW0 (Hα) [Å]                       ≤ 400          (3σ)          Fν 4200Å
+                                                                                      /Fν3400Å , is close to unit for all burst and constant-SFH
+             L ([OIII] 5008Å) [erg s−1 ]    ≤ 4.3 × 1041       (3σ)          models at young ages, reflecting the strong contribution of neb-
+             L (Hα) [erg s−1 ]              ≤ 4.5 × 1041       (3σ)          ular continuum in the Fν3400Å but also the emission lines (Hγ
+             log(ξion ) [Hz erg−1 ]             25.75          0.09          and Hδ) to Fν4200Å , unless fesc is very high (90%, blue). At ages
+              fesc (LyC) – Hα                  ≥ 0.86          (3σ)          ≳ 6 Myr (≳ 15 Myr) for single burst models (constant star forma-
+              fesc (LyC) – SED                   0.94          0.06          tion), the strength of the Balmer break increases with the stellar
+                                                                             age, reflecting the rising contribution of less massive stars (A-
+                                                                             type) to the integrated spectrum (e.g., Kuruvanthodi et al. 2024;
+                                                                             Looser et al. 2024; Baker et al. 2025).
+                                                                                   The observational constraints for U37126 are overplotted in
+of U37126 by Mason et al. (2026) modeled the Lyα break us-                   Fig. 3. These favor stellar populations with very high fesc along
+ing the low-resolution PRISM spectrum and inferred a neutral                 with young ages, ≃ 2 − 10 Myr for constant star formation or
+hydrogen column density of log(NHI /cm−2 ) = 19.2 ± 1.5. Al-                 ≃ 1 − 3 Myr for single burst models. Thus, our results indicate
+though formally larger than the optically thin limit for LyC es-             that the lack of nebular emission in the MIRI/LRS spectrum is
+cape (NHI ≲ 2 × 1017 cm−2 ), the large uncertainty remains sta-              primarily driven by an exceptionally high fesc and very young
+tistically consistent with a very high escape fraction at ∼1.3 σ             stellar populations, rather than by an evolved population with
+level.                                                                       reduced LyC production. While single stellar population mod-
+Article number, page 4 of 13
+                                                                    R. Marques-Chaves et al.: A strong LyC emitter at z ≃ 10
+
+                                                                                                                                                                                                                       1.6
+                     fesc = 90%                                   Data                    3000
+           3.0                                                    CSFH
+                                                                  Burst                                                                                                                                                1.4
+                                                                                          2500
+
+
+
+
+                                                                                                                                                                                                   Balmer break [F ]
+           2.9
+
+
+
+
+                                                                           EW0 (H ) [Å]
+                                                                                          2000
+UV slope
+
+
+
+
+                                                                                                                                                                                                                       1.2
+           2.8
+                     50%
+                                                                                          1500
+           2.7
+                                                                                                                                                                                                                       1.0
+                                                                                          1000
+           2.6
+                     0%                                                                                                                                                                                                0.8
+                                                                                          500
+           2.5
+
+                                                                                            0                                                                                                                          0.6
+                 6.00     6.25    6.50     6.75     7.00   7.25     7.50                         6.00   6.25    6.50     6.75                                      7.00    7.25      7.50                                    6.00   6.25    6.50     6.75      7.00    7.25   7.50
+                                  Log Age [Myr]                                                                  Log Age [Myr]                                                                                                               Log Age [Myr]
+
+                                                                                                                                                                                                             2500
+           3.1        fesc = 95%                                  Data                     3.0
+                               90%                                CSFH
+           3.0                                                    Burst                                                                                                                                      2000
+                                             80%                                           2.9
+
+
+
+
+                                                                                                                                                                                            EW0 (H ) [Å]
+           2.9
+UV slope
+
+
+
+
+                                                                            UV slope
+
+
+
+
+                                                                                           2.8                                                                                                               1500
+           2.8                                                50%
+                                                                                           2.7
+           2.7                                                                                                                                                                                               1000
+
+                                                                                           2.6
+           2.6
+                                                                  0%                                                                                                                                                   500
+
+           2.5                                                                             2.5
+
+                                                                                                                                                                                                                        0
+                 0         500      1000          1500     2000       2500                        0.7   0.8    0.9     1.0                 1.1                       1.2       1.3   1.4                                      0.7   0.8    0.9     1.0   1.1     1.2    1.3   1.4
+                                   EW0 (H ) [Å]                                                                Balmer break [F ]                                                                                                           Balmer break [F ]
+
+Fig. 3. Predictions from BPASS synthetic stellar and nebular emission models (Z/Z⊙ ≃ 0.15, T e = 1.5 × 104 K, and ne = 103 cm−3 ) for the UV
+continuum slope (βUV ), EW0 (Hα), and the Balmer break strength (Fν4200Å /Fν3400Å ) as a function of the age (top) and their combination (bottom).
+Solid and dashed lines correspond to constant star formation (CSFH) and instantaneous burst models (Burst), respectively. Model sequences are
+shown for LyC escape fractions fesc ranging from 0% (red) to 90% (blue); additional models with fesc = 80% and 95% are shown in the bottom
+panels only (light and dark blue, respectively). Violet dot-dashed lines (top) and circles (bottom) indicate the observational constraints for U37126,
+with the shaded regions representing the 1σ uncertainties, except for EW0 (Hα), which represents the 3σ upper limit.
+
+                                                                                                                                                                   1.0
+els (dashed red in Fig. 3) with ages > 6 Myr can match the ob-
+served EW0 (Hα) upper limit, they cannot reproduce simultane-
+                                                                                                                             LyC escape fraction [3 lower limit]
+
+
+
+
+ously the observed steep UV slope and weak Balmer break. As
+                                                                                                                                                                   0.8
+a simple estimate, we consider a 5 Myr constant-SFH BPASS
+model redshifted to z = 10.255 and scaled to match the observed
+spectrum. This scaled BPASS model, shown in Figure 5 (violet),                                                                                                     0.6
+has log(QH /s−1 ) ≃ 54.4 (de-lensed) and a high ionizing photon
+production efficiency, log(ξion /Hz erg−1 ) ≃ 25.75. For compari-
+son, if we use the Hα limit assuming fesc = 0, we would obtain                                                                                                     0.4
+log(ξion /Hz erg−1 ) ≤ 25.02 (2σ), i.e., underpredicting its true ξion
+by > 0.73 dex. Together with our upper limit on the Hα luminos-
+ity (L (Hα) ≤ 4.5 × 1041 erg s−1 , de-lensed), our results indicate                                                                                                0.2               Te = 104 K
+an fesc ≥ 86% at 3σ for U37126, assuming a stellar metallicity of                                                                                                                    1.5 × 104 K
+15% Z⊙ . Figure 4 shows the corresponding 3σ limits on the LyC                                                                                                                       2.5 × 104 K                                                   5 Myr-old (CSFH)
+escape fraction derived using the same methodology across a                                                                                                        0.0         4                                                    3
+                                                                                                                                                                          10                                                 10                                 10 2
+range of stellar metallicities (0.5% to 100% Z⊙ ) and gas electron
+                                                                                                                                                                                                                        Stellar metallicity [Z]
+temperatures (1.0–2.5 × 104 K). At low metallicities (≤ 0.15 Z⊙ ),
+we find fesc ≥ 86–91% (3σ), whereas at higher metallicities                                                              Fig. 4. Limits (3σ) on the Lyman-continuum escape fraction derived
+(∼ 0.5–1.0 Z⊙ ), the limits decrease to fesc ≥ 69–80% (3σ). We                                                           from the upper limit on the observed (de-lensed) Hα luminosity, as a
+note, however, that other independent indicators (e.g., βUV ) still                                                      function of stellar metallicity (from 0.5% to 100% solar) assuming a
+favor high escape fractions at higher metallicities ( fesc ≳ 90%;                                                        5 Myr constant-SFH. Different symbols/colors correspond to assumed
+see Figures A.1 and A.2).                                                                                                gas electron temperatures of 104 K (blue), 1.5 × 104 K (orange), and
+                                                                                                                         2.5 × 104 K (green).
+    In summary, our results point to a high LyC escape fraction
+largely independent of the assumed stellar population proper-
+ties ( fesc ≥ 86% at 3σ for our fiducial model). We emphasize
+that, given the limited observational constraints, these conclu-                                                         AGN, the combination of a hot ionizing source (βUV ≃ −2.9)
+sions are also somewhat agnostic to the nature of the ionizing                                                           and the lack of detectable nebular emission implies that only a
+source. In particular, whether the ionizing radiation is dominated                                                       small fraction of ionizing photons are absorbed by the interstel-
+by a young stellar population or includes a contribution from an                                                         lar medium.
+                                                                                                                                                                                                                                            Article number, page 5 of 13
+                                                     A&A proofs: manuscript no. main
+
+3.3. Spectral energy distribution and global properties                short-wavelength NIRCam images (e.g., F150W and F200W)
+                                                                       have been resampled in UNCOVER DR4 to a pixel scale of
+We perform spectral energy distribution (SED) fitting us-              0.02′′ pix−1 , we generate PSFs for these bands using STPSF3
+ing the SpectroPhotometric version of the CIGALE code                  (Perrin et al. 2014). We follow Morishita et al. (2024) and Weibel
+(V.2022.1; Burgarella et al. 2005; Boquien et al. 2019; Bur-           et al. (2024) and set the jitter_sigma parameter in WebbPSF
+garella et al. 2025), incorporating all NIRCam photometry, the         to 0.022, which has been shown to best reproduce the observed
+NIRSpec/PRISM spectrum, as well as MIRI/LRS measurements               NIRCam PSFs.
+of the [O iii] λ5008 and Hα flux upper limits and the contin-               We fit 2D Sérsic models, allowing the Sérsic index to vary
+uum emission between λobs = 4.8 − 5.6 µm, 5.85 − 6.73 µm, and          between 0.5 and 6.0, while leaving the total flux, effective radius,
+> 7.0 µm (see Section 3.1). We have excluded from the fit all          ellipticity, and position angle free. Given the significantly higher
+observations below λrest < 1400 Å since they may be affected           SNR in the NIRCam broadband filters relative to the medium
+by IGM absorption and the effect is not properly handled by            bands, we restrict our morphological analysis to the broadband
+CIGALE.                                                                imaging only, also excluding F444W image for the same reason
+     The star formation history (SFH) is modeled assuming con-         (low SNR). Each fit is performed on a 1′′ ×1′′ cutout, all centered
+stant star formation with ages varying from 1 to 20 Myr in 1 Myr       on U37126.
+steps. We adopt stellar population models from Bruzual & Char-              For the short-wavelength NIRCam images, we measure ef-
+lot (2003), assuming a Chabrier (2003) IMF and metallicities           fective radii of reff = 24 ± 2 mas in F150W and reff = 22 ± 2 mas
+from Z/Z⊙ = 2 − 20%. The ionization parameter ranges from              in F200W, respectively (Figure 6), and a Sérsic index of n =
+log(U) = −3.0 to −1.5 in 0.5 dex steps. We adopt the Milky Way         1.64 ± 0.26. We adopt the F200W value, as this band probes
+dust extinction law from Cardelli et al. (1989) with RV = 3.1 as       the rest-frame UV at ≃ 1750Å. Given that U37126 is moder-
+the dust attenuation law for the nebular emission and the Calzetti     ately magnified by A2744, with µ = 2.19 ± 0.05 (Furtak et al.
+et al. (2000) for the stellar emission. The color excess of the neb-   2023; Price et al. 2025), we obtain a de-magnified radius of
+ular gas is allowed to vary from 0 to 0.5 mag. The escape of LyC       reff = 61 ± 6 pc at z = 10.255. At longer wavelengths, the best-
+photons is allowed to vary from 0 to 0.999. Finally, we add 10%        fit models yield reff ≲ 0.5 pix (or reff ≲ 0.02′′ ). Thus, U37126
+uncertainty to all dataset points to account for cross-calibration     appears unresolved in the rest-optical with reff < 160 pc (or
+systematics between NIRSpec, NIRCam, and MIRI.                         < 100 pc after lensing correction ).
+     Our best-fit SED model (χ2ν = 0.64), shown in Figure 5,
+is characterized by a stellar population with a constant star-
+formation rate SFR = 9.6 ± 4.6 M⊙ yr−1 (10 Myr weighted),              4. Discussion
+a stellar mass log(M⋆ /M⊙ ) = 7.77 ± 0.06, and an age of
+6.8 ± 1.6 Myr (where global properties are corrected for magnifi-      4.1. Comparison with other strong confirmed LyC emitters
+cation, assuming µ = 2.19). This yields a specific star-formation           and z > 6 candidates
+rate sSFR = 160 ± 80 Gyr−1 . The color excess is negligible,           Our results strongly support a scenario in which U37126 both
+E(B−V) = 0.01±0.01 mag., as expected given the very steep UV           produces and leaks large amounts of LyC photons. These con-
+slope of the best-fit model, βUV = −2.85 ± 0.05 (and consistent        straints are driven by the combination of its extremely steep UV
+with our measurements in Section 3.1). The nebular metallicity         continuum and the non-detection of nebular emission, and indi-
+is found to be Z/Z⊙ = 7.8 ± 7.1%.                                      rectly, from the very sharp Lyα break. Although extreme, similar
+     The best-fit model also provides a very high LyC escape frac-     properties have been identified with JWST in a small number of
+tion, fesc = 0.94±0.06 (Figure 5, inset panel), consistent with the    sources at z ∼ 6 − 10 (Topping et al. 2022; Hainline et al. 2024;
+results obtained in Section 3.2. Finally, using the de-magnified       Giovinazzo et al. 2025; Yanagisawa et al. 2025; Jecmen et al.
+size of reff = 61 ± 6 pc derived next in Section 3.4, we obtain a      2026). These galaxies share comparably blue UV continua and
+stellar mass and SFR surface densities of log(Σ M⋆ /M⊙ pc−2 ) =        unusually weak nebular emission, pointing toward very young
+3.40 ± 0.10 and log(ΣSFR /M⊙ yr−1 kpc−2 ) = 2.61 ± 0.22, respec-       stellar populations with very high LyC fesc . Interestingly, several
+tively. These values are substantially higher than those of typi-      of these also show high SFRs within extremely compact mor-
+cal star-forming galaxies at high-z (e.g., Morishita et al. 2024)      phologies (reff < 260 pc). This results in very high ΣSFR , com-
+and are instead comparable to those found in young massive star        parable to that inferred for U37126, log(ΣSFR /M⊙ yr−1 kpc−2 ) ≃
+clusters and globular clusters (e.g., Vanzella et al. 2023), as well   2.6, and consistent with expectations for strong LyC leakage
+as in some of the most extreme sources at the highest redshifts        (Sharma et al. 2017; Naidu et al. 2020).
+(Castellano et al. 2022; Tacchella et al. 2023; Naidu et al. 2025).        Recent JWST studies have further suggested a dichotomy
+These properties are summarized in Table 1.                            among galaxies at z ≳ 10 (Harikane et al. 2025; Roberts-Borsani
+                                                                       et al. 2025), separating extended systems with relatively weak
+3.4. Morphology and size                                               emission lines, in some cases accompanied by Balmer breaks
+                                                                       (Harikane et al. 2026; Álvarez-Márquez et al. 2026), that may be
+U37126 shows a compact morphology in the NIRCam imaging,               undergoing a recent decline in star formation (e.g., Helton et al.
+as illustrated in the top panels of Fig. 6. To quantify its struc-     2025), from very compact galaxies (reff ≲ 100 pc) experiencing
+tural properties, we model the light distribution using PySersic       recent bursts and exhibiting strong UV and/or optical emission
+(Pasha & Miller 2023). PySersic performs forward modeling              lines (e.g., Bunker et al. 2023; Castellano et al. 2024; Álvarez-
+of galaxy morphologies with Sérsic profiles convolved with a           Márquez et al. 2025; Zavala et al. 2025). Figure 7 shows the ef-
+supplied point-spread function (PSF), and employs a Bayesian           fective radius and star-formation rate surface density of the small
+framework to explore the posterior distribution of all parameters      sample of z > 10 sources with MIRI constraints on rest-optical
+and their degeneracies.                                                emission, with the color scale encoding the rest-frame equivalent
+    Empirical PSFs from the UNCOVER DR4 release (Suess                 width EW0 (Hβ+[O iii]). Compact systems generally occupy the
+et al. 2024; Weaver et al. 2024) are available for all NIRCam
+bands, but only at a pixel scale of 0.04′′ , pix−1 . Because the       3
+                                                                           https://stpsf.readthedocs.io/en/latest/
+
+Article number, page 6 of 13
+                                                           R. Marques-Chaves et al.: A strong LyC emitter at z ≃ 10
+
+             103
+                                 CIGALE (fesc = 94 ± 6%)      NIRCam phot.         NIRSpec/PRISM                            0.3       fesc (LyC) = 0.94 ± 0.06
+                                 BPASS (fesc = 100%)          MIRI syn. phot.      MIRI/LRS
+                                                                                                                            0.2
+
+
+
+
+                                                                                                                      PDF
+                                                                                                                            0.1
+Flux [nJy]
+
+
+
+
+                                                                                                                            0.0
+                                                                                                                                  0.0       0.2     0.4     0.6      0.8    1.0
+                  2
+             10                                                                                                                                     fesc (LyC)
+
+
+
+
+             101
+                      1                      2                3               4            5                                      6                      7                        8
+                                                                         Observed wavelength [ m]
+Fig. 5. Best-fit spectral energy distribution (SED) of U37126 derived with CIGALE (black solid curve) and a pure stellar 5 Myr-old BPASS
+model (CSFH with Z/Z⊙ = 15%, violet dashed line). The NIRSpec/PRISM and MIRI/LRS spectra are shown in grey and red, respectively, while
+NIRCam photometric measurements and MIRI/LRS synthetic photometry are indicated by blue and red circles. The inset panel displays the
+posterior probability density function of the Lyman-continuum escape fraction.
+
+                          Data                    Model             Residuals
+
+                                                                                                          0   300     400             600         800    1000        1200    1400
+                                                                                                                             EW0 (H +[OIII]) [Å]
+  F150W
+
+
+
+
+                                                                                                    103
+
+             0.2"
+  F200W
+
+
+
+
+                                                                                        reff [pc]
+
+
+
+
+             0.2"
+
+
+Fig. 6. NIRCam F150W (top) and F200W (bottom) 1′′ × 1′′ cutouts                                     102
+                                                                                                              U37126 (z=10.3, this work)
+of U37126. Middle and right panels show the Sérsic best-fit models
+                                                                                                              GNz11 (z=10.6)
+obtained with PySersic and the corresponding residuals, respectively.
+                                                                                                              GHz2 (z=12.3)
+The PSFs are shown in the left panels.
+                                                                                                              GS-z14-0 (z=14.3)
+                                                                                                              U26185 (z=10.1)
+                                                                                                              CEERS2-588 (z=11.0)
+regime of high ΣSFR and large equivalent widths. U37126 lies                                                  MoM-z14 (z=14.4)
+in this compact, high-ΣSFR regime, yet it shows unusually weak                                                Maisie (z=11.4)
+nebular emission, which is naturally explained by its very high
+                                                                                                                      101                         102                 103
+LyC escape fraction.
+                                                                                                                                                   1         2
+     To further place U37126 in context, we compare its observed                                                        SFR [M              yr      kpc          ]
+properties with those of confirmed LyC emitters at lower red-
+shifts (z < 4), where LyC escape can be measured directly. We                            Fig. 7. Effective radius (reff ) as a function of star-formation rate sur-
+first note that the majority of known LyC emitters exhibit rela-                         face density (ΣSFR ) for galaxies at z > 10 with MIRI constraints on
+tively modest escape fractions and UV slopes βUV > −2.5 (e.g.,                           EW0 (Hβ+[O iii]) (color-codded, from: Castellano et al. 2022; Gould-
+Izotov et al. 2018; Steidel et al. 2018; Marques-Chaves et al.                           ing et al. 2023; Tacchella et al. 2023; Calabro et al. 2024; Carniani et al.
+2021; Flury et al. 2022; Kerutt et al. 2024). Only a small subset                        2024; Álvarez-Márquez et al. 2025; Helton et al. 2025; Zavala et al.
+shows fesc > 50% and nearly all of these exhibit strong nebu-                            2025; Harikane et al. 2026, and Álvarez-Márquez et al. 2026). Symbols
+lar emission, with typical Hβ equivalent widths of the order of                          denote individual sources while the open symbols indicate sources with-
+∼ 100−300 Å (de Barros et al. 2016; Izotov et al. 2016; Vanzella                         out available EW0 measurements (Arrabal Haro et al. 2023; Naidu et al.
+et al. 2016; Izotov et al. 2018; Rivera-Thorsen et al. 2019; Flury                       2025). U37126 (star) occupies the compact, high-ΣSFR regime but shows
+et al. 2022). An exception is the strong LyC leaker J1316+2614                           unusually weak nebular emission with EW0 (Hβ+[O iii]) < 296 Å (3 σ)
+                                                                                         compared to other compact systems (e.g., GNz11 and GHz2), consis-
+at z = 3.6, which, despite being much brighter, has a measured                           tent with a high LyC escape fraction.
+ fesc ≃ 87%, EW0 (Hβ) ≃ 35 Å, and βUV ≃ −2.6 (Marques-
+Chaves et al. 2022), representing the closest known analog to
+                                                                                                                                                   Article number, page 7 of 13
+                                                     A&A proofs: manuscript no. main
+
+U37126 and to other z > 6 strong LyC emitting candidates with           Moreover, the extreme stellar mass and SFR surface densities
+steep UV slopes and weak nebular emission.                              of U37126 would instead favor high electron densities (e.g.,
+    At face value, the observed high fesc and strong nebular emis-      Reddy et al. 2023a,b). Consistent with this expectation, nearly
+sion in some confirmed strong LyC emitters appear at odds with          all sources at z > 10 with sizes comparable to that of U37126
+the predictions and with the properties of U37126 (Fig. 3). How-        (reff ≈ 61 pc) exhibit evidence for extremely high gas densities
+ever, these observations are not necessarily contradictory. The         (Harikane et al. 2025), several of them shown in the bottom right
+measured fesc in low-z LyC emitters probes LyC escape along             corner of Figure 7 (e.g., GNz11, GHz2). Taken together, the ab-
+the line of sight toward the young stars, whereas nebular emis-         sence of detectable nebular emission in U37126 suggests that
+sion traces a more global, 4π-averaged escape fraction. Strongly        the galaxy is largely depleted of its interstellar medium. U37126
+anisotropic LyC leakage can therefore result in high apparent fesc      thus behaves as an ISM-free starburst, raising the question of
+values while still producing prominent nebular emission (e.g.,          how such conditions can be achieved.
+Flury et al. 2022; Jaskot et al. 2024a). In addition, LyC flux               One possibility is that, during its intense star-formation
+measurements close to the Lyman limit may be boosted by neb-            episode, the bulk of the natal gas in U37126 was rapidly and
+ular bound-free emission (Inoue 2010; Simmonds et al. 2024b),           efficiently converted into stars, leaving little residual gas avail-
+potentially leading to an overestimation of the stellar fesc . As re-   able to absorb and reprocess LyC photons. Dekel et al. (2023)
+cently shown by Izotov et al. (2025), this effect appears to be sig-    (see also Li et al. 2023) predict that extremely high gas surface
+nificant in J1243+4646, the strongest LyC emitter at z ≃ 0.3 and        densities (Σgas ≳ 3 × 103 M⊙ pc−2 ) can lead to the formation of
+also a strong line emitter ( fesc ≃ 72% and EW0 (Hβ) ≃ 221 Å,           “feedback-free starbursts” (FFB), in which gas clouds collapse
+Izotov et al. 2018).                                                    on very short free-fall timescales (∼ 1 Myr). This makes star for-
+    These results thus suggest that sources like U37126, charac-        mation very efficient, since the cloud collapse occurs before the
+terized by very steep UV slopes with faint nebular emission, may        onset of mechanical feedback (e.g., SNe). While the gas surface
+be rare or absent at z < 4. However, it remains unclear whether         density of U37126 cannot be measured directly, the observed
+this reflects a genuinely low number density at lower redshifts,        stellar mass surface density, log(Σ M⋆ /M⊙ pc−2 ) = 3.40 ± 0.10,
+possibly due to the specific physical conditions required to form       suggests a pre-star-formation gas surface density of at least com-
+such systems (see Section 4.2), or whether they have been sys-          parable magnitude, thus satisfying the condition for an FFB.
+tematically overlooked in LyC surveys due to selection effects          Observationally, high star-formation efficiencies have been in-
+(e.g., Bergvall et al. 2013), as the confirmation of spectroscopic      ferred (> 40%; Dessauges-Zavadsky et al. 2025) and predicted
+redshifts generally relies on strong nebular emission.                  (> 70%; Marques-Chaves et al. 2024) to explain the strong LyC
+                                                                        escape directly measured in the strong leaker J1316+2614 at
+4.2. Conditions for forming “ISM-naked” starbursts with                 z = 3.6 with fesc ≈ 87% and EW0 (Hβ) ≃ 35 Å (Marques-Chaves
+     nearly unity LyC escape fraction                                   et al. 2022).
+                                                                             An alternative, though not mutually exclusive, scenario is
+The nature of sources like U37126 is intriguing, as typical star-       that strong feedback has removed gas and dust from the stel-
+burst galaxies are gas-rich and exhibit strong nebular emission.        lar core of U37126, and potentially to larger distances.4 In this
+The stringent 3σ upper limits on the equivalent widths, together        context, Ferrara et al. (2023) proposed that radiation pressure on
+with the very steep UV continuum and a weak/flat Balmer break           dust and gas can drive powerful radiative feedback during super-
+strength, indicate that nebular emission is intrinsically weak and      Eddington phases. Such conditions are expected in the early
+at most a small fraction of LyC photons is being reprocessed by         stages of a starburst, when the sSFR exceeds a critical threshold
+surrounding gas.                                                        of ≳ 25 Gyr−1 (Fiore et al. 2023), which is satisfied in this source
+    To obtain a rough estimate of the characteristic size of the        (≃ 160 Gyr−1 ). These phases may also facilitate substantial LyC
+ionized region associated with U37126, we compute the Ström-            leakage, as shown recently by Ferrara et al. (2025). Further-
+gren radius,                                                            more, recent hydrodynamic simulations have shown that strong
+       3 QH 1/3
+                                                                      radiative outflows can only be efficiently launched in very dense
+RS =                ,                                                systems with high star-formation efficiencies, leading simultane-
+          4π αB n2H
+        
+                                                                        ously to strong LyC leakage (Menon et al. 2025). Observational
+                                                                        evidence for such extreme outflows has been reported in a hand-
+where QH ≈ 1054.4 s−1 (Section 3), nH is the hydrogen number            ful of powerful starbursts with elevated sSFR (Crespo Gómez
+density of the surrounding gas, and αB is the case-B recombi-           et al. 2025; Marques-Chaves et al. 2025), including in confirmed
+nation coefficient. For typical electron temperatures T e ≃ (1–         low-z LyC emitters (e.g., Komarova et al. 2025). However, these
+2)×104 K and gas densities nH ≃ 102 –103 cm−3 , we infer Ström-         systems still exhibit intense nebular emission, unlike U37126.
+gren radii of RS ≈ 50 − 200 pc. These scales are comparable to,
+or exceed, the size of the stellar emission (reff ≃ 61 pc; Sec-              In summary, the absence of detectable gas in U37126 may
+tion 3.4). Under such extreme conditions, any substantial gas           reflect an evolutionary sequence in which exceptionally effi-
+reservoir located within or around U37126 would be expected             cient star formation rapidly consumes the natal gas, followed by
+to be efficiently ionized and, therefore, most likely detectable in     intense feedback that expels the remaining material, including
+the NIRSpec and MIRI spectra.                                           dust, from the stellar core. In the absence of subsequent gas ac-
+     One possible exception is a scenario in which the ionized gas      cretion, U37126 may then evolve rapidly into a post-starburst or
+is extremely diffuse, since line luminosities scale as L ∝ n2e . Even   recently quenched system, like the ones recently identified by
+if all LyC photons were fully reprocessed within H ii regions, the      JWST at high-z (e.g., Looser et al. 2024).
+non-detection of Hα emission could, in principle, be explained
+by an extremely low electron density (ne ≲ 10−2 cm−3 ). How-            4
+                                                                           Given the widths of the NIRSpec/MSA and MIRI/LRS apertures of
+ever, such conditions are rarely observed and are particularly un-      ≃ 0.2′′ and 0.5′′ , respectively, within which no nebular emission appears
+likely for U37126 (z = 10.255), given the expected increase of          detected. This corresponds to ∼ 0.8 kpc and ∼ 2.1 kpc at z = 10.25, i.e.,
+electron density toward higher redshifts (e.g., Isobe et al. 2023).     much larger than the size of U37126 (reff ≃ 61 pc).
+
+Article number, page 8 of 13
+                                                        R. Marques-Chaves et al.: A strong LyC emitter at z ≃ 10
+
+                 3.0
+                                                                                           While this scenario is intentionally simplistic, implicitly as-
+                                                                                     suming that such extreme values of ξion and fesc are independent
+                                                                                     of UV luminosity and populate the full luminosity function, it
+                 2.9
+                                                                                     nevertheless illustrates that even a tiny fraction of powerful ion-
+                                                                                     izing sources like U37126 could contribute significantly, or even
+                                            Pure Stellar                             dominate the ionizing photon budget during reionization. This
+                 2.8                        (fesc = 100%)                            picture is consistent with the results of Papovich et al. (2026),
+UV slope ( UV)
+
+
+
+
+                                                                                     who find that the majority (≃ 82%) of galaxies at z ≃ 5 − 8
+                                                                                     exhibit negligible LyC escape ( fesc < 1%), while only a small
+                 2.7
+                                                                                     subset are strong LyC emitters, suggesting a highly bimodal dis-
+                                                                                     tribution in fesc where reionization may be driven by rare but
+                 2.6                             Stellar+Nebular (fesc = 0%)
+                                                                                     efficient leakers.
+                                                                                           In this regard, recent JWST observations are revealing a
+                                                                                     progressive steepening of UV slopes with increasing redshift
+                 2.5                                                                 (e.g., Topping et al. 2022; Cullen et al. 2024; Austin et al.
+                         True   ion (SED)               CSFH                         2025; Dottorini et al. 2025), with several sources at z ≳ 6 ex-
+                         Obs.   ion (H   ,2 )           Burst                        hibiting extremely blue continua (βUV < −2.8). As illustrated
+                 2.4                                                                 in Fig. 8, such UV slopes require very young stellar popula-
+                       25.0       25.2           25.4             25.6   25.8        tions, implying elevated ionizing photon production efficiencies,
+                                                              1
+                                         Log    ion [Hz erg       ]                  ξion ≳ 1025.6 Hz erg−1 , together with high LyC escape fractions
+Fig. 8. Relationship between the UV slope (βUV ) and the ionizing pho-               ( fesc ≳ 50%; see Fig. 3). Moreover, the statistical analysis of
+ton production efficiency (ξion ) for stellar population synthesis models            Topping et al. (2024b) identified a small but non-negligible frac-
+with (red) and without (blue) the contribution of nebular emission, i.e.,            tion (≃ 3.4%) of high-redshift sources with βUV < −2.8 and in-
+representing the extreme cases of fesc = 0 and fesc = 1, respectively.               dications of weak nebular emission, closely resembling U37126,
+Filled and open circles indicate ξion derived from SED fitting and from              which is comparable to the fN ≲ 6% of extreme LyC emitters
+the Hα flux limit assuming fesc = 0, respectively.                                   required in our illustrative scenario. If spectroscopically con-
+                                                                                     firmed, such systems could already account for a substantial
+4.3. Implications for cosmic reionization                                            fraction (≳ 50%) of the total ionizing photon budget during cos-
+                                                                                     mic reionization.
+The discovery of powerful ionizing sources such as U37126
+has important implications for cosmic reionization. The ioniz-
+ing photon budget is commonly expressed through the comov-                           5. Summary and Conclusions
+ing ionizing emissivity, ṅion , defined as ṅion = ρUV ξion fesc ,
+where ρUV is the integral of the UV luminosity function (Robert-                     In this work, we have presented very deep (≃ 11 h on-source)
+son et al. 2013). Observations indicate that the average galaxy                      JWST/MIRI LRS rest-frame optical spectroscopy of U37126, a
+population in reasonably complete samples down to MUV ≈                              MUV = −20.10, mildly lensed (µ ∼ 2.2) galaxy at z = 10.255
+−17 at z ≳ 6 exhibits log(ξion /Hz erg−1 ) ≃ 25.2 − 25.3 (e.g.,                      previously identified with NIRSpec spectroscopy by Fujimoto
+Choustikov et al. 2024; Mascia et al. 2024; Simmonds et al.                          et al. (2024).
+2024a; Pahl et al. 2025; Begley et al. 2026), consistent with, or                         The source exhibits an exceptionally steep UV continuum
+only marginally higher than, pre-JWST canonical values (e.g.,                        slope, βUV ≃ −2.9, a weak Balmer break, a sharp Lyman-α
+Robertson et al. 2015). For these ξion , reionization models typ-                    break, and intrinsically faint nebular emission. Despite the clear
+ically require population-averaged escape fractions of fesc ≃                        detection of the continuum in both the NIRSpec/PRISM and
+10 − 20% (Robertson et al. 2015), broadly supported by infer-                        MIRI/LRS spectra, no recombination or metal emission lines are
+ences using indirect LyC indicators (Mascia et al. 2023; Jaskot                      detected. We derive stringent 3σ rest-frame equivalent-width up-
+et al. 2024b; Jecmen et al. 2026) but with large scatter and sensi-                  per limits of ≤ 64 Å, ≤ 174 Å, and ≤ 400 Å for Hβ, [O iii] λ5008,
+tive to assumptions about the faint-end slope and cutoff of the                      and Hα, respectively.
+UV luminosity function (e.g., Finkelstein et al. 2019; Korber                             Combining these observational constraints with synthetic
+et al. 2026). For simplicity, we adopt a fiducial scenario in which                  stellar population models, we have shown that the spectral prop-
+reionization is sustained by an averaged galaxy population char-                     erties of U37126 require both extremely young stellar ages and
+acterized by fesc = 15% and log(ξion /Hz erg−1 ) = 25.25.                            a very high Lyman-continuum escape fraction. Our results in-
+     We now consider a simple, illustrative scenario in which the                    dicate ages ≤ 2 Myr for instantaneous bursts or ≤ 10 Myr for
+ionizing budget is fully dominated by sources similar to U37126.                     constant star formation, implying a very high ionizing pho-
+Owing to their exceptionally high ξion and near-unity fesc , such                    ton production efficiency (log(ξion /Hz erg−1 ) ≥ 25.6). From the
+systems could contribute disproportionately to ṅion despite be-                     Hα luminosity limit, we derive a conservative lower limit of
+ing rare. Requiring the ionizing emissivity contributed by these                      fesc ≥ 86% (3σ), while independent SED fitting favors fesc =
+extreme sources to match that of the fiducial galaxy population                      0.94 ± 0.06.
+yields:                                                                                   U37126 is extremely compact, with a de-lensed effective
+   fesc  ξion 
+        !
+                            fesc  ξion 
+                                 !                                                   radius of reff ≃ 61 pc. The best-fit SED yields a (de-lensed)
+                   = f N                    ,                                        stellar mass of M⋆ ≃ 107.8 M⊙ and a star-formation rate of
+  15% 1025.25            ≥ 86% 1025.75                                               SFR ≃ 10 M⊙ yr−1 . This yields very high stellar mass and star-
+where fN is the fraction of such extreme sources relative to                         formation-rate surface densities of log(Σ M⋆ /M⊙ pc−2 ) ≃ 3.4 and
+the total galaxy population. Adopting the properties inferred for                    log(ΣSFR /M⊙ yr−1 kpc−2 ) ≃ 2.6, respectively, which are only
+U37126, log(ξion /Hz erg−1 ) ≃ 25.75 and fesc ≥ 86% (3σ; Sec-                        comparable to those found in young massive star clusters and
+tion 3), we find fN ≲ 6%.                                                            the most extreme sources at the highest redshifts.
+                                                                                                                              Article number, page 9 of 13
+                                                                A&A proofs: manuscript no. main
+
+    Together with the lack of detectable nebular emission, these                     Bergvall, N., Leitet, E., Zackrisson, E., & Marquart, T. 2013, A&A, 554, A38
+properties suggest that U37126 is undergoing an ISM-free star-                       Bezanson, R., Labbe, I., Whitaker, K. E., et al. 2024, ApJ, 974, 92
+                                                                                     Bhatawdekar, R. & Conselice, C. J. 2021, ApJ, 909, 144
+burst phase, in which the ISM is strongly depleted, and only a                       Boquien, M., Burgarella, D., Roehlly, Y., et al. 2019, A&A, 622, A103
+small fraction of ionizing photons are reprocessed by surround-                      Bouwens, R. J., Illingworth, G. D., Oesch, P. A., et al. 2012, ApJ, 754, 83
+ing gas. Such conditions may result from both an extremely effi-                     Bouwens, R. J., Illingworth, G. D., Oesch, P. A., et al. 2014, ApJ, 793, 115
+cient gas-to-star conversion and/or strong feedback that has effi-                   Bouwens, R. J., Illingworth, G. D., Oesch, P. A., et al. 2010, ApJ, 708, L69
+                                                                                     Boyett, K., Trenti, M., Leethochawalit, N., et al. 2024, Nature Astronomy, 8, 657
+ciently cleared the ISM from its stellar core. While our results                     Bradley, L., Sipőcz, B., Robitaille, T., et al. 2022, astropy/photutils: 1.5.0
+indicate that LyC photons escape efficiently from the ISM of                         Bruzual, G. & Charlot, S. 2003, MNRAS, 344, 1000
+U37126, recent constraints on the neutral hydrogen column den-                       Bunker, A. J., Saxena, A., Cameron, A. J., et al. 2023, A&A, 677, A88
+sity from the Lyα break (log(NHI /cm−2 ) = 19.2 ± 1.5) indicate                      Burgarella, D., Buat, V., & Iglesias-Páramo, J. 2005, MNRAS, 360, 1413
+                                                                                     Burgarella, D., Buat, V., Theulé, P., et al. 2025, A&A, 699, A336
+that substantial neutral gas may still be present along the line                     Bushouse, H., Eisenhamer, J., Dencheva, N., et al. 2025, JWST Calibration
+of sight. Therefore, while our observations favor a very high es-                       Pipeline
+cape fraction from the galaxy itself, it remains unclear whether                     Calabro, A., Castellano, M., Zavala, J. A., et al. 2024, arXiv e-prints,
+the escaping LyC radiation has already reached and ionized its                          arXiv:2403.12683
+                                                                                     Calzetti, D., Armus, L., Bohlin, R. C., et al. 2000, ApJ, 533, 682
+surrounding environment on larger scales.                                            Calzetti, D., Kinney, A. L., & Storchi-Bergmann, T. 1994, ApJ, 429, 582
+    Although systems like U37126 are likely rare, their extreme                      Cardelli, J. A., Clayton, G. C., & Mathis, J. S. 1989, ApJ, 345, 245
+properties, combining both a high production and escape of LyC                       Carniani, S., Hainline, K., D’Eugenio, F., et al. 2024, Nature, 633, 318
+photons, suggest that they could contribute disproportionately to                    Castellano, M., Fontana, A., Treu, T., et al. 2022, ApJ, 938, L15
+                                                                                     Castellano, M., Napolitano, L., Fontana, A., et al. 2024, ApJ, 972, 143
+the ionizing photon budget during cosmic reionization. Even a                        Chabrier, G. 2003, PASP, 115, 763
+small fraction of such sources (∼ 3%–6%) could account for a                         Chemerynska, I., Atek, H., Furtak, L. J., et al. 2026, MN-
+substantial share (∼ 50%–100%) of the required ionizing emis-                           RAS[arXiv:2509.24881]
+sivity. This scenario is consistent with emerging JWST evidence                      Chisholm, J., Saldana-Lopez, A., Flury, S., et al. 2022, MNRAS, 517, 5104
+                                                                                     Choustikov, N., Katz, H., Saxena, A., et al. 2024, MNRAS, 529, 3751
+for increasingly blue UV continua and weak nebular emission                          Crespo Gómez, A., Tamura, Y., Colina, L., et al. 2025, arXiv e-prints,
+among the highest-redshift galaxies. If confirmed in larger statis-                     arXiv:2511.14658
+tical samples, these compact, highly efficient LyC emitters like                     Cullen, F., McLeod, D. J., McLure, R. J., et al. 2024, MNRAS, 531, 997
+U37126 may represent a key population responsible for driving                        Cullen, F., McLure, R. J., McLeod, D. J., et al. 2023, MNRAS, 520, 14
+                                                                                     Curtis-Lake, E., Carniani, S., Cameron, A., et al. 2023, Nature Astronomy, 7,
+and sustaining cosmic reionization.                                                     622
+Acknowledgements. We thank the anonymous referee for the useful com-                 de Barros, S., Vanzella, E., Amorín, R., et al. 2016, A&A, 585, A51
+ments and suggestions. This work is based on observations made with the              Dekel, A., Sarkar, K. C., Birnboim, Y., Mandelker, N., & Li, Z. 2023, MNRAS,
+NASA/ESA/CSA James Webb Space Telescope. The data were obtained from                    523, 3201
+the Mikulski Archive for Space Telescopes at the Space Telescope Science In-         Dessauges-Zavadsky, M., Marques-Chaves, R., Schaerer, D., et al. 2025, A&A,
+stitute, which is operated by the Association of Universities for Research in As-       693, A17
+tronomy, Inc., under NASA contract NAS 5-03127 for JWST. These observations          Donnan, C. T., Dickinson, M., Taylor, A. J., et al. 2025, ApJ, 993, 224
+are associated with program #8051. J.A.-M., C.P.-J., B.R.P. acknowledge support      Donnan, C. T., McLeod, D. J., McLure, R. J., et al. 2026, arXiv e-prints,
+from grant PID2024-158856NA-I00, J.A.-M., L.C., C.P.-J., B.R.P. acknowledge             arXiv:2601.11515
+support from grant PID2021-127718NB-100, P.G.P.-G. acknowledges support              Dottorini, D., Calabrò, A., Pentericci, L., et al. 2025, A&A, 698, A234
+from grant PID2022-139567NB-I00 from the Spanish Ministry of Science and             Ferrara, A., Giavalisco, M., Pentericci, L., et al. 2025, The Open Journal of As-
+Innovation/State Agency of Research MCIN/AEI/10.13039/501100011033 and                  trophysics, 8, 125
+by “ERDF A way of making Europe”. J.A.-M., L.C., C.P.-J., B.R.P., P.G.P.-G. ac-      Ferrara, A., Pallottini, A., & Dayal, P. 2023, MNRAS, 522, 3986
+knowledge support by grant CSIC/BILATERALES2025/BIJSP25022. M.C. ac-                 Finkelstein, S. L., D’Aloisio, A., Paardekooper, J.-P., et al. 2019, ApJ, 879, 36
+knowledges INAF GO Grant 2024 "Revealing the nature of bright galaxies at            Finkelstein, S. L., Papovich, C., Salmon, B., et al. 2012, ApJ, 756, 164
+cosmic dawn with deep JWST spectroscopy". T.H. was supported by JSPS KAK-            Fiore, F., Ferrara, A., Bischetti, M., Feruglio, C., & Travascio, A. 2023, ApJ,
+ENHI 25K00020. Y.H. acknowledges support from the Japan Society for the Pro-            943, L27
+motion of Science (JSPS) Grant-in-Aid for Scientific Research (24H00245), the        Flury, S. R., Jaskot, A. E., Ferguson, H. C., et al. 2022, ApJ, 930, 126
+JSPS Core-to-Core Program (JPJSCCA20210003), and the JSPS International              Fujimoto, S., Wang, B., Weaver, J. R., et al. 2024, ApJ, 977, 250
+Leading Research (22K21349). Y.F. is supported by JSPS KAKENHI Grant                 Furtak, L. J., Zitrin, A., Weaver, J. R., et al. 2023, MNRAS, 523, 4568
+Numbers JP22K21349 and JP23K13149. D.L. was supported by research grants             Giovinazzo, E., Oesch, P. A., Weibel, A., et al. 2025, arXiv e-prints,
+(VIL16599,VIL54489) from VILLUM FONDEN. P.S. acknowledges support                       arXiv:2507.01096
+                                                                                     Goulding, A. D., Greene, J. E., Setton, D. J., et al. 2023, ApJ, 955, L24
+from INAF RF2024 Large Grant "UNDUST: UNveiling the Dawn of the Uni-
+                                                                                     Hainline, K. N., D’Eugenio, F., Jakobsen, P., et al. 2024, ApJ, 976, 160
+verse with JWST" The data were obtained from the Mikulski Archive for Space
+                                                                                     Harikane, Y., Inoue, A. K., Ellis, R. S., et al. 2025, ApJ, 980, 138
+Telescopes at the Space Telescope Science Institute, which is operated by the
+                                                                                     Harikane, Y., Nakajima, K., Ouchi, M., et al. 2024, ApJ, 960, 56
+Association of Universities for Research in Astronomy, Inc., under NASA con-
+                                                                                     Harikane, Y., Ouchi, M., Oguri, M., et al. 2023, ApJS, 265, 5
+tract NAS 5-03127 for JWST; and from the European JWST archive (eJWST)
+                                                                                     Harikane, Y., Perez-Gonzalez, P. G., Alvarez-Marquez, J., et al. 2026, arXiv e-
+operated by the ESDC. This research made use of Photutils, an Astropy package
+                                                                                        prints, arXiv:2601.21833
+for detection and photometry of astronomical sources (Bradley et al. 2022).
+                                                                                     Heintz, K. E., Watson, D., Brammer, G., et al. 2024, Science, 384, 890
+                                                                                     Helton, J. M., Morrison, J. E., Hainline, K. N., et al. 2025, arXiv e-prints,
+                                                                                        arXiv:2512.19695
+                                                                                     Hsiao, T. Y.-Y., Álvarez-Márquez, J., Coe, D., et al. 2024, ApJ, 973, 81
+References                                                                           Inoue, A. K. 2010, MNRAS, 401, 1325
+                                                                                     Isobe, Y., Ouchi, M., Nakajima, K., et al. 2023, ApJ, 956, 139
+Algera, H. S. B., Weaver, J. R., Bakx, T. J. L. C., et al. 2025, arXiv e-prints,     Izotov, Y. I., Schaerer, D., Thuan, T. X., et al. 2016, MNRAS, 461, 3683
+   arXiv:2512.14486                                                                  Izotov, Y. I., Schaerer, D., Worseck, G., et al. 2025, A&A, 704, A19
+Álvarez-Márquez, J., Colina, L., Crespo-Gomez, A., et al. 2026, arXiv e-prints,      Izotov, Y. I., Worseck, G., Schaerer, D., et al. 2018, MNRAS, 478, 4851
+   arXiv:2602.02323                                                                  Jaskot, A. E., Silveyra, A. C., Plantinga, A., et al. 2024a, ApJ, 972, 92
+Álvarez-Márquez, J., Colina, L., Crespo Gómez, A., et al. 2024, A&A, 686, A85        Jaskot, A. E., Silveyra, A. C., Plantinga, A., et al. 2024b, ApJ, 973, 111
+Álvarez-Márquez, J., Crespo Gómez, A., Colina, L., et al. 2025, A&A, 695,            Jecmen, M. C., Chisholm, J., Atek, H., et al. 2026, arXiv e-prints,
+   A250                                                                                 arXiv:2601.19995
+Arrabal Haro, P., Dickinson, M., Finkelstein, S. L., et al. 2023, Nature, 622, 707   Katz, H., Cameron, A. J., Saxena, A., et al. 2025, The Open Journal of Astro-
+Atek, H., Chemerynska, I., Wang, B., et al. 2023, MNRAS, 524, 5486                      physics, 8, 104
+Austin, D., Conselice, C. J., Adams, N. J., et al. 2025, ApJ, 995, 43                Kendrew, S., Scheithauer, S., Bouchet, P., et al. 2015, PASP, 127, 623
+Baker, W. M., D’Eugenio, F., Maiolino, R., et al. 2025, A&A, 697, A90                Kerutt, J., Oesch, P. A., Wisotzki, L., et al. 2024, A&A, 684, A42
+Begley, R., McLure, R. J., Cullen, F., et al. 2026, MNRAS, 545, staf1995             Kim, K. J., Bayliss, M. B., Rigby, J. R., et al. 2023, ApJ, 955, L17
+
+Article number, page 10 of 13
+                                                  R. Marques-Chaves et al.: A strong LyC emitter at z ≃ 10
+
+Komarova, L., Oey, M. S., Marques-Chaves, R., et al. 2025, ApJ, 994, 192
+Korber, D., Schaerer, D., Marques-Chaves, R., et al. 2026, arXiv e-prints,           1
+   arXiv:2601.19989
+                                                                                        Geneva Observatory, Department of Astronomy, University of
+Kuruvanthodi, A., Schaerer, D., Marques-Chaves, R., et al. 2024, A&A, 691,              Geneva, Chemin Pegasi 51, CH-1290 Versoix, Switzerland
+                                                                                      2
+   A310                                                                                 Centro de Astrobiología (CAB), CSIC-INTA, Ctra. de Ajalvir km 4,
+Leitherer, C., Schaerer, D., Goldader, J. D., et al. 1999, ApJS, 123, 3                 Torrejón de Ardoz, E-28850, Madrid, Spain
+                                                                                      3
+Li, Z., Dekel, A., Sarkar, K. C., et al. 2023, arXiv e-prints, arXiv:2311.14662         European Space Agency (ESA), ESA Office, Space Telescope Sci-
+Looser, T. J., D’Eugenio, F., Maiolino, R., et al. 2024, Nature, 629, 53                ence Institute, 3700 San Martin Drive, Baltimore, MD 21218, USA
+Luridiana, V., Morisset, C., & Shaw, R. A. 2015, A&A, 573, A42                        4
+                                                                                        Department of Astronomy, Indiana University,727 East Third Street,
+Marques-Chaves, R., Schaerer, D., Álvarez-Márquez, J., et al. 2021, MNRAS,
+                                                                                        Bloomington, IN 47405, USA
+   507, 524                                                                           5
+Marques-Chaves, R., Schaerer, D., Álvarez-Márquez, J., et al. 2022, MNRAS,              Departamento de Física de la Tierra y Astrofísica, Facultad de Cien-
+   517, 2972                                                                            cias Físicas, Universidad Complutense de Madrid, E-28040 Madrid,
+Marques-Chaves, R., Schaerer, D., Dessauges-Zavadsky, M., et al. 2025, arXiv            Spain
+                                                                                      6
+   e-prints, arXiv:2510.12411                                                           Leiden Observatory, Leiden University, PO Box 9513, NL-2300 RA
+Marques-Chaves, R., Schaerer, D., Vanzella, E., et al. 2024, A&A, 691, A87              Leiden, The Netherlands
+Mascia, S., Pentericci, L., Calabrò, A., et al. 2024, A&A, 685, A3                    7
+                                                                                        INAF – Osservatorio Astronomico di Roma, via Frascati 33, 00078,
+Mascia, S., Pentericci, L., Calabrò, A., et al. 2023, A&A, 672, A155                    Monteporzio Catone, Italy
+Mason, C. A., Chen, Z., Stark, D. P., et al. 2026, A&A, 705, A114                     8
+Menon, S. H., Burkhart, B., Somerville, R. S., Thompson, T. A., & Sternberg, A.         Kapteyn Astronomical Institute, University of Groningen, P.O. Box
+   2025, ApJ, 987, 12                                                                   800, 9700AV Groningen, The Netherlands
+                                                                                      9
+Messa, M., Vanzella, E., Loiacono, F., et al. 2025, A&A, 694, A59                       Space Telescope Science Institute (STScI), 3700 San martin Drive,
+Morales, A. M., Finkelstein, S. L., Leung, G. C. K., et al. 2024, ApJ, 964, L24         Baltimore, MD 21218, USA
+Morishita, T., Stiavelli, M., Chary, R.-R., et al. 2024, ApJ, 963, 9                 10
+                                                                                        Center for Frontier Science, Chiba University, 1-33 Yayoi-cho,
+Naidu, R. P., Oesch, P. A., Brammer, G., et al. 2025, arXiv e-prints,                   Inage-ku, Chiba 263-8522, Japan
+   arXiv:2505.11263                                                                  11
+                                                                                        David A. Dunlap Department of Astronomy and Astrophysics, Uni-
+Naidu, R. P., Tacchella, S., Mason, C. A., et al. 2020, ApJ, 892, 109
+Napolitano, L., Castellano, M., Pentericci, L., et al. 2025, A&A, 693, A50
+                                                                                        versity of Toronto, 50 St. George Street, Toronto, Ontario, M5S 3H4,
+Newville, M., Otten, R., Nelson, A., et al. 2025, LMFIT: Non-Linear Least-              Canada
+                                                                                     12
+   Squares Minimization and Curve-Fitting for Python                                    Dunlap Institute for Astronomy and Astrophysics, 50 St. George
+Osterbrock, D. E. & Ferland, G. J. 2006, Astrophysics of gaseous nebulae and            Street, Toronto, Ontario, M5S 3H4, Canada
+                                                                                     13
+   active galactic nuclei                                                               Institute for Cosmic Ray Research, The University of Tokyo, 5-1-5
+Pahl, A., Topping, M. W., Shapley, A., et al. 2025, ApJ, 981, 134                       Kashiwanoha, Kashiwa, Chiba 277-8582, Japan
+Papovich, C., Cole, J. W., Hu, W., et al. 2026, ApJ, 1000, 111                       14
+                                                                                        Division of Physics, Faculty of Pure and Applied Sciences, Univer-
+Pasha, I. & Miller, T. B. 2023, The Journal of Open Source Software, 8, 5703            sity of Tsukuba, Tsukuba, Ibaraki 305-8571, Japan
+Pérez-González, P. G., Costantin, L., Langeroodi, D., et al. 2023, ApJ, 951, L1      15
+Perrin, M. D., Sivaramakrishnan, A., Lajoie, C.-P., et al. 2014, in Society             Tomonaga Center for the History of the Universe (TCHoU), Fac-
+   of Photo-Optical Instrumentation Engineers (SPIE) Conference Series, Vol.            ulty of Pure and Applied Sciences, University of Tsukuba, Tsukuba,
+   9143, Space Telescopes and Instrumentation 2014: Optical, Infrared, and Mil-         Ibaraki 305-8571, Japan
+                                                                                     16
+   limeter Wave, ed. J. Oschmann, Jacobus M., M. Clampin, G. G. Fazio, &                Department of Astronomy, University of Texas, Austin, TX 78712,
+   H. A. MacEwen, 91433X                                                                USA
+Planck Collaboration, Aghanim, N., Akrami, Y., et al. 2020, A&A, 641, A6             17
+                                                                                        Institute of Science and Technology Austria (ISTA), Am Campus 1,
+Price, S. H., Bezanson, R., Labbe, I., et al. 2025, ApJ, 982, 51                        3400 Klosterneuburg, Austria
+Reddy, N. A., Sanders, R. L., Shapley, A. E., et al. 2023a, ApJ, 951, 56             18
+Reddy, N. A., Topping, M. W., Sanders, R. L., Shapley, A. E., & Brammer, G.
+                                                                                        Department of Physics, School of Advanced Science and Engineer-
+   2023b, ApJ, 952, 167                                                                 ing, Faculty of Science and Engineering, Waseda University, 3-4-1
+Rieke, G. H., Wright, G. S., Böker, T., et al. 2015, PASP, 127, 584                     Okubo, Shinjuku, Tokyo 169-8555, Japan
+                                                                                     19
+Rivera-Thorsen, T. E., Dahle, H., Chisholm, J., et al. 2019, Science, 366, 738          Waseda Research Institute for Science and Engineering, Faculty of
+Roberts-Borsani, G., Oesch, P., Ellis, R., et al. 2025, arXiv e-prints,                 Science and Engineering, Waseda University, 3-4-1 Okubo, Shin-
+   arXiv:2508.21708                                                                     juku, Tokyo 169-8555, Japan
+Robertson, B. E., Ellis, R. S., Furlanetto, S. R., & Dunlop, J. S. 2015, ApJ, 802,   20
+                                                                                        DARK, Niels Bohr Institute, University of Copenhagen, Jagtvej
+   L19                                                                                  155A, 2200 Copenhagen, Denmark
+Robertson, B. E., Furlanetto, S. R., Schneider, E., et al. 2013, ApJ, 768, 71        21
+Saxena, A., Cameron, A. J., Katz, H., et al. 2024, arXiv e-prints,                      University of Massachusetts Amherst, 710 North Pleasant Street,
+   arXiv:2411.14532                                                                     Amherst, MA 01003-9305, USA
+                                                                                     22
+Schaerer, D., Guibert, J., Marques-Chaves, R., & Martins, F. 2025, A&A, 693,            Department of Astronomy, Stockholm University, Oscar Klein Cen-
+   A271                                                                                 tre, AlbaNova University Centre, 106 91 Stockholm, Sweden
+Sharma, M., Theuns, T., Frenk, C., et al. 2017, MNRAS, 468, 2176                     23
+                                                                                        AURA for the European Space Agency (ESA), Space Telescope Sci-
+Simmonds, C., Tacchella, S., Hainline, K., et al. 2024a, MNRAS, 527, 6139               ence Institute, 3700 San Martin Dr., Baltimore, MD 21218, USA
+Simmonds, C., Verhamme, A., Inoue, A. K., et al. 2024b, MNRAS, 530, 2133             24
+                                                                                        UK Astronomy Technology Centre, Royal Observatory Edinburgh,
+Stanway, E. R. & Eldridge, J. J. 2018, MNRAS, 479, 75
+Steidel, C. C., Bogosavljević, M., Shapley, A. E., et al. 2018, ApJ, 869, 123
+                                                                                        Blackford Hill, Edinburgh EH9 3HJ, UK
+Stiavelli, M., Morishita, T., Chiaberge, M., et al. 2023, ApJ, 957, L18
+Suess, K. A., Weaver, J. R., Price, S. H., et al. 2024, ApJ, 976, 101
+Tacchella, S., Eisenstein, D. J., Hainline, K., et al. 2023, ApJ, 952, 74
+Tang, M., Stark, D. P., Mason, C. A., et al. 2025, arXiv e-prints,
+   arXiv:2507.08245
+Topping, M. W., Stark, D. P., Endsley, R., et al. 2022, ApJ, 941, 153
+Topping, M. W., Stark, D. P., Endsley, R., et al. 2024a, MNRAS, 529, 4087
+Topping, M. W., Stark, D. P., Senchyna, P., et al. 2024b, MNRAS, 529, 3301
+Vanzella, E., Claeyssens, A., Welch, B., et al. 2023, ApJ, 945, 53
+Vanzella, E., de Barros, S., Vasei, K., et al. 2016, ApJ, 825, 41
+Weaver, J. R., Cutler, S. E., Pan, R., et al. 2024, ApJS, 270, 7
+Weibel, A., Oesch, P. A., Barrufet, L., et al. 2024, MNRAS, 533, 1808
+Wright, G. S., Rieke, G. H., Glasse, A., et al. 2023, PASP, 135, 048003
+Wright, G. S., Wright, D., Goodson, G. B., et al. 2015, PASP, 127, 595
+Yanagisawa, H., Ouchi, M., Nakajima, K., et al. 2025, ApJ, 988, 86
+Zackrisson, E., Binggeli, C., Finlator, K., et al. 2017, ApJ, 836, 78
+Zackrisson, E., Inoue, A. K., & Jensen, H. 2013, ApJ, 777, 39
+Zavala, J. A., Castellano, M., Akins, H. B., et al. 2025, Nature Astronomy, 9, 155
+
+                                                                                                                             Article number, page 11 of 13
+                                                                                                 A&A proofs: manuscript no. main
+
+Appendix A: BPASS predictions for different metallicities
+Figures A.1, A.2, A.3, and A.4 show the model predictions of the UV slope, EW0 (Hα) and the Balmer break strength as a function
+of age (top) and their combination (bottom) for stellar metallicities of Z = Z⊙ , Z/Z⊙ = 50%, Z/Z⊙ = 5%, and Z/Z⊙ = 0.5%,
+respectively.
+           3.1                                                                            3500                                                                                        1.6
+                                                                  Data
+           3.0                                                    CSFH                    3000
+                                                                  Burst                                                                                                               1.4
+           2.9
+
+
+
+
+                                                                                                                                                                  Balmer break [F ]
+                                                                                          2500
+           2.8
+
+
+
+
+                                                                           EW0 (H ) [Å]
+                     fesc = 90%
+UV slope
+
+
+
+
+                                                                                                                                                                                      1.2
+           2.7                                                                            2000
+
+           2.6                                                                            1500
+                                                                                                                                                                                      1.0
+           2.5       50%
+                                                                                          1000
+           2.4
+                     0%                                                                                                                                                               0.8
+                                                                                          500
+           2.3
+
+           2.2                                                                              0                                                                                         0.6
+                 6.00      6.25   6.50     6.75     7.00   7.25     7.50                         6.00    6.25     6.50     6.75     7.00    7.25    7.50                                    6.00    6.25     6.50     6.75     7.00    7.25    7.50
+                                   Log Age [Myr]                                                                  Log Age [Myr]                                                                              Log Age [Myr]
+                                                                                                                                                                            2500
+           3.0                                                    Data                     3.0
+                                                                  CSFH
+                                                                  Burst                                                                                                     2000
+           2.9                                                                             2.9
+
+
+
+
+                                                                                                                                                           EW0 (H ) [Å]
+UV slope
+
+
+
+
+                                                                            UV slope
+
+
+
+
+           2.8                                                                             2.8                                                                              1500
+                        fesc = 95%
+           2.7             90%                                                             2.7
+                                   80%                                                                                                                                      1000
+
+           2.6                                     50%                                     2.6
+                                                                                                                                                                                      500
+           2.5                                                                             2.5
+                                                                  0%
+                                                                                                                                                                                       0
+                 0         500      1000          1500     2000       2500                         0.7     0.8       0.9          1.0      1.1     1.2                                        0.7     0.8       0.9          1.0      1.1     1.2
+                                   EW0 (H ) [Å]                                                                  Balmer break [F ]                                                                          Balmer break [F ]
+
+Fig. A.1. Same as Figure 3 but for BPASS models with stellar metallicity of Z = 0.02 (or Z/Z⊙ = 100%).
+
+
+           3.1                                                                            3000                                                                                        1.6
+                                                                  Data
+           3.0                                                    CSFH
+                     fesc = 90%                                   Burst
+                                                                                          2500
+                                                                                                                                                                                      1.4
+           2.9
+                                                                                                                                                                  Balmer break [F ]
+
+
+
+
+           2.8                                                                            2000
+                                                                           EW0 (H ) [Å]
+UV slope
+
+
+
+
+                     50%                                                                                                                                                              1.2
+           2.7
+                                                                                          1500
+           2.6
+                     0%                                                                                                                                                               1.0
+           2.5                                                                            1000
+
+           2.4                                                                                                                                                                        0.8
+                                                                                          500
+           2.3
+
+           2.2                                                                              0                                                                                         0.6
+                 6.00      6.25   6.50     6.75     7.00   7.25     7.50                         6.00    6.25     6.50     6.75     7.00    7.25    7.50                                    6.00    6.25     6.50     6.75     7.00    7.25    7.50
+                                   Log Age [Myr]                                                                  Log Age [Myr]                                                                              Log Age [Myr]
+
+                                                                                                                                                                            2500
+           3.0        fesc = 95%                                  Data                     3.0
+                                                                  CSFH
+                                                                  Burst                                                                                                     2000
+           2.9                    90%                                                      2.9
+                                           80%
+                                                                                                                                                           EW0 (H ) [Å]
+UV slope
+
+
+
+
+                                                                            UV slope
+
+
+
+
+           2.8                                                                             2.8                                                                              1500
+
+
+           2.7                                               50%                           2.7
+                                                                                                                                                                            1000
+
+           2.6                                                                             2.6
+                                                                  0%                                                                                                                  500
+           2.5                                                                             2.5
+
+                                                                                                                                                                                       0
+                 0         500      1000          1500     2000       2500                         0.7     0.8       0.9          1.0      1.1     1.2                                        0.7     0.8       0.9          1.0      1.1     1.2
+                                   EW0 (H ) [Å]                                                                  Balmer break [F ]                                                                          Balmer break [F ]
+
+Fig. A.2. Same as Figure 3 but for BPASS models with stellar metallicity of Z = 0.01 (or Z/Z⊙ = 50%).
+
+Article number, page 12 of 13
+                                                                    R. Marques-Chaves et al.: A strong LyC emitter at z ≃ 10
+
+           3.1                                                                            3500                                                                                        1.6
+                              fesc = 90%                          Data
+           3.0                                                    CSFH                    3000
+                                                                  Burst                                                                                                               1.4
+           2.9
+
+
+
+
+                                                                                                                                                                  Balmer break [F ]
+                                                                                          2500
+           2.8       50%
+
+
+
+
+                                                                           EW0 (H ) [Å]
+UV slope
+
+
+
+
+                                                                                                                                                                                      1.2
+           2.7                                                                            2000
+
+           2.6
+                     0%                                                                   1500
+                                                                                                                                                                                      1.0
+           2.5
+                                                                                          1000
+           2.4                                                                                                                                                                        0.8
+                                                                                          500
+           2.3
+
+           2.2                                                                              0                                                                                         0.6
+                 6.00      6.25   6.50     6.75     7.00   7.25     7.50                         6.00    6.25     6.50     6.75     7.00    7.25    7.50                                    6.00    6.25     6.50     6.75     7.00    7.25    7.50
+                                  Log Age [Myr]                                                                   Log Age [Myr]                                                                              Log Age [Myr]
+
+                                                                                                                                                                            2500
+           3.1                fesc = 95%                          Data                     3.1
+                                     90%                          CSFH
+           3.0                                                    Burst                    3.0                                                                              2000
+                                                    80%
+
+
+
+
+                                                                                                                                                           EW0 (H ) [Å]
+           2.9                                                                             2.9
+UV slope
+
+
+
+
+                                                                            UV slope
+
+
+
+
+                                                                                                                                                                            1500
+           2.8                                                50%                          2.8
+
+
+           2.7                                                                             2.7                                                                              1000
+
+
+           2.6                                                                             2.6
+                                                                  0%                                                                                                                  500
+
+           2.5                                                                             2.5
+
+                                                                                                                                                                                       0
+                 0         500      1000          1500     2000       2500                         0.7     0.8       0.9          1.0      1.1     1.2                                        0.7     0.8       0.9          1.0      1.1     1.2
+                                   EW0 (H ) [Å]                                                                  Balmer break [F ]                                                                          Balmer break [F ]
+
+Fig. A.3. Same as Figure 3 but for BPASS models with stellar metallicity of Z = 0.001 (or Z/Z⊙ = 5%).
+
+
+           3.2                                                                            3500                                                                                        1.6
+                           fesc = 90%                             Data
+                                                                  CSFH                    3000
+                                                                  Burst                                                                                                               1.4
+           3.0
+                                                                                                                                                                  Balmer break [F ]
+
+
+
+                                                                                          2500
+                                                                           EW0 (H ) [Å]
+UV slope
+
+
+
+
+                                                                                                                                                                                      1.2
+           2.8                                                                            2000
+                     50%
+                                                                                          1500
+                                                                                                                                                                                      1.0
+           2.6       0%
+                                                                                          1000
+                                                                                                                                                                                      0.8
+                                                                                          500
+           2.4
+
+                                                                                            0                                                                                         0.6
+                 6.00      6.25   6.50     6.75     7.00   7.25     7.50                         6.00    6.25     6.50     6.75     7.00    7.25    7.50                                    6.00    6.25     6.50     6.75     7.00    7.25    7.50
+                                  Log Age [Myr]                                                                   Log Age [Myr]                                                                              Log Age [Myr]
+
+           3.2                                                                             3.2                                                                              2500
+                              fesc = 95%                          Data
+           3.1                                                    CSFH                     3.1
+                                     90%                          Burst                                                                                                     2000
+           3.0                                                                             3.0
+                                                    80%
+                                                                                                                                                           EW0 (H ) [Å]
+
+
+
+
+           2.9                                                                             2.9
+UV slope
+
+
+
+
+                                                                            UV slope
+
+
+
+
+                                                                                                                                                                            1500
+
+           2.8                                              50%                            2.8
+                                                                                                                                                                            1000
+           2.7                                                                             2.7
+
+           2.6                                                                             2.6
+                                                                                                                                                                                      500
+
+           2.5                                                    0%                       2.5
+
+                                                                                                                                                                                       0
+                 0         500      1000          1500     2000       2500                         0.7     0.8       0.9          1.0      1.1     1.2                                        0.7     0.8       0.9          1.0      1.1     1.2
+                                   EW0 (H ) [Å]                                                                  Balmer break [F ]                                                                          Balmer break [F ]
+
+Fig. A.4. Same as Figure 3 but for BPASS models with stellar metallicity of Z = 0.0001 (or Z/Z⊙ = 0.5%).
+
+
+
+
+                                                                                                                                                                                                            Article number, page 13 of 13
+

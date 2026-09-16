@@ -1,0 +1,271 @@
+                                                                        Simultaneous Acceleration of Protons and Electrons
+                                                                        at Nonrelativistic Quasiparallel Collisionless Shocks
+
+                                                                              Jaehong Park, Damiano Caprioli, & Anatoly Spitkovsky1
+                                                               1
+                                                                   Department of Astrophysical Sciences, Princeton University, Princeton, NJ 08544, USA
+                                                                                                (Dated: January 30, 2015)
+                                                              We study diffusive shock acceleration (DSA) of protons and electrons at nonrelativistic, high Mach
+                                                           number, quasiparallel, collisionless shocks by means of self-consistent 1D particle-in-cell simulations.
+                                                           For the first time, both species are found to develop power-law distributions with the universal spec-
+                                                           tral index −4 in momentum space, in agreement with the prediction of DSA. We find that scattering
+                                                           of both protons and electrons is mediated by right-handed circularly polarized waves excited by the
+arXiv:1412.0672v2 [astro-ph.HE] 29 Jan 2015
+
+
+
+
+                                                           current of energetic protons via non-resonant hybrid (Bell) instability. Protons are injected into
+                                                           DSA after a few gyro-cycles of shock drift acceleration (SDA), while electrons are first pre-heated
+                                                           via SDA, then energized via a hybrid acceleration process that involves both SDA and Fermi-like
+                                                           acceleration mediated by Bell waves, before eventual injection into DSA. Using the simulations we
+                                                           can measure the electron/proton ratio in accelerated particles, which is of paramount importance
+                                                           for explaining the cosmic ray fluxes measured at Earth and the multi-wavelength emission of astro-
+                                                           physical objects such as supernova remnants, radio supernovae, and galaxy clusters. We find the
+                                                           normalization of electron power-law is . 10−2 that of the protons for strong nonrelativistic shocks.
+
+                                                           PACS numbers:
+
+
+                                                 Introduction.— Diffusive shock acceleration (DSA)               servations of young SNRs suggest Kep ≈ 10−3 or less
+                                              [e.g., 1, 2] at supernova remnant (SNR) shocks is widely           [see, e.g., 8, 9].
+                                              regarded as the mechanism responsible for the accelera-               Understanding electron injection requires a self-
+                                              tion of Galactic cosmic rays (CRs) up to E ∼ 1017 eV.              consistent calculation of the electromagnetic shock struc-
+                                              The presence of multi-TeV electrons and protons is also            ture along with the dynamics of both protons and elec-
+                                              revealed through copious broadband non-thermal emis-               trons, which can be achieved only with kinetic simula-
+                                              sion from SNRs. In DSA, particles gain energy by re-               tions that can capture the nonlinear interplay between
+                                              peatedly scattering across the shock, increasing their en-         energetic particles and self-generated fields over a broad
+                                              ergy as if being squeezed between two converging walls.            range of time and length scales. Although several sim-
+                                              Their final momentum distribution f (p) is a universal             ulation studies have already reported non-thermal par-
+                                              power-law whose spectral index depends on the shock                ticle acceleration in diverse collisionless shock environ-
+                                              hydrodynamics: for strong shocks (and for gas adia-                ments [e.g., 10–13], first principles simulations have never
+                                              batic index 5/3), the compression ratio r → 4, and                 shown simultaneous DSA of both protons and electrons
+                                              f (p) ∝ p−3r/(r−1) ∝ p−4 .                                         in non-relativistic collisionless shocks; consequently, Kep
+                                                                                                                 has never been measured in ab-initio simulations.
+                                                 One of the most important questions in CR physics
+                                              is how particles are extracted from the thermal pool to               In this Letter, we report on the use of large particle-
+                                              be accelerated to relativistic energies, i.e., how particles       in-cell (PIC) simulations to study both proton and elec-
+                                              are injected into DSA. Recent hybrid simulations of high           tron acceleration in nonrelativistic, quasiparallel, strong
+                                              Mach number shocks [3–6] showed that in shocks propa-              shocks relevant for young SNRs, demonstrating for the
+                                              gating in the direction quasiparallel to the background            first time the formation of universal ∝ p−4 DSA spectra
+                                              magnetic field, protons are injected after having been             for both species. We also characterize electron injection,
+                                              specularly reflected at the shock potential barrier and en-        outlining the crucial role of the nonresonant modes ex-
+                                              ergized via shock drift acceleration (SDA) up to injection         cited by the proton-driven Bell instability [14] in shaping
+                                              momentum pinj ≈ 2.5mp vsh , where mp is the proton mass            the shock dynamics and in regulating particle scattering,
+                                              and vsh is the shock velocity. After this, protons begin to        and measure the electron/proton ratio in energetic par-
+                                              diffuse around the shock. Achieving such a pinj is much            ticles. Finally, we discuss the application of our findings
+                                              more difficult for electrons, as their initial momentum is a       to the phenomenology of radio-SNe and young SNRs.
+                                              factor of mp /me smaller; therefore, it is natural to expect          PIC Simulations.— We use the parallel electromag-
+                                              a preferential injection of protons over electrons. Indeed,        netic PIC code TRISTAN-MP [15, 16] to simulate col-
+                                              the electron/proton ratio in accelerated particles, Kep , is       lisionless shocks. We send a nonrelativistic, supersonic,
+                                              consistently inferred to be much smaller than one. Direct          super-Alfvénic, electron-proton plasma flow with veloc-
+                                              detection of CRs at Earth results in Kep ≈ 0.01 around             ity vu against a reflecting wall placed at x = 0; the in-
+                                              10GeV, where solar modulation and electron radiative               teraction between incoming and reflected flows produces
+                                              losses are negligible [e.g., 7], while multi-wavelength ob-        a shock moving along x (to the right in figures); there-
+                                                                                                                             2
+
+
+
+
+                                                                  FIG. 2: (color online) (a) Spectral distribution of the per-
+                                                                  pendicular magnetic field, δB⊥ /B1 , in the shock precursor.
+                                                                  (b) Polarization angle χ(k), where χ = +(−)45◦ corresponds
+                                                                  to right-(left-)handed circularly polarized modes. The red
+                                                                  dashed line indicates the inverse of the mean CR gyro-radius.
+
+
+
+
+FIG. 1: (color online) Proton (a) and electron (b) x − px         4 at the shock (Fig. 1c). The super-Alfvénic stream-
+phase space distributions for f (px ), density profile (c), and   ing of energetic protons excites magnetic turbulence in
+                                                −1
+transverse magnetic field (d) at t = 4.6 × 105 ωpe  for a shock   the upstream via the fast non-resonant (Bell) instabil-
+                          ◦
+with vu = 0.1c, ϑ = 30 , and mp /me = 100. Energetic              ity [14]. Fig. 1(d) shows the self-generated magnetic
+protons and electrons diffuse ahead of the shock, amplifying
+the upstream magnetic field.
+                                                                  field, i.e., the field component δB⊥ transverse to B1 :
+                                                                  the magnetic field is amplified by a factor of ∼ 2 in a
+                                                                  region of width ∼ 5 × 103 c/ωpe upstream of the shock
+                                                                  (shock precursor),
+                                                                                   p in agreement with the saturation level
+fore, the shock is modeled in the downstream frame. The           δB⊥ /B1 ∼ MA ηvsh /c of the Bell instability [e.g., 17].
+computational box is 1D along x, with all components of              To assess the nature of the excited modes, we per-
+fields and velocities retained. In order to save computa-         formed Fourier analysis of δB⊥ in the precursor (Fig. 2a),
+tional resources, the box is enlarged to ∼ 4 × 105 cells          finding that the wave spectral energy density peaks
+by expanding the right boundary as simulation proceeds.           at wavenumber kmax = 4 × 10−3 ωpe /c > kres , where
+The resolution is 10 cells per electron skinpdepth c/ωpe ,        kres ≡ 1/ρCR ≃ 1.1 × 10−3 ωpe /c is the wavenumber res-
+where c is the speed of light and ωpe = 4πne2 /me is              onant with protons that contribute to the CR current
+the electron plasma frequency (e and n being the elec-            (red dashed line in Fig. 2a). More precisely, the rele-
+tric charge and number density); the time step is ∆t =            vant CR gyroradius, ρCR , is calculated by averaging over
+0.045ωpe−1
+           . We use 200 particles per cell per species, with      the distribution of non-thermal protons in the far up-
+a reduced proton-to-electron mass ratio mp /me = 100.             stream (x > 3 × 104 c/ωpe ), where the Bell instability
+Electrons and protons are initially in thermal equilib-           is triggered [4]. Fig. 2(b) shows the polarization angle
+rium, i.e., Te = Tp = 1.12×10−3 me c2 = 1.12×10−3mp vu2 ,         χ ≡ sin−1 (V /I)/2, where I and V are the Stokes pa-
+and vu = 0.1c.                                                    rameters [18] for the two transverse magnetic field com-
+             p The sonic and Alfvénic Mach numbers are
+Ms ≡ vsh / Tp /mp = 40 and MA ≡ vsh /vA = 20, where               ponents in k-space. Since χ = +(−)45◦ corresponds to
+vsh ≡ vu r/(r − 1) is the upstream flow speed in the shock        a right-(left-)handed circularly polarized waves, we con-
+                                                                  clude that modes with k = kmax are indeed non-resonant
+                           p
+rest frame and vA ≡ B1 / 4πnmp is the Alfvén speed in
+the initial magnetic field B1 = B1 (cos ϑx + sin ϑy), with        Bell modes, while the mode at k = 1/ρCR is the resonant
+ϑ = 30◦ . To improve performance, we also implemented             left-handed proton-cyclotron mode. We note that short-
+dynamical load balancing that repartitions the domain             wavelength, right-handed Bell modes are ineffective at
+and particles amongst CPUs to even out the load.                  disrupting the proton current, which allows the gener-
+   Bell Instability.— Fig. 1 shows the proton (a) and the         ated turbulence to grow to nonlinear levels [4], but very
+electron (b) x − px phase space distribution for f (px ) at       effective at scattering electrons, which can easily meet
+the end of our simulation at t ≃ 4.6 × 105 ωpe−1
+                                                 ≈ 310Ω−1         the cyclotron resonance criterion kmax ρe ∼ 1.
+                                                         cp ,
+where Ωcp ≡ eB1 /mp c is the proton cyclotron frequency.             Proton and Electron Acceleration.— In order to illus-
+The streaming energetic protons and electrons are promi-          trate how protons and electrons achieve non-thermal en-
+nent in the upstream region (x > 1.55 × 104 c/ωpe ).              ergies, we tracked individual particles along their space-
+The density is compressed by the expected factor of               time trajectories. In Fig. 3, we follow two protons
+                                                                                                                          3
+
+
+
+
+                                                                  FIG. 4: (color online) Evolution of the downstream momen-
+                                                                  tum distributions for (a) protons and (b) electrons. The
+                                                                  dashed lines represent thermal Maxwellian distributions.
+
+
+
+
+                                                                  roradius.
+                                                                     Electron acceleration proceeds in a different way. In
+                                                                  Fig. 3(e-f) we follow an initially cold electron that, af-
+                                                                  ter being reflected off the shock at t ≈ 3.65 × 105 ωpe−1
+FIG. 3: (color online) Trajectories of individual protons (a-d)   because of magnetic mirroring [e.g., 19, 20], remains
+and electrons (e-h) in the x − t and x − p spaces (left and       trapped between the shock front and the nearest up-
+right columns). The gray-scale colormap and the color code
+indicate the amplified magnetic field δB⊥ /B1 and time, as in
+                                                                  stream wave until t ≈ 4.25 × 105 ωpe  −1
+                                                                                                           . At each inter-
+the legends.                                                      action with the shock, the electron may undergo a new
+                                                                  cycle of SDA, which results in vigorous energy gain. This
+                                                                  hybrid (SDA+scattering on Bell waves) acceleration pro-
+                                                                  cess is rather fast: in less than 8 × 104 ωpe−1
+                                                                                                                  ≃ 50Ω−1cp
+(a-d) and two electrons (e-h) over the time interval              electrons increased their energy by a factor of more than
+3.4 × 105 < ωpe t < 4.4 × 105 . Left panels show parti-           104 (from 5 × 10−3 me c2 to 60me c2 ). Guo et al. studied
+cle trajectories in the x − t plane (color lines), on top         the physics of a similar process for quasiperpendicular
+of the map of amplified magnetic field, δB⊥ /B1 (grey             shocks [§4.2.3 in Ref. 12], in which the upstream con-
+scale), while right panels illustrate the momentum evo-           finement is provided by electron-induced firehose modes
+lution along the particle trajectories; positions are in the      [13] rather than by proton-induced Bell modes. In our
+shock rest frame, and p is calculated in the simulation           longer simulations, we find that this hybrid acceleration
+frame. Panels (a-b) depict a proton with initial momen-           transitions to standard DSA when the electron achieves
+tum p = 10me c(= 0.1mp c = mp vu ) that encounters the            a momentum pinj ∼ 50me c (Fig. 3g,h). Note that in this
+shock at t ≈ 3.62 × 105 ωpe−1
+                              , gains energy in a few gyro-       stage electrons diffuse into the upstream for more than
+cycles of SDA around t ≈ 3.7×105ωpe    −1
+                                          , and finally enters    one gyro-radius, gaining energy when they reverse their
+                       5 −1
+DSA at t ≈ 3.9 × 10 ωpe ; when the proton is injected             motion and not at the shock transition. From other elec-
+into DSA, its momentum is pinj ≈ 3mp vu = 30me c, con-            tron trajectories (not shown here), we observe that the
+sistent with the model of injection from hybrid simula-           typical momentum needed for injection into DSA spans
+tions in Ref. [6]. In Fig. 3(c-d), a proton which has al-         the range p ≈ 30 − 100me c, comparable with the typical
+ready been injected is shown to cross the shock several           proton injection momentum p ≈ 3mp vu = 30me c [6].
+times and gains energy by undergoing head-on collisions              Proton and Electron Spectra.— Fig. 4 shows the time
+against upstream waves (since the simulation frame is the         evolution of the proton and electron momentum distri-
+downstream frame, post-shock reflections do not increase          butions in a region 2000c/ωpe behind the shock, multi-
+particle energy); its diffusion length, i.e., the maximum         plied by p4 to emphasize the scaling with the expected
+displacement from the shock, is now larger than its gy-           universal DSA spectrum at strong shocks. The dashed
+                                                                                                                          4
+
+lines represent the fitting with thermal (Maxwellian) dis-     quasiparallel (ϑ = 30◦ ) shocks using 1D PIC simulations,
+tributions with almost the same temperature for both           attesting for the first time the simultaneous DSA of both
+electrons and protons (T ≈ 0.12me c2 = 0.12mp vu2 ), at-       species, which leads to the development of the universal
+testing to very effective thermal equilibration between        power-law momentum distributions ∝ p−4 . Protons are
+the two species. The maximum energy of each species            efficiently accelerated at quasiparallel shocks [3] and for
+increases with time, and both species develop power-law        high MA excite the non-resonant (Bell) streaming insta-
+distributions ∝ p−4 after t ≈ 4 × 105 ωpe −1
+                                              ≃ 268Ω−1
+                                                     cp , in   bility [4, 14]. Strong Bell modes enable electron accel-
+remarkable agreement with the DSA prediction. Very in-         eration by making the shock locally oblique, which al-
+terestingly, electrons show the typical DSA slope even in      lows a large pitch angle for mirror reflection, and provid-
+the range of momenta where they undergo hybrid acceler-        ing small-wavelength, right-handed modes that enhance
+ation (2.5 . p/me c . 30), which is likely a manifestation     electron scattering and facilitate their rapid return to the
+of the fact that the balance between energy gain and es-       shock. Protons are injected into DSA after a few gyro-
+cape probability per cycle of hybrid acceleration is more      cycles of SDA, while electrons are first pre-heated via
+similar to DSA than to SDA [1].                                SDA, and then enter a hybrid stage in which they are
+   Electron/Proton Acceleration Efficiency.— A very im-        scattered by the upstream Bell waves and rapidly sent
+portant quantity that can be measured in our simulations       back to the shock for more SDA cycles. They enter DSA
+is the non-thermal electron-to-proton ratio, defined by        when their momentum is comparable to the proton in-
+Kep ≡ fe (p)/fp (p), for p & pinj . Since electron and pro-    jection momentum, pinj ∼ 3mp vu .
+ton CR distributions have the same spectral index, Kep is         From our simulations, the CR electron-to-proton ratio
+independent of p. From Fig. 4 we infer Kep ≈ 3.8 × 10−3        is inferred to be Kep ≈ 10−3 − 10−2 for vu /c ≈ 0.02 − 0.1,
+for our reference case with mp /me = 100 and vu /c = 0.1.      close to the values observed in young Galactic SNRs [e.g.,
+   Since Kep may be affected by the reduced proton-            9] and in the CR fluxes measured at Earth. The lower
+to-electron mass ratio, we performed additional simu-          electron acceleration efficiency is due to the additional cy-
+lations to investigate such a dependence. With all the         cles of hybrid acceleration that electrons have to undergo
+other shock parameters left unchanged, we find Kep ≈           to reach the injection momentum, and the probability of
+5.5×10−3 for mp /me = 400; we interpret such a marginal        loss at each shock encounter.
+increase from mp /me = 100 to mp /me = 400 as due to              Our simulations provide a self-consistent interpretation
+post-shock thermal electrons becoming trans-relativistic       of the simultaneous acceleration of protons and electrons
+when sharing the proton temperature. Extrapolating             as a function of magnetic inclination. Hybrid simulations
+such a trend to the realistic mass ratio would lead to         [3] show that proton DSA arises naturally for quasipar-
+Kep . 0.01. Such high shock velocity is relevant for           allel shocks, while quasiperpendicular shocks do not re-
+shocks in radio-SNe [e.g., 21], i.e., radio-bright extra-      flect protons into the upstream in the absence of strong
+galactic SNe observed a few days to a year after explosion.    pre-existing turbulence. Such a problem with proton in-
+   We have also investigated the case of lower shock ve-       jection does not preclude rapid acceleration of previously
+locities relevant for young Galactic SNRs (such as Tycho,      pre-energized protons even at quasiperpendicular shocks
+Cas A, SN1006, Kepler, etc.), whose blast waves travel         [e.g., 22]. Shocks of all inclinations seem to reflect elec-
+at vu ∼ 0.01 − 0.02c. For vu /c = 0.05 and mp /me = 100        trons into the upstream; whether these electrons return
+we find Kep = 1.2 × 10−3 , a value a factor of ∼ 3 smaller     to participate in DSA depends on the presence of up-
+than for vu /c = 0.1, which implies that Kep is roughly        stream turbulence.
+proportional to vsh /c. The extrapolation to the case of          We show that proton-driven waves in quasiparallel
+young SNRs in both mass ratio and shock velocity sug-          shocks are effective at trapping electrons. It has been
+gests that the CR electron/proton ratio should be in the       recently shown [13] that, for quasiperpendicular shocks
+range Kep ≈ 1 − 3 × 10−3 , in good agreement with the          propagating in high-β plasmas (β ≡ 2MA2 /Ms2 ), pre-
+value Kep ≈ 1.6 × 10−3 inferred in Tycho’s SNR [9], and        accelerated electrons can excite low-amplitude upstream
+only a factor of few different from the Kep measured at        waves, which may act as scattering agents and cause elec-
+Earth around 10 GeV. Quite interestingly, our results          tron diffusion. At the moment, no PIC simulations of
+suggest that such a ratio in Galactic CRs may be ac-           initially quasiperpendicular shocks show conclusive evi-
+counted for if the bulk of CRs are accelerated during the      dence of electron DSA, although we expect this is just a
+early stages of the SNR evolution, when the shock is quite     matter of insufficient simulation size. We conjecture that
+fast. Nevertheless, even if the quoted values of Kep seem      quasiperpendicular shocks should be able to generate
+not to vary at later times in our simulations, an extended     electron-driven upstream turbulence that will eventually
+analysis of the space of the shock parameters (MA , β, ϑ,      lead to electron DSA. As a function of magnetic inclina-
+in addition to mp /me and vsh ) is needed to cover the vast    tion, then, quasiparallel shocks should be efficient at both
+non-thermal phenomenology of radio SNe and SNRs.               the electron and proton acceleration, while quasiperpen-
+   Conclusions.— We studied proton and electron accel-         dicular shocks should show electron acceleration, with
+eration in non-relativistic high Mach number (MA = 20)         virtually no proton acceleration. Future simulations will
+                                                                                                                            5
+
+allow us to quantify these relative efficiencies for compari-      [8] H. J. Völk, E. G. Berezhko, and L. T. Ksenofontov, As-
+son with SNR observations, where obliquity of shocks can               tron. Astrophys. 433, 229 (2005)
+be measured with radio polarization.                               [9] G. Morlino and D. Caprioli, Astron. Astrophys. 538, A81
+                                                                       (2012)
+   This research was supported by NASA (grant
+                                                                  [10] M. A. Riquelme and A. Spitkovsky, Astrophys. J. 733,
+NNX14AQ34G to DC) and Simons Foundation (grants                        63 (2011)
+267233 and 291817 to AS), and facilitated by Max-                 [11] T. N. Kato, arXiv:1407.1971 (2014)
+Planck/Princeton Center for Plasma Physics. Simula-               [12] X. Guo, L. Sironi, and R. Narayan, Astrophys. J. 794,
+tions were performed on computational resources pro-                   153 (2014)
+vided by Princeton High-Performance Computing Cen-                [13] X. Guo, L. Sironi, and R. Narayan, Astrophys. J. 797,
+ter, by NERSC (supported by the Office of Science of                   47 (2014)
+the U.S. Department of Energy under Contract No. DE-              [14] A. R. Bell, Mon. Not. R. Astron. Soc. 353, 550 (2004)
+                                                                  [15] O. Buneman, Computer Space Plasma Physics (Tokyo:
+AC02-05CH11231), and by XSEDE (allocation No. TG-                      Terra Scientific) (1993)
+AST100035).                                                       [16] A. Spitkovsky, Astrophysical Sources of High Energy
+                                                                       Particles and Radiation in AIP Conf. Proc. 801, ed. T.
+                                                                       Bulik, B. Rudak, and G. Madejski (Melville, NY: AIP)
+                                                                       345 (2005)
+                                                                  [17] E. Amato and P. Blasi, Mon. Not. R. Astron. Soc. 392,
+ [1] A. R. Bell, Mon. Not. R. Astron. Soc. 182, 147 (1978)             1591 (2009)
+ [2] R. D. Blandford and J. P. Ostriker, Astrophys. J. 221,       [18] G. B. Rybicki and A. P. Lightman, Radiative Processes
+     L29 (1978)                                                        in Astrophysics (New York: Wiley) (1979)
+ [3] D. Caprioli and A. Spitkovsky, Astrophys. J. 783, 91         [19] L. Ball and D. B. Melrose, PASA, 18, 361 (2001)
+     (2014)                                                       [20] J. Park, C. Ren, J. C. Workman, and E. G. Blackman,
+ [4] D. Caprioli and A. Spitkovsky, Astrophys. J. 794, 46              Astrophys. J. 765, 147 (2013)
+     (2014)                                                       [21] R. A. Chevalier and C. Fransson, Astrophys. J. 651, 381
+ [5] D. Caprioli and A. Spitkovsky, Astrophys. J. 794, 47              (2006)
+     (2014)                                                       [22] G. Ferrand, R. J. Danos, A. Shalchi, S. Safi-Harb, P.
+ [6] D. Caprioli, A. R. Pop, and A. Spitkovsky, Astrophys. J.          Edmon, and P. Mendygral, Astrophys. J. 792, 113 (2014)
+     L. 798, L28 (2015)
+ [7] P. Picozza et al., J. Phys.: Conf. Ser. 409, 012003 (2013)
+

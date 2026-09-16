@@ -1,0 +1,531 @@
+% Average number of HI ionizations per primary particle in the z = 10 IGM,
+% including secondary photoionization by IC-upscattered CMB photons, with the
+% Furlanetto & Stoever (2010) energy-dependent W(K_e) and secondary-electron
+% energy distribution.
+% Companion to ionization_yield.py and IONIZATION_YIELD_SUMMARY.md.
+% Every number here is reproduced by:  python3 ionization_yield.py
+% Build: pdflatex ionization_yield.tex   (twice, for the references)
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=2.4cm]{geometry}
+\usepackage{amsmath,amssymb,booktabs,graphicx,xcolor}
+\usepackage[colorlinks=true,linkcolor=black,citecolor=black,urlcolor=blue]{hyperref}
+\usepackage{siunitx}
+\sisetup{separate-uncertainty=true}
+\DeclareSIUnit{\erg}{erg}                 % siunitx has no CGS energy unit
+\newcommand{\ion}[2]{\textsc{#1\,\MakeLowercase{#2}}}  % \ion is AASTeX-only
+
+% ---------------------------------------------------------------------------
+% Provenance layer.  \src{key} marks a number written by ionization_yield.py
+% into results.json["derived"] (or ["cosmology"]).  check_provenance.py refuses
+% the build unless every key resolves AND every displayed literal equals the
+% registry value at the precision displayed.
+% \src must work in text AND inside an align: the text form opens its own $...$,
+% which silently CLOSES the surrounding math in a display.  The {} before the
+% superscript is needed because \SI's own exponent already carries one.
+% ---------------------------------------------------------------------------
+\newif\ifprovdraft
+\provdrafttrue                      % <-- set \provdraftfalse for the clean PDF
+\newcommand{\src}[1]{%
+  \ifprovdraft
+    \ifmmode{}^{\text{\color{gray}\scriptsize\texttt{#1}}}%
+    \else{\color{gray}\scriptsize$^{\texttt{#1}}$}%
+    \fi
+  \fi}
+
+\title{Average number of HI ionizations per primary particle\\
+\large Intergalactic medium at $z=10$, $x_e = 10^{-4}$\\
+\large IC secondary photoionization, with an energy-dependent $W(K_e)$}
+\author{Generated with an AI assistant, under the project Master Rules}
+\date{Reproduced by \texttt{python3 ionization\_yield.py}}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+\noindent
+We compute the mean number of \ion{H}{i} ionizations produced by one primary
+electron ($10^{2}$--$10^{12}$~eV) or photon ($10^{1}$--$10^{5}$~eV) in the
+neutral intergalactic medium at $z=10$ with a static ionized fraction
+$x_e = 10^{-4}$, counting every ionization anywhere in the cascade. The mean
+energy per ion pair is treated as a genuine function of energy,
+$W(K_e) = E_{\rm th}/f_{\rm ion}(K_e,x_e)$, taken from Furlanetto \&
+Stoever~\cite{fs10} eq.~(13): identically zero below \SI{28}{\electronvolt},
+\SI{43.5}{\electronvolt} at \SI{100}{\electronvolt}, and
+\SI{36.5}{\electronvolt} asymptotically. Above
+$E_{\rm crit} = \SI{1.303e5}{\electronvolt}$\src{E\_crit\_eV} the
+\emph{collisional} yield saturates at
+$8.869\times10^{3}$\src{N\_e\_ic\_1e12} ion pairs, because at $z=10$ the CMB
+energy density is $14641$ times its present value and inverse-Compton (IC)
+scattering carries the electron's energy away. That energy is not lost: between
+roughly $10^{7}$ and $10^{9}$~eV the upscattered CMB photons clear the
+\SI{13.6}{\electronvolt} threshold while staying below the escape energy
+\SI{1218}{\electronvolt}\src{E\_escape\_eV}, and they photoionize. Following
+them raises the saturated yield to
+$4.575\times10^{6}$\src{N\_e\_C\_1e+12} ion pairs, a factor
+$515.9$\src{N\_e\_C\_over\_B\_max}. Replacing the previously used constant
+$W = \SI{36.26}{\electronvolt}$ by $W(K_e)$ lowers that headline number by
+$0.0956$\src{ic\_W\_energy\_dependence\_reduction}, because the IC secondaries
+deposit near threshold where $W$ is largest. Two one-sided modelling brackets
+remain and no statistical error bar exists: the photon-transport prescription
+moves the answer by $0.0516$\src{ic\_transport\_spread\_max}, and
+$0.2297$\src{ic\_frac\_of\_secondary\_below\_100eV} of the secondary yield is
+made below \SI{100}{\electronvolt}, where \cite{fs10} caution that the fit is
+poor.
+\end{abstract}
+
+% ===========================================================================
+\section{Assumptions}
+% ===========================================================================
+\begin{enumerate}\itemsep2pt
+\item \textbf{Target.} Pure atomic hydrogen at the mean cosmic density; helium
+      omitted from the target. \emph{Inconsistent} with assumption~4, whose fits
+      are for a primordial H\,+\,He gas; the inconsistency is of order the
+      \ion{He}{i} channel, $f_{\rm ion,HeI} = 0.05409$\src{f\_ion\_HeI}.
+\item \textbf{Ionized fraction} static at $x_e = 10^{-4}$.
+\item \textbf{Uniform gas}, no clumping.
+\item \textbf{Energy partition} from Shull \& van Steenberg~\cite{svds}, in the
+      energy-dependent parametrisation of Ricotti et al.~\cite{rgs02} as
+      reproduced in \cite{fs10} eq.~(13). \S\ref{sec:svds} reports what is and
+      is not verified about those coefficients.
+\item \textbf{$W$ is a function of energy}, $W(K_e) = E_{\rm th}/f_{\rm
+      ion}(K_e,x_e)$, and is identically zero (no ionization) below
+      \SI{28}{\electronvolt}. \cite{fs10} caution that this fit is ``a
+      relatively poor match at lower energies''; that caution is carried through
+      to a bracket in \S\ref{sec:W}, not buried.
+\item \textbf{Secondary-electron energy distribution} from \cite{fs10} eq.~(2),
+      $p(\varepsilon)\propto[1+(\varepsilon/\bar\varepsilon)^{2.1}]^{-1}$ with
+      $\bar\varepsilon = \SI{8}{\electronvolt}$ for \ion{H}{i}. Used for the
+      independent bound of \S\ref{sec:cascade}, and anchored on the median
+      \cite{fs10} quote for it.
+\item \textbf{``Per primary''} means per particle that \emph{does} interact. The
+      primary is not transported cosmologically; the secondary IC photons are,
+      through assumption~10.
+\item \textbf{No magnetic field}; the CMB dominates at $z=10$ regardless.
+\item \textbf{Flat $\Lambda$CDM}, Planck 2018~\cite{planck}. \textbf{Thomson-regime
+      IC with isotropic seeds}, spectrum from Blumenthal \& Gould~\cite{bg70};
+      the Thomson parameter is
+      $9.894\times10^{-3}$\src{thomson\_parameter\_at\_Emax} at the top of the
+      range, so the approximation holds throughout and fails above it.
+\item \textbf{Absorption prescription for the secondaries.} Absorbed with
+      probability $1-e^{-\tau}$, $\tau = n_{\rm HI}\sigma_{\rm pi}c/H(z)$:
+      absorbed near $z=10$, or never. \emph{A choice}; the light-cone
+      alternative is computed and differs by
+      $0.0516$\src{ic\_transport\_spread\_max}.
+\item \textbf{One generation} of secondary photons --- \emph{derived}, and
+      exactly, in \S\ref{sec:closure}.
+\end{enumerate}
+
+% ===========================================================================
+\section{Derivation}
+% ===========================================================================
+
+\subsection{Background at $z=10$}
+With Planck 2018 parameters ($\Omega_b h^2 = 0.02242$, $h=0.6766$,
+$\Omega_m = 0.3111$), $T_{\rm CMB,0}=\SI{2.7255}{\kelvin}$, $X = 1-Y_p = 0.755$:
+\begin{align}
+n_{\rm H}(z) &= \frac{\Omega_b\rho_{\rm crit,0}X}{m_{\rm H}}(1+z)^3
+   = \SI{2.529e-4}{\per\cubic\centi\metre}\src{n\_H\_cm3},\\
+u_{\rm CMB}(z) &= a_{\rm rad}T_{\rm CMB,0}^4(1+z)^4
+   = \SI{6.112e-9}{\erg\per\cubic\centi\metre}\src{u\_cmb\_erg\_cm3},\qquad
+kT_{\rm CMB} = \SI{2.584e-3}{\electronvolt}\src{kT\_cmb\_eV}.
+\end{align}
+
+\subsection{An energy-dependent $W$, and what is known about its
+            coefficients}\label{sec:svds}
+Shull \& van Steenberg~\cite{svds} ran a Monte Carlo degradation of a fast
+electron in a primordial gas and fitted the fraction of its \emph{initial}
+energy reaching each channel as a function of the ionized fraction $x$. Because
+the fit reports the fraction of the initial energy, it already sums over
+\emph{every} generation of the cascade the electron starts --- the secondaries it
+ejects, their secondaries, and so on down to the sub-excitation electrons. That
+is why the yield can be written in one line at all. Note also \cite{fs10}
+sec.~6: ``our parameters do not include the effects of the initial ionization
+event that generates the electron'', which is exactly why $N_\gamma$ below
+carries its own explicit $+1$.
+
+The asymptotic form has no energy dependence. Ricotti et al.~\cite{rgs02} fitted
+the energy dependence as well, and \cite{fs10} reproduce it as their eq.~(13):
+\begin{equation}
+f_{\rm ion,HI}(E,x) =
+  -0.69\left(\frac{\SI{28}{\electronvolt}}{E}\right)^{0.4}
+   x^{0.2}\left(1-x^{0.38}\right)^{2}
+  + 0.39\left(1-x^{0.41}\right)^{1.76},\qquad E>\SI{28}{\electronvolt},
+\label{eq:rgs}
+\end{equation}
+and zero otherwise, with a companion expression for $f_{\rm heat}$ (their
+eq.~14) of a \emph{different} functional form, $A[1-(1-x^{B})^{C}]$ rather than
+$A(1-x^{B})^{C}$. Hence
+\begin{equation}
+W(K_e) \equiv \frac{E_{\rm th}}{f_{\rm ion,HI}(K_e,x_e)}
+ = \infty,\ \SI{43.5}{\electronvolt},\ \SI{38.9}{\electronvolt},\
+   \SI{36.5}{\electronvolt}
+\quad\text{at } K_e < 28,\ 10^{2},\ 10^{3},\ 10^{6}~\text{eV}.
+\end{equation}
+
+\paragraph{The coefficients are now checked.} Until \cite{fs10} entered
+\texttt{papers/} the twelve recalled Shull \& van Steenberg coefficients had no
+external test at all. Eq.~\eqref{eq:rgs} carries the asymptote at two
+significant figures, and the comparison is:
+\begin{itemize}\itemsep1pt
+\item ionization: recalled $0.3908(1-x^{0.4092})^{1.7592} = 0.3751$ against
+      eq.~\eqref{eq:rgs}'s $0.39(1-x^{0.41})^{1.76}$, relative difference
+      $0.001764$\src{svds\_vs\_fs10\_ion\_reldiff};
+\item heating: recalled $0.9971[1-(1-x^{0.2663})^{1.3163}]$ against
+      \cite{fs10} eq.~(14), relative difference
+      $0.01101$\src{svds\_vs\_fs10\_heat\_reldiff}.
+\end{itemize}
+\cite{fs10} footnote~8 states a further hard number: the SvdS \emph{exact}
+heating fraction at $x_i = 0.01$ is $0.32$, and the Ricotti \emph{fit} sits
+$\sim6$ per cent above it in absolute terms. The recalled coefficients give
+$0.3658$\src{svds\_heat\_x0.01}, i.e.\ $4.6$ per cent absolute above $0.32$ ---
+so they reproduce the \emph{fitting function}, which is what they are, and
+inherit its known offset from the underlying Monte Carlo. That offset is a real
+systematic and is \emph{not} removed here.
+
+\paragraph{What is still not available.} \cite{fs10}'s own results are better
+than the fit used here, and they are not usable: ``Electronic tables of our
+results are available on request'' (abstract), and sec.~7, ``we have not
+attempted to find another form. Instead, we recommend interpolating the exact
+results.'' There is no published FS10 fitting formula and no public table.
+Reconstructing one from memory is the failure mode this project exists to
+prevent, so it was not done.
+
+\subsection{Models (A) and (B)}
+\begin{equation}
+\boxed{\;N_{\rm ion}^{(A)}(E) = f_{\rm ion}(E,x_e)\,\frac{E}{E_{\rm th}}\;}
+\label{eq:modelA}
+\end{equation}
+The electron loses energy to the gas at the Berger--Seltzer collision stopping
+power~\cite{icru37}, nearly energy-independent in the relativistic regime, and
+to the CMB at $b_{\rm IC} = \frac43\sigma_{\rm T}c\,u_{\rm CMB}\gamma^2\beta^2$
+\cite{rl}, which grows as $\gamma^2$; the two are equal at
+$E_{\rm crit} = \SI{1.303e5}{\electronvolt}$\src{E\_crit\_eV}. Counting only the
+collisional branch,
+\begin{equation}
+\boxed{\;N_{\rm ion}^{(B)}(E) = \int_0^{E}
+   \frac{b_{\rm coll}(T)}{b_{\rm coll}(T)+b_{\rm IC}(T)}\,
+   \frac{dN^{(A)}}{dT}\,dT \;}
+\label{eq:modelB}
+\end{equation}
+The integrand is the \emph{marginal} yield $dN^{(A)}/dT$, not $f_{\rm
+ion}/E_{\rm th}$: once $f_{\rm ion}$ depends on energy the two differ, and only
+the former is the number of ion pairs bought by the energy deposited between $T$
+and $T+dT$. With a constant $f_{\rm ion}$ it collapses to the old expression
+exactly, which is a check rather than a remark. The integral converges, so the
+collisional yield \emph{saturates}: the gas ever receives only
+$\SI{3.238e5}{\electronvolt}$\src{E\_dep\_eV\_1e12} of an arbitrarily energetic
+electron, giving $8.869\times10^{3}$\src{N\_e\_ic\_1e12} ion pairs. Model~(B)
+discards the IC branch and is a lower bound.
+
+\subsection{The IC-secondary channel}\label{sec:secondary}
+An electron of Lorentz factor $\gamma$ upscatters a CMB photon of energy
+$\varepsilon_0$ to $\langle\varepsilon_1\rangle =
+\frac43\gamma^2\varepsilon_0$. For isotropic monochromatic seeds in the Thomson
+limit the scattered spectrum is~\cite{bg70}
+$dN/dx = 3F(x)$, $F(x)=2x\ln x + x + 1 - 2x^2$, $x=\varepsilon_1/4\gamma^2
+\varepsilon_0\in[0,1]$; we compute rather than assert $\int_0^1 3F\,dx = 1$ and
+$\int_0^1 3Fx\,dx = \frac13$, the second of which \emph{is} the mean-energy
+relation. Convolving with a Planck seed and writing
+$w=\varepsilon_1/(4\gamma^2kT)$,
+\begin{equation}
+\tilde p(w) = 3\int_{\ln w}^{\infty}\!\!\hat f(e^v)F(we^{-v})\,dv,\qquad
+\int\tilde p\,dw = 1,\qquad
+\langle w\rangle = \frac{\langle u\rangle}{3} = 0.9004\src{ic\_w\_mean},
+\label{eq:ptilde}
+\end{equation}
+which is \emph{universal} --- independent of $\gamma$. Only the map
+$\varepsilon_1 = 4\gamma^2kT\,w$ carries $\gamma$, and that is what makes the
+problem semi-analytic. Setting $\langle\varepsilon_1\rangle = E_{\rm th}$ gives
+$\gamma\approx38$, $T_e = \SI{1.902e7}{\electronvolt}$\src{ic\_turnon\_T\_eV\_pred}
+--- written down before the grid was evaluated, which then placed the
+half-maximum at $\SI{1.149e7}{\electronvolt}$\src{ic\_turnon\_T\_eV\_half}.
+Absorption requires $\tau>1$, i.e.\ $\varepsilon_1$ below
+$E_{\rm esc} = \SI{1218}{\electronvolt}$\src{E\_escape\_eV}. Collecting,
+\begin{equation}
+G(\gamma) = \int_0^\infty \tilde q(w)\,
+   \frac{\left[1-e^{-\tau(\varepsilon_1)}\right]N_\gamma(\varepsilon_1)}
+        {\varepsilon_1}\,dw,\qquad
+   \tilde q(w) \equiv \frac{w\,\tilde p(w)}{\langle w\rangle},
+\end{equation}
+\begin{equation}
+\boxed{\;N_{\rm ion}^{(C)}(E) = N_{\rm ion}^{(B)}(E)
+  + \int_0^{E}\frac{b_{\rm IC}(T)}{b_{\rm coll}(T)+b_{\rm IC}(T)}\,
+    G(\gamma(T))\,dT\;}
+\label{eq:modelC}
+\end{equation}
+$\tilde q$ is the \emph{energy}-weighted spectrum, so (B) and (C) share one
+branching function and cannot disagree about where the energy went; this is
+verified to $4\times10^{-16}$.
+
+\subsection{An independent bound from the secondary-electron
+            spectrum}\label{sec:cascade}
+Everything above rests on the Shull \& van Steenberg branching fractions.
+\cite{fs10} eq.~(2) offers a route that uses none of them. If \emph{every}
+inelastic event were an ionization, the yield would obey
+\begin{equation}
+Y(E) = 1 + \big\langle\,Y(\varepsilon) + Y(E-E_{\rm th}-\varepsilon)\,
+        \big\rangle_{p(\varepsilon)},\qquad Y(E<E_{\rm th}) = 0,
+\label{eq:cascade}
+\end{equation}
+with $p$ from eq.~(2) and $\varepsilon<(E-E_{\rm th})/2$ by \cite{fs10}'s own
+definition of which outgoing electron is the ``secondary''. Switching off
+excitation and heating can only \emph{add} ionizations, so $Y$ is a strict upper
+bound --- and a far tighter one than $E/E_{\rm th}$. It gives one ion pair per
+$\SI{17.93}{\electronvolt}$\src{W\_ion\_only\_eV}, against
+$W\approx\SI{36}{\electronvolt}$ in reality; the factor of two is the energy
+that genuinely goes to excitation and heat, and it is consistent with
+\cite{fs10}'s finding that ionization, heating and excitation split roughly
+equally at high energy. Model~(A) stays under $Y$ at every energy tested. Two
+prescriptions from the same paper, used in completely different ways, do not
+contradict each other.
+
+\subsection{Why one generation suffices}\label{sec:closure}
+Exactly, not approximately. An absorbed photon has
+$\varepsilon_1\lesssim E_{\rm esc}$, so its photoelectron has $\gamma = 1.0024$;
+for \emph{that} electron to upscatter a CMB photon back over
+\SI{13.6}{\electronvolt} needs a seed of
+$E_{\rm th}/4\gamma^2 = \SI{3.383}{\electronvolt} = 1310\,kT$, Planck occupancy
+$e^{-1310}\sim10^{-569}$. On the tracked spectrum $G(\gamma)=0$ identically.
+Nor can a pair cascade start: the hardest photon tracked is
+$2.4\times10^{12}$~eV against a $\gamma\gamma$ threshold on the CMB of
+$\SI{3.742e13}{\electronvolt}$\src{eps\_pairprod\_threshold\_eV}.
+
+\subsection{Photons}
+$N_\gamma\equiv0$ below $E_{\rm th}$, exactly. Above it,
+$N_\gamma = 1 + N_e(E_\gamma - E_{\rm th})$. Since $f_{\rm ion}$ vanishes below
+\SI{28}{\electronvolt}, a second exact statement follows: $N_\gamma\equiv1$ all
+the way to $E_{\rm th}+\SI{28}{\electronvolt} = \SI{41.6}{\electronvolt}$ ---
+one ionization, no more, no rounding. Over the requested photon range
+($\le10^5$~eV) the photoelectron has $\gamma\le1.2$ and upscatters nothing, so
+models (B) and (C) coincide for photons: \emph{the IC channel does not change
+the photon answer at all.}
+
+% ===========================================================================
+\section{Verification and cross-checks}\label{sec:verif}
+% ===========================================================================
+\texttt{ionization\_yield.py} runs 50 checks and prints per-check coverage
+rather than a verdict tally. The ones that carry weight:
+
+\begin{table}[h]\centering\small
+\begin{tabular}{@{}llp{7.2cm}@{}}
+\toprule
+ID & Check & Outcome \\
+\midrule
+C32 & \textbf{SvdS coefficients} & recalled vs \cite{fs10} eq.~(13):
+     $0.001764$\src{svds\_vs\_fs10\_ion\_reldiff} relative; vs eq.~(14):
+     $0.01101$\src{svds\_vs\_fs10\_heat\_reldiff}. First external test they have had. \\
+C32 & \cite{fs10} footnote 8 & the recalled heating fit sits $4.6\%$ absolute above the
+     SvdS exact $0.32$ at $x_i=0.01$; \cite{fs10} say $\sim6\%$. The known offset is
+     reproduced, not removed. \\
+C32 & \textbf{eq.~(2) medians} & computed $7.356$\src{fs10\_median\_secondary\_HI\_eV},
+     $14.51$, $\SI{29.89}{\electronvolt}$ against the $7.2$, $14.2$,
+     $\SI{28.5}{\electronvolt}$ \cite{fs10} quote: $2.2\%$, $2.2\%$, $4.9\%$. The
+     medians are not used to build $p(\varepsilon)$. \\
+C32 & External anchor: $W$ & $E_{\rm th}/f_{\rm ion} = \SI{36.26}{\electronvolt}$
+     asymptotically against the measured $W(\mathrm{H})\approx\SI{36}{\electronvolt}$. \\
+C20 & \textbf{Independent bound} & the eq.~(2) ionization-only cascade gives one pair per
+     $\SI{17.93}{\electronvolt}$\src{W\_ion\_only\_eV}, monotone, under $E/E_{\rm th}$, and
+     above model~(A) everywhere. Uses no SvdS input. \\
+C20 & STRUCTURAL & $dN^{(A)}/dE$ collapses to $f_{\rm ion}/E_{\rm th}$ \emph{exactly} when
+     $f_{\rm ion}$ is made constant, so the change in the answer is physics, not
+     refactoring. \\
+C36 & \textbf{$W(K_e)$ vs constant $W$} & $4.575\times10^{6}$\src{N\_e\_C\_1e+12} against
+     $5.059\times10^{6}$\src{N\_e\_C\_1e12\_constW}: a reduction of
+     $0.0956$\src{ic\_W\_energy\_dependence\_reduction}. \\
+C26 & Platzman budget & $\sum f_i = 0.9600$\src{f\_budget\_sum} $\le1$. \\
+C26 & IC spectrum & $\int 3F\,dx = 1$, $\int x\,3F\,dx = 1/3$ to $10^{-12}$. \\
+C31 & $\langle w\rangle$ two ways & numeric vs $(\pi^4/15)/(6\zeta(3))$: $10^{-14}$. \\
+C31 & $N_{\rm secondary}$ two ways & trapezoid vs adaptive \texttt{quad}: $10^{-6}$. \\
+C18 & Structural $A\!\equiv\!0$ / $A\!\equiv\!1$ & zero absorption collapses (C) onto (B)
+     \emph{exactly}; full absorption recovers model~(A) and stays under $E/E_{\rm th}$. \\
+C20 & Hard ceiling & $N^{(C)}\le E/E_{\rm th}$ everywhere. \\
+C53 & Null tests & $N_\gamma=0$ exactly below \SI{13.6}{\electronvolt}; $N_\gamma=1$
+     exactly up to \SI{41.6}{\electronvolt}. The plateau edge \emph{moved} when $W(K_e)$
+     replaced the constant, and the check is written against the model, not the number. \\
+C36 & Sub-100 eV secondaries & $0.2297$\src{ic\_frac\_of\_secondary\_below\_100eV} of the
+     secondary yield is made below \SI{100}{\electronvolt}. Suppressing that band gives
+     $4.244\times10^{6}$\src{N\_e\_C\_1e12\_pe\_floor\_100eV}, i.e.\ $-7.2\%$. \emph{Reported,
+     not resolved.} \\
+C36 & Sensitivity: transport & Hubble length vs redshifting light cone,
+     $4.575\times10^{6}$\src{N\_e\_C\_1e+12} vs
+     $4.339\times10^{6}$\src{N\_e\_C\_1e12\_cosmo}, spread
+     $0.0516$\src{ic\_transport\_spread\_max}. \\
+C18 & Deliberate failure & a wrong $f_{\rm ion}$ is rejected by the $W$ test; the naive
+     linear-space integrator is caught returning
+     $0.569$\src{naive\_integral\_fraction} of the correct integral. \\
+C56 & Determinism & \texttt{results.json} regenerates byte-identically:
+     \texttt{md5} \texttt{270ee358da144c1751517e88b8aa4251} on two independent runs.
+     This is a claim about \emph{two} runs, so the script does not assert it --- it
+     publishes the hash and leaves the comparison to be made. It had been sitting in
+     the automatic tier mislabelled. \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\paragraph{Three bugs this suite caught, in this revision alone.} (i) The
+linear-space quadrature of Eq.~\eqref{eq:modelB}, whose integrand lives in the
+first $10^{-4}$ of the range, returned a value that was wrong \emph{and smooth};
+the monotonicity check caught it. (ii) \cite{fs10} eq.~(14) has a different
+functional form from eq.~(13); using the eq.~(13) form for heating gave $0.638$
+instead of $0.362$, a factor $1.8$, and looked perfectly plausible --- the
+comparison against \cite{fs10}'s own quoted $0.32$ caught it. (iii) The cascade
+recursion of Eq.~\eqref{eq:cascade} was marched on a logarithmic grid, where
+$E-E_{\rm th}-\varepsilon$ falls into the cell that is still empty; it collapsed
+from $Y(10^3)=55$ to $Y(10^4)=2.7$, and the monotonicity check caught that too.
+A linear grid with step $\ll E_{\rm th}$ makes the march exact.
+
+% ===========================================================================
+\section{Result}
+% ===========================================================================
+\begin{figure}[h]\centering
+\includegraphics[width=0.82\textwidth]{ionization_yield_fig.pdf}
+\caption{\ion{H}{i} ion pairs per primary against primary kinetic energy, $z=10$,
+$x_e=10^{-4}$, all cascade generations counted. Colour encodes species, line
+style encodes model; the dotted grey line is the ceiling $E/E_{\rm th}$; the
+shaded band is the IC-secondary window. \emph{Lower panel:} the branching
+fractions that set the shape, together with $f_{\rm ion,HI}(E)$ itself --- the
+input that makes $W$ energy dependent. Produced by
+\texttt{ionization\_yield.py::make\_figure}.}
+\label{fig:main}
+\end{figure}
+
+\begin{table}[h]\centering\small
+\caption{$N_{\rm ion}$ per primary, three significant figures. A dash marks an
+energy outside the requested range for that species. Column (C) is the answer.}
+\begin{tabular}{@{}rrrrrr@{}}
+\toprule
+$E$ [eV] & $e^-$ (A) & $e^-$ (B) & $e^-$ (C) & $\gamma$ (A) & $\gamma$ (C) \\
+\midrule
+$10^{1}$  & ---                 & ---                & ---                                     & $0$                & $0$ \\
+$10^{2}$  & $2.30$              & $2.30$             & $2.30$                                  & $2.96$             & $2.96$ \\
+$10^{3}$  & $25.7$              & $25.7$             & $25.7$                                  & $26.4$             & $26.4$ \\
+$10^{4}$  & $268$               & $265$              & $265$                                   & $269$              & $265$ \\
+$10^{5}$  & $2.72\times10^{3}$  & $2.16\times10^{3}$ & $2.16\times10^{3}$                      & $2.73\times10^{3}$ & $2.16\times10^{3}$ \\
+$10^{6}$  & $2.74\times10^{4}$  & $6.41\times10^{3}$ & $6.41\times10^{3}$                      & ---                & --- \\
+$10^{7}$  & $2.75\times10^{5}$  & $8.45\times10^{3}$ & $2.36\times10^{4}$\src{N\_e\_C\_1e+07}  & ---                & --- \\
+$10^{8}$  & $2.75\times10^{6}$  & $8.82\times10^{3}$ & $2.47\times10^{6}$\src{N\_e\_C\_1e+08}  & ---                & --- \\
+$10^{9}$  & $2.75\times10^{7}$  & $8.86\times10^{3}$ & $4.56\times10^{6}$\src{N\_e\_C\_1e+09}  & ---                & --- \\
+$10^{10}$ & $2.75\times10^{8}$  & $8.87\times10^{3}$ & $4.58\times10^{6}$\src{N\_e\_C\_1e+10}  & ---                & --- \\
+$10^{12}$ & $2.75\times10^{10}$ & $8.87\times10^{3}$ & $4.58\times10^{6}$\src{N\_e\_C\_1e+12}  & ---                & --- \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\paragraph{Headline numbers, with units.}
+\begin{itemize}\itemsep1pt
+\item $W(K_e)$: $\infty$ below \SI{28}{\electronvolt}, \SI{43.5}{\electronvolt} at
+      \SI{100}{\electronvolt}, \SI{38.9}{\electronvolt} at \SI{1}{\kilo\electronvolt},
+      \SI{36.5}{\electronvolt} asymptotically. The asymptote matches the measured
+      $W(\mathrm{H})\approx\SI{36}{\electronvolt}$.
+\item $E_{\rm crit} = \SI{1.303e5}{\electronvolt}$\src{E\_crit\_eV};
+      $E_{\rm esc} = \SI{1218}{\electronvolt}$\src{E\_escape\_eV}.
+\item $N_{\rm max}^{(C)} = 4.575\times10^{6}$\src{N\_e\_C\_1e+12} ion pairs for
+      \emph{any} electron above $\sim\SI{1}{\giga\electronvolt}$, a factor
+      $515.9$\src{N\_e\_C\_over\_B\_max} above the collisional-only saturation.
+\item Peak reprocessing efficiency
+      $0.9897$\src{ic\_max\_energy\_fraction\_absorbed}.
+\item Independent ceiling from \cite{fs10} eq.~(2):
+      one pair per $\SI{17.93}{\electronvolt}$\src{W\_ion\_only\_eV}.
+\end{itemize}
+
+\subsection{Correction: model (A) \emph{is} an upper bound after
+            all}\label{sec:notbound}
+The previous revision of this calculation reported that model~(C) exceeds
+model~(A) by a few per cent near $10^{8}$~eV, and explained it: a photon just
+above threshold buys an ion pair for \SI{13.6}{\electronvolt} where electron
+degradation needs $W$. That explanation was right about the mechanism and wrong
+about the size, because it used the \emph{asymptotic} $W$ for the
+near-threshold secondaries that do most of the work. With $W(K_e)$ those
+secondaries are correctly charged \SI{43.5}{\electronvolt} rather than
+\SI{36.26}{\electronvolt} per pair, and the excess disappears:
+$\max(N^{(C)}/N^{(A)}) = 1.000$\src{N\_e\_C\_over\_A\_max}. \textbf{The claim
+that (A) is not an upper bound was an artefact of the constant-$W$
+approximation and is withdrawn.} The mechanism survives; its magnitude did not.
+
+\subsection{What $W(K_e)$ changed, and what it did not}\label{sec:W}
+Replacing the constant $W$ costs
+$0.0956$\src{ic\_W\_energy\_dependence\_reduction} of the headline number. It
+matters here and almost nowhere else, because the IC channel deposits through
+photons of a few tens to a few hundred eV --- precisely where $W(K_e)$ departs
+from its asymptote.
+
+It does \emph{not} close the low-energy bracket.
+$0.2297$\src{ic\_frac\_of\_secondary\_below\_100eV} of the secondary yield is
+still produced below \SI{100}{\electronvolt}, and \cite{fs10} state plainly that
+eq.~\eqref{eq:rgs} is ``a relatively poor match at lower energies''. Suppressing
+the photoelectron cascade entirely below \SI{100}{\electronvolt} --- the
+pessimistic extreme --- gives
+$4.244\times10^{6}$\src{N\_e\_C\_1e12\_pe\_floor\_100eV}, i.e.\ $-7.2\%$. The
+truth is inside that bracket. Closing it requires \cite{fs10}'s tables, which
+are not public.
+
+\paragraph{Uncertainty.} \textbf{No statistical interval is quoted, and that is
+a limitation rather than a claim of precision.} No input carries a covariance.
+Three variations \emph{are} propagated: the mean excitation energy $I$ moves the
+collisional saturation by $1.52\%$; the transport prescription moves $N^{(C)}$
+by $0.0516$\src{ic\_transport\_spread\_max}; the sub-\SI{100}{\electronvolt}
+bracket moves it by $-7.2\%$. All three are one-sided or asymmetric and the
+modelling choices of \S\ref{sec:notchecked} dominate.
+
+% ===========================================================================
+\section{What was \emph{not} checked}\label{sec:notchecked}
+% ===========================================================================
+\begin{enumerate}\itemsep2pt
+\item \textbf{The Shull \& van Steenberg paper itself is still not in the tree.}
+      The coefficients are now checked against \cite{fs10}'s reproduction of the
+      Ricotti fit to two significant figures, which is a real external test, but
+      it is a test against a \emph{fit to} SvdS, not against SvdS. \cite{fs10}
+      quantify the gap: $\sim6\%$ absolute in $f_{\rm heat}$ at $x_i=0.01$.
+\item \textbf{\cite{fs10}'s own tables} are not public and are not used. They
+      would supersede eq.~\eqref{eq:rgs} entirely and are the single largest
+      available improvement.
+\item \textbf{Which transport prescription is right} is not settled; only the
+      spread is measured.
+\item \textbf{Compton scattering of the secondaries} off bound electrons is
+      omitted ($\tau_{\rm T}\sim0.1$ over a Hubble length); it would slightly
+      \emph{raise} model~(C).
+\item \textbf{Helium} is in the fits but not the target, and \ion{He}{i} opacity
+      is absent from $\tau$.
+\item \textbf{Klein--Nishina} suppression above $10^{12}$~eV would raise (B) and
+      lower (C).
+\item \textbf{The ionization-only cascade neglects} excitation and
+      electron-electron heating by construction. That is what makes it a bound;
+      it is not a model, and it is not used as one.
+\item \textbf{No independent reimplementation} (check C24). Every cross-check
+      except the $W$ anchor, the \cite{fs10} comparisons and the eq.~(2) bound
+      is internal to this one code.
+\end{enumerate}
+
+\paragraph{Reproducibility.} Deterministic; no random numbers, so no seed. Run
+\texttt{python3 ionization\_yield.py} to regenerate every number, the registry
+(\texttt{results.json}), the provenance records and both figure formats; then
+\texttt{python3 check\_provenance.py} to refuse the build if paper and registry
+have drifted. Environment: \texttt{numpy}~1.26.4, \texttt{scipy}~1.11.4,
+\texttt{matplotlib}~3.8.0, Python~3.11.
+
+\begin{thebibliography}{9}\small
+\bibitem{fs10} S.~R. Furlanetto \& S.~J. Stoever, \emph{MNRAS} \textbf{404}, 1869 (2010);
+   arXiv:0910.4410. \emph{In the tree}: \texttt{papers/0910.4410-furlanetto-stoever-2010.pdf}.
+   Eqs.~(2), (13), (14) and footnote~8 are used.
+\bibitem{svds} J.~M. Shull \& M.~E. van Steenberg, \emph{ApJ} \textbf{298}, 268 (1985).
+   \emph{Not in the tree}; reached only through \cite{fs10} and \cite{rgs02}.
+\bibitem{rgs02} M.~Ricotti, N.~Y. Gnedin \& J.~M. Shull, \emph{ApJ} \textbf{575}, 33 (2002).
+   The energy-dependent fit to \cite{svds}, quoted as eqs.~(13)--(14) of \cite{fs10}.
+\bibitem{opal} C.~B. Opal, W.~K. Peterson \& E.~C. Beaty, \emph{J. Chem. Phys.} \textbf{55},
+   4100 (1971). The measurements behind the secondary-electron spectrum.
+\bibitem{dyl99} A.~Dalgarno, M.~Yan \& W.~Liu, \emph{ApJS} \textbf{125}, 237 (1999).
+   The form of eq.~(2) as adopted by \cite{fs10}.
+\bibitem{bg70} G.~R. Blumenthal \& R.~J. Gould, \emph{Rev.\ Mod.\ Phys.} \textbf{42}, 237
+   (1970), eq.~(2.42).
+\bibitem{icru37} ICRU Report 37, \emph{Stopping Powers for Electrons and Positrons} (1984).
+\bibitem{rl} G.~B. Rybicki \& A.~P. Lightman, \emph{Radiative Processes in Astrophysics}
+   (1979), eq.~7.16.
+\bibitem{of} D.~E. Osterbrock \& G.~J. Ferland, \emph{Astrophysics of Gaseous Nebulae and
+   AGN}, 2nd ed. (2006).
+\bibitem{planck} Planck Collaboration, \emph{A\&A} \textbf{641}, A6 (2020), Table 2.
+\bibitem{fixsen} D.~J. Fixsen, \emph{ApJ} \textbf{707}, 916 (2009).
+\bibitem{slatyer} T.~R. Slatyer, \emph{Phys.\ Rev.\ D} \textbf{93}, 023521 (2016).
+   \emph{Not used}: full transport, which would supersede assumption~10.
+\end{thebibliography}
+
+\end{document}

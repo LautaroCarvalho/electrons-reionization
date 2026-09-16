@@ -1,0 +1,498 @@
+REDO OF FIG. 4 (manuscript_13page) AND THE HEAT CALCULATION
+generated 2026-09-02 by Notebooks/redo/*.py
+
+############ verify_sympy.py ############
+
+(1) Relativistic kinematics used by every loss rate
+  OK   p^2c^2 = K(K+2E_0)  [igm_losses.kinematics]
+  OK   gamma^2 beta^2 = p^2c^2/(m_ec^2)^2  [prefactor of Eq. (4)]
+
+(2) Adiabatic loss
+  OK   p ∝ a^-1  =>  dK/dt = -H p^2c^2/E
+
+(3) Magnetic vs CMB energy density (Eq. 2)
+  OK   U_B/U_CMB = B_0^2/(2 mu_0 U_CMB,0) is redshift independent
+  OK   equality requires B_0 = sqrt(2 mu_0 U_CMB,0)
+
+(4) Inverse-Compton kinematics of Eq. (10)
+  OK   q = E_gamma/[Gamma(gamma m_ec^2 - E_gamma)] inverts E_gamma(q)
+  OK   Thomson limit (Gamma << 1): E_gamma -> 4 gamma^2 eps q
+  OK   q<=1 enforces E_gamma < gamma m_ec^2 (full-energy-transfer limit)
+  OK   q >= 1/(4 gamma^2) is the no-energy-change floor E_gamma ~ eps
+
+(5) Energy content of the Blumenthal-Gould spectrum (Thomson limit)
+  OK   int_0^1 q G(q,0) dq = 1/9
+  OK   int E dN/dE dE = (4/3) sigma_T c gamma^2 U_rad   (per unit U_rad)
+  OK   emitted/net = gamma^2/(gamma^2-1) = 1/beta^2  (the residual of the check quoted in Sect. 4.2)
+
+(6) Cascade bookkeeping and energy conservation
+  OK   L_ion removes B + <eps> per event: the secondary's kinetic energy is booked to the parent and re-deposited by the child (no double counting)
+  OK   closure: K_0 = B*Y + heat + excitation + escaped + residual
+
+(7) Yield, W-value and the spectrum average of Eq. (14)
+  OK   W = K_ini/Y by definition
+  OK   numerator of Wbar = A(K_max^{2-p}-K_min^{2-p})/(2-p)
+  OK   Y = K/W (constant W)  =>  Wbar = W for every p, and A cancels [Eq. 14]
+  OK   closed form Wbar_sat = (p-1)/[(2-p)Y_sat] * (Kmax^{2-p}-Kmin^{2-p})/(Kmin^{1-p}-Kmax^{1-p})
+  OK   p=1.8: Wbar(K_max=1e13)/Wbar(1e12) = 1.5908  (grows as K_max^0.2)
+  OK   p=2.5: Wbar(K_max=1e13)/Wbar(1e12) = 1.0000  (saturates)
+
+(8) The heat-ionization lock, Eq. (16) of manuscript.tex
+  OK   Theta = (2/3) Q/(mu k_B);  N_ion/n_H = DeltaT/Theta
+  OK   Theta is independent of the gas density (a pure ratio)
+  OK   equivalent form DeltaT = (2/3) f_heat eps_H/(mu k_B), f_heat = Q/Wbar
+
+(9) Thomson-depth increment and the recombination lever
+  OK   dtau = sigma_T * int n_e c dt  (evaluated numerically in stage3)
+  OK   alpha_B ~ T^-0.7  =>  d alpha_B/alpha_B = -0.7 DeltaT/T_0 (1.4% for DeltaT=200 K at T_0=1e4 K)
+
+ALL 25 SYMBOLIC CHECKS PASSED
+
+############ stage1_checks.py ############
+
+=== 1. CMB energy density closure (my quadrature vs module constant) ===
+  z=  0.0  u_mine=4.174795e-14  u_module=4.170000e-14  ratio=1.00114991
+  z= 10.0  u_mine=6.112318e-10  u_module=6.105297e-10  ratio=1.00114991
+  z= 20.0  u_mine=8.119183e-09  u_module=8.109858e-09  ratio=1.00114991
+
+=== 2. IC differential spectrum: energy integral vs the loss rate used in the ODE ===
+    (int E dN/dE dE)  vs  L_IC = 4/3 sigma_T c U_CMB (p^2c^2/(mc^2)^2) F_KN
+      z     K [eV]     gamma  P_spec [J/s]    L_IC [J/s]     ratio  1+3/(4g^2)
+   20.0      1e+05       1.2  2.831642e-28  9.266311e-29  3.055846    1.524590
+   20.0      1e+06      2.96  1.882013e-27  1.669920e-27  1.127008    1.085777
+   20.0      1e+07      20.6  9.136583e-26  9.102804e-26  1.003711    1.001773
+   20.0      1e+08       197  8.354466e-24  8.342782e-24  1.001400    1.000019
+   20.0      1e+09  1.96e+03  8.274608e-22  8.263430e-22  1.001353    1.000000
+   20.0      1e+11  1.96e+05  7.912398e-18  7.900681e-18  1.001483    1.000000
+   10.0      1e+05       1.2  2.131615e-29  6.975903e-30  3.055683    1.524590
+   10.0      1e+06      2.96  1.416840e-28  1.257156e-28  1.127020    1.085777
+   10.0      1e+07      20.6  6.878291e-27  6.852811e-27  1.003718    1.001773
+   10.0      1e+08       197  6.289636e-25  6.280785e-25  1.001409    1.000019
+   10.0      1e+09  1.96e+03  6.231829e-23  6.222261e-23  1.001538    1.000000
+   10.0      1e+11  1.96e+05  6.081895e-19  6.072856e-19  1.001488    1.000000
+
+=== 3. Photoionization cross-section sanity ===
+  E=    13.61 eV   sigma_pi=6.2947e-18 cm^2
+  E=    16.00 eV   sigma_pi=4.0745e-18 cm^2
+  E=    54.40 eV   sigma_pi=1.2309e-19 cm^2
+  E=   136.06 eV   sigma_pi=7.4180e-21 cm^2
+  E=  1360.60 eV   sigma_pi=4.0672e-24 cm^2
+
+=== 4. Free-streaming ceiling E_gamma,hor(z) and the boundaries K3, K4 ===
+      z |   K2 mine    K2 pub |   K3 mine    K3 pub |  Ehor mine  Ehor pub |    K4 mine    K4 pub
+   20.0 |  7.62e+04   7.6e+04 |   4.2e+06   4.2e+06 |     1820.1      1820 |  3.246e+08  3.25e+08
+   15.0 |  9.31e+04  9.32e+04 |  4.88e+06  4.88e+06 |     1549.6      1550 |  3.432e+08  3.43e+08
+   10.0 |  1.23e+05  1.23e+05 |  5.99e+06  5.99e+06 |     1271.6      1272 |   3.75e+08  3.75e+08
+    8.0 |  1.43e+05  1.43e+05 |  6.67e+06  6.67e+06 |     1150.8      1151 |  3.944e+08  3.94e+08
+    5.5 |  1.82e+05  1.82e+05 |  7.93e+06  7.93e+06 |      983.4       983 |  4.291e+08  4.29e+08
+
+############ stage_csda.py ############
+
+CSDA cascade in a static medium (no ODE): yield, W, deposition fractions and heat per ionization
+
+  z = 20.0
+     K [eV]          Y    W=K/Y   f_ion   f_exc  f_heat   f_esc     sum   Q=H/Y
+      20.03     0.1173  170.712   0.080   0.354   0.567   0.001  1.0017  96.774
+      49.98     0.9975   50.112   0.272   0.427   0.302   0.001  1.0008  15.142
+      99.93      2.473   40.402   0.337   0.425   0.239   0.001  1.0005   9.645
+      300.1      8.308   36.121   0.377   0.423   0.200   0.001  1.0004   7.209
+       1000      28.34   35.303   0.385   0.430   0.184   0.002  1.0003   6.489
+  1.001e+04      274.4   36.493   0.373   0.437   0.168   0.022  1.0003   6.140
+   9.99e+04       1973   50.642   0.269   0.315   0.119   0.297  1.0002   6.034
+      1e+06       4840  206.629   0.066   0.082   0.029   0.823  1.0000   6.028
+  minimum W = 35.300 eV at K = 1088 eV
+
+  z = 10.0
+     K [eV]          Y    W=K/Y   f_ion   f_exc  f_heat   f_esc     sum   Q=H/Y
+      20.03     0.1172  170.838   0.080   0.353   0.568   0.001  1.0017  97.041
+      49.98     0.9972   50.123   0.271   0.426   0.303   0.000  1.0008  15.176
+      99.93      2.473   40.406   0.337   0.424   0.239   0.000  1.0005   9.664
+      300.1      8.309   36.120   0.377   0.423   0.200   0.000  1.0004   7.221
+       1000      28.35   35.288   0.386   0.430   0.184   0.001  1.0003   6.500
+  1.001e+04      276.7   36.191   0.376   0.441   0.170   0.014  1.0003   6.149
+   9.99e+04       2210   45.206   0.301   0.353   0.134   0.213  1.0002   6.041
+      1e+06       6602  151.460   0.090   0.112   0.040   0.758  1.0001   6.037
+  minimum W = 35.284 eV at K = 1133 eV
+
+############ stage3_fig4.py ############
+==============================================================================
+A.  ELEMENT-BY-ELEMENT COMPARISON WITH photon_cascade_table.npz
+==============================================================================
+  Ye  (electron impact)     n= 441  median ratio  1.0006  5-95% [1.0006, 1.0061]
+  Yph (fixed 1 keV band)    n= 191  median ratio  0.9858  5-95% [0.9669, 1.0009]
+  Yph (mfp ceiling)         n= 191  median ratio  0.9960  5-95% [0.9726, 1.0027]
+  Ngamma (fixed band)       n= 191  median ratio  0.9977  5-95% [0.9974, 0.9991]
+
+==============================================================================
+B.  HEADLINE NUMBERS OF SECT. 5 AND THE ABSTRACT (manuscript_13page)
+==============================================================================
+  quantity                                                     mine    published
+  ----------------------------------------------------------------------------
+  direct-cascade plateau Y_e(K->1e13), z_i=20                  7679         7700
+  minimum W of the direct cascade, z_i=20 [eV]                35.38         35.4
+     ... located at K [eV]                                     1000         1000
+  direct-cascade plateau Y_e(K->1e13), z_i=10             1.243e+04     1.24e+04
+  minimum W of the direct cascade, z_i=10 [eV]                35.36         35.4
+     ... located at K [eV]                                     1000         1000
+  Y_e at K=1e+02 eV, z_i=20                                   2.658         2.65
+  Y_e at K=1e+03 eV, z_i=20                                   28.27         28.3
+
+  total plateau, fixed 1 keV band, z_i=20                 2.847e+06      2.9e+06
+  total plateau, mfp ceiling,      z_i=20                 3.891e+06      3.9e+06
+     ... horizon/fixed increase [%]                            36.6         37.0
+  second minimum of W, z_i=20 [eV]                            38.93        38.85
+     ... located at K [eV]                                4.958e+07        7e+07
+  Y_ph at K=2.6e8 eV, z_i=20                              2.772e+06      2.8e+06
+  ionizations per productive photon, z_i=20                   3.597          3.6
+  total plateau, fixed 1 keV band, z_i=10                 3.927e+06        4e+06
+  total plateau, mfp ceiling,      z_i=10                 4.479e+06      4.5e+06
+     ... horizon/fixed increase [%]                            14.0         13.0
+  second minimum of W, z_i=10 [eV]                             38.8        38.85
+     ... located at K [eV]                                8.638e+07        7e+07
+  Y_ph at K=2.6e8 eV, z_i=10                              3.709e+06      3.8e+06
+  ionizations per productive photon, z_i=10                   3.604          3.6
+
+==============================================================================
+C.  SPECTRUM-AVERAGED W (Table 3 of manuscript_13page)
+==============================================================================
+   z_i   branch              1.8             2.0             2.2             2.5             3.0
+    20   direct    887.8/888       107.1/107       46.27/46.3      37.76/37.8      37.37/37.4   
+    20    1 keV    291.6/290       79.82/79.8      44.18/44.2      37.68/37.7      37.37/37.4   
+    20  horizon    264.4/263       77.47/77.4         44/44        37.68/37.7      37.37/37.4   
+    10   direct    803.3/804       101.9/102       45.29/45.3      37.56/37.6      37.36/37.4   
+    10    1 keV    271.8/271       77.11/77.1      43.43/43.5       37.5/37.5      37.36/37.4   
+    10  horizon    260.9/260       76.18/76.2      43.36/43.4       37.5/37.5      37.36/37.4   
+       (mine / published, eV)
+
+==============================================================================
+D.  HEAT PER IONIZATION AND THE LOCK OF EQ. (16) OF manuscript.tex
+==============================================================================
+   K_ini [eV] |               z_i=20               |               z_i=10              
+              |    Q_dir    Q_tot  closure   W_tot |    Q_dir    Q_tot  closure   W_tot
+          106 |    9.287    9.287   0.9966  40.026 |    9.310    9.310   0.9969  40.030 |
+        1e+03 |    6.395    6.395   0.9956  35.376 |    6.409    6.409   0.9963  35.362 |
+      1.2e+04 |    6.040    6.040   0.9626  37.102 |    6.053    6.053   0.9729  36.720 |
+      1.1e+05 |    5.942    5.942   0.6746  52.816 |    5.952    5.952   0.7624  46.732 |
+     1.02e+06 |    5.934    5.934   0.1751 208.330 |    5.947    5.947   0.2431 150.498 |
+     9.37e+06 |    6.018    4.810   0.0243 169.399 |    6.048    4.537   0.0368 482.461 |
+     8.64e+07 |    6.079    6.693   0.0028  41.399 |    6.121    6.799   0.0044  38.802 |
+     7.96e+08 |    6.081    6.591   0.0003 280.034 |    6.121    6.606   0.0005 203.422 |
+     1.09e+12 |    6.074    6.591   0.0000381183.542 |    6.108    6.605   0.0000276367.088 |
+   Q_dir = heat/ionization, electron impact only
+   Q_tot = (heat + photoelectron heat)/(all ionizations), fixed band
+   closure = (13.6*Y + heat + excitation)/K_ini  -> 1 when nothing escapes
+
+  z_i=20: Q over 1e2-1e6 eV = 5.93 - 9.29 eV
+  z_i=10: Q over 1e2-1e6 eV = 5.94 - 9.31 eV
+  published range: 6.0 - 9.6 eV
+  Theta = (2/3)Q/(mu k_B) = 4.240e+04 - 6.661e+04 K   (published 4.3e4 - 6.9e4 K)
+
+############ stage3_opacity.py ############
+      z    E [eV]  lambda_pi/(c/H)  lambda_tot/(c/H)  P(absorbed)  PI share
+   20.0      13.7        3.536e-07         3.536e-07     1.000000    1.0000
+   20.0      20.0        9.894e-07         9.894e-07     1.000000    1.0000
+   20.0      50.0        1.382e-05         1.382e-05     1.000000    1.0000
+   20.0     100.0        1.131e-04         1.131e-04     1.000000    1.0000
+   20.0     300.0        3.657e-03         3.652e-03     1.000000    0.9989
+   20.0    1000.0        1.917e-01         1.812e-01     0.995989    0.9451
+   20.0    1272.0        4.290e-01         3.797e-01     0.928206    0.8851
+   20.0    1820.0        1.433e+00         9.999e-01     0.632149    0.6980
+   20.0    3000.0        7.796e+00         2.331e+00     0.348804    0.2990
+
+   10.0      13.7        9.322e-07         9.322e-07     1.000000    1.0000
+   10.0      20.0        2.608e-06         2.608e-06     1.000000    1.0000
+   10.0      50.0        3.643e-05         3.643e-05     1.000000    1.0000
+   10.0     100.0        2.982e-04         2.982e-04     1.000000    1.0000
+   10.0     300.0        9.639e-03         9.629e-03     1.000000    0.9989
+   10.0    1000.0        5.054e-01         4.777e-01     0.876733    0.9451
+   10.0    1272.0        1.131e+00         1.001e+00     0.631803    0.8851
+   10.0    1820.0        3.777e+00         2.636e+00     0.315701    0.6980
+   10.0    3000.0        2.055e+01         6.146e+00     0.150164    0.2990
+
+
+############ stage3_budget.py ############
+comoving n_H  = 1.896e-07 cm^-3   (manuscript: 1.94e-7)
+mu (H+He, neutral) = 1.0818          (manuscript: 1.081)
+
+--- the lock, Eq. (16) ---
+  Q =  6.0 eV/ionization  ->  Theta = 4.291e+04 K (manuscript quotes 4.3e4 - 6.9e4)
+  Q =  6.5 eV/ionization  ->  Theta = 4.648e+04 K (manuscript quotes 4.3e4 - 6.9e4)
+  Q =  9.6 eV/ionization  ->  Theta = 6.865e+04 K (manuscript quotes 4.3e4 - 6.9e4)
+
+--- (i) implied ionizations and Thomson depth ---
+  tau of a fully ionized IGM over 5.5 < z < 20 : 0.1638
+  DeltaT [K]   N_ion/n_H       dtau  dtau/sigma(tau)
+          10   2.331e-04  3.817e-05            0.005
+         200   4.661e-03  7.634e-04            0.109
+
+--- (ii) independent cosmic-ray electron budget from star formation ---
+  u_e(comoving) = eps_CR * (K_e/p) * (E_SN/M_*) * rho_*(z_i->z_f)
+  integration window z=10 -> 6 : 458 Myr
+           case  eps_CR   K_e/p      SFRD  u_e [erg/cm3]  eps_H [eV]   N_ion/n_H  DeltaT [K]
+   conservative soft p=2.5  0.05   0.010   2.0e-03       1.56e-22    5.13e-04    1.37e-05    5.89e-01
+    conservative DSA p=2.0  0.05   0.010   2.0e-03       1.56e-22    5.13e-04    4.79e-06    2.06e-01
+       fiducial soft p=2.5  0.10   0.020   5.0e-03       1.56e-21    5.13e-03    1.37e-04    5.89e+00
+        fiducial DSA p=2.0  0.10   0.020   5.0e-03       1.56e-21    5.13e-03    4.79e-05    2.06e+00
+     optimistic soft p=2.5  0.15   0.050   1.5e-02       1.75e-20    5.77e-02    1.54e-03    6.62e+01
+      optimistic DSA p=2.0  0.15   0.050   1.5e-02       1.75e-20    5.77e-02    5.39e-04    2.31e+01
+
+  For comparison, the energy density needed for ONE ionization per H:
+    Wbar =   37.4 eV  ->  u_e = 1.14e-17 erg/cm^3 comoving
+    Wbar =  107.0 eV  ->  u_e = 3.25e-17 erg/cm^3 comoving
+    Wbar =  290.0 eV  ->  u_e = 8.81e-17 erg/cm^3 comoving
+Lock coefficient Theta and W as a function of the residual ionized fraction (z = 10, CSDA cascade)
+
+       x_e   W(1keV)  Q(100eV)   Q(1keV)   Q(1e5eV)  Theta(1keV) [K]   N_ion/n_H at dT=100 K
+     1e-04     35.28     9.664     6.500      6.041        4.650e+04               2.150e-03
+     3e-04     35.51    10.576     6.963      6.430        4.982e+04               2.007e-03
+     1e-03     36.24    12.960     8.112      7.375        5.804e+04               1.723e-03
+     3e-03     38.04    17.969    10.343      9.149        7.400e+04               1.351e-03
+     1e-02     43.06    31.469    15.770     13.251        1.128e+05               8.863e-04
+     3e-02     54.67    64.199    27.609     21.667        1.975e+05               5.062e-04
+     1e-01     89.73   169.850    62.784     45.044        4.492e+05               2.226e-04
+
+  At x_e = 1e-2 the lock coefficient is 2.4x larger than the quoted value, so the
+  same Delta T implies 2.4x FEWER ionizations: the manuscript's x_e = 1e-4 choice is
+  the one that maximises the inferred ionization contribution.
+
+
+================================================================================
+STAGE 8 -- AVERAGE NUMBER OF IONIZATIONS PER PRIMARY PARTICLE (photons + e-)
+================================================================================
+Scripts : stage8_photon_yield.py  -> redo_photon_yield_table.npz  (181 s)
+          stage8_verify.py        -> stage8_verify.log
+          stage8_converge.py      -> stage8_converge.log
+          stage8_figure.py        -> manuscript/figures_redo/
+                                     fig_ionizations_per_primary.{pdf,png}
+Write-up: ionizations_per_primary_response.tex / .pdf  (this folder)
+
+N_ion(E, z_i) = average TOTAL number of H ionizations made anywhere down the
+cascade by one primary of energy E injected at z_i, counted until z = 5.5.
+Photon channels, by explicit instruction: photoionization + Compton ONLY.
+
+  E [eV]      e-,z=20     e-,z=10     gamma,z=20  gamma,z=10
+  1e+02       2.658       2.658       2.805       2.805
+  1e+03       28.27       28.28       24.82       19.46
+  1e+04       322.9       326.2       1.647       0.303
+  1e+05       2090        2362        22.82       7.235
+  1e+06       4883        6759        198.1       53.67
+  1e+07       5.534e+04   1.943e+04   225.5       27.78
+  1e+08       2.236e+06   2.217e+06   3750        981.3
+  1e+10       4.139e+06   4.458e+06   231.2       46.65
+  1e+12       4.139e+06   4.460e+06   3.628       0.7255
+
+Electron W = K/N plateau, 100 eV - 30 keV:  36.6 +/- 2.3 eV
+  (z=20: min 35.38, max 40.03, mean 36.63;  z=10: mean 36.55)
+
+Photons: three regimes
+  13.6 - 500 eV   optically thick.  N_gamma = 1 + Y_e(E - B_H) EXACTLY; the
+                  march reproduces that closed form to 4 digits (independent
+                  check, verify block H).  Photon sits ABOVE electron at the
+                  same E because of the extra photoionization event (+27 % at
+                  90 eV, +7 % at 300 eV).
+  0.5 - 100 keV   transparency window.  sigma_pi ~ E^-3 collapses; P_int at
+                  z_i=20 falls 1.00 (2 keV) -> 0.157 (10 keV).  MINIMUM:
+                  N = 1.45 at 13.3 keV (z_i=20) and N = 0.303 at 10.5 keV
+                  (z_i=10) -- a 10 keV photon injected at z=10 makes LESS THAN
+                  ONE ionization before the end of reionization.
+  > 100 keV       Compton.  P_int keeps falling (6.4e-2 at 1 MeV, 2.8e-3 at
+                  100 MeV, 5.4e-5 at 10 GeV, z_i=20) but the yield per
+                  interaction grows faster; N peaks at 3.9e3 near 140 MeV and
+                  then falls as E^-1.
+
+Key single numbers (stage8_verify.log)
+  sigma_pi = sigma_C                      at 2333 eV
+  T_max(Compton) = B_H                    at 1871 eV
+  sigma_pair(BH, H) = sigma_KN            at 54 +/- 17 MeV  -> lower bound
+                                             above ~37 MeV (conservative edge)
+  gamma-gamma on CMB mfp < light path     at 2.44e12 eV (z_i=20)
+                                             3.33e12 eV (z_i=15)
+                                             5.25e12 eV (z_i=10)
+  => photon yield EXACT for 13.6 eV < E < 3.7e7 eV, LOWER BOUND outside.
+
+Verification (all PASS, stage8_verify.log)
+  A  sympy: integral of dsigma/ds over [1/(1+2a),1] MINUS the closed-form
+     Klein-Nishina total simplifies to exactly 0 (residual < 2e-124).
+     mpmath 30-digit quadrature agrees with the closed form to 1.2e-16 from
+     1 eV to 1e13 eV.  The 64-node Gauss-Legendre rule in u = ln s used in the
+     march agrees to 4.4e-07 worst case.  Thomson limit recovered.
+     FLAGGED: redo_common.sigma_kn (float64 closed form) loses 4e-07 relative
+     accuracy at 10 eV and 1e-05 at 1 eV to cancellation.  Recorded, not fixed
+     -- it is far below every other error here.
+  B  all quadrature nodes inside [1/(1+2a), 1]; E = E' + T identically.
+  C  path weights >= 0 and sum to 1 - exp(-tau) to <0.5 % vs a 4x finer
+     independent trapezoidal tau.
+  G  convergence: n_path 192->384, n_s 64->128, E nodes 120->239, compared by
+     log-log interpolation to the SAME energies.  Worst change 1.7 % (at the
+     10 keV transparency minimum, where interpolation curvature dominates);
+     < 0.5 % outside the 0.5-10 keV band; < 2e-05 above 1 GeV.
+     QUOTED NUMERICAL UNCERTAINTY: 0.5 %, rising to 2 % in 0.5-10 keV.
+
+Window sensitivity (z>5.5 -> z>3.0), photons at z_i=20
+  1 keV +0.0 %   89 keV +1.9 %   1 MeV +6.5 %   100 MeV +4.9 %
+  BUT 10.5 keV +58 % -- inside the transparency window the answer depends on
+  how long the photon is allowed to keep travelling.  Quote with care there.
+
+Inherited caveat from the ELECTRON table (stage2_cascade.py)
+  Electron-radiated photons are transported only to E_gamma = 3e4 eV, where
+  the PHOTOIONIZATION probability is < 1e-3.  Compton absorption of those
+  photons is not in the electron table.  Above K ~ 7e8 eV the inverse-Compton
+  photons exceed 3e4 eV, which is why the electron curve saturates at
+  N = 4.1e6 (z=20) / 4.5e6 (z=10).  The electron curve is therefore itself a
+  mild lower bound above ~7e8 eV.
+
+
+================================================================================
+STAGE 9 -- WHY UV PHOTONS REIONIZE THE UNIVERSE AND ENERGETIC PARTICLES DO NOT
+================================================================================
+Scripts : stage9_budget.py -> stage9_budget.log
+          stage9_figure.py -> manuscript/figures_redo/
+                              fig_reionization_budget.{pdf,png}
+Write-up: Sect. 5 of ionizations_per_primary_response.tex / .pdf
+
+The stage8 figure is PER PRIMARY PARTICLE.  Reionization is decided by
+    N_ion = (1/W)  x  (energy available in that channel),
+and BOTH factors favour the ultraviolet.  There is no inconsistency with the
+standard picture; the figure quantifies it.
+
+1) IONIZATIONS PER ERG (= 1/W, read off stage8 at z_i = 10)
+     channel                    W [eV]      per erg      rel. to 20 eV UV
+     UV photon, 20 eV           20.4        3.06e+10     1.000
+     UV photon, 30 eV           28.5        2.19e+10     0.717
+     soft X-ray, 0.5 keV        35.7        1.75e+10     0.572
+     X-ray, 1 keV               52.5        1.19e+10     0.389
+     X-ray, 3 keV               1076        5.80e+08     0.019
+     hard X-ray, 10 keV         3.21e+04    1.95e+07     6.4e-04
+     electron, 1 keV            35.4        1.77e+10     0.577
+     electron, 1 MeV            149         4.20e+09     0.137
+     CR electron, 1 GeV         225         2.77e+09     0.091
+     CR electron, 1 TeV         2.24e+05    2.78e+06     9.1e-05
+     HMXB power law G=2, 0.5-8 keV:  W_eff = 110 eV,  0.186 x UV
+   (i)   A threshold photon is the perfect ioniser: W = B_H = 13.6 eV is the
+         thermodynamic optimum.  A fast electron cannot reach it because ~1/3
+         of its energy goes to collisional excitation and ~1/3 to heat
+         (Shull & van Steenberg 1985; Valdes & Ferrara 2008; Furlanetto &
+         Stoever 2010) -> the 35 eV floor.  UV beats the best electron by ~2x.
+   (ii)  Above 2 keV the IGM stops absorbing (our sigma_pi = sigma_C at 2333 eV;
+         P_int 1.00 -> 0.157 between 2 and 10 keV).  Hard X-rays do not ionize
+         inefficiently, they do not interact at all (Oh 2001; Venkatesan et al.
+         2001; McQuinn 2012; Mesinger, Ferrara & Spiegel 2013).
+   (iii) GeV electrons are ALSO poor per erg (W = 225 eV) because they cool by
+         inverse Compton into photons above 3e4 eV, i.e. into the same
+         transparency window.  Same failure mode.
+
+2) ENERGY AVAILABLE PER MSUN OF STAR FORMATION
+     stellar H-ionizing UV (intrinsic)         1.39e+50 erg/Msun
+       ... escaping, f_esc = 0.1               1.39e+49
+     HMXB X-rays, L_X/SFR = 3e39               9.5e+46
+     HMXB X-rays, L_X/SFR = 1e40               3.2e+47
+     cosmic rays, all species  [MEASURED]      1.44e+48
+     cosmic-ray ELECTRONS      [MEASURED]      2.07e+46  (range 1.5-2.9e46)
+   Inputs: xi_ion = 10^25.2 Hz/erg (Robertson+2015; Bouwens+2016);
+   L_UV/SFR from Kennicutt 1998 / Madau & Dickinson 2014; <E_gamma> = 20 eV;
+   f_esc = 0.1 (Robertson+2015; Finkelstein+2019); L_X/SFR from Mineo+2012,
+   Fragos+2013, Lehmer+2021.  The two COSMIC-RAY rows are MEASURED, not
+   assumed -- see the provenance block at the end of this section.
+   NOTE the deliberate f_esc asymmetry: the same E^-3 cross section that makes
+   the IGM transparent to X-rays makes the HOST transparent too, so the hard
+   channels escape freely.  Worth ~10x to them -- still not enough.
+
+3) IONIZATIONS DELIVERED PER MSUN  (= 1 x 2)
+     escaping stellar UV                 4.26e+59     1
+     HMXB X-rays (L_X/SFR = 1e40)        1.79e+57     4.2e-03
+     HMXB X-rays (L_X/SFR = 3e39)        5.38e+56     1.3e-03
+     CR electrons, 1 GeV                 5.74e+55     1.35e-04
+                                        (range        1.0e-04 - 1.9e-04)
+     CR protons (all-CR power, W_p~W_e)  ~4.0e+57     ~9.4e-03   [FLAGGED]
+   FLAG: no proton cascade table exists here; the CR-proton row is indicative
+   only.  It agrees with the published limit "no more than a few per cent"
+   (Sazonov & Sunyaev 2015; Leite et al. 2017).  IMPORTANT: the CR literature
+   is about PROTONS -- electrons carry only K_ep = 1.2-2.1 % of the injected CR
+   power (MEASURED, Strong+2010 Table 2), so the stage8 electron curve has
+   almost no counterpart in a real source budget.
+
+   X-ray SED scan at L_X/SFR = 1e40 (E_min 0.2-1 keV, Gamma 1.5-2.5):
+     0.2 keV / 2.5  ->  9.3e-03 x UV   (most favourable corner)
+     1.0 keV / 1.5  ->  1.2e-03 x UV
+   Reaching the ~10 % X-ray share sometimes quoted needs f_esc(UV) ~ 0.01 or
+   L_X/SFR ~ 1e42 -- the latter is what the unresolved soft X-ray background
+   excludes (McQuinn 2012).  Mesinger+2013: X-ray feedback can sustain a ~10 %
+   ionized IGM but cannot complete reionization.
+
+4) TWO ARGUMENTS THAT ARE NOT ABOUT EFFICIENCY
+   Self-limitation: as x_e rises, less of a fast electron's energy goes into
+   ionization and more into heat.  Our OWN stage5 lock table shows W(1 keV)
+   going 35.3 -> 89.7 eV as x_e goes 1e-4 -> 0.1.  A UV photon suffers no such
+   penalty.  Hard channels drive a partially ionized, pre-heated IGM (their
+   accepted 21-cm role) but cannot take x_e to 1.
+   Photon-starvation: 2 ionizing photons per H with f_esc = 0.1 needs
+   rho_* = 2.6e7 Msun/Mpc^3 comoving vs ~1e7 observed at z~6 (Madau &
+   Dickinson 2014) -- the budget only just closes (Bolton & Haehnelt 2007), so
+   there is no room for a large extra channel.  Reionization also ENDS fast, by
+   z = 5.3 (Bosman et al. 2022) with tau_e = 0.054 (Planck 2018): a sharp
+   ionization-front transition, not the smooth partial ionization a hard-photon
+   model gives.
+
+5) CONSISTENCY VERDICT
+   Fully consistent.  Read per erg (panel b) instead of per particle (panel a),
+   the stage8 figure says the optimum ioniser is a photon at the H threshold.
+   The apparent electron superiority above ~1 keV is TRANSPORT, not efficiency:
+   a keV electron stops locally, a keV photon has a near-Hubble mfp.  BELOW
+   500 eV the ordering reverses and the PHOTON wins, by exactly one extra
+   ionization (+27 % at 90 eV).  The 3-30 keV transparency minimum, where a
+   photon injected at z=10 makes less than one ionization, is the quantitative
+   form of "the IGM is transparent to hard X-rays".
+
+
+--------------------------------------------------------------------------------
+PROVENANCE OF THE COSMIC-RAY ELECTRON ENERGY BUDGET
+  (script: stage9_verify_budget.py -> stage9_verify_budget.log)
+--------------------------------------------------------------------------------
+The value first used in stage9, 1e46 erg/Msun, was NOT quoted by any paper: it
+was the product K_ep * eps_CR * E_SN / M_per_SN = 0.01 * 0.1 * 1e51 / 100.
+It has since been REPLACED by a measured value.  Both routes are kept.
+
+ROUTE 1 -- MEASURED (now the default in stage9_budget.py)
+  Strong, Porter, Digel et al. (2010) ApJL 722, L58, Table 2, "Luminosity of
+  the Galaxy for various processes, 1e38 erg/s", INJECTED cosmic-ray power
+  (0.1-100 GeV), six propagation models (DR 1-3, PD 1-3):
+      COSMIC RAYS total     805  790  698  780  723  660   (x1e38 erg/s)
+        Protons             737  724  633  718  662  601
+        Helium               56   55   48   52.4 48.3 43.9
+        Leptons              12.2 14.5 16.9  10.04 12.91 15.15
+          Primary e-          8.8 11.1 13.4   8.65 10.5  12.7
+  Their Fig. 2 caption quotes the headline total as 7.9e40 erg/s.
+  => MEASURED K_ep = L(primary e-)/L(protons) = 0.0119 - 0.0212.
+  Milky Way SFR = 1.65 +/- 0.19 Msun/yr (Licquia & Newman 2015, ApJ 806, 96).
+  => E_CR /M_* = 1.26 - 1.54e48 erg/Msun     (best value 1.44e48)
+     E_CRe/M_* = 1.65 - 2.56e46 erg/Msun     (best value 2.07e46;
+                 1.5 - 2.9e46 including the +/-12 % SFR error)
+
+ROUTE 2 -- ASSUMPTION CHAIN (kept as an independent cross-check)
+  E_SN = 1e51 erg per CCSN (Woosley & Weaver 1995, ApJS 101, 181).
+  M_*/N_CCSN RECOMPUTED HERE from the IMF definitions, 8-100 Msun progenitors,
+  IMF integrated 0.1-100 Msun:
+      Chabrier (2003, PASP 115, 763):  84.75 Msun per CCSN  (1.18 per 100 Msun)
+      Salpeter (1955, ApJ 121, 161) : 134.7  Msun per CCSN  (0.74 per 100 Msun)
+    -> the "1 CCSN per 100 Msun" shorthand is the Chabrier result to 15 %.
+  eps_CR = 0.1 (range 0.1-0.5): Drury, Markiewicz & Voelk (1989) A&A 225, 179;
+    Berezinskii et al. (1990); Caprioli & Spitkovsky (2014) ApJ 783, 91 -- as
+    collected verbatim by Gessey-Jones et al. (2023) MNRAS 526, 4262: "cosmic
+    rays carry away between 10 and 50 per cent of the initial kinetic energy of
+    the shock ... The majority of this energy is in cosmic ray protons, with
+    per cent level portions of the energy in the form of alpha particles and
+    electrons."
+  => E_CRe/M_* = 1.18e46 (Chabrier) or 7.4e45 (Salpeter) erg/Msun.
+
+AGREEMENT: routes 1 and 2 agree to a factor 1.7.  The originally used 1e46 was
+LOW by ~2x, i.e. conservative.  Using the measured value moves the CR electron
+share of the ionizations from 6.5e-5 to 1.35e-04 (range 1.0-1.9e-04) of the
+escaping-UV share.  CONCLUSION UNCHANGED.
+
+CAVEAT [FLAGGED]: the Milky Way is a present-day, high-metallicity, strongly
+magnetised disc.  At z~10 both the SN energy per Msun (top-heavier IMF) and the
+CR escape fraction into the IGM (smaller haloes, weaker fields; Leite et al.
+2017) are plausibly larger, and K_ep ~ 0.1 is sometimes used for extragalactic
+sources (Merten et al. 2017, Astropart. Phys. 90, 75).  Each is worth about one
+order of magnitude, not four: even a 10x enhancement leaves CR electrons at
+~1e-3 of the UV ionizations.

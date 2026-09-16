@@ -1,0 +1,30 @@
+{
+  "_scenario": {
+    "scenario": "fiducial-z10",
+    "scenario_hash": "4609fe6ee468"
+  },
+  "derived": {
+    "K_ratio_jeong": 0.2801120448179272,
+    "K_salpeter": 1.15e-28,
+    "K_topheavy": 3.221288515406162e-29,
+    "eps_parity_salpeter": 5.599243183005061,
+    "eps_parity_topheavy": 5.3864314489781,
+    "eta_UV_topheavy": 3.57e+28,
+    "f_K": 0.2801120448179272,
+    "f_product": 1.039508854060945,
+    "f_ratio": 0.9619927681167891,
+    "f_snM": 3.7110466089975738,
+    "f_zeta_e": 1.0395088540609452,
+    "ndot_salpeter": 3.7686669089671406e+43,
+    "ndot_topheavy": 3.9175626198778373e+43,
+    "ratio_salpeter": 5599.243183005062,
+    "ratio_topheavy": 5386.431448978101,
+    "rho_sfr_salpeter": 0.0015159952493398715,
+    "rho_sfr_topheavy": 0.0004246485292268548,
+    "snM_salpeter": 0.0074217799329784374,
+    "snM_topheavy": 0.02754257125300587,
+    "zeta_e_salpeter": 8.299279685445583e-22,
+    "zeta_e_topheavy": 8.627174715348819e-22,
+    "zeta_gamma": 4.646968520258357e-18
+  }
+}

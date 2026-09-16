@@ -1,0 +1,258 @@
+\begin{thebibliography}{32}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Abel et~al.(1997)Abel, Anninos, Zhang, and Norman]{Abel1997}
+T.~Abel, P.~Anninos, Y.~Zhang, and M.~L. Norman.
+\newblock {Modelling Primordial Gas in Numerical Cosmology}.
+\newblock \emph{NewAstron.2:181-207,1997}, 1997.
+\newblock File: \texttt{Abel1996\_arXiv\_astro-ph\_9608040v1.pdf}.
+
+\bibitem[Alvarez et~al.(2006)Alvarez, Bromm, and Shapiro]{Alvarez2006}
+Marcelo~A. Alvarez, Volker Bromm, and Paul~R. Shapiro.
+\newblock {The H II Region of the First Star}.
+\newblock \emph{Astrophys.J.639:621-632,2006}, 2006.
+\newblock \doi{10.1086/499578}.
+\newblock File: \texttt{Alvarez2005\_arXiv\_astro-ph\_0507684v2.pdf}.
+
+\bibitem[Bisbas et~al.(2015)Bisbas, Haworth, Williams, Mackey, Tremblin, Raga,
+  Arthur, Baczynski, et~al.]{Bisbas2015}
+T.~G. Bisbas, T.~J. Haworth, R.~J.~R. Williams, J.~Mackey, P.~Tremblin, A.~C.
+  Raga, S.~J. Arthur, C.~Baczynski, et~al.
+\newblock {StarBench: The D-type expansion of an HII region}.
+\newblock \emph{arXiv:1507.05621v1 (preprint)}, 2015.
+\newblock \doi{10.1093/mnras/stv1659}.
+\newblock File: \texttt{Bisbas2015\_arXiv1507.05621v1.pdf}.
+
+\bibitem[Bolton and Haehnelt(2007)]{Bolton2007}
+James~S. Bolton and Martin~G. Haehnelt.
+\newblock {A closer look at using quasar near-zones as a probe of neutral
+  hydrogen in the intergalactic medium}.
+\newblock \emph{arXiv:0705.3558v2 (preprint)}, 2007.
+\newblock \doi{10.1111/j.1745-3933.2007.00361.x}.
+\newblock File: \texttt{Bolton2007\_arXiv0705.3558v2.pdf}.
+
+\bibitem[Cen and Haiman(2000)]{Cen2000}
+Renyue Cen and Zoltan Haiman.
+\newblock {Quasar Strömgren Spheres Before Cosmological Reionization}.
+\newblock \emph{arXiv:astro-ph/0006376v2 (preprint)}, 2000.
+\newblock \doi{10.1086/312937}.
+\newblock File: \texttt{Cen2000\_arXiv\_astro-ph\_0006376v2.pdf}.
+
+\bibitem[Chakraborty and Choudhury(2025)]{Chakraborty2025}
+Anirban Chakraborty and Tirthankar~Roy Choudhury.
+\newblock {Reionization and its sources}.
+\newblock \emph{arXiv:2502.12004v1 (preprint)}, 2025.
+\newblock File: \texttt{Chakraborty2025\_arXiv2502.12004v1.pdf}.
+
+\bibitem[Choudhury(2022)]{Choudhury2022}
+Tirthankar~Roy Choudhury.
+\newblock {A Short Introduction to Reionization Physics}.
+\newblock \emph{General Relativity and Gravitation, 54, 102 (2022)}, 2022.
+\newblock \doi{10.1007/s10714-022-02987-4}.
+\newblock File: \texttt{Choudhury2022\_arXiv2209.08558v1.pdf}.
+
+\bibitem[D'Aloisio et~al.(2018)D'Aloisio, McQuinn, Maupin, Davies, Trac,
+  Fuller, and Sanderbeck]{DAloisio2018}
+Anson D'Aloisio, Matthew McQuinn, Oliver Maupin, Frederick~B. Davies, Hy~Trac,
+  Spencer Fuller, and Phoebe R.~Upton Sanderbeck.
+\newblock {Heating of the Intergalactic Medium by Hydrogen Reionization}.
+\newblock \emph{arXiv:1807.09282v2 (preprint)}, 2018.
+\newblock \doi{10.3847/1538-4357/ab0d83}.
+\newblock File: \texttt{DAloisio2018\_arXiv1807.09282v2.pdf}.
+
+\bibitem[Eilers et~al.(2017)Eilers, Davies, Hennawi, Prochaska, Lukić, and
+  Mazzucchelli]{Eilers2017}
+Anna-Christina Eilers, Frederick~B. Davies, Joseph~F. Hennawi, J.~Xavier
+  Prochaska, Zarija Lukić, and Chiara Mazzucchelli.
+\newblock {Implications of $z \sim 6$ Quasar Proximity Zones for the Epoch of
+  Reionization and Quasar Lifetimes}.
+\newblock \emph{arXiv:1703.02539v2 (preprint)}, 2017.
+\newblock File: \texttt{Eilers2017\_arXiv1703.02539v2.pdf}.
+
+\bibitem[Eilers et~al.(2020)Eilers, Hennawi, Decarli, Davies, Venemans, Walter,
+  Bañados, Fan, et~al.]{Eilers2020}
+Anna-Christina Eilers, Joseph~F. Hennawi, Roberto Decarli, Frederick~B. Davies,
+  Bram Venemans, Fabian Walter, Eduardo Bañados, Xiaohui Fan, et~al.
+\newblock {Detecting and Characterizing Young Quasars I: Systemic Redshifts and
+  Proximity Zones Measurements}.
+\newblock \emph{arXiv:2002.01811v3 (preprint)}, 2020.
+\newblock \doi{10.3847/1538-4357/aba52e}.
+\newblock File: \texttt{Eilers2020\_arXiv2002.01811v3.pdf}.
+
+\bibitem[Furlanetto et~al.(2004)Furlanetto, Zaldarriaga, and
+  Hernquist]{Furlanetto2004}
+Steven Furlanetto, Matias Zaldarriaga, and Lars Hernquist.
+\newblock {The Growth of HII Regions During Reionization}.
+\newblock \emph{Astrophys.J. 613 (2004) 1-15}, 2004.
+\newblock \doi{10.1086/423025}.
+\newblock File: \texttt{Furlanetto2004\_arXiv\_astro-ph\_0403697v1.pdf}.
+
+\bibitem[Gnedin and Madau(2022)]{Gnedin2022}
+Nickolay~Y. Gnedin and Piero Madau.
+\newblock {Modeling Cosmic Reionization}.
+\newblock \emph{arXiv:2208.02260v2 (preprint)}, 2022.
+\newblock File: \texttt{Gnedin2022\_arXiv2208.02260v2.pdf}.
+
+\bibitem[Hui and Gnedin(1997)]{Hui1997}
+Lam Hui and Nickolay~Y. Gnedin.
+\newblock {Equation of State of the Photoionized Intergalactic Medium}.
+\newblock \emph{Mon.Not.Roy.Astron.Soc. 292 (1997) 27}, 1997.
+\newblock File: \texttt{Hui1996\_arXiv\_astro-ph\_9612232v1.pdf}.
+
+\bibitem[Kitayama et~al.(2004)Kitayama, Yoshida, Susa, and
+  Umemura]{Kitayama2004}
+T.~Kitayama, N.~Yoshida, H.~Susa, and M.~Umemura.
+\newblock {The Structure and Evolution of Early Cosmological HII Regions}.
+\newblock \emph{Astrophys.J. 613 (2004) 631-645}, 2004.
+\newblock \doi{10.1086/423313}.
+\newblock File: \texttt{Kitayama2004\_arXiv\_astro-ph\_0406280v1.pdf}.
+
+\bibitem[Mao and Kaastra(2016)]{Mao2016}
+Junjie Mao and Jelle Kaastra.
+\newblock {Parameterization of the level-resolved radiative recombination rate
+  coefficients for the SPEX code}.
+\newblock \emph{A\&A 587, A84 (2016)}, 2016.
+\newblock File: \texttt{Mao2016\_arXiv1602.02939v1.pdf}.
+
+\bibitem[Mascia et~al.(2026)Mascia, Matthee, Torralba, Greene, Eilers, Iani,
+  and Naidu]{Mascia2026}
+Sara Mascia, Jorryt Matthee, Alberto Torralba, Jenny~E. Greene, Anna-Christina
+  Eilers, Edoardo Iani, and Rohan~P. Naidu.
+\newblock {The ionizing properties of JWST's compact broad-line emitters}.
+\newblock \emph{arXiv:2608.25021v1 (preprint)}, 2026.
+\newblock File: \texttt{Mascia2026\_arXiv2608.25021v1.pdf}.
+
+\bibitem[Mesinger and Haiman(2004)]{Mesinger2004}
+Andrei Mesinger and Zoltan Haiman.
+\newblock {Evidence for a Cosmological Stromgren Surface and for Significant
+  Neutral Hydrogen Surrounding the Quasar SDSS J1030+0524}.
+\newblock \emph{arXiv:astro-ph/0406188v2 (preprint)}, 2004.
+\newblock \doi{10.1086/423935}.
+\newblock File: \texttt{Mesinger2004\_arXiv\_astro-ph\_0406188v2.pdf}.
+
+\bibitem[Miralda-Escude et~al.(2000)Miralda-Escude, Haehnelt, and
+  Rees]{MiraldaEscude2000}
+Jordi Miralda-Escude, Martin Haehnelt, and Martin~J. Rees.
+\newblock {Reionization of the Inhomogeneous Universe}.
+\newblock \emph{Astrophys.J. 530 (2000) 1-16}, 2000.
+\newblock \doi{10.1086/308330}.
+\newblock File: \texttt{MiraldaEscude1998\_arXiv\_astro-ph\_9812306v2.pdf}.
+
+\bibitem[Morishita et~al.(2025)Morishita, Stiavelli, Mason, Tripodi, Chiaberge,
+  Schuldt, Willott, and Zhang]{Morishita2025}
+Takahiro Morishita, Massimo Stiavelli, Charlotte~A. Mason, Roberta Tripodi,
+  Marco Chiaberge, Stefan Schuldt, Chris~J. Willott, and Yechi Zhang.
+\newblock {A Nitrogen-rich AGN Powering a Large Ionizing Bubble at z=8.63}.
+\newblock \emph{arXiv:2508.01372v2 (preprint)}, 2025.
+\newblock File: \texttt{Morishita2025\_arXiv2508.01372v2.pdf}.
+
+\bibitem[Nebrin(2023)]{Nebrin2023}
+Olof Nebrin.
+\newblock {Case A or Case B? The effective recombination coefficient in gas
+  clouds of arbitrary optical thickness}.
+\newblock \emph{arXiv:2305.05764v1 (preprint)}, 2023.
+\newblock \doi{10.3847/2515-5172/acd37a}.
+\newblock File: \texttt{Nebrin2023\_arXiv2305.05764v1.pdf}.
+
+\bibitem[Neyer et~al.(2023)Neyer, Smith, Kannan, Vogelsberger, Garaldi,
+  Galárraga-Espinosa, Borrow, Hernquist, et~al.]{Neyer2023}
+Meredith Neyer, Aaron Smith, Rahul Kannan, Mark Vogelsberger, Enrico Garaldi,
+  Daniela Galárraga-Espinosa, Josh Borrow, Lars Hernquist, et~al.
+\newblock {The THESAN project: connecting ionized bubble sizes to their local
+  environments during the Epoch of Reionization}.
+\newblock \emph{arXiv:2310.03783v2 (preprint)}, 2023.
+\newblock \doi{10.1093/mnras/stae1325}.
+\newblock File: \texttt{Neyer2023\_arXiv2310.03783v2.pdf}.
+
+\bibitem[Onorato et~al.(2025)Onorato, Hennawi, Pizzati, Venemans, and
+  Eilers]{Onorato2025}
+Silvia Onorato, Joseph~F. Hennawi, Elia Pizzati, Bram~P. Venemans, and
+  Anna-Christina Eilers.
+\newblock {Homogeneous measurements of proximity zone sizes for 59 quasars in
+  the Epoch of Reionization}.
+\newblock \emph{arXiv:2505.09676v2 (preprint)}, 2025.
+\newblock File: \texttt{Onorato2025\_arXiv2505.09676v2.pdf}.
+
+\bibitem[Satyavolu et~al.(2023)Satyavolu, Eilers, Kulkarni, Ryan-Weber, Davies,
+  Becker, Bosman, Greig, et~al.]{Satyavolu2023}
+Sindhu Satyavolu, Anna-Christina Eilers, Girish Kulkarni, Emma Ryan-Weber,
+  Rebecca~L. Davies, George~D. Becker, Sarah E.~I. Bosman, Bradley Greig,
+  et~al.
+\newblock {New quasar proximity zone size measurements at $z\sim 6$ using the
+  enlarged XQR-30 sample}.
+\newblock \emph{arXiv:2305.00998v1 (preprint)}, 2023.
+\newblock \doi{10.1093/mnras/stad1326}.
+\newblock File: \texttt{Satyavolu2023\_arXiv2305.00998v1.pdf}.
+
+\bibitem[Shapiro and Giroux(1987)]{ShapiroGiroux1987}
+P.~R. Shapiro and E.~T. Giroux.
+\newblock {Cosmological H II Regions and the Photoionization of the
+  Intergalactic Medium}.
+\newblock \emph{ApJ, 321, L107}, 1987.
+\newblock \doi{10.1086/185015}.
+\newblock File: \texttt{ShapiroGiroux1987\_ADS\_1987ApJ...321L.107S.pdf}.
+
+\bibitem[Shapiro et~al.(2006)Shapiro, Iliev, Alvarez, and
+  Scannapieco]{Shapiro2006}
+Paul~R. Shapiro, Ilian~T. Iliev, Marcelo~A. Alvarez, and Evan Scannapieco.
+\newblock {Relativistic Ionization Fronts}.
+\newblock \emph{Astrophys.J.648:922-935,2006}, 2006.
+\newblock \doi{10.1086/506242}.
+\newblock File: \texttt{Shapiro2005\_arXiv\_astro-ph\_0507677v2.pdf}.
+
+\bibitem[Storey and Sochi(2014)]{Storey2014}
+P.~J. Storey and Taha Sochi.
+\newblock {Emission and recombination coefficients for hydrogen with
+  kappa-distributed electron energies}.
+\newblock \emph{MNRAS (arXiv:1408.2213)}, 2014.
+\newblock File: \texttt{Storey2014\_arXiv1408.2213v2.pdf}.
+
+\bibitem[Strömgren(1939)]{Stromgren1939}
+B.~Strömgren.
+\newblock {The Physical State of Interstellar Hydrogen}.
+\newblock \emph{ApJ, 89, 526}, 1939.
+\newblock File: \texttt{Stromgren1939\_ADS\_1939ApJ....89..526S.pdf}.
+
+\bibitem[Umeda et~al.(2023)Umeda, Ouchi, Nakajima, Harikane, Ono, Xu, Isobe,
+  and Zhang]{Umeda2023}
+Hiroya Umeda, Masami Ouchi, Kimihiko Nakajima, Yuichi Harikane, Yoshiaki Ono,
+  Yi~Xu, Yuki Isobe, and Yechi Zhang.
+\newblock {JWST Measurements of Neutral Hydrogen Fractions and Ionized Bubble
+  Sizes at $z=7-12$ Obtained with Ly$\alpha$ Damping Wing Absorptions in 27
+  Bright Continuum Galaxies}.
+\newblock \emph{arXiv:2306.00487v3 (preprint)}, 2023.
+\newblock File: \texttt{Umeda2023\_arXiv2306.00487v3.pdf}.
+
+\bibitem[Verner and Ferland(1996)]{Verner1996}
+D.~A. Verner and G.~J. Ferland.
+\newblock {Atomic data for astrophysics. I. Radiative recombination rates for
+  H-like, He-like, Li-like and Na-like ions over a broad range of temperature}.
+\newblock \emph{ApJS, in press (arXiv:astro-ph/9509083)}, 1996.
+\newblock File: \texttt{Verner1995\_arXiv\_astro-ph\_9509083v1.pdf}.
+
+\bibitem[White et~al.(2003)White, Becker, Fan, and Strauss]{White2003}
+Richard~L. White, Robert~H. Becker, Xiaohui Fan, and Michael~A. Strauss.
+\newblock {Probing the Ionization State of the Universe at z>6}.
+\newblock \emph{Astron.J. 126 (2003) 1}, 2003.
+\newblock \doi{10.1086/375547}.
+\newblock File: \texttt{White2003\_arXiv\_astro-ph\_0303476v2.pdf}.
+
+\bibitem[Zeng and Hirata(2020)]{Zeng2020}
+Chenxiao Zeng and Christopher~M. Hirata.
+\newblock {Non-equilibrium temperature evolution of ionization fronts during
+  the Epoch of Reionization}.
+\newblock \emph{arXiv:2007.02940v1 (preprint)}, 2020.
+\newblock \doi{10.3847/1538-4357/abca38}.
+\newblock File: \texttt{Zeng2020\_arXiv2007.02940v1.pdf}.
+
+\bibitem[Zhu and Gnedin(2025)]{Zhu2025}
+Hanjue Zhu and Nickolay~Y. Gnedin.
+\newblock {On the Properties of Cosmological Ionization Fronts}.
+\newblock \emph{arXiv:2504.20046v1 (preprint)}, 2025.
+\newblock File: \texttt{Zhu2025\_arXiv2504.20046v1.pdf}.
+
+\end{thebibliography}

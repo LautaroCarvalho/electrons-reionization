@@ -1,0 +1,110 @@
+{
+  "_scenario": {
+    "scenario": "fiducial-z10",
+    "scenario_hash": "4609fe6ee468"
+  },
+  "classes": [
+    {
+      "W_gamma": 21.07467826469782,
+      "W_hi": 23.470420923550257,
+      "W_lo": 19.171461403176814,
+      "key": "MarquesChaves2026",
+      "label": "Star-forming galaxies",
+      "note": "U37126 LyC shape, BPASS v2.2.1 Z=0.003; 4 Ryd He II truncation",
+      "ratio": 0.43870788257447385,
+      "status": "V",
+      "vs_stellar": 1.0
+    },
+    {
+      "W_gamma": 27.407166867961255,
+      "W_hi": 27.407166867961255,
+      "W_lo": 27.407166867961255,
+      "key": "Graziani2018",
+      "label": "AGN, reionization template",
+      "note": "S(nu) ~ nu^-1.5 over 13.6 eV-3 keV, purpose-built for EoR",
+      "ratio": 0.5705301876019392,
+      "status": "V",
+      "vs_stellar": 1.3004785422452207
+    },
+    {
+      "W_gamma": 26.644175940612023,
+      "W_hi": 28.647778928654112,
+      "W_lo": 25.088451241221208,
+      "key": "Telfer2002",
+      "label": "AGN, radio-quiet",
+      "note": "alpha_EUV = 1.57 +- 0.17; fit 500-1200 A, harder top extrapolated",
+      "ratio": 0.5546471392366589,
+      "status": "V",
+      "vs_stellar": 1.2642743868239101
+    },
+    {
+      "W_gamma": 23.548845448501165,
+      "W_hi": 24.333142688831856,
+      "W_lo": 22.872298633528903,
+      "key": "Telfer2002",
+      "label": "AGN, radio-loud",
+      "note": "alpha_EUV = 1.96 +- 0.12; same extrapolation caveat",
+      "ratio": 0.49021218706294756,
+      "status": "V",
+      "vs_stellar": 1.1173999978897815
+    },
+    {
+      "W_gamma": 38.778831625454885,
+      "W_hi": 196.28394496732267,
+      "W_lo": 22.79563921005261,
+      "key": "Gladstone2009",
+      "label": "ULX / super-Eddington",
+      "note": "Table 6 / sec 4.3; fits are 2-10 keV only, sub-2 keV extrapolated",
+      "ratio": 0.8072521391518994,
+      "status": "V",
+      "vs_stellar": 1.8400675511337832
+    },
+    {
+      "W_gamma": 146.83494703819707,
+      "W_hi": 464.88147656686857,
+      "W_lo": 47.57819102351099,
+      "key": "Gladstone2009",
+      "label": "BHB hard state (Cyg X-1-like)",
+      "note": "Gamma = alpha+1 = 1.7 typical is SECOND-HAND, no primary yet; only Gamma < 2.1 for the low/hard state is first-hand (Gladstone+09 sec 4.1, citing McClintock & Remillard 2006)",
+      "ratio": 3.0566373490488066,
+      "status": "C",
+      "vs_stellar": 6.96736363867344
+    }
+  ],
+  "derived": {
+    "L_nu_U37126": 4.763333116789756e+28,
+    "M_UV_U37126": -20.1,
+    "S2_worst_reldiff": 7.967359117144746e-05,
+    "S4_worst_reldiff": 0.00011525171850657046,
+    "SFR_U37126": 5.4778330843082195,
+    "W_e_fiducial_eV": 48.038066106825056,
+    "W_gamma_Gladstone2009_BHB_hard_sta": 146.83494703819707,
+    "W_gamma_Gladstone2009_ULX_/_super-": 38.778831625454885,
+    "W_gamma_Graziani2018_AGN,_reioniz": 27.407166867961255,
+    "W_gamma_MarquesChaves2026_Star-forming": 21.07467826469782,
+    "W_gamma_Telfer2002_AGN,_radio-l": 23.548845448501165,
+    "W_gamma_Telfer2002_AGN,_radio-q": 26.644175940612023,
+    "W_gamma_fiducial_eV": 21.073146001096802,
+    "W_gamma_quadrature_spread": 4.9750109813681365e-05,
+    "n_implied_by_rho_UV": 0.00027675090241113516,
+    "n_req_U37126": 0.006939720301446225,
+    "n_req_over_n_implied": 25.07569168152784,
+    "phi_fiducial": 0.00017860326462957742,
+    "shortfall_vs_C_IGM": 25.080170636551944,
+    "spectral_factor_fiducial": 0.4386759857117315,
+    "t_H_Gyr": 0.7086451643024967,
+    "tau_10keV": 0.0007697898096725494,
+    "tau_1keV": 1.9341435312727515,
+    "tau_3keV": 0.047565788457437454,
+    "zeta_e_tH_U37126": 0.06706233316290747,
+    "zeta_e_tH_starforming": 1.8559561220630837e-05,
+    "zeta_gamma_tH_U37126": 375.45239476324406,
+    "zeta_gamma_tH_starforming": 0.10390678906314954,
+    "zeta_ratio_published": 5599.243183005062
+  },
+  "produced_by": {
+    "source_budget_objects": "source_map.py",
+    "source_budget_plane": "source_map.py",
+    "source_spectral_index": "source_map.py"
+  }
+}

@@ -1,0 +1,317 @@
+\begin{thebibliography}{35}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[{Astropy Collaboration} et~al.(2022){Astropy Collaboration},
+  Price-Whelan, et~al.]{Astropy2022}
+{Astropy Collaboration}, Adrian~M. Price-Whelan, et~al.
+\newblock The {Astropy} project: Sustaining and growing a community-oriented
+  open-source project and the latest major release (v5.0) of the core package.
+\newblock \emph{The Astrophysical Journal}, 935\penalty0 (2):\penalty0 167,
+  2022.
+\newblock \doi{10.3847/1538-4357/ac7c74}.
+\newblock URL \url{https://arxiv.org/abs/2206.14220}.
+
+\bibitem[Austin et~al.(2025)Austin, Harvey, Conselice, Adams, Rusakov, Li,
+  et~al.]{Austin2025}
+D.~Austin, T.~Harvey, C.~J. Conselice, N.~J. Adams, V.~Rusakov, Q.~Li, et~al.
+\newblock Resolving the ionizing photon budget crisis with {JWST}/{NIRCam}
+  {H}\,\textsc{ii} clumping constraints at $z \simeq 6$.
+\newblock \emph{arXiv e-prints}, 2025.
+\newblock \doi{10.48550/arXiv.2512.10839}.
+\newblock URL \url{https://arxiv.org/abs/2512.10839}.
+
+\bibitem[Bera et~al.(2023)Bera, Samui, and Datta]{Bera2023}
+Ankita Bera, Saumyadip Samui, and Kanan~K. Datta.
+\newblock Impact of cosmic rays on the global 21-cm signal during cosmic dawn.
+\newblock \emph{Monthly Notices of the Royal Astronomical Society}, 2023.
+\newblock \doi{10.1093/mnras/stac3814}.
+\newblock URL \url{https://arxiv.org/abs/2202.12308}.
+
+\bibitem[Bevins et~al.(2022)Bevins, Fialkov, de~Lera~Acedo, Handley, Singh,
+  Subrahmanyan, and Barkana]{Bevins2022}
+H.~T.~J. Bevins, A.~Fialkov, E.~de~Lera~Acedo, W.~J. Handley, S.~Singh,
+  R.~Subrahmanyan, and R.~Barkana.
+\newblock Astrophysical constraints from the {SARAS} 3 non-detection of the
+  cosmic dawn sky-averaged 21-cm signal.
+\newblock \emph{Nature Astronomy}, 6:\penalty0 1473--1483, 2022.
+\newblock \doi{10.1038/s41550-022-01825-6}.
+\newblock URL \url{https://arxiv.org/abs/2212.00464}.
+
+\bibitem[Blumenthal and Gould(1970)]{Blumenthal1970}
+George~R. Blumenthal and Robert~J. Gould.
+\newblock Bremsstrahlung, synchrotron radiation, and {Compton} scattering of
+  high-energy electrons traversing dilute gases.
+\newblock \emph{Reviews of Modern Physics}, 42\penalty0 (2):\penalty0 237--270,
+  1970.
+\newblock \doi{10.1103/RevModPhys.42.237}.
+\newblock URL \url{https://ui.adsabs.harvard.edu/abs/1970RvMP...42..237B}.
+
+\bibitem[Bosman et~al.(2022)Bosman, Davies, Becker, Keating, Davies, Zhu,
+  Eilers, D'Odorico, et~al.]{Bosman2022}
+Sarah E.~I. Bosman, Frederick~B. Davies, George~D. Becker, Laura~C. Keating,
+  Rebecca~L. Davies, Yongda Zhu, Anna-Christina Eilers, Valentina D'Odorico,
+  et~al.
+\newblock Hydrogen reionisation ends by $z = 5.3$: {Lyman-$\alpha$} optical
+  depth measured by the {XQR-30} sample.
+\newblock \emph{Monthly Notices of the Royal Astronomical Society},
+  514\penalty0 (1):\penalty0 55--76, 2022.
+\newblock \doi{10.1093/mnras/stac1046}.
+\newblock URL \url{https://arxiv.org/abs/2108.03699}.
+
+\bibitem[Furlanetto and Stoever(2010)]{Furlanetto2010}
+Steven~R. Furlanetto and Samuel~Johnson Stoever.
+\newblock Secondary ionization and heating by fast electrons.
+\newblock \emph{Monthly Notices of the Royal Astronomical Society},
+  404\penalty0 (4):\penalty0 1869--1878, 2010.
+\newblock \doi{10.1111/j.1365-2966.2010.16401.x}.
+\newblock URL \url{https://arxiv.org/abs/0910.4410}.
+
+\bibitem[Gaikwad et~al.(2020)Gaikwad, Rauch, Haehnelt, Puchwein, Bolton,
+  Keating, Kulkarni, et~al.]{Gaikwad2020}
+Prakash Gaikwad, Michael Rauch, Martin~G. Haehnelt, Ewald Puchwein, James~S.
+  Bolton, Laura~C. Keating, Girish Kulkarni, et~al.
+\newblock Probing the thermal state of the intergalactic medium at $z > 5$ with
+  the transmission spikes in high-resolution {Ly$\alpha$} forest spectra.
+\newblock \emph{Monthly Notices of the Royal Astronomical Society},
+  494\penalty0 (4):\penalty0 5091--5109, 2020.
+\newblock \doi{10.1093/mnras/staa907}.
+\newblock URL \url{https://arxiv.org/abs/2001.10018}.
+
+\bibitem[Gessey-Jones et~al.(2023)Gessey-Jones, Fialkov, de~Lera~Acedo,
+  Handley, and Barkana]{GesseyJones2023}
+Thomas Gessey-Jones, Anastasia Fialkov, Eloy de~Lera~Acedo, Will~J. Handley,
+  and Rennan Barkana.
+\newblock Signatures of cosmic ray heating in 21-cm observables.
+\newblock \emph{Monthly Notices of the Royal Astronomical Society},
+  526\penalty0 (3):\penalty0 4262--4284, 2023.
+\newblock \doi{10.1093/mnras/stad2965}.
+\newblock URL \url{https://arxiv.org/abs/2304.07201}.
+
+\bibitem[Ghara et~al.(2025)Ghara, Zaroubi, Ciardi, Mellema, Giri, Mertens,
+  Mevius, Koopmans, Iliev, et~al.]{Ghara2025}
+R.~Ghara, S.~Zaroubi, B.~Ciardi, G.~Mellema, S.~K. Giri, F.~G. Mertens,
+  M.~Mevius, L.~V.~E. Koopmans, I.~T. Iliev, et~al.
+\newblock Constraints on the state of the intergalactic medium at $z \sim 8-10$
+  using redshifted 21-cm observations with {LOFAR}.
+\newblock \emph{Astronomy \& Astrophysics}, 699:\penalty0 A109, 2025.
+\newblock \doi{10.1051/0004-6361/202554163}.
+\newblock URL \url{https://arxiv.org/abs/2505.00373}.
+
+\bibitem[Gould(1972)]{Gould1972}
+Robert~J. Gould.
+\newblock Energy loss of fast electrons and positrons in a plasma.
+\newblock \emph{Physica}, 60\penalty0 (1):\penalty0 145--154, 1972.
+\newblock \doi{10.1016/0031-8914(72)90227-3}.
+\newblock URL \url{https://ui.adsabs.harvard.edu/abs/1972Phy....60..145G}.
+
+\bibitem[{HERA Collaboration} et~al.(2023){HERA Collaboration}, Abdurashidova,
+  et~al.]{HERA2023}
+{HERA Collaboration}, Zara Abdurashidova, et~al.
+\newblock Improved constraints on the 21 cm {EoR} power spectrum and the
+  {X}-ray heating of the {IGM} with {HERA} {Phase I} observations.
+\newblock \emph{The Astrophysical Journal}, 945\penalty0 (2):\penalty0 124,
+  2023.
+\newblock \doi{10.3847/1538-4357/acaf50}.
+\newblock URL \url{https://arxiv.org/abs/2210.04912}.
+
+\bibitem[Jana and Nath(2018)]{Jana2018}
+Ranita Jana and Biman~B. Nath.
+\newblock Cosmic ray heating of intergalactic medium: patchy or uniform?
+\newblock \emph{Monthly Notices of the Royal Astronomical Society},
+  479\penalty0 (1):\penalty0 153--161, 2018.
+\newblock \doi{10.1093/mnras/sty1481}.
+\newblock URL \url{https://arxiv.org/abs/1806.01295}.
+
+\bibitem[Kanzaki and Kawasaki(2008)]{Kanzaki2008}
+Toru Kanzaki and Masahiro Kawasaki.
+\newblock Electron and photon energy deposition in the {Universe}.
+\newblock \emph{Physical Review D}, 78\penalty0 (10):\penalty0 103004, 2008.
+\newblock \doi{10.1103/PhysRevD.78.103004}.
+\newblock URL \url{https://arxiv.org/abs/0805.3969}.
+
+\bibitem[Karzas and Latter(1961)]{Karzas1961}
+W.~J. Karzas and R.~Latter.
+\newblock Electron radiative transitions in a {Coulomb} field.
+\newblock \emph{The Astrophysical Journal Supplement Series}, 6:\penalty0
+  167--212, 1961.
+\newblock \doi{10.1086/190063}.
+\newblock URL \url{https://ui.adsabs.harvard.edu/abs/1961ApJS....6..167K}.
+
+\bibitem[Kaur et~al.(2022)Kaur, Qin, Mesinger, Pallottini, Fragos, and
+  Basu-Zych]{Kaur2022}
+Harman~Deep Kaur, Yuxiang Qin, Andrei Mesinger, Andrea Pallottini, Tassos
+  Fragos, and Antara Basu-Zych.
+\newblock The 21-cm signal from the {Cosmic Dawn}: metallicity dependence of
+  high mass {X}-ray binaries.
+\newblock \emph{Monthly Notices of the Royal Astronomical Society},
+  513\penalty0 (4):\penalty0 5097--5108, 2022.
+\newblock \doi{10.1093/mnras/stac1226}.
+\newblock URL \url{https://arxiv.org/abs/2203.10851}.
+
+\bibitem[Kim and Rudd(1994)]{KimRudd1994}
+Yong-Ki Kim and M.~Eugene Rudd.
+\newblock Binary-encounter-dipole model for electron-impact ionization.
+\newblock \emph{Physical Review A}, 50\penalty0 (5):\penalty0 3954--3967, 1994.
+\newblock \doi{10.1103/PhysRevA.50.3954}.
+\newblock URL \url{https://ui.adsabs.harvard.edu/abs/1994PhRvA..50.3954K}.
+
+\bibitem[Kim et~al.(2000)Kim, Santos, and Parente]{Kim2000}
+Yong-Ki Kim, Jos{\'e}~Paulo Santos, and Fernando Parente.
+\newblock Extension of the binary-encounter-dipole model to relativistic
+  incident electrons.
+\newblock \emph{Physical Review A}, 62\penalty0 (5):\penalty0 052710, 2000.
+\newblock \doi{10.1103/PhysRevA.62.052710}.
+\newblock URL
+  \url{https://journals.aps.org/pra/abstract/10.1103/PhysRevA.62.052710}.
+
+\bibitem[Klessen and Glover(2023)]{Klessen2023}
+Ralf~S. Klessen and Simon C.~O. Glover.
+\newblock The first stars: Formation, properties, and impact.
+\newblock \emph{Annual Review of Astronomy and Astrophysics}, 61:\penalty0
+  65--130, 2023.
+\newblock \doi{10.1146/annurev-astro-071221-053453}.
+\newblock URL \url{https://arxiv.org/abs/2303.12500}.
+
+\bibitem[Leite et~al.(2017)Leite, Evoli, D'Angelo, Ciardi, Sigl, and
+  Ferrara]{Leite2017}
+Natacha Leite, Carmelo Evoli, Marta D'Angelo, Benedetta Ciardi, G{\"u}nter
+  Sigl, and Andrea Ferrara.
+\newblock Do cosmic rays heat the early intergalactic medium?
+\newblock \emph{Monthly Notices of the Royal Astronomical Society},
+  469\penalty0 (1):\penalty0 416--424, 2017.
+\newblock \doi{10.1093/mnras/stx805}.
+\newblock URL \url{https://arxiv.org/abs/1703.09337}.
+
+\bibitem[Mertens et~al.(2025)Mertens, Mevius, Koopmans, Offringa, Zaroubi,
+  et~al.]{Mertens2025}
+F.~G. Mertens, M.~Mevius, L.~V.~E. Koopmans, A.~R. Offringa, S.~Zaroubi, et~al.
+\newblock Deeper multi-redshift upper limits on the epoch of reionization 21-cm
+  signal power spectrum from {LOFAR} between $z=8.3$ and $z=10.1$.
+\newblock \emph{Astronomy \& Astrophysics}, 698:\penalty0 A186, 2025.
+\newblock \doi{10.1051/0004-6361/202554158}.
+\newblock URL \url{https://arxiv.org/abs/2503.05576}.
+
+\bibitem[Mu{\~n}oz et~al.(2024)Mu{\~n}oz, Mirocha, Chisholm, Furlanetto, and
+  Mason]{Munoz2024}
+Julian~B. Mu{\~n}oz, Jordan Mirocha, John Chisholm, Steven~R. Furlanetto, and
+  Charlotte Mason.
+\newblock Reionization after {JWST}: a photon budget crisis?
+\newblock \emph{Monthly Notices of the Royal Astronomical Society Letters},
+  2024.
+\newblock \doi{10.1093/mnrasl/slae086}.
+\newblock URL \url{https://arxiv.org/abs/2404.07250}.
+
+\bibitem[Nath and Biermann(1993)]{Nath1993}
+Biman~B. Nath and Peter~L. Biermann.
+\newblock Did cosmic rays reionize the intergalactic medium?
+\newblock \emph{Monthly Notices of the Royal Astronomical Society},
+  265\penalty0 (1):\penalty0 241--249, 1993.
+\newblock \doi{10.1093/mnras/265.1.241}.
+\newblock URL \url{https://arxiv.org/abs/astro-ph/9306001}.
+
+\bibitem[Owen et~al.(2017)Owen, Wu, Surajbali, and Jacobsen]{Owen2017}
+Ellis~R. Owen, Kinwah Wu, Pooja Surajbali, and Idunn~B. Jacobsen.
+\newblock Cosmic rays in early star-forming galaxies and their effects on the
+  interstellar medium.
+\newblock In \emph{Proceedings of the 35th International Cosmic Ray Conference
+  (ICRC2017)}, PoS, page 289, 2017.
+\newblock URL \url{https://arxiv.org/abs/1708.06808}.
+
+\bibitem[Park et~al.(2015)Park, Caprioli, and Spitkovsky]{Park2015}
+Jaehong Park, Damiano Caprioli, and Anatoly Spitkovsky.
+\newblock Simultaneous acceleration of protons and electrons at nonrelativistic
+  quasiparallel collisionless shocks.
+\newblock \emph{Physical Review Letters}, 114\penalty0 (8):\penalty0 085003,
+  2015.
+\newblock \doi{10.1103/PhysRevLett.114.085003}.
+\newblock URL \url{https://arxiv.org/abs/1412.0672}.
+
+\bibitem[Pawlik et~al.(2009)Pawlik, Schaye, and van Scherpenzeel]{Pawlik2009}
+Andreas~H. Pawlik, Joop Schaye, and Eveline van Scherpenzeel.
+\newblock Keeping the universe ionized: photoheating and the clumping factor of
+  the high-redshift intergalactic medium.
+\newblock \emph{Monthly Notices of the Royal Astronomical Society},
+  394\penalty0 (4):\penalty0 1812--1824, 2009.
+\newblock \doi{10.1111/j.1365-2966.2009.14486.x}.
+\newblock URL \url{https://arxiv.org/abs/0807.3963}.
+
+\bibitem[{Planck Collaboration} et~al.(2020){Planck Collaboration}, Aghanim,
+  Akrami, et~al.]{Planck2020}
+{Planck Collaboration}, N.~Aghanim, Y.~Akrami, et~al.
+\newblock {Planck} 2018 results. vi. cosmological parameters.
+\newblock \emph{Astronomy \& Astrophysics}, 641:\penalty0 A6, 2020.
+\newblock \doi{10.1051/0004-6361/201833910}.
+\newblock URL \url{https://arxiv.org/abs/1807.06209}.
+
+\bibitem[Robertson(2022)]{Robertson2022}
+Brant~E. Robertson.
+\newblock Galaxy formation and reionization: Key unknowns and expected
+  breakthroughs by the {James Webb Space Telescope}.
+\newblock \emph{Annual Review of Astronomy and Astrophysics}, 60:\penalty0
+  121--158, 2022.
+\newblock \doi{10.1146/annurev-astro-120221-044656}.
+\newblock URL \url{https://arxiv.org/abs/2110.13160}.
+
+\bibitem[Ruszkowski and Pfrommer(2023)]{Ruszkowski2023}
+Mateusz Ruszkowski and Christoph Pfrommer.
+\newblock Cosmic ray feedback in galaxies and galaxy clusters. a pedagogical
+  introduction and a topical review of the acceleration, transport,
+  observables, and dynamical impact of cosmic rays.
+\newblock \emph{The Astronomy and Astrophysics Review}, 31\penalty0
+  (1):\penalty0 4, 2023.
+\newblock \doi{10.1007/s00159-023-00149-2}.
+\newblock URL \url{https://arxiv.org/abs/2306.03141}.
+
+\bibitem[Samui et~al.(2005)Samui, Subramanian, and Srianand]{Samui2005}
+Saumyadip Samui, Kandaswamy Subramanian, and Raghunathan Srianand.
+\newblock Can cosmic rays heat the intergalactic medium?, 2005.
+\newblock URL \url{https://arxiv.org/abs/astro-ph/0505590}.
+\newblock arXiv preprint.
+
+\bibitem[Sazonov and Sunyaev(2015)]{Sazonov2015}
+Sergey Sazonov and Rashid Sunyaev.
+\newblock Preheating of the {Universe} by cosmic rays from primordial
+  supernovae at the beginning of cosmic reionization.
+\newblock \emph{Monthly Notices of the Royal Astronomical Society},
+  454\penalty0 (4):\penalty0 3464--3471, 2015.
+\newblock \doi{10.1093/mnras/stv2255}.
+\newblock URL \url{https://ui.adsabs.harvard.edu/abs/2015MNRAS.454.3464S}.
+
+\bibitem[Shull and van Steenberg(1985)]{Shull1985}
+J.~Michael Shull and Mark~E. van Steenberg.
+\newblock X-ray secondary heating and ionization in quasar emission-line
+  clouds.
+\newblock \emph{The Astrophysical Journal}, 298:\penalty0 268--274, 1985.
+\newblock \doi{10.1086/163605}.
+\newblock URL \url{https://ui.adsabs.harvard.edu/abs/1985ApJ...298..268S}.
+
+\bibitem[Slatyer(2016)]{Slatyer2016}
+Tracy~R. Slatyer.
+\newblock Indirect dark matter signatures in the cosmic dark ages. ii.
+  ionization, heating, and photon production from arbitrary energy injections.
+\newblock \emph{Physical Review D}, 93\penalty0 (2):\penalty0 023521, 2016.
+\newblock \doi{10.1103/PhysRevD.93.023521}.
+\newblock URL \url{https://arxiv.org/abs/1506.03812}.
+
+\bibitem[Slatyer et~al.(2009)Slatyer, Padmanabhan, and Finkbeiner]{Slatyer2009}
+Tracy~R. Slatyer, Nikhil Padmanabhan, and Douglas~P. Finkbeiner.
+\newblock {CMB} constraints on {WIMP} annihilation: Energy absorption during
+  the recombination epoch.
+\newblock \emph{Physical Review D}, 80\penalty0 (4):\penalty0 043526, 2009.
+\newblock \doi{10.1103/PhysRevD.80.043526}.
+\newblock URL \url{https://arxiv.org/abs/0906.1197}.
+
+\bibitem[Stone et~al.(2002)Stone, Kim, and Desclaux]{Stone2002}
+Philip~M. Stone, Yong-Ki Kim, and Jean~Paul Desclaux.
+\newblock Electron-impact cross sections for dipole- and spin-allowed
+  excitations of hydrogen, helium, and lithium.
+\newblock \emph{Journal of Research of the National Institute of Standards and
+  Technology}, 107\penalty0 (4):\penalty0 327--337, 2002.
+\newblock \doi{10.6028/jres.107.026}.
+\newblock URL \url{https://www.ncbi.nlm.nih.gov/pmc/articles/PMC4859265/}.
+
+\end{thebibliography}

@@ -1,0 +1,264 @@
+\begin{thebibliography}{10}
+
+\bibitem{Asthana2024}
+Shikhar Asthana, Martin~G. Haehnelt, Girish Kulkarni, James~S. Bolton, Prakash
+  Gaikwad, Laura~C. Keating, and Ewald Puchwein.
+\newblock The impact of faint {AGN} discovered by {JWST} on reionization.
+\newblock {\em Monthly Notices of the Royal Astronomical Society}, 2024.
+\newblock VERIFIED from the abstract page. QSO-assisted model: AGN supply 17\%
+  of the total hydrogen-ionizing emissivity with 1\% of haloes hosting AGN; a
+  QSO-only model needs 10\% of haloes hosting AGN. ``A modest AGN contribution
+  to reionization aligns with the Lyman-$\alpha$ forest data.'' Lower end of
+  the AGN box. AGREES with \cite{Jiang2025}: both place AGN in the 17--33\%
+  minority band. A widely-circulated ``36--88\%'' figure comes from a separate
+  broad-line census with much larger systematics and is NOT supported by either
+  of these.
+
+\bibitem{Blumenthal1970}
+George~R. Blumenthal and Robert~J. Gould.
+\newblock Bremsstrahlung, synchrotron radiation, and {Compton} scattering of
+  high-energy electrons traversing dilute gases.
+\newblock {\em Rev. Mod. Phys.}, 42(2):237--270, 1970.
+
+\bibitem{CaprioliSpitkovsky2014}
+Damiano Caprioli and Anatoly Spitkovsky.
+\newblock Simulations of ion acceleration at non-relativistic shocks. {I}.
+  acceleration efficiency.
+\newblock {\em The Astrophysical Journal}, 783:91, 2014.
+\newblock IN TREE. Hybrid simulations: 10--20\% of the bulk kinetic energy goes
+  into non-thermal protons at parallel and quasi-parallel strong shocks,
+  dropping to ZERO for quasi-perpendicular ones. About 10\% inferred for Tycho
+  (Morlino \& Caprioli 2012). The source for $\epsilon_{\rm CR}$.
+
+\bibitem{Chabrier2003}
+Gilles Chabrier.
+\newblock Galactic stellar and substellar initial mass function.
+\newblock {\em Publications of the Astronomical Society of the Pacific},
+  115:763--795, 2003.
+
+\bibitem{Donnan2024}
+C.~T. Donnan et~al.
+\newblock {JWST} {PRIMER}: A new multi-field determination of the evolving
+  galaxy {UV} luminosity function.
+\newblock {\em Monthly Notices of the Royal Astronomical Society}, 533:3222,
+  2024.
+\newblock IN TREE. Table 3, $z=10$ row: $\log\rho_{\rm
+  UV}=25.12^{+0.07}_{-0.08}$, integrated down to $M_{\rm UV}=-17$. They convert
+  with $K_{\rm UV}=1.15\times10^{-28}$ (Salpeter), the same value used here.
+
+\bibitem{Fixsen2009}
+D.~J. Fixsen.
+\newblock The temperature of the cosmic microwave background.
+\newblock {\em The Astrophysical Journal}, 707:916--920, 2009.
+
+\bibitem{Gladstone2009}
+Jeanette~C. Gladstone, Timothy~P. Roberts, and Chris Done.
+\newblock The ultraluminous state.
+\newblock {\em Monthly Notices of the Royal Astronomical Society},
+  397(4):1836--1851, 2009.
+\newblock IN TREE (added 2026-09-14). VERIFIED from the PDF, Table~6 and \S4.3:
+  a broken power law is preferred over a single power law at $>98\%$ in 11 of
+  12 ULXs, with break energies $3.5$--$7$ keV and steepening
+  $\Delta\Gamma\simeq1$--$2$; $\Gamma_1\simeq1.38$--$3.1$ (typical $2.1$),
+  single-PO fits $1.6<\Gamma<3.3$ (\S4.1). Preferred physical model (\S4.5.1,
+  Table~8): a COOL, OPTICALLY THICK corona $kT_e\sim1$--$3$ keV,
+  $\tau\sim6$--$80$ (global $\chi^2$ minimum in 10/12), against a hot thin
+  corona $kT_e\sim50$ keV, $\tau\lesssim1$ as only a local minimum. The source
+  for the ULX/super-Eddington photon channel. NOTE the fits are over 2--10 keV
+  only; the 13.6 eV--2 keV ionizing band is NOT constrained by this paper and
+  is an extrapolation, where the cool disc ($kT_{\rm in}\sim0.17$--$1.7$ keV,
+  Table~5) actually dominates. NOTE also \cite{Mirabel2011} paraphrases the
+  break as ``above 3 keV''; the fitted range is 3.5--7 keV.
+
+\bibitem{Gould1972}
+Robert~J. Gould.
+\newblock Energy loss of fast electrons and positrons in a plasma.
+\newblock {\em Physica}, 60(1):145--154, 1972.
+
+\bibitem{Graziani2018}
+Luca Graziani, Benedetta Ciardi, and Max Glatzle.
+\newblock {X}-ray ionization of the intergalactic medium by quasars.
+\newblock {\em Monthly Notices of the Royal Astronomical Society},
+  479(4):4320--4335, 2018.
+\newblock VERIFIED from the article page. Purpose-built reionization-era quasar
+  ionizing SED: a power law $S(\nu)\propto\nu^{-1.5}$ over 13.6 eV--3 keV (soft
+  X-ray band 200 eV--3 keV). Independently corroborates \cite{Telfer2002}'s
+  radio-quiet $\alpha_{\rm EUV}=1.57\pm0.17$. The source for the AGN photon
+  channel. Their own footnote 7 flags that a single power law is often
+  inappropriate for sources spanning UV to X-ray --- which is why the
+  corona/ULX-like hard case is carried separately.
+
+\bibitem{HuiGnedin1997}
+Lam Hui and Nickolay~Y. Gnedin.
+\newblock Equation of state of the photoionized intergalactic medium.
+\newblock {\em Monthly Notices of the Royal Astronomical Society}, 292:27--42,
+  1997.
+\newblock IN TREE. Case-B $\alpha_B(T)$ fit used to confirm
+  $\alpha_B(2\times10^4\,\mathrm{K})=1.43\times10^{-13}$ to 0.16\%.
+
+\bibitem{ICRU1984}
+{ICRU}.
+\newblock Stopping powers for electrons and positrons.
+\newblock Technical Report Report 37, International Commission on Radiation
+  Units and Measurements, 1984.
+\newblock NOT in tree. Mean excitation energy $I=14.99$ eV; route 1 only.
+
+\bibitem{Jeong2025}
+Tae~Bong Jeong, Myoungwon Jeon, Hyunmi Song, and Volker Bromm.
+\newblock Simulating high-redshift galaxies: Enhancing {UV} luminosity with
+  star formation efficiency and a top-heavy {IMF}.
+\newblock {\em The Astrophysical Journal}, 2025.
+\newblock IN TREE. eq.~(2): top-heavy Pop~II IMF, $\xi(m)\propto m^{-1.3}$,
+  $1$--$100\,M_\odot$, galaxies at $z=10$.
+
+\bibitem{Jiang2025}
+Danyang Jiang, Linhua Jiang, Shengxiu Sun, Weiyang Liu, and Shuqi Fu.
+\newblock {AGN} ruled out as the dominant source of cosmic reionization.
+\newblock {\em Nature Astronomy}, 2025.
+\newblock VERIFIED from the abstract page. Separates point-source (AGN) from
+  extended components in JWST FUV imaging down to $M_{\rm UV}\approx-15$, over
+  $7.15\le z\le7.75$. Result: AGN supply AT MOST ONE THIRD of the LyC photon
+  budget at $z\sim7.5$, which rules them out as the dominant ionizing source.
+  Upper bound on the AGN box of the source-competition figure. NOTE measured at
+  $z\sim7.5$; its use at $z=10$ is an extrapolation, and a CONSERVATIVE one,
+  since the AGN luminosity function declines faster with redshift than the
+  galaxy one.
+
+\bibitem{KimRudd1994}
+Yong-Ki Kim and M.~Eugene Rudd.
+\newblock Binary-encounter-dipole model for electron-impact ionization.
+\newblock {\em Phys. Rev. A}, 50(5):3954--3967, 1994.
+
+\bibitem{Kim2000}
+Yong-Ki Kim, Jos{\'e}~Paulo Santos, and Fernando Parente.
+\newblock Extension of the binary-encounter-dipole model to relativistic
+  incident electrons.
+\newblock {\em Phys. Rev. A}, 62(5):052710, 2000.
+
+\bibitem{NIST_ASD}
+A.~Kramida, Yu. Ralchenko, J.~Reader, and {NIST ASD Team}.
+\newblock {NIST} atomic spectra database.
+\newblock National Institute of Standards and Technology.
+\newblock HI ionization energy 13.598434599702 eV.
+
+\bibitem{Larson1998}
+Richard~B. Larson.
+\newblock Early star formation and the evolution of the stellar initial mass
+  function in galaxies.
+\newblock {\em Monthly Notices of the Royal Astronomical Society},
+  301:569--581, 1998.
+\newblock NOT in tree. CMB temperature-floor argument for a rising
+  characteristic mass at high $z$; cited through \cite{Jeong2025}.
+
+\bibitem{Lehmer2016}
+B.~D. Lehmer, A.~R. Basu-Zych, S.~Mineo, W.~N. Brandt, R.~T. Eufrasio,
+  T.~Fragos, A.~E. Hornschemeier, B.~Luo, Y.~Q. Xue, F.~E. Bauer, M.~Gilfanov,
+  P.~Lira, J.~L. Racusin, D.~P. Schneider, O.~Shemmer, P.~Tzanavaris, F.~Vito,
+  M.~Yukita, and A.~Zezas.
+\newblock The evolution of normal galaxy {X}-ray emission through cosmic
+  history: Constraints from the 6 {Ms} {Chandra} deep field-south.
+\newblock {\em The Astrophysical Journal}, 825(1):7, 2016.
+\newblock VERIFIED from the article page, eq.~(6): $L_{2-10\,\rm keV}({\rm
+  HMXB})/{\rm SFR} = (1.8^{+0.5}_{-0.4})\times10^{39}\,(1+z)$
+  erg\,s$^{-1}$\,(M$_\odot$\,yr$^{-1}$)$^{-1}$, band 2--10 keV, redshift
+  exponent exactly 1. The source for the HMXB/microquasar luminosity
+  normalisation. CAUTION: a widely-quoted variant $10^{39.28}(1+z)^{1.31}$
+  circulates in secondary summaries and is NOT this paper's eq.~(6) --- checked
+  and rejected.
+
+\bibitem{Llerena2025}
+M.~Llerena, L.~Pentericci, L.~Napolitano, et~al.
+\newblock The ionizing photon production efficiency of star-forming galaxies at
+  $z\sim4-10$.
+\newblock {\em Astronomy \& Astrophysics}, 698:A302, 2025.
+\newblock IN TREE. Median $\log\xi_{\rm ion}=25.28$ at $z\simeq7.14$, observed
+  scatter 0.42 dex.
+
+\bibitem{MadauDickinson2014}
+Piero Madau and Mark Dickinson.
+\newblock Cosmic star-formation history.
+\newblock {\em Annual Review of Astronomy and Astrophysics}, 52:415--486, 2014.
+\newblock IN TREE. eq.~(10) $K_{\rm UV}=1.15\times10^{-28}$, a compromise over
+  age and metallicity; eq.~(24) $\langle t_{\rm rec}\rangle$.
+
+\bibitem{MarquesChaves2026}
+R.~Marques-Chaves et~al.
+\newblock A study of the $z=10.255$ galaxy {U37126}.
+\newblock {\em Astronomy \& Astrophysics}, 2026.
+\newblock IN TREE. BPASS v2.2.1, $Z=0.003$, 6.8 Myr population; the LyC shape
+  adopted for the stellar SED.
+
+\bibitem{Mirabel2011}
+I.~F. Mirabel, M.~Dijkstra, P.~Laurent, A.~Loeb, and J.~R. Pritchard.
+\newblock Stellar black holes at the dawn of the {Universe}.
+\newblock {\em A\&A}, 528:A149, 2011.
+
+\bibitem{OsterbrockFerland2006}
+Donald~E. Osterbrock and Gary~J. Ferland.
+\newblock {\em Astrophysics of Gaseous Nebulae and Active Galactic Nuclei}.
+\newblock University Science Books, 2nd edition, 2006.
+\newblock NOT in tree. Table 2.1: case-B recombination coefficients.
+
+\bibitem{Park2015}
+Jaehong Park, Damiano Caprioli, and Anatoly Spitkovsky.
+\newblock Simultaneous acceleration of protons and electrons at nonrelativistic
+  quasiparallel collisionless shocks.
+\newblock {\em Phys. Rev. Lett.}, 114(8):085003, 2015.
+\newblock IN TREE (added 2026-09-14). Defines $K_{ep}\equiv f_e(p)/f_p(p)$ for
+  $p\gtrsim p_{\rm inj}$ -- at the same MOMENTUM. Both species share the
+  universal DSA index $p^{-4}$, so ``$K_{ep}$ is independent of $p$''.
+  $K_{ep}\approx1$--$3\times10^{-3}$ at realistic SNR shock speeds,
+  $\approx1.6\times10^{-3}$ inferred for Tycho, $\approx0.01$ for CRs measured
+  at Earth. The source for $f_e$; note the project uses the Earth value, not
+  the source one.
+
+\bibitem{Pawlik2009}
+Andreas~H. Pawlik, Joop Schaye, and Eveline van Scherpenzeel.
+\newblock Keeping the universe ionized: photoheating and the clumping factor of
+  the high-redshift intergalactic medium.
+\newblock {\em MNRAS}, 394(4):1812--1824, 2009.
+
+\bibitem{Planck2020}
+{Planck Collaboration}, N.~Aghanim, Y.~Akrami, et~al.
+\newblock {Planck} 2018 results. vi. cosmological parameters.
+\newblock {\em A\&A}, 641:A6, 2020.
+
+\bibitem{Salpeter1955}
+Edwin~E. Salpeter.
+\newblock The luminosity function and stellar evolution.
+\newblock {\em The Astrophysical Journal}, 121:161--167, 1955.
+\newblock IN TREE. Power law quoted for $\log(M/M_\odot)\in[-0.4,+1.0]$ only.
+
+\bibitem{Stone2002}
+Philip~M. Stone, Yong-Ki Kim, and Jean~Paul Desclaux.
+\newblock Electron-impact cross sections for dipole- and spin-allowed
+  excitations of hydrogen, helium, and lithium.
+\newblock {\em Journal of Research of the National Institute of Standards and
+  Technology}, 107(4):327--337, 2002.
+
+\bibitem{Telfer2002}
+Randal~C. Telfer, Wei Zheng, Gerard~A. Kriss, and Arthur~F. Davidsen.
+\newblock The rest-frame extreme-ultraviolet spectral properties of
+  quasi-stellar objects.
+\newblock {\em The Astrophysical Journal}, 565(2):773--785, 2002.
+\newblock VERIFIED from the abstract page. HST composite over rest-frame
+  500--1200 \AA. With $f_\nu\propto\nu^{-\alpha}$: $\alpha_{\rm
+  EUV}=1.57\pm0.17$ (radio-quiet), $1.96\pm0.12$ (radio-loud), $1.76\pm0.12$
+  (full composite). The source for the AGN photon index. NOTE the fit does not
+  extend above 24.8 eV; any harder band top is an extrapolation.
+
+\bibitem{Tiesinga2021}
+Eite Tiesinga, Peter~J. Mohr, David~B. Newell, and Barry~N. Taylor.
+\newblock {CODATA} recommended values of the fundamental physical constants:
+  2018.
+\newblock {\em Reviews of Modern Physics}, 93:025010, 2021.
+
+\bibitem{PDG2022}
+R.~L. Workman et~al.
+\newblock Review of particle physics.
+\newblock {\em Progress of Theoretical and Experimental Physics}, 2022:083C01,
+  2022.
+\newblock Particle Data Group. Critical-density coefficient $\rho_{\rm
+  crit}/h^2 = 1.87834\times10^{-29}$ g cm$^{-3}$.
+
+\end{thebibliography}

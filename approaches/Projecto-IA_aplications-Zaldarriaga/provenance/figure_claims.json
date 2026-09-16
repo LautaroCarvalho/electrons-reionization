@@ -1,0 +1,101 @@
+{
+  "_scenario": {
+    "scenario": "fiducial-z10",
+    "scenario_hash": "4609fe6ee468"
+  },
+  "checks": [
+    {
+      "detail": "excitation = 0.3532 of dK/dt at E = 100 eV, which is the maximum over the plotted range (0.3532) and is still rising as E falls. So it must be described as 'reaches 0.353 at the 100 eV edge of the plotted range', NOT as 'peaks at 0.353' -- the registry key peakE_excitation_eV = 100 eV is the grid boundary, not a turnover.",
+      "id": "F1",
+      "name": "excitation's share is largest at the low-energy EDGE of the grid, not at an interior maximum",
+      "state": "PASS"
+    },
+    {
+      "detail": "at E = 100 eV excitation takes 0.3532 of dK/dt while the largest other non-ionizing channel takes 2.336e-03 -- a factor 151. Excitation energy leaves as Lyman-series photons, ALL of which lie below 13.6 eV (Ly-alpha is 10.2 eV), so it can never ionize hydrogen. Compton is larger at high E but is NOT a sink in the loss+IC route, where that energy returns as upscattered photons above 13.6 eV -- which is the whole difference between D and E.",
+      "id": "F2",
+      "name": "excitation dominates every other non-ionizing channel there",
+      "state": "PASS"
+    },
+    {
+      "detail": "peak shares of dK/dt anywhere in 1e2-1e12 eV: synchrotron 0.00001%, Coulomb 0.2336%, bremsstrahlung 0.0042%. The largest is 0.2336%. THAT is the quantitative licence for the superseded deposition-fit route to omit all three and still land within 10% -- a justification the earlier text asserted without one.",
+      "id": "F3",
+      "name": "synchrotron, Coulomb and bremsstrahlung each stay below 0.25%",
+      "state": "PASS"
+    },
+    {
+      "detail": "the escaping stellar band is 13.598-54.423 eV (0.602 dex, 1-4 Ryd by construction) while CR electrons span 1e+03-1e+12 eV (9.00 dex) -- a 14.9x wider range, and the two do not overlap at all: 1.26 dex of empty axis separates them. CONSEQUENCE for reading panel (a): the two curves never compete at the same energy, so nothing can be concluded by comparing their heights there. The comparison only becomes meaningful after integrating over energy, which is what zeta is.",
+      "id": "F4",
+      "name": "the two channels occupy disjoint energy ranges, by a wide margin",
+      "state": "PASS"
+    },
+    {
+      "detail": "integrating L_adiab/L_tot over the primary's degradation, the share peaks at K = 1 MeV: 7.696% of the initial energy at z = 10, falling to 1.849% at z = 20 (a factor 4.16), because H(z) grows as (1+z)^1.5 while the competing CMB energy density grows as (1+z)^4. It is NON-MONOTONIC and negligible at both ends: 0.0145% at 1 keV, where collisions own everything, and 0.00011% at 1 TeV, where Compton takes 99.987% before anything else can act. NOTE this is NOT the 9.29% of the branching panel: that is an instantaneous RATE share reached only near 3e5 eV, whereas this averages over the whole cascade.",
+      "id": "F5",
+      "name": "the ENERGY lost to adiabatic expansion, integrated over the cascade",
+      "state": "PASS"
+    }
+  ],
+  "derived": {
+    "Efrac_adiabatic_100keV": 0.03574526970711048,
+    "Efrac_adiabatic_100keV_z20": 0.011433831636332794,
+    "Efrac_adiabatic_1GeV": 0.0008082896638785843,
+    "Efrac_adiabatic_1GeV_z20": 0.0001648635821737348,
+    "Efrac_adiabatic_1MeV": 0.0769615669516844,
+    "Efrac_adiabatic_1MeV_z20": 0.01849183842713155,
+    "Efrac_adiabatic_1TeV": 1.0551158181633159e-06,
+    "Efrac_adiabatic_1TeV_pct": 0.00010551158181633159,
+    "Efrac_adiabatic_1TeV_z20": 2.1560252461413575e-07,
+    "Efrac_adiabatic_1keV": 0.00014486597186162163,
+    "Efrac_adiabatic_1keV_pct": 0.014486597186162162,
+    "Efrac_adiabatic_1keV_z20": 5.491665974081898e-05,
+    "Efrac_adiabatic_drop_z20": 4.161920798462366,
+    "Efrac_adiabatic_max": 0.0769615669516844,
+    "Efrac_adiabatic_max_pct": 7.6961566951684395,
+    "Efrac_adiabatic_max_z20_pct": 1.8491838427131548,
+    "Efrac_compton_100keV": 0.17915118424581444,
+    "Efrac_compton_100keV_z20": 0.28772757962997364,
+    "Efrac_compton_1GeV": 0.9987306373066575,
+    "Efrac_compton_1GeV_z20": 0.9995158152969773,
+    "Efrac_compton_1MeV": 0.6810281832803865,
+    "Efrac_compton_1MeV_z20": 0.8042242980153694,
+    "Efrac_compton_1TeV": 0.9998736158445337,
+    "Efrac_compton_1TeV_pct": 99.98736158445337,
+    "Efrac_compton_1TeV_z20": 0.99987457069184,
+    "Efrac_compton_1keV": 0.0006432549503266909,
+    "Efrac_compton_1keV_z20": 0.001227241879939614,
+    "Efrac_excitation_100keV": 0.1813739170968858,
+    "Efrac_excitation_100keV_z20": 0.1628562250187505,
+    "Efrac_excitation_1GeV": 0.00017410363447112096,
+    "Efrac_excitation_1GeV_z20": 0.00015062816271599,
+    "Efrac_excitation_1MeV": 0.05697002118897738,
+    "Efrac_excitation_1MeV_z20": 0.041805593000874164,
+    "Efrac_excitation_1TeV": 0.00011536703784782986,
+    "Efrac_excitation_1TeV_z20": 0.00011559030286602106,
+    "Efrac_excitation_1keV": 0.3083044673015053,
+    "Efrac_excitation_1keV_z20": 0.30817791934973676,
+    "Efrac_ionization_100keV": 0.6033128263475106,
+    "Efrac_ionization_100keV_z20": 0.5376148726459979,
+    "Efrac_ionization_1GeV": 0.0002759156176978847,
+    "Efrac_ionization_1GeV_z20": 0.00015850322021341027,
+    "Efrac_ionization_1MeV": 0.18489357263605843,
+    "Efrac_ionization_1MeV_z20": 0.13537200749666434,
+    "Efrac_ionization_1TeV": 2.224077659384561e-07,
+    "Efrac_ionization_1TeV_z20": 1.1967360781226502e-07,
+    "Efrac_ionization_1keV": 0.6892418840230001,
+    "Efrac_ionization_1keV_z20": 0.6889172068288223,
+    "band_dex_ratio": 14.942924364217976,
+    "band_gap_dex": 1.2642193374681365,
+    "electron_band_dex": 9.0,
+    "exc_frac_at_100eV": 0.35322551115872775,
+    "exc_max_at_E_eV": 100.0,
+    "exc_max_frac_in_range": 0.35322551115872775,
+    "exc_over_next_nonionizing": 151.22615205790896,
+    "max_negligible_pct": 0.23357435625517156,
+    "peak_bremsstrahlung_pct": 0.0041587527205796575,
+    "peak_coulomb_pct": 0.23357435625517156,
+    "peak_synchrotron_pct": 1.1764229085703999e-05,
+    "photon_band_dex": 0.6022917456205037,
+    "photon_band_hi_eV": 54.422772491976,
+    "photon_band_lo_eV": 13.598434599702
+  }
+}

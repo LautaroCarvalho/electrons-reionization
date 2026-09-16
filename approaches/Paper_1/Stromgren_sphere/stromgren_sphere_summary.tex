@@ -1,0 +1,645 @@
+\documentclass[11pt,a4paper]{article}
+
+\usepackage[margin=2.4cm]{geometry}
+\usepackage{amsmath,amssymb,bm}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{natbib}
+\usepackage{booktabs}
+\usepackage{hyperref}
+\hypersetup{colorlinks=true,linkcolor=blue!50!black,citecolor=blue!50!black,urlcolor=blue!50!black}
+\usepackage{xcolor}
+
+\bibliographystyle{plainnat}
+\setcitestyle{authoryear,round}
+
+\newcommand{\Ndot}{\dot{N}_{\rm ion}}
+\newcommand{\aB}{\alpha_{\rm B}}
+\newcommand{\aA}{\alpha_{\rm A}}
+\newcommand{\nH}{n_{\rm H}}
+\newcommand{\HII}{\ion{H}{ii}}
+\newcommand{\ion}[2]{\textrm{#1\,\textsc{#2}}}
+\newcommand{\cms}{\,{\rm cm^{3}\,s^{-1}}}
+\newcommand{\pMpc}{\,{\rm pMpc}}
+\newcommand{\cMpc}{\,{\rm cMpc}}
+
+\title{\bf The Str\"omgren Sphere: Formation, Evolution and its Role\\ in the Very Early Universe\\[2mm]
+\large A concept-and-equation summary built from the papers in \texttt{references/}}
+\author{Compiled for L.\ Carvalho}
+\date{2 September 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+\noindent
+This note collects the physical concepts and the equations that govern the formation and the
+evolution of a Str\"omgren sphere, from the classical stellar \ion{H}{ii} region
+\citep{Stromgren1939} to the cosmological \ion{H}{ii} regions (``proximity zones'', ``ionized
+bubbles'') that surround the first stars, the first quasars and the JWST-era broad-line sources at
+$z\gtrsim6$. Every physical statement below is tied to one of the references stored in
+\texttt{references/} and listed in \texttt{references.bib}. Section~\ref{sec:checks} reports the
+internal-consistency checks (analytic, with \textsc{sympy}, and numerical) that were run on the
+equations quoted here; the scripts are \texttt{check\_consistency.py} and
+\texttt{alpha\_HI\_recombination\_fits.py}.
+\end{abstract}
+
+\tableofcontents
+
+%=====================================================================
+\section{The classical Str\"omgren sphere}
+\label{sec:classical}
+
+\subsection{The idea}
+\citet{Stromgren1939} showed that the Balmer emission observed by Struve \& Elvey in the diffuse
+interstellar medium can be understood if the ionizing radiation of an O-type star is absorbed inside
+a well-defined volume: \emph{``Balmer-line emission should be limited to certain rather sharply
+bounded regions in space surrounding O-type stars or clusters of O-type stars''}, with diameters of
+order $200$~pc for the interstellar densities he assumed \citep{Stromgren1939}. The sharpness of the
+boundary is a consequence of the very large photoionization cross-section at the Lyman limit: the
+transition layer is optically thin in size compared to the ionized volume.
+
+\subsection{Ionization balance and the Str\"omgren radius}
+In a static, uniform, pure-hydrogen medium, a steady source emitting $\Ndot$ hydrogen-ionizing
+photons per second builds an ionized sphere whose radius follows from the requirement that
+\emph{every ionizing photon is balanced by one recombination} inside the sphere
+\citep[eq.~1]{Cen2000}:
+\begin{equation}
+  R_{\rm S} \;=\; \left[\frac{3\,\Ndot}{4\pi\,\aB\,\langle n_{\rm H}^2\rangle}\right]^{1/3},
+  \label{eq:RS}
+\end{equation}
+where $\aB$ is the hydrogen recombination coefficient at $T=10^4$~K and $\langle n_{\rm H}^2\rangle$
+is the mean squared hydrogen density inside $R_{\rm S}$ \citep{Cen2000}. Equation~(\ref{eq:RS}) is
+the defining relation of the Str\"omgren sphere.
+
+\subsection{Case A, Case B and the on-the-spot approximation}
+The choice of recombination coefficient is not cosmetic. Recombinations directly to the ground state
+($n=1$) produce a fresh Lyman-continuum photon. The \emph{on-the-spot} (OTS) approximation assumes
+that such a photon is re-absorbed close to where it was emitted, so that ground-state recombinations
+can simply be omitted; one then uses Case~B, $\aB$, the sum over recombinations to all levels
+\emph{except} the ground state \citep{Nebrin2023}. If instead the diffuse photons escape, the correct
+coefficient is Case~A, $\aA$, the sum over all levels \citep{Nebrin2023}. Standard values are
+\begin{align}
+  \aB(10^4\,{\rm K}) &= 2.59\times10^{-13}\cms \quad \text{\citep{Shapiro2006}},\\
+  \aA(T) &\simeq 4.2\times10^{-13}\,T_4^{-0.7}\cms \quad \text{\citep{Gnedin2022,Choudhury2022}},
+\end{align}
+with $T_4\equiv T/10^4$~K. \citet{Nebrin2023} derived an effective coefficient that interpolates
+between the two limits for a cloud of Lyman-limit optical thickness $\tau_{\rm cl}$,
+\begin{equation}
+  \langle\alpha_{\rm eff}\rangle \;=\; \aA - (\aA-\aB)\,f(\tau_{\rm cl}),
+  \label{eq:aeff}
+\end{equation}
+with $f(\tau_{\rm cl})\ll1$ (hence $\langle\alpha_{\rm eff}\rangle\simeq\aA$) for optically thin
+clouds and $f(\tau_{\rm cl})\simeq1$ (hence $\langle\alpha_{\rm eff}\rangle\simeq\aB$) for optically
+thick clouds \citep{Nebrin2023}. Adopting Case~A where Case~B applies (or vice versa) without
+solving for the diffuse field introduces systematic errors in the predicted ionization state
+\citep{Nebrin2023}.
+
+\subsection{Temperature dependence of the H\,\textsc{i} recombination coefficient}
+\label{sec:alphaT}
+Equation~(\ref{eq:RS}) is usually evaluated at the fiducial $T=10^4$~K, but $\aB$ is a steep
+function of temperature, and Sec.~\ref{sec:thermal} shows that the gas behind a cosmological I-front
+can be anywhere between $\sim1.7\times10^4$ and $3\times10^4$~K. The relevant expressions are
+collected here; all of them are fits to detailed collisional-radiative calculations, not independent
+theory. They are implemented in \texttt{alpha\_HI\_recombination\_fits.py}.
+
+\paragraph{Case B (recommended closed form).}
+\citet{Hui1997} give, in their Appendix~A, a fit to the data of Ferland et al.\ (1992) that is
+quoted as accurate to $0.7\%$ over $1\,{\rm K}\le T\le10^9$~K:
+\begin{equation}
+  \boxed{\;
+  \aB(T) \;=\; 2.753\times10^{-14}\,
+  \frac{\lambda^{1.500}}{\bigl[1+(\lambda/2.740)^{0.407}\bigr]^{2.242}}\ \cms\;}
+  \qquad
+  \lambda \;\equiv\; \frac{2\,T_{\rm H\,\textsc{i}}}{T},
+  \label{eq:aB_hui}
+\end{equation}
+with $T_{\rm H\,\textsc{i}}=157807$~K the H\,\textsc{i} ionization threshold expressed in
+temperature units \citep{Hui1997}. This is the single most convenient expression for
+Str\"omgren-sphere work: it is analytic, has the correct asymptotic behaviour, and is smooth across
+the whole nebular and IGM range.
+
+\paragraph{Case A, same source.}
+\begin{equation}
+  \aA(T) \;=\; 1.269\times10^{-13}\,
+  \frac{\lambda^{1.503}}{\bigl[1+(\lambda/0.522)^{0.470}\bigr]^{1.923}}\ \cms,
+  \label{eq:aA_hui}
+\end{equation}
+quoted as accurate to $2\%$ over $3\,{\rm K}\le T\le10^9$~K \citep{Hui1997}.
+
+\paragraph{Total (Case A) rate from atomic-data fits.}
+\citet{Verner1996} fitted the total radiative recombination rate of all H-like ions over
+$3\,{\rm K}$--$10^{10}$~K with
+\begin{equation}
+  \alpha_r(T) \;=\; a\left[\sqrt{T/T_0}\,
+  \Bigl(1+\sqrt{T/T_0}\Bigr)^{1-b}
+  \Bigl(1+\sqrt{T/T_1}\Bigr)^{1+b}\right]^{-1},
+  \label{eq:verner}
+\end{equation}
+which by construction gives $\alpha_r\propto T^{-1/2}$ for $T\ll T_0\ll T_1$ and
+$\alpha_r\propto T^{-3/2}$ for $T\gg T_1\gg T_0$ \citep{Verner1996}. Their Table~1 lists, for
+H\,\textsc{i},
+\begin{equation}
+  a = 7.982\times10^{-11}\cms,\quad b=0.7480,\quad T_0=3.148\ {\rm K},\quad T_1=7.036\times10^{5}\ {\rm K},
+  \label{eq:verner_HI}
+\end{equation}
+with rms error $<0.5\%$ (maximum $<1\%$) for hydrogenic species \citep{Verner1996}. Hydrogenic rates
+for any charge follow from $\alpha_r(Z,T)=Z\,\alpha_r(1,T/Z^2)$ \citep{Verner1996}. The same
+functional form, with $b\to b+b_1\exp(T_2/T)$ for some ions, is what \citet{Mao2016} adopt for the
+level-resolved rates, so eq.~(\ref{eq:verner}) is the current standard shape.
+
+\paragraph{Older analytic forms, for provenance.}
+Two expressions still widely encountered are, first, the hydrogenic formula of Seaton (1959) as
+quoted in eq.~(6) of \citet{Verner1996},
+\begin{equation}
+  \alpha_r(Z,T) \;=\; 5.197\times10^{-14}\,Z\,\lambda_{\rm S}^{1/2}
+  \left[0.4288 + \tfrac{1}{2}\ln\lambda_{\rm S} + 0.469\,\lambda_{\rm S}^{-1/3}\right]\cms,
+  \qquad \lambda_{\rm S}=\frac{157890\,Z^2}{T({\rm K})},
+  \label{eq:seaton}
+\end{equation}
+which \citet{Verner1996} note is \emph{not} valid for $T>10^6Z^2$~K because its high-temperature
+asymptote is wrong; and second, the four-parameter form of P\'equignot, Petitjean \& Boisson (1991),
+also quoted by \citet{Verner1996},
+\begin{equation}
+  \alpha_r(T) \;=\; 10^{-13}\,z\,\frac{a\,t^{\,b}}{1+c\,t^{\,d}}\cms,
+  \qquad t = 10^{-4}T/z^2,
+  \label{eq:pequignot}
+\end{equation}
+valid only over $40z^2\le T\le4\times10^4z^2$~K \citep{Verner1996}.
+
+\paragraph{Polynomial form used in primordial-chemistry networks.}
+\citet{Abel1997} fit the same Ferland et al.\ (1992) data with a ninth-order polynomial in
+$\ln T$,
+\begin{equation}
+  k_2 \;=\; \exp\!\left[\sum_{i=0}^{9} c_i \,(\ln T)^i\right]\cms,
+  \label{eq:abel}
+\end{equation}
+with $c_0=-28.6130338$, $c_1=-0.72411256$, $c_2=-2.02604473\times10^{-2}$,
+$c_3=-2.38086188\times10^{-3}$, $c_4=-3.21260521\times10^{-4}$, $c_5=-1.42150291\times10^{-5}$,
+$c_6=+4.98910892\times10^{-6}$, $c_7=+5.75561414\times10^{-7}$, $c_8=-1.85676704\times10^{-8}$,
+$c_9=-3.07113524\times10^{-9}$ \citep{Abel1997}.
+\textbf{Unit trap:} the caption of their Table~1 states that ``the temperatures are in eV unless
+stated otherwise'', so the argument of eq.~(\ref{eq:abel}) is $\ln(T/{\rm eV})$, not $\ln(T/{\rm
+K})$. Using kelvin gives a value $\sim4$ orders of magnitude too small; with $T$ in eV,
+eq.~(\ref{eq:abel}) reproduces eq.~(\ref{eq:aA_hui}) to within $3\%$ over $10^2$--$10^6$~K, i.e.\ it
+is a \emph{Case A} rate (see check~10 in Sec.~\ref{sec:checks}).
+
+\paragraph{Power-law approximations and their validity.}
+Differentiating eq.~(\ref{eq:aB_hui}) numerically gives a local logarithmic slope
+${\rm d}\ln\aB/{\rm d}\ln T = -0.787$, $-0.834$ and $-0.888$ at $T=5\times10^3$, $10^4$ and
+$2\times10^4$~K, and for Case A ${\rm d}\ln\aA/{\rm d}\ln T = -0.685$, $-0.714$ and $-0.751$ at the
+same temperatures. The power laws
+\begin{align}
+  \aB(T) &\simeq 2.59\times10^{-13}\,T_4^{-0.83}\cms, \label{eq:plB}\\
+  \aA(T) &\simeq 4.2\times10^{-13}\,T_4^{-0.70}\cms, \label{eq:plA}
+\end{align}
+are accurate to $2.1\%$ and $2.5\%$ respectively over $5\times10^3$--$2\times10^4$~K, degrading to
+$5.2\%$ and $2.5\%$ over $5\times10^3$--$3\times10^4$~K and to $25\%$ and $19\%$ if stretched over
+$10^3$--$10^5$~K. Equation~(\ref{eq:plA}) is exactly the expression quoted by \citet{Gnedin2022} and
+\citet{Choudhury2022}; there is \emph{no} single power law that is simultaneously accurate for
+Case~A and Case~B, because the two have different slopes. Since $R_{\rm S}\propto\aB^{-1/3}$
+(eq.~\ref{eq:RS}), an error $\delta$ in $\aB$ propagates to only $\delta/3$ in $R_{\rm S}$, so
+eqs.~(\ref{eq:plB})--(\ref{eq:plA}) are adequate for radii; they are not adequate for photon-budget
+or emission-measure work, where $\aB$ enters linearly.
+
+\paragraph{Regime of validity, and what these fits do \emph{not} include.}
+All the expressions above are for pure radiative recombination in the low-density limit, with a
+Maxwell--Boltzmann electron energy distribution. Two caveats matter for early-Universe work.
+(i)~Case~B is itself density-dependent through the collisional redistribution of the excited levels:
+\citet{Storey2014} tabulate the hydrogen total Case~B coefficient as $\alpha(N_e,T_e,\kappa)$, i.e.\
+explicitly as a function of electron density as well as temperature, so eq.~(\ref{eq:aB_hui}) should
+be read as the low-density limit.
+(ii)~If the electron energy distribution departs from Maxwellian --- as it may where non-thermal
+particles inject energy --- the recombination coefficients change: \citet{Storey2014} compute them
+for a $\kappa$-distribution, recovering the Maxwell--Boltzmann values only as $\kappa\to\infty$.
+Neither effect is captured by eqs.~(\ref{eq:aB_hui})--(\ref{eq:plA}).
+
+\subsection{Time-dependent growth: the recombination clock}
+Before equilibrium is reached, the ionization front (I-front) sweeps up neutral gas. Writing the
+photon budget as a balance between injection and recombination inside the ionized volume gives, for a
+static uniform medium of clumping factor $C$,
+\begin{equation}
+  \frac{{\rm d}R^3}{{\rm d}t} \;=\; \frac{3\,\Ndot}{4\pi\,\nH} \;-\; \aB\,C\,\nH\,R^3,
+  \label{eq:ode_static}
+\end{equation}
+whose solution is the familiar exponential approach to the Str\"omgren radius,
+\begin{equation}
+  R(t) \;=\; R_{\rm S}\,\bigl(1-e^{-t/t_{\rm rec}}\bigr)^{1/3},
+  \qquad
+  t_{\rm rec} \;=\; \bigl(C\,\aB\,\nH\,\chi_{\rm eff}\bigr)^{-1},
+  \label{eq:Rt}
+\end{equation}
+in agreement with the non-dimensional variable $w\equiv t/t_{\rm rec}=t\,C\,\aB\,\nH\,\chi_{\rm eff}$
+and the solution $y=1-e^{-w}$ of \citet{Shapiro2006}; $\chi_{\rm eff}$ accounts for the extra free
+electrons contributed by ionized helium. The recombination time is therefore the clock of the
+problem: the sphere is essentially complete after a few $t_{\rm rec}$.
+
+\subsection{Relativistic (finite light-speed) corrections}
+\citet{Shapiro2006} showed that the non-relativistic equation~(\ref{eq:Rt}) can be badly wrong at
+early times, because the I-front is initially so fast that a naive treatment yields apparent
+superluminal speeds. The controlling dimensionless parameter is
+\begin{equation}
+  q \;\equiv\; \frac{R_{\rm S}}{c\,t_{\rm rec}},
+  \label{eq:q}
+\end{equation}
+the light-crossing time of the Str\"omgren radius in units of the recombination time
+\citep{Shapiro2006}. For $q>1$ the expansion is relativistic all the way out to $R_{\rm S}$ and the
+time to reach the Str\"omgren radius is delayed by a factor $\sim q$ relative to the non-relativistic
+answer \citep{Shapiro2006}. This is the regime relevant to bright cosmological sources, where
+$t_{\rm rec}$ is enormous (Sec.~\ref{sec:cosmo}).
+
+%=====================================================================
+\section{Ionization fronts: R-type, D-type, and the dynamical phase}
+\label{sec:fronts}
+
+\subsection{Front classification}
+Around a newly switched-on source the I-front first moves supersonically with respect to both the
+neutral and the ionized gas: it is a weak \emph{R-type} front, and the gas is ionized essentially
+without being moved \citep{Shapiro2006}. As the front decelerates (its speed drops roughly as the
+volume grows) it approaches the sound speed of the ionized gas, $c_i$, and transforms into a subsonic
+\emph{D-type} front preceded by a shock; from then on the hot, over-pressured ionized bubble expands
+hydrodynamically into the surrounding medium \citep{Shapiro2006}. The R-type phase is short-lived
+(at most a few $t_{\rm rec}$), whereas the D-type phase is long-lived, and during it $v_{\rm
+I}\ll c$ so that relativistic corrections are negligible \citep{Shapiro2006}.
+
+\subsection{D-type expansion: Spitzer and Hosokawa--Inutsuka solutions}
+In the thin-shell approximation, equating the pressure of the shocked neutral shell to the ram
+pressure of the undisturbed gas gives the ``Raga-I'' equation, whose early-time limit is the
+classical \emph{Spitzer solution} \citep[eq.~9]{Bisbas2015}:
+\begin{equation}
+  R_{\rm Sp}(t) \;=\; R_{\rm St}\left(1+\frac{7}{4}\,\frac{c_i\,t}{R_{\rm St}}\right)^{4/7},
+  \label{eq:spitzer}
+\end{equation}
+with $R_{\rm St}$ the initial Str\"omgren radius of eq.~(\ref{eq:RS}). Including the inertia of the
+shocked shell (Hosokawa \& Inutsuka; ``Raga-II'') yields
+\begin{equation}
+  \dot R_{\rm HI}(t) \;=\; c_i\sqrt{\frac{4}{3}\left(\frac{R_{\rm St}}{R_{\rm HI}}\right)^{3/2}
+  -\frac{\mu_i T_o}{\mu_o T_i}},
+  \label{eq:HI}
+\end{equation}
+\citep[eq.~12]{Bisbas2015}. Expansion stops when the ionized gas reaches pressure equilibrium with
+the ambient medium, at the \emph{stagnation radius}
+\begin{equation}
+  R_{\rm STAG} \;=\; \left(\frac{c_i}{c_o}\right)^{4/3} R_{\rm St},
+  \label{eq:stag}
+\end{equation}
+where $c_o$ is the sound speed of the neutral gas \citep[eqs.~14 and 22]{Bisbas2015}. Because
+$c_i/c_o\sim4$--$10$, the final \ion{H}{ii} region is one to two orders of magnitude larger in volume
+than the initial Str\"omgren sphere. \citet{Bisbas2015} showed with the \textsc{StarBench} code
+comparison that a semi-empirical combination of the early- and late-time solutions reproduces
+high-resolution radiation-hydrodynamics simulations to $\lesssim2\%$, and is a better code-validation
+benchmark than the Spitzer solution alone.
+
+\subsection{The first \ion{H}{ii} regions: Population~III stars in minihaloes}
+In the primordial case the ambient density profile is steeply declining, and the ordering of the two
+front types is inverted. \citet{Kitayama2004} found that the \ion{H}{ii} region of a Pop~III star
+begins as a slowly expanding weak D-type front near the centre and then, once the front outruns the
+declining density profile, converts to a rapidly propagating R-type front through the outer envelope;
+this D$\to$R transition is the critical condition for complete ionization of a cosmologically
+relevant halo. For halo masses $\lesssim10^6\,M_\odot$ the transition occurs within a few
+$10^5$~yr, the escape fractions of both ionizing and photodissociating photons exceed $80\%$, and a
+supersonic shock evacuates the halo, lowering the mean density to $\lesssim1\,{\rm cm^{-3}}$ in a few
+Myr; for $\gtrsim10^7\,M_\odot$ haloes the front stays D-type for the whole stellar lifetime, the
+\ion{H}{ii} region remains confined inside the virial radius and the escape fraction is essentially
+zero \citep{Kitayama2004}. \citet{Alvarez2006}, with 3D ray tracing, described the same physics as a
+``champagne flow'' in which the early D-type front detaches from the shock and runs ahead as an
+R-type front; they obtained $0.7\lesssim f_{\rm esc}\lesssim0.9$ for $80\lesssim M_\star/M_\odot
+\lesssim500$ and a ratio of ionized gas mass to stellar mass of $\sim6\times10^4$, i.e.\ roughly half
+the ionizing photons released per stellar baryon are used to ionize the intergalactic gas. They also
+found that neighbouring minihaloes \emph{trap} the I-front, so that their cores remain neutral
+\citep{Alvarez2006}.
+
+%=====================================================================
+\section{Cosmological Str\"omgren spheres}
+\label{sec:cosmo}
+
+\subsection{Equation of motion in an expanding universe}
+For a cosmological source the Str\"omgren problem acquires two new ingredients: the Hubble expansion
+dilutes the gas, and the intergalactic medium (IGM) is clumpy. Following
+\citet{ShapiroGiroux1987}, the proper radius $R_i$ of the I-front obeys \citep[eq.~3]{Cen2000}
+\begin{equation}
+  \frac{{\rm d}R_i^3}{{\rm d}t}
+  \;=\; 3H(z)\,R_i^3
+  \;+\; \frac{3\,\dot N_{\rm ph}}{4\pi\,\langle \nH\rangle}
+  \;-\; C_{\rm HII}\,\langle \nH\rangle\,\aB\,R_i^3,
+  \label{eq:cosmo_ode}
+\end{equation}
+where the three terms on the right-hand side are, in order, the Hubble expansion, the ionizations by
+newly produced photons, and the recombinations, and
+\begin{equation}
+  C_{\rm HII}\equiv\frac{\langle n_{\rm H}^2\rangle}{\langle \nH\rangle^2}
+\end{equation}
+is the mean clumping factor of the ionized gas inside $R_i$ \citep{Cen2000}. A more careful
+definition weights by the electron density,
+$C\equiv\langle n_{\rm HII}n_e\rangle/(\bar n_{\rm HII}\bar n_e)$, restricted to the ionized regions
+\citep[eq.~64]{Choudhury2022}; $C=1$ for a uniform medium. The clumping factor is the standard way of
+encoding IGM inhomogeneity as an enhanced effective recombination rate
+\citep{MiraldaEscude2000,Choudhury2022}, and it is not straightforward to model self-consistently
+because it depends on the density structure and on how I-fronts propagate into dense regions
+\citep{Choudhury2022}.
+
+\subsection{The photon-counting limit: why high-$z$ spheres never reach equilibrium}
+The key qualitative difference with respect to the stellar case is that at $z\lesssim10$ the
+\emph{recombination time of the IGM is comparable to or longer than the Hubble time, and enormously
+longer than the quasar lifetime}, so the equilibrium radius $R_{\rm S}$ is large but is never
+actually reached before the source turns off \citep{Cen2000}. (For $C=1$ we find
+$t_{\rm rec}/H^{-1}(z)\simeq1.2$, $0.8$ and $0.6$ at $z=6$, $8$ and $10$; see check~7 in
+Sec.~\ref{sec:checks}. The statement is therefore safe with respect to $t_Q$, which is what matters
+here, and marginal with respect to the Hubble time at the highest redshifts.) Dropping the recombination term in eq.~(\ref{eq:cosmo_ode}) leaves a pure
+photon-counting result for a source of age $t_Q$ \citep[eq.~2]{Cen2000}:
+\begin{equation}
+  R_{t_Q} \;=\; \left[\frac{3\,\dot N_{\rm ph}\,t_Q}{4\pi\,\langle \nH\rangle}\right]^{1/3}.
+  \label{eq:photon_counting}
+\end{equation}
+Including the neutral fraction $x_{\rm HI}$ of the gas that must be ionized, the fiducial scaling for
+a luminous $z\sim6$ quasar is \citep{Mesinger2004}
+\begin{equation}
+  R_{\rm S}\simeq 7.7\;
+  x_{\rm HI}^{-1/3}
+  \left(\frac{\dot N_Q}{6.5\times10^{57}\,{\rm s^{-1}}}\right)^{1/3}
+  \left(\frac{t_Q}{2\times10^{7}\,{\rm yr}}\right)^{1/3}
+  \left(\frac{1+z_Q}{7.28}\right)^{-1}\ {\rm Mpc\ (proper)}.
+  \label{eq:mesinger}
+\end{equation}
+The three exponents encode the whole physics: $R\propto \dot N^{1/3}$ and $R\propto t_Q^{1/3}$ from
+photon counting, and $R\propto(1+z)^{-1}$ from $\langle \nH\rangle\propto(1+z)^3$. Unlike the stellar
+case, the cosmological sphere keeps evolving even at constant luminosity, because of the Hubble
+expansion, of the evolving density and clumping around the source, and of the continued accumulation
+of ionizing photons \citep{Cen2000}.
+
+\subsection{From individual spheres to reionization}
+Globally, the same photon budget written for the volume filling factor $Q_{\rm HII}$ of ionized gas
+gives the standard reionization equation \citep[eq.~66]{Choudhury2022}
+\begin{equation}
+  \frac{{\rm d}Q_{\rm HII}}{{\rm d}t}
+  \;=\; \frac{\dot n_\gamma}{\bar n_{\rm H}}
+  \;-\; Q_{\rm HII}\,a^{-3}\,C\,\alpha_{\rm R}(T)\,\bar n_e ,
+  \label{eq:QHII}
+\end{equation}
+i.e.\ a source term set by the ionizing emissivity and a sink term set by the clumping-enhanced
+recombination rate; $\chi_{\rm He}\approx1.08$ ($1.16$) for singly (doubly) ionized helium with
+$Y=0.24$ \citep{Choudhury2022}. Reionization proceeds inside-out: isolated ionized bubbles form
+around the first sources, then grow, overlap and finally fill the IGM, leaving neutral gas only in
+dense pockets \citep{Chakraborty2025,Cen2000}.
+
+The size \emph{distribution} of these bubbles is not set by the Str\"omgren radius of individual
+sources but by the clustering of the sources. \citet{Furlanetto2004} associated each ionized region
+with a large-scale density fluctuation that can ``self-ionize'', $m_{\rm ion}=\zeta m_{\rm gal}$,
+i.e.
+\begin{equation}
+  f_{\rm coll}(\delta_m,m,z)\;\ge\;\zeta^{-1},
+  \label{eq:barrier}
+\end{equation}
+and used the excursion-set formalism with the resulting density barrier
+$\delta_x(m,z)=\delta_c(z)-\sqrt{2}\,K(\zeta)\,[\sigma^2_{\min}-\sigma^2(m)]^{1/2}$, with
+$K(\zeta)={\rm erf}^{-1}(1-\zeta^{-1})$, to obtain the bubble size distribution
+\citep{Furlanetto2004}. In this model bubbles are already several comoving Mpc across by the time the
+ionized fraction reaches $\bar Q=0.5$ \citep{Furlanetto2004}. Modern radiation-hydrodynamic
+simulations confirm that bubble sizes correlate with the local overdensity, and that the local
+reionization redshift $z_{\rm reion}$ is a good proxy for bubble sizes only up to
+$R_{\rm eff}\lesssim1\cMpc$ \citep{Neyer2023}.
+
+%=====================================================================
+\section{Thermal structure: the temperature left behind by the I-front}
+\label{sec:thermal}
+
+The Str\"omgren sphere is not only an ionization structure but also a heating structure: the excess
+energy of each ionizing photon above $13.6$~eV is deposited as heat when the front passes. The
+post-front temperature $T_{\rm reion}$ is a key, and uncertain, ingredient of reionization models
+\citep{DAloisio2018}. Its main determinant is \emph{the I-front speed}, not the spectral index of the
+source \citep{DAloisio2018,Zhu2025}:
+\begin{itemize}
+  \item slow fronts ($v_{\rm I}\sim50$--$2000\,{\rm km\,s^{-1}}$) give
+        $T\sim17{,}000$--$22{,}000$~K, typical of the first half of reionization
+        \citep{DAloisio2018,Zhu2025};
+  \item fast fronts near the overlap phase ($v_{\rm I}\sim10^4\,{\rm km\,s^{-1}}$) reach
+        $T_{\rm reion}\sim25{,}000$--$30{,}000$~K \citep{DAloisio2018,Zhu2025};
+  \item the median post-ionization temperature plateaus at $T\sim2\times10^4$~K for
+        $v_{\rm I}>3000\,{\rm km\,s^{-1}}$ \citep{Zhu2025}.
+\end{itemize}
+The usual assumption that all baryonic species (${\rm e^-}$, \ion{H}{i}, \ion{H}{ii}, \ion{He}{i},
+\ion{He}{ii}) instantaneously share the deposited energy breaks down for fast fronts:
+\citet{Zeng2020} solved the non-equilibrium energy-transfer problem and found that equilibration is a
+good approximation for $v_{\rm I}\lesssim10^9\,{\rm cm\,s^{-1}}$, while $T_{\rm re}$ is lower than
+the equilibrium value by up to $19.7\%$ at $3\times10^9\,{\rm cm\,s^{-1}}$ and $30.8\%$ at
+$10^{10}\,{\rm cm\,s^{-1}}$. Since electrons carry the photoelectron energy first and then share it
+with the ions, the electron--ion energy transfer rate is what sets this deviation \citep{Zeng2020}.
+Uncertainties in $T_{\rm reion}$ of $15{,}000$ vs.\ $25{,}000$~K propagate into $\sim50\%$
+differences in the IGM temperature at $z\simeq5.5$ for gas reionized at $z_{\rm re}=9$
+\citep{DAloisio2018}, which is directly relevant to $z>5$ Ly$\alpha$ forest thermal measurements.
+
+%=====================================================================
+\section{Observational manifestations at high redshift}
+\label{sec:obs}
+
+\subsection{The Str\"omgren surface in quasar spectra}
+A bright quasar embedded in a largely neutral IGM at $z\gtrsim6$ is surrounded by a large
+cosmological Str\"omgren sphere; its spectrum then shows a sharp increase in resonant Lyman-line
+absorption at wavelengths approaching the boundary of the sphere along the line of sight
+\citep{Mesinger2004}. Using \emph{simultaneously} the Ly$\alpha$ and Ly$\beta$ regions to gain
+dynamic range, \citet{Mesinger2004} detected the boundary of the Str\"omgren sphere of
+SDSS~J1030$+$0524 ($z=6.28$) at a proper distance of $6.0\pm0.2$~Mpc, inferred $x_{\rm HI}\gtrsim0.2$
+beyond it, and measured an ionizing output of $(5.2\pm2.5)\times10^{56}$ photons~s$^{-1}$. The
+underlying spectra of the two first Gunn--Peterson-trough quasars, and the fact that the Str\"omgren
+sphere of SDSS~J1148$+$5251 is significantly smaller, were presented by \citet{White2003}.
+
+The Lyman-$\alpha$ line profile itself carries information: for a source inside a neutral IGM the
+damping wing of the intervening \ion{H}{i} suppresses the line, whereas a sufficiently large
+\ion{H}{ii} region lets Ly$\alpha$ photons redshift out of resonance before reaching the boundary
+\citep{Cen2000}. The red side of the line then measures the quasar lifetime and the blue side the
+IGM density fluctuations at the quasar redshift \citep{Cen2000}.
+
+\subsection{Proximity zones and quasar lifetimes}
+Operationally, the observed quantity is the \emph{proximity zone} size $R_p$, defined as the distance
+at which the smoothed, continuum-normalized quasar spectrum first drops below the $10\%$ transmitted
+flux level \citep{Eilers2017}. This definition probes locations where the quasar's ionizing radiation
+still exceeds the expected UV background by about an order of magnitude, which makes $R_p$
+comparatively \emph{insensitive} to the ambient IGM neutral fraction \citep{Eilers2017}. This is the
+main caveat when using near zones as a reionization probe: \citet{Bolton2007} showed with synthetic
+spectra that the scatter induced by density fluctuations and by the filtering of ionizing radiation
+is so large that the data then available could not distinguish a significantly neutral from a highly
+ionized IGM just above $z=6$, and that samples of several tens of high-resolution Ly$\alpha$ +
+Ly$\beta$ near zones are needed to decide whether $\langle f_{\rm HI}\rangle_V$ is above or below
+$10\%$.
+
+What $R_p$ \emph{does} measure well is the quasar age, because the IGM has a finite response time to
+the radiation \citep{Eilers2020}. The observational picture is:
+\begin{itemize}
+  \item $R_p$ evolves only shallowly with redshift, $\propto(1+z)^{-1.44}$ over
+        $5.77\le z\le6.54$, in agreement with radiative-transfer simulations irrespective of the IGM
+        ionization state \citep{Eilers2017};
+  \item a few quasars have exceptionally small zones ($R_p<1\pMpc$), most compellingly explained by
+        UV-luminous lifetimes $t_Q\lesssim10^5$~yr \citep{Eilers2017};
+  \item a dedicated multi-wavelength survey found $5\%\lesssim f_{\rm young}\lesssim10\%$ of the
+        high-$z$ quasar population to be young, with $t_Q\lesssim10^5$~yr \citep{Eilers2020};
+  \item the enlarged XQR-30 sample gives $R_p=2$--$7\pMpc$ for $M_{1450}\sim-27$ quasars at
+        $5.8<z<6.6$, with the scatter indicating a large diversity of quasar lifetimes
+        \citep{Satyavolu2023};
+  \item the largest homogeneous compilation to date, $59$ quasars at $5.77\le z\le7.54$, gives
+        $R_p\propto 10^{-0.4M_{1450}/2.87}$ (i.e.\ $R_p\propto L^{1/2.87}$) and
+        $R_p\propto(1+z)^{-2.44}$, and identifies $13$ small-zone quasars for which
+        $t_Q\lesssim10^4$~yr is the favoured explanation \citep{Onorato2025}.
+\end{itemize}
+Note that the measured luminosity scaling $L^{1/2.87}=L^{0.348}$ is remarkably close to the naive
+photon-counting exponent $1/3$ of eq.~(\ref{eq:photon_counting}), whereas the redshift scaling is
+steeper than the $(1+z)^{-1}$ of eq.~(\ref{eq:mesinger}), which is expected since the latter holds at
+fixed $x_{\rm HI}$ and fixed $t_Q$ \citep{Onorato2025,Mesinger2004}.
+
+\subsection{Ionized bubbles around JWST galaxies and AGN}
+For galaxies, the same physics is inverted: one models the Ly$\alpha$ damping-wing absorption
+assuming a galaxy sitting inside an ionized bubble of radius $R_b$ embedded in an IGM of neutral
+fraction $x_{\rm HI}$. From $27$ bright ($M_{\rm UV}<-18.5$) JWST/NIRSpec galaxies at $7<z<12$,
+\citet{Umeda2023} obtained $x_{\rm HI}$ rising from $0.53^{+0.18}_{-0.47}$ at $z=7.12$ to
+$0.92^{+0.08}_{-0.10}$ at $z=9.91$, with $\log(R_b/{\rm cMpc})$ falling from $1.67^{+0.14}_{-0.16}$
+to $-0.69^{+1.49}_{-0.24}$ over the same interval; the inferred $R_b$ can be up to a few dex larger
+than the cosmic-average analytic expectation at a given $x_{\rm HI}$, but is compatible with the
+merged bubbles predicted around bright galaxies in simulations \citep{Umeda2023}. A Ly$\alpha$
+line-shape fit that explicitly assumes a Str\"omgren sphere gives $R_b=1.5^{+0.3}_{-0.2}\pMpc$ around
+a nitrogen-rich AGN at $z=8.63$ --- a large bubble given that the Universe is nearly fully neutral at
+that redshift \citep{Morishita2025}. As quoted by \citet{Morishita2025}, the predicted IGM damping-wing transmission at Ly$\alpha$ line
+centre is $<10\%$ if the source sits in an ionized region smaller than $0.5\pMpc$, versus $>30\%$ for
+a region larger than $1\pMpc$; this is why the detection of Ly$\alpha$ near the systemic velocity at
+$z>8$ is itself evidence for a substantial Str\"omgren sphere.
+
+\subsection{Who blows the bubbles? Relevance for the ionizing photon budget}
+Whether the ionizing photons come from faint star-forming galaxies or from accreting black holes
+determines both the bubble morphology and the reionization history
+\citep{Chakraborty2025,Gnedin2022}. \citet{Mascia2026} carried out a systematic census of compact
+broad-line emitters (BLEs) at $4\le z\le7$ from JWST/NIRSpec: the bluest, compact BLEs show hot
+ionizing continua, high-ionization UV lines, elevated Ly$\alpha$-emitter fractions
+($X_{\rm Ly\alpha}=50$--$67\%$), a high ionizing photon production efficiency
+$\log(\xi_{\rm ion}/{\rm Hz\,erg^{-1}})\sim25.4$ and a weighted escape fraction
+$f_{\rm esc}\sim0.2$, whereas Little Red Dots have $f_{\rm esc}\sim0.01$. Their conclusion is that
+broad-line sources do \emph{not} dominate reionization globally, but that, given their luminosity,
+their contribution can dominate \emph{up to few-Mpc scales} \citep{Mascia2026} --- i.e.\ exactly on
+the scale of an individual Str\"omgren sphere.
+
+%=====================================================================
+\section{Summary of the key equations and fiducial numbers}
+
+\begin{table}[h]
+\centering
+\small
+\begin{tabular}{@{}p{5.6cm}p{6.4cm}p{3.2cm}@{}}
+\toprule
+Quantity & Expression & Reference \\
+\midrule
+Str\"omgren radius (static) & $R_{\rm S}=[3\Ndot/(4\pi\aB\langle n_{\rm H}^2\rangle)]^{1/3}$ & \citet{Cen2000} \\
+Case B coefficient & $\aB(10^4{\rm K})=2.59\times10^{-13}\cms$ & \citet{Shapiro2006} \\
+Case A coefficient & $\aA\simeq4.2\times10^{-13}T_4^{-0.7}\cms$ & \citet{Gnedin2022} \\
+Case B, full $T$ dependence & $\aB=2.753\times10^{-14}\lambda^{1.500}[1+(\lambda/2.740)^{0.407}]^{-2.242}$, $\lambda=2T_{\rm H\,\textsc{i}}/T$ & \citet{Hui1997} \\
+Case A, full $T$ dependence & $\aA=1.269\times10^{-13}\lambda^{1.503}[1+(\lambda/0.522)^{0.470}]^{-1.923}$ & \citet{Hui1997} \\
+Total rate, H-like ions & $\alpha_r=a[\sqrt{T/T_0}(1+\sqrt{T/T_0})^{1-b}(1+\sqrt{T/T_1})^{1+b}]^{-1}$ & \citet{Verner1996} \\
+Power-law approximations & $\aB\simeq2.59\times10^{-13}T_4^{-0.83}$, $\aA\simeq4.2\times10^{-13}T_4^{-0.70}$ & Sec.~\ref{sec:alphaT} \\
+Effective coefficient & $\langle\alpha_{\rm eff}\rangle=\aA-(\aA-\aB)f(\tau_{\rm cl})$ & \citet{Nebrin2023} \\
+Growth to equilibrium & $R(t)=R_{\rm S}(1-e^{-t/t_{\rm rec}})^{1/3}$ & \citet{Shapiro2006} \\
+Recombination time & $t_{\rm rec}=(C\aB \nH\chi_{\rm eff})^{-1}$ & \citet{Shapiro2006} \\
+Relativistic parameter & $q=R_{\rm S}/(c\,t_{\rm rec})$ & \citet{Shapiro2006} \\
+D-type (Spitzer) & $R_{\rm Sp}=R_{\rm St}(1+\tfrac{7}{4}c_it/R_{\rm St})^{4/7}$ & \citet{Bisbas2015} \\
+Stagnation radius & $R_{\rm STAG}=(c_i/c_o)^{4/3}R_{\rm St}$ & \citet{Bisbas2015} \\
+Cosmological I-front & $\dot{(R_i^3)}=3HR_i^3+\tfrac{3\dot N_{\rm ph}}{4\pi\langle \nH\rangle}-C_{\rm HII}\langle \nH\rangle\aB R_i^3$ & \citet{Cen2000,ShapiroGiroux1987} \\
+Photon-counting radius & $R_{t_Q}=[3\dot N_{\rm ph}t_Q/(4\pi\langle \nH\rangle)]^{1/3}$ & \citet{Cen2000} \\
+Fiducial high-$z$ scaling & $R_{\rm S}\simeq7.7\,x_{\rm HI}^{-1/3}\dot N_{57}^{1/3}t_{Q,7}^{1/3}(1+z)^{-1}$~pMpc & \citet{Mesinger2004} \\
+Reionization equation & ${\rm d}Q_{\rm HII}/{\rm d}t=\dot n_\gamma/\bar n_{\rm H}-Q_{\rm HII}a^{-3}C\alpha_{\rm R}\bar n_e$ & \citet{Choudhury2022} \\
+Self-ionization barrier & $f_{\rm coll}\ge\zeta^{-1}$ & \citet{Furlanetto2004} \\
+Post-front temperature & $T_{\rm reion}\simeq1.7$--$3.0\times10^4$~K, set by $v_{\rm I}$ & \citet{DAloisio2018,Zhu2025} \\
+Proximity zone definition & first drop below $10\%$ transmitted flux & \citet{Eilers2017} \\
+\bottomrule
+\end{tabular}
+\caption{Master list of the relations discussed in this note.}
+\end{table}
+
+%=====================================================================
+\section{Internal consistency checks}
+\label{sec:checks}
+
+The following checks were carried out with \textsc{sympy}~1.12 and \textsc{numpy}~1.26
+(\texttt{check\_consistency.py}); all of them passed.
+
+\begin{enumerate}
+\item \textbf{Eq.~(\ref{eq:Rt}) solves eq.~(\ref{eq:ode_static}).} Substituting
+      $R(t)=R_{\rm S}(1-e^{-\aB C\nH t})^{1/3}$ with
+      $R_{\rm S}=[3\Ndot/(4\pi\aB C\nH^2)]^{1/3}$ into
+      ${\rm d}R^3/{\rm d}t=3\Ndot/(4\pi \nH)-\aB C\nH R^3$ gives a residual that \textsc{sympy}
+      simplifies to exactly $0$. This also confirms the identification
+      $t_{\rm rec}=(\aB C \nH)^{-1}$ used in eq.~(\ref{eq:Rt}) and by \citet{Shapiro2006}.
+\item \textbf{Eq.~(\ref{eq:spitzer}) solves the early-time Raga-I equation.}
+      $\dot R_{\rm Sp}/c_i-(R_{\rm St}/R_{\rm Sp})^{3/4}$ simplifies to $0$, i.e.\ the Spitzer
+      solution is the exact solution of eq.~(8) of \citet{Bisbas2015} once the small
+      $\mu_iT_o/\mu_oT_i$ term is dropped, as stated there.
+\item \textbf{Eq.~(\ref{eq:stag}) reproduces the numbers quoted by \citet{Bisbas2015}.} With
+      $T_i=10^4$~K, $\mu_i=0.5$ and $T_o=10^3$~K, $\mu_o=1$ one gets $c_i=12.85$~km\,s$^{-1}$ and
+      $c_o=2.87$~km\,s$^{-1}$ (their values), and $R_{\rm STAG}=(c_i/c_o)^{4/3}\times0.314$~pc
+      $=2.31$~pc, identical to their quoted stagnation radius.
+\item \textbf{Eq.~(\ref{eq:mesinger}) is the photon-counting radius eq.~(\ref{eq:photon_counting}).}
+      Evaluating $[3\dot N_Qt_Q/(4\pi \nH x_{\rm HI})]^{1/3}$ with
+      $\dot N_Q=6.5\times10^{57}\,{\rm s^{-1}}$, $t_Q=2\times10^7$~yr, $x_{\rm HI}=1$, $z=6.28$ and
+      the cosmology of \citet{Mesinger2004} ($\Omega_b=0.044$, $h=0.71$, $Y=0.24$;
+      $\nH=7.31\times10^{-5}\,{\rm cm^{-3}}$) gives $7.70$~proper~Mpc, exactly the coefficient
+      quoted in their eq.~(\ref{eq:mesinger}).
+\item \textbf{Proper/comoving conversion of the measured Str\"omgren surface.} Their best-fit
+      $R_{\rm S}=44\cMpc$ at $z=6.28$ corresponds to $44/(1+z)=6.04\pMpc$, consistent with the
+      $6.0\pm0.2\pMpc$ quoted in their abstract \citep{Mesinger2004}.
+\item \textbf{Order of magnitude of eq.~(\ref{eq:RS}) for a stellar source.} With
+      $\Ndot=10^{49}\,{\rm s^{-1}}$ and $\nH=1\,{\rm cm^{-3}}$, eq.~(\ref{eq:RS}) gives
+      $R_{\rm S}=68$~pc, i.e.\ a diameter of $136$~pc, of the same order as the ``about 200
+      parsecs'' quoted by \citet{Stromgren1939} (the exact value depends on the stellar temperature,
+      radius and gas density he adopted). For $\nH=100\,{\rm cm^{-3}}$ the same source gives
+      $R_{\rm S}=3.2$~pc and $t_{\rm rec}=1.2$~kyr, so a compact \ion{H}{ii} region reaches
+      equilibrium essentially instantaneously --- consistent with the classical, static
+      interpretation.
+\item \textbf{Why the cosmological sphere is \emph{not} in equilibrium.} With
+      $\chi_{\rm He}=1.08$ and $C=1$, $t_{\rm rec}=1.74$, $0.82$ and $0.45$~Gyr at $z=6$, $8$ and
+      $10$ respectively, i.e.\ comparable to the Hubble time $1/H(z)=1.43$, $0.98$ and $0.73$~Gyr,
+      and four to five orders of magnitude longer than the quasar lifetimes
+      $t_Q\sim10^4$--$10^7$~yr inferred from proximity zones
+      \citep{Eilers2017,Eilers2020,Onorato2025}. This is a quantitative confirmation of the
+      statement of \citet{Cen2000} that the equilibrium Str\"omgren radius is never reached at high
+      redshift, and hence that eq.~(\ref{eq:photon_counting}) --- not eq.~(\ref{eq:RS}) --- is the
+      relevant relation. Caveat: at $C\gtrsim2$ and $z\gtrsim8$, $t_{\rm rec}$ becomes shorter than
+      $1/H(z)$, so the recombination term of eq.~(\ref{eq:cosmo_ode}) cannot be neglected for
+      long-lived sources in dense environments.
+\item \textbf{Luminosity scaling.} The empirical $R_p\propto L^{1/2.87}=L^{0.348}$ of
+      \citet{Onorato2025} is within $5\%$ of the photon-counting exponent $1/3=0.333$ of
+      eq.~(\ref{eq:photon_counting}), so the two are mutually consistent.
+\item \textbf{I-front speed regimes.} The plateau velocity $3000\,{\rm km\,s^{-1}}
+      =3\times10^8\,{\rm cm\,s^{-1}}$ of \citet{Zhu2025} lies \emph{below} the
+      $10^9\,{\rm cm\,s^{-1}}$ threshold above which \citet{Zeng2020} find departures from thermal
+      equilibration, so the two results are consistent: the $\sim2\times10^4$~K plateau is in the
+      regime where the equilibrium assumption holds, and the $19.7$--$30.8\%$ reductions of
+      \citet{Zeng2020} apply only to the fastest fronts.
+\item \textbf{Mutual consistency of the H\,\textsc{i} recombination fits of
+      Sec.~\ref{sec:alphaT}.} Evaluated at $T=10^4$~K, eq.~(\ref{eq:aB_hui}) gives
+      $\aB=2.5918\times10^{-13}\cms$, reproducing the $2.59\times10^{-13}\cms$ quoted by
+      \citet{Shapiro2006} to $0.07\%$. For Case~A the four independent fits give
+      $4.2970\times10^{-13}$ (eq.~\ref{eq:aA_hui}), $4.1923\times10^{-13}$
+      (eqs.~\ref{eq:verner}--\ref{eq:verner_HI}), $4.1206\times10^{-13}$ (eq.~\ref{eq:seaton}) and
+      $4.1699\times10^{-13}\cms$ (eq.~\ref{eq:abel} with $T$ in eV): they agree to within $4\%$ and
+      are all consistent with the $4.2\times10^{-13}\cms$ of \citet{Gnedin2022}. Over
+      $10^2$--$10^6$~K the largest deviation between eq.~(\ref{eq:abel}) and eq.~(\ref{eq:aA_hui})
+      is $3\%$, which is what identifies eq.~(\ref{eq:abel}) as a Case~A rate. The ratio
+      $\aB/\aA=0.603$ at $10^4$~K is the fraction of recombinations landing on excited states, and
+      is bracketed by eq.~(\ref{eq:aeff}) as it must be \citep{Nebrin2023}. \emph{Not verified:} the
+      underlying Ferland et al.\ (1992) and Storey \& Hummer collisional-radiative calculations
+      themselves, which are taken as given by all the fits above.
+\end{enumerate}
+
+\paragraph{Known tensions / open issues, stated explicitly.}
+(i) The definition of $R_p$ used observationally \citep{Eilers2017} is \emph{not} the Str\"omgren
+radius of eq.~(\ref{eq:RS}); it is a flux threshold that traces where the quasar radiation dominates
+the background, which is why $R_p$ is a good clock but a poor neutral-fraction meter
+\citep{Eilers2017,Bolton2007}.
+(ii) The redshift evolution of $R_p$ is measured to be $\propto(1+z)^{-1.44}$ by \citet{Eilers2017}
+and $\propto(1+z)^{-2.44}$ by \citet{Onorato2025}; both are steeper than the $(1+z)^{-1}$ expected at
+fixed $x_{\rm HI}$ and $t_Q$ (eq.~\ref{eq:mesinger}), and the two measurements differ from each
+other, so the redshift scaling should be quoted as observationally uncertain rather than as a
+prediction.
+(iii) Bubble radii inferred from Ly$\alpha$ damping wings can exceed the analytic cosmic-average
+expectation by up to a few dex at a given $x_{\rm HI}$ \citep{Umeda2023}, which is a genuine tension
+with single-source Str\"omgren-sphere modelling and points to merged bubbles around clustered sources
+\citep{Umeda2023,Neyer2023,Furlanetto2004}.
+
+%=====================================================================
+\bibliography{references}
+
+\end{document}

@@ -1,0 +1,29 @@
+1 - Modelo tipico de reionization impulsada por fotones
+
+2 - Armar un flow chart con los puntos claves y en cuales de ellos los electrones pueden meter bocado
+
+3 - Parametrizar el escenario en función de L_ph/L_e y ver cual es el cosciente necesario para que generen calentamiento o ionización significativa.  
+	(Definir bien que significar una contribución a calentamiento 3 medios de nKT o algo con eso)
+	
+4 - Entendamos bien la esfera de strongren 
+
+5 - Revisar la intro de Dounna original para ver que no haya literatura nueva que descarte sus hipotesis
+
+
+
+IDEAS:
+
+1) Reionización de HeIII. Los rayosX de HMXRB tienen un mfp muy largo, y las SED de las poblaciones stellares se derrumban justo ahí. La unica hypotesis está en los AGN que tiene muchas cosas sin definir.
+
+2) Aceleraciín de CR en shocks. Es algo que se asume que tiene que haber ocurrido y produce ciertos mecanismos de calentamiento. Pero es medio muy dificl de que sea observable, sería algo todo teórico. No me queda claro que tanto importa la temperature inicial pre-formación estelar.
+
+3) Incorporar hadrones e ir de lleno al escenario de los neutrones de Gaston?
+
+
+HAGAMOS ESTO:
+
+1) Figura emerito. Describirla exhaustivamente para fijar todos los parameetros y los valores.
+
+2) Una vez definido establecer una parametrización que permita aplicar esto a todos los escnarios. L_gamma/ L_e (o algo asi). Concentrarse en la luminosidad que escapa de la galaxia, con las fracciones de escape ya metidas dentro de L.
+
+3) Hacer un gráfico de L_gamma vs L_e coloreado con un escalar (ratio entre n_ion_gamma/n_ion_elec del otro gráfico) y posicionar las distintas fuente (SFG, AGN, etc) con sus nubes de incerteza.

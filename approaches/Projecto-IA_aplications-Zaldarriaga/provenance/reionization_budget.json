@@ -1,0 +1,147 @@
+{
+  "_scenario": {
+    "scenario": "fiducial-z10",
+    "scenario_hash": "4609fe6ee468"
+  },
+  "checks": [
+    {
+      "detail": "solving dx/dt = 0 at x = 1 gives zeta_crit = C*alpha_B*chi*n_H, which is exactly 1/t_rec with t_rec of MD14 eq. (24). sympy residual 0. So the recombination-time normalisation is not a convention: it is the boundary at which ionizations can just hold the gas ionized.",
+      "id": "B1",
+      "name": "zeta t_rec >= 1 IS the steady-state maintenance condition",
+      "state": "PASS"
+    },
+    {
+      "detail": "N_req - 1 = chi n_H0 alpha_B C (1+z)^(3/2) / (H0 sqrt(Omega_m)) -- linear in the clumping factor and rising as (1+z)^(3/2). sympy-verified. CONSEQUENCE: the requirement gets HARDER at higher redshift, because the gas is denser (t_rec ~ (1+z)^-3) faster than the clock is short (t_H ~ (1+z)^-3/2).",
+      "id": "B2",
+      "name": "the excess over unity scales as C (1+z)^(3/2), analytically",
+      "state": "PASS"
+    },
+    {
+      "detail": "with Y_P = 0.2450 and X_H = 0.7550, singly ionized helium gives n_e/n_HII = 1 + (Y_P/4)/X_H = 1.08113, against the 1.08 quoted in MD14 eq. (24) -- agreement to 0.10%. So chi is not a fudge factor: it is the electron-per-proton ratio of a gas whose helium is singly ionized. Were helium DOUBLY ionized it would be 1 + 2(Y_P/4)/X_H = 1.16225, which is the value appropriate after HeII reionization (z < 3) and NOT here.",
+      "id": "B7",
+      "name": "chi = 1.08 DERIVED from the primordial mass fractions",
+      "state": "PASS"
+    },
+    {
+      "detail": "the Hui & Gnedin (1997) case-B fit gives 1.4277e-13 cm^3/s at 2e4 K against the 1.43e-13 used here (0.16%), and 2.5918e-13 at 1e4 K against the textbook 2.59e-13 (0.07%). Two temperatures, so the fit is anchored and not just consistent at one point. CASE B, not A: recombinations straight to the ground state are excluded because the photon they emit is reabsorbed on the spot and ionizes another atom, so it is not a net recombination.",
+      "id": "B8",
+      "name": "alpha_B(2e4 K) = 1.43e-13 confirmed by an independent fit",
+      "state": "PASS"
+    },
+    {
+      "detail": "exp(delta) = exp(3.76) = 42.948, which is MD14's 43; evaluating Pawlik's eq. (A1) with (alpha, beta, gamma, delta) = (1.00, -1.71, 0.00, 3.76) against MD14's shorthand agrees to 0.084% at z = 20, 10 and 5.5. So the '43' is not a fitted constant of MD14's: it is e^delta from Pawlik's Table A1, and the clumping factor used here is specifically C_100 -- gas BELOW overdensity 100 -- from the run reheated at z_r = 19.5. Pawlik's C_-1 (all gas) is about twice as large at z = 6, so this choice is the LESS demanding one.",
+      "id": "B9",
+      "name": "MD14's '1 + 43 z^-1.71' IS Pawlik+09 eq. (A1) for C_100, r19.5 run",
+      "state": "PASS"
+    },
+    {
+      "detail": "Pawlik+09 Appendix A1 fits C over 6 <= z <= 20. z = 20 sits exactly at the upper edge and z = 10 well inside, so the C_IGM column is on solid ground there. z = 5.5 is BELOW the fitted range: C_IGM(5.5) = 3.330 is an extrapolation, mild (0.5 in z) but real, and it is the only cell of the tables that leaves a source's stated domain. The fixed-C columns are unaffected -- they assume nothing.",
+      "id": "B10",
+      "name": "the clumping fit is used inside its range at z = 20 and 10, OUTSIDE it at z = 5.5",
+      "state": "PASS"
+    },
+    {
+      "detail": "at (1+z)/7 = 1 and C_IGM = 1: t_rec = 3.1487 Gyr against the 3.2 Gyr printed in their eq. (24). Agreement to 1.6%.",
+      "id": "B3",
+      "name": "MD14 eq. (24) 3.2 Gyr normalisation reproduced from our own n_H0",
+      "state": "PASS"
+    },
+    {
+      "detail": "across all nine (z, C) cells, N_req(t_rec) - t_rec/t_H = 1 to 2.2e-16. THAT is what choosing the recombination time as the clock buys: the recombination part of the budget becomes unity everywhere, and the whole (z, C) dependence moves into the amortised initial ionization, t_rec/t_H. In the Hubble-time normalisation it is the other way round -- the '1' is the initial ionization and the recombination term carries all the variation.",
+      "id": "B6",
+      "name": "in t_rec units the recombination term is exactly 1, by construction",
+      "state": "PASS"
+    },
+    {
+      "detail": "at fixed C = 1 the excess N_req - 1 grows by 2.6362 from z = 10 to z = 20 against the matter-domination prediction (21/11)^1.5 = 2.6378, a 0.06% departure -- that residual is Lambda and radiation in the exact Planck-18 H(z), which the power law omits.",
+      "id": "B4",
+      "name": "the exact table obeys the analytic (1+z)^(3/2) law",
+      "state": "PASS"
+    },
+    {
+      "detail": "alpha_B falls with T, so t_rec ~ 1/alpha_B lengthens and the requirement drops as the assumed IGM gets hotter. Between the two values in common use the recombination term changes by 1.815: at z = 10 with C_IGM = 1.838, N_req goes from 2.606 at MD14's 2e4 K to 3.915 at 1e4 K. T is an ASSUMPTION about photoionized gas, not a measurement of this IGM, and it is the second-largest lever after C.",
+      "id": "B11",
+      "name": "the gas temperature is a real knob, and MD14's choice is the milder one",
+      "state": "PASS"
+    },
+    {
+      "detail": "(N_req-1)|C=12 / (N_req-1)|C=1 = 12.0000000000 at z = 10, against the analytic 12. Exact, as eq. (1d) requires.",
+      "id": "B5",
+      "name": "N_req - 1 is exactly linear in the clumping factor",
+      "state": "PASS"
+    }
+  ],
+  "derived": {
+    "C_MD14_z10": 1.8384331778959595,
+    "C_MD14_z20": 1.25627554336224,
+    "C_MD14_z5p5": 3.330495434870047,
+    "C_pawlik_vs_MD14_maxreldiff": 0.00083927049014898,
+    "C_pawlik_vs_MD14_maxreldiff_pct": 0.083927049014898,
+    "NreqTrec_maintenance_term": 1.0000000000000002,
+    "NreqTrec_z10_C1": 2.1450233650792896,
+    "NreqTrec_z10_C12": 1.0954186137566075,
+    "NreqTrec_z10_C3": 1.38167445502643,
+    "NreqTrec_z10_CMD14": 1.6228256641830954,
+    "NreqTrec_z20_C1": 1.4343417770600906,
+    "NreqTrec_z20_C12": 1.036195148088341,
+    "NreqTrec_z20_C3": 1.1447805923533636,
+    "NreqTrec_z20_CMD14": 1.3457376682647484,
+    "NreqTrec_z5p5_C1": 3.527332650125586,
+    "NreqTrec_z5p5_C12": 1.2106110541771322,
+    "NreqTrec_z5p5_C3": 1.8424442167085289,
+    "NreqTrec_z5p5_CMD14": 1.7588458532819458,
+    "Nreq_excess_linearity_C12_over_C1": 11.999999999999998,
+    "Nreq_excess_ratio_predicted": 2.637788158884165,
+    "Nreq_excess_ratio_z20_z10_C1": 2.6362266435192048,
+    "Nreq_rise_z5p5_to_z20_C1": 2.366121455831865,
+    "Nreq_rise_z5p5_to_z20_C12": 4.980440124485905,
+    "Nreq_rise_z5p5_to_z20_C3": 3.615419653682332,
+    "Nreq_rise_z5p5_to_z20_CMD14": 1.6793433397655577,
+    "Nreq_z10_C1": 1.8733446237848195,
+    "Nreq_z10_C12": 11.480135485417833,
+    "Nreq_z10_C3": 3.620033871354458,
+    "Nreq_z10_CMD14": 2.6055857321030764,
+    "Nreq_z10_CMD14_at_1e4K": 3.9147948991003467,
+    "Nreq_z20_C1": 3.3023343661957973,
+    "Nreq_z20_C12": 28.628012394349568,
+    "Nreq_z20_C3": 7.907003098587392,
+    "Nreq_z20_CMD14": 3.8923663568941835,
+    "Nreq_z5p5_C1": 1.3956740716147156,
+    "Nreq_z5p5_C12": 5.748088859376586,
+    "Nreq_z5p5_C3": 2.1870222148441467,
+    "Nreq_z5p5_CMD14": 2.3177906892092546,
+    "X_H": 0.755,
+    "Y_P": 0.245,
+    "alpha_B_2e4K": 1.43e-13,
+    "alpha_B_HG97_1e4": 2.591815677359873e-13,
+    "alpha_B_HG97_2e4": 1.4276758454238053e-13,
+    "alpha_B_ratio_1e4_over_2e4": 1.8154090689896718,
+    "chi_He": 1.08,
+    "chi_HeIII": 1.1622516556291391,
+    "chi_derived": 1.0811258278145695,
+    "n_H0_cm3": 1.8998672873506902e-07,
+    "n_H_cm3_z10": 0.00025287233594637685,
+    "n_H_cm3_z20": 0.0017594670948154743,
+    "n_H_cm3_z5p5": 5.217510537886833e-05,
+    "n_He_over_n_H": 0.08112582781456953,
+    "pawlik_exp_delta": 42.94842597876301,
+    "pawlik_fit_z_hi": 20.0,
+    "pawlik_fit_z_lo": 6.0,
+    "t_H_Gyr_z10": 0.708646736228584,
+    "t_H_Gyr_z20": 0.268492839279655,
+    "t_H_Gyr_z5p5": 1.5560362767241547,
+    "t_rec_z6_C1_Gyr": 3.148676737397136,
+    "trec_over_tH_z10_C1": 1.1450233650792894,
+    "trec_over_tH_z10_C12": 0.09541861375660747,
+    "trec_over_tH_z10_C3": 0.3816744550264299,
+    "trec_over_tH_z10_CMD14": 0.6228256641830953,
+    "trec_over_tH_z20_C1": 0.4343417770600906,
+    "trec_over_tH_z20_C12": 0.03619514808834088,
+    "trec_over_tH_z20_C3": 0.14478059235336352,
+    "trec_over_tH_z20_CMD14": 0.34573766826474833,
+    "trec_over_tH_z5p5_C1": 2.527332650125586,
+    "trec_over_tH_z5p5_C12": 0.2106110541771322,
+    "trec_over_tH_z5p5_C3": 0.8424442167085288,
+    "trec_over_tH_z5p5_CMD14": 0.7588458532819458
+  }
+}

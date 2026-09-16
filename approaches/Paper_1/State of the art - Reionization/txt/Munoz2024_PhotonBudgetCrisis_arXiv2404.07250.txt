@@ -1,0 +1,1235 @@
+MNRAS 000, 1–9 (-)
+
+Preprint 6 September 2024
+
+Compiled using MNRAS LATEX style file v3.0
+
+Reionization after JWST: a photon budget crisis?
+Julian B. Muñoz1★ , Jordan Mirocha2,3 , John Chisholm1 , Steven R. Furlanetto4 , and Charlotte Mason5
+1 Department of Astronomy, The University of Texas at Austin, 2515 Speedway, Stop C1400, Austin, TX 78712, USA
+2 Jet Propulsion Laboratory, California Institute of Technology, 4800 Oak Grove Drive, Pasadena, CA 91109, USA
+3 California Institute of Technology, 1200 E. California Boulevard, Pasadena, CA 91125, USA
+4 Department of Physics and Astronomy, University of California, Los Angeles, CA 90095, USA
+
+arXiv:2404.07250v2 [astro-ph.CO] 5 Sep 2024
+
+5 Niels Bohr Institute, University of Copenhagen, Jagtvej 128, 2200 København N, Denmark
+
+6 September 2024
+
+ABSTRACT
+
+New James Webb Space Telescope (JWST) observations are revealing the first galaxies to be prolific producers of ionizing
+photons, which we argue gives rise to a tension between different probes of reionization. Over the last two decades a consensus
+has emerged where star-forming galaxies are able to generate enough photons to drive reionization, given reasonable values for
+their number densities, ionizing efficiencies 𝜉ion (per unit UV luminosity), and escape fractions 𝑓esc . However, some new JWST
+observations infer high values of 𝜉ion during reionization and an enhanced abundance of earlier (𝑧 ≳ 9) galaxies, dramatically
+increasing the number of ionizing photons produced at high 𝑧. Simultaneously, recent low-𝑧 studies predict significant escape
+fractions for faint reionization-era galaxies. Put together, we show that the galaxies we have directly observed (𝑀UV < −15)
+not only can drive reionization, but would end it too early. That is, our current galaxy observations, taken at face value, imply
+an excess of ionizing photons and thus a process of reionization in tension with the cosmic microwave background (CMB) and
+Lyman-𝛼 forest. Considering galaxies down to 𝑀UV ≈ −11, below current observational limits, only worsens this tension. We
+discuss possible avenues to resolve this photon budget crisis, including systematics in either theory or observations.
+Key words: cosmology: theory – reionization – bubbles
+
+1 INTRODUCTION
+The epoch of reionization represents the last major phase transition
+of our universe. During reionization the intergalactic gas went from
+cold and neutral before the first cosmic structures formed (at redshift
+𝑧 ∼ 30, or 100 Myrs after the Big Bang) to hot and ionized by 𝑧 ∼ 5
+(roughly a billion years later). While we are certain that this process
+took place, we do not know how. The likely culprits for reionization
+are the first star-forming galaxies (Robertson et al. 2015, hereafter
+R15), but other suspects include supermassive black holes (Madau
+& Haardt 2015; Madau et al. 2024), and even dark matter (Liu et al.
+2016). More broadly, the timing and topology of reionization hold a
+treasure trove of information on the astrophysics of the early universe,
+which we have yet to uncover.
+The accounting of reionization is rather simple: there have to be
+enough photons to ionize all the intergalactic hydrogen atoms, including their recombinations. During the WMAP era this was a stringent
+requirement, as cosmic microwave background (CMB) data implied
+an approximate midpoint of reionization at 𝑧 = 10 − 11 (Komatsu
+et al. 2011), earlier than expected from standard galaxy-formation
+models and beyond the reach of contemporaneous direct observations. With the advent of the Planck satellite this tension was eased,
+as newer CMB data preferred later reionization (with an effective
+𝑧 ∼ 7 − 8, Ade et al. 2016), and by then Hubble Space Telescope
+
+★ E-mail: julianbmunoz@utexas.edu
+
+© - The Authors
+
+(HST) observations had characterized a population of star-forming
+galaxies at those redshifts (Madau & Dickinson 2014). Together,
+these observations alleviated the demand for ionizing photons and
+quickly led to the consensus that, under reasonable assumptions,
+star-forming galaxies were able to drive reionization (R15, Bouwens
+et al. 2015, Finkelstein et al. 2019, hereafter F19). In this Letter we
+examine whether this consensus holds in light of recent James Webb
+Space Telescope (JWST) observations of the high-redshift universe.
+Three key factors determine the average reionization history: the
+production rate of ionizing photons (by early galaxies and black
+holes), the fraction 𝑓esc of those photons that escape to the intergalactic medium (IGM) and can ionize neutral hydrogen, and the
+number of recombinations per hydrogen atom. While there remain
+open questions about the last factor (Davies et al. 2021), the first two
+are particularly uncertain.
+The production rate of ionizing photons is given by the earlygalaxy abundance, usually expressed through the UV luminosity
+function (UVLF, the comoving number density of galaxies per UV
+magnitude), times the ionizing efficiency 𝜉ion of each galaxy. Though
+there is broad agreement on the bright end of the UVLF, the number density of ultra-faint (below 𝑀UV ≈ −14) galaxies is virtually
+unconstrained. Theoretically, we expect the UVLF to “turn over” at
+turn due to feedback (Shapiro et al. 2004), and
+some magnitude 𝑀UV
+HST observations have constrained this turnover to be fainter than
+turn ≈ −15 (Atek et al. 2018). At the same time, some new JWST
+𝑀UV
+observations are finding early galaxies to have higher ionizing efficiencies 𝜉ion than canonically assumed [with log10 𝜉ion /(Hz erg −1 )
+
+J. B. Muñoz et al.
+
+2 MODELING REIONIZATION
+We will follow a simple model of reionization to solve for the volumeaveraged hydrogen neutral fraction 𝑥HI ≡ 𝑛HI /𝑛H , and its complement the ionized fraction 𝑥HII ≡ 1 − 𝑥HI . This quantity evolves
+as (Madau et al. 1999)
+𝑛¤
+𝑥
+𝑥¤HII = ion − HII ,
+𝑛H
+𝑡 rec
+MNRAS 000, 1–9 (-)
+
+(1)
+
+0.10
+
+øCMB (< z)
+
+≈ 25.5−26.0 vs 25.2 Atek et al. 2024; Simmonds et al. 2024; Endsley
+et al. 2023; Prieto-Lyon et al. 2023; Curtis-Lake et al. 2023; Hsiao
+et al. 2023; Calabro et al. 2024, though see Matthee et al. 2023; Meyer
+et al. 2024; Pahl et al. 2024]. Moreover, JWST is also unveiling an
+enhanced population of both star-forming galaxies at 𝑧 ≳ 9 (Finkelstein et al. 2022, 2023; Eisenstein et al. 2023; Harikane et al. 2023;
+Castellano et al. 2022, with an unknown origin Mason et al. 2023;
+Ferrara et al. 2022; Muñoz et al. 2023; Mirocha & Furlanetto 2023)
+and supermassive black holes (Matthee et al. 2024, though they are
+likely obscured Greene et al. 2024), which would further boost the
+ionizing-photon budget. Such a wealth of photons will accelerate the
+process of reionization, if they escape their host galaxies.
+The escape fraction 𝑓esc of early galaxies is a contentious topic. The
+basic problem is that the ionizing-photon production is dominated by
+very massive, short-lived stars, which may live and die before their
+birth clouds are dispersed, minimizing photon escape. The BPASS
+models (Eldridge & Stanway 2009) provided a new hope for high
+escape fractions, as binary interactions help to lengthen effective
+stellar lifetime and so boost the effective 𝑓esc . Models in which the
+escape fraction is set by local, cloud-scale physics, suggest that 𝑓esc
+could be independent of galaxy properties like mass or luminosity
+(Ma et al. 2016). However, different simulations predict 𝑓esc growing
+for brighter galaxies (Sharma et al. 2016), declining (Wise et al. 2014;
+Kimm & Cen 2014), or peaking at intermediate masses (e.g., Yoo
+et al. 2020; Ma et al. 2020; Rosdahl et al. 2022; Yeh et al. 2023). From
+a theoretical perspective, there seems to be no clear consensus on the
+nature of 𝑓esc in high-𝑧 galaxies. Observationally, it is extremely
+challenging to measure 𝑓esc while there is neutral hydrogen in the
+IGM. However, recent studies of low-𝑧 analogues of reionizationera galaxies have found a strong correlation between their escape
+fractions and UV slopes 𝛽UV : bluer galaxies exhibit larger values
+of 𝑓esc (Flury et al. 2022; Chisholm et al. 2022; Begley et al. 2022;
+Saldana-Lopez et al. 2023). JWST and HST data show that early
+galaxies have bluer slopes than their average low-𝑧 counterparts (e.g.,
+Topping et al. 2022; Cullen et al. 2023; Weibel et al. 2024), such
+that the few studies of reionization-era galaxies indicate modest 𝑓esc
+values near 5–15% (Mascia et al. 2023; Lin et al. 2024).
+Here we argue that combining the abundance of directly observed
+reionization-era galaxies, the new JWST estimates of 𝜉ion , and the
+low-𝑧 insights on 𝑓esc leads to too many ionizing photons at high
+redshifts, ending reionization too early. Such an early reionization is
+in contradiction with current CMB (Aghanim et al. 2020) and Lyman𝛼 forest observations (Bosman et al. 2022), and poses a tension in
+the photon budget during reionization. We will outline possible ways
+to ease this tension, including physical ingredients missing in our
+theoretical models, interpretation of observations, or both.
+Through this paper we assume a flat ΛCDM cosmology with
+ℎ = 0.7 and Ω 𝑀 = 0.3 to match that assumed in Bouwens et al.
+(2021) and Donnan et al. (2024), all magnitudes are AB (Oke &
+Gunn 1983), and quantities are spatially averaged unless otherwise
+indicated.
+
+(+ low-z fesc)
+
+0.08
+0.06
+
+JWST ξion
+
+Planck
+
+pre-JWST ξion
+1.0
+
+xHI
+
+2
+
+0.5
+
+0.0
+
+6
+
+8
+
+10
+
+12
+
+14
+
+Redshift, z
+Figure 1. The new JWST and low-𝑧 observations imply an earlier reionization,
+in tension with the CMB. Bottom: Evolution of the neutral fraction 𝑥HI as
+a function of redshift 𝑧 for a pre-JWST model (black solid, with a cutoff at
+𝑀UV = −13 and 𝑓esc = 0.2, following R15), for the same model but with a
+JWST-calibrated 𝜉ion (purple dashed, following Simmonds et al. 2024), and a
+model where in addition 𝑓esc is determined from low-𝑧 analogues (blue dotdashed, using the fit in Chisholm et al. 2022). Green points show a collection
+of observational constraints from (McGreer et al. 2015; Greig et al. 2017,
+2018; Sobacchi & Mesinger 2015; Mason et al. 2019; Whitler et al. 2019;
+Wang et al. 2020; Nakane et al. 2023) (see also Bruton et al. 2023) Top: CMB
+optical depth 𝜏CMB , where the red band is the measurement from Aghanim
+et al. (2020). The new galaxy observations give rise to far more ionizing
+photons, and at face value are in severe tension with CMB data.
+
+which showcases the competition between the “sources” (first term)
+and “sinks” (second) of ionizing photons. The former is given by
+the density of ionizing photons produced (𝑛¤ ion ) divided by that of
+hydrogen 𝑛H = 𝜌b (1 − 𝑌He )/𝑚 H , where 𝑌He is the Helium mass
+fraction, 𝑚 H the proton mass, and 𝜌b the baryon energy density,
+which scales as (1 + 𝑧) 3 . The sink term captures the number of
+recombinations that hydrogen atoms suffer on average, characterized
+by a timescale (Shull et al. 2012)
+𝑡 rec = [𝐶 𝛼B (1 + 𝑥He )𝑛H ] −1
+
+(2)
+
+where 𝑥 He ≡ 𝑛He /𝑛H ≈ 𝑌He /[4(1 − 𝑌He )], 𝛼B is the case-B recombination coefficient, and 𝐶 is the clumping factor. The clumping
+factor is difficult to estimate theoretically, as it depends on how ionized regions penetrate into high-density clumps. Simulations predict
+𝐶 ≈ 2 − 5 during reionization, growing towards lower 𝑧 (e.g., Pawlik
+et al. 2015). Recent work in Davies et al. (2021) instead suggests
+that more recombinations are needed to explain the short mean free
+path of ionizing photons at 𝑧 ∼ 6 (thanks to absorption by pervasive
+high-density clumps known as Lyman-limit systems, Becker et al.
+2021; Zhu et al. 2023). For simplicity and comparison with past literature (R15), we will set 𝐶 = 3 and evaluate 𝛼B at 𝑇 = 2 × 104 K for
+now (which yields nearly identical results to using the 𝐶 (𝑧) fit from
+Shull et al. 2012), and return to the effect of recombinations later.
+For reionization to progress the sources have to win over the sinks.
+Our sources will be star-forming galaxies, which produce a background of ionizing photons at a rate of
+∫
+𝑛¤ ion =
+𝑑𝑀UV ΦUV 𝑁¤ ion 𝑓esc ,
+(3)
+where all factors inside the integral are assumed to depend on 𝑀UV ,
+ion. cutoff that will be
+and we integrate down to a cutoff magnitude 𝑀UV
+a free parameter. Here, ΦUV is the UVLF, taken at 𝑧 ≤ 9 from the
+pre-JWST fit in Bouwens et al. (2021) and at 𝑧 > 9 from the JWST
+
+A JWST photon budget crisis?
+calibrations of Donnan et al. (2024, see Appendix A for alternative
+analyses using only pre-JWST UVLFs, including that of Finkelstein
+& Bagley 2022), 𝑁¤ ion ≡ 𝐿 UV 𝜉ion is the production rate of ionizing
+photons per galaxy, given by their UV luminosity 𝐿 UV times the
+ionizing efficiency 𝜉ion , of which a fraction 𝑓esc escapes into the
+IGM.
+It is apparent that the product 𝜉ion × 𝑓esc will determine the timing of reionization, and that these two factors are, at face value,
+fully degenerate. Increasing 𝜉ion per galaxy while decreasing 𝑓esc
+will yield identical effects on the IGM. Fortunately, though, direct
+Balmer-line observations can be used to tease out the amount of ionizations in the galaxy, and thus the amount of non-escaping ionizing
+photons 𝜉ion (1 − 𝑓esc ). Using the Robertson et al. 2013 inference1
+of log10 𝜉ion = 25.2 Hz erg −1 (though see Bouwens et al. 2016;
+Lam et al. 2019; De Barros et al. 2019 for higher reported values), R15 showed that 𝑓esc = 20% is sufficient if galaxies down to
+ion. cutoff ≈ −13) contribute to reionization. We illus0.001𝐿★ (𝑀UV
+trate what reionization would look like for this pre-JWST calibrated
+model in Fig. 1. It is over by 𝑧 ∼ 6, and produces an optical depth
+𝜏CMB ≈ 0.055, bringing galaxy observations into agreement with
+Planck CMB measurements.
+The arrival of JWST is opening a new window to reionization.
+Observations from different teams are finding large values of 𝜉ion ,
+in some cases growing towards higher redshifts and fainter galaxies
+(though see Endsley et al. 2023 where 𝜉ion is still high but grows
+towards the bright end instead, we study this case in Appendix A). In
+particular, Simmonds et al. (2024) find a consistent increase in 𝜉ion
+up to 𝑧 = 9 and 𝑀UV = −16.5 (where we will conservatively cap
+𝜉ion to avoid extrapolation), well fit by
+h
+i
+log10 𝜉ion /(Hz erg −1 ) ≈ 25.8 + 0.11(𝑀UV + 17) + 0.05(𝑧 − 7). (4)
+Such faint, early galaxies will produce ∼ 4 times more ionizing photons than expected pre-JWST (Atek et al. 2024, implying a very
+young stellar population). The purple line in Fig. 1 shows how reionization would progress assuming this JWST-calibrated 𝜉ion , while
+keeping everything else the same. In this case the additional photons
+would kick-start reionization by 𝑧 ∼ 12 and finish it by 𝑧 ∼ 8, far
+overproducing the CMB optical depth (𝜏CMB ≈ 0.08) when compared to observations. Here we have kept 𝑓esc = 0.2 as in R15, so the
+astute reader may wonder if newer inferences of the escape fraction
+delay reionization.
+We do not have a direct handle on 𝑓esc during reionization, as
+escaping ionizing photons will be absorbed by the neutral IGM before reaching us. However, detailed studies of low-𝑧 analogues find
+a strong correlation, with significant scatter, between the FUV continuum slopes 𝛽UV of galaxies and their LyC escape fractions. This
+is physically explained by the dust along the line-of-sight simultaneously attenuating the FUV stellar continuum and the ionizing
+photons. We will use the fit from Chisholm et al. (2022, calibrated
+on the 𝑧 ∼ 0 LzLCS survey Flury et al. 2022, see Trebitsch et al.
+2022 for an implementation on reionization), where
+𝑓esc = 𝐴 𝑓 × 10𝑏 𝑓 𝛽UV
+
+(5)
+
+with 𝐴 𝑓 = 1.3 × 10 −4 and 𝑏 𝑓 = −1.22. In this relation galaxies
+that are bluer have less dust and low-ionization gas along the line-ofsight, and thus fewer sinks of ionizing photons. This correlation is
+similarly observed at 𝑧 ∼ 3 in different surveys (Steidel et al. 2018;
+Pahl et al. 2021; Begley et al. 2022; Saldana-Lopez et al. 2023). We
+1
+
+We will assume 𝑓esc = 0 in all inferences of 𝜉ion , which conservatively
+underestimates the production of ionizing photons.
+
+3
+
+can then employ the 𝑓esc − 𝛽UV relation, with the 𝛽UV − 𝑀UV measurements from Zhao & Furlanetto (2024, which incorporates both
+JWST and HST measurements from Bouwens et al. 2014; Topping
+et al. 2022; Cullen et al. 2023) to predict2 𝑓esc (𝑀UV ). Note that
+here, and throughout the text, we cap the UV slopes at 𝛽UV = −2.7
+when computing 𝑓esc to avoid extrapolation in this relation (though
+we implicitly extrapolate in 𝑧 and 𝑀UV , see Table A1), as that corresponds to the bluest galaxies where Eq. (5) is calibrated. We show
+the result of applying this calibration as the blue line in Fig. 1. The
+JWST-calibrated 𝜉ion multiplied by 𝑓esc (inferred using the high-𝑧
+𝛽UV − 𝑀UV and low-𝑧 𝑓esc − 𝛽UV relations) produces an even earlier
+reionization, and consequently even more tension with 𝜏CMB .
+The curves shown in Fig. 1 are meant to illustrate the impact of the
+new 𝜉ion and 𝑓esc results for a particular reionization model. Let us
+now move to perform a more detailed study, where we vary different
+underlying assumptions and compare against current observations.
+3 OBSERVATIONAL CONSTRAINTS
+To understand reionization we need to know the ionizing-photon
+budget, i.e., how many photons are produced and what fraction escape
+their galaxies. We model the former by taking the ionizing efficiency
+𝜉ion from Eq. (4), as measured in JWST observations, and integrating
+ion. cutoff (below where we
+the UVLF down to a cutoff magnitude 𝑀UV
+will assume galaxies do not emit ionizing photons efficiently, either
+because 𝑓esc , 𝜉ion , or the UVLF itself goes to zero, see Appendix B
+for an example). For the latter we define the ionization-averaged
+escape fraction as
+⟨ 𝑓esc ⟩ ion. ≡
+
+𝑛¤ ion ( 𝑓esc )
+,
+𝑛¤ ion ( 𝑓esc = 1)
+
+(6)
+
+ion. cutoff
+with 𝑛¤ ion defined in Eq. (3). These two free parameters, 𝑀UV
+and ⟨ 𝑓esc ⟩ ion. , encapsulate our uncertainty about the impact of high𝑧 galaxies on reionization. They must obey three different observational constraints.
+ion. cutoff has to be fainter than −15 (Atek et al.
+First, the cutoff 𝑀UV
+2018), given current HST and JWST observations, which we show as
+a green band in Fig. 2. Second, ⟨ 𝑓esc ⟩ ion. should follow the constraints
+derived from low-𝑧 analogues, shown as a blue band (using Eq. 5
+with the best-fit amplitude and error from the LzLCS survey of 𝑧 ∼ 0
+galaxies Chisholm et al. 2022, see Fig. A1 for the VANDELS 𝑧 ∼ 3
+sample of Saldana-Lopez et al. 2023). Finally, the combination of
+ion. cutoff and ⟨ 𝑓 ⟩
+𝑀UV
+esc ion. have to produce the correct reionization
+history, which we parametrize through the CMB optical depth3
+∫
+𝜏CMB =
+𝑑ℓ𝑛𝑒 𝜎𝑇 ,
+(7)
+
+where ℓ is proper distance, 𝜎𝑇 is the Thomson cross section, and 𝑛𝑒
+is the physical (not comoving) electron density, computed assuming
+that HeI reionization tracks HI, and that HeII reionization takes place
+at 𝑧 = 4. The regions of parameter space that predict the correct
+𝜏CMB within 1𝜎 are shown as red bands in Fig. 2. In the CMB bands
+ion. cutoff requires higher values of ⟨ 𝑓 ⟩
+a brighter cutoff 𝑀UV
+esc ion. to
+compensate the missing star formation — and subsequent photon
+production — at the faint end.
+∫
+Note that ⟨ 𝑓esc ⟩ ( 𝑀UV ) ≡ 𝑑𝛽UV 𝑃 (𝛽UV | 𝑀UV ) 𝑓esc (𝛽UV ), where the
+PDF 𝑃 (𝛽UV | 𝑀UV ) can be approximated as a Gaussian with width 𝜎𝛽 =
+0.34 (Smit et al. 2012),
+which makes ⟨ 𝑓esc (𝛽UV ) ⟩ larger than 𝑓esc (⟨𝛽UV ⟩)
+
+by a factor of exp (𝑏 𝑓 ln[10] 𝜎𝛽 ) 2 /2 ≈ 1.1 − 1.5.
+3 We do not include measurements of 𝑥 (𝑧) as a constraint, but will see
+HI
+that the models that predict the right 𝜏CMB broadly agree with them.
+2
+
+MNRAS 000, 1–9 (-)
+
+4
+
+J. B. Muñoz et al.
+
+τCMB
+
+0.30
+
+pre-JWST ξion
+ion. cutoÆ
+hfesc iion. (MUV < MUV
+)
+
+ion. cutoÆ
+hfesc iion. (MUV < MUV
+)
+
+0.30
+
+(Robertson+ 13)
+0.25
+
+0.25
+
+R15
+
+0.20
+
+(Simmonds+ 24)
+
+M22
+
+0.20
+
+0.15
+
+0.15
+
+0.10
+0.05
+
+JWST-calibrated ξion
+
+F19
+
+0.00
+°10
+
+low-z fesc
+
+Allowed by
+HST+JWST
+°12
+
+°14
+
+°16
+
+ion. cutoÆ
+MUV
+
+°18
+
+0.10
+
+Too many
+photons
+
+0.05
+
+0.00
+°20
+
+°12
+
+°14
+
+Not enough
+photons
+°16
+°18
+
+ion. cutoÆ
+MUV
+
+C=3
+°20
+
+ion. cutoff on the UVLF (at which galaxies cease to emit ionizing
+Figure 2. Tension in our models of reionization, expressed through the effective cutoff 𝑀UV
+photons), and the average escape fraction ⟨ 𝑓esc ⟩ ion. above that cutoff. The three colored contours correspond to the regions allowed by the CMB optical depth
+𝜏CMB (red), the low-𝑧 𝑓esc studies (blue), and direct HST+JWST observations of no cutoff down to 𝑀UV ≈ −15 (green). The left panel assumes a pre-JWST
+value of 𝜉ion from Robertson et al. (2013), where the three colored regions nicely overlap for faint cutoffs and 𝑓esc ≈ 0.2. The right panel instead takes the new
+JWST 𝜉ion calibration from Simmonds et al. (2024), in which case the three regions do not overlap, showing a tension in reionization. In more detail, the blue
+region follows the results from the LzLCS survey of reionization-era analogues (Chisholm et al. 2022, evaluated at 𝑧 = 7, with solid lines corresponding to the
+𝑀UV directly observed, and dashed to extrapolation, in all cases capping UV slopes at 𝛽UV = −2.7). We highlight three popular pre-JWST models from R15,
+F19, and M22 (the latter assumes a larger 𝜉ion closer to the new JWST value) as colored stars. The red diamond and black circle on the right panel correspond
+ion. cutoff constraints.
+to possible solutions to the tension (further explored in Fig. 3), which are in conflict with either the 𝑓esc or 𝑀UV
+
+Fig. 2 showcases the tension between these three observations.
+The left panel shows the pre-JWST situation, where the lower 𝜉ion
+allowed the three observational bounds (red, blue, and green regions) to overlap over a broad swath of parameter space fainter
+ion. cutoff ≈ −15, with 𝑓
+than 𝑀UV
+esc ≈ 15 − 30%. The right panel,
+updated with the recent JWST observations, shows no overlap between the three. In this case the requirements from 𝜏CMB (red) and
+the low-𝑧 𝑓esc studies (blue) only overlap for cutoffs brighter than
+ion. cutoff ≈ −15 (outside of the green region, and thus disfavored
+𝑀UV
+by direct HST+JWST observations). In other words, the new JWST
+observations imply an overproduction of photons during reionization, which would end this process earlier than allowed by the CMB.
+Note that the galaxies observed by JWST (𝑀UV ≲ −15) already produce too many photons, including fainter objects would only worsen
+this tension.
+Fig. 2 also shows the parameter space of three popular reionization
+ion. cutoff ≈ −13), F19 (their best
+models: R15 (⟨ 𝑓esc ⟩ ion. = 0.2 and 𝑀UV
+ion.
+cutoff
+fit is at ⟨ 𝑓esc ⟩ ion. ≈ 0.05 and 𝑀UV
+≈ −11), and the Lyman-𝛼
+emitter (LAE) model of Matthee et al. (2022, hereafter M22, which
+we approximate as having ⟨ 𝑓esc ⟩ ion. = 0.17 for galaxies down to
+ion. cutoff = −17). Each of these models was calibrated to give rise
+𝑀UV
+to the correct 𝜏CMB , though with different 𝜉ion assumptions. R15
+assumed log10 𝜉ion ≈ 25.2 Hz erg −1 , F19 fit for a somewhat higher
+𝑧-dependent value, whereas M22 used a larger log10 𝜉ion ≈ 25.8 Hz
+erg −1 , calibrated to low-𝑧 LAEs (Naidu et al. 2022). Each of these
+models is at odds with one of the three observational constraints,
+and thus outside one of the color bands in Fig. 2, either 𝜏CMB (R15,
+ion. cutoff (M22, green). As
+outside red band), 𝑓esc (F19, blue), or 𝑀UV
+such, they illustrate three possible avenues to reduce the photon budget during reionization and reconcile galaxy and CMB observations.
+
+4 POSSIBLE OUTS
+Let us now discuss possible physical mechanisms that may resolve
+this apparent photon budget crisis.
+MNRAS 000, 1–9 (-)
+
+• Perhaps some of the new 𝜉ion calibrations are biased? It is
+possible that photometry alone cannot reliably recover 𝜉ion , that dust
+produces a systematic shift in this quantity (Shivaei et al. 2018),
+or that the JWST samples used to infer 𝜉ion are not representative
+of the high-𝑧 galaxy population (if they are biased towards efficient
+ionizers or preferentially target galaxies in a burst). For example, the
+sample in Simmonds et al. (2024) is selected based on an emission
+line flux cut in photometry, which could bias the sample towards
+strong line emitters (and thus high 𝜉ion ) at fixed UV magnitude.
+We have repeated our analysis with a lower fixed 𝜉ion = 1025.5
+Hz erg −1 (in line with the lowest mean values reported in Endsley
+et al. 2023, which did not make an emission-line selection, as well
+as the 𝑧 > 4 mean in Pahl et al. 2024, though see e.g., Matthee
+et al. 2023 for lower values), finding that this still requires a cutoff at
+𝑀UV ≈ −14 or brighter (see Fig. A1 in Appendix A). An alternative
+solution involves keeping a high 𝜉ion on average but cutting off photon
+production for faint galaxies (either smoothly or setting 𝜉ion → 0
+ion. cutoff ). Fig. 3 shows that a 𝜉
+below a cutoff magnitude 𝑀UV
+ion cutoff
+ion.
+cutoff
+at 𝑀UV
+= −17 would be able to solve the tension. Such a cutoff
+would, however, be in conflict with the detections of ionizing photons
+down to 𝑀UV ≈ −15 from Atek et al. (2024) and Prieto-Lyon et al.
+(2023, and down to 𝑀UV ≈ −16.5 for the more statistically robust
+samples of Simmonds et al. 2024; Endsley et al. 2023). Further
+JWST observations of high-𝑧 galaxies will be able to determine the
+𝜉ion distribution down to faint magnitudes and pinpoint the impact
+of burstiness on this quantity.
+• Maybe 𝑓esc is far lower than expected? From Fig. 2 it is apparent
+that little to no extrapolation of the LzLCS relation to bluer galaxies
+is required to overproduce reionization (see also Appendix B). One
+possibility is that the low-𝑧 analogues in both LzLCS and VANDELS
+are biased (e.g., they may be more likely to be leakers), or that different mechanisms set 𝑓esc at high and low redshifts (so that 𝑓esc may
+not correlate well with 𝛽UV at high 𝑧). Many of the LzLCS properties
+match those observed at high-redshift (Tang et al. 2023), but it is possible (perhaps likely) that high-redshift galaxies have larger neutral
+
+5
+
+A JWST photon budget crisis?
+1.00
+fesc = 3 %
+
+0.75
+
+xHI
+
+gas fractions and lower dust-to-gas ratios than the low-redshift benchmarks (Heintz et al. 2023). This could lead to significantly lower 𝑓esc
+at fixed 𝛽UV , or a turnaround towards fainter/bluer galaxies. While
+plausible, this 𝑓esc − 𝛽UV redshift evolution is not observed in 𝑧 ∼ 3
+galaxies, which in fact appear to have larger 𝑓esc at fixed 𝛽UV (Pahl
+et al. 2021; Saldana-Lopez et al. 2023). Another possibility is that
+there is a covariance between 𝑓esc and 𝜉ion , such that galaxies that
+produce large amounts of ionizing photons have lower 𝑓esc . This has
+been predicted by simulations (Rosdahl et al. 2022), though Tang
+et al. (2019); Naidu et al. (2022) observe the opposite trend in line
+emitters.
+If one wanted to integrate the UVLF down to the theoretically
+expected cutoff at 𝑀UV ≈ −11 (Kuhlen & Faucher-Giguere 2012),
+the 𝑓esc needed to fit 𝜏CMB is ⟨ 𝑓esc ⟩ ion. ≈ 3%, as shown in Fig. 3,
+slightly lower but comparable to F19. For such a low value, the
+LzLCS relationship would require 𝛽UV ≈ −1.93, significantly redder
+than JWST has observed at 𝑧 > 5 (Topping et al. 2022; Cullen
+et al. 2023). Moreover, even setting a modest ⟨ 𝑓esc ⟩ = 5% still
+requires a cutoff at magnitudes brighter than 𝑀UV ≈ −12 given the
+higher 𝜉ion from JWST. These faint 𝑀UV have not been statistically
+probed yet by JWST observations, but upcoming ultra-deep imaging
+of a gravitationally lensed cluster (the Glimpse program, PI: Atek,
+JWST ID: 3293) will measure 𝜉ion and 𝛽UV from lensed star-forming
+galaxies down to 𝑀UV ≈ −12. Deeper measurements of analogues
+at moderate 𝑧 are also critical to examine how well the 𝑓esc − 𝛽UV
+relation holds at fainter magnitudes (and bluer objects), as well as
+higher 𝑧, pushing as close as possible to the epoch of reionization.
+• What about the faint end of the UVLF? The slope and turnover
+magnitude remain as the key uncertainties of this observable. For a
+turnover to match reionization measurements it would have to be at
+a bright 𝑀UV ≈ −17, as illustrated in Fig. 3, far above the current
+UVLF limits. An alternative is a shallow faint-end slope. We have
+repeated our analysis with the Finkelstein & Bagley (2022) UVLF,
+which assumes a double power-law functional form with a flattening
+towards the faint end, and found that the tension persists (see Appendix A). This is not surprising, as the tension in Fig. 2 requires
+little to no extrapolation of the UVLFs during reionization (down to
+𝑀UV ≈ −15, where the faint-end uncertainties affect galaxy abundances at the 30% level). If a turnover or flattening of the UVLF
+was the solution it would be of paramount importance to understand
+its physical origin, whether it is due to feedback during reionization (Shapiro et al. 2004) or a exotic cosmology (Sabti et al. 2022).
+• Maybe our theoretical models are wrong? The main uncertainty
+is how many recombinations take place, which we have modeled
+through a simple clumping factor 𝐶. Past work has suggested additional recombinations can explain an extended reionization history
+inferred from the Lyman-𝛼 forest at 𝑧 ∼ 5 − 6 (Davies et al. 2021;
+Qin et al. 2021). Such a “tax on the rich” (in terms of ionizing photons, Furlanetto & Oh 2005) could alleviate the budget crisis. As
+a test, we show in Fig. 3 how even a large 𝐶 = 20 — implying
+nearly an order of magnitude more recombinations throughout all
+of reionization — does not suffice to harmonize galaxy and CMB
+observations, still overproducing reionization (more than 3𝜎 above
+𝜏CMB measurements). Of course, we expect the process of reionization to be complex and inhomogeneous, but we note that these many
+recombinations per hydrogen atom are not standard in ΛCDM cosmologies (even including mini-halos, Gnedin 2024), and could point
+to additional baryon fluctuations at very small scales, or missing
+ingredients in our theories.
+Fig. 3 summarizes how different possible solutions would affect the
+timing of reionization. While these scenarios can be re-calibrated to
+ion. cutoff or decreasing
+produce the correct 𝜏CMB (e.g., increasing 𝑀UV
+
+0.50
+
+Fiducial:
+JWST ξion
++
+low-z fesc
+
+C = 20
+
+0.25
+0.00
+
+ion. cuto
+MUV
+= − 17
+
+5
+
+6
+
+ff
+
+7
+
+8
+
+9
+
+10
+
+11
+
+12
+
+Redshift, z
+
+Figure 3. Possible solutions to the photon budget crisis, and how they would
+affect the timing of reionization. The blue dot-dashed line corresponds to
+our current understanding of reionization, as in Fig. 1. The pink dotted line
+assumes a higher clumping factor 𝐶 = 20, which still does not produce
+ion. cutoff = −11 and a
+enough recombinations. The red dashed line has 𝑀UV
+ion. cutoff = −17 with a larger
+low 𝑓esc = 3%, whereas the black line posits 𝑀UV
+𝑓esc = 15%. These two models produce the correct 𝜏CMB , but disagree with
+one of the two galaxy observations, as indicated by the red diamond and
+black circle in the right panel of Fig. 2. Their reionization histories 𝑥HI (𝑧)
+are potentially distinguishable from one another (measurements in green,
+which have not been used to calibrate the models).
+
+𝑓esc ), measurements of 𝑥 HI (𝑧) can potentially distinguish between
+ion. cutoff makes reionization faster (like
+them, as posing a cutoff 𝑀UV
+oligarchic models, Naidu et al. 2019), whereas decreasing 𝑓esc slows
+it down (appearing democratic, F19). Of course, a 𝑧-dependent 𝑓esc
+can mimic this effect, so clustering measurements of reionization
+bubbles, for instance with the 21-cm line (Furlanetto et al. 2004;
+Muñoz et al. 2022) will be required to break degeneracies. We emphasize that each of the mechanisms invoked in this section requires
+giving up the constraints from at least one of our galaxy measurements, be it the UVLFs, 𝜉ion , 𝑓esc , or a combination of them. Further
+observations of galaxies, 𝑥HI , and 𝜏CMB will sharpen our understanding of the reionization process, as current error-bars are still sizeable
+and may hide underlying systematics. While the list presented here is
+not exhaustive, we hope it encourages theoretical and observational
+work to resolve the JWST photon budget crisis.
+
+5 CONCLUSIONS
+The launch of JWST is allowing us to directly access the properties
+of the first galaxies with unprecedented sensitivity. Early observations are showing that early, faint galaxies are prolific producers of
+ionizing photons. Here we have combined new JWST measurements
+with determinations of the escape fractions 𝑓esc of reionization-era
+analogues to show that our current galaxy observations predict a process of reionization that ends too early. That is, the situation has been
+reversed from the WMAP era, where the concern was producing
+enough photons to match 𝜏CMB , to the post-Planck and JWST era,
+where there may be too many photons.
+To match the CMB optical depth, the 𝑛¤ ion of early galaxies must
+dramatically decrease. This is currently not observed in the high-𝑧
+galaxy population. For instance, the UVLFs do not show a significant
+turnover down to 𝑀UV ≈ −15 (Atek et al. 2018), faint galaxies
+during the epoch of reionization are very blue down to 𝑀UV ≈
+−17 (Topping et al. 2022; Cullen et al. 2023, hinting at high 𝑓esc ),
+and on average galaxies produce significantly more ionizing photons
+than inferred from HST + Spitzer observations down to 𝑀UV ≈
+−15 (Simmonds et al. 2024; Atek et al. 2024; Endsley et al. 2023).
+MNRAS 000, 1–9 (-)
+
+6
+
+J. B. Muñoz et al.
+
+As such, taken at face value the galaxies JWST has observed already
+produce enough ionizing photons to reionize the universe. This does
+not include faint galaxies still unprobed by JWST observations, or a
+contribution from early black holes (which appear prevalent in early
+JWST observations, Matthee et al. 2024). There must be a missing
+ingredient in either our modeling or observations to harmonize the
+galaxy and CMB inferences of reionization.
+Moving forward, there are several avenues that can further audit
+the ionizing-photon budget. Future CMB surveys are expected to
+measure 𝜏CMB to ≈ 0.002 (Allys et al. 2023), which would sharpen
+our understanding of reionization. Better constraints on the timing of reionization beyond 𝜏CMB (e.g., via the kinematic SunyaevZel’dovich effect and the transmission of Lyman-𝛼 photons from
+high-redshift sources Raghunathan et al. 2024; Chen et al. 2024;
+Nakane et al. 2023; Ouchi et al. 2020; Lu et al. 2024) and tomographic measurements of the distribution of neutral and ionized
+hydrogen through the 21-cm line (Morales & Wyithe 2010; Abdurashidova et al. 2022), will provide invaluable information on how
+different sources contribute to the photon budget. Further studies of
+both 𝑓esc (at low 𝑧) and 𝜉ion (at high 𝑧) are critical to account for
+selection biases in our samples, or for missed assumptions in their
+interpretation. The biggest theoretical uncertainty is quantifying the
+recombination rate, which has a substantial effect on the reionization history (see Fig. 3) and may alleviate the requirements on the
+sources. In particular, it is crucial to understand how an increase in
+the recombination rate at 𝑧 ∼ 6 due to dense IGM clumps would
+carry over to higher redshifts, during the bulk of reionization.
+In summary, recent observations have found that early galaxies
+were numerous, efficient producers of ionizing photons, and likely to
+have non-negligible escape fractions. Together, these galaxy observations imply an excess in the ionizing-photon budget during reionization, which would end this cosmic epoch earlier than allowed by
+CMB data. The JWST era has just begun, and here we have examined how future observations and theoretical efforts can shed light
+on this tension. As of the time of writing, the different solutions are
+in conflict with at least one observational constraint. Resolving this
+tension on reionization is a key step to finally understanding the last
+major phase transition of our universe.
+
+ACKNOWLEDGEMENTS
+We are grateful to V. Bromm, R. Endsley, S. Finkelstein, K. Hawkins,
+A. Pahl, C. Scarlata, M. Shull, E. Thelie, and the anonymous referee for insights on a previous version of this manuscript. JBM was
+supported by the National Science Foundation under Grants AST2307354 and AST-2408637, and thanks the Yukawa Institute for
+Theoretical Physics and the Kavli Institute for Theoretical Physics
+for their hospitality during part of this work. JM was supported by
+an appointment to the NASA Postdoctoral Program at the Jet Propulsion Laboratory / California Institute of Technology, administered
+by Oak Ridge Associated Universities under contract with NASA.
+SRF was supported by NASA through award 80NSSC22K0818 and
+by the National Science Foundation through award AST-2205900.
+CAM acknowledges support by the VILLUM FONDEN under grant
+37459 and the Carlsberg Foundation under grant CF22-1322. The
+Cosmic Dawn Center (DAWN) is funded by the Danish National
+Research Foundation under grant DNRF140.
+MNRAS 000, 1–9 (-)
+
+DATA AVAILABILITY
+The data underlying this article will be shared on reasonable request to the author. Software: numpy (van der Walt et al. 2011),
+scipy (Jones et al. 2001), matplotlib (Hunter 2007), Zeus21 (Muñoz
+2023), CLASS (Blas et al. 2011).
+
+REFERENCES
+Abdurashidova Z., et al., 2022, Astrophys. J., 924, 51
+Ade P. A. R., et al., 2016, Astron. Astrophys., 594, A13
+Aghanim N., et al., 2020, Astron. Astrophys., 641, A6
+Allys E., et al., 2023, PTEP, 2023, 042F01
+Atek H., Richard J., Kneib J.-P., Schaerer D., 2018, Mon. Not. Roy. Astron.
+Soc., 479, 5184
+Atek H., et al., 2024, Nature, 626, 975
+Becker G. D., D’Aloisio A., Christenson H. M., Zhu Y., Worseck G., Bolton
+J. S., 2021, MNRAS, 508, 1853
+Begley R., et al., 2022, MNRAS, 513, 3510
+Blas D., Lesgourgues J., Tram T., 2011, JCAP, 1107, 034
+Bosman S. E. I., et al., 2022, Mon. Not. Roy. Astron. Soc., 514, 55
+Bouwens R. J., et al., 2014, ApJ, 793, 115
+Bouwens R. J., Illingworth G. D., Oesch P. A., Caruana J., Holwerda B., Smit
+R., Wilkins S., 2015, Astrophys. J., 811, 140
+Bouwens R. J., et al., 2016, ApJ, 833, 72
+Bouwens R. J., et al., 2021, AJ, 162, 47
+Bruton S., Lin Y.-H., Scarlata C., Hayes M. J., 2023, ApJ, 949, L40
+Calabro A., et al., 2024, arXiv e-prints, p. arXiv:2403.12683
+Castellano M., Fontana A., Treu T., Santini P., Merlin E., et al., 2022, Astrophys. J. Lett., 938, L15
+Chen Z., Stark D. P., Mason C., Topping M. W., Whitler L., Tang M., Endsley
+R., Charlot S., 2024, MNRAS, 528, 7052
+Chisholm J., et al., 2022, MNRAS, 517, 5104
+Cullen F., et al., 2023, MNRAS, 520, 14
+Curtis-Lake E., et al., 2023, Nature Astronomy, 7, 622
+Davies F. B., Bosman S. E. I., Furlanetto S. R., Becker G. D., D’Aloisio A.,
+2021, Astrophys. J. Lett., 918, L35
+De Barros S., Oesch P. A., Labbé I., Stefanon M., González V., Smit R.,
+Bouwens R. J., Illingworth G. D., 2019, MNRAS, 489, 2355
+Donnan C. T., et al., 2024, arXiv e-prints, p. arXiv:2403.03171
+Eisenstein D. J., et al., 2023, arXiv e-prints, p. arXiv:2306.02465
+Eldridge J. J., Stanway E. R., 2009, MNRAS, 400, 1019
+Endsley R., et al., 2023, arXiv e-prints, p. arXiv:2306.05295
+Ferrara A., Pallottini A., Dayal P., 2022, arXiv e-prints, p. arXiv:2208.00720
+Finkelstein S. L., Bagley M. B., 2022, ApJ, 938, 25
+Finkelstein S. L., et al., 2019, Astrophys. J., 879, 36
+Finkelstein S. L., et al., 2022, arXiv e-prints, p. arXiv:2211.05792
+Finkelstein S. L., et al., 2023, arXiv e-prints, p. arXiv:2311.04279
+Flury S. R., et al., 2022, Astrophys. J. Supp., 260, 1
+Furlanetto S. R., Oh S. P., 2005, Mon. Not. Roy. Astron. Soc., 363, 1031
+Furlanetto S. R., Zaldarriaga M., Hernquist L., 2004, ApJ, 613, 1
+Gnedin N. Y., 2024, Astrophys. J., 963, 150
+Greene J. E., et al., 2024, ApJ, 964, 39
+Greig B., Mesinger A., Haiman Z., Simcoe R. A., 2017, Mon. Not. Roy.
+Astron. Soc., 466, 4239
+Greig B., Mesinger A., Bañados E., 2018, ] 10.1093/mnras/stz230
+Harikane Y., Ouchi M., Oguri M., Ono Y., Nakajima K., et al., 2023, Astrophys. J., Suppl. Ser., 265, 5
+Heintz K. E., et al., 2023
+Hsiao T. Y.-Y., et al., 2023, arXiv e-prints, p. arXiv:2305.03042
+Hunter J. D., 2007, Computing in Science and Engineering, 9, 90
+Jones E., Oliphant T., Peterson P., et al., 2001, SciPy: Open source scientific
+tools for Python, http://www.scipy.org/
+Kimm T., Cen R., 2014, ApJ, 788, 121
+Komatsu E., et al., 2011, Astrophys. J. Suppl., 192, 18
+Kuhlen M., Faucher-Giguere C. A., 2012, Mon. Not. Roy. Astron. Soc., 423,
+862
+
+A JWST photon budget crisis?
+0.4
+ion. cutoÆ
+hfesc iion. (MUV < MUV
+)
+
+Lam D., et al., 2019, A&A, 627, A164
+Lin Y.-H., et al., 2024, MNRAS, 527, 4173
+Liu H., Slatyer T. R., Zavala J., 2016, Phys. Rev. D, 94, 063507
+Lu T.-Y., Mason C. A., Hutter A., Mesinger A., Qin Y., Stark D. P., Endsley
+R., 2024, MNRAS, 528, 4872
+Ma X., Hopkins P. F., Kasen D., Quataert E., Faucher-Giguère C.-A., Kereš
+D., Murray N., Strom A., 2016, MNRAS, 459, 3614
+Ma X., Quataert E., Wetzel A., Hopkins P. F., Faucher-Giguère C.-A., Kereš
+D., 2020, MNRAS, 498, 2001
+Madau P., Dickinson M., 2014, Ann. Rev. Astron. Astrophys., 52, 415
+Madau P., Haardt F., 2015, Astrophys. J. Lett., 813, L8
+Madau P., Haardt F., Rees M. J., 1999, Astrophys. J., 514, 648
+Madau P., Giallongo E., Grazian A., Haardt F., 2024
+Mascia S., et al., 2023, A&A, 672, A155
+Maseda M. V., et al., 2020, MNRAS, 493, 5120
+Mason C. A., et al., 2019, Mon. Not. Roy. Astron. Soc., 485, 3947
+Mason C. A., Trenti M., Treu T., 2023, Mon. Not. Roy. Astron. Soc., 521, 497
+Matsuoka Y., et al., 2018, ApJ, 869, 150
+Matthee J., et al., 2022, Mon. Not. Roy. Astron. Soc., 512, 5960
+Matthee J., Mackenzie R., Simcoe R. A., Kashino D., Lilly S. J., Bordoloi R.,
+Eilers A.-C., 2023, Astrophys. J., 950, 67
+Matthee J., et al., 2024, Astrophys. J., 963, 129
+McGreer I., Mesinger A., D’Odorico V., 2015, Mon. Not. Roy. Astron. Soc.,
+447, 499
+Meyer R. A., et al., 2024, arXiv e-prints, p. arXiv:2405.05111
+Mirocha J., Furlanetto S. R., 2023, Mon. Notices Royal Astron. Soc., 519,
+843
+Morales M. F., Wyithe J. S. B., 2010, Ann. Rev. Astron. Astrophys., 48, 127
+Muñoz J. B., 2023, ] 10.1093/mnras/stad1512
+Muñoz J. B., Qin Y., Mesinger A., Murray S. G., Greig B., Mason C., 2022,
+Mon. Not. Roy. Astron. Soc., 511, 3657
+Muñoz J. B., Mirocha J., Furlanetto S., Sabti N., 2023, Mon. Not. Roy. Astron.
+Soc., 526, L47
+Naidu R. P., Tacchella S., Mason C. A., Bose S., Oesch P. A., Conroy C.,
+2019, ] 10.3847/1538-4357/ab7cc9
+Naidu R. P., et al., 2022, Mon. Not. Roy. Astron. Soc., 510, 4582
+Nakane M., et al., 2023, arXiv e-prints, p. arXiv:2312.06804
+Oke J. B., Gunn J. E., 1983, ApJ, 266, 713
+Ouchi M., Ono Y., Shibuya T., 2020, Ann. Rev. Astron. Astrophys., 58, 617
+Pahl A. J., Shapley A., Steidel C. C., Chen Y., Reddy N. A., 2021, MNRAS,
+505, 2447
+Pahl A. J., et al., 2024
+Pawlik A. H., Schaye J., Vecchia C. D., 2015, Mon. Not. Roy. Astron. Soc.,
+451, 1586
+Prieto-Lyon G., et al., 2023, A&A, 672, A186
+Qin Y., Mesinger A., Bosman S. E. I., Viel M., 2021, Mon. Not. Roy. Astron.
+Soc., 506, 2390
+Raghunathan S., et al., 2024
+Robertson B. E., et al., 2013, Astrophys. J., 768, 71
+Robertson B. E., Ellis R. S., Furlanetto S. R., Dunlop J. S., 2015, Astrophys.
+J. Lett., 802, L19
+Rosdahl J., et al., 2022, MNRAS, 515, 2386
+Sabti N., Muñoz J. B., Blas D., 2022, Astrophys. J. Lett., 928, L20
+Saldana-Lopez A., et al., 2023, Mon. Not. Roy. Astron. Soc., 522, 6295
+Shapiro P. R., Iliev I. T., Raga A. C., 2004, Mon. Not. Roy. Astron. Soc., 348,
+753
+Sharma M., Theuns T., Frenk C., Bower R., Crain R., Schaller M., Schaye J.,
+2016, MNRAS, 458, L94
+Shivaei I., et al., 2018, ApJ, 855, 42
+Shull J. M., Harness A., Trenti M., Smith B. D., 2012, ApJ, 747, 100
+Simmonds C., et al., 2024, MNRAS, 527, 6139
+Smit R., Bouwens R. J., Franx M., Illingworth G. D., Labbe I., Oesch P. A.,
+van Dokkum P. G., 2012, Astrophys. J., 756, 14
+Sobacchi E., Mesinger A., 2015, Mon. Not. Roy. Astron. Soc., 453, 1843
+Steidel C. C., Bogosavljevic M., Shapley A. E., Reddy N. A., Rudie G. C.,
+Pettini M., Trainor R. F., Strom A. L., 2018, Astrophys. J., 869, 123
+Tang M., Stark D. P., Chevallard J., Charlot S., 2019, MNRAS, 489, 2572
+Tang M., et al., 2023, MNRAS, 526, 1657
+
+0.3
+
+0.2
+
+7
+
+τCMB
+
+Finkelstein+Bagley22
+Bouwens+21
+log10 ªion = 25.5
+
+VANDELS
+
+Too many
+photons
+
+0.1
+
+0.0
+
+JWST
+°12
+
+°14
+
+Not enough
+photons
+°16
+°18
+
+ion. cutoÆ
+MUV
+
+LzLCS
+°20
+
+Figure A1. Constraints on reonization, as in Fig. 2, but with different assumptions about the UVLF and log10 𝜉ion . The red contour shows the 𝜏CMB
+constraint using Finkelstein & Bagley (2022), whereas black (dotted) uses
+that of Bouwens et al. (2021). Both these pre-JWST determinations of the
+UVLF still show a tension in reionization, though slightly less severe. The
+purple (dashed) region shows the 𝜏CMB contour taking a lower value of 𝜉ion ,
+which consequently predicts fewer ionizing photons. In this last case there
+is a region of parameter space where the constraints overlap, showing that a
+downward revision of 𝜉ion plus a cutoff brighter than 𝑀UV ≈ −14 could resolve the tension. We also show the median 𝑓esc from the VANDELS sample
+of 𝑧 ∼ 3 galaxies (Saldana-Lopez et al. 2023), extrapolated to bluer galaxies
+as a dashed line.
+
+Topping M. W., Stark D. P., Endsley R., Plat A., Whitler L., Chen Z., Charlot
+S., 2022, ApJ, 941, 153
+Trebitsch M., et al., 2022
+Wang F., et al., 2020, Astrophys. J., 896, 23
+Weibel A., et al., 2024, arXiv e-prints, p. arXiv:2403.08872
+Whitler L. R., Mason C. A., Ren K., Dĳkstra M., Mesinger A., Pentericci L.,
+Trenti M., Treu T., 2019, ] 10.1093/mnras/staa1178
+Wise J. H., Demchenko V. G., Halicek M. T., Norman M. L., Turk M. J., Abel
+T., Smith B. D., 2014, MNRAS, 442, 2560
+Yeh J. Y. C., et al., 2023, MNRAS, 520, 2757
+Yoo T., Kimm T., Rosdahl J., 2020, MNRAS, 499, 5175
+Zhao J., Furlanetto S. R., 2024, arXiv e-prints, p. arXiv:2401.07893
+Zhu Y., et al., 2023, ApJ, 955, 115
+van der Walt S., Colbert S. C., Varoquaux G., 2011, Computing in Science
+and Engineering, 13, 22
+
+APPENDIX A: ALTERNATIVE ASSUMPTIONS
+Through the text we have taken the pre-JWST UVLF from Bouwens
+et al. (2021) for 𝑧 ≤ 9, and the JWST-era UVLFs from Donnan et al.
+(2024) for higher 𝑧. These data reach 𝑀UV ≈ −17 at 𝑧 ∼ 7, so in
+order to find the abundance of galaxies at fainter magnitudes some
+extrapolation is required. Additionally, we have used the 𝛽UV − 𝑀UV
+relation from Zhao & Furlanetto (2024), which includes JWST data,
+and the 𝜉ion fit from Simmonds et al. (2024). The purpose of this
+Appendix is to cross check these assumptions. For that we will first
+repeat our analysis removing the new JWST calibrations of the 𝑧 ≳ 9
+UVLF and 𝛽UV and revert to pre-JWST estimates. Then we will use
+the Finkelstein & Bagley (2022) UVLF, which uses a compilation
+of data and has a different functional form that includes flattening
+towards the faint end. Finally, we will find whether there is still
+tension for a value of 𝜉ion comparable to that of Endsley et al. (2023)
+or Pahl et al. (2024), rather than Simmonds et al. (2024).
+MNRAS 000, 1–9 (-)
+
+8
+
+J. B. Muñoz et al.
+𝜉ion
+𝑓esc − 𝛽UV
+𝛽UV
+ΦUV
+
+Relation𝑎
+Simmonds et al. (2024)
+Endsley et al. (2023)
+Chisholm et al. (2022)
+Constant 10%
+Zhao & Furlanetto (2024)
+Bouwens et al. (2014)
+Bouwens et al. (2021)𝑏
+Finkelstein & Bagley (2022)𝑏
+
+Instrument
+JWST/NIRCAM
+JWST/NIRCAM
+HST/COS
+−
+JWST/NIRCAM+HST/ACS
+HST/ACS
+JWST/NIRCAM+HST/ACS
+JWST/NIRCAM+HST/ACS
+
+Calibrated at
+𝑧 ∼ 4 − 9, 𝑀UV ≲ −17
+𝑧 ∼ 6 − 9, 𝑀UV ≲ −17
+𝑧 ∼ 0, 𝛽UV > −2.7 (𝑀UV ≲ −18.5)
+−
+𝑧 ∼ 4 − 12, 𝑀UV ≲ −16
+𝑧 ∼ 4 − 8, 𝑀UV ≲ −16
+𝑧 ∼ 2 − 14, 𝑀UV ≲ −16
+𝑧 ∼ 2 − 14, 𝑀UV ≲ −16
+
+Uncertainty
+0.4 dex
+0.03 dex
+0.2 dex
+−
+∼ 0.2𝑐
+∼ 0.2𝑐
+∼ 0.15𝑐 dex
+∼ 0.15𝑐 dex
+
+𝑑
+𝜏CMB
+0.096 ± 0.017
+0.074 ± 0.001
+0.096+0.007
+−0.012
+0.070
+0.096+0.001
+−0.003
+0.093+0.002
+−0.004
+0.096 ± 0.007
+0.076 ± 0.004
+
+Table A1. Table summarizing the different mean/median assumed relations in this work, their origin, calibration region, and estimated uncertainty (not intrinsic
+scatter). Last column shows the optical depth derived by taking each relationship and its uncertainty, while keeping the rest of the analysis fixed. 𝑎 First relation
+shown for each variable corresponds to our fiducial through the paper. 𝑏 In both cases added to Donnan et al. (2024) for 𝑧 ≳ 9. 𝑐 Uncertainty in 𝛽UV and ΦUV
+depends on magnitude and redshift, so we report typical values at 𝑧 ∼ 7 and 𝑀UV ∼ −17. 𝑑 Assuming a cutoff at 𝑀UV = −13. These ought to be compared to
+the Planck measurement of 𝜏CMB = 0.054 ± 0.007 (Aghanim et al. 2020).
+
+A1 How much do the new JWST UVLFs impact the tension?
+
+approximately fit by
+
+Not significantly. We re-run our analysis returning to the pre-JWST
+UVLF from Bouwens et al. (2021), and using the 𝛽UV − 𝑀UV relation
+from Bouwens et al. (2014, fixing its 𝑧 = 8 value for earlier times).
+Fig. A1 shows how the region that gives rise to the correct 𝜏CMB is
+still in tension with galaxy observables, as it only overlaps the low-𝑧
+constraints on 𝑓esc for cutoffs brighter than 𝑀UV ≈ −15, which are
+ion. cutoff = −15 and
+disfavored (barring a tiny edge region around 𝑀UV
+⟨ 𝑓esc ⟩ ion. = 15%). The tension is then largely driven by the high 𝜉ion
+values inferred by JWST observations, rather than the enhancement
+of the UVLF at high 𝑧. Nevertheless, the extra 𝑧 ≳ 9 galaxies can
+kickstart reionization earlier. Adding the recently discovered population of supermassive black holes in JWST would potentially increase
+the ionizing-photon production (unlike the pre-JWST expectations,
+e.g., Matsuoka et al. 2018), exacerbating the crisis if the accretion
+disks are unobscured.
+
+log10 𝜉ion = 25.5 − 0.03 × (𝑀UV + 18),
+
+A2 Re-analysis with Finkelstein & Bagley (2022)
+Fig. A1 shows how the tension in the ionization-photon budget remains when changing the UVLF to the pre-JWST fit from Finkelstein
+& Bagley (2022, and 𝛽UV from Bouwens et al. 2014). The three observations (𝜏CMB , the 𝑓esc measurement from low 𝑧, and the no-cutoff
+down to the HST+JWST limit) still do not overlap. This is not surprising, since the different UVLFs broadly agree at the bright end,
+only diverging towards faint magnitudes and high 𝑧 (for instance, at
+𝑧 = 7 the uncertainty in the faint-end slope 𝛼★ of both Finkelstein
+& Bagley 2022 and Bouwens et al. 2021 translates into 30% more
+or fewer 𝑀UV = −15 galaxies). This is visible towards the faint side
+ion. cutoff ∼ −13) of Fig. A1, where the CMB-preferred region
+(𝑀UV
+flattens at 𝑓esc ≈ 6%, whereas in the Bouwens et al. (2021) case it
+does so at 𝑓esc ≈ 3%. Part of the reason is the turnover built into
+the UVLF fit of Finkelstein & Bagley (2022, not included in the
+ion. cutoff .
+Bouwens et al. 2021 fit), regardless of our additional 𝑀UV
+This test serves to benchmark the differences in the faint end of the
+UVLF.
+
+A3 A lower 𝜉ion value?
+Through the main text we have used the fit for 𝜉ion as a function
+of 𝑀UV and 𝑧 from Simmonds et al. (2024). Other reionizationera results from Atek et al. (2024) and Endsley et al. (2023) also
+find enhanced ionizing-photon production, though in the latter case
+it decreases towards the faint end, rather than increase. We have
+found that the photometric results in Endsley et al. (2023) can be
+MNRAS 000, 1–9 (-)
+
+(A1)
+
+for the two faint bins in their calibration (and this relation underestimates 𝜉ion for the brightest bin). We show in Table A1 how taking this
+relation still overpredicts 𝜏CMB . A recent spectroscopic analysis in
+Pahl et al. (2024) finds a mean log10 𝜉ion /(Hz erg −1 ) = 25.38
+for their 𝑧 > 4 sample, which translates into a mean ⟨𝜉ion ⟩ =
+1025.57 Hz erg −1 (Pahl, Private Communication) as expected of a
+lognormal variable with a 0.4 dex scatter. We can, then, conservatively bracket the uncertainty in 𝜉ion by performing a run with
+log10 𝜉ion /(Hz erg −1 ) = 25.5, comparable to the lowest mean values
+measured in Endsley et al. (2023, see third panel of Fig. B1) and the
+running mean of Pahl et al. (2024). We show the result of this analysis in Fig. A1, where the three observational constraints overlap over
+a small range of parameter space. This represents a possible compromise solution, requiring both a cutoff brighter than 𝑀UV ∼ −14
+(potentially detectable) plus a downward revision on 𝜉ion (possibly
+indicating an observational bias or mismodeling).
+A4 Summary of Assumptions
+We summarize the relations taken in this work, their origin in either
+JWST or HST data, and the reported uncertainties in Table A1. We
+compute in each case the expected 𝜏CMB and associated errorbars
+from each relationship, keeping the rest fixed and setting a fiducial
+cutoff at 𝑀UV = −13 as in Robertson et al. (2015). We find that
+changing the UVLF calibration makes a difference of 20% on 𝜏CMB
+(due to the cutoff included in Finkelstein & Bagley 2022), whereas
+changing the 𝛽UV relation is at the sub-10% level. The biggest uncertainties are 𝑓esc and 𝜉ion , as expected, and in particular we find that
+going from the Simmonds et al. (2024) to the Endsley et al. (2023)
+𝜉ion calibration reduces 𝜏CMB by 20%, though in all cases shown in
+Table A1 𝜏CMB is higher than allowed by the CMB.
+
+APPENDIX B: THE ORIGIN OF A FAINT CUTOFF
+ion. cutoff to exThrough the main text we have used the variable 𝑀UV
+press a generic cutoff below where galaxies do not contribute to
+reionization. This cutoff can have an origin in three different mechanisms, which we illustrate in Fig. B1.
+First, the UVLF may have a “turn over”, so the abundance of
+star-forming galaxies drops below some magnitude. Current UVLF
+observations suggest that this cutoff has to be fainter than 𝑀UV ≈ −15
+during reionization (Atek et al. 2018). This is shown in the second
+panel of Fig. B1.
+
+A JWST photon budget crisis?
+dṅion /dMUV
+[s°1 Mpc°3 mag°1 ]
+
+1051
+
+ion. cutoÆ
+MUV
+
+1050
+
+No cut
+
+10°2
+
+10°3
+
+log10 ªion /(Hz erg°1 )
+
+©UV [Mpc°3 mag°1 ]
+
+1049
+
+Cut UVLF
+
+25.8
+25.6
+25.4
+
+A+24
+
+S+24
+
+PL+23
+(z ∼ 7 )
+
+E+23
+
+9
+
+footnote 2, which we account for when plotting the Endsley et al.
+(2023) data (as it is the only one with measured variance). All the
+JWST measurements in the third panel of Fig. B1 are significantly
+above the pre-JWST canonical value, following pre-JWST hints in
+e.g., Maseda et al. (2020).
+Last, the escape fraction 𝑓esc may stop growing towards the faint
+end. This is, however, the opposite behavior seen at low 𝑧 in both
+LzLCS (𝑧 ∼ 0) and VANDELS (𝑧 ∼ 3). For reference, the median 𝑓esc
+in the VANDELS sample reported by Saldana-Lopez et al. (2023) can
+be fit using Eq. (5) with 𝐴 𝑓 = 1.12 × 10 −4 and 𝑏 𝑓 = −1 (from their
+Fig. 15), which we show in both Figs. A1 and B1. The bluest galaxies
+sampled in the LzLCS (𝛽UV = −2.7) correspond to 𝑀UV ≈ −15.7
+at 𝑧 ∼ 7 (using the 𝛽UV − 𝑀UV relation from Zhao & Furlanetto
+2024), indicating we do not expect a cutoff on 𝑓esc until at least that
+magnitude, as shown in the last panel of Fig. B1.
+Together, different galaxy observations have probed the
+ion. cutoff ≈ −17 region, disallowing a cutoff at such magnitudes,
+𝑀UV
+unless there is an observational bias or systematic uncertainty.
+This paper has been typeset from a TEX/LATEX file prepared by the author.
+
+pre-JWST
+
+25.2
+
+Cut ªion
+
+VANDELS
+
+fesc
+
+0.2
+
+LzLCS
+0.1
+Cut fesc
+0.0
+°14
+
+°16
+
+MUV
+
+°18
+
+°20
+
+Figure B1. The ionization-photon production (first panel, at 𝑧 ∼ 7) can be
+cut off at the faint end from three different sources: the UVLF (ΦUV , second
+panel), the ionizing efficiency ( 𝜉ion , third panel), or the escape fraction ( 𝑓esc ,
+last panel). We shade the regions that are not observed on each respective
+panel. Dotted curves show the result with no cutoffs, and thick with each
+ion. cutoff = −17, as required to fit
+cutoff. The vertical black line is at 𝑀UV
+reionization in Fig. 3, which is in tension with observations. In the third panel
+we show not only the 𝜉ion fit from Simmonds et al. (2024, S+24, used through
+the main text) but also measurements from Endsley et al. (2023, E+23), Atek
+et al. (2024, A+24), and Prieto-Lyon et al. (2023, PL+23, evaluated at 𝑧 ∼ 7).
+All the JWST-inferred 𝜉ion values are well above the pre-JWST canonical
+value (black dotted).
+
+Second, the ionizing efficiency may vanish for faint galaxies. Some
+JWST observations suggest the opposite, in fact, with 𝜉ion seemingly
+growing towards the faint end at least until 𝑀UV ≈ −15 (Atek et al.
+2024, or 𝑀UV = −16.5 for the broader but photometric sample
+of Simmonds et al. 2024). This trend is also reported in Prieto-Lyon
+et al. (2023) at ⟨𝑧⟩ ≈ 4, which we show in Fig. B1 (extrapolating
+their results to 𝑧 = 7 by using the scaling in Eq. 4). The results
+in Endsley et al. (2023) instead point to 𝜉ion growing towards the
+bright end, as shown in Fig. B1, though with a large variance in the
+distribution at each bin. This variance also makes the average 𝜉ion
+slightly larger than expected from the median of log10 𝜉ion , as in
+MNRAS 000, 1–9 (-)
+
+
