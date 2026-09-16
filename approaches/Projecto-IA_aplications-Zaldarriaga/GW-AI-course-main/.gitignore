@@ -1,8 +1,0 @@
-node_modules/
-__pycache__/
-__marimo__/
-dist/
-dist-share/
-.DS_Store
-*.pyc
-.venv/
