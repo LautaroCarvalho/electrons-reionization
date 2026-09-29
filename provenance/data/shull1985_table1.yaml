@@ -1,0 +1,26 @@
+# Fraction φ(H I) of a 3 keV primary electron's energy deposited in secondary ionizations of H I, transcribed by hand
+# from references/shull (1985).pdf, Table 1, p. 269 (Monte Carlo, 1000 trials; the ± is the 1σ width of the intrinsic
+# distribution, not the error of the mean). N_ion = φ E0 / I with I = 13.6 eV (Fig. 2 caption, p. 271).
+# Their medium includes He with n(He)/n(H) = 0.1 and equal H and He ionization fractions (p. 269); ours has no He (A03).
+source: {bib: ShullVanSteenberg1985, loc: "Table 1, p. 269; Fig. 2 caption (I = 13.6 eV)"}
+E0_eV: 3.0e+3
+I_eV: 1.36e+1
+phi_HI:                      # x = n(H+)/n(H_tot): [φ(H I), 1σ width]
+  0.95: [2.1e-3, 3.1e-3]
+  0.9: [4.1e-3, 4.4e-3]
+  0.8: [9.2e-3, 6.4e-3]
+  0.7: [1.57e-2, 8.5e-3]
+  0.5: [3.45e-2, 1.27e-2]
+  0.3: [6.70e-2, 1.80e-2]
+  0.2: [9.87e-2, 2.00e-2]
+  0.15: [1.223e-1, 2.33e-2]
+  0.1: [1.554e-1, 2.44e-2]
+  0.05: [2.123e-1, 2.53e-2]
+  0.02: [2.683e-1, 2.47e-2]
+  0.01: [3.024e-1, 2.38e-2]
+  0.005: [3.244e-1, 2.20e-2]
+  0.002: [3.452e-1, 2.17e-2]
+  0.001: [3.533e-1, 2.09e-2]
+  0.0005: [3.593e-1, 2.15e-2]
+  0.0002: [3.626e-1, 2.18e-2]
+  0.0001: [3.656e-1, 2.17e-2]

@@ -1,0 +1,10 @@
+# Kim & Rudd 1994, Phys. Rev. A 50, 3954, Table I (p. 3958): hydrogen 1s.
+# Power-series fit df/d(E/B) = a y + b y^2 + c y^3 + d y^4 + e y^5 (+ ...), y = B/E, E = photon energy.
+# Transcribed from the PDF page image (references/Kim (1994).pdf, PDF p. 5) on 2026-09-28. Coefficient a is blank.
+source: {bib: KimRudd1994, loc: "Table I, p. 3958, column H 1s"}
+coefficients: {a: 0.0, b: -2.2473e-2, c: 1.1775, d: -4.6264e-1, e: 8.9064e-2}
+B_eV: 13.6057
+U_eV: 13.6057
+N: 1
+M2: 0.2834      # printed, used as test reference
+N_i: 0.4343     # printed, used as test reference

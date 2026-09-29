@@ -1,0 +1,20 @@
+{
+ "file": "figures/igm_adiabatic_only.png",
+ "file_pdf": "figures/igm_adiabatic_only.pdf",
+ "produced_by": "electron_losses_IGM/scripts/fig_adiabatic_only.py::main",
+ "shows": "K/K_ini for adiabatic (Hubble) losses only, from z = 30 to 5.5 (z_init = 30 as in the notebook cell 9)",
+ "from_scratch": "trajectory K(t) from the rate registry; all rates re-implemented (see igm_losses)",
+ "from_library": "numpy, scipy (solve_ivp Radau, quad, brentq, CubicSpline), astropy (Planck18), mpmath, matplotlib",
+ "choices": [
+  "z_init = 30 (figure parameter, cell 9)",
+  "floor K_floor = 10.2 eV"
+ ],
+ "supports": [],
+ "notebook_cell": 9,
+ "parameters": {
+  "x_e": 0.0001,
+  "z_init": 30.0,
+  "z_final": 5.5,
+  "language": "es"
+ }
+}

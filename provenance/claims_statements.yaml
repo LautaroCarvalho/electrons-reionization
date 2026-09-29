@@ -1,0 +1,214 @@
+# Thesis and claims of electron_losses_IGM (F6). Hand-written; scripts/build_claims.py (single writer) renders them
+# into provenance/claims.yaml, replacing every {{key|format}} with the value of that key in provenance/numbers.json.
+# No number is typed by hand here (C2). Fields: id, statement, numbers (extra keys), evidence (delivered
+# file::function, figures/<file>, or '<bib key>, eq./sec./p. <locator>' with the key in references/references.bib),
+# depends_on, assumptions, status
+# (hypothesis | checked | reproduced | reviewed). "checked" = every number used has a passing checked_by test.
+# Checked by tests/test_numbers.py::test_claims_resolve.
+
+thesis: >-
+  Un electrón inyectado en z = 10 en el medio intergaláctico (B0 = 1 nG, fracción de ionización constante entre
+  1e-4 y 0.99) pierde su energía cinética por Compton inverso sobre el CMB por encima de ~1e5 eV y por colisiones con
+  el gas por debajo: ionización y excitación del H neutro cuando el gas es casi neutro, y Coulomb con los electrones
+  libres a medida que x_e crece (en todo el rango colisional para x_e ≥ 0.5).
+  Sincrotrón, bremsstrahlung y expansión adiabática no dominan en ningún punto del rango estudiado, y un electrón
+  con K_ini ≥ 1e9 eV termaliza en un redshift que casi no depende de su energía inicial.
+
+claims:
+  - id: C1
+    statement: >-
+      Compton inverso sobre el CMB es el proceso de pérdida dominante por encima de un umbral que en z = 10 (z = 5.5)
+      vale {{K_dom_ionization_to_ic_z10_xe0.0001|.3g}} eV ({{K_dom_ionization_to_ic_z5.5_xe0.0001|.3g}} eV) para
+      x_e = 1e-4, {{K_dom_ionization_to_ic_z10_xe0.01|.3g}} eV ({{K_dom_ionization_to_ic_z5.5_xe0.01|.3g}} eV) para
+      1e-2 y {{K_dom_ionization_to_ic_z10_xe0.1|.3g}} eV ({{K_dom_ionization_to_ic_z5.5_xe0.1|.3g}} eV) para 1e-1,
+      donde compite con la ionización, y {{K_dom_coulomb_to_ic_z10_xe0.5|.3g}} eV
+      ({{K_dom_coulomb_to_ic_z5.5_xe0.5|.3g}} eV) para 0.5 y {{K_dom_coulomb_to_ic_z10_xe0.99|.3g}} eV
+      ({{K_dom_coulomb_to_ic_z5.5_xe0.99|.3g}} eV) para 0.99, donde compite con Coulomb.
+    evidence:
+      - electron_losses_IGM/scripts/compute_numbers.py::dominance_numbers
+      - figures/igm_phase_space_map.png
+      - figures/igm_phase_space_map_xe0.5.png
+      - figures/igm_phase_space_map_xe0.99.png
+      - BlumenthalGould1970, eq. 2.56
+    depends_on: []
+    assumptions: [A03, A04, A06, A13, A14, A15]
+    status: checked
+
+  - id: C2
+    statement: >-
+      Por debajo de ese umbral, en z = 10: con x_e = 1e-4 domina la ionización del H entre
+      {{K_dom_excitation_to_ionization_z10_xe0.0001|.3g}} eV y el umbral, la excitación entre
+      {{K_dom_coulomb_to_excitation_z10_xe0.0001|.4g}} eV y {{K_dom_excitation_to_ionization_z10_xe0.0001|.3g}} eV, y
+      Coulomb en el tramo final hasta el piso. Coulomb domina por debajo de
+      {{K_dom_coulomb_to_ionization_z10_xe0.01|.3g}} eV con x_e = 1e-2, por debajo de
+      {{K_dom_coulomb_to_ionization_z10_xe0.1|.3g}} eV con x_e = 1e-1, y en todo el rango colisional con x_e = 0.5 y
+      0.99.
+    evidence:
+      - electron_losses_IGM/scripts/compute_numbers.py::dominance_numbers
+      - figures/igm_phase_space_map.png
+      - figures/igm_phase_space_map_xe0.01.png
+      - figures/igm_phase_space_map_xe0.1.png
+      - figures/igm_phase_space_map_xe0.5.png
+      - StoneKimDesclaux2002, eq. 5
+      - Kim2000, eq. 20
+      - Gould1972, eq. 5.5
+    depends_on: [C1]
+    assumptions: [A03, A04, A05, A13, A14]
+    status: checked
+
+  - id: C3
+    statement: >-
+      Un electrón con K_ini = 1e5 eV inyectado en z = 10 con x_e = 1e-4 entrega su energía sobre todo al H neutro:
+      {{frac_ionization_K1e5_xe0.0001|.3f}} de K_ini por ionización, {{frac_excitation_K1e5_xe0.0001|.3f}} por
+      excitación, {{frac_ic_K1e5_xe0.0001|.3f}} por Compton inverso y {{frac_adiabatic_K1e5_xe0.0001|.3f}} por
+      expansión adiabática, y termaliza en z = {{z_therm_K1e5_xe0.0001|.4f}}. La fracción que va a Coulomb crece con
+      x_e: {{frac_coulomb_K1e5_xe0.01|.3f}} (1e-2), {{frac_coulomb_K1e5_xe0.1|.3f}} (1e-1),
+      {{frac_coulomb_K1e5_xe0.5|.3f}} (0.5) y {{frac_coulomb_K1e5_xe0.99|.3f}} (0.99), mientras la de ionización cae a
+      {{frac_ionization_K1e5_xe0.99|.3f}} con x_e = 0.99.
+    evidence:
+      - electron_losses_IGM/scripts/compute_numbers.py::trajectory_numbers
+      - figures/igm_accumulated_losses.png
+      - figures/igm_accumulated_losses_xe0.5.png
+      - figures/igm_accumulated_losses_xe0.99.png
+    depends_on: [C2]
+    assumptions: [A03, A04, A07, A11, A13, A14, A17]
+    status: checked
+
+  - id: C4
+    statement: >-
+      Los electrones con K_ini ≥ 1e9 eV inyectados en z = 10 pierden la memoria de su energía inicial: entre 1e9 y
+      1e13 eV el redshift de termalización varía sólo en {{z_therm_spread_Kge1e9_xe0.0001|.1e}},
+      {{z_therm_spread_Kge1e9_xe0.01|.1e}}, {{z_therm_spread_Kge1e9_xe0.1|.1e}}, {{z_therm_spread_Kge1e9_xe0.5|.1e}}
+      y {{z_therm_spread_Kge1e9_xe0.99|.1e}} para x_e = 1e-4, 1e-2, 1e-1, 0.5 y 0.99, con z = {{z_therm_K1e13_xe0.0001|.4f}},
+      {{z_therm_K1e13_xe0.01|.4f}}, {{z_therm_K1e13_xe0.1|.4f}}, {{z_therm_K1e13_xe0.5|.4f}} y
+      {{z_therm_K1e13_xe0.99|.4f}} para 1e13 eV: más ionizado el medio, antes termaliza.
+    evidence:
+      - electron_losses_IGM/scripts/compute_numbers.py::trajectory_numbers
+      - electron_losses_IGM/scripts/compute_numbers.py::aggregate_numbers
+      - figures/igm_total_cooling.png
+      - figures/igm_phase_space_colored.png
+    depends_on: [C1]
+    assumptions: [A06, A07, A11]
+    status: checked
+
+  - id: C5
+    statement: >-
+      La expansión adiabática nunca es el proceso dominante: la fracción Γ_ad = L_ad/L_tot alcanza como máximo
+      {{gamma_ad_max_xe0.0001|.3f}}, {{gamma_ad_max_xe0.01|.3f}}, {{gamma_ad_max_xe0.1|.3f}}, {{gamma_ad_max_xe0.5|.3f}}
+      y {{gamma_ad_max_xe0.99|.3f}} para x_e = 1e-4, 1e-2, 1e-1, 0.5 y 0.99, en z ∈ [5.5, 15] y K ∈ [1e2, 1e14] eV,
+      aunque llega a quitar hasta {{frac_max_adiabatic|.3f}} de K_ini.
+    evidence:
+      - electron_losses_IGM/scripts/compute_numbers.py::gamma_ad_numbers
+      - electron_losses_IGM/scripts/compute_numbers.py::aggregate_numbers
+      - figures/igm_adiabatic_fraction_map.png
+    depends_on: []
+    assumptions: [A10, A16]
+    status: checked
+
+  - id: C6
+    statement: >-
+      Sincrotrón (B0 = 1 nG) y bremsstrahlung son despreciables para la termalización: como máximo quitan
+      {{frac_max_synchrotron|.2e}} y {{frac_max_bremsstrahlung|.2e}} de K_ini, respectivamente, para todas las
+      energías de la figura 37 y todos los x_e.
+    evidence:
+      - electron_losses_IGM/scripts/compute_numbers.py::aggregate_numbers
+      - figures/igm_accumulated_losses.png
+      - BlumenthalGould1970, eq. 3.54
+      - Poskus2019, sec. 9.6
+      - KarzasLatter1961, eq. 22
+    depends_on: []
+    assumptions: [A01, A08, A15]
+    status: checked
+
+  - id: C7
+    statement: >-
+      Antes de termalizar, un electrón de 1e13 eV recorre {{D_proper_K1e13_xe0.0001_Mpc|.1f}},
+      {{D_proper_K1e13_xe0.01_Mpc|.1f}}, {{D_proper_K1e13_xe0.1_Mpc|.1f}}, {{D_proper_K1e13_xe0.5_Mpc|.1f}} y
+      {{D_proper_K1e13_xe0.99_Mpc|.1f}} Mpc de distancia propia para x_e = 1e-4, 1e-2, 1e-1, 0.5 y 0.99
+      ({{D_comoving_K1e13_xe0.0001_Mpc|.0f}} a {{D_comoving_K1e13_xe0.99_Mpc|.0f}} Mpc comóviles). La imagen guardada
+      de la celda 34 del notebook (≈ 4 Mpc) no corresponde a su código (errata E20).
+    evidence:
+      - electron_losses_IGM/scripts/compute_numbers.py::trajectory_numbers
+      - figures/igm_distance_travelled.png
+    depends_on: [C4]
+    assumptions: [A09, A10]
+    status: checked
+
+  - id: C8
+    statement: >-
+      Las pérdidas colisionales sobre H neutro del modelo (excitación de Stone et al. + ionización RBED) coinciden con
+      la fórmula de Bethe relativista para electrones (I0 = {{I0_hydrogen|.3f}} eV) dentro de 5 %, con cocientes
+      {{bethe_ratio_T1e4|.3f}}, {{bethe_ratio_T1e5|.3f}} y {{bethe_ratio_T1e6|.3f}} a 1e4, 1e5 y 1e6 eV, pero la superan
+      en un factor {{bethe_ratio_T1e8|.3f}} a 1e8 eV y {{bethe_ratio_T1e10|.3f}} a 1e10 eV (errata E21, causa no
+      identificada). La parte de alta energía es una hipótesis: sólo se verificó la aritmética (test_bethe_ratios), no
+      qué modelo es correcto.
+    evidence:
+      - electron_losses_IGM/scripts/compute_numbers.py::bethe_numbers
+      - electron_losses_IGM/tests/test_collisions.py::test_collisional_stopping_vs_bethe
+      - Inokuti1971, eq. 4.65
+    depends_on: []
+    assumptions: [A03, A13, A14]
+    status: hypothesis
+
+  # ------------------------------------------------------------------ EM_cascades (2026-09-28): medio fijo en z = z_init (A19)
+  - id: C9
+    statement: >-
+      Con el medio fijo en z = 10 y x_e = 1e-4, un electrón de 1e10 eV entrega {{cas_frac_ic_K1e10_xe0.0001|.3f}} de su
+      energía al Compton inverso, mientras que uno de 1e4 eV entrega {{cas_frac_ionization_K1e4_xe0.0001|.3f}} a la
+      ionización y {{cas_frac_excitation_K1e4_xe0.0001|.3f}} a la excitación del H; con x_e = 0.99 la fracción que va a
+      Coulomb a 1e4 eV es {{cas_frac_coulomb_K1e4_xe0.99|.3f}}.
+    evidence:
+      - EM_cascades/scripts/numbers.py::fraction_numbers
+      - EM_cascades/tests/test_fractions.py::test_integrated_vs_time_integration
+      - figures/cas_loss_fraction_integrated.png
+      - figures/cas_loss_fraction_integrated_xe0.99.png
+    depends_on: []
+    assumptions: [A07, A11, A19, A20]
+    status: checked
+
+  - id: C10
+    statement: >-
+      La parte colisional de la cascada reproduce la fracción de energía que termina en ionizaciones de H calculada por
+      Monte Carlo por Shull & van Steenberg (1985, Tabla 1) para un electrón de 3 keV: φ = {{cas_phi_HI_3keV_xe0.0001|.3f}},
+      {{cas_phi_HI_3keV_xe0.01|.3f}}, {{cas_phi_HI_3keV_xe0.1|.3f}} y {{cas_phi_HI_3keV_xe0.5|.3f}} para x_e = 1e-4, 1e-2,
+      1e-1 y 0.5 (contraste dentro del criterio fijado en el test), con {{cas_W_3keV_xe0.0001|.1f}} eV por ionización en
+      el gas casi neutro. El modelo no incluye He (A03), que sí incluyen Shull & van Steenberg.
+    evidence:
+      - EM_cascades/scripts/numbers.py::cascade_numbers
+      - EM_cascades/tests/test_cascade.py::test_collisional_yield_vs_shull_van_steenberg
+      - ShullVanSteenberg1985, table 1
+    depends_on: []
+    assumptions: [A03, A14, A19, A20]
+    status: checked
+
+  - id: C11
+    statement: >-
+      La ventana en que un fotón de IC ioniza el H dentro de un tiempo de Hubble (A22, sección eficaz de Verner et al.
+      1996) va de R_H hasta {{cas_E_max_xe0.0001|.4g}} eV con x_e = 1e-4, {{cas_E_max_xe0.1|.4g}} eV con 1e-1,
+      {{cas_E_max_xe0.5|.4g}} eV con 0.5 y {{cas_E_max_xe0.99|.4g}} eV con 0.99.
+    evidence:
+      - EM_cascades/scripts/numbers.py::window_numbers
+      - EM_cascades/tests/test_photoionization.py::test_verner_vs_exact_hydrogenic
+      - Verner1996, eq. 1
+    depends_on: []
+    assumptions: [A03, A19, A22, A24]
+    status: checked
+
+  - id: C12
+    statement: >-
+      Por encima de ~1e7 eV las ionizaciones de la cascada vienen sobre todo de la fotoionización secundaria por fotones
+      de IC y sus fotoelectrones. Con x_e = 1e-4, un electrón de 1e13 eV produce {{cas_N_tot_K1e13_xe0.0001|.3g}}
+      ionizaciones en total, de las que {{cas_N_photo_K1e13_xe0.0001|.3g}} son de la rama de fotones y
+      {{cas_N_coll_K1e13_xe0.0001|.3g}} colisionales; el total ya está saturado a 1e10 eV
+      ({{cas_N_tot_K1e10_xe0.0001|.3g}}). Con x_e = 0.99 el total satura en {{cas_N_tot_K1e13_xe0.99|.3g}}, con sólo
+      {{cas_N_coll_K1e13_xe0.99|.3g}} colisionales.
+    evidence:
+      - EM_cascades/scripts/numbers.py::cascade_numbers
+      - EM_cascades/tests/test_cascade.py::test_photon_grid_convergence
+      - EM_cascades/tests/test_cascade.py::test_photon_offspring_energy_bookkeeping
+      - figures/cas_ionization_yield.png
+      - figures/cas_ionization_yield_xe0.99.png
+      - BlumenthalGould1970, eq. 2.48
+    depends_on: [C10, C11]
+    assumptions: [A17, A19, A20, A21, A22, A23, A24]
+    status: checked

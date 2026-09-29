@@ -1,0 +1,29 @@
+{
+ "file": "figures/cas_ionization_yield.png",
+ "file_pdf": "figures/cas_ionization_yield.pdf",
+ "produced_by": "EM_cascades/scripts/fig_ionization_yield.py::main",
+ "shows": "H ionizations per primary electron down to K_floor vs K_ini: collisional, secondary photoionization by IC photons (with the photoelectrons' cascades) and total; ceiling K_ini/R_H",
+ "from_scratch": "em_cascades.yields.cascade + em_cascades.photoionization.window",
+ "from_library": "numpy, scipy (quad, hyp2f1), mpmath, matplotlib; rates from igm_losses (electron_losses_IGM)",
+ "choices": [
+  "z fixed (A19)",
+  "photoionization window [R_H, 1218 eV] (A22)",
+  "photoelectron trees counted in the photo curve (A23)",
+  "continuous slowing down for every particle (A20)"
+ ],
+ "supports": [],
+ "task": "EM_cascades objetivo 2",
+ "parameters": {
+  "x_e": 0.0001,
+  "z": 10.0,
+  "language": "es",
+  "K_grid": {
+   "K_max_eV": 10000000000000.0,
+   "points_per_decade": 40
+  },
+  "window_eV": [
+   13.598287264291923,
+   1217.6710927967258
+  ]
+ }
+}

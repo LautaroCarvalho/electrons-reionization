@@ -1,0 +1,157 @@
+# Hipótesis físicas del notebook original (MR3). Formato: check C80.
+# Todas están en `proposed`: ninguna se usa en código hasta que el usuario la apruebe (status: adopted +
+# approved.date) o la cambie. `source` = dónde aparece en el notebook, o la referencia que la respaldaría.
+# `concern` = observación mía que no está verificada (a revisar con las referencias en F3).
+
+
+assumptions:
+
+  A01:
+    statement: "Campo magnético intergaláctico uniforme que evoluciona como B(z) = B0 (1+z)^2 (flujo congelado, B comóvil constante), con B0 = 1 nG."
+    regime: "Sin dínamo ni amplificación/decaimiento; campo homogéneo en la escala del giro-radio."
+    source: {user: "notebook, todas las celdas con sincrotrón: B_z = B0*(1+z)**2"}
+    status: adopted
+    approved: {by: "usuario", date: 2026-09-27}
+  A02:
+    statement: "Densidad de hidrógeno n_H(z) = (1 - Y_p) Ω_b ρ_crit,0 (1+z)^3 / m_p, con Ω_b, H0 (ρ_crit,0) e Y_p de Planck 2018: medio homogéneo con la densidad media cósmica (sin sobredensidades) y sin helio como blanco."
+    regime: "IGM a densidad media; blancos sólo de H."
+    source: {bib: Planck2018VI, loc: "Tabla 2 (PDF p. 16), columna TT,TE,EE+lowE+lensing+BAO: Ω_b h² = 0.02242, H0 = 67.66; leyenda: Y_P ≈ 0.2454"}
+    status: adopted
+    approved: {by: "usuario", date: 2026-09-27, note: "cambiado: derivar de Planck 2018 en vez de n_H = 1.8e3((1+z)/21)^3 m^-3 del notebook; el He sigue fuera como blanco"}
+    concern: "Ignorar el He como blanco deja fuera ~8 % de los núcleos y ~16 % de los electrones ligados (calculado con Y_p = 0.2454 de Planck 2018 y el cociente de masas atómicas He/H recordado: n_He/n_H = 0.0819, electrones ligados en He/H = 0.164). En F5 se compara la n_H resultante con la del notebook (258.7 m^-3 a z = 10)."
+  A03:
+    statement: "Densidad de H neutro n_HI = (1 - x_e) n_H y de electrones libres n_e = x_e n_H (sin He)."
+    regime: "Válido para cualquier x_e ∈ [0, 1]."
+    source: {user: "2026-09-27: cambiado respecto del notebook, que usaba n_HI = n_H sin el factor (1 - ION_FRACTION)"}
+    status: adopted
+    approved: {by: "usuario", date: 2026-09-27, note: "cambiado: n_HI = (1 - x_e) n_H"}
+  A04:
+    statement: "Fracción de ionización x_e constante en z, tratada como parámetro barrido: default x_e = 1e-4 (valor del notebook) y figuras adicionales para otros valores de x_e."
+    regime: "Cada curva supone x_e fijo durante z_init → z_final; no es una historia de reionización."
+    source: {user: "2026-09-27: 'x_e como parámetro barrido'; default ION_FRACTION = 1e-4 del notebook"}
+    status: adopted
+    approved: {by: "usuario", date: 2026-09-28, note: "cambiado otra vez (2026-09-28): x_e = 1e-4, 1e-2, 1e-1, 0.5, 0.99 en todas las tasas que dependen directa o indirectamente de x_e (n_e y n_HI; lista en parameters.yaml x_e.sweep). Versión anterior (2026-09-27): [1e-4, 1e-2, 0.5] sólo en las figuras que usan n_e"}
+    concern: "El intervalo z = 10 → 5.5 coincide con la reionización (recordado: Planck 2018 da z_re ≈ 7–8; a citar con el PDF). Se deja escrito en el README y en las leyendas de las figuras."
+  A05:
+    statement: "Pérdidas de Coulomb en un plasma frío: electrones blanco en reposo, sin temperatura del gas T_e."
+    regime: "K ≫ k_B T_e."
+    source: {bib: Gould1972, loc: "ec. (5.5), p. 153 (β ≫ α) y ec. (2.20) (clásica, β ≪ α; E18); v ≫ v_th en todo el paper (p. 146)"}
+    status: adopted
+    approved: {by: "usuario", date: 2026-09-27, note: "aprobada tal cual; las figuras indican que no vale cerca de k_B T_e"}
+  A06:
+    statement: "El único campo de fotones para Compton inverso es el CMB (cuerpo negro, T_CMB0 (1+z)); se desprecian EBL/UV y la luz estelar."
+    regime: "Lejos de fuentes; antes de un fondo UV intenso."
+    source: {user: "notebook: U_CMB_z, kernel de Klein–Nishina con espectro de Planck"}
+    status: adopted
+    approved: {by: "usuario", date: 2026-09-27}
+  A07:
+    statement: "La integración se detiene cuando la energía cinética llega a un piso fijo K_floor = 10.2 eV (parámetro K_floor)."
+    regime: "Es un criterio de parada de la figura, no física del equilibrio: por debajo del piso no se sigue al electrón."
+    source: {user: "2026-09-27: 'Piso en 10.2 eV' (el notebook usaba k_B T_CMB(z), y 10.204 eV en la celda 42)"}
+    status: adopted
+    approved: {by: "usuario", date: 2026-09-27, note: "cambiado: piso fijo en 10.2 eV en lugar de k_B T_CMB(z). Queda pendiente en D09 qué piso usan las figuras de un solo proceso (p.ej. ionización, con umbral 13.6 eV)"}
+  A08:
+    statement: "Sincrotrón con ángulo de pitch promediado isotrópicamente (<sin²α> = 2/3 → factor 4/3 σ_T c U_B γ²β²); en las celdas 2 y 4, ángulo fijo."
+    regime: "Distribución de pitch isotrópica (dispersión rápida)."
+    source: {bib: RybickiLightman, loc: "ecs. (6.5b)–(6.7b), pp. 168–169: P = (4/3) σT c β² γ² U_B con <sin²α> = 2/3; B&G 1970 ecs. (4.5) y (2.21)"}
+    notebook: "celdas 5/8/22+ (isotrópico), 2 (sinθ = 0.5 → 1 por D11), 4 (sinθ = 1)"
+    status: adopted
+    approved: {by: "usuario", date: 2026-09-27, note: "aprobada tal cual; el valor de sin(theta) de la celda 2 queda pendiente en E06"}
+  A09:
+    statement: "La distancia recorrida se calcula de dos formas y se grafican ambas: longitud de camino propia ∫v dt y distancia comóvil ∫v (1+z) dt. Las dos son sin difusión (trayectoria rectilínea salvo el giro). En las celdas 4/5 se conserva la geometría del giro con las cotas d_min/d_max del notebook."
+    regime: "Movimiento balístico. d_min/d_max son una cota heurística, no una solución de transporte."
+    source: {user: "2026-09-27: 'Ambas' (el notebook usaba sólo ∫v dt)"}
+    status: adopted
+    approved: {by: "usuario", date: 2026-09-27, note: "cambiado: graficar distancia propia y comóvil"}
+    concern: "Calculado con astropy Planck18: de z = 10 a 5.5 pasan 0.567 Gyr (1/H(z = 7.5) = 1.04 Gyr). La distancia máxima a velocidad c es 174 Mpc propia y 1437 Mpc comóvil (cociente 8.3), así que las dos curvas difieren mucho. El notebook fijaba el eje en 60 Mpc (D17)."
+  A10:
+    statement: "Cosmología ΛCDM plana de Planck 2018 (astropy.cosmology.Planck18) para t(z) y H(z)."
+    regime: "Universo homogéneo."
+    source: {bib: Planck2018VI, loc: "Tabla 2 (PDF p. 16), columna TT,TE,EE+lowE+lensing+BAO; astropy 5.3.4 Planck18.meta cita esa columna (H0 = 67.66, Ω_b = 0.04897)"}
+    status: adopted
+    approved: {by: "usuario", date: 2026-09-27, note: "aprobada tal cual: astropy Planck18 (astropy 5.3.4 en el entorno actual)"}
+  A11:
+    statement: "Aproximación de pérdida continua: dE/dt medio, sin pérdidas estocásticas o catastróficas."
+    regime: "Fracción de energía perdida por interacción ≪ 1."
+    source: {user: "notebook: todas las celdas integran una EDO determinista"}
+    status: adopted
+    approved: {by: "usuario", date: 2026-09-27, note: "aprobada; las figuras deben sombrear o anotar la zona donde IC-KN o bremsstrahlung son catastróficos (criterio a definir en F3 con B&G 1970)"}
+    concern: "En el régimen Klein–Nishina (IC) y en bremsstrahlung, una sola interacción puede llevarse una fracción O(1) de la energía; allí el promedio es sólo indicativo."
+  A12:
+    statement: "Energías atómicas del H con masa reducida: R_H = Ry∞ · m_p/(m_e + m_p). Umbral de ionización I = R_H y niveles E_n = R_H (1 - 1/n²); el umbral de excitación 1→2 es (3/4) R_H (en lugar del 10.204 eV escrito a mano)."
+    regime: "H en el estado 1s; se desprecian la estructura fina y el corrimiento de Lamb."
+    source: {user: "2026-09-27: 'R_H con masa reducida' (el notebook usaba Ry∞ = 13.6057 eV)"}
+    status: adopted
+    approved: {by: "usuario", date: 2026-09-27, note: "cambiado: R_H con masa reducida (usa m_p de parameters.yaml)"}
+    update: "2026-09-27 (E19): las energías de excitación E_n y la B del escalado BE se toman de la Tabla 1 de Stone et al. 2002 (E_2 = 10.204 eV, B = 13.5984 eV); R_H se usa sólo para el umbral de ionización."
+    concern: "En F3 hay que verificar que las secciones eficaces RBEB (Kim 2000) y de excitación (Stone 2002) se evalúen con los mismos umbrales con que fueron ajustadas. Con R_H, (3/4) R_H ≈ 10.199 eV (recordado), apenas debajo del piso K_floor = 10.2 eV de A07: la excitación 1→2 deja de actuar justo antes del piso."
+  A13:
+    statement: "Excitación colisional del H(1s) sólo a niveles np (transiciones dipolares) en aproximación de Born con GOS exacta y escalado BE; ver D01 para cuántos niveles."
+    regime: "K ≳ algunos eV; Born válido a K ≫ umbral."
+    source: {bib: StoneKimDesclaux2002, loc: "ecs. (1), (2), (5) y Tabla 1, pp. 327–328; Born+BE para T ≤ 3 keV, ec. (5) arriba de 3 keV, forma relativista arriba de 10 keV = Inokuti1971 ecs. (4.26)–(4.27), p. 328, con a = M_n² y b = M_n² ln 4c_n de su ec. (4.18), p. 326"}
+    status: adopted
+    approved: {by: "usuario", date: 2026-09-27, note: "aprobada tal cual: sólo 1s->np; número de niveles en D01"}
+  A14:
+    statement: "Ionización colisional del H con la sección eficaz RBEB, y energía perdida por ionización = I + <ε>, con espectro de secundarios ∝ 1/(1+(ε/Ē)^2.1)."
+    regime: "Un electrón ligado (H 1s)."
+    source: {bib: Kim2000, loc: "RBED, ec. (20), p. 052710-4; df/dw de H 1s de Kim & Rudd 1994 Tabla I; espectro de secundarios de FurlanettoStoever2010 ec. (2), p. 1871"}
+    status: adopted
+    approved: {by: "usuario", date: 2026-09-27, note: "aprobada tal cual: RBEB + (I + <eps>) con espectro tipo Opal"}
+    update: "2026-09-27 (E16, E17, decisiones del usuario): la sección eficaz es la RBED (Kim 2000 ec. 20, df/dw de Kim & Rudd 1994 Tabla I, B = 13.6057 eV), no la RBEB; ⟨ε⟩ con el espectro de Furlanetto & Stoever 2010 ec. (2). El texto de statement queda como se aprobó."
+  A15:
+    statement: "Bremsstrahlung. (i) Electrón–átomo contra H neutro: sección eficaz tabulada de BREMS v1.5.8.9 (Poškus), archivo CS_int_1.txt, de 10 eV a 300 MeV (ondas parciales relativistas en el potencial de Kohn–Sham del átomo neutro; Sommerfeld–Maue con apantallamiento desde 50 MeV); por encima de 300 MeV, B&G 1970 ec. (3.54) con apantallamiento completo. (ii) Electrón–protón (fracción ionizada x_e): Karzas & Latter 1961 (factor de Gaunt free–free no relativista) empalmado con B&G ec. (3.53) a alta energía. (iii) Electrón–electrón: NO incluido (decisión del usuario 2026-09-27), justificado en el régimen no relativista porque dos partículas con igual carga/masa no tienen momento dipolar y emiten cuadrupolo, suprimido por v² respecto del dipolo (PradlerSemmelrock2021, pp. 2, 14–15; B&G 1970 nota 18, p. 251)."
+    regime: "(i) 10 eV–300 MeV con los datos; tabla k/T ≤ 0.95 (la cola k/T > 0.95 aporta ~1–5 % y debe tratarse explícitamente). (ii) Karzas & Latter en su rango de validez (a determinar al leerlo), B&G (3.53) para γ ≫ 1. (iii) A baja energía e–e ≪ e–p (B&G nota 18, p. 251); a γ ≫ 1 e–e ≈ e–p, así que la omisión subestima el bremsstrahlung contra H neutro por un factor de hasta ~2 a alta energía."
+    source: {bib: Poskus2019, loc: "BREMS v1.5.8.9 (2025-07-20), CS_int/CS_int_1.txt (Z = 1), manual §9.6; copia en provenance/data/CS_int_1.txt"}
+    status: adopted
+    approved: {by: "usuario", date: 2026-09-27, note: "cambiado: CS_int_1.txt para H neutro y Karzas & Latter para e–p (reemplaza 'B&G por régimen' en el tramo no relativista). Resuelto 2026-09-27: empalmes C¹ (D19), cola k/T > 0.95 ignorada, e–e ignorado"}
+    also_cites: [BlumenthalGould1970, KarzasLatter1961, PradlerSemmelrock2021]
+    accepted_limitations: {by: "usuario", date: 2026-09-27, note: "acepta ~27 % de subestimación de φ_ep en la zona de empalme 0.15–0.6 MeV"}
+    concern: "La justificación e–e ≪ e–p vale sólo para β ≪ 1: a γ ≫ 1 e–e ≈ e–p (B&G p. 251), así que por encima de ~MeV el bremsstrahlung queda subestimado hasta ~×2. Además, en la zona de empalme e–p (~0.15–0.6 MeV) K&L (no relativista) y B&G (3.53) (γ ≫ 1) están ambos fuera de su validez: φ_ep(T*) = 3.86 es 27 % menor que φ_n = 5.31 del H neutro, que a esas energías es un buen sustituto del e–p (el apantallamiento es despreciable: φ_ep/φ_n = 1.02 a 10 keV y 10 MeV)."
+  A16:
+    statement: "Pérdidas adiabáticas por expansión: dp/dt = -H(t) p."
+    regime: "Partícula libre en un fondo FRW."
+    source: {user: "notebook: dKdt_ad = -H p²c²/E"}
+    status: adopted
+    approved: {by: "usuario", date: 2026-09-27}
+  A17:
+    statement: "Cada electrón es una partícula de prueba para el medio: no modifica x_e, n_HI ni T (sin reacción sobre el medio). En electron_losses_IGM se sigue sólo al electrón primario; en EM_cascades se siguen también sus secundarios (electrones de ionización y fotones de IC, A20–A23)."
+    regime: "Densidad de rayos cósmicos baja; ionizaciones producidas por un electrón y su cascada ≪ n_HI en el volumen que recorren (sin recombinación)."
+    source: {user: "notebook: todas las celdas; texto reescrito por el usuario el 2026-09-28 al empezar EM_cascades (absorbe la A25 propuesta, medio pasivo)"}
+    status: adopted
+    approved: {by: "usuario", date: 2026-09-28, note: "reescrita; texto anterior (2026-09-27): 'El electrón es una partícula de prueba: no se siguen los secundarios (fotones, electrones de ionización) ni la reacción sobre el medio.'"}
+  A19:
+    statement: "Redshift fijo: el electrón primario y toda su cascada se enfrían en el medio de z = z_init (n_HI, n_e, B, T_CMB y H(z_init)); el medio no evoluciona durante el enfriamiento."
+    regime: "Tiempo de enfriamiento ≪ 1/H(z_init). No se cumple para K ≳ 1e5 eV (en electron_losses_IGM el electrón de 1e5 eV tarda Δz ≈ 0.43); se reporta, no se corrige."
+    source: {user: "2026-09-28: 'z fijo = z_init (10)' para los objetivos 1 y 2 de EM_cascades"}
+    status: adopted
+    approved: {by: "usuario", date: 2026-09-28}
+  A20:
+    statement: "Frenado continuo para cada partícula de la cascada (extiende A11): pérdida continua con las tasas de igm_losses. Cada ionización colisional crea un secundario con ε distribuida según p(ε) ∝ 1/[1 + (ε/ε̄)^p] en [0, (T − B)/2] (el espectro de A14/E17, ε̄ = secondary_E_bar, p = secondary_exponent). Los secundarios con ε ≤ K_floor no producen más ionizaciones (A07)."
+    regime: "El mismo que A11 y A14."
+    source: {bib: FurlanettoStoever2010, loc: "ec. (2), p. 1871 (espectro de secundarios); continuidad con A11, A14, A07"}
+    status: adopted
+    approved: {by: "usuario", date: 2026-09-28}
+  A21:
+    statement: "Los únicos fotones secundarios ionizantes son los de Compton inverso sobre el CMB, con el espectro de B&G 1970 ec. (2.48) (γ ≫ 1). Se ignoran los fotones de bremsstrahlung, los Lyα de las excitaciones y los de recombinación."
+    regime: "Los fotones de IC que llegan a la ventana de A22 vienen de electrones con γ ≳ 20 (a verificar con los números del problema, A7), dentro del régimen γ ≫ 1 de B&G."
+    source: {bib: BlumenthalGould1970, loc: "ec. (2.48), p. 243"}
+    status: adopted
+    approved: {by: "usuario", date: 2026-09-28}
+  A22:
+    statement: "Ventana de fotoionización: un fotón de energía E_γ produce exactamente una fotoionización del H, en el z de emisión, si R_H ≤ E_γ ≤ E_max, con E_max definido por n_HI σ_pi(E_max) c = H(z) (tiempo medio de interacción igual al tiempo de Hubble); fuera de la ventana no ioniza. Sin corrimiento al rojo en vuelo ni escape."
+    regime: "Corte duro; los fotones con t_int cercano a 1/H se cuentan como todo o nada."
+    source: {user: "2026-09-28: criterio de las instrucciones de la tarea (ventana entre el potencial de ionización y el tiempo de Hubble), R_H de A12"}
+    status: adopted
+    approved: {by: "usuario", date: 2026-09-28}
+  A23:
+    statement: "Cada fotoionización crea un fotoelectrón de energía E_γ − R_H (H en reposo) que se enfría como cualquier electrón (A20). La fotoionización y todo el árbol del fotoelectrón (sus ionizaciones colisionales, sus secundarios y sus fotones de IC) se cuentan en la curva de fotoionización secundaria."
+    regime: "El de A20."
+    source: {user: "2026-09-28: 'cascada; fotoelectrones a fotoionización'; 'la fotoionización produce electrones secundarios que a su vez producirán más ionizaciones que debes contar para la curva de fotoionización'"}
+    status: adopted
+    approved: {by: "usuario", date: 2026-09-28}
+  A24:
+    statement: "Sección eficaz de fotoionización del H(1s): ajuste analítico de Verner et al. 1996."
+    regime: "E_th = 13.60 eV ≤ E ≤ E_max = 50 keV (p. 494). E_th de Verner (Kelly 1987) difiere de R_H = 13.598 eV (A12) en 2e-3 eV: entre ambos σ se toma en el umbral."
+    source: {bib: Verner1996, loc: "Eq. (1) p. 488; Table 1 p. 489 (H I, clase A: hidrogénica, rms < 0.2 %, p. 495); transcrito en provenance/data/verner1996_HI.yaml"}
+    status: adopted
+    approved: {by: "usuario", date: 2026-09-28}

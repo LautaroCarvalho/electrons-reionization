@@ -1,0 +1,25 @@
+{
+ "file": "figures/igm_distance_travelled_xe0.01.png",
+ "file_pdf": "figures/igm_distance_travelled_xe0.01.pdf",
+ "produced_by": "electron_losses_IGM/scripts/fig_phase_space.py::fig34",
+ "shows": "K vs distance travelled (proper left, comoving right) with all processes (top) and without synchrotron (bottom), coloured by dominant process",
+ "from_scratch": "augmented ODE (distances) + dominant process along the track",
+ "from_library": "numpy, scipy (solve_ivp Radau, quad, brentq, CubicSpline), astropy (Planck18), mpmath, matplotlib",
+ "choices": [
+  "comparison without synchrotron (E13)",
+  "x limits = distance at speed c (D17)",
+  "threshold curves placed at the distance a photon-speed particle covers by z"
+ ],
+ "supports": [],
+ "notebook_cell": 34,
+ "parameters": {
+  "x_e": 0.01,
+  "z_init": 10.0,
+  "z_final": 5.5,
+  "language": "es",
+  "xmax_Mpc": {
+   "proper": 173.85070702149247,
+   "comoving": 1436.8719341605881
+  }
+ }
+}

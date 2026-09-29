@@ -1,0 +1,19 @@
+{
+ "file": "figures/igm_phase_space_colored_xe0.1.png",
+ "file_pdf": "figures/igm_phase_space_colored_xe0.1.pdf",
+ "produced_by": "electron_losses_IGM/scripts/fig_phase_space.py::fig30",
+ "shows": "trajectories K(z) coloured by the dominant loss process at each point, with the IC up-scatter thresholds",
+ "from_scratch": "dominant process from losses.rates along each trajectory",
+ "from_library": "numpy, scipy (solve_ivp Radau, quad, brentq, CubicSpline), astropy (Planck18), mpmath, matplotlib",
+ "choices": [
+  "curves stop at the 10.2 eV floor"
+ ],
+ "supports": [],
+ "notebook_cell": 30,
+ "parameters": {
+  "x_e": 0.1,
+  "z_init": 10.0,
+  "z_final": 5.5,
+  "language": "es"
+ }
+}

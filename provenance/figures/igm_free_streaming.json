@@ -1,0 +1,21 @@
+{
+ "file": "figures/igm_free_streaming.png",
+ "file_pdf": "figures/igm_free_streaming.pdf",
+ "produced_by": "electron_losses_IGM/scripts/fig_free_streaming.py::main",
+ "shows": "maximum distance reached between z_init and z_final (top) and time to travel R_target (bottom) vs initial energy, without losses; proper and comoving",
+ "from_scratch": "distances integrated on the cosmic-time grid",
+ "from_library": "numpy, scipy (solve_ivp Radau, quad, brentq, CubicSpline), astropy (Planck18), mpmath, matplotlib",
+ "choices": [
+  "no energy losses (as the notebook)",
+  "comoving distance added (A09)"
+ ],
+ "supports": [],
+ "notebook_cell": 6,
+ "parameters": {
+  "x_e": 0.0001,
+  "z_init": 10.0,
+  "z_final": 5.5,
+  "language": "es",
+  "R_target_pc": 10000000.0
+ }
+}

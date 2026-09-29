@@ -1,0 +1,22 @@
+{
+ "file": "figures/igm_bremsstrahlung_only_xe0.1.png",
+ "file_pdf": "figures/igm_bremsstrahlung_only_xe0.1.pdf",
+ "produced_by": "electron_losses_IGM/scripts/fig_bremsstrahlung_only.py::main",
+ "shows": "K/K_ini for bremsstrahlung on neutral H (BREMS CS_int) and on protons (Karzas & Latter + B&G)",
+ "from_scratch": "trajectory K(t) from the rate registry; all rates re-implemented (see igm_losses)",
+ "from_library": "numpy, scipy (solve_ivp Radau, quad, brentq, CubicSpline), astropy (Planck18), mpmath, matplotlib",
+ "choices": [
+  "C¹ splices (D19)",
+  "e–e neglected (A15)",
+  "tail k/T > 0.95 ignored",
+  "floor K_floor = 10.2 eV"
+ ],
+ "supports": [],
+ "notebook_cell": 21,
+ "parameters": {
+  "x_e": 0.1,
+  "z_init": 10.0,
+  "z_final": 5.5,
+  "language": "es"
+ }
+}

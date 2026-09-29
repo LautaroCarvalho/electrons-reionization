@@ -1,0 +1,24 @@
+{
+ "file": "figures/cas_loss_fraction_integrated_xe0.99.png",
+ "file_pdf": "figures/cas_loss_fraction_integrated_xe0.99.pdf",
+ "produced_by": "EM_cascades/scripts/fig_loss_fraction_integrated.py::main",
+ "shows": "fraction of K_ini lost to each process down to K_floor vs K_ini, medium fixed at z_init",
+ "from_scratch": "em_cascades.fractions.integrated_fractions",
+ "from_library": "numpy, scipy (quad, hyp2f1), mpmath, matplotlib; rates from igm_losses (electron_losses_IGM)",
+ "choices": [
+  "energy integral at fixed z (checked against the time ODE)",
+  "unlost part K_floor/K_ini drawn",
+  "z fixed (A19)"
+ ],
+ "supports": [],
+ "task": "EM_cascades objetivo 1b",
+ "parameters": {
+  "x_e": 0.99,
+  "z": 10.0,
+  "language": "es",
+  "K_grid": {
+   "K_max_eV": 10000000000000.0,
+   "points_per_decade": 40
+  }
+ }
+}

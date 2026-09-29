@@ -1,0 +1,20 @@
+{
+ "file": "figures/igm_total_cooling_xe0.5.png",
+ "file_pdf": "figures/igm_total_cooling_xe0.5.pdf",
+ "produced_by": "electron_losses_IGM/scripts/fig_total_cooling.py::main",
+ "shows": "K/K_ini with all seven processes (adiabatic, synchrotron, IC, Coulomb, excitation, ionization, bremsstrahlung)",
+ "from_scratch": "trajectory K(t) from the rate registry; all rates re-implemented (see igm_losses)",
+ "from_library": "numpy, scipy (solve_ivp Radau, quad, brentq, CubicSpline), astropy (Planck18), mpmath, matplotlib",
+ "choices": [
+  "bremsstrahlung included in the total (D14)",
+  "floor K_floor = 10.2 eV (A07)"
+ ],
+ "supports": [],
+ "notebook_cell": 23,
+ "parameters": {
+  "x_e": 0.5,
+  "z_init": 10.0,
+  "z_final": 5.5,
+  "language": "es"
+ }
+}

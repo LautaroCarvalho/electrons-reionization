@@ -1,0 +1,190 @@
+# Variantes del notebook que implementan lo mismo de formas distintas. El usuario elige cada caso
+# (decisión del 2026-09-27: "Te consulto cada caso"). `recommendation` es mía; `chosen` queda en null hasta
+# la respuesta. Lo elegido pasa después a parameters.yaml como parámetro único.
+
+decisions:
+
+  D01:
+    topic: "Niveles de excitación colisional del H(1s → np)"
+    variants:
+      - {value: "n = 2…10 (9 niveles)", cells: [15, 22, 24, 41, 42]}
+      - {value: "n = 2, 3", cells: [26, 28, 31, 33, 36, 38]}
+    recommendation: "n = 2…10: es la variante más completa y la tabla se calcula una sola vez, así que el costo es menor. Además, en F5 se mide cuánto cambian las figuras."
+    chosen: "n = 2…10 (9 niveles)"
+    decided: {by: "usuario", date: 2026-09-27}
+  D02:
+    topic: "Energía de cambio del régimen de baja energía (Born/BE) al asintótico en la sección eficaz de excitación"
+    variants:
+      - {value: "T < 3000 eV", cells: [15, 22, 24, 26, 28, 31, 33, 36, 38, 42]}
+      - {value: "T < 100 eV", cells: [41]}
+    recommendation: "Decidir en F3 con el rango de validez que dé Stone, Kim & Desclaux (2002), y exigir continuidad en el corte con un test (E12). Mientras tanto, 3000 eV."
+    chosen: "3000 eV provisorio; se fija en F3 con Stone, Kim & Desclaux (2002) y un test de continuidad, y se reporta al usuario"
+    decided: {by: "usuario", date: 2026-09-27}
+  D03:
+    topic: "Interpolación de las tablas de pérdida (excitación, ionización)"
+    variants:
+      - {value: "cúbica en K", cells: [15, 18, 22, 24, 26, 28]}
+      - {value: "lineal en K", cells: [31, 33, 36, 38, 41]}
+    recommendation: "Lineal en log-log (variante nueva): es monótona y no oscila en los saltos que dejaría un cambio de régimen. Si no la aceptás, lineal en K."
+    chosen: "lineal en log-log (variante nueva), con test contra la fórmula directa fuera de la grilla"
+    decided: {by: "usuario", date: 2026-09-27}
+  D04:
+    topic: "Límite superior de las tablas de excitación/ionización"
+    variants:
+      - {value: "1e11 eV", cells: [15, 18, 42]}
+      - {value: "1e13 eV", cells: [22, 24, 26, 41]}
+      - {value: "1e14 eV", cells: [28, 31, 33, 36, 38]}
+    recommendation: "1e15 eV, por encima de la energía máxima de todas las figuras (1e14 eV), y que el código dé error si se pide un valor fuera de la tabla (en lugar de extrapolar con 0 o con el último valor, D08)."
+    chosen: "1e14 eV (límite inclusivo: igual a la energía máxima de las figuras; el comportamiento fuera de la tabla se decide en D08)"
+    decided: {by: "usuario", date: 2026-09-27}
+  D05:
+    topic: "Tolerancias del integrador (Radau)"
+    variants:
+      - {value: "rtol 1e-8", cells: [2, 4, 5, 8, 9, 11, 12, 14, 17, 19, 21, 23, 24, 40, 42]}
+      - {value: "rtol 1e-6", cells: [6, 27, 29, 30, 32, 34, 35, 37, 39]}
+      - {value: "atol 1e-20 J", cells: [2, 4, 5, 8, 9, 14, 17, 19, 21, 40, 42]}
+      - {value: "atol 1e-25 J", cells: [11, 12, 23, 24, 27, 29, 30, 32, 34, 35, 37, 39]}
+    recommendation: "rtol 1e-8 y atol 1e-25 J (≈ 6e-7 eV, muy por debajo de la energía más baja, 100 eV = 1.6e-17 J) en todas las figuras. En F5 se verifica que 1e-6 no cambie las curvas (C56)."
+    chosen: "rtol 1e-8, atol 1e-25 J en todas las figuras; en F5 se compara con rtol 1e-6"
+    decided: {by: "usuario", date: 2026-09-27}
+  D06:
+    topic: "Grilla de evaluación en tiempo"
+    variants:
+      - {value: "A: tiempo transcurrido log desde 1 yr, 500–1000 puntos", cells: [2, 4, 5, 9, 15, 18, 21]}
+      - {value: "B: tiempo cósmico log, 1000 / 5000 / 10000 puntos", cells: [8, 10, 12, 14, 22, 24, 26, 29, 30, 32, 34, 35, 37, 39, 42]}
+    recommendation: "Una sola grilla B de 2000 puntos para todas las figuras. La grilla sólo define dónde se muestrea la solución (la precisión la dan las tolerancias), salvo en step_losses (celda 39), donde ΔE depende del paso: ahí propongo graficar la tasa dE/dt (ver E14)."
+    chosen: "unión A ∪ B en todas las figuras: A = tiempo transcurrido log desde 1 yr, B = tiempo cósmico log; N_A = 1000, N_B = 2000 (confirmados por el usuario el 2026-09-27), puntos ordenados y sin duplicados"
+    decided: {by: "usuario", date: 2026-09-27}
+  D07:
+    topic: "Integral <ε> del espectro de secundarios de ionización"
+    variants:
+      - {value: "variable lineal ε con quad (emite IntegrationWarning 'probably divergent')", cells: [18, 22, 24, 26, 28, 31, 33]}
+      - {value: "variable u = ln(ε/Ē)", cells: [36, 38]}
+    recommendation: "Forma cerrada si existe (a derivar con sympy en F3); si no, la variable logarítmica, verificada contra una integración de alta precisión (mpmath)."
+    chosen: "forma cerrada con sympy si existe; si no, variable u = ln(eps/E_bar), verificada contra mpmath en alta precisión"
+    decided: {by: "usuario", date: 2026-09-27}
+  D08:
+    topic: "Valor de las tablas fuera del rango"
+    variants:
+      - {value: "fill 0", cells: [15, 18, 22, 24, 26, 28, 31, 33]}
+      - {value: "fill = último valor", cells: [36, 38, 41]}
+    recommendation: "Ninguno: la tabla cubre todo el dominio (D04) y pedir un valor fuera de ella es un error explícito."
+    chosen: "error explícito fuera del rango tabulado; debajo del umbral físico de cada proceso la pérdida es 0 por física (codificado aparte)"
+    decided: {by: "usuario", date: 2026-09-27}
+  D09:
+    topic: "Criterio de fin de la integración"
+    variants:
+      - {value: "evento K = k_B T_CMB(z)", cells: [10, 11, 12, 14, 22, 23, 24, 26, 27, 29, 30, 32, 34, 35, 36, 37, 38, 39, 40]}
+      - {value: "corte duro en 10.204 eV dentro de la tasa", cells: [42]}
+      - {value: "evento en el umbral del proceso (10.204 o 13.6 eV)", cells: [15, 17, 18, 19]}
+    recommendation: "Resuelto en parte por A07 (2026-09-27): las figuras de pérdida total usan el piso K_floor = 10.2 eV. Queda por decidir el piso de las figuras de un solo proceso: recomiendo el umbral del proceso (10.204 eV excitación, 13.6 eV ionización), como en el original."
+    chosen: "figuras de pérdida total y de un proceso: K_floor = 10.2 eV; excepto excitation_only (evento en E_2 = 10.204 eV de la Tabla 1 de Stone et al. 2002, por E19) e ionization_only (evento en R_H, por A12)"
+    decided: {by: "usuario", date: 2026-09-27}
+  D10:
+    topic: "Compton inverso en la celda 42"
+    variants:
+      - {value: "Thomson (sin F_KN)", cells: [42]}
+      - {value: "Klein–Nishina con F_KN", cells: [10, 11, 12, 22, 24, 26, 28, 30, 32, 34, 35, 36, 38, 40, 41]}
+    recommendation: "KN en todas las figuras (F_KN → 1 recupera Thomson donde corresponde)."
+    chosen: "Klein–Nishina (F_KN) en todas las figuras, incluida la de la celda 42"
+    decided: {by: "usuario", date: 2026-09-27}
+  D11:
+    topic: "Ángulo de pitch del sincrotrón en las figuras de giro-radio/distancia"
+    variants:
+      - {value: "sinθ = 0.5", cells: [2]}
+      - {value: "sinθ = 1 (v ⟂ B)", cells: [4]}
+      - {value: "promedio isotrópico", cells: [5, 8, 22]}
+    recommendation: "Un parámetro por figura: celda 2 con el valor que resuelva E06, celda 4 con sinθ = 1 y el resto isotrópico (A08)."
+    chosen: "celda 2: sin(theta) = 1 (90°); celda 4: sin(theta) = 1 (v ⟂ B); resto: promedio isotrópico (A08)"
+    decided: {by: "usuario", date: 2026-09-27}
+  D12:
+    topic: "Interpolación z(t) y H(t)"
+    variants:
+      - {value: "500 puntos hasta z_init+5", cells: [2]}
+      - {value: "5000 puntos", cells: [4, 5, 6, 8, 9, 10, 12, 14, 15, 18, 21, 22, 24, 26, 42]}
+      - {value: "10000 puntos", cells: [28, 31, 33, 36, 38]}
+      - {value: "H evaluado directo con Planck18.H (sin interpolar)", cells: [28]}
+    recommendation: "Un solo interpolador en cosmology.py, con un test que exija un error relativo < 1e-8 contra astropy en puntos que no están en la grilla."
+    chosen: "un solo interpolador en cosmology.py; N de puntos elegido por un test con error relativo < 1e-8 contra astropy fuera de la grilla; los mapas evalúan H directamente"
+    decided: {by: "usuario", date: 2026-09-27}
+  D13:
+    topic: "Variable de estado de la EDO"
+    variants:
+      - {value: "energía cinética K", cells: [2, 4, 5, 8, 9, 11, 12, 14, 17, 19, 21, 23, 24, 26, 27, 29, 30, 32, 34, 35, 36, 37, 38, 40]}
+      - {value: "energía total E", cells: [6, 42]}
+    recommendation: "K en todas (evita la cancelación E - m_e c² a baja energía)."
+    chosen: "energía cinética K como variable de estado en todas las figuras"
+    decided: {by: "usuario", date: 2026-09-27}
+  D14:
+    topic: "¿Se incluye bremsstrahlung en la pérdida total?"
+    variants:
+      - {value: "no (el total de las celdas 22–39 no lo incluye)", cells: [22, 23, 24, 26, 28, 30, 32, 34, 35, 36, 37, 38, 39]}
+      - {value: "sí (celdas 40–42, que nunca corrieron bien)", cells: [40, 41, 42]}
+    recommendation: "Sí en todas las figuras de pérdida total (es un proceso físico presente en el medio), con un toggle. Además, en F5 se reporta cuánto cambia cada figura respecto del original."
+    chosen: "sí: bremsstrahlung (B&G por régimen, A15) incluido en el total de todas las figuras, con toggle; en F5 se reporta el cambio respecto del original"
+    decided: {by: "usuario", date: 2026-09-27}
+  D15:
+    topic: "Tabulación de F_KN(b)"
+    variants:
+      - {value: "50 puntos log en b ∈ [1e-4, 1e4], cúbica, fill (1, 0)", cells: [10, 12, 22, 24, 26, 28, 31, 33, 36, 38, 41]}
+    recommendation: "Mantener el rango, subir a 200 puntos, interpolar en log-log y verificar los límites Thomson (F → 1) y KN extremo (F → asintótica de B&G) con tests. Depende de E05."
+    chosen: "b en [1e-4, 1e4] con 200 puntos, interpolación lineal log-log; fuera del rango, límites físicos: F = 1 (Thomson) para b < 1e-4 y asintótica de B&G para b > 1e4 (excepción explícita a D08); tests en ambos límites"
+    decided: {by: "usuario", date: 2026-09-27}
+  D16:
+    topic: "Dominio de la celda 41 (mapa Γ_ad)"
+    variants:
+      - {value: "z ∈ [5.5, 15] (más allá de z_init = 10)", cells: [41]}
+    recommendation: "Conservar [5.5, 15] como parámetro propio de esa figura: es un mapa local de tasas, no una trayectoria, así que no depende de z_init."
+    chosen: "z en [5.5, 15] como parámetro propio de adiabatic_fraction_map (mapa local de tasas, independiente de z_init)"
+    decided: {by: "usuario", date: 2026-09-27}
+  D17:
+    topic: "Eje x de la figura de distancia (celda 34)"
+    variants:
+      - {value: "xlim fijo en 60 Mpc", cells: [34]}
+      - {value: "c (t_final - t_init) (comentado en la celda)", cells: [34]}
+    recommendation: "c (t_final - t_init), calculado. Un límite escrito a mano necesita una razón registrada (C44)."
+    chosen: "calculado: distancia máxima a velocidad c, propia (∫c dt) y comóvil (∫c(1+z) dt) según el panel"
+    decided: {by: "usuario", date: 2026-09-27}
+  D18:
+    topic: "Fuentes del bremsstrahlung (no relativista y relativista)"
+    variants:
+      - {value: "B&G 1970 por régimen (sólo γ ≫ 1)", cells: [21, 40, 41, 42]}
+      - {value: "BremsLib v1.0.5 (Poškus 2019), 10 eV–3 MeV, H neutro", cells: []}
+      - {value: "BREMS v1.5.8.9 CS_int_1.txt, 10 eV–300 MeV, H neutro", cells: []}
+      - {value: "Karzas & Latter 1961 para e–p", cells: []}
+    recommendation: "CS_int_1.txt para el H neutro (coincide con BremsLib dentro de 0.3 % para k > 0 y con B&G (3.53) dentro de 2–7 % entre 3 y 30 MeV) y, para e–p, BREMS con potencial de Coulomb puntual o Karzas & Latter."
+    chosen: "H neutro: CS_int_1.txt (10 eV–300 MeV), B&G (3.54) por encima; e–p: Karzas & Latter 1961 + B&G (3.53) a alta energía; e–e: pendiente"
+    decided: {by: "usuario", date: 2026-09-27}
+  D19:
+    topic: "Empalmes del bremsstrahlung (lo menos abrupto posible) y tratamiento de CS_int"
+    variants:
+      - {value: "cambio abrupto en un punto", cells: []}
+      - {value: "cruce + mezcla C¹ (Hermite en ln T, ln φ)", cells: []}
+    recommendation: "e–p: K&L y B&G (3.53) se cruzan en T* = 311 keV; mezcla C¹ en [T*/2, 2T*]. H neutro: mezcla C¹ de CS_int (300 MeV) a 0.5 × B&G (3.54) en una década (3 GeV). Cola k/T > 0.95 ignorada; puntos faltantes de CS_int según el docstring de bremsstrahlung.py."
+    chosen: "cruce + mezcla C¹ en ambos empalmes; f = 2 (e–p) y [300 MeV, 3 GeV] (H neutro); cola ignorada; filas con > 1 punto faltante descartadas (12–40 MeV)"
+    decided: {by: "usuario (criterio: lo menos abrupto) + elección numérica mía de ventanas y del tratamiento de faltantes, a revisar", date: 2026-09-27}
+
+  D20:
+    topic: "Saltos en los cambios de régimen de excitación (3 y 10 keV) y de Coulomb (β = α)"
+    variants:
+      - {value: "dejar el cambio abrupto y documentarlo", cells: []}
+      - {value: "mezcla C¹ (Hermite en ln T, ln σ) como en D19", cells: []}
+    recommendation: "Excitación: suavizar en [5, 20] keV (f = 2) por consistencia con D19. Coulomb: dejarlo; el salto cae en K ≈ 13.6 eV, 3.4 eV sobre el piso (efecto sobre trayectorias no medido)."
+    chosen: "dejar ambos saltos sin suavizar: excitación +0.1 % en 3 keV y +2.8 % en 10 keV (Stone et al. 2002 ec. 5 → Inokuti 1971 ecs. 4.26–4.27); Coulomb +1.1 % en β = α (Gould 1972 ec. 5.5 → ec. 2.20). Son artefactos de los cortes entre fórmulas límite, no física"
+    decided: {by: "usuario", date: 2026-09-28}
+  D21:
+    topic: "Evento de parada de ionization_only (revisión de D09)"
+    variants:
+      - {value: "evento en R_H = 13.598287 eV (A12)", cells: []}
+      - {value: "evento en B_ion_RBED = 13.6057 eV", cells: []}
+    recommendation: "mantener R_H. Prueba (K0 = 1 keV, z = 10 → 5.5, x_e = 1e-4): con R_H el evento no se dispara y K → 13.605700 eV; con B se dispara en t = 1.49e16 s, pero la RBED se anula en B y K sólo se acerca a B de forma asintótica, así que ese tiempo depende de la tolerancia del solver y no es físico. K(t) es igual en ambos casos."
+    chosen: "mantener R_H (D09); la figura indica que la curva se estabiliza en B = 13.6057 eV"
+    decided: {by: "usuario", date: 2026-09-28}
+  D22:
+    topic: "EM_cascades: grilla de energía de las figuras y de la recursión de la cascada"
+    variants:
+      - {value: "log desde K_floor hasta 1e12 eV (como la figura de referencia ionization_yield_fig_igm.png)", cells: []}
+      - {value: "log desde K_floor hasta 1e13 eV (energía máxima de las figuras de electron_losses_IGM)", cells: []}
+    recommendation: "hasta 1e13 eV con 40 puntos por década; la convergencia de la recursión se comprueba duplicando la densidad (test)"
+    chosen: "K_floor … 1e13 eV, 40 puntos por década (parameters.yaml → figures.{loss_fraction_rate, loss_fraction_integrated, ionization_yield}.grid)"
+    decided: {by: "Claude (elección numérica, a revisar por el usuario)", date: 2026-09-28}

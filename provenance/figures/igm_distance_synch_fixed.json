@@ -1,0 +1,23 @@
+{
+ "file": "figures/igm_distance_synch_fixed.png",
+ "file_pdf": "figures/igm_distance_synch_fixed.pdf",
+ "produced_by": "electron_losses_IGM/scripts/fig_distance_gyration.py::make",
+ "shows": "distance travelled (d_max line, band d_min–d_max) vs cosmic time with synchrotron cooling, proper and comoving",
+ "from_scratch": "gyroradius and drift integrated from the K(t) trajectory",
+ "from_library": "numpy, scipy (solve_ivp Radau, quad, brentq, CubicSpline), astropy (Planck18), mpmath, matplotlib",
+ "choices": [
+  "notebook heuristic bounds d_min/d_max kept (A09)",
+  "comoving: gyration × (1+z), drift ∫v(1+z)dt (my choice)",
+  "⟨sinα⟩ = 1, ⟨|cosα|⟩ = 0"
+ ],
+ "supports": [],
+ "notebook_cell": 4,
+ "parameters": {
+  "x_e": 0.0001,
+  "z_init": 10.0,
+  "z_final": 5.5,
+  "language": "es",
+  "sin_mean": 1.0,
+  "cos_mean": 0.0
+ }
+}

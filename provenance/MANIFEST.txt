@@ -1,0 +1,5 @@
+# Copies of files that live outside provenance/ (MR7). Format: <copy> <- <original>
+# Originals kept directly in provenance/ (parameters.yaml, assumptions.yaml, decisions.yaml, errata.yaml,
+# claims.yaml, numbers.json, run_metadata.md) are not listed here.
+provenance/original/Perdidas_de_energia-Z_10.ipynb <- contenido_inicial_generado_por_Carvalho/Perdidas_de_energia-Z_10.ipynb
+provenance/data/CS_int_1.txt <- references/Brems/CS_int/CS_int_1.txt

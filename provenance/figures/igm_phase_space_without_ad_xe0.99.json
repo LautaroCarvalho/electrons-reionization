@@ -1,0 +1,19 @@
+{
+ "file": "figures/igm_phase_space_without_ad_xe0.99.png",
+ "file_pdf": "figures/igm_phase_space_without_ad_xe0.99.pdf",
+ "produced_by": "electron_losses_IGM/scripts/fig_phase_space.py::fig32",
+ "shows": "coloured trajectories with all processes (top) and without adiabatic losses (bottom)",
+ "from_scratch": "dominant process along each trajectory",
+ "from_library": "numpy, scipy (solve_ivp Radau, quad, brentq, CubicSpline), astropy (Planck18), mpmath, matplotlib",
+ "choices": [
+  "file name without spaces or accents (the notebook's had both)"
+ ],
+ "supports": [],
+ "notebook_cell": 32,
+ "parameters": {
+  "x_e": 0.99,
+  "z_init": 10.0,
+  "z_final": 5.5,
+  "language": "es"
+ }
+}

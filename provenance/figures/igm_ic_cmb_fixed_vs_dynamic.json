@@ -1,0 +1,21 @@
+{
+ "file": "figures/igm_ic_cmb_fixed_vs_dynamic.png",
+ "file_pdf": "figures/igm_ic_cmb_fixed_vs_dynamic.pdf",
+ "produced_by": "electron_losses_IGM/scripts/fig_ic_cmb_fixed_vs_dynamic.py::main",
+ "shows": "K/K_ini vs z for IC on the CMB with the CMB frozen at z_init (top) and evolving (bottom); the fixed-z curves are plotted against the redshift of the elapsed cosmic time",
+ "from_scratch": "trajectories from integrate.evolve(fixed_z=True/False)",
+ "from_library": "numpy, scipy (solve_ivp Radau, quad, brentq, CubicSpline), astropy (Planck18), mpmath, matplotlib",
+ "choices": [
+  "x axis of the fixed-z panel = z(t) as time proxy (as the notebook)",
+  "marker Δt = 30 Myr (E09)"
+ ],
+ "supports": [],
+ "notebook_cell": 12,
+ "parameters": {
+  "x_e": 0.0001,
+  "z_init": 10.0,
+  "z_final": 5.5,
+  "language": "es",
+  "z_marker": 9.557632426926457
+ }
+}

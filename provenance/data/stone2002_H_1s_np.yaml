@@ -1,0 +1,20 @@
+# Stone, Kim & Desclaux 2002, J. Res. NIST 107, 327, Table 1 (p. 328): hydrogen 1s -> np excitation.
+# Transcribed from the PDF page image (references/Stone (2002).pdf, PDF p. 2) on 2026-09-27/28.
+# E: excitation energy [eV]; f: dipole oscillator strength; a, b, c: constants of Eq. (5) (dimensionless).
+# B: "The experimental ionization energy B = 13.5984 eV has been used in the scaling" (Table 1 caption).
+# sigma_BE_check: BE-scaled cross sections [Å^2] printed in the same table (used only as test references).
+source: {bib: StoneKimDesclaux2002, loc: "Table 1, p. 328"}
+B_eV: 13.5984
+levels:
+  2:  {E_eV: 10.204, f: 0.4164,   a: 0.555512, b: 0.271785, c:  0.000112}
+  3:  {E_eV: 12.094, f: 0.0791,   a: 0.089083, b: 0.060202, c: -0.019775}
+  4:  {E_eV: 12.755, f: 0.0290,   a: 0.030956, b: 0.022984, c: -0.009279}
+  5:  {E_eV: 13.061, f: 0.0139,   a: 0.014534, b: 0.011243, c: -0.004880}
+  6:  {E_eV: 13.228, f: 0.00780,  a: 0.008031, b: 0.006348, c: -0.002853}
+  7:  {E_eV: 13.328, f: 0.004816, a: 0.004919, b: 0.003939, c: -0.001806}
+  8:  {E_eV: 13.393, f: 0.003185, a: 0.003237, b: 0.002550, c: -0.001213}
+  9:  {E_eV: 13.438, f: 0.002217, a: 0.002246, b: 0.001824, c: -0.000854}
+  10: {E_eV: 13.470, f: 0.001606, a: 0.001623, b: 0.001323, c: -0.000623}
+sigma_BE_check:
+  2: {11: 0.15876, 12: 0.24099, 13: 0.30186, 14: 0.35119, 15: 0.39256, 16: 0.42786, 17: 0.45828, 18: 0.48468, 19: 0.50768, 20: 0.52779}
+  3: {13: 0.03033, 14: 0.04382, 15: 0.05372, 16: 0.06166, 17: 0.06827, 18: 0.07387, 19: 0.07867, 20: 0.08282}

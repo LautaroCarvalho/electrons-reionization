@@ -1,0 +1,20 @@
+{
+ "file": "figures/igm_synch_only.png",
+ "file_pdf": "figures/igm_synch_only.pdf",
+ "produced_by": "electron_losses_IGM/scripts/fig_synch_only.py::main",
+ "shows": "K/K_ini vs cosmic time and vs z for synchrotron losses only, B = B0 (1+z)², isotropic pitch angles",
+ "from_scratch": "trajectory K(t) from the rate registry; all rates re-implemented (see igm_losses)",
+ "from_library": "numpy, scipy (solve_ivp Radau, quad, brentq, CubicSpline), astropy (Planck18), mpmath, matplotlib",
+ "choices": [
+  "isotropic pitch-angle average (A08)",
+  "floor K_floor = 10.2 eV (A07, D09)"
+ ],
+ "supports": [],
+ "notebook_cell": 8,
+ "parameters": {
+  "x_e": 0.0001,
+  "z_init": 10.0,
+  "z_final": 5.5,
+  "language": "es"
+ }
+}

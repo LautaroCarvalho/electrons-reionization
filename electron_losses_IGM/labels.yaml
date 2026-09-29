@@ -1,0 +1,50 @@
+# Axis labels, legend entries and titles of the new figures (es | en). Filled per figure in F5.
+# LaTeX (usetex). Placeholders in {braces} are filled by plotting.label(key, **fmt).
+cosmic_time_yr:     {es: 'Tiempo c\''osmico [yr]', en: 'Cosmic time [yr]'}
+redshift:           {es: '\textit{{Redshift}} $z$', en: 'Redshift $z$'}
+K_over_Kini:        {es: 'Energ\''ia cin\''etica normalizada $K/K_{{\mathrm{{ini}}}}$', en: 'Normalized kinetic energy $K/K_{{\mathrm{{ini}}}}$'}
+K_ini_eV:           {es: '$K_{{\mathrm{{ini}}}} = 10^{{{exp}}}$ eV', en: '$K_{{\mathrm{{ini}}}} = 10^{{{exp}}}$ eV'}
+loss_10:            {es: '10\,\% de p\''erdida', en: '10\,\% loss'}
+loss_50:            {es: '50\,\% de p\''erdida', en: '50\,\% loss'}
+process:
+  adiabatic:        {es: 'Expansi\''on adiab\''atica', en: 'Adiabatic expansion'}
+  synchrotron:      {es: 'Sincrotr\''on', en: 'Synchrotron'}
+  ic:               {es: 'Compton inverso (CMB)', en: 'Inverse Compton (CMB)'}
+  coulomb:          {es: 'Coulomb', en: 'Coulomb'}
+  excitation:       {es: 'Excitaci\''on H', en: 'H excitation'}
+  ionization:       {es: 'Ionizaci\''on H', en: 'H ionization'}
+  bremsstrahlung:   {es: 'Bremsstrahlung', en: 'Bremsstrahlung'}
+xe_value:           {es: '$x_e = {xe}$', en: '$x_e = {xe}$'}
+title_process_only: {es: 'S\''olo {proc}', en: '{proc} only'}
+title_all:          {es: 'Todos los procesos', en: 'All processes'}
+gyroradius_pc:      {es: 'Giro-radio $r_g$ [pc]', en: 'Gyroradius $r_g$ [pc]'}
+distance_pc:        {es: 'Distancia recorrida [pc]', en: 'Distance travelled [pc]'}
+distance_Mpc:       {es: 'Distancia recorrida [Mpc]', en: 'Distance travelled [Mpc]'}
+proper:             {es: 'propia', en: 'proper'}
+comoving:           {es: 'com\''ovil', en: 'comoving'}
+panel_proper:       {es: 'Distancia propia', en: 'Proper distance'}
+panel_comoving:     {es: 'Distancia com\''ovil', en: 'Comoving distance'}
+max_distance_pc:    {es: 'Distancia m\''axima alcanzada [pc]', en: 'Maximum distance reached [pc]'}
+time_to_reach_yr:   {es: 'Tiempo para recorrer $R = {R}$ Mpc [yr]', en: 'Time to travel $R = {R}$ Mpc [yr]'}
+initial_energy_eV:  {es: 'Energ\''ia cin\''etica inicial $K_{{\mathrm{{ini}}}}$ [eV]', en: 'Initial kinetic energy $K_{{\mathrm{{ini}}}}$ [eV]'}
+utopia_fixed:       {es: 'Compton inverso sobre el CMB ($z$ fijo $= {z}$)', en: 'Inverse Compton on the CMB (fixed $z = {z}$)'}
+utopia_dynamic:     {es: 'Compton inverso sobre el CMB ($z$ din\''amico)', en: 'Inverse Compton on the CMB (dynamical $z$)'}
+dt_marker:          {es: '$\Delta t = {Myr}$ Myr desde $z_{{\mathrm{{ini}}}}$', en: '$\Delta t = {Myr}$ Myr after $z_{{\mathrm{{ini}}}}$'}
+pitch_fixed:        {es: '$\sin\theta = {s}$', en: '$\sin\theta = {s}$'}
+pitch_iso:          {es: '\''angulo de pitch isotr\''opico', en: 'isotropic pitch angle'}
+ratio_K_without:    {es: '$K_{{\mathrm{{tot}}}}/K_{{\mathrm{{sin\ {proc}}}}}$', en: '$K_{{\mathrm{{tot}}}}/K_{{\mathrm{{no\ {proc}}}}}$'}
+rate_fraction:      {es: '$(L_{{\mathrm{{tot}}}} - L_{{\mathrm{{{proc}}}}})/L_{{\mathrm{{tot}}}}$', en: '$(L_{{\mathrm{{tot}}}} - L_{{\mathrm{{{proc}}}}})/L_{{\mathrm{{tot}}}}$'}
+lost_ratio:         {es: '$(K_{{\mathrm{{ini}}}}-K_{{\mathrm{{tot}}}})/(K_{{\mathrm{{ini}}}}-K_{{\mathrm{{sin\ {proc}}}}})$', en: '$(K_{{\mathrm{{ini}}}}-K_{{\mathrm{{tot}}}})/(K_{{\mathrm{{ini}}}}-K_{{\mathrm{{no\ {proc}}}}})$'}
+K_with_without_ad:  {es: '$K_{{\mathrm{{con\ ad}}}}/K_{{\mathrm{{sin\ ad}}}}$', en: '$K_{{\mathrm{{with\ ad}}}}/K_{{\mathrm{{no\ ad}}}}$'}
+short:
+  synchrotron:      {es: 'sinc', en: 'sync'}
+  adiabatic:        {es: 'ad', en: 'ad'}
+lost_fraction:      {es: 'Energ\''ia perdida acumulada / $K_{{\mathrm{{ini}}}}$', en: 'Accumulated energy lost / $K_{{\mathrm{{ini}}}}$'}
+lost_per_dz:        {es: 'Energ\''ia perdida por intervalo $\Delta z = {dz}$ [eV]', en: 'Energy lost per $\Delta z = {dz}$ bin [eV]'}
+kinetic_energy_eV:  {es: 'Energ\''ia cin\''etica $K$ [eV]', en: 'Kinetic energy $K$ [eV]'}
+threshold_curve:    {es: 'Umbral de up-scatter (fotoionizaci\''on secundaria)', en: 'Up-scatter threshold (secondary photoionization)'}
+all_active:         {es: 'Todos los mecanismos de p\''erdida activos', en: 'All loss mechanisms active'}
+without:            {es: 'Sin: {proc}', en: 'Without: {proc}'}
+gamma_ad:           {es: 'Fracci\''on adiab\''atica $\Gamma_{{\mathrm{{ad}}}} = L_{{\mathrm{{ad}}}}/L_{{\mathrm{{tot}}}}$', en: 'Adiabatic fraction $\Gamma_{{\mathrm{{ad}}}} = L_{{\mathrm{{ad}}}}/L_{{\mathrm{{tot}}}}$'}
+dominance_horizon:  {es: '$\Gamma_{{\mathrm{{ad}}}} = 0.5$', en: '$\Gamma_{{\mathrm{{ad}}}} = 0.5$'}
+plateau_B:          {es: 'La RBED se anula en $B = {B}$ eV: $K$ se estabiliza en $B$ y el evento en $R_H$ no se dispara', en: 'The RBED vanishes at $B = {B}$ eV: $K$ levels off at $B$ and the event at $R_H$ never fires'}

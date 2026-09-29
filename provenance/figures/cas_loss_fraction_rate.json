@@ -1,0 +1,24 @@
+{
+ "file": "figures/cas_loss_fraction_rate.png",
+ "file_pdf": "figures/cas_loss_fraction_rate.pdf",
+ "produced_by": "EM_cascades/scripts/fig_loss_fraction_rate.py::main",
+ "shows": "fraction L_i/L_tot of the energy-loss rate of each process vs kinetic energy, medium fixed at z_init",
+ "from_scratch": "em_cascades.fractions.rate_fractions",
+ "from_library": "numpy, scipy (quad, hyp2f1), mpmath, matplotlib; rates from igm_losses (electron_losses_IGM)",
+ "choices": [
+  "all 7 processes drawn (no threshold)",
+  "linear y, log x",
+  "z fixed (A19)"
+ ],
+ "supports": [],
+ "task": "EM_cascades objetivo 1a",
+ "parameters": {
+  "x_e": 0.0001,
+  "z": 10.0,
+  "language": "es",
+  "K_grid": {
+   "K_max_eV": 10000000000000.0,
+   "points_per_decade": 40
+  }
+ }
+}

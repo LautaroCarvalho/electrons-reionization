@@ -1,7 +1,0 @@
-{
-  "permissions": {
-    "allow": [
-      "Bash(timeout 900 python3 -u python/make_xcomp_definitions.py)"
-    ]
-  }
-}

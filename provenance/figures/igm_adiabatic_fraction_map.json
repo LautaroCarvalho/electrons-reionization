@@ -1,0 +1,22 @@
+{
+ "file": "figures/igm_adiabatic_fraction_map.png",
+ "file_pdf": "figures/igm_adiabatic_fraction_map.pdf",
+ "produced_by": "electron_losses_IGM/scripts/fig_phase_space.py::fig41",
+ "shows": "fraction of the total loss rate due to adiabatic expansion on the (z, K) plane, with the Γ_ad = 0.5 contour",
+ "from_scratch": "rate maps from losses.rates",
+ "from_library": "numpy, scipy (solve_ivp Radau, quad, brentq, CubicSpline), astropy (Planck18), mpmath, matplotlib",
+ "choices": [
+  "z range 5.5–15 (D16)",
+  "hand-placed text boxes of the notebook not reproduced",
+  "ionization with the eV→J factor (E08); bremsstrahlung from BREMS CS_int + Karzas & Latter + B&G (D18, D19)",
+  "the Γ_ad = 0.5 contour is drawn only where Γ_ad reaches 0.5"
+ ],
+ "supports": [],
+ "notebook_cell": 41,
+ "parameters": {
+  "x_e": 0.0001,
+  "z_init": 10.0,
+  "z_final": 5.5,
+  "language": "es"
+ }
+}

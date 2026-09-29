@@ -1,0 +1,17 @@
+# H I photoionization cross-section fit, transcribed by hand from references/Verner (1996).pdf (A24).
+# Formula [Verner1996 Eq. (1), p. 488]: σ(E) = σ0 F(y) [Mb, 1 Mb = 1e-18 cm²], x = E/E0 − y0, y = √(x² + y1²),
+#   F(y) = [(x − 1)² + yw²] y^(0.5P − 5.5) (1 + √(y/ya))^(−P),  E photon energy in eV.
+# Parameters [Verner1996 Table 1, p. 489, row "H I" (Z = 1, N = 1), note A]. Note A (p. 495): hydrogenic cross
+# sections, known exactly; rms accuracy of the fit better than 0.2 %. Valid for E_th ≤ E ≤ E_max (E_max = 50 keV
+# for H-like species, p. 494).
+source: {bib: Verner1996, loc: "Eq. (1) p. 488; Table 1 p. 489 (H I); accuracy class A p. 495; E_max p. 494"}
+E_th_eV: 1.360e+1
+E_max_eV: 5.000e+4
+E0_eV: 4.298e-1
+sigma0_Mb: 5.475e+4
+ya: 3.288e+1
+P: 2.963e+0
+yw: 0.000e+0
+y0: 0.000e+0
+y1: 0.000e+0
+rms_accuracy: 2.0e-3

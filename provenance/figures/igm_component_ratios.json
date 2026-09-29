@@ -1,0 +1,20 @@
+{
+ "file": "figures/igm_component_ratios.png",
+ "file_pdf": "figures/igm_component_ratios.pdf",
+ "produced_by": "electron_losses_IGM/scripts/fig_comparisons.py::fig40",
+ "shows": "energy lost with all processes over energy lost without synchrotron (top) / without adiabatic (bottom), vs z",
+ "from_scratch": "pairs of trajectories",
+ "from_library": "numpy, scipy (solve_ivp Radau, quad, brentq, CubicSpline), astropy (Planck18), mpmath, matplotlib",
+ "choices": [
+  "rebuilt from scratch (the notebook cell failed, E11)",
+  "bremsstrahlung included (D14)"
+ ],
+ "supports": [],
+ "notebook_cell": 40,
+ "parameters": {
+  "x_e": 0.0001,
+  "z_init": 10.0,
+  "z_final": 5.5,
+  "language": "es"
+ }
+}

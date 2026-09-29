@@ -1,0 +1,21 @@
+{
+ "file": "figures/igm_gyroradius_synch.png",
+ "file_pdf": "figures/igm_gyroradius_synch.pdf",
+ "produced_by": "electron_losses_IGM/scripts/fig_gyroradius_synch.py::main",
+ "shows": "gyroradius r_g = p sinθ/(eB) vs cosmic time, proper (top) and comoving (1+z) r_g (bottom), synchrotron cooling only",
+ "from_scratch": "r_g from the K(t) trajectory",
+ "from_library": "numpy, scipy (solve_ivp Radau, quad, brentq, CubicSpline), astropy (Planck18), mpmath, matplotlib",
+ "choices": [
+  "sin θ = 1 (D11, E06)",
+  "comoving = (1+z) × proper (A09)"
+ ],
+ "supports": [],
+ "notebook_cell": 2,
+ "parameters": {
+  "x_e": 0.0001,
+  "z_init": 10.0,
+  "z_final": 5.5,
+  "language": "es",
+  "sin_theta": 1.0
+ }
+}

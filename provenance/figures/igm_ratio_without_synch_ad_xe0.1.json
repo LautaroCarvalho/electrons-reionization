@@ -1,0 +1,19 @@
+{
+ "file": "figures/igm_ratio_without_synch_ad_xe0.1.png",
+ "file_pdf": "figures/igm_ratio_without_synch_ad_xe0.1.pdf",
+ "produced_by": "electron_losses_IGM/scripts/fig_comparisons.py::fig25",
+ "shows": "ratio of K with all processes to K without synchrotron (top) / without adiabatic losses (bottom) vs cosmic time",
+ "from_scratch": "pairs of trajectories",
+ "from_library": "numpy, scipy (solve_ivp Radau, quad, brentq, CubicSpline), astropy (Planck18), mpmath, matplotlib",
+ "choices": [
+  "spikes where one trajectory reaches the 10.2 eV floor before the other (as in the notebook)"
+ ],
+ "supports": [],
+ "notebook_cell": 25,
+ "parameters": {
+  "x_e": 0.1,
+  "z_init": 10.0,
+  "z_final": 5.5,
+  "language": "es"
+ }
+}

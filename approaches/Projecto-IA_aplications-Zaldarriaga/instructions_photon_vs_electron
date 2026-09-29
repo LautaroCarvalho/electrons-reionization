@@ -1,9 +1,0 @@
-Instructions:
-
-1) Following the structure and astrophysical scenario used to generate the ionization_yield_fig.png, generate a python code that produces a figure that shows: (a) differential ionizing emissivity ṅion for UV photons and for electrons ; (b) ionization rate per target atom dζ /dlog10 for UV photons and for electrons
-
-2) Before assuming any numerical value check for it in the literature and ask which one you should use.
-
-3) Every time you ask me a question: take note of the question, the options you gave ma and which one i choose.
-
-Note: The objective is to have an extensive and deep understanding of how the UV stellar photons and the CR electrons compete as reionization agents for different parameters values of the astrophysical scenario we are exploring.

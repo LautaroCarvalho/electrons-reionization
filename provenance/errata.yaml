@@ -1,0 +1,176 @@
+# Posibles errores del notebook original. Estado: sospechado | confirmado | descartado.
+# Todos están en "sospechado" (F1): salen del inventario del código y no se contrastaron todavía con las
+# referencias. En F3 cada uno se confirma o descarta con el PDF correspondiente. Instrucción del usuario:
+# al confirmar un error, se reporta junto con el cambio y se sigue con el valor correcto. Ningún valor
+# erróneo entra al código ni a las figuras.
+
+errata:
+
+  E01:
+    cells: [0, 22, 24, 26, 28, 31, 33, 36, 38]
+    what: "BOLTZMANN_CONSTANT_MKS = 1.38064852e-23 J/K"
+    suspected_fix: "k_B = 1.380649e-23 J/K, exacto desde la redefinición del SI de 2019 (recordado; 1.38064852e-23 sería CODATA 2014)"
+    reference_needed: [SI2019]
+    effect: "Relativo ~3e-7: T_CMB en energía, U_CMB (vía a_rad, E04), piso de termalización"
+    status: confirmado
+    resolution: {by: "verificación F3", date: 2026-09-27, note: "SI Brochure 9.ª ed., §2.2, Tabla 1 (pp. 123–124): k = 1.380 649 × 10^-23 J/K exacta. El notebook usa 1.38064852e-23. Cambio aplicado en parameters.yaml: k_B = 1.380649e-23 J/K (diferencia relativa -3.5e-7, calculada)."}
+  E02:
+    cells: [0]
+    what: "Ediciones CODATA mezcladas: m_e = 9.1093837139e-31 kg, m_p = 1.67262192369e-27 kg, μ0/(4π·1e-7) = 1.00000000055"
+    suspected_fix: "Tomar todas las constantes medidas de una sola edición (la que elija el usuario)"
+    reference_needed: [CODATA2022]     # E02 resuelto: edición 2022
+    effect: "Relativo ≤ 1e-9: sin impacto visible, pero con una sola edición la procedencia de cada constante queda clara"
+    status: confirmado
+    resolution: {by: "usuario", date: 2026-09-27, note: "adoptar CODATA 2022 para todas las constantes medidas (m_e, m_p, mu0). Los valores se leen del PDF en F3; hasta entonces m_p y mu0 quedan en null y m_e sin verificar"}
+  E03:
+    cells: [0]
+    what: "YEAR_MKS = 3.15569251e7 s"
+    suspected_fix: "Si se quería el año juliano: 365.25 d = 3.15576e7 s (convención IAU). El valor del notebook se parece al año trópico."
+    reference_needed: []     # 2026-09-27: año juliano adoptado como assumed sin cita
+    effect: "Relativo ~2e-5 en todas las escalas de tiempo expresadas en años"
+    status: confirmado
+    resolution: {by: "usuario", date: 2026-09-27, note: "año juliano: 365.25 d x 86400 s = 3.15576e7 s exacto, igual que astropy u.yr; citar IAU/PDG en F3"}
+  E04:
+    cells: [10, 12, 22, 24, 26, 28, 31, 33, 36, 38, 41]
+    what: "U_CMB_0_J_M3 = 4.17e-14 escrito a mano"
+    suspected_fix: "U_CMB0 = a_rad T_CMB0^4, derivado de k_B, h, c y T_CMB0 (queda consistente con la T usada en F_KN)"
+    reference_needed: [SI2019, Fixsen2009]
+    effect: "Relativo ~1e-3 (4.17 vs ≈4.175, recordado) en todas las pérdidas por IC"
+    status: confirmado
+    resolution: {by: "usuario", date: 2026-09-27, note: "U_CMB0 = a_rad T_CMB0^4 derivado en constants.py (a_rad = 8 pi^5 k_B^4/(15 h^3 c^3)); se evalúa cuando E01 (k_B) y T_CMB0 (Fixsen 2009) estén verificados"}
+  E05:
+    cells: [10, 12, 22, 24, 26, 28, 31, 33, 36, 38, 41]
+    what: "Integrando de F_KN: planck(x) · F(q,Γ)/(1+Γq)^3, normalizado por 45/π^4"
+    suspected_fix: "Integrando de pérdida de energía q·F(q,Γ)/(1+Γq)^3 (cambio de variable E1 → q), normalizado para que F_KN → 1 en el límite Thomson"
+    reference_needed: [BlumenthalGould1970, Moderski2005]
+    effect: "Según una verificación numérica del agente de inventario (no reproducida por mí), F_KN(b=1) daría 0.30 contra 0.147 correcto (subestimación de la supresión KN ×2 en b = 1 y ×20 en b = 100). Afecta a todas las figuras con IC a γ ≳ 1e3."
+    status: confirmado
+    resolution: {by: "verificación F3", date: 2026-09-27, note: "B&G 1970, ec. (2.48) p. 243 (espectro por unidad de E1, q = E1/[Γ(1-E1)]) y ec. (2.56) p. 244 (-dE/dt = ∫ε1 dN/dε1): con ε1 = γmc² E1 = γmc² Γq/(1+Γq), el integrando en q lleva el factor q; normalización 135/π^4 (∫qF(q,0)dq = 1/9, sympy). Leído visualmente por mí y por el agente de verificación. La forma corregida reproduce los límites de B&G: ec. (2.28) F ≈ 1 - 6.04 b (Thomson + 1er orden) y ec. (2.59) en KN extremo (F(1e3) = 5.593e-6 vs 5.616e-6). La del notebook falla ambos (pendiente ≈ 3.8 en lugar de 6.0; ×900 a b = 1e4). Cambio: integrando q·F/(1+Γq)^3 con 135/π^4. IMPLEMENTADO (2026-09-28, inverse_compton.py + F_KN_table.json): F_KN(1) = 0.1473; límites B&G (2.28) y (2.59) verificados en tests."}
+  E06:
+    cells: [2]
+    what: "sin_theta = 0.5 con el comentario 'assumed 90 degrees / perfectly perpendicular'"
+    suspected_fix: "Aclarar con el usuario: sinθ = 1 (90°, como dice el comentario y usa la celda 4) o θ = 30° (sinθ = 0.5)"
+    reference_needed: []
+    effect: "Factor 4 en la tasa de sincrotrón y factor 2 en el giro-radio de la figura de la celda 2"
+    status: confirmado
+    resolution: {by: "usuario", date: 2026-09-27, fix: "sin(theta) = 1 (90°), como decía el comentario (D11)"}
+  E07:
+    cells: [21, 40, 41, 42]
+    what: "Bremsstrahlung: fórmula ultrarrelativista (ln 2γ - 1/3) aplicada desde 100 eV; Z² en lugar de Z(Z+1); corte abrupto entre apantallado y no apantallado en γ = 137"
+    suspected_fix: "Usar las expresiones de B&G 1970 en cada régimen (no relativista / relativista / apantallado) con su rango de validez, y el factor Z(Z+1) si la referencia lo indica"
+    reference_needed: [BlumenthalGould1970]
+    effect: "A γ ≈ 1 la tasa del notebook no corresponde a ninguna fórmula válida; su magnitud es a determinar"
+    status: confirmado
+    resolution: {by: "verificación F3", date: 2026-09-27, note: "B&G 1970, p. 255: ec. (3.53) -dE/dt = 4αr0²c Σ n_Z Z(Z+1)(ln 2E_i - 1/3) E_i, débil apantallamiento o completamente ionizado, 'appropriate for E_i ≲ 30/Z'; ec. (3.54) apantallamiento fuerte (E_i ≳ 30/Z) con φ1, φ2 de la ec. (3.42) (H: 45.79 y 44.46, p. 253); ec. (3.55) caso intermedio con φ(Δ = a/2E_i) de la Tabla II (p. 254). Toda la sección supone γ ≫ 1 (p. 247) y aproximación de Born; B&G no da ninguna fórmula válida a γ ≈ 1 (p. ej. K = 100 eV) y la nota 18 (p. 251) dice que ahí e–e ≪ e–p. Errores del notebook: celda 21 usa ln 2γ - 1/3 desde 100 eV; para γ ≳ 30 no apantalla el electrón ligado y usa el corte γ = 137 (no es de B&G); celda 40 usa Z² en lugar de Z(Z+1) (~2× bajo) y no suma el término. PENDIENTE del usuario: qué fórmula usar a baja energía (fuera de B&G). DECISIÓN del usuario (2026-09-27): a baja energía usar Karzas & Latter 1961 (bremsstrahlung no relativista con factor de Gaunt free–free), empalmado con B&G donde ambos valgan; el empalme se documenta y reporta. ACTUALIZACIÓN (2026-09-27): el usuario decidió usar BREMS v1.5.8.9, CS_int_1.txt (Poškus), para el H neutro de 10 eV a 300 MeV y Karzas & Latter 1961 para e–p (A15). IMPLEMENTADO (2026-09-27): electron_losses_IGM/src/igm_losses/gaunt_ff.py calcula g_ff exacto de Karzas & Latter 1961 (ecs. 9, 10, 16, 17, 22) con mpmath; 11 tests pasan (Born, Born×Elwert a 2e-5, simetría, precisión 30 vs 60 dígitos, ∫g_Born = 2√3/π ⇒ φ_rad = 16/3, escala O(η) hacia Born, cotas de los recortes < 1e-12) y 3 mutaciones se detectan. Diagnóstico: φ_rad(e–p)/φ_rad(H neutro, CS_int) = 2.68 a 10.2 eV, 1.02 a 10 keV y 0.87 a 100 keV; la caída a 100 keV refleja que K&L es no relativista, así que el empalme con B&G (3.53) queda pendiente (entre ~10 y ~100 keV). CERRADO (2026-09-27): bremsstrahlung implementado en electron_losses_IGM/src/igm_losses/bremsstrahlung.py (H neutro: CS_int_1.txt + B&G 3.54; e–p: K&L + B&G 3.53, empalmes C¹ D19; e–e ignorado); 10 tests + 3 mutaciones detectadas."}
+  E08:
+    cells: [41, 42]
+    what: "rate_ion = n_HI v loss_interp_ion(K) sin el factor EV_MKS (la tabla está en m²·eV); la celda 41 usa K_B_MKS, que no está definida"
+    suspected_fix: "Multiplicar por e (J/eV), como en las celdas 18–38; usar k_B de parameters.yaml"
+    reference_needed: []
+    effect: "La ionización queda sobrestimada ×6.24e18 en las figuras de las celdas 41–42 (que nunca se generaron)"
+    status: confirmado
+    resolution: {by: "usuario", date: 2026-09-27, note: "verificado en el código ([41:277], [42:303] sin EV_MKS; tabla en m²·eV como en [22:195]; loss_interp construida y no usada en [41:221] y [42:226]; K_B_MKS sólo en el comentario [41:38]). Corrección: una sola tabla de ionización en tables.py con unidades explícitas y conversión a J hecha una vez; k_B de parameters.yaml"}
+  E09:
+    cells: [12]
+    what: "La línea vertical en z_init - Δz tiene la etiqueta '∼ 3.2 Myr', pero Δz sale de Δt = 3e7 yr (celda 7)"
+    suspected_fix: "Generar la etiqueta desde delta_t_marker (30 Myr)"
+    reference_needed: []
+    effect: "Sólo la etiqueta"
+    status: confirmado
+    resolution: {by: "usuario", date: 2026-09-27, note: "verificado ([7:5] delta_t = 3e7 yr; [12:174] etiqueta '3.2 Myr'). Δt a marcar: 30 Myr (lo que dibuja la línea). La etiqueta se genera desde delta_t_marker"}
+  E10:
+    cells: [27, 37, 42]
+    what: "Celda 27: a la etiqueta y le falta '('; celda 37: el eje dice 'Accumulated Energy Loss [eV]' pero se grafica la fracción; celda 42: el comentario dice '100 keV a 10 TeV' pero las energías van de 100 eV a 1 GeV"
+    suspected_fix: "Etiquetas generadas desde labels.yaml de acuerdo con la cantidad graficada"
+    reference_needed: []
+    effect: "Sólo etiquetas y comentarios"
+    status: confirmado
+    resolution: {by: "usuario", date: 2026-09-27, note: "verificado ([27:44,54] falta '('; [37:39] grafica loss/K_ini y [37:45] dice [eV]; [42:246] comentario de rango equivocado). Etiquetas desde labels.yaml; la figura de la celda 37 grafica la fracción de K_ini (adimensional)"}
+  E11:
+    cells: [40]
+    what: "NameError: PREFACTOR_BREMS no definido; dKdt_brems se calcula pero no se suma; plot(z_eval[1000], ratio[10000])"
+    suspected_fix: "Figura reconstruida desde cero con el total unificado (D14) y grillas consistentes"
+    reference_needed: []
+    effect: "El original produce una figura vacía"
+    status: confirmado
+    resolution: {by: "usuario", date: 2026-09-27, note: "verificado (NameError PREFACTOR_BREMS en la salida guardada; [40:74] dKdt_brems calculado y [40:76] no sumado). El desajuste de longitudes z_eval/ratio depende del estado del kernel y no se verificó. Se reconstruye desde cero con el total unificado (D14) y la grilla D06"}
+  E12:
+    cells: [15, 22, 24, 26, 28, 31, 33, 36, 38, 41, 42]
+    what: "La sección eficaz de excitación cambia de fórmula en 3 keV y en 100 keV sin garantizar continuidad; luego se interpola con spline cúbico a través del salto"
+    suspected_fix: "Verificar la continuidad con un test y, si hay salto, empalmar según la prescripción de la referencia (D02, D03)"
+    reference_needed: [StoneKimDesclaux2002]
+    effect: "Posibles oscilaciones espurias en la tasa de excitación cerca de 3 keV y 100 keV"
+    status: confirmado
+    resolution: {by: "verificación F3", date: 2026-09-27, note: "Stone, Kim & Desclaux 2002, p. 328: 'Equation (5) should be used for T > 3 keV' y 'a relativistic form ... should be used for T > 10 keV'. Continuidad medida (reimplementación de la celda 15): en 3000 eV el salto es +1e-3 (n = 2, 3; entre -2.2e-3 y +1.1e-3 para n = 2–10), aceptable; en 1e5 eV el salto es +27.4 % para todos los n, porque el notebook usa la fórmula no relativista entre 10 keV y 100 keV, fuera de su validez. Con el corte en 10 keV, como indica el paper, el salto sería +2.8 %. PENDIENTE del usuario: corte relativista en 10 keV. DECISIÓN del usuario (2026-09-27): corte relativista en 10 keV, como indica el paper. VERIFICADO 2026-09-27: la forma relativista del notebook es Inokuti 1971 ec. (4.26) con C_n de la ec. (4.27) (p. 328), identificando a = M_n² y b = M_n² ln(4c_n) con la ec. (4.18) (p. 326); residuo sympy = 0. IMPLEMENTADO (2026-09-28, excitation.py): saltos medidos en el código nuevo, todos los niveles: +0.09 a +0.11 % en 3 keV y +2.78 a +2.84 % en 10 keV (test_switch_jumps_are_the_reported_ones)."}
+  E13:
+    cells: [34]
+    what: "cooling_toggles_custom tiene todo en True, así que el panel 'sin X' repite el panel completo; el nombre de archivo termina en '_vs_without_.png'"
+    suspected_fix: "Preguntar al usuario qué proceso se quería apagar (probablemente el adiabático, como en la celda 32)"
+    reference_needed: []
+    effect: "La comparación no muestra nada"
+    status: confirmado
+    resolution: {by: "usuario", date: 2026-09-27, note: "verificado ([34:3-9] todo True; [34:180-186]). Panel de comparación: sin sincrotrón"}
+  E14:
+    cells: [39]
+    what: "step_losses = np.diff(accumulated) sobre una grilla log de 10000 puntos: depende del paso de la grilla, no es una tasa"
+    suspected_fix: "Graficar la tasa dE/dt por proceso (o ΔE por intervalo fijo de z) para que la figura no dependa de la grilla"
+    reference_needed: []
+    effect: "La forma de las curvas cambia con el número de puntos de la grilla"
+    status: confirmado
+    resolution: {by: "usuario", date: 2026-09-27, note: "verificado ([39:35] np.diff sobre la grilla). Se grafica ΔE por proceso en intervalos fijos de Δz = 0.1 (valor por defecto de la opción elegida; el usuario no indicó otro)"}
+  E15:
+    cells: [18, 22, 24, 26, 28, 31, 33]
+    what: "<ε> de los secundarios con quad(..., points=[8.0]) y el límite por defecto: falla para K ≳ 1.2e7 eV (75.3 eV en lugar de 39.7 eV; negativo a 1e9 eV: -13.2 eV contra 44.7 eV)"
+    suspected_fix: "Integrar en la variable ln ε o forma cerrada (ya decidido en D07), verificado contra mpmath"
+    reference_needed: []
+    effect: "La pérdida por ionización queda mal por encima de ~1e7 eV (usa I + <ε> ≈ 0.4–6.5 eV en lugar de ≈ 58–62 eV arriba de 1e9 eV)"
+    status: "confirmado"
+    resolution: {"by": "verificación F3", "date": "2026-09-27", "note": "Hallado por el agente de verificación y reproducido por mí con mpmath: K = 1e3 y 1e5 eV coinciden (18.33 y 31.28 eV); 1.2e7 eV: 75.30 vs 39.74; 1e8: 80.29 vs 42.37; 1e9: -13.25 vs 44.67; 1e11: -7.06 vs 47.94 eV. Límite K → ∞: Ē sin(π/2.1)/sin(2π/2.1) = 53.53 eV. IMPLEMENTADO (2026-09-28, ionization.py): forma cerrada con ₂F₁, igual a mpmath dentro de 2e-16; <ε>(1e9 eV) = 44.67 eV."}
+  E16:
+    cells: [18, 22, 24, 26, 28, 31, 33, 36, 38]
+    what: "La sección eficaz de ionización se llama RBEB en el notebook, pero el código implementa la RBED (Kim et al. 2000, ec. 20, con la D(t) de Kim & Rudd 1994, Tabla I, H 1s). Para H, Kim et al. 2000 usa la RBEQ (ec. 21, Q = 0.5668, p. 8 y Tabla II); la RBED del notebook queda 3–5 % por encima de la Tabla II (0.1251 vs 0.119 Å² a 1 keV; experimento 0.113 ± 0.0077)"
+    suspected_fix: "Elegir la variante (RBED, RBEQ o RBEB) y nombrarla correctamente; ver también su validez a T ≫ mc² (efecto densidad, p. 6)"
+    reference_needed: ["Kim2000"]
+    effect: "3–5 % en la ionización"
+    status: "confirmado"
+    resolution: {"by": "usuario + verificación F3", "date": "2026-09-27", "note": "DECISIÓN del usuario: mantener la RBED (Kim et al. 2000, ec. 20, p. 052710-4) con la df/dw del H 1s de Kim & Rudd 1994 (Tabla I); se corrige el nombre (no es RBEB). Verificado por el agente: fórmula, prefactor, D(t), N_i = 0.4343 y M² = 0.2834 coinciden. Para el H, el paper aplica la RBEQ (§III.B, p. 052710-8); la comparación 'RBED 3–5 % sobre la Tabla II' del agente no quedó verificada (la Tabla II lista RBEB/BEB). Validez: el paper advierte que para T ≫ mc² la Bethe asintótica puede ser más confiable (p. 052710-5)."}
+  E17:
+    cells: [18, 22, 24, 26, 28, 31, 33, 36, 38]
+    what: "Ē = 8 eV del espectro de secundarios: Opal et al. 1971 (Tabla II, p. 4104) da Ē = 8.3 eV para H2 (con I = 15.4 eV) y ningún valor para H atómico; el notebook combina ese Ē redondeado con I(H) = 13.6 eV. Además la forma se midió con E_p ≤ 2 keV (H2 sólo a 500 eV) y E_s = 4–200 eV"
+    suspected_fix: "Elegir la fuente de <ε>: Opal con Ē de H2 (8.3 eV) o el espectro diferencial de la propia RBED de Kim (ec. 19), que es consistente con la sección eficaz. Con Opal, <ε> difiere hasta ~20 % del que implica la RBED"
+    reference_needed: ["Opal1971", "Kim2000"]
+    effect: "Hasta ~20 % en la energía media perdida por ionización"
+    status: "confirmado"
+    resolution: {"by": "usuario + verificación F3", "date": "2026-09-27", "note": "DECISIÓN del usuario: usar la prescripción de Furlanetto & Stoever 2010. Leído: ec. (2), p. 1871: p(ε) ∝ 1/[1+(ε/ε̄_i)^2.1] con ε̄_i = 8 eV para H I (15.8 y 32.6 eV para He I y He II), ε < (E - E_i)/2, basada en Opal et al. 1971 y Shull 1979. Es la misma forma y el mismo ε̄ = 8 eV que el notebook: el valor queda respaldado, pero con cita a FurlanettoStoever2010 (no a Opal, que sólo da H2). La integral se calcula en variable log (D07, E15)."}
+  E18:
+    cells: [14, 22, 24, 26, 28, 31, 33, 36, 38]
+    what: "Coulomb: la ec. (5.5) de Gould 1972 (p. 153) vale para α ≪ β (Born, relativista); β = α a K ≈ 13.6 eV. El intervalo clásico (β ≪ α, ec. 2.20) queda por debajo de ~13.6 eV y el caso β ≈ α 'remains to be solved' para electrones (p. 152)"
+    suspected_fix: "Con el piso K_floor = 10.2 eV (A07), el tramo afectado es sólo 10.2–13.6 eV: marcarlo como fuera de validez, o usar la ec. (2.20) (clásica) debajo de 13.6 eV"
+    reference_needed: ["Gould1972"]
+    effect: "Un tramo de ~3 eV al final de la trayectoria (el agente estimó ~14 % de diferencia en B a 0.01 eV, que ahora queda fuera por el piso)"
+    status: "confirmado"
+    resolution: {"by": "usuario + verificación F3", "date": "2026-09-27", "note": "DECISIÓN del usuario: debajo de β = α (K ≈ 13.6 eV) usar la fórmula clásica de Gould 1972 (ec. 2.20; límite β ≪ α), y arriba la ec. (5.5) (relativista, Møller, válida para β ≫ α). Gould dice que el caso β ≈ α 'remains to be solved' para electrones (p. 152), así que el empalme en β = α es una elección nuestra: se documenta y se reporta el salto. IMPLEMENTADO (2026-09-28, coulomb.py): salto medido en β = α (K = 13.606 eV) = +1.09 %."}
+  E19:
+    cells: [15, 22, 24, 41, 42]
+    what: "Energías de excitación E_n: la Tabla 1 de Stone et al. 2002 (p. 328) da E = 10.204, 12.094, … eV, y el escalado BE usa B = 13.5984 eV (experimental). Por A12 (R_H con masa reducida) el código derivaría E_n = R_H(1 - 1/n²), es decir 10.1988 eV para n = 2 (diferencia relativa 5e-4 con la tabla)"
+    suspected_fix: "Decidir si E_n se toma de la tabla del paper (consistente con sus a, b, c) o se deriva de R_H (A12)"
+    reference_needed: ["StoneKimDesclaux2002"]
+    effect: "5e-4 relativo en los umbrales y en la escala de la excitación"
+    status: "confirmado"
+    resolution: {"by": "usuario + verificación F3", "date": "2026-09-27", "note": "DECISIÓN del usuario: usar las energías de excitación E_n y B = 13.5984 eV de la Tabla 1 de Stone, Kim & Desclaux 2002 (p. 328), consistentes con sus constantes a, b, c. A12 (R_H con masa reducida) sigue valiendo para el umbral de ionización (R_H = 13.598 eV, igual en 5 cifras a la B de Stone). El umbral de excitación pasa a ser E_2 = 10.204 eV de la tabla, no (3/4) R_H."}
+  E20:
+    cells: [34]
+    what: "La figura guardada en la celda 34 no corresponde a su código: el código fija ax.set_xlim(-1, 60) ([34:150-151]) y pone las etiquetas en dist + 2.0 Mpc ([34:145]), pero la imagen guardada tiene el eje x en [-1, 10] Mpc y las etiquetas en x ≈ 2. Las distancias de la imagen (≈ 4 Mpc para 1e13 eV, ≈ 0.42 Mpc para 1e5 eV) quedan por debajo de la cota inferior física"
+    suspected_fix: "Ninguno en el código nuevo: v = c·pc/E y D = ∫v dt, como en [34:102-106]. La comparación con la figura guardada no sirve para la celda 34"
+    reference_needed: []
+    effect: "El código nuevo da 63.5 Mpc (propia) para 1e13 eV y 3.53 Mpc para 1e5 eV (numbers.json: D_proper_K1e13_xe0.0001_Mpc, D_proper_K1e5_xe0.0001_Mpc), un factor 8–16 más que la imagen guardada (≈ 4 y ≈ 0.42 Mpc). Corregido 2026-09-28 por C17: la primera versión decía ≈ 3.8 Mpc y factor 10–16, leídos a ojo de la figura anterior"
+    status: "confirmado (evidencia de F5, a revisar por el usuario)"
+    resolution: {by: "verificación F5", date: 2026-09-28, note: "Cotas independientes con astropy Planck18: 1e5 eV, z 10 → 9.55, Δt = 30.5 Myr, D ≤ c·Δt = 9.37 Mpc; 1e13 eV, que sigue con K ≥ 1e5 eV (β ≥ 0.548) hasta z = 7.530 y llega al piso en z = 7.023, D ≥ 0.548·c·Δt(10 → 7.530) = 36.9 Mpc y D ≤ c·Δt(10 → 7.023) = 87.6 Mpc. El valor nuevo (63.5 Mpc) cumple ambas cotas; el de la imagen (4 Mpc) no. El max_dist_Mpc = 60 del código de la celda es coherente con el valor nuevo: la imagen viene de una versión anterior de la celda."}
+  E21:
+    cells: [15, 18, 22]
+    what: "Pérdidas colisionales sobre H neutro (excitación np n ≤ 10 + ionización RBED) contra la fórmula de Bethe relativista con intercambio de Møller (Inokuti 1971 ec. 4.65, I0 = 14.991 eV derivado de L(0), ec. 4.62, con TRK = 1): cociente 1.028, 1.040 y 1.035 a 1e4, 1e5 y 1e6 eV (test_collisional_stopping_vs_bethe, criterio 5 %, pasa), pero 1.113 a 1e8 eV y 1.181 a 1e10 eV"
+    suspected_fix: "Sin decidir. Posibles causas, NO verificadas: la forma relativista de la excitación (Inokuti 4.26–4.27 con la identificación de Stone) o la RBED a γ ≫ 1 crecen con ln γ distinto del término relativista de Bethe; o el espectro de secundarios de Furlanetto & Stoever (∝ ε^-2.1) no reproduce las colisiones duras de Møller"
+    reference_needed: [Inokuti1971, Kim2000, StoneKimDesclaux2002, FurlanettoStoever2010]
+    effect: "Por encima de ~10 MeV las pérdidas colisionales estarían sobrestimadas en 11–18 %; en ese régimen Compton inverso domina por órdenes de magnitud (figuras 29–35), así que el efecto en las trayectorias se espera despreciable (no medido)"
+    status: "sospechado (desacuerdo entre métodos independientes, MR5; a revisar por el usuario)"
+    resolution: {by: "verificación 2026-09-28", date: 2026-09-28, note: "Encontrado al implementar el test de Bethe; el rango del test (1e4–1e6 eV) se fijó antes de correrlo y no se cambió."}

@@ -1,0 +1,21 @@
+{
+ "file": "figures/igm_with_vs_without_adiabatic_xe0.1.png",
+ "file_pdf": "figures/igm_with_vs_without_adiabatic_xe0.1.pdf",
+ "produced_by": "electron_losses_IGM/scripts/fig_comparisons.py::fig42",
+ "shows": "ratio of K with and without adiabatic losses vs cosmic time and vs z",
+ "from_scratch": "pairs of trajectories",
+ "from_library": "numpy, scipy (solve_ivp Radau, quad, brentq, CubicSpline), astropy (Planck18), mpmath, matplotlib",
+ "choices": [
+  "KN IC (D10; the notebook cell used Thomson)",
+  "synchrotron included (the notebook cell omitted it)",
+  "ionization with the eV→J factor (E08)"
+ ],
+ "supports": [],
+ "notebook_cell": 42,
+ "parameters": {
+  "x_e": 0.1,
+  "z_init": 10.0,
+  "z_final": 5.5,
+  "language": "es"
+ }
+}

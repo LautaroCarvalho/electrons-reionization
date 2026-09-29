@@ -1,0 +1,22 @@
+{
+ "file": "figures/igm_phase_space_map_without_ad_xe0.01.png",
+ "file_pdf": "figures/igm_phase_space_map_without_ad_xe0.01.pdf",
+ "produced_by": "electron_losses_IGM/scripts/fig_phase_space.py::map_figure",
+ "shows": "dominant energy-loss process on the (z, K) plane (background), trajectories (dashed) and IC up-scatter thresholds",
+ "from_scratch": "rate maps from losses.rates; trajectories from integrate.evolve",
+ "from_library": "numpy, scipy (solve_ivp Radau, quad, brentq, CubicSpline), astropy (Planck18), mpmath, matplotlib",
+ "choices": [
+  "background opacity 0.35",
+  "y axis 1 eV – 1e14 eV (all trajectories visible)",
+  "trajectories end at the floor event point",
+  "one colour per initial energy (viridis)"
+ ],
+ "supports": [],
+ "notebook_cell": 35,
+ "parameters": {
+  "x_e": 0.01,
+  "z_init": 10.0,
+  "z_final": 5.5,
+  "language": "es"
+ }
+}

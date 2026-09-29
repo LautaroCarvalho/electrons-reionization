@@ -1,0 +1,21 @@
+{
+ "file": "figures/igm_step_losses.png",
+ "file_pdf": "figures/igm_step_losses.pdf",
+ "produced_by": "electron_losses_IGM/scripts/fig_accumulated.py::fig39",
+ "shows": "energy lost to each process in fixed Δz = 0.1 bins vs z, for four initial energies",
+ "from_scratch": "differences of the accumulated losses at fixed z edges",
+ "from_library": "numpy, scipy (solve_ivp Radau, quad, brentq, CubicSpline), astropy (Planck18), mpmath, matplotlib",
+ "choices": [
+  "fixed Δz bins instead of grid steps (E14)",
+  "x axis 10 → 7 as the notebook"
+ ],
+ "supports": [],
+ "notebook_cell": 39,
+ "parameters": {
+  "x_e": 0.0001,
+  "z_init": 10.0,
+  "z_final": 5.5,
+  "language": "es",
+  "delta_z": 0.1
+ }
+}

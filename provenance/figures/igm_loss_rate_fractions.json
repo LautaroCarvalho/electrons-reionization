@@ -1,0 +1,20 @@
+{
+ "file": "figures/igm_loss_rate_fractions.png",
+ "file_pdf": "figures/igm_loss_rate_fractions.pdf",
+ "produced_by": "electron_losses_IGM/scripts/fig_comparisons.py::fig27",
+ "shows": "fraction of the total loss rate not due to synchrotron (top) / adiabatic (bottom) along the full trajectory, vs z",
+ "from_scratch": "rates from losses.rates on the K(t) trajectory",
+ "from_library": "numpy, scipy (solve_ivp Radau, quad, brentq, CubicSpline), astropy (Planck18), mpmath, matplotlib",
+ "choices": [
+  "curves stop at the 10.2 eV floor",
+  "linear axes (as the notebook)"
+ ],
+ "supports": [],
+ "notebook_cell": 27,
+ "parameters": {
+  "x_e": 0.0001,
+  "z_init": 10.0,
+  "z_final": 5.5,
+  "language": "es"
+ }
+}

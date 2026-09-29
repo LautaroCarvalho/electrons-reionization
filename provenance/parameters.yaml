@@ -1,0 +1,352 @@
+# Parámetros de ENTRADA del código electron_losses_IGM (único lugar donde se define un número).
+# Formato: check C80 de checks-auto.md; la convención de campos está en plantilla_proyecto_final/PLAN_TRABAJO_FINAL.md §2.2.
+#
+# ESTADO (F1, 2026-09-27): los valores son los que usa el notebook original, TODAVÍA SIN VERIFICAR contra
+# las referencias (F3). Las claves bib son las propuestas; references/ está vacío, así que C80 va a fallar en
+# "bib key not in .bib" hasta que se agreguen los PDFs y el .bib. `errata:` apunta a provenance/errata.yaml.
+# Ningún valor marcado con errata se usará para código o figuras hasta resolverlo (instrucción del usuario).
+#
+# tag (vocabulario C35): measured | assumed | fitted | derived
+#   - Las constantes que el SI 2019 fija de forma exacta llevan tag: assumed (adoptadas por definición) y
+#     uncertainty: {exact: true}. Decidido por el usuario el 2026-09-27 (no se agrega una categoría "defined").
+# uncertainty: null significa "a completar desde el PDF en F3"; no es cero.
+
+parameters:
+
+  # ---------------------------------------------------------------- constantes físicas primarias (celda 0)
+  c:
+    value: 2.99792458e+8
+    unit: "m s-1"
+    uncertainty: {exact: true}
+    tag: assumed
+    source: {bib: SI2019, loc: "§2.2, Tabla 1, pp. 123–124 (PDF pp. 13–14)"}
+    notebook: {cells: [0, 21, 22, 24, 26, 28, 31, 33, 36, 38], name: LIGHT_SPEED_MKS}
+    verified: {date: 2026-09-27, result: "coincide con el notebook"}
+  h:
+    value: 6.62607015e-34
+    unit: "J s"
+    uncertainty: {exact: true}
+    tag: assumed
+    source: {bib: SI2019, loc: "§2.2, Tabla 1, pp. 123–124 (PDF pp. 13–14)"}
+    notebook: {cells: [0, 21, 22, 24], name: PLANCK_CONSTANT_MKS}
+    verified: {date: 2026-09-27, result: "coincide con el notebook"}
+  e:
+    value: 1.602176634e-19
+    unit: "C"
+    uncertainty: {exact: true}
+    tag: assumed
+    source: {bib: SI2019, loc: "§2.2, Tabla 1, pp. 123–124 (PDF pp. 13–14)"}
+    notebook: {cells: [0, 21, 22, 24], name: ELECTRON_CHARGE_MKS}
+    verified: {date: 2026-09-27, result: "coincide con el notebook"}
+  k_B:
+    value: 1.380649e-23
+    unit: "J K-1"
+    uncertainty: {exact: true}
+    tag: assumed
+    source: {bib: SI2019, loc: "§2.2, Tabla 1, pp. 123–124 (PDF pp. 13–14)"}
+    notebook: {cells: [0, 22, 24, 26, 28, 31, 33, 36, 38], name: BOLTZMANN_CONSTANT_MKS, value: 1.38064852e-23}
+    verified: {date: 2026-09-27, result: "E01 confirmado: el notebook usa 1.38064852e-23 (CODATA 2014); el SI 2019 la fija en 1.380649e-23 exacta"}
+    errata: E01
+  m_e:
+    value: 9.1093837139e-31
+    unit: "kg"
+    uncertainty: {sigma: 2.8e-40, type: "1-sigma estándar"}
+    tag: measured
+    source: {bib: CODATA2022, loc: "Tabla XXXIII (PDF pp. 51–53)"}
+    notebook: {cells: [0, 21, 22, 24], name: ELECTRON_MASS_MKS}
+    verified: {date: 2026-09-27, result: "coincide con el notebook (ya era CODATA 2022)"}
+    errata: E02
+  m_p:
+    value: 1.67262192595e-27
+    unit: "kg"
+    uncertainty: {sigma: 5.2e-37, type: "1-sigma estándar"}
+    tag: measured
+    source: {bib: CODATA2022, loc: "Tabla XXXIII (PDF pp. 51–53)"}
+    notebook: {cells: [0, 24], name: PROTON_MASS_MKS, value: 1.67262192369e-27, note: "CODATA 2018; en el notebook no se usaba, en el código nuevo entra en R_H (A12) y n_H (A02)"}
+    verified: {date: 2026-09-27, result: "reemplazado por el valor CODATA 2022 (E02)"}
+    errata: E02
+  mu0:
+    value: 1.25663706127e-6
+    unit: "N A-2"
+    uncertainty: {sigma: 2.0e-16, type: "1-sigma estándar"}
+    tag: measured
+    source: {bib: CODATA2022, loc: "Tabla XXXIII (PDF pp. 51–53)"}
+    notebook: {cells: [0, 22, 24], name: "VACUUM_PERMEABILITY = 4e-7 π · 1.00000000055", note: "el notebook guardaba μ0/(4π·1e-7) de CODATA 2018; ahora se toma μ0 directamente de la tabla 2022"}
+    verified: {date: 2026-09-27, result: "reemplazado por el valor CODATA 2022 (E02)"}
+    errata: E02
+  year:
+    value: 3.15576e+7     # año juliano = 365.25 d × 86400 s (E03, 2026-09-27); el notebook tenía 3.15569251e7
+    unit: "s"
+    uncertainty: {exact: true}
+    tag: assumed
+    source: {user: "2026-09-27: año juliano (365.25 d × 86400 s) adoptado como assumed, sin cita (no se consiguió una fuente de la IAU)"}
+    notebook: {cells: [0, 21, 22], name: YEAR_MKS}
+    errata: E03
+  parsec:
+    value: 3.085677581491367e+16
+    unit: "m"
+    uncertainty: {exact: true}
+    tag: assumed
+    source: {bib: PDG2024, loc: "Tabla 2.1: pc = 1 au/1 arcsec = 3.085 677 581 49… × 10^16 m, exacto; au = 149 597 870 700 m exacto"}
+    notebook: {cells: [0, 24, 33, 36, 38], name: PARSEC_MKS}
+    verified: {date: 2026-09-27, result: "648000/π × 149597870700 m = 3.085677581491367e16 m, igual al notebook"}
+  T_CMB0:
+    value: 2.7255
+    unit: "K"
+    uncertainty: {sigma: 0.00057, type: "1-sigma de Fixsen 2009 (el valor de 2.7255 es su redondeo)"}
+    tag: assumed
+    source: {user: "2026-09-27: usar el valor de astropy Planck18 (Tcmb0 = 2.7255 K), coherente con la cosmología A10. Fixsen 2009 (abstract): 2.72548 ± 0.00057 K; diferencia relativa 7e-6"}
+    notebook: {cells: [0, 10, 12, 22, 24], name: "CMB_TEMPERATURE / T_CMB_0 (dos nombres, mismo valor)"}
+    verified: {date: 2026-09-27, result: "coincide con el notebook y con astropy Planck18.Tcmb0"}
+
+  # ---------------------------------------------------------------- parámetros físicos del usuario
+  z_init:
+    value: 10.0
+    unit: ""
+    uncertainty: null
+    tag: assumed
+    source: {user: "notebook de L. Carvalho, celdas 2–42: z_init = 10.0 (la celda 9 usa 30; ver figures.adiabatic_only)"}
+  z_final:
+    value: 5.5
+    unit: ""
+    uncertainty: null
+    tag: assumed
+    source: {user: "notebook de L. Carvalho, todas las celdas: z_final = 5.5"}
+  B0:
+    value: 1.0e-13
+    unit: "T"
+    uncertainty: null
+    tag: assumed
+    source: {user: "notebook de L. Carvalho: B0 = 1e-9*1e-4 T (1 nG comóvil), escalado por A01"}
+  x_e:
+    value: 1.0e-4
+    unit: ""
+    uncertainty: null
+    tag: assumed
+    source: {user: "notebook de L. Carvalho: ION_FRACTION = 1e-4, constante en z (A04)"}
+    sweep:
+      values: [1.0e-4, 1.0e-2, 1.0e-1, 0.5, 0.99]
+      figures: [coulomb_only, excitation_only, ionization_only, bremsstrahlung_only, total_cooling, ratio_without_synch_ad, loss_rate_fractions, phase_space_map, phase_space_colored, phase_space_without_ad, distance_travelled, phase_space_map_without_ad, accumulated_losses, step_losses, component_ratios, adiabatic_fraction_map, with_vs_without_adiabatic, loss_fraction_rate, loss_fraction_integrated, ionization_yield]
+      note: "A04, cambio del usuario (2026-09-28): 'todas las tasas de pérdida de energía que dependan directa o indirectamente de x_e deben ser calculadas', con x_e = 1e-4, 1e-2, 1e-1, 0.5, 0.99. Dependen de x_e: Coulomb y bremsstrahlung e–p (n_e = x_e n_H) y excitación, ionización y bremsstrahlung contra H neutro (n_HI = (1 − x_e) n_H, A03); por eso excitation_only e ionization_only entran al barrido. No dependen de x_e (sin barrido): sincrotrón, adiabático, Compton inverso y propagación libre. Versión anterior (2026-09-27): [1e-4, 1e-2, 0.5] sólo en las figuras que usan n_e."
+  Y_p:
+    value: 0.2454
+    unit: ""
+    uncertainty: null     # la Tabla 2 da sólo "posterior mean Y_P ≈ 0.2454", sin barra de error
+    tag: fitted      # posterior de Planck con Y_P predicho por BBN a partir de Ω_b h² (C35: fitted, a qué datos)
+    source: {bib: Planck2018VI, loc: "Tabla 2, leyenda (PDF p. 16): 'the helium mass fraction used is predicted by BBN (posterior mean Y_P ≈ 0.2454 ...)'"}
+    note: "A02: n_H(z) = (1-Y_p) Ω_b ρ_crit,0 (1+z)^3 / m_p. Ω_b y H0 de astropy Planck18 = Tabla 2, columna TT,TE,EE+lowE+lensing+BAO (H0 = 67.66; Ω_b h² = 0.02242 → Ω_b = 0.048975, astropy lo redondea a 0.04897, diferencia relativa 1e-4)."
+    verified: {date: 2026-09-27, result: "leído del PDF"}
+  Z_target:
+    value: 1.0
+    unit: ""
+    uncertainty: null
+    tag: assumed
+    source: {user: "notebook de L. Carvalho: Z_target = 1.0 (hidrógeno)"}
+  delta_gould:
+    value: 0.5
+    unit: ""
+    uncertainty: null
+    tag: assumed
+    source: {bib: Gould1972, loc: "ec. (2.18), p. 149: δ = (ΔE_lab)_max/(½mv²); δ = ½ 'perhaps more reasonable' (elección de Bethe); resultados dados para δ general"}
+    notebook: {cells: [14, 22, 24, 26, 28, 31, 33, 36, 38, 41, 42], name: "delta_gould / DELTA_GOULD"}
+  secondary_E_bar:
+    value: 8.0
+    unit: "eV"
+    uncertainty: null
+    tag: fitted
+    source: {bib: FurlanettoStoever2010, loc: "ec. (2), p. 1871: ε̄ = 8 eV para H I"}
+    notebook: {cells: [18, 22, 24, 26, 28, 31, 33, 36, 38]}
+  secondary_exponent:
+    value: 2.1
+    unit: ""
+    uncertainty: null
+    tag: fitted
+    source: {bib: FurlanettoStoever2010, loc: "ec. (2), p. 1871: exponente 2.1"}
+    notebook: {cells: [18, 22, 24, 26, 28, 31, 33, 36, 38]}
+
+  K_floor:
+    value: 10.2
+    unit: "eV"
+    uncertainty: null
+    tag: assumed
+    source: {user: "2026-09-27: piso de la integración en 10.2 eV (A07)"}
+
+  # ---------------------------------------------------------------- parámetros de figuras / estimaciones auxiliares
+  R_target:
+    value: 1.0e+7
+    unit: "pc"
+    uncertainty: null
+    tag: assumed
+    source: {user: "notebook, celda 6: R_TARGET_PC = 1e7 (10 Mpc)"}
+  delta_t_marker:
+    value: 3.0e+7
+    unit: "yr"
+    uncertainty: null
+    tag: assumed
+    source: {user: "notebook, celda 7: delta_t = 3e7 yr; confirmado por el usuario el 2026-09-27 (E09: la etiqueta '~3.2 Myr' de la celda 12 era el error)"}
+  upscatter_min_eV:
+    value: 10.2
+    unit: "eV"
+    uncertainty: null
+    tag: assumed
+    source: {user: "notebook, celdas 28/31/33: min_sim_eV = 10.2 (Lyα)"}
+  upscatter_target_eV:
+    value: 1.0e+3
+    unit: "eV"
+    uncertainty: null
+    tag: assumed
+    source: {user: "notebook, celdas 28/31/33: target_upscatter_eV = 1e3"}
+  upscatter_tolerance:
+    value: 1.0e-2
+    unit: ""
+    uncertainty: null
+    tag: assumed
+    source: {user: "notebook, celdas 28/31/33: losing_tolerance = 1e-2 (percentiles 1 % y 99 % del espectro de Planck)"}
+
+  # ---------------------------------------------------------------- numéricos (decisiones D05, D06)
+  rtol:
+    value: 1.0e-8
+    unit: ""
+    uncertainty: null
+    tag: assumed
+    source: {user: "2026-09-27, decisión D05"}
+  atol:
+    value: 1.0e-25
+    unit: "J"
+    uncertainty: null
+    tag: assumed
+    source: {user: "2026-09-27, decisión D05"}
+  atol_distance:
+    value: 1.0
+    unit: "m"
+    uncertainty: null
+    tag: assumed
+    source: {user: "2026-09-28: tolerancia absoluta de las distancias D, χ del modo aumentado; 1 m es despreciable frente a las distancias recorridas (≳ 1e20 m) y con rtol = 1e-8 domina la tolerancia relativa. Elección numérica mía (la atol de 1e-25 J de D05 aplicada a metros hacía imposible el paso)"}
+  N_time_grid_A:
+    value: 1000
+    unit: ""
+    uncertainty: null
+    tag: assumed
+    source: {user: "2026-09-27, decisión D06: grilla A (tiempo transcurrido log desde 1 yr)"}
+  N_time_grid_B:
+    value: 2000
+    unit: ""
+    uncertainty: null
+    tag: assumed
+    source: {user: "2026-09-27, decisión D06: grilla B (tiempo cósmico log)"}
+  t_grid_A_start:
+    value: 1.0
+    unit: "yr"
+    uncertainty: null
+    tag: assumed
+    source: {user: "notebook, grilla A: elapsed_t_years = logspace(0, …), confirmada en D06"}
+
+  # ---------------------------------------------------------------- bremsstrahlung (A15, D18, D19)
+  BG_phi1_H_complete:
+    value: 45.79
+    unit: ""
+    uncertainty: null
+    tag: assumed
+    source: {bib: BlumenthalGould1970, loc: "ec. (3.42), p. 253: φ1 → 45.79 para H atómico con apantallamiento completo (Δ ≪ 1); se toma el valor impreso (la constante junto a ln a no se lee con certeza en el escaneo)"}
+  BG_phi2_H_complete:
+    value: 44.46
+    unit: ""
+    uncertainty: null
+    tag: assumed
+    source: {bib: BlumenthalGould1970, loc: "ec. (3.42), p. 253: φ2 → 44.46 (Δ ≪ 1)"}
+  BG_nuclear_fraction_complete:
+    value: 0.5
+    unit: ""
+    uncertainty: null
+    tag: assumed
+    source: {bib: BlumenthalGould1970, loc: "p. 253: el total va 'roughly as Z² + Z_el'; para H, Z² = Z_el = 1 ⇒ fracción nuclear ≈ 1/2 (aproximado)"}
+  brems_neutral_T_join_lo:
+    value: 3.0e+8
+    unit: "eV"
+    uncertainty: null
+    tag: assumed
+    source: {user: "2026-09-27: empalmar lo menos abrupto posible; 300 MeV es el último punto de CS_int_1.txt"}
+  brems_neutral_T_join_hi:
+    value: 3.0e+9
+    unit: "eV"
+    uncertainty: null
+    tag: assumed
+    source: {user: "2026-09-27: empalme C¹ (Hermite en ln T, ln φ) de una década hasta el valor de apantallamiento completo de B&G (3.54) × BG_nuclear_fraction_complete; elección numérica"}
+  brems_ep_blend_factor:
+    value: 2.0
+    unit: ""
+    uncertainty: null
+    tag: assumed
+    source: {user: "2026-09-27: empalme C¹ de K&L con B&G (3.53) en [T*/f, f·T*] alrededor del cruce T*; f = 2 es elección numérica"}
+
+  # ---------------------------------------------------------------- colisiones con H (A13, A14, E16, E19)
+  B_ion_RBED:
+    value: 13.6057
+    unit: "eV"
+    uncertainty: null
+    tag: assumed
+    source: {bib: KimRudd1994, loc: "Table I, p. 3958: B = U = 13.6057 eV para H 1s (usado en el ajuste de df/dw); decisión del usuario 2026-09-28: usar el valor del paper en la RBED"}
+
+  # ---------------------------------------------------------------- presentación
+  language:
+    value: "es"
+    unit: ""
+    uncertainty: null
+    tag: assumed
+    source: {user: "2026-09-27: idioma de etiquetas parametrizable es|en, default es"}
+
+# ------------------------------------------------------------------ constantes DERIVADAS (no son entradas)
+# Se calcularán en electron_losses_IGM/src/igm_losses/constants.py desde las primarias de arriba y se
+# verificarán con sympy (C25). Se listan aquí sólo para dejar constancia de cómo las obtiene el notebook.
+derived_in_code:
+  eps0:           {formula: "1/(mu0 c²)", unit: "F m-1"}
+  hbar:           {formula: "h/(2π)", unit: "J s"}
+  m_e_c2:         {formula: "m_e c²", unit: "J"}
+  r_e:            {formula: "e²/(4π eps0 m_e c²)", unit: "m"}
+  alpha:          {formula: "e²/(2 eps0 h c)", unit: ""}
+  Ry_inf:         {formula: "α² m_e c²/2", unit: "J"}
+  R_H:            {formula: "Ry_inf · m_p/(m_e + m_p)", unit: "J", note: "A12: umbral de ionización y escala de niveles del H (el notebook usaba Ry_inf)"}
+  sigma_T:        {formula: "(8π/3) r_e²", unit: "m2"}
+  a0:             {formula: "ħ/(m_e c α)", unit: "m"}
+  a_rad:          {formula: "8π⁵ k_B⁴/(15 h³ c³)", unit: "J m-3 K-4", note: "reemplaza U_CMB_0 = 4.17e-14 escrito a mano (E04)"}
+  E_exc_n:        {formula: "Tabla 1 de StoneKimDesclaux2002 (E_n para n = 2…10; E_2 = 10.204 eV)", unit: "eV", note: "E19: no se deriva de R_H"}
+  n_H:            {formula: "(1 - Y_p) Ω_b ρ_crit,0 (1+z)³ / m_p, ρ_crit,0 = 3 H0²/(8πG) (Planck18)", unit: "m-3"}
+  B:              {formula: "B0 (1+z)²", unit: "T"}
+  T_CMB:          {formula: "T_CMB0 (1+z)", unit: "K"}
+  U_CMB:          {formula: "a_rad T_CMB⁴", unit: "J m-3"}
+
+# ------------------------------------------------------------------ una entrada por figura original
+# Las listas de energías difieren entre celdas en el original; se conservan tal cual y se definen sólo aquí.
+# Los numéricos (rtol, atol, grillas, interpolación) están en provenance/decisions.yaml.
+# processes: all = adiabático, sincrotrón, IC (KN), Coulomb, excitación, ionización y bremsstrahlung (D14).
+figures:
+  gyroradius_synch:          {cell: 2,  energies_eV: [1.0e+6, 1.0e+8, 1.0e+10, 1.0e+12, 1.0e+14], processes: [synchrotron], pitch: fixed, sin_theta: 1.0}   # D11/E06 (2026-09-27): 90°, lo que decía el comentario del notebook
+  distance_synch_fixed:      {cell: 4,  energies_eV: [1.0e+4, 1.0e+6, 1.0e+8, 1.0e+10, 1.0e+12, 1.0e+14], processes: [synchrotron], pitch: fixed, v_dir: [1, 0, 0], B_dir: [0, 1, 0]}
+  distance_synch_isotropic:  {cell: 5,  energies_eV: [1.0e+4, 1.0e+6, 1.0e+8, 1.0e+10, 1.0e+12, 1.0e+14], processes: [synchrotron], pitch: isotropic}
+  free_streaming:            {cell: 6,  energies_eV: {logspace: [2, 14, 60]}, processes: []}
+  synch_only:                {cell: 8,  energies_eV: [1.0e+4, 1.0e+6, 1.0e+8, 1.0e+10, 1.0e+11, 1.0e+12, 1.0e+13], processes: [synchrotron]}
+  adiabatic_only:            {cell: 9,  energies_eV: [1.0e+3, 1.0e+5, 1.0e+6, 1.0e+7, 1.0e+8, 1.0e+11, 1.0e+13], processes: [adiabatic], z_init: 30.0}
+  ic_cmb:                    {cell: 11, energies_eV: [1.0e+3, 1.0e+4, 1.0e+5, 1.0e+6, 1.0e+7, 1.0e+9, 1.0e+11], processes: [ic]}
+  ic_cmb_fixed_vs_dynamic:   {cell: 12, energies_eV: [1.0e+3, 1.0e+5, 1.0e+6, 1.0e+7, 1.0e+9, 1.0e+11, 1.0e+12], processes: [ic], compare: fixed_z_vs_dynamic_z}
+  coulomb_only:              {cell: 14, energies_eV: [1.0e+2, 1.0e+3, 3.1622776601683795e+3, 1.0e+4, 1.0e+5, 1.0e+6], processes: [coulomb]}
+  excitation_only:           {cell: 17, energies_eV: [1.0e+4, 1.0e+5, 1.0e+6, 1.0e+7, 1.0e+8, 1.0e+9], processes: [excitation]}
+  ionization_only:           {cell: 19, energies_eV: [1.0e+4, 1.0e+5, 1.0e+6, 1.0e+7, 1.0e+8, 1.0e+9], processes: [ionization]}
+  bremsstrahlung_only:       {cell: 21, energies_eV: [1.0e+2, 1.0e+3, 1.0e+4, 1.0e+5, 1.0e+6, 1.0e+7, 1.0e+8, 1.0e+9], processes: [bremsstrahlung]}
+  total_cooling:             {cell: 23, energies_eV: [1.0e+4, 1.0e+5, 1.0e+6, 1.0e+7, 1.0e+8, 1.0e+9, 1.0e+10, 1.0e+11, 1.0e+12, 1.0e+13], processes: all}
+  ratio_without_synch_ad:    {cell: 25, energies_eV: [1.0e+4, 1.0e+6, 1.0e+8, 1.0e+10, 1.0e+11, 1.0e+12, 1.0e+13], processes: all, compare: [no_synchrotron, no_adiabatic]}
+  loss_rate_fractions:       {cell: 27, energies_eV: [1.0e+4, 1.0e+5, 1.0e+6, 1.0e+7, 1.0e+9, 1.0e+11, 1.0e+13], processes: all, compare: [no_synchrotron, no_adiabatic]}
+  phase_space_map:           {cell: 29, energies_eV: [1.0e+3, 1.0e+4, 1.0e+5, 1.0e+6, 1.0e+7, 1.0e+9, 1.0e+11, 1.0e+13], processes: all, map: {z_points: 1000, K_eV: {logspace: [0, 14, 600]}}}
+  phase_space_colored:       {cell: 30, energies_eV: [1.0e+3, 1.0e+4, 1.0e+5, 1.0e+6, 1.0e+7, 1.0e+9, 1.0e+11, 1.0e+13], processes: all}
+  phase_space_without_ad:    {cell: 32, energies_eV: [1.0e+3, 1.0e+4, 1.0e+5, 1.0e+6, 1.0e+7, 1.0e+9, 1.0e+11, 1.0e+13], processes: all, compare: [no_adiabatic]}
+  distance_travelled:        {cell: 34, energies_eV: [1.0e+3, 1.0e+4, 1.0e+5, 1.0e+6, 1.0e+7, 1.0e+9, 1.0e+11, 1.0e+13], processes: all, compare: [no_synchrotron]}   # E13 (2026-09-27): el usuario eligió apagar el sincrotrón
+  phase_space_map_without_ad: {cell: 35, energies_eV: [1.0e+3, 1.0e+4, 1.0e+5, 1.0e+6, 1.0e+7, 1.0e+9, 1.0e+11, 1.0e+13], processes: all_but_adiabatic, map: {z_points: 400, K_eV: {logspace: [0, 14, 600]}}}
+  accumulated_losses:        {cell: 37, energies_eV: [1.0e+12, 1.0e+9, 1.0e+7, 1.0e+5], processes: all, mode: augmented}
+  step_losses:               {cell: 39, energies_eV: [1.0e+12, 1.0e+9, 1.0e+7, 1.0e+5], processes: all, mode: augmented, quantity: delta_E_per_fixed_dz, delta_z: 0.1}   # E14 (2026-09-27)
+  component_ratios:          {cell: 40, energies_eV: [1.0e+4, 1.0e+5, 1.0e+6, 1.0e+7, 1.0e+9, 1.0e+11, 1.0e+13], processes: all, compare: [no_synchrotron, no_adiabatic], note: "lista heredada de la celda 27 en la sesión original"}
+  adiabatic_fraction_map:    {cell: 41, processes: all, map: {z_range: [5.5, 15.0], z_points: 150, K_eV: {logspace: [2, 14, 150]}}}
+  with_vs_without_adiabatic: {cell: 42, energies_eV: [1.0e+2, 1.0e+3, 1.0e+4, 1.0e+5, 1.0e+6, 1.0e+7, 1.0e+8, 1.0e+9], processes: all, compare: [no_adiabatic]}
+  # EM_cascades (2026-09-28). z fijo = z_init (A19). Grilla log en K desde K_floor (A07) hasta K_max_eV.
+  # Elección numérica de Claude (D22), a revisar por el usuario; la convergencia con la grilla se verifica en los tests.
+  loss_fraction_rate:        {task: "EM_cascades objetivo 1a", quantity: "L_i/L_tot vs K", processes: all, grid: {K_max_eV: 1.0e+13, points_per_decade: 40}}
+  loss_fraction_integrated:  {task: "EM_cascades objetivo 1b", quantity: "fracción de K_ini perdida por proceso hasta K_floor vs K_ini", processes: all, grid: {K_max_eV: 1.0e+13, points_per_decade: 40}}
+  ionization_yield:          {task: "EM_cascades objetivo 2", quantity: "ionizaciones colisionales, por fotoionización secundaria y totales hasta K_floor vs K_ini", processes: all, grid: {K_max_eV: 1.0e+13, points_per_decade: 40}}

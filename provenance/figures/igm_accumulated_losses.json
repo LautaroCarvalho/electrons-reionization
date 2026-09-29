@@ -1,0 +1,20 @@
+{
+ "file": "figures/igm_accumulated_losses.png",
+ "file_pdf": "figures/igm_accumulated_losses.pdf",
+ "produced_by": "electron_losses_IGM/scripts/fig_accumulated.py::fig37",
+ "shows": "accumulated energy lost to each process divided by K_ini vs z, for four initial energies",
+ "from_scratch": "augmented ODE",
+ "from_library": "numpy, scipy (solve_ivp Radau, quad, brentq, CubicSpline), astropy (Planck18), mpmath, matplotlib",
+ "choices": [
+  "x axis 10 → 7 as the notebook (display choice)",
+  "label corrected: fraction, not eV (E10)"
+ ],
+ "supports": [],
+ "notebook_cell": 37,
+ "parameters": {
+  "x_e": 0.0001,
+  "z_init": 10.0,
+  "z_final": 5.5,
+  "language": "es"
+ }
+}

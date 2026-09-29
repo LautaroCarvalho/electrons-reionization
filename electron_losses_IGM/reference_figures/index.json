@@ -1,0 +1,186 @@
+[
+  {
+    "file": "cell02_0.png",
+    "cell": 2,
+    "execution_count": 3,
+    "width_px": 784,
+    "height_px": 483,
+    "sha256": "a051533921f0bc5b0aa782133d1b80e9027c42a874cbe42badb018b14bf3020f"
+  },
+  {
+    "file": "cell04_0.png",
+    "cell": 4,
+    "execution_count": 5,
+    "width_px": 784,
+    "height_px": 484,
+    "sha256": "b2fb4ff743cb17c0a52c2f6d5e957dc1df924ab85a7cb0987d26063e29e51fc2"
+  },
+  {
+    "file": "cell05_0.png",
+    "cell": 5,
+    "execution_count": 6,
+    "width_px": 784,
+    "height_px": 484,
+    "sha256": "98f255f45f77e98c973a383c13d2e4721635d2356f69d6ca4417de2727dca8ee"
+  },
+  {
+    "file": "cell06_0.png",
+    "cell": 6,
+    "execution_count": 7,
+    "width_px": 784,
+    "height_px": 784,
+    "sha256": "ad93a2542e8b8e9b081d8e45aee8ef52da8adc2ccfb525af3ae39fdb4b5dcafd"
+  },
+  {
+    "file": "cell08_0.png",
+    "cell": 8,
+    "execution_count": 9,
+    "width_px": 684,
+    "height_px": 834,
+    "sha256": "9d77f9ec127c77efc986e231f7d706b0cca1b58660a17a8ce6ce87ea3b8ae4f0"
+  },
+  {
+    "file": "cell09_0.png",
+    "cell": 9,
+    "execution_count": 10,
+    "width_px": 683,
+    "height_px": 834,
+    "sha256": "7effaf156a164cb91636a8f320f9fe9529593f158c5081bd3c85bb86ce7adc1e"
+  },
+  {
+    "file": "cell11_0.png",
+    "cell": 11,
+    "execution_count": 12,
+    "width_px": 684,
+    "height_px": 834,
+    "sha256": "2a51b75cf38aabc523605b7072e35e42781dde8636fb6673982f4b0313d2a049"
+  },
+  {
+    "file": "cell12_0.png",
+    "cell": 12,
+    "execution_count": 13,
+    "width_px": 784,
+    "height_px": 1034,
+    "sha256": "55bfd00f8e4e5d4b13041b386650f3982a6f1d7e5bb69e4635cf3b1959693130"
+  },
+  {
+    "file": "cell14_0.png",
+    "cell": 14,
+    "execution_count": 14,
+    "width_px": 684,
+    "height_px": 834,
+    "sha256": "6c864f0034927d30dd8d5f070553db1d7e429e1bb3576624c76e8604b1d7238e"
+  },
+  {
+    "file": "cell17_0.png",
+    "cell": 17,
+    "execution_count": 17,
+    "width_px": 684,
+    "height_px": 834,
+    "sha256": "cfa34092d5f8c10a245ba51ad1175f1168816f44c0cb0e5f4309653de8e013ae"
+  },
+  {
+    "file": "cell19_0.png",
+    "cell": 19,
+    "execution_count": 19,
+    "width_px": 684,
+    "height_px": 834,
+    "sha256": "76b3d27f26defb1d27ac8c70790ea32108d4aa735cb4c656e7137a963cf3be8f"
+  },
+  {
+    "file": "cell21_0.png",
+    "cell": 21,
+    "execution_count": 21,
+    "width_px": 684,
+    "height_px": 834,
+    "sha256": "44d737d25719d7cbfb0df7e5fde580eb50cfcfca29601d8be9978c2ccac95479"
+  },
+  {
+    "file": "cell23_0.png",
+    "cell": 23,
+    "execution_count": 23,
+    "width_px": 683,
+    "height_px": 833,
+    "sha256": "fd17a753b0d39cb018612d8831bf9b4719c3a11e983a72c068b87a905407a5cd"
+  },
+  {
+    "file": "cell25_0.png",
+    "cell": 25,
+    "execution_count": 25,
+    "width_px": 784,
+    "height_px": 984,
+    "sha256": "43dc85217c26b32be027fb93e4fc4457681cc1768d10dd6fc0d22902d9b9f264"
+  },
+  {
+    "file": "cell27_0.png",
+    "cell": 27,
+    "execution_count": 27,
+    "width_px": 784,
+    "height_px": 984,
+    "sha256": "4ea83dc1513042f85059e08e3b028bae50f7158adc91a3416a72a06533e24f4f"
+  },
+  {
+    "file": "cell29_0.png",
+    "cell": 29,
+    "execution_count": 30,
+    "width_px": 984,
+    "height_px": 684,
+    "sha256": "d45136eb960268d4243486104a20d2b78443fe96369668b0149891c102db48b6"
+  },
+  {
+    "file": "cell30_0.png",
+    "cell": 30,
+    "execution_count": 31,
+    "width_px": 984,
+    "height_px": 684,
+    "sha256": "81602342def41403fc131c46f003a01a2e8e228a40e2581b44486375028a7a1a"
+  },
+  {
+    "file": "cell32_0.png",
+    "cell": 32,
+    "execution_count": null,
+    "width_px": 984,
+    "height_px": 1384,
+    "sha256": "c0b057b9dc686bd11f37b793c6ea51ddfe509575356d353023324b55d6c5fe17"
+  },
+  {
+    "file": "cell34_0.png",
+    "cell": 34,
+    "execution_count": null,
+    "width_px": 984,
+    "height_px": 1384,
+    "sha256": "7ac7c40eb56b0769463f7bc8759f28a9a243941d16f8b4ce2918ee0d4dcfff75"
+  },
+  {
+    "file": "cell35_0.png",
+    "cell": 35,
+    "execution_count": 34,
+    "width_px": 984,
+    "height_px": 684,
+    "sha256": "12ff516c95f1a305a1e742d9f18166de6efba93ef453a1dd0fa36892aec329da"
+  },
+  {
+    "file": "cell37_0.png",
+    "cell": 37,
+    "execution_count": 15,
+    "width_px": 784,
+    "height_px": 1584,
+    "sha256": "f242683af44db48610452da5a0007eebff331764905cfda75aa3821b480e9d95"
+  },
+  {
+    "file": "cell38_0.png",
+    "cell": 38,
+    "execution_count": 10,
+    "width_px": 784,
+    "height_px": 1583,
+    "sha256": "7da88d8bbfede3758f8c1d258ffe6058b5f605da9b70be952511f999490cedf9"
+  },
+  {
+    "file": "cell40_0.png",
+    "cell": 40,
+    "execution_count": 35,
+    "width_px": 753,
+    "height_px": 815,
+    "sha256": "e37d6270a71234a7c439e166dd2748a2fd1a4b8a63a751ed4922ff7010a6cef1"
+  }
+]

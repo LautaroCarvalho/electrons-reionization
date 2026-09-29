@@ -1,0 +1,21 @@
+{
+ "file": "figures/igm_ionization_only_xe0.99.png",
+ "file_pdf": "figures/igm_ionization_only_xe0.99.pdf",
+ "produced_by": "electron_losses_IGM/scripts/fig_ionization_only.py::main",
+ "shows": "K/K_ini for collisional ionization of H (RBED) with mean loss B + <ε>",
+ "from_scratch": "trajectory K(t) from the rate registry; all rates re-implemented (see igm_losses)",
+ "from_library": "numpy, scipy (solve_ivp Radau, quad, brentq, CubicSpline), astropy (Planck18), mpmath, matplotlib",
+ "choices": [
+  "RBED, B = 13.6057 eV (E16)",
+  "Furlanetto & Stoever 2010 secondary spectrum (E17)",
+  "stop at R_H = 13.598 eV (D09, D21); between 13.598 and 13.6057 eV the ionization rate is zero, so K levels off at B and the event never fires (note on the figure)"
+ ],
+ "supports": [],
+ "notebook_cell": 19,
+ "parameters": {
+  "x_e": 0.99,
+  "z_init": 10.0,
+  "z_final": 5.5,
+  "language": "es"
+ }
+}

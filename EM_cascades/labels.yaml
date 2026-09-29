@@ -1,0 +1,11 @@
+# Axis labels, legends and titles of the EM_cascades figures (es | en). LaTeX (usetex).
+# Braces are doubled for str.format; placeholders in {braces} are filled by em_cascades.plotting.label(key, **fmt).
+rate_fraction:        {es: 'Fracci\''on de la tasa de p\''erdida $L_i/L_{{\mathrm{{tot}}}}$', en: 'Fraction of the loss rate $L_i/L_{{\mathrm{{tot}}}}$'}
+integrated_fraction:  {es: 'Fracci\''on de $K_{{\mathrm{{ini}}}}$ perdida hasta $K_{{\mathrm{{floor}}}}$', en: 'Fraction of $K_{{\mathrm{{ini}}}}$ lost down to $K_{{\mathrm{{floor}}}}$'}
+n_ion:                {es: 'Ionizaciones de H por electr\''on primario $N_{{\mathrm{{ion}}}}$', en: 'H ionizations per primary electron $N_{{\mathrm{{ion}}}}$'}
+curve_collisional:    {es: 'Ionizaci\''on colisional', en: 'Collisional ionization'}
+curve_photo:          {es: 'Fotoionizaci\''on secundaria (fotones de IC)', en: 'Secondary photoionization (IC photons)'}
+curve_total:          {es: 'Total', en: 'Total'}
+ceiling:              {es: 'Techo $K_{{\mathrm{{ini}}}}/R_H$', en: 'Ceiling $K_{{\mathrm{{ini}}}}/R_H$'}
+unlost:               {es: 'Sin perder ($K_{{\mathrm{{floor}}}}/K_{{\mathrm{{ini}}}}$)', en: 'Not lost ($K_{{\mathrm{{floor}}}}/K_{{\mathrm{{ini}}}}$)'}
+fixed_z_title:        {es: 'Medio fijo en $z = {z}$, $x_e = {xe}$', en: 'Medium fixed at $z = {z}$, $x_e = {xe}$'}

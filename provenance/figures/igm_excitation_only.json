@@ -1,0 +1,21 @@
+{
+ "file": "figures/igm_excitation_only.png",
+ "file_pdf": "figures/igm_excitation_only.pdf",
+ "produced_by": "electron_losses_IGM/scripts/fig_excitation_only.py::main",
+ "shows": "K/K_ini for collisional excitation of H(1s→np), n = 2…10; stops at E_2 = 10.204 eV",
+ "from_scratch": "trajectory K(t) from the rate registry; all rates re-implemented (see igm_losses)",
+ "from_library": "numpy, scipy (solve_ivp Radau, quad, brentq, CubicSpline), astropy (Planck18), mpmath, matplotlib",
+ "choices": [
+  "n = 2…10 (D01)",
+  "Born+BE ≤ 3 keV, Eq. 5 3–10 keV, Inokuti relativistic > 10 keV (E12)",
+  "stop at E_2 = 10.204 eV from Stone Table 1 (D09, E19)"
+ ],
+ "supports": [],
+ "notebook_cell": 17,
+ "parameters": {
+  "x_e": 0.0001,
+  "z_init": 10.0,
+  "z_final": 5.5,
+  "language": "es"
+ }
+}

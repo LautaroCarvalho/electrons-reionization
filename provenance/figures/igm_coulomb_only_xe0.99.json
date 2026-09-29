@@ -1,0 +1,21 @@
+{
+ "file": "figures/igm_coulomb_only_xe0.99.png",
+ "file_pdf": "figures/igm_coulomb_only_xe0.99.pdf",
+ "produced_by": "electron_losses_IGM/scripts/fig_coulomb_only.py::main",
+ "shows": "K/K_ini for Coulomb losses on free electrons (Gould 1972), cold plasma",
+ "from_scratch": "trajectory K(t) from the rate registry; all rates re-implemented (see igm_losses)",
+ "from_library": "numpy, scipy (solve_ivp Radau, quad, brentq, CubicSpline), astropy (Planck18), mpmath, matplotlib",
+ "choices": [
+  "Gould Eq. 5.5 above β = α, Eq. 2.20 below (E18)",
+  "δ = 1/2",
+  "floor K_floor = 10.2 eV"
+ ],
+ "supports": [],
+ "notebook_cell": 14,
+ "parameters": {
+  "x_e": 0.99,
+  "z_init": 10.0,
+  "z_final": 5.5,
+  "language": "es"
+ }
+}
